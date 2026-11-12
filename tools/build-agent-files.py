@@ -20,7 +20,8 @@ TODAY = date.today().isoformat()
 ORG_ID = BASE + "#organization"
 THAI_MONTHS = {"ม.ค.":1,"ก.พ.":2,"มี.ค.":3,"เม.ย.":4,"พ.ค.":5,"มิ.ย.":6,"ก.ค.":7,"ส.ค.":8,"ก.ย.":9,"ต.ค.":10,"พ.ย.":11,"ธ.ค.":12}
 TH_RE = re.compile(r"[\u0E00-\u0E7F]")
-FORBIDDEN = [re.compile(p, re.I) for p in [r"@576yhgtz", r"สัตว์เลี้ยง", r"\bpets?\b", r"\b0\d{1,2}[- ]?\d{3}[- ]?\d{4}\b", r"ห้องเลขที่", r"unit no"]]
+from urllib.parse import unquote
+FORBIDDEN = [re.compile(p, re.I) for p in [re.escape(unquote(LINE_URL.rsplit("/", 1)[1])), r"สัตว์เลี้ยง", r"\bpets?\b", r"\b0\d{1,2}[- ]?\d{3}[- ]?\d{4}\b", r"ห้องเลขที่", r"unit no"]]
 
 def read(p): return open(p, encoding="utf-8").read()
 def write(p, s):
