@@ -1,9 +1,11 @@
 # MoveCondo (ย้ายคอนโด)
 
-Public demo of a Thai-first Bangkok condo-rental matching site.
+Thai-first Bangkok condo-rental matching site.
 
 **Live:** https://banditkmc23-ai.github.io/movecondo/
 
-During launch, every room, price, and photo is an example — not a real listing. AI-generated room photos are labeled as samples. LINE OA is the placeholder `@max-example`.
+Neighborhood guides and real nearby places are live. Room listings are being added soon.
 
-This repository contains only the public site for GitHub Pages (branch `main`, root).
+Contact: LINE @576yhgtz — https://line.me/R/ti/p/%40576yhgtz
+
+This repository is published via GitHub Pages (branch `main`, root).

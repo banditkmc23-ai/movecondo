@@ -1,7 +1,7 @@
 {
   "name": "MoveCondo",
   "short_name": "MoveCondo",
-  "description": "ย้ายคอนโด · หาคอนโดเช่าที่ใช่ — ช่วงเปิดตัวใช้ข้อมูลตัวอย่าง",
+  "description": "ย้ายคอนโด · หาคอนโดเช่าที่ใช่ — กำลังเพิ่มห้องจริงเร็ว ๆ นี้",
   "start_url": "/movecondo/",
   "scope": "/movecondo/",
   "display": "browser",
