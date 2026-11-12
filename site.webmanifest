@@ -1,0 +1,23 @@
+{
+  "name": "MoveCondo",
+  "short_name": "MoveCondo",
+  "description": "ย้ายคอนโด · หาคอนโดเช่าที่ใช่ — ช่วงเปิดตัวใช้ข้อมูลตัวอย่าง",
+  "start_url": "/movecondo/",
+  "scope": "/movecondo/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#B9532F",
+  "lang": "th",
+  "icons": [
+    {
+      "src": "/movecondo/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/movecondo/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

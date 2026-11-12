@@ -1,0 +1,1829 @@
+const PHOTO_AI_LABEL = "ภาพตัวอย่าง (สร้างด้วย AI) ไม่ใช่ห้องจริง";
+const SCENE_TH = {
+  "living room": "ห้องนั่งเล่น",
+  "bedroom": "ห้องนอน",
+  "kitchen": "ครัว",
+  "bathroom": "ห้องน้ำ",
+  "city view": "วิวเมือง",
+  "studio living area": "พื้นที่นั่งเล่นสตูดิโอ",
+  "kitchenette": "ครัวเล็ก",
+  "work desk": "มุมทำงาน",
+  "river view": "วิวแม่น้ำ",
+  "second bedroom": "ห้องนอนที่สอง"
+};
+const AREA_SLUGS = {
+  "ทองหล่อ": "thonglor",
+  "พร้อมพงษ์": "phrom-phong",
+  "เอกมัย": "ekkamai",
+  "พระโขนง": "phrakhanong",
+  "อ่อนนุช": "on-nut",
+  "อโศก": "asoke",
+  "อารีย์": "ari",
+  "พระราม 9": "rama-9",
+  "เจริญนคร": "charoennakhon",
+  "บางนา": "bangna"
+};
+const SITE_BASE = (typeof location!=='undefined' && /\/movecondo(\/|$)/.test(location.pathname)) ? '/movecondo/' : '/';
+function roomHref(id){ return SITE_BASE + 'rooms/' + String(id).toLowerCase() + '/'; }
+function areaHref(area){ return SITE_BASE + 'areas/' + (AREA_SLUGS[area]||'') + '/'; }
+const PHOTOS = {
+  "DEMO-001": [
+    { scene:"living room", label:"ห้องนั่งเล่น", file:"1.webp" },
+    { scene:"bedroom", label:"ห้องนอน", file:"2.webp" },
+    { scene:"kitchen", label:"ครัว", file:"3.webp" },
+    { scene:"bathroom", label:"ห้องน้ำ", file:"4.webp" }
+  ],
+  "DEMO-002": [
+    { scene:"living room", label:"ห้องนั่งเล่น", file:"1.webp" },
+    { scene:"bedroom", label:"ห้องนอน", file:"2.webp" },
+    { scene:"kitchen", label:"ครัว", file:"3.webp" },
+    { scene:"bathroom", label:"ห้องน้ำ", file:"4.webp" }
+  ],
+  "DEMO-003": [
+    { scene:"living room", label:"ห้องนั่งเล่น", file:"1.webp" },
+    { scene:"bedroom", label:"ห้องนอน", file:"2.webp" },
+    { scene:"kitchen", label:"ครัว", file:"3.webp" },
+    { scene:"bathroom", label:"ห้องน้ำ", file:"4.webp" }
+  ],
+  "DEMO-004": [
+    { scene:"living room", label:"ห้องนั่งเล่น", file:"1.webp" },
+    { scene:"bedroom", label:"ห้องนอน", file:"2.webp" },
+    { scene:"kitchen", label:"ครัว", file:"3.webp" },
+    { scene:"city view", label:"วิวเมือง", file:"4.webp" }
+  ],
+  "DEMO-005": [
+    { scene:"studio living area", label:"พื้นที่นั่งเล่นสตูดิโอ", file:"1.webp" },
+    { scene:"kitchenette", label:"ครัวเล็ก", file:"2.webp" },
+    { scene:"bathroom", label:"ห้องน้ำ", file:"3.webp" },
+    { scene:"work desk", label:"มุมทำงาน", file:"4.webp" }
+  ],
+  "DEMO-006": [
+    { scene:"living room", label:"ห้องนั่งเล่น", file:"1.webp" },
+    { scene:"bedroom", label:"ห้องนอน", file:"2.webp" },
+    { scene:"kitchen", label:"ครัว", file:"3.webp" },
+    { scene:"river view", label:"วิวแม่น้ำ", file:"4.webp" }
+  ],
+  "DEMO-007": [
+    { scene:"living room", label:"ห้องนั่งเล่น", file:"1.webp" },
+    { scene:"bedroom", label:"ห้องนอน", file:"2.webp" },
+    { scene:"second bedroom", label:"ห้องนอนที่สอง", file:"4.webp" }
+  ],
+  "DEMO-008": [
+    { scene:"living room", label:"ห้องนั่งเล่น", file:"1.webp" },
+    { scene:"bedroom", label:"ห้องนอน", file:"2.webp" },
+    { scene:"kitchen", label:"ครัว", file:"3.webp" },
+    { scene:"bathroom", label:"ห้องน้ำ", file:"4.webp" }
+  ],
+  "DEMO-009": [
+    { scene:"living room", label:"ห้องนั่งเล่น", file:"1.webp" },
+    { scene:"bedroom", label:"ห้องนอน", file:"2.webp" },
+    { scene:"kitchen", label:"ครัว", file:"3.webp" },
+    { scene:"second bedroom", label:"ห้องนอนที่สอง", file:"4.webp" }
+  ],
+  "DEMO-010": [
+    { scene:"living room", label:"ห้องนั่งเล่น", file:"1.webp" },
+    { scene:"bedroom", label:"ห้องนอน", file:"2.webp" },
+    { scene:"kitchen", label:"ครัว", file:"3.webp" },
+    { scene:"bathroom", label:"ห้องน้ำ", file:"4.webp" }
+  ],
+};
+
+function photoUrl(id, file, kind){
+  const base = SITE_BASE + "images/rooms/" + String(id).toLowerCase() + "/";
+  if(kind==="cover") return base + "cover.webp";
+  if(kind==="thumb") return base + String(file).replace(".webp","-th.webp");
+  return base + file;
+}
+function listingPhotos(id){
+  return (PHOTOS[id]||[]).map(p => ({
+    ...p,
+    gallery: photoUrl(id, p.file, "gallery"),
+    thumb: photoUrl(id, p.file, "thumb"),
+    cover: p.file==="1.webp" ? photoUrl(id, p.file, "cover") : undefined
+  }));
+}
+function coverSrc(id){
+  const p = (PHOTOS[id]||[])[0];
+  return p ? photoUrl(id, p.file, "cover") : "";
+}
+function photoImg(src, alt, cls, w, h, eager){
+  const load = eager ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"';
+  return `<img class="${cls||""}" src="${src}" alt="${alt}" width="${w}" height="${h}" ${load} draggable="false">`;
+}
+const LISTINGS = [
+  { id:"DEMO-001", project:"The Gleam Residence", area:"อ่อนนุช", price:22000, avg:23500, min:19400, max:26800, size:35, beds:"1 ห้องนอน", type:"1BR", pets:false, walk:4, transit:"BTS อ่อนนุช", available:"2026-12-01", confirmed:"2026-11-10", deposit:44000, floor:12, amenities:["สระว่ายน้ำ","ฟิตเนส","ที่จอดรถ","รปภ. 24 ชม."], blurb:"ห้องมุม แสงดี เฟอร์ครบ ใกล้ตลาดและห้าง", art:0, inSeg:true },
+  { id:"DEMO-002", project:"Harbor Lane Condo", area:"พระโขนง", price:25000, avg:26000, min:22000, max:29600, size:38, beds:"1 ห้องนอน", type:"1BR", pets:true, walk:6, transit:"BTS พระโขนง", available:"2026-11-20", confirmed:"2026-11-11", deposit:50000, floor:18, amenities:["สระว่ายน้ำ","ฟิตเนส","สวนสัตว์เลี้ยง","Co-working"], blurb:"เลี้ยงสัตว์ได้ วิวเมือง ห้องใหม่ไม่เคยปล่อยเช่า", art:1, inSeg:true },
+  { id:"DEMO-003", project:"Maple Court Ekkamai", area:"เอกมัย", price:32000, avg:33000, min:28200, max:37600, size:45, beds:"1 ห้องนอน", type:"1BR", pets:false, walk:5, transit:"BTS เอกมัย", available:"2026-12-15", confirmed:"2026-11-09", deposit:64000, floor:21, amenities:["สระว่ายน้ำ","ซาวน่า","ฟิตเนส","Shuttle"], blurb:"ห้องกว้าง มีอ่างอาบน้ำ ย่านคาเฟ่", art:2, inSeg:true },
+  { id:"DEMO-004", project:"Orchid Sky Thonglor", area:"ทองหล่อ", price:38000, avg:40000, min:33400, max:45600, size:52, beds:"1 ห้องนอนพลัส", type:"1BR+", pets:true, walk:8, transit:"BTS ทองหล่อ", available:"2026-12-01", confirmed:"2026-11-12", deposit:76000, floor:25, amenities:["สระ Infinity","ฟิตเนส","ห้องสมุด","Pet friendly"], blurb:"ชั้นสูง วิวโล่ง รับสัตว์เลี้ยงขนาดเล็ก", art:3, inSeg:true },
+  { id:"DEMO-005", project:"Nova Park Ari", area:"อารีย์", price:21000, avg:22000, min:18500, max:25100, size:30, beds:"สตูดิโอ", type:"สตูดิโอ", pets:false, walk:3, transit:"BTS อารีย์", available:"2026-11-25", confirmed:"2026-11-10", deposit:42000, floor:9, amenities:["ฟิตเนส","ร้านสะดวกซื้อ","รปภ. 24 ชม."], blurb:"ใกล้สถานีมาก เหมาะคนทำงานย่านอารีย์", art:4, inSeg:true },
+  { id:"DEMO-006", project:"Riverside Glow", area:"เจริญนคร", price:28000, avg:30000, min:24600, max:34200, size:48, beds:"1 ห้องนอน", type:"1BR", pets:false, walk:10, transit:"BTS กรุงธนบุรี", available:"2027-01-05", confirmed:"2026-11-08", deposit:56000, floor:15, amenities:["สระว่ายน้ำ","ฟิตเนส","เรือรับส่ง","ที่จอดรถ"], blurb:"วิวแม่น้ำ ใกล้ห้างริมแม่น้ำในย่าน ห้องตกแต่งโทนอบอุ่น", art:5, inSeg:true },
+  { id:"DEMO-007", project:"Cedar Atelier Asoke", area:"อโศก", price:35000, avg:36500, min:30800, max:41600, size:55, beds:"2 ห้องนอน", type:"2BR", pets:false, walk:4, transit:"MRT สุขุมวิท", available:"2026-12-10", confirmed:"2026-11-11", deposit:70000, floor:16, amenities:["สระว่ายน้ำ","ฟิตเนส","Co-working","ห้องประชุม"], blurb:"2 ห้องนอน ใจกลางเมือง เดินทางสะดวกทั้ง BTS/MRT", art:0, inSeg:true },
+  { id:"DEMO-008", project:"Willow Garden Rama 9", area:"พระราม 9", price:26000, avg:25000, min:22000, max:29600, size:40, beds:"1 ห้องนอน", type:"1BR", pets:true, walk:7, transit:"MRT พระราม 9", available:"2026-11-30", confirmed:"2026-11-12", deposit:52000, floor:11, amenities:["สวน","สระว่ายน้ำ","ฟิตเนส","Pet friendly"], blurb:"รับสัตว์เลี้ยง ใกล้ห้างและออฟฟิศย่านพระราม 9", art:1, inSeg:true },
+  { id:"DEMO-009", project:"Aurora Phrom Phong", area:"พร้อมพงษ์", price:40000, avg:42000, min:35200, max:47900, size:60, beds:"2 ห้องนอน", type:"2BR", pets:false, walk:6, transit:"BTS พร้อมพงษ์", available:"2026-12-20", confirmed:"2026-11-07", deposit:80000, floor:20, amenities:["สระว่ายน้ำ","ฟิตเนส","Kids club","Shuttle"], blurb:"ครอบครัวอยู่ได้สบาย ใกล้ห้างและสวนในย่าน", art:2, inSeg:true },
+  { id:"DEMO-010", project:"Pine Hill Bang Na", area:"บางนา", price:18000, avg:19000, min:15800, max:21700, size:33, beds:"1 ห้องนอน", type:"1BR", pets:false, walk:9, transit:"BTS บางนา", available:"2026-11-22", confirmed:"2026-11-09", deposit:36000, floor:7, amenities:["สระว่ายน้ำ","ฟิตเนส","ที่จอดรถ"], blurb:"ราคาคุ้ม ใกล้ศูนย์แสดงสินค้าในย่าน ห้องสะอาดพร้อมอยู่", art:3, inSeg:false }
+];
+
+const NEARBY = {
+  "ทองหล่อ": {
+    "station": "BTS ทองหล่อ",
+    "places": [
+      {
+        "name": "theCOMMONS",
+        "category": "ช็อปปิ้ง",
+        "station": "BTS ทองหล่อ",
+        "mode": "รถ",
+        "minutes": 8,
+        "mapsQuery": "theCOMMONS Thonglor Bangkok",
+        "x": 42,
+        "y": 38
+      },
+      {
+        "name": "CPS Coffee Sukhumvit 53",
+        "category": "คาเฟ่",
+        "station": "BTS ทองหล่อ",
+        "mode": "เดิน",
+        "minutes": 5,
+        "mapsQuery": "CPS Coffee Sukhumvit 53 Thonglor Bangkok",
+        "x": 72,
+        "y": 32
+      },
+      {
+        "name": "Baan Ice",
+        "category": "ร้านอาหาร",
+        "station": "BTS ทองหล่อ",
+        "mode": "เดิน",
+        "minutes": 10,
+        "mapsQuery": "Baan Ice Thonglor Bangkok",
+        "x": 30,
+        "y": 70
+      },
+      {
+        "name": "Rabbit Hole",
+        "category": "บาร์",
+        "station": "BTS ทองหล่อ",
+        "mode": "เดิน",
+        "minutes": 8,
+        "mapsQuery": "Rabbit Hole Thonglor Bangkok",
+        "x": 70,
+        "y": 66
+      },
+      {
+        "name": "Folk Lane",
+        "category": "คาเฟ่",
+        "station": "BTS ทองหล่อ",
+        "mode": "เดิน",
+        "minutes": 12,
+        "mapsQuery": "Folk Lane Sukhumvit 38 Bangkok",
+        "x": 52,
+        "y": 56
+      }
+    ]
+  },
+  "พร้อมพงษ์": {
+    "station": "BTS พร้อมพงษ์",
+    "places": [
+      {
+        "name": "EmQuartier",
+        "category": "ช็อปปิ้ง",
+        "station": "BTS พร้อมพงษ์",
+        "mode": "เดิน",
+        "minutes": 3,
+        "mapsQuery": "EmQuartier Phrom Phong Bangkok",
+        "x": 42,
+        "y": 38
+      },
+      {
+        "name": "EmSphere",
+        "category": "ช็อปปิ้ง",
+        "station": "BTS พร้อมพงษ์",
+        "mode": "เดิน",
+        "minutes": 5,
+        "mapsQuery": "EmSphere Phrom Phong Bangkok",
+        "x": 72,
+        "y": 32
+      },
+      {
+        "name": "Audrey Cafe EmQuartier",
+        "category": "คาเฟ่",
+        "station": "BTS พร้อมพงษ์",
+        "mode": "เดิน",
+        "minutes": 4,
+        "mapsQuery": "Audrey Cafe EmQuartier Bangkok",
+        "x": 30,
+        "y": 70
+      },
+      {
+        "name": "สวนเบญจสิริ",
+        "category": "สวน",
+        "station": "BTS พร้อมพงษ์",
+        "mode": "เดิน",
+        "minutes": 5,
+        "mapsQuery": "Benjasiri Park พร้อมพงษ์",
+        "x": 70,
+        "y": 66
+      },
+      {
+        "name": "Err Urban Rustic Thai",
+        "category": "ร้านอาหาร",
+        "station": "BTS พร้อมพงษ์",
+        "mode": "เดิน",
+        "minutes": 8,
+        "mapsQuery": "Err Urban Rustic Thai Sukhumvit 32 Bangkok",
+        "x": 52,
+        "y": 56
+      }
+    ]
+  },
+  "เอกมัย": {
+    "station": "BTS เอกมัย",
+    "places": [
+      {
+        "name": "Gateway Ekkamai",
+        "category": "ช็อปปิ้ง",
+        "station": "BTS เอกมัย",
+        "mode": "เดิน",
+        "minutes": 2,
+        "mapsQuery": "Gateway Ekkamai Bangkok",
+        "x": 42,
+        "y": 38
+      },
+      {
+        "name": "Donki Mall Ekkamai",
+        "category": "ช็อปปิ้ง",
+        "station": "BTS เอกมัย",
+        "mode": "เดิน",
+        "minutes": 5,
+        "mapsQuery": "Donki Mall Ekkamai Bangkok",
+        "x": 72,
+        "y": 32
+      },
+      {
+        "name": "Kaizen Coffee",
+        "category": "คาเฟ่",
+        "station": "BTS เอกมัย",
+        "mode": "รถ",
+        "minutes": 6,
+        "mapsQuery": "Kaizen Coffee Ekkamai Bangkok",
+        "x": 30,
+        "y": 70
+      },
+      {
+        "name": "Wattana Panich",
+        "category": "ร้านอาหาร",
+        "station": "BTS เอกมัย",
+        "mode": "รถ",
+        "minutes": 8,
+        "mapsQuery": "Wattana Panich Ekkamai Bangkok",
+        "x": 70,
+        "y": 66
+      },
+      {
+        "name": "Iron Balls Distillery & Bar",
+        "category": "บาร์",
+        "station": "BTS เอกมัย",
+        "mode": "เดิน",
+        "minutes": 10,
+        "mapsQuery": "Iron Balls Ekkamai Bangkok",
+        "x": 52,
+        "y": 56
+      }
+    ]
+  },
+  "พระโขนง": {
+    "station": "BTS พระโขนง",
+    "places": [
+      {
+        "name": "W District",
+        "category": "ช็อปปิ้ง",
+        "station": "BTS พระโขนง",
+        "mode": "เดิน",
+        "minutes": 5,
+        "mapsQuery": "W District Phra Khanong Bangkok",
+        "x": 42,
+        "y": 38
+      },
+      {
+        "name": "Hands and Heart Coffee Roasters",
+        "category": "คาเฟ่",
+        "station": "BTS พระโขนง",
+        "mode": "เดิน",
+        "minutes": 10,
+        "mapsQuery": "Hands and Heart Coffee Roasters Sukhumvit 67 Bangkok",
+        "x": 72,
+        "y": 32
+      },
+      {
+        "name": "Épicurien French Bakery",
+        "category": "คาเฟ่",
+        "station": "BTS พระโขนง",
+        "mode": "เดิน",
+        "minutes": 5,
+        "mapsQuery": "Epicurien French Bakery W District Phra Khanong",
+        "x": 30,
+        "y": 70
+      },
+      {
+        "name": "Shakariki432",
+        "category": "ร้านอาหาร",
+        "station": "BTS พระโขนง",
+        "mode": "เดิน",
+        "minutes": 8,
+        "mapsQuery": "Shakariki432 Phra Khanong Bangkok",
+        "x": 70,
+        "y": 66
+      }
+    ]
+  },
+  "อ่อนนุช": {
+    "station": "BTS อ่อนนุช",
+    "places": [
+      {
+        "name": "Lotus's อ่อนนุช",
+        "category": "ช็อปปิ้ง",
+        "station": "BTS อ่อนนุช",
+        "mode": "เดิน",
+        "minutes": 3,
+        "mapsQuery": "Lotus's On Nut Bangkok",
+        "x": 42,
+        "y": 38
+      },
+      {
+        "name": "ตลาดอ่อนนุช",
+        "category": "ช็อปปิ้ง",
+        "station": "BTS อ่อนนุช",
+        "mode": "เดิน",
+        "minutes": 10,
+        "mapsQuery": "ตลาดอ่อนนุช On Nut Market Bangkok",
+        "x": 72,
+        "y": 32
+      },
+      {
+        "name": "THE WOOD LAND",
+        "category": "คาเฟ่",
+        "station": "BTS อ่อนนุช",
+        "mode": "เดิน",
+        "minutes": 8,
+        "mapsQuery": "THE WOOD LAND cafe Sukhumvit 52 On Nut Bangkok",
+        "x": 30,
+        "y": 70
+      },
+      {
+        "name": "THE NEIGHBORWOOD",
+        "category": "คาเฟ่",
+        "station": "BTS อ่อนนุช",
+        "mode": "เดิน",
+        "minutes": 10,
+        "mapsQuery": "THE NEIGHBORWOOD T77 On Nut Bangkok",
+        "x": 70,
+        "y": 66
+      },
+      {
+        "name": "สวนหลวง ร.9",
+        "category": "สวน",
+        "station": "BTS อ่อนนุช",
+        "mode": "รถ",
+        "minutes": 20,
+        "mapsQuery": "สวนหลวง ร.9 Suan Luang Rama IX Park Bangkok",
+        "x": 52,
+        "y": 56
+      }
+    ]
+  },
+  "อารีย์": {
+    "station": "BTS อารีย์",
+    "places": [
+      {
+        "name": "NANA Coffee Roasters",
+        "category": "คาเฟ่",
+        "station": "BTS อารีย์",
+        "mode": "เดิน",
+        "minutes": 6,
+        "mapsQuery": "NANA Coffee Roasters Ari Bangkok",
+        "x": 42,
+        "y": 38
+      },
+      {
+        "name": "Ongtong Khaosoi",
+        "category": "ร้านอาหาร",
+        "station": "BTS อารีย์",
+        "mode": "เดิน",
+        "minutes": 2,
+        "mapsQuery": "Ongtong Khaosoi Ari Bangkok",
+        "x": 72,
+        "y": 32
+      },
+      {
+        "name": "Lay Lao",
+        "category": "ร้านอาหาร",
+        "station": "BTS อารีย์",
+        "mode": "เดิน",
+        "minutes": 8,
+        "mapsQuery": "Lay Lao Ari Bangkok",
+        "x": 30,
+        "y": 70
+      },
+      {
+        "name": "After You Dessert Cafe La Villa Aree",
+        "category": "คาเฟ่",
+        "station": "BTS อารีย์",
+        "mode": "เดิน",
+        "minutes": 8,
+        "mapsQuery": "After You La Villa Aree Bangkok",
+        "x": 70,
+        "y": 66
+      },
+      {
+        "name": "GUMP'S Ari",
+        "category": "ช็อปปิ้ง",
+        "station": "BTS อารีย์",
+        "mode": "เดิน",
+        "minutes": 10,
+        "mapsQuery": "GUMP'S Ari Bangkok",
+        "x": 52,
+        "y": 56
+      }
+    ]
+  },
+  "เจริญนคร": {
+    "station": "BTS กรุงธนบุรี",
+    "places": [
+      {
+        "name": "ICONSIAM",
+        "category": "ช็อปปิ้ง",
+        "station": "BTS เจริญนคร (สายสีทอง)",
+        "mode": "รถไฟฟ้า",
+        "minutes": 5,
+        "mapsQuery": "ICONSIAM Bangkok",
+        "x": 42,
+        "y": 38
+      },
+      {
+        "name": "SookSiam",
+        "category": "ช็อปปิ้ง",
+        "station": "BTS เจริญนคร (สายสีทอง)",
+        "mode": "รถไฟฟ้า",
+        "minutes": 5,
+        "mapsQuery": "SookSiam ICONSIAM Bangkok",
+        "x": 72,
+        "y": 32
+      },
+      {
+        "name": "After You Dessert Cafe ICONSIAM",
+        "category": "คาเฟ่",
+        "station": "BTS เจริญนคร (สายสีทอง)",
+        "mode": "รถไฟฟ้า",
+        "minutes": 5,
+        "mapsQuery": "After You ICONSIAM Bangkok",
+        "x": 30,
+        "y": 70
+      },
+      {
+        "name": "Nara Thai Cuisine ICONSIAM",
+        "category": "ร้านอาหาร",
+        "station": "BTS เจริญนคร (สายสีทอง)",
+        "mode": "รถไฟฟ้า",
+        "minutes": 5,
+        "mapsQuery": "Nara Thai Cuisine ICONSIAM Bangkok",
+        "x": 70,
+        "y": 66
+      },
+      {
+        "name": "Lhong 1919",
+        "category": "ช็อปปิ้ง",
+        "station": "BTS กรุงธนบุรี",
+        "mode": "รถ",
+        "minutes": 10,
+        "mapsQuery": "Lhong 1919 Bangkok",
+        "x": 52,
+        "y": 56
+      }
+    ]
+  },
+  "อโศก": {
+    "station": "BTS อโศก / MRT สุขุมวิท",
+    "places": [
+      {
+        "name": "Terminal 21 Asok",
+        "category": "ช็อปปิ้ง",
+        "station": "BTS อโศก / MRT สุขุมวิท",
+        "mode": "เดิน",
+        "minutes": 2,
+        "mapsQuery": "Terminal 21 Asok Bangkok",
+        "x": 42,
+        "y": 38
+      },
+      {
+        "name": "After You Dessert Cafe Terminal 21 Asok",
+        "category": "คาเฟ่",
+        "station": "BTS อโศก / MRT สุขุมวิท",
+        "mode": "เดิน",
+        "minutes": 3,
+        "mapsQuery": "After You Terminal 21 Asok Bangkok",
+        "x": 72,
+        "y": 32
+      },
+      {
+        "name": "Cabbages & Condoms",
+        "category": "ร้านอาหาร",
+        "station": "BTS อโศก",
+        "mode": "เดิน",
+        "minutes": 8,
+        "mapsQuery": "Cabbages and Condoms Sukhumvit 12 Bangkok",
+        "x": 30,
+        "y": 70
+      },
+      {
+        "name": "Bartels Asok",
+        "category": "คาเฟ่",
+        "station": "BTS อโศก",
+        "mode": "เดิน",
+        "minutes": 8,
+        "mapsQuery": "Bartels Asok Bangkok",
+        "x": 70,
+        "y": 66
+      },
+      {
+        "name": "สวนเบญจกิติ",
+        "category": "สวน",
+        "station": "MRT ศูนย์การประชุมแห่งชาติสิริกิติ์",
+        "mode": "รถไฟฟ้า",
+        "minutes": 5,
+        "mapsQuery": "Benjakitti Forest Park Bangkok",
+        "x": 52,
+        "y": 56
+      }
+    ]
+  },
+  "พระราม 9": {
+    "station": "MRT พระราม 9",
+    "places": [
+      {
+        "name": "เซ็นทรัลพระราม 9",
+        "category": "ช็อปปิ้ง",
+        "station": "MRT พระราม 9",
+        "mode": "เดิน",
+        "minutes": 4,
+        "mapsQuery": "Central Rama 9 Bangkok",
+        "x": 42,
+        "y": 38
+      },
+      {
+        "name": "ฮั่วเซ่งฮง เซ็นทรัลพระราม 9",
+        "category": "ร้านอาหาร",
+        "station": "MRT พระราม 9",
+        "mode": "เดิน",
+        "minutes": 5,
+        "mapsQuery": "Hua Seng Hong Central Rama 9 Bangkok",
+        "x": 72,
+        "y": 32
+      },
+      {
+        "name": "ฟอร์จูนทาวน์",
+        "category": "ช็อปปิ้ง",
+        "station": "MRT พระราม 9",
+        "mode": "เดิน",
+        "minutes": 8,
+        "mapsQuery": "Fortune Town Rama 9 Bangkok",
+        "x": 30,
+        "y": 70
+      },
+      {
+        "name": "After You Dessert Cafe Esplanade Ratchadapisek",
+        "category": "คาเฟ่",
+        "station": "MRT ศูนย์วัฒนธรรมแห่งประเทศไทย",
+        "mode": "รถไฟฟ้า",
+        "minutes": 5,
+        "mapsQuery": "After You Esplanade Ratchadapisek Bangkok",
+        "x": 70,
+        "y": 66
+      }
+    ]
+  },
+  "บางนา": {
+    "station": "BTS บางนา",
+    "places": [
+      {
+        "name": "เซ็นทรัล บางนา",
+        "category": "ช็อปปิ้ง",
+        "station": "BTS บางนา",
+        "mode": "เดิน",
+        "minutes": 8,
+        "mapsQuery": "Central Bangna Bangkok",
+        "x": 42,
+        "y": 38
+      },
+      {
+        "name": "BITEC",
+        "category": "ช็อปปิ้ง",
+        "station": "BTS บางนา",
+        "mode": "เดิน",
+        "minutes": 5,
+        "mapsQuery": "BITEC Bang Na Bangkok",
+        "x": 72,
+        "y": 32
+      },
+      {
+        "name": "SAMA Garden",
+        "category": "สวน",
+        "station": "BTS บางนา",
+        "mode": "เดิน",
+        "minutes": 8,
+        "mapsQuery": "SAMA Garden BITEC Bang Na Bangkok",
+        "x": 30,
+        "y": 70
+      },
+      {
+        "name": "เมกาบางนา",
+        "category": "ช็อปปิ้ง",
+        "station": "BTS อุดมสุข",
+        "mode": "รถ",
+        "minutes": 15,
+        "mapsQuery": "Mega Bangna Bangkok",
+        "x": 70,
+        "y": 66
+      },
+      {
+        "name": "After You Dessert Cafe Megabangna",
+        "category": "คาเฟ่",
+        "station": "BTS อุดมสุข",
+        "mode": "รถ",
+        "minutes": 15,
+        "mapsQuery": "After You Mega Bangna Bangkok",
+        "x": 52,
+        "y": 56
+      }
+    ]
+  }
+};
+const NEARBY_NOTE = "ระยะเวลาโดยประมาณ คำนวณจากสถานีรถไฟฟ้า";
+
+const AREAS = ["ทองหล่อ", "พร้อมพงษ์", "เอกมัย", "พระโขนง", "อ่อนนุช", "อโศก", "อารีย์", "พระราม 9", "เจริญนคร", "บางนา"];
+
+const AREA_PROFILES = {
+  "ทองหล่อ": { line:"BTS สายสุขุมวิท", station:"BTS ทองหล่อ", walkTypical:5, vibe:"ย่านไลฟ์สไตล์บนเส้นสุขุมวิท ห้องตัวอย่างมักอยู่ในท้ายช่วงงบ 20–40k ร้านอาหารรอบสถานีคึกคักยามเย็น", travel:"ขึ้นรถไฟฟ้าสายสีเขียวได้ที่สถานีทองหล่อ ต่อสถานีใกล้เคียงได้โดยไม่ต้องเปลี่ยนสาย", lifestyle:"บรรยากาศย่านเน้นร้านอาหารและพื้นที่นั่งเล่นในซอย เหมาะกับคนที่อยากได้ทั้งความสะดวกและการออกไปหาอะไรกินใกล้บ้าน", nearby:[
+    {name:"สถานี BTS ทองหล่อ", kind:"รถไฟฟ้า", walk:5, mode:"เดิน", x:34, y:74},
+    {name:"ลานอาหารชุมชน", kind:"อาหาร", walk:6, mode:"เดิน", x:68, y:40},
+    {name:"สวนสาธารณะในซอย", kind:"สวน", walk:9, mode:"เดิน", x:28, y:36},
+    {name:"คลินิกใกล้สถานี", kind:"สุขภาพ", walk:7, mode:"เดิน", x:72, y:68},
+    {name:"ศูนย์การค้าในย่าน", kind:"ช้อปปิ้ง", walk:11, mode:"เดิน", x:30, y:72}
+  ]},
+  "เอกมัย": { line:"BTS สายสุขุมวิท", station:"BTS เอกมัย", walkTypical:4, vibe:"บรรยากาศอยู่อาศัยสงบกว่าย่านข้างเคียง แต่ยังเดินทางต่อบนเส้นเดียวกันได้สะดวก", travel:"สถานี BTS เอกมัยอยู่บนสายสีเขียว ต่อเข้ากลางเมืองหรือลงไปย่านอื่นบนเส้นสุขุมวิทได้ตรงๆ", lifestyle:"ซอยค่อนข้างเงียบ มีร้านกาแฟและพื้นที่สีเขียวขนาดย่อม เหมาะกับคนที่อยู่อาศัยยาว", nearby:[
+    {name:"สถานี BTS เอกมัย", kind:"รถไฟฟ้า", walk:4, mode:"เดิน", x:34, y:74},
+    {name:"สวนออกกำลังกาย", kind:"สวน", walk:7, mode:"เดิน", x:26, y:38},
+    {name:"ตลาดเช้าชุมชน", kind:"ตลาด", walk:8, mode:"เดิน", x:70, y:34},
+    {name:"คลินิกใกล้สถานี", kind:"สุขภาพ", walk:6, mode:"เดิน", x:74, y:70},
+    {name:"ร้านหนังสือชุมชน", kind:"ไลฟ์สไตล์", walk:10, mode:"เดิน", x:32, y:74}
+  ]},
+  "พระโขนง": { line:"BTS สายสุขุมวิท", station:"BTS พระโขนง", walkTypical:5, vibe:"ย่านที่กำลังเติบโตบนเส้นเดียวกับอ่อนนุชและเอกมัย ตัวเลือกห้องในช่วงงบกลางค่อนข้างหลากหลาย", travel:"ขึ้น BTS พระโขนง แล้วเลื่อนบนสายสีเขียวได้ทั้งขึ้นเหนือและลงใต้โดยไม่เปลี่ยนสาย", lifestyle:"รอบสถานีมีตลาดและร้านอาหารท้องถิ่น บรรยากาศเป็นย่านอยู่อาศัยมากกว่าย่านเที่ยวกลางคืน", nearby:[
+    {name:"สถานี BTS พระโขนง", kind:"รถไฟฟ้า", walk:4, mode:"เดิน", x:34, y:74},
+    {name:"ตลาดเช้าชุมชน", kind:"ตลาด", walk:6, mode:"เดิน", x:68, y:36},
+    {name:"สวนสาธารณะในซอย", kind:"สวน", walk:9, mode:"เดิน", x:26, y:40},
+    {name:"คลินิกใกล้สถานี", kind:"สุขภาพ", walk:7, mode:"เดิน", x:76, y:66},
+    {name:"ลานอาหารชุมชน", kind:"อาหาร", walk:8, mode:"เดิน", x:30, y:74}
+  ]},
+  "อ่อนนุช": { line:"BTS สายสุขุมวิท", station:"BTS อ่อนนุช", walkTypical:5, vibe:"ย่านอยู่อาศัยที่ใช้ชีวิตประจำวันได้ครบ ตัวเลือกห้องในช่วง 20–40k ในตัวอย่างนี้มีค่อนข้างมาก", travel:"สถานี BTS อ่อนนุชอยู่บนสายสีเขียว เดินทางเข้ากลางเมืองได้โดยตรง และต่อลงใต้ได้ต่อเนื่อง", lifestyle:"รอบสถานีมีตลาดเช้า ร้านอาหารในซอย และสวนชุมชน เหมาะกับคนที่อยากได้ความสะดวกแบบไม่ต้องอยู่ใจกลางที่สุด", nearby:[
+    {name:"สถานี BTS อ่อนนุช", kind:"รถไฟฟ้า", walk:3, mode:"เดิน", x:34, y:74},
+    {name:"ตลาดเช้าชุมชน", kind:"ตลาด", walk:6, mode:"เดิน", x:70, y:34},
+    {name:"สวนสาธารณะในซอย", kind:"สวน", walk:8, mode:"เดิน", x:26, y:38},
+    {name:"คลินิกใกล้สถานี", kind:"สุขภาพ", walk:7, mode:"เดิน", x:76, y:68},
+    {name:"ศูนย์การค้าในย่าน", kind:"ช้อปปิ้ง", walk:12, mode:"เดิน", x:30, y:74}
+  ]},
+  "อโศก": { line:"BTS สายสุขุมวิท", station:"BTS อโศก", walkTypical:5, vibe:"ใจกลางเมือง เชื่อมต่อได้หลายเส้นทาง ห้องตัวอย่างเน้นความสะดวกในการเดินทางเป็นหลัก", travel:"สถานี BTS อโศกเชื่อมต่อพื้นที่กลางสุขุมวิทได้เร็ว และต่อรถไฟฟ้าสายอื่นในระยะเดินได้", lifestyle:"รอบสถานีหนาแน่นด้วยอาคารสำนักงานและร้านอาหาร เหมาะกับคนที่อยากอยู่ใกล้ที่ทำงาน", nearby:[
+    {name:"สถานี BTS อโศก", kind:"รถไฟฟ้า", walk:4, mode:"เดิน", x:34, y:74},
+    {name:"ลานอาหารชุมชน", kind:"อาหาร", walk:5, mode:"เดิน", x:70, y:36},
+    {name:"สวนสาธารณะในซอย", kind:"สวน", walk:10, mode:"เดิน", x:24, y:40},
+    {name:"คลินิกใกล้สถานี", kind:"สุขภาพ", walk:6, mode:"เดิน", x:76, y:70},
+    {name:"ศูนย์การค้าในย่าน", kind:"ช้อปปิ้ง", walk:8, mode:"เดิน", x:28, y:74}
+  ]},
+  "อารีย์": { line:"BTS สายสุขุมวิท", station:"BTS อารีย์", walkTypical:4, vibe:"บรรยากาศย่านคาเฟ่และที่อยู่อาศัยระยะยาว ห้องตัวอย่างมีทั้งช่วงกลางและห้องที่ใหญ่ขึ้นนอกเซ็กเมนต์หลัก", travel:"ขึ้น BTS อารีย์ บนสายสีเขียว เดินทางเข้าสยามและต่อลงใต้ได้โดยไม่ต้องย้ายสาย", lifestyle:"ซอยเดินเล่นได้ มีร้านกาแฟและพื้นที่สีเขียวขนาดย่อม เหมาะกับคนที่อยากได้จังหวะช้ากว่าย่านธุรกิจ", nearby:[
+    {name:"สถานี BTS อารีย์", kind:"รถไฟฟ้า", walk:4, mode:"เดิน", x:34, y:74},
+    {name:"ร้านหนังสือชุมชน", kind:"ไลฟ์สไตล์", walk:6, mode:"เดิน", x:68, y:34},
+    {name:"สวนออกกำลังกาย", kind:"สวน", walk:8, mode:"เดิน", x:26, y:38},
+    {name:"คลินิกใกล้สถานี", kind:"สุขภาพ", walk:7, mode:"เดิน", x:74, y:68},
+    {name:"ลานอาหารชุมชน", kind:"อาหาร", walk:5, mode:"เดิน", x:30, y:74}
+  ]},
+  "พระราม 9": { line:"MRT สายสีน้ำเงิน", station:"MRT พระราม 9", walkTypical:6, vibe:"ย่านธุรกิจฝั่งตะวันออก ห้องตัวอย่างโทนสงบ ใกล้สถานีใต้ดินมากกว่าสายสีเขียว", travel:"ใช้ MRT พระราม 9 เป็นหลัก แล้วต่อสายสีน้ำเงินเข้ากลางเมืองหรือออกนอกได้", lifestyle:"รอบสถานีมีอาคารสำนักงานและพื้นที่พักรับประทานอาหาร เหมาะกับคนที่ทำงานในย่านนี้", nearby:[
+    {name:"สถานี MRT พระราม 9", kind:"รถไฟฟ้า", walk:6, mode:"เดิน", x:34, y:74},
+    {name:"ศูนย์การค้าในย่าน", kind:"ช้อปปิ้ง", walk:8, mode:"เดิน", x:70, y:34},
+    {name:"สวนสาธารณะในซอย", kind:"สวน", walk:11, mode:"เดิน", x:24, y:40},
+    {name:"คลินิกใกล้สถานี", kind:"สุขภาพ", walk:7, mode:"เดิน", x:76, y:68},
+    {name:"ลานอาหารชุมชน", kind:"อาหาร", walk:6, mode:"เดิน", x:30, y:74}
+  ]},
+  "เจริญนคร": { line:"BTS สายสีทอง", station:"BTS กรุงธนบุรี", walkTypical:10, vibe:"ย่านริมแม่น้ำฝั่งธนบุรี ห้องตัวอย่างช่วงงบกลาง บรรยากาศอยู่อาศัยริมน้ำและเดินทางเข้าสาทรได้", travel:"ใช้ BTS กรุงธนบุรีเป็นสถานีหลัก แล้วต่อเข้าสายอื่นหรือเดินทางต่อเข้าเมืองได้", lifestyle:"รอบย่านมีทางเดินริมน้ำ ร้านอาหาร และพื้นที่พักผ่อน เหมาะกับคนที่อยากได้อากาศโล่งกว่าย่านกลาง", nearby:[
+    {name:"สถานี BTS กรุงธนบุรี", kind:"รถไฟฟ้า", walk:10, mode:"เดิน", x:34, y:74},
+    {name:"ทางเดินริมน้ำชุมชน", kind:"ไลฟ์สไตล์", walk:8, mode:"เดิน", x:70, y:36},
+    {name:"สวนสาธารณะในซอย", kind:"สวน", walk:9, mode:"เดิน", x:26, y:40},
+    {name:"คลินิกใกล้สถานี", kind:"สุขภาพ", walk:11, mode:"เดิน", x:76, y:68},
+    {name:"ลานอาหารชุมชน", kind:"อาหาร", walk:7, mode:"เดิน", x:30, y:74}
+  ]},
+  "บางนา": { line:"BTS สายสุขุมวิท", station:"BTS บางนา", walkTypical:7, vibe:"ย่านตะวันออก งบในตัวอย่างย่อมเยาว์กว่าย่านกลาง ใกล้ทางขึ้นลงเมืองและรถไฟฟ้าสายสีเขียว", travel:"ขึ้น BTS บางนา แล้วย้อนเข้ากลางเมืองบนสายสีเขียวได้ตลอดเส้น", lifestyle:"พื้นที่กว้างกว่าย่านในเมือง มีตลาดและร้านอาหารครอบครัวในระยะเดินหรือต่อรถสั้นๆ", nearby:[
+    {name:"สถานี BTS บางนา", kind:"รถไฟฟ้า", walk:7, mode:"เดิน", x:34, y:74},
+    {name:"ตลาดเช้าชุมชน", kind:"ตลาด", walk:8, mode:"เดิน", x:70, y:34},
+    {name:"สวนออกกำลังกาย", kind:"สวน", walk:9, mode:"เดิน", x:26, y:40},
+    {name:"คลินิกใกล้สถานี", kind:"สุขภาพ", walk:8, mode:"เดิน", x:76, y:68},
+    {name:"ลานอาหารชุมชน", kind:"อาหาร", walk:6, mode:"เดิน", x:30, y:74}
+  ]},
+  "พร้อมพงษ์": { line:"BTS สายสุขุมวิท", station:"BTS พร้อมพงษ์", walkTypical:6, vibe:"ย่านกลางสุขุมวิท ห้องตัวอย่างค่อนข้างใหญ่ งบอยู่ท้ายช่วง 20–40k เดินทางต่อบนสายสีเขียวได้สะดวก", travel:"สถานี BTS พร้อมพงษ์อยู่บนสายสีเขียว ต่อขึ้นเหนือหรือลงใต้ได้โดยไม่ต้องเปลี่ยนสาย", lifestyle:"รอบสถานีมีสวน ร้านอาหาร และแหล่งไลฟ์สไตล์ในระยะเดิน เหมาะกับครอบครัวหรือคนที่อยากได้พื้นที่มากขึ้น", nearby:[
+    {name:"สถานี BTS พร้อมพงษ์", kind:"รถไฟฟ้า", walk:6, mode:"เดิน", x:34, y:74},
+    {name:"สวนสาธารณะในซอย", kind:"สวน", walk:8, mode:"เดิน", x:26, y:38},
+    {name:"ลานอาหารชุมชน", kind:"อาหาร", walk:5, mode:"เดิน", x:70, y:34},
+    {name:"คลินิกใกล้สถานี", kind:"สุขภาพ", walk:7, mode:"เดิน", x:76, y:68},
+    {name:"ศูนย์การค้าในย่าน", kind:"ช้อปปิ้ง", walk:9, mode:"เดิน", x:30, y:74}
+  ]}
+};
+
+const GALLERY_SCENES = [
+  { id:"living", label:"ห้องนั่งเล่น" },
+  { id:"kitchen", label:"ครัว" },
+  { id:"bedroom", label:"ห้องนอน" },
+  { id:"balcony", label:"ระเบียง" }
+];
+
+let homeArea = "อ่อนนุช";
+let hoodPin = 0;
+let galleryIdx = 0;
+
+const TH_MONTHS = ["ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค."];
+function thDate(iso){
+  const [y,m,d] = iso.split("-").map(Number);
+  return `${d} ${TH_MONTHS[m-1]} ${y+543}`;
+}
+function money(n){ return n.toLocaleString("th-TH"); }
+function vsMarket(l){
+  const pct = Math.round(((l.avg - l.price) / l.avg) * 100);
+  if (pct >= 2) return { kind:"good", text:`ถูกกว่าค่าเฉลี่ยในโครงการ ${pct}%`, pct };
+  if (pct <= -2) return { kind:"high", text:`สูงกว่าค่าเฉลี่ยในโครงการ ${Math.abs(pct)}%`, pct };
+  return { kind:"mid", text:"ใกล้เคียงค่าเฉลี่ยในโครงการ", pct };
+}
+function pos(price, min, max){
+  const p = (price - min) / (max - min);
+  return Math.min(92, Math.max(8, p * 100));
+}
+function artHTML(art, scene){
+  const sc = scene || "living";
+  return `<div class="art c${art%6} scene-${sc}" aria-hidden="true">
+    <div class="sky"></div><div class="wall"></div><div class="floor"></div>
+    <div class="win"></div><div class="sill"></div>
+    <div class="sofa"></div><div class="plant"></div>
+    <div class="counter"></div><div class="cabinet"></div>
+    <div class="bed"></div><div class="pillow"></div>
+    <div class="rail"></div><div class="city"></div>
+  </div>`;
+}
+function tagsHTML(l){
+  return `<div class="tags">
+    ${l.pets ? `<span class="tag pet">รับสัตว์เลี้ยง</span>` : ``}
+    <span class="tag bts">เดิน ${l.walk} นาทีถึง ${l.transit}</span>
+    <span class="tag">${l.size} ตร.ม. · ${l.beds}</span>
+  </div>`;
+}
+function mktHTML(l, wide){
+  const v = vsMarket(l);
+  const now = pos(l.price, l.min, l.max);
+  const avg = pos(l.avg, l.min, l.max);
+  return `<div class="${wide?"mkt-box":"mkt-mini"}">
+    <div class="mkt-caption ${v.kind}">${v.text} <span class="ex">ตัวเลขตัวอย่าง</span></div>
+    <div class="bar" title="ช่วงราคาจำลองในโครงการเดียวกัน">
+      <i class="rng"></i>
+      <i class="avg" style="left:${avg}%"></i>
+      <i class="now" style="left:${now}%"></i>
+    </div>
+    ${wide ? `<div class="mkt-scale"><span>ต่ำสุด ${money(l.min)}</span><span>เฉลี่ย ${money(l.avg)}</span><span>สูงสุด ${money(l.max)}</span></div>` : ``}
+  </div>`;
+}
+function cardHTML(l, score){
+  const cov = coverSrc(l.id);
+  const covImg = cov ? photoImg(cov, `ภาพตัวอย่างห้อง ${l.project} — ไม่ใช่ห้องจริง`, "cover-photo", 800, 450, false) : artHTML(l.art);
+  return `<a class="card" href="${roomHref(l.id)}">
+    <div class="cover">
+      ${covImg}
+      <span class="sample-tag">ข้อมูลจำลอง</span>
+      ${score!=null ? `<span class="score-pill"><span>เข้ากัน</span>${score}%</span>` : ``}
+      <span class="badge-vacant">ยืนยันว่าว่างล่าสุดเมื่อ ${thDate(l.confirmed)}</span>
+    </div>
+    <p class="photo-ai-caption">${PHOTO_AI_LABEL}</p>
+    <div class="card-body">
+      <div class="meta">${l.area} · ย้ายเข้าได้ ${thDate(l.available)}</div>
+      <h3>${l.project}</h3>
+      <div class="price">${money(l.price)} <small>บาท/เดือน</small></div>
+      ${mktHTML(l,false)}
+      ${tagsHTML(l)}
+    </div>
+  </a>`;
+}
+
+
+const iconBack = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>`;
+const iconSpark = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.2 6.2L19 12l-5.8 2.8L12 21l-1.2-6.2L5 12l5.8-2.8L12 3z"/></svg>`;
+const iconSend = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`;
+const iconClose = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>`;
+const iconCheck = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7L10 17l-6-6"/><circle cx="12" cy="12" r="10" opacity=".25"/></svg>`;
+const iconTarget = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>`;
+const iconChart = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>`;
+
+
+function nearbyPlaces(area){
+  const block = NEARBY[area];
+  return block ? block.places.slice() : [];
+}
+function areaNearby(area){
+  return nearbyPlaces(area).map(n => Object.assign({ kind:n.category, walk:n.minutes }, n));
+}
+function mapsUrl(p){
+  return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(p.mapsQuery || (p.name + " Bangkok"));
+}
+function placeTime(p){
+  const verb = p.mode || "เดิน";
+  return verb + "ประมาณ " + p.minutes + " นาที";
+}
+let famousFilter = { hood:"all", detail:"all" };
+const FAMOUS_CHIPS = [
+  ["all","ทั้งหมด"],
+  ["ร้านอาหาร","ร้านอาหาร"],
+  ["คาเฟ่","คาเฟ่"],
+  ["บาร์","บาร์"],
+  ["ช็อปปิ้ง","ช็อปปิ้ง"],
+  ["สวน","สวน"]
+];
+function iconCafe(){ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12v6a4 4 0 01-4 4H8a4 4 0 01-4-4v-6z"/><path d="M16 11h2.5a2.5 2.5 0 010 5H16"/><path d="M8 4s1 1.2 1 2.2S8 8 8 8M12 4s1 1.2 1 2.2S12 8 12 8"/></svg>`; }
+function iconFork(){ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v8M6 3v5a2 2 0 002 2h0a2 2 0 002-2V3M10 3v8M8 13v8M16 3c0 3 2 4 2 7v11M16 3v7"/></svg>`; }
+function iconGlass(){ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10l-1.2 10.5A4.8 4.8 0 0111 19h0a4.8 4.8 0 01-4.8-4.5L7 4z"/><path d="M8 22h8"/></svg>`; }
+function iconBag(){ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 13H7L6 8z"/><path d="M9 8V7a3 3 0 016 0v1"/></svg>`; }
+function placeKindIcon(kind){
+  if(kind==="รถไฟฟ้า") return iconTransit();
+  if(kind==="สวน") return iconLeaf();
+  if(kind==="คาเฟ่") return iconCafe();
+  if(kind==="ร้านอาหาร") return iconFork();
+  if(kind==="บาร์") return iconGlass();
+  if(kind==="ช็อปปิ้ง") return iconBag();
+  return iconPin();
+}
+function famousHTML(area, scope){
+  const all = areaNearby(area);
+  const filt = famousFilter[scope] || "all";
+  const rows = filt==="all" ? all : all.filter(p => p.category===filt);
+  const chips = FAMOUS_CHIPS.map(([id,label])=>{
+    const n = id==="all" ? all.length : all.filter(p=>p.category===id).length;
+    if (id!=="all" && n===0) return "";
+    return `<button type="button" class="chip ${filt===id?"on":""}" data-famous-filter="${id}" data-famous-scope="${scope}" aria-pressed="${filt===id?"true":"false"}">${label} (${n})</button>`;
+  }).join("");
+  const cards = rows.length ? rows.map((p,i)=>`
+    <article class="famous-card">
+      <div class="ico">${placeKindIcon(p.category)}</div>
+      <div class="cat">${p.category}</div>
+      <h3>${p.name}</h3>
+      <div class="time">${placeTime(p)} · จาก ${p.station}</div>
+      <a class="maps" href="${mapsUrl(p)}" target="_blank" rel="noopener noreferrer">เปิดใน Google Maps</a>
+    </article>`).join("") : `<div class="famous-empty">ยังไม่มีรายการในหมวดนี้สำหรับย่าน${area}</div>`;
+  return `
+  <section class="famous" id="famous-${scope}">
+    <div class="eyebrow">ร้านดังใกล้คอนโด</div>
+    <h2>ร้านอาหาร คาเฟ่ และจุดฮิตใกล้สถานี</h2>
+    <p class="lead-note">สถานที่เหล่านี้เป็นร้านและสถานที่จริงที่เปิดให้บริการ ชื่อโครงการคอนโดในหน้านี้ยังเป็นชื่อสมมติ ${NEARBY_NOTE}</p>
+    <div class="famous-filters" aria-label="กรองประเภทร้าน">${chips}</div>
+    <div class="famous-grid">${cards}</div>
+    <p class="famous-disclaimer">${NEARBY_NOTE} ไม่ใช่ระยะจากตัวอาคารตัวอย่าง และไม่มีคะแนนหรือจำนวนรีวิวสมมติ</p>
+  </section>`;
+}
+function iconTransit(){ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11h16M6 11V8a4 4 0 014-4h4a4 4 0 014 4v3"/><path d="M6 16h.01M18 16h.01M5 11v5h14v-5"/><path d="M3 20h3M18 20h3"/></svg>`; }
+function iconWalk(){ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="M9 22l3-7 3 7M8 13l4-2 2 3 3 1"/></svg>`; }
+function iconPin(){ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg>`; }
+function iconCal(){ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M8 4v4M16 4v4M4 11h16"/></svg>`; }
+function iconPaw(){ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="8" r="1.6"/><circle cx="12" cy="6" r="1.6"/><circle cx="17" cy="8" r="1.6"/><path d="M12 11c-2.8 0-5 2-5 4.2 0 1.8 1.6 2.8 5 2.8s5-1 5-2.8c0-2.2-2.2-4.2-5-4.2z"/></svg>`; }
+function iconLeaf(){ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c8 0 14-8 14-14-6 0-14 6-14 14z"/><path d="M5 19c3-5 7-8 12-10"/></svg>`; }
+function miniMapHTML(places, homeLabel, active, prefix){
+  const roads = `<i class="road-h" style="top:46%"></i><i class="road-h" style="top:72%"></i><i class="road-v" style="left:42%"></i><i class="road-v" style="left:66%"></i>`;
+  const pins = [`<button type="button" class="map-pin home" style="left:58%;top:48%" disabled aria-label="ตำแหน่งห้องตัวอย่าง"><span class="dot"></span></button>`].concat(
+    places.map((n,i)=>`<button type="button" class="map-pin ${i===active?"on":""}" style="left:${n.x}%;top:${n.y}%" data-pin="${i}" data-pin-scope="${prefix}" aria-pressed="${i===active?"true":"false"}" aria-label="${n.name} ${n.mode} ${n.walk} นาที"><span class="lbl">${n.name}</span><span class="dot"></span></button>`)
+  ).join("");
+  return `<div class="mini-map" aria-hidden="true"><div class="grid-lines"></div>${roads}${pins}<div class="map-note">แผนที่ประกอบ · ไม่ได้เชื่อมแผนที่จริง</div></div>`;
+}
+function placesHTML(places, active, prefix){
+  return `<div class="places">${places.map((n,i)=>`<button type="button" class="place-item ${i===active?"on":""}" data-pin="${i}" data-pin-scope="${prefix}" aria-pressed="${i===active?"true":"false"}"><span class="ico">${placeKindIcon(n.kind)}</span><span>${n.name}<small>${n.mode} ${n.walk} นาที · ${n.kind}</small></span></button>`).join("")}</div>`;
+}
+function hoodHTML(){
+  const area = homeArea;
+  const prof = AREA_PROFILES[area];
+  const rooms = LISTINGS.filter(l=>l.area===area);
+  const places = areaNearby(area, rooms[0] ? rooms[0].walk : prof.walkTypical);
+  const chips = AREAS.map(a=>`<button type="button" class="chip ${a===area?"on":""}" data-area="${a}" aria-pressed="${a===area?"true":"false"}">${a}</button>`).join("");
+  return `
+  <div class="hood" id="hood">
+    <div class="eyebrow">สำรวจทำเล</div>
+    <h2>ย่านที่อยากอยู่ ใกล้รถไฟฟ้า</h2>
+    <p class="lead" style="color:var(--muted);max-width:54ch;margin-top:8px">เลือกย่านแล้วอ่านบรรยากาศ การเดินทาง และร้านดังใกล้สถานี ร้านอาหาร คาเฟ่ และสถานที่ในหมวดร้านดังเป็นสถานที่จริงที่เปิดให้บริการ ชื่อโครงการคอนโดในตัวอย่างยังเป็นชื่อสมมติ</p>
+    <div class="hood-chips" aria-label="เลือกย่าน">${chips}</div>
+    <div class="hood-layout">
+      <div class="hood-copy">
+        <div class="eyebrow">${prof.line}</div>
+        <h2>${area}</h2>
+        <p class="lead">${prof.vibe}</p>
+        <div class="hood-points">
+          <div class="hood-point"><div class="ic">${iconTransit()}</div><div><h3>เดินทางด้วยรถไฟฟ้า</h3><p>${prof.travel}</p></div></div>
+          <div class="hood-point"><div class="ic">${iconLeaf()}</div><div><h3>ไลฟ์สไตล์รอบย่าน</h3><p>${prof.lifestyle}</p></div></div>
+          <div class="hood-point"><div class="ic">${iconWalk()}</div><div><h3>เดินถึง ${prof.station}</h3><p>ห้องตัวอย่างในย่านนี้เดินถึงสถานีประมาณ ${prof.walkTypical} นาที หรือใกล้กว่านั้นในบางห้อง</p></div></div>
+        </div>
+        <a class="btn btn-md btn-primary" href="#/results?area=${encodeURIComponent(area)}">จับคู่ห้องในย่าน${area}</a>
+        <a class="btn btn-md btn-ghost" href="${areaHref(area)}">อ่านหน้าย่าน${area}</a>
+      </div>
+      <div class="hood-visual-wrap">
+        <div class="hood-visual" aria-hidden="true">
+          <div class="glow"></div>
+          <div class="bldg b1"></div><div class="bldg b2"></div><div class="bldg b3"></div>
+          <div class="bldg b4"></div><div class="bldg b5"></div><div class="bldg b6"></div>
+          <div class="train"></div><div class="ground"></div>
+        </div>
+        ${miniMapHTML(places, "ห้องตัวอย่างในย่าน", hoodPin, "hood")}
+        <p class="vis-cap">ภาพประกอบจำลองและแผนที่อย่างง่าย ไม่ใช่ภาพถ่ายหรือแผนที่จริงของย่าน</p>
+      </div>
+    </div>
+    ${famousHTML(area, "hood")}
+    <div class="hood-rooms">
+      <h3>${rooms.length ? `${rooms.length} ห้องตัวอย่างในย่าน${area}` : `ยังไม่มีห้องตัวอย่างในย่านนี้`}</h3>
+      ${rooms.length ? `<div class="grid">${rooms.map(l=>cardHTML(l)).join("")}</div>` : ""}
+    </div>
+  </div>`;
+}
+function paintHood(){
+  const el = document.getElementById("hood");
+  if(!el) return;
+  const y = window.scrollY;
+  el.outerHTML = hoodHTML();
+  window.scrollTo(0, y);
+}
+function faqHTML(){
+  return `
+  <div class="faq-wrap">
+    <div class="eyebrow">คำถามที่พบบ่อย</div>
+    <h2>ก่อนเริ่มจับคู่ห้อง</h2>
+    <details class="faq"><summary>จับคู่ห้องในตัวอย่างนี้ทำงานอย่างไร</summary><p>คุณบอกทำเล งบ ขนาด วันย้ายเข้า และสัตว์เลี้ยง แล้วระบบให้คะแนนความเหมาะสมทุกห้องตัวอย่าง แล้วเรียงห้องที่ใกล้เคียงที่สุดขึ้นก่อน ไม่ได้ดึงประกาศจริงจากพอร์ทัลอื่น</p></details>
+    <details class="faq"><summary>ป้ายยืนยันว่าว่างล่าสุดหมายความว่าอะไร</summary><p>ทุกใบประกาศในตัวอย่างมีข้อความว่า “ยืนยันว่าว่างล่าสุดเมื่อ …” ตามวันที่ตรวจจำลอง ไม่ใช้แค่วันที่โพสต์ และไม่ใช่การยืนยันจากเจ้าของห้องจริง</p></details>
+    <details class="faq"><summary>ตัวเลขเทียบราคาในโครงการเชื่อถือได้แค่ไหน</summary><p>แถบราคาและข้อความเช่น “ถูกกว่าค่าเฉลี่ยในโครงการ” เป็นตัวเลขตัวอย่างในชุดข้อมูลจำลองเท่านั้น ใช้เพื่อแสดงแนวทางการอ่านราคา ไม่ใช่ราคาตลาดจริง</p></details>
+  </div>`;
+}
+
+
+function homeView(){
+  const featured = LISTINGS.filter(l=>l.inSeg);
+  return `
+  <div class="hero">
+    <div class="hero-kicker">MoveCondo · ย้ายคอนโด · หาคอนโดเช่าที่ใช่</div>
+    <h1>หาคอนโดเช่าที่ <em>ตรงกับคุณ</em> ไม่ใช่แค่ห้องที่ยังประกาศอยู่</h1>
+    <p class="lead">บอกทำเล งบ ขนาด วันย้ายเข้า และสัตว์เลี้ยง แล้วรับห้องที่เรียงตามคะแนนความเหมาะสม ทุกใบประกาศมีป้ายยืนยันว่าว่างล่าสุด หรือพิมพ์ความต้องการคุยกับผู้ช่วย AI ตัวอย่างก็ได้</p>
+    <div class="hero-actions">
+      <a class="btn btn-lg btn-primary" href="#/match">เริ่มจับคู่ห้อง</a>
+      <button class="btn btn-lg btn-ghost" type="button" data-open="ai">คุยกับผู้ช่วย AI</button>
+      <a class="seg-chip-hero" href="#/results?seg=20-40"><span class="seg-dot"></span> เซ็กเมนต์ 20,000–40,000 บาท/เดือน</a>
+    </div>
+  </div>
+  <div class="trust">
+    <div class="trust-card"><div class="icon-tile">${iconCheck}</div><div><h2 style="font-size:16px">ยืนยันว่าว่างล่าสุด</h2><p>แสดงวันที่ตรวจความว่างล่าสุดบนทุกใบประกาศ ไม่ใช่แค่วันที่โพสต์</p></div></div>
+    <div class="trust-card"><div class="icon-tile">${iconTarget}</div><div><h2 style="font-size:16px">คะแนนความเหมาะสม</h2><p>เรียงผลจากสิ่งที่คุณต้องการ ไม่ต้องเลื่อนประกาศนับร้อยรายการ</p></div></div>
+    <div class="trust-card"><div class="icon-tile">${iconChart}</div><div><h2 style="font-size:16px">เทียบราคาในโครงการ</h2><p>เห็นว่าราคาถูกหรือสูงกว่าค่าเฉลี่ยในโครงการเดียวกัน <span class="ex">ตัวเลขตัวอย่าง</span></p></div></div>
+  </div>
+  <div class="band">
+  <div class="section">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">เซ็กเมนต์ที่เติบโตเร็ว</div>
+        <div class="seg-flag">20,000–40,000 บาท/เดือน</div>
+        <h2 style="margin-top:10px">ห้องตัวอย่างในช่วงที่คนค้นหามาก</h2>
+        <p>9 จาก 10 ห้องในตัวอย่างนี้อยู่ในช่วงนี้ กดชิปด้านบนหรือด้านล่างเพื่อกรองเฉพาะเซ็กเมนต์นี้ได้ทันที</p>
+      </div>
+      <a class="btn btn-md btn-ghost" href="#/results?seg=20-40">ดูทั้งหมดในช่วงนี้</a>
+    </div>
+    <div class="grid">${featured.slice(0,6).map(l=>cardHTML(l)).join("")}</div>
+  </div>
+  </div>
+  <div class="band">${hoodHTML()}</div>
+  <div class="section">
+    <div class="section-head"><div><div class="eyebrow">วิธีใช้</div><h2>จับคู่ในสามขั้นตอน</h2><p>ออกแบบมาให้ตัดสินใจได้เร็ว แล้วกดนัดชมหรือทัก LINE ได้จากหน้าห้อง</p></div></div>
+    <div class="steps">
+      <div class="step"><b>1</b><h3>บอกความต้องการ</h3><p>กรอกแบบฟอร์ม หรือพิมพ์คุยกับผู้ช่วย AI ตัวอย่างเป็นภาษาพูดก็ได้</p></div>
+      <div class="step"><b>2</b><h3>ได้ห้องเรียงตามคะแนน</h3><p>เห็นความเข้ากัน ป้ายว่างล่าสุด และเทียบราคาในโครงการ</p></div>
+      <div class="step"><b>3</b><h3>นัดชมหรือทัก LINE</h3><p>ปุ่มนัดชมห้องชัดเจน และช่องทาง LINE OA ตัวอย่าง @max-example</p></div>
+    </div>
+  </div>
+  ${faqHTML()}`;
+}
+
+function matchView(prefs){
+  const p = prefs || {};
+  const areaOpts = [`<option value="any">ไม่จำกัดทำเล</option>`].concat(AREAS.map(a=>`<option value="${a}" ${p.area===a?"selected":""}>${a}</option>`)).join("");
+  return `
+  <div class="page-hero">
+    <a class="back" href="#/">${iconBack} กลับหน้าแรก</a>
+    <h1>บอกสิ่งที่คุณต้องการ</h1>
+    <p>ระบบจะให้คะแนนความเหมาะสมทุกห้องตัวอย่าง แล้วเรียงให้ห้องที่ใกล้เคียงที่สุดขึ้นก่อน</p>
+  </div>
+  <form class="form-card" id="matchForm">
+    <div class="fields">
+      <div class="field">
+        <label for="area">ทำเลที่ต้องการ</label>
+        <select class="inp" id="area" name="area">${areaOpts}</select>
+        <span class="hint">มีหลายย่านในกรุงเทพฯ ให้เลือก เช่น ทองหล่อ พร้อมพงษ์ เจริญนคร อ่อนนุช</span>
+      </div>
+      <div class="field">
+        <label for="budget">งบค่าเช่าสูงสุด <span class="hint">บาท/เดือน</span></label>
+        <select class="inp" id="budget" name="budget">
+          <option value="20000" ${p.budget==20000?"selected":""}>20,000</option>
+          <option value="25000" ${p.budget==25000?"selected":""}>25,000</option>
+          <option value="30000" ${p.budget==30000?"selected":""}>30,000</option>
+          <option value="35000" ${!p.budget || p.budget==35000?"selected":""}>35,000</option>
+          <option value="40000" ${p.budget==40000?"selected":""}>40,000</option>
+          <option value="50000" ${p.budget==50000?"selected":""}>50,000</option>
+        </select>
+      </div>
+      <div class="seg-hint">ช่วง 20,000–40,000 บาท/เดือน เป็นเซ็กเมนต์ที่เติบโตเร็วและเป็นจุดเด่นของตัวอย่างนี้ — ค่าเริ่มต้นอยู่ที่ 35,000 บาท</div>
+      <div class="field">
+        <label for="size">ขนาดห้องขั้นต่ำ <span class="hint">ตารางเมตร</span></label>
+        <select class="inp" id="size" name="size">
+          <option value="25" ${p.size==25?"selected":""}>25 ตร.ม.</option>
+          <option value="30" ${!p.size || p.size==30?"selected":""}>30 ตร.ม.</option>
+          <option value="35" ${p.size==35?"selected":""}>35 ตร.ม.</option>
+          <option value="40" ${p.size==40?"selected":""}>40 ตร.ม.</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="moveIn">วันที่ย้ายเข้าได้</label>
+        <input class="inp" id="moveIn" name="moveIn" type="date" value="${p.moveIn||"2026-12-01"}" min="2026-11-12" />
+      </div>
+      <div class="field full">
+        <label>มีสัตว์เลี้ยงหรือไม่</label>
+        <div class="pets">
+          <button type="button" class="choice ${p.pets==="yes"?"on":""}" data-pets="yes" aria-pressed="${p.pets==="yes"?"true":"false"}">มีสัตว์เลี้ยง</button>
+          <button type="button" class="choice ${p.pets!=="yes"?"on":""}" data-pets="no" aria-pressed="${p.pets!=="yes"?"true":"false"}">ไม่มีสัตว์เลี้ยง</button>
+        </div>
+        <input type="hidden" name="pets" id="pets" value="${p.pets||"no"}" />
+      </div>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-lg btn-primary" type="submit">ดูห้องที่ตรงที่สุด</button>
+      <a class="btn btn-lg btn-ghost" href="#/results?seg=20-40">ดูเฉพาะช่วง 20–40k</a>
+    </div>
+  </form>`;
+}
+
+let prefs = null;
+let filters = { seg:false, pets:false, walk5:false, area:null };
+
+function scoreListing(l, p){
+  if(!p) return null;
+  let s = 20;
+  if(!p.area || p.area==="any") s += 12;
+  else if(l.area===p.area) s += 30;
+  else s += 0;
+  if(l.price <= p.budget){
+    s += 22;
+    const slack = (p.budget - l.price) / p.budget;
+    if(slack > 0.35) s -= 4;
+  } else if(l.price <= p.budget*1.08) s += 8;
+  else if(l.price <= p.budget*1.2) s -= 6;
+  else s -= 22;
+  if(l.size >= p.size) s += 14;
+  else if(l.size >= p.size*0.9) s += 7;
+  else s -= 6;
+  if(p.pets==="yes"){ s += l.pets ? 18 : -26; }
+  if(l.available <= p.moveIn) s += 10;
+  else s -= 14;
+  return Math.max(24, Math.min(98, Math.round(s)));
+}
+
+function resultsView(){
+  let rows = LISTINGS.map(l => ({l, score: scoreListing(l, prefs)}));
+  if(filters.seg) rows = rows.filter(r=>r.l.inSeg);
+  if(filters.pets) rows = rows.filter(r=>r.l.pets);
+  if(filters.walk5) rows = rows.filter(r=>r.l.walk<=5);
+  if(filters.area) rows = rows.filter(r=>r.l.area===filters.area);
+  if(prefs) rows.sort((a,b)=> (b.score??0) - (a.score??0));
+  else rows.sort((a,b)=> a.l.price - b.l.price);
+
+  const echo = prefs ? `จับคู่จากทำเล ${prefs.area==="any"?"ไม่จำกัด":prefs.area} · งบไม่เกิน ${money(prefs.budget)} บาท · จาก ${prefs.size} ตร.ม. · ย้ายเข้า ${thDate(prefs.moveIn)} · ${prefs.pets==="yes"?"มีสัตว์เลี้ยง":"ไม่มีสัตว์เลี้ยง"}` : `สำรวจห้องตัวอย่างทั้งหมด ${filters.seg?"ในเซ็กเมนต์ 20,000–40,000 บาท/เดือน":""}`;
+
+  return `
+  <div class="page-hero">
+    <a class="back" href="#/match">${iconBack} ปรับเงื่อนไขจับคู่</a>
+    <h1>${prefs ? "ห้องที่เข้ากับคุณที่สุด" : "ห้องว่างตัวอย่าง"}</h1>
+    <p>${prefs ? "เรียงตามคะแนนความเหมาะสมจากแบบฟอร์มของคุณ" : "เลือกชิปเซ็กเมนต์ที่เติบโตเร็ว หรือเริ่มจับคู่เพื่อให้มีคะแนนความเหมาะสม"}</p>
+    <div class="prefs-echo"><span>${echo}</span><a class="btn btn-sm btn-ghost" href="#/match">แก้เงื่อนไข</a></div>
+    <div class="filters">
+      <button type="button" class="chip featured ${filters.seg?"on":""}" data-filter="seg" aria-pressed="${filters.seg?"true":"false"}">20,000–40,000 บาท/เดือน</button>
+      <button type="button" class="chip ${filters.pets?"on":""}" data-filter="pets" aria-pressed="${filters.pets?"true":"false"}">รับสัตว์เลี้ยง</button>
+      <button type="button" class="chip ${filters.walk5?"on":""}" data-filter="walk5" aria-pressed="${filters.walk5?"true":"false"}">เดินถึง BTS/MRT ≤ 5 นาที</button>
+      ${filters.area ? `<button type="button" class="chip on" data-filter="area" aria-pressed="true">ย่าน${filters.area}</button>` : ""}
+    </div>
+    <div class="results-count">${rows.length} ห้อง${prefs?" · เรียงตามคะแนนความเหมาะสม":""}</div>
+  </div>
+  <div class="section" style="margin-top:8px">
+    ${rows.length ? `<div class="grid">${rows.map(r=>cardHTML(r.l, r.score)).join("")}</div>` : `<div class="empty">ไม่มีห้องที่ตรงกับตัวกรองนี้ ลองปิดบางชิปหรือขยายงบ</div>`}
+  </div>`;
+}
+
+function setGallery(idx){
+  const stage = document.getElementById("galleryStage");
+  if(!stage) return;
+  const photos = listingPhotos(stage.dataset.listing);
+  if(!photos.length) return;
+  galleryIdx = (idx + photos.length) % photos.length;
+  const sc = photos[galleryIdx];
+  const artBox = stage.querySelector(".gallery-art");
+  if(artBox){
+    const alt = `ภาพตัวอย่าง${sc.label} — ไม่ใช่ห้องจริง`;
+    artBox.innerHTML = photoImg(sc.gallery, alt, "gallery-photo", 1400, 788, true);
+  }
+  const root = stage.closest(".gallery-hero") || stage.parentElement;
+  const lab = stage.querySelector(".scene-label");
+  if(lab) lab.innerHTML = `<span>${PHOTO_AI_LABEL}</span><b>${sc.label}</b>`;
+  const count = root.querySelector(".gal-count");
+  if(count) count.textContent = `${String(galleryIdx+1).padStart(2,"0")} / ${String(photos.length).padStart(2,"0")}`;
+  root.querySelectorAll(".thumb").forEach((th,i)=>{
+    const on = i===galleryIdx;
+    th.classList.toggle("on", on);
+    th.setAttribute("aria-pressed", on ? "true" : "false");
+  });
+}
+function paintNearby(scope, idx){
+  const places = document.querySelectorAll(`[data-pin-scope="${scope}"]`);
+  places.forEach(el=>{
+    const on = Number(el.dataset.pin)===idx;
+    el.classList.toggle("on", on);
+    el.setAttribute("aria-pressed", on ? "true" : "false");
+  });
+  if(scope==="hood") hoodPin = idx;
+}
+function detailView(id){
+  const l = LISTINGS.find(x=>x.id===id) || LISTINGS[0];
+  const sc = scoreListing(l, prefs);
+  galleryIdx = 0;
+  const photos = listingPhotos(l.id);
+  const scene = photos[galleryIdx] || photos[0] || { label:"ภาพตัวอย่าง" };
+  const places = areaNearby(l.area, l.walk);
+  const prof = AREA_PROFILES[l.area];
+  const thumbs = photos.map((s,i)=>`<button type="button" class="thumb ${i===galleryIdx?"on":""}" data-gal="${i}" aria-label="ดูภาพ${s.label}" aria-pressed="${i===galleryIdx?"true":"false"}">${photoImg(s.thumb, s.label, "", 320, 180, false)}</button>`).join("");
+  const heroAlt = scene ? `ภาพตัวอย่าง${scene.label} — ไม่ใช่ห้องจริง` : "ภาพตัวอย่างห้อง";
+  const heroSrc = scene ? scene.gallery : "";
+  return `
+  <div class="page-hero" style="margin-bottom:0">
+    <a class="back" href="#/results">${iconBack} กลับผลการจับคู่</a>
+  </div>
+  <div class="gallery-hero" id="gallery">
+    <div class="gallery-stage" id="galleryStage" data-listing="${l.id}" aria-roledescription="carousel" aria-label="ภาพตัวอย่างห้อง">
+      <div class="gallery-art">${heroSrc ? photoImg(heroSrc, heroAlt, "gallery-photo", 1400, 788, true) : ""}</div>
+      <span class="sample-tag">ข้อมูลจำลอง</span>
+      ${sc!=null?`<span class="score-pill"><span>เข้ากัน</span>${sc}%</span>`:""}
+      <div class="scene-label"><span>${PHOTO_AI_LABEL}</span><b>${scene.label}</b></div>
+    </div>
+    <div class="gallery-nav">
+      <div class="thumbs">${thumbs}</div>
+      <div class="gal-ctrl">
+        <span class="gal-count">${String(galleryIdx+1).padStart(2,"0")} / ${String(photos.length).padStart(2,"0")}</span>
+        <button type="button" class="gal-btn" data-gal="prev" aria-label="ภาพก่อนหน้า">${iconBack}</button>
+        <button type="button" class="gal-btn" data-gal="next" aria-label="ภาพถัดไป"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <nav class="detail-subnav" aria-label="ในหน้านี้">
+    <a href="#gallery">ภาพห้อง</a>
+    <a href="#highlights">จุดเด่น</a>
+    <a href="#nearby">ร้านดัง</a>
+    <a href="#details">รายละเอียด</a>
+  </nav>
+  <div class="detail">
+    <div class="detail-main">
+      <section class="nearby-box" id="highlights" style="padding:18px">
+        <div class="eyebrow">จุดเด่นห้อง</div>
+        <h2 style="font-size:22px;letter-spacing:-.02em;margin-bottom:12px">สิ่งที่ควรรู้ก่อนนัดชม</h2>
+        <div class="hl-row">
+          <div class="hl"><div class="ic">${iconWalk()}</div><div><h3>เดินถึงรถไฟฟ้า</h3><b>เดิน ${l.walk} นาทีถึง ${l.transit}</b></div></div>
+          <div class="hl"><div class="ic">${iconPaw()}</div><div><h3>สัตว์เลี้ยง</h3><b>${l.pets?"รับสัตว์เลี้ยงขนาดเล็ก":"ไม่รับสัตว์เลี้ยงในห้องนี้"}</b></div></div>
+          <div class="hl"><div class="ic">${iconPin()}</div><div><h3>ขนาดและแบบห้อง</h3><b>${l.size} ตร.ม. · ${l.beds} · ชั้น ${l.floor}</b></div></div>
+          <div class="hl"><div class="ic">${iconCal()}</div><div><h3>ย้ายเข้าได้</h3><b>${thDate(l.available)}</b></div></div>
+        </div>
+      </section>
+      <section class="nearby-box" id="nearby">
+        <div class="hd">
+          <div class="eyebrow">ทำเลย่าน${l.area}</div>
+          <h2>ใกล้สถานีและร้านดังในย่าน</h2>
+          <p>${prof ? prof.vibe : ""} แผนที่ด้านล่างเป็นภาพประกอบ ไม่ได้เชื่อมแผนที่จริง · ระยะทางในรายการร้านดังเป็นค่าประมาณจากสถานี</p>
+        </div>
+        ${miniMapHTML(places, l.project, 0, "detail")}
+        <div style="padding:0 18px 8px">${famousHTML(l.area, "detail")}</div>
+        <div style="padding:0 18px 18px"><a class="btn btn-sm btn-ghost" href="#/" data-jump-area="${l.area}">อ่านเรื่องย่าน${l.area}</a></div>
+      </section>
+      <section class="detail-more" id="details">
+        <div class="eyebrow">รายละเอียด</div>
+        <h2>ห้องชุดตัวอย่างนี้</h2>
+        <p class="desc">${l.blurb} ชื่อโครงการและตัวเลขเป็นตัวอย่างสำหรับนำเสนอแนวทาง ไม่ใช่ห้องที่มีอยู่จริง ส่วนร้านดังในย่านเป็นสถานที่จริงที่เปิดให้บริการ</p>
+        <div class="facts">
+          <div class="fact">เงินมัดจำ<b>${money(l.deposit)} บาท</b></div>
+          <div class="fact">ชั้นที่<b>${l.floor}</b></div>
+          <div class="fact">ขนาดและแบบห้อง<b>${l.size} ตร.ม. · ${l.beds}</b></div>
+          <div class="fact">ทำเล<b>${l.area} · ${l.transit}</b></div>
+          <div class="fact">ย้ายเข้าได้<b>${thDate(l.available)}</b></div>
+          <div class="fact">ยืนยันว่าว่างล่าสุด<b>${thDate(l.confirmed)}</b></div>
+        </div>
+        <div class="amen-label">สิ่งอำนวยความสะดวกในโครงการ (ตัวอย่าง)</div>
+        <div class="amen-list">${(l.amenities||[]).map(a=>`<span class="amen-chip">${a}</span>`).join("")}</div>
+      </section>
+    </div>
+    <aside class="detail-panel">
+      <h1>${l.project}</h1>
+      <div class="meta">${l.area} · ${l.size} ตร.ม. · ${l.beds}</div>
+      <div class="detail-price">${money(l.price)} <small>บาท/เดือน</small></div>
+      <div class="vacant-row">ยืนยันว่าว่างล่าสุดเมื่อ ${thDate(l.confirmed)}</div>
+      ${tagsHTML(l)}
+      ${mktHTML(l,true)}
+      <p class="desc">นัดชมผ่านปุ่มด้านล่าง หรือทัก LINE OA ตัวอย่าง @max-example ไม่มีเบอร์โทรหรือชื่อเจ้าของในหน้านี้</p>
+      <div class="cta-row">
+        <button class="btn btn-lg btn-primary" type="button" data-book="${l.id}">นัดชมห้อง</button>
+        <button class="btn btn-lg btn-line" type="button" data-open="line" data-listing="${l.id}">ติดต่อ LINE</button>
+      </div>
+    </aside>
+  </div>`;
+}
+
+function stickyFor(id){
+  const l = LISTINGS.find(x=>x.id===id);
+  if(!l) return "";
+  return `<button class="btn btn-md btn-primary" type="button" data-book="${l.id}">นัดชมห้อง</button>
+          <button class="btn btn-md btn-line" type="button" data-open="line" data-listing="${l.id}">ติดต่อ LINE</button>`;
+}
+
+function lineModalHTML(id){
+  const l = id ? LISTINGS.find(x=>x.id===id) : null;
+  const msg = l
+    ? `สวัสดีค่ะ สนใจห้อง ${l.project} (${l.id}) ย่าน${l.area} ค่าเช่า ${money(l.price)} บาท/เดือน อยากสอบถามรายละเอียดเพิ่มเติมค่ะ`
+    : `สวัสดีค่ะ สนใจเช่าคอนโดช่วงงบ 20,000–40,000 บาท/เดือน อยากให้ช่วยแนะนำห้องตัวอย่างค่ะ`;
+  const about = l ? `<p>${l.project} · ${l.area} · ${l.id}</p>` : ``;
+  return `<div class="modal">
+    <h3 id="lineTitle">ติดต่อผ่าน LINE</h3>
+    <p>ช่องทางตัวอย่างสำหรับงานออกแบบนี้เท่านั้น ยังไม่ใช่บัญชีจริงที่รับข้อความ</p>
+    <div class="seg-hint" style="margin-bottom:16px">LINE Official Account: <strong>@max-example</strong></div>
+    ${about}
+    <div class="line-prefill">
+      <label for="lineMsg">ข้อความตัวอย่าง — ไม่ได้ส่งจริง</label>
+      <textarea id="lineMsg" readonly rows="4">${msg}</textarea>
+    </div>
+    <button class="btn btn-md btn-primary btn-full" type="button" data-copy-line>คัดลอกข้อความตัวอย่าง</button>
+    <button class="btn btn-md btn-ghost btn-full" type="button" data-close="line" style="margin-top:8px">ปิด</button>
+  </div>`;
+}
+
+function viewModalHTML(id, done){
+  const l = LISTINGS.find(x=>x.id===id) || LISTINGS[0];
+  if(done){
+    return `<div class="modal"><div class="ok-box">
+      <div class="icon-tile">${iconCheck}</div>
+      <h3 id="viewTitle">รับคำขอนัดชมแล้ว (ตัวอย่าง)</h3>
+      <p>ระบบไม่ได้ส่งนัดจริงไปยังใคร ขั้นตอนนี้แสดงเพื่อจำลองการจองชมห้องของ ${l.project} เท่านั้น</p>
+      <button class="btn btn-md btn-primary" type="button" data-close="view">ปิด</button>
+    </div></div>`;
+  }
+  return `<div class="modal">
+    <h3 id="viewTitle">นัดชมห้อง</h3>
+    <p>${l.project} · ${l.area} · ข้อมูลจำลอง จะไม่มีการส่งนัดจริง</p>
+    <form id="bookForm" data-book-id="${l.id}">
+      <div class="fields">
+        <div class="field"><label for="bn">ชื่อผู้เข้าชม</label><input class="inp" id="bn" name="name" placeholder="ใช้ชื่อสมมติได้" required /></div>
+        <div class="field"><label for="bd">วันที่นัด</label><input class="inp" id="bd" name="date" type="date" min="2026-11-13" value="2026-11-20" required /></div>
+        <div class="field"><label for="bt">ช่วงเวลา</label>
+          <select class="inp" id="bt" name="time">
+            <option>10:00–11:00</option>
+            <option selected>13:00–14:00</option>
+            <option>16:00–17:00</option>
+            <option>18:00–19:00</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-md btn-primary btn-full" type="submit">ยืนยันนัดชม</button>
+        <button class="btn btn-md btn-ghost btn-full" type="button" data-close="view">ยกเลิก</button>
+      </div>
+    </form>
+  </div>`;
+}
+
+function parseHash(){
+  const raw = (location.hash || "#/").replace(/^#/, "") || "/";
+  const [path, qs] = raw.split("?");
+  const q = new URLSearchParams(qs||"");
+  const parts = path.split("/").filter(Boolean);
+  return { parts, q };
+}
+
+function setNav(name){
+  document.querySelectorAll("nav.main a").forEach(a=>{
+    a.classList.toggle("on", a.dataset.nav===name);
+  });
+}
+
+function render(){
+  const { parts, q } = parseHash();
+  const home = document.getElementById("view-home");
+  const match = document.getElementById("view-match");
+  const results = document.getElementById("view-results");
+  const detail = document.getElementById("view-detail");
+  const sticky = document.getElementById("stickyCta");
+  const lineModal = document.getElementById("lineModal");
+  if(lineModal) lineModal.innerHTML = lineModalHTML();
+  if(!home || !match || !results){
+    // Static room/area pages: keep server-rendered content, only refresh modals.
+    return;
+  }
+  [home,match,results,detail].forEach(v=>{ if(v) v.classList.remove("on"); });
+  if(sticky){ sticky.classList.remove("show"); sticky.innerHTML = ""; }
+
+  if(q.get("seg")==="20-40") filters.seg = true;
+  if(q.get("area") && AREAS.includes(q.get("area"))) filters.area = q.get("area");
+  galleryIdx = 0;
+  if(q.get("demo")==="1" && !prefs){
+    prefs = { area:"อ่อนนุช", budget:35000, size:30, moveIn:"2026-12-01", pets:"yes" };
+  }
+
+  const top = parts[0] || "home";
+  if(top==="match"){
+    match.classList.add("on"); match.innerHTML = matchView(prefs); setNav("match");
+  } else if(top==="results"){
+    results.classList.add("on"); results.innerHTML = resultsView(); setNav((q.get("seg")==="20-40" || filters.seg) ? "results" : "match");
+  } else if(top==="listing"){
+    const id = parts[1] || "DEMO-001";
+    location.replace(roomHref(id));
+    return;
+  } else {
+    home.classList.add("on"); home.innerHTML = homeView(); setNav("home");
+  }
+  window.scrollTo(0,0);
+}
+
+
+/* ---- Simulated AI condo assistant (no external API) ---- */
+const AI_STARTERS = [
+  "งบ 25,000 ใกล้ BTS เลี้ยงแมวได้",
+  "งบ 25,000 ใกล้คาเฟ่",
+  "ทองหล่อ งบไม่เกิน 40,000 มี 1 ห้องนอน",
+  "เจริญนครหรือพร้อมพงษ์ ย้ายเข้าเดือนหน้า"
+];
+const AREA_ALIASES = [
+  ["พระราม 9", ["พระราม 9","พระรามเก้า","rama 9","rama9"]],
+  ["พระโขนง", ["พระโขนง","phra khanong","phrakhanong"]],
+  ["อ่อนนุช", ["อ่อนนุช","on nut","onnut"]],
+  ["ทองหล่อ", ["ทองหล่อ","ทองหลอ","thonglor","thong lo"]],
+  ["เอกมัย", ["เอกมัย","ekkamai","ekamai"]],
+  ["อารีย์", ["อารีย์","อารี"]],
+  ["บางนา", ["บางนา","bangna","bang na"]],
+  ["อโศก", ["อโศก","asoke","asok"]],
+  ["พร้อมพงษ์", ["พร้อมพงษ์","พร้อมพง","phrom phong","prompong"]],
+  ["เจริญนคร", ["เจริญนคร","charoen nakhon","charoennakhon","กรุงธนบุรี"]]
+];
+
+let aiOpen = false;
+let aiMsgs = [];
+let aiDemoRan = false;
+
+function parseNeeds(text){
+  const needs = { raw:text, areas:[], budget:null, pets:false, beds:null, size:null, bts:false, moveIn:null, cafe:false };
+  const lower = text.toLowerCase();
+  for (const [area, aliases] of AREA_ALIASES){
+    if (aliases.some(a => lower.includes(a.toLowerCase()) || text.includes(a))) needs.areas.push(area);
+  }
+  const mun = text.match(/(\d+(?:\.\d+)?)\s*หมื่น/);
+  const pan = text.match(/(\d+)\s*พัน/);
+  const k = text.match(/\b(\d{1,2})\s*k\b/i);
+  const baht = text.match(/(?:งบ|ไม่เกิน|ราว|ประมาณ)?\s*(\d{1,2}[,\s]\d{3}|\d{4,6})\s*(บาท)?/);
+  if (mun) needs.budget = Math.round(parseFloat(mun[1]) * 10000);
+  else if (pan) needs.budget = parseInt(pan[1],10) * 1000;
+  else if (k) needs.budget = parseInt(k[1],10) * 1000;
+  else if (baht) needs.budget = parseInt(baht[1].replace(/[,\s]/g,""),10);
+  if (needs.budget && needs.budget < 1000) needs.budget *= 1000;
+  if (/(เลี้ยง)?\s*(แมว|หมา|สุนัข|สัตว์เลี้ยง)|pet|รับสัตว์/.test(text) && !/ไม่(ได้)?\s*เลี้ยง|ไม่มีสัตว์/.test(text)) needs.pets = true;
+  if (/สตูดิโอ|studio/i.test(text)) needs.beds = "studio";
+  else if (/1\s*ห้องนอน\s*พลัส|1br\+|วันเบด\s*พลัส/i.test(text)) needs.beds = "1plus";
+  else if (/2\s*ห้องนอน|2br/.test(text)) needs.beds = 2;
+  else if (/1\s*ห้องนอน|หนึ่งห้องนอน|ห้องนอนเดียว|1br/.test(text)) needs.beds = 1;
+  const sz = text.match(/(\d+)\s*ตร\.?\s*ม/);
+  if (sz) needs.size = parseInt(sz[1],10);
+  if (/bts|mrt|รถไฟฟ้า|ใกล้\s*bts|เดินถึง/i.test(text)) needs.bts = true;
+  if (/เดือนหน้า|ย้ายเข้าเดือนหน้า/.test(text)) needs.moveIn = "2026-12-15";
+  if (/คาเฟ่|ร้านกาแฟ|ใกล้คาเฟ่|ร้านดัง|ของหวาน|ร้านอาหาร/.test(text)) needs.cafe = true;
+  return needs;
+}
+
+function scoreForNeeds(l, needs){
+  const p = {
+    area: (needs.areas && needs.areas.length===1) ? needs.areas[0] : "any",
+    budget: needs.budget || 50000,
+    size: needs.size || 25,
+    moveIn: needs.moveIn || "2026-12-01",
+    pets: needs.pets ? "yes" : "no"
+  };
+  let s = scoreListing(l, p);
+  if (needs.areas && needs.areas.length>1 && needs.areas.includes(l.area)) s = Math.min(98, s+16);
+  if (needs.bts && l.walk<=5) s = Math.min(98, s+8);
+  else if (needs.bts && l.walk>8) s -= 8;
+  if (needs.beds==="studio") s += l.beds.includes("สตูดิโอ") ? 8 : -6;
+  if (needs.beds==="1plus") s += l.beds.includes("พลัส") ? 10 : -4;
+  if (needs.beds===1) s += (l.beds.includes("1") && !l.beds.includes("พลัส")) ? 8 : (l.beds.includes("พลัส") ? 4 : -4);
+  if (needs.beds===2) s += l.beds.includes("2") ? 8 : -4;
+  return Math.max(24, Math.min(98, Math.round(s)));
+}
+
+function whyListing(l, needs){
+  const r = [];
+  if (needs.areas && needs.areas.includes(l.area)) r.push("อยู่ในย่าน" + l.area + " ตามที่ขอ");
+  if (needs.budget && l.price <= needs.budget) r.push("ค่าเช่า " + money(l.price) + " บาท อยู่ในงบ");
+  else if (needs.budget && l.price > needs.budget) r.push("สูงกว่างบเล็กน้อย แต่ยังใกล้เคียง");
+  if (needs.pets && l.pets) r.push("รับสัตว์เลี้ยง");
+  if (needs.bts && l.walk<=5) r.push("เดิน " + l.walk + " นาทีถึง " + l.transit);
+  else if (needs.bts) r.push("ใกล้ " + l.transit + " (" + l.walk + " นาที)");
+  if (needs.beds==="studio" && l.beds.includes("สตูดิโอ")) r.push("เป็นสตูดิโอตามที่ขอ");
+  if (needs.beds==="1plus" && l.beds.includes("พลัส")) r.push("เป็น 1 ห้องนอนพลัสตามที่ขอ");
+  if (needs.beds===1 && l.beds.includes("1")) r.push(l.beds.includes("พลัส") ? "เป็น 1 ห้องนอนพลัส ใกล้เคียงกับที่ขอ" : "เป็น 1 ห้องนอนตามที่ขอ");
+  if (needs.beds===2 && l.beds.includes("2")) r.push("เป็น 2 ห้องนอนตามที่ขอ");
+  if (needs.cafe){
+    const cafe = nearbyPlaces(l.area).find(p => p.category==="คาเฟ่") || nearbyPlaces(l.area)[0];
+    if (cafe) r.push("ใกล้ " + cafe.name + " (" + placeTime(cafe) + " จากสถานี)");
+  }
+  if (!r.length) r.push("คะแนนความเหมาะสมสูงเมื่อเทียบกับห้องอื่นในตัวอย่าง");
+  return r.slice(0,3);
+}
+
+function understandText(needs){
+  const bits = [];
+  if (needs.budget) bits.push("งบไม่เกิน " + money(needs.budget) + " บาท");
+  if (needs.areas.length) bits.push("ทำเล " + needs.areas.join(" หรือ "));
+  if (needs.pets) bits.push("เลี้ยงสัตว์ได้");
+  if (needs.bts) bits.push("ใกล้รถไฟฟ้า");
+  if (needs.cafe) bits.push("ใกล้คาเฟ่หรือร้านดังในย่าน");
+  if (needs.beds==="studio") bits.push("ห้องสตูดิโอ");
+  if (needs.beds===1) bits.push("1 ห้องนอน");
+  if (needs.size) bits.push("จาก " + needs.size + " ตร.ม.");
+  return bits.length ? "เข้าใจว่าต้องการ" + bits.join(" · ") : "รับความต้องการแล้วค่ะ จะคัดห้องตัวอย่างที่ใกล้เคียงให้";
+}
+
+function recommend(text){
+  const needs = parseNeeds(text);
+  const rows = LISTINGS.map(l => ({ l, score: scoreForNeeds(l, needs), why: whyListing(l, needs) }))
+    .sort((a,b) => b.score - a.score)
+    .slice(0,3);
+  return { needs, rows };
+}
+
+function greetMsg(){
+  return {
+    role:"bot",
+    text:"สวัสดีค่ะ ฉันเป็นผู้ช่วย AI ตัวอย่างของ MoveCondo (ย้ายคอนโด) บอกงบ ทำเล สัตว์เลี้ยง หรือความต้องการอื่นมาได้เลย จะแนะนำห้องจำลองที่ใกล้เคียงที่สุด 2–3 ห้อง",
+    chips: AI_STARTERS
+  };
+}
+
+function aiMiniHTML(row){
+  const l = row.l;
+  return `<article class="ai-mini" data-open-listing="${l.id}">
+    <div class="top">
+      <div>
+        <div class="meta">${l.area} · ${l.size} ตร.ม. · ${l.beds}</div>
+        <h3>${l.project}</h3>
+        <div class="price">${money(l.price)} บาท/เดือน</div>
+      </div>
+      <span class="score-pill" style="position:static"><span>เข้ากัน</span>${row.score}%</span>
+    </div>
+    <ul class="why">${row.why.map(w=>`<li>${w}</li>`).join("")}</ul>
+    <div class="acts" onclick="event.stopPropagation()">
+      <a class="btn btn-sm btn-primary" href="${roomHref(l.id)}">ดูรายละเอียด</a>
+      <button class="btn btn-sm btn-ghost" type="button" data-book="${l.id}">นัดชมห้อง</button>
+      <button class="btn btn-sm btn-line" type="button" data-open="line" data-listing="${l.id}">LINE</button>
+    </div>
+  </article>`;
+}
+
+function renderAI(){
+  const el = document.getElementById("aiPanel");
+  if (!el) return;
+  document.body.classList.toggle("ai-open", aiOpen);
+  document.querySelectorAll("[data-open='ai']").forEach(b => b.setAttribute("aria-expanded", aiOpen ? "true" : "false"));
+  if (!aiOpen){ el.innerHTML = ""; return; }
+  const msgs = aiMsgs.length ? aiMsgs : [greetMsg()];
+  el.innerHTML = `
+    <div class="ai-head">
+      <div class="logo" aria-hidden="true">M</div>
+      <div>
+        <h2 id="aiTitle">ผู้ช่วย AI หาคอนโด</h2>
+        <p>MoveCondo · ย้ายคอนโด · ตัวอย่างผู้ช่วย</p>
+      </div>
+      <button class="x" type="button" data-close="ai" aria-label="ปิด">${iconClose}</button>
+    </div>
+    <div class="ai-demo-banner">ตัวอย่างการทำงาน — <strong>ยังไม่ได้เชื่อม AI จริง</strong></div>
+    <div class="ai-log" id="aiLog">
+      ${msgs.map(m => `
+        <div class="ai-msg ${m.role}">
+          <div class="ai-bubble">${m.text}</div>
+          ${m.listings ? `<div class="ai-cards">${m.listings.map(aiMiniHTML).join("")}</div>` : ""}
+          ${m.chips ? `<div class="ai-chips">${m.chips.map(c=>`<button type="button" class="ai-chip" data-ai-prompt="${c}">${c}</button>`).join("")}</div>` : ""}
+        </div>`).join("")}
+    </div>
+    <form class="ai-input" id="aiForm">
+      <input id="aiText" type="text" placeholder="พิมพ์ความต้องการเป็นภาษาพูดได้..." autocomplete="off" />
+      <button class="send" type="submit" aria-label="ส่ง">${iconSend}</button>
+    </form>`;
+  const log = document.getElementById("aiLog");
+  if (log){
+    const user = log.querySelector(".ai-msg.user");
+    if (user) user.scrollIntoView({block:"start", inline:"nearest"});
+    else log.scrollTop = log.scrollHeight;
+  }
+  const input = document.getElementById("aiText");
+  if (input && window.innerWidth > 640) input.focus();
+}
+
+let aiLastFocus = null;
+function openAI(opts){
+  aiOpen = true;
+  aiLastFocus = document.activeElement;
+  if (!aiMsgs.length) aiMsgs = [greetMsg()];
+  renderAI();
+  if (opts && opts.demo) runAIDemo();
+  const closeBtn = document.querySelector("#aiPanel [data-close='ai']");
+  if (closeBtn && !(opts && opts.demo)) closeBtn.focus();
+}
+
+function closeAI(){
+  aiOpen = false;
+  renderAI();
+  if (aiLastFocus && typeof aiLastFocus.focus === "function") aiLastFocus.focus();
+}
+
+function pushAIReply(text){
+  const { needs, rows } = recommend(text);
+  const follow = [];
+  if (!needs.pets) follow.push("ขอเฉพาะที่รับสัตว์เลี้ยง");
+  if (!needs.bts) follow.push("เน้นเดินถึง BTS ไม่เกิน 5 นาที");
+  if (needs.budget) follow.push("งบน้อยกว่านี้ได้ไหม");
+  else follow.push("งบไม่เกิน 30,000 บาท");
+  follow.push("ดูย่านอื่นบ้าง");
+  let extra = " คัดห้องตัวอย่างที่ใกล้เคียงที่สุดให้แล้วค่ะ ข้อมูลห้องเป็นข้อมูลจำลอง";
+  if (needs.cafe){
+    const areas = [...new Set((needs.areas.length ? needs.areas : rows.map(r=>r.l.area)))];
+    const mentions = [];
+    areas.forEach(a => {
+      nearbyPlaces(a).filter(p => p.category==="คาเฟ่").slice(0,2).forEach(p => {
+        mentions.push(p.name + " ย่าน" + a + " (" + placeTime(p) + ")");
+      });
+    });
+    if (mentions.length){
+      extra += " คาเฟ่และร้านดังใกล้สถานี เช่น " + mentions.slice(0,3).join(" · ") + " — " + NEARBY_NOTE;
+    }
+  }
+  aiMsgs.push({
+    role:"bot",
+    text: understandText(needs) + extra,
+    listings: rows,
+    chips: follow
+  });
+  renderAI();
+}
+
+function sendAI(text){
+  const q = (text||"").trim();
+  if (!q) return;
+  if (!aiMsgs.length) aiMsgs = [greetMsg()];
+  aiMsgs.push({ role:"user", text:q });
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduced){ renderAI(); pushAIReply(q); return; }
+  aiMsgs.push({ role:"bot", text:"กำลังคัดห้องตัวอย่าง...", pending:true });
+  renderAI();
+  const log = document.getElementById("aiLog");
+  if (log) log.setAttribute("aria-busy","true");
+  setTimeout(() => {
+    aiMsgs = aiMsgs.filter(m => !m.pending);
+    if (log) log.setAttribute("aria-busy","false");
+    pushAIReply(q);
+  }, 400);
+}
+
+function runAIDemo(){
+  if (aiDemoRan) return;
+  aiDemoRan = true;
+  const q = "งบ 25,000 ใกล้ BTS เลี้ยงแมวได้";
+  aiMsgs = [greetMsg(), { role:"user", text:q }];
+  const { needs, rows } = recommend(q);
+  aiMsgs.push({
+    role:"bot",
+    text: understandText(needs) + " คัดห้องตัวอย่างที่ใกล้เคียงที่สุดให้แล้วค่ะ ข้อมูลทั้งหมดเป็นข้อมูลจำลอง",
+    listings: rows,
+    chips: ["งบน้อยกว่านี้ได้ไหม","เน้นย่านเจริญนครบ้าง","ขอห้อง 1 ห้องนอน"]
+  });
+  renderAI();
+}
+
+function shouldDemoAI(){
+  const q = new URLSearchParams(location.search);
+  const hq = new URLSearchParams((location.hash.split("?")[1]||""));
+  return q.get("ai")==="demo" || hq.get("ai")==="demo";
+}
+
+window.addEventListener("hashchange", render);
+window.addEventListener("DOMContentLoaded", ()=>{ render(); if (shouldDemoAI()) openAI({demo:true}); });
+
+document.addEventListener("click", (e)=>{
+  const listing = e.target.closest("[data-open-listing]");
+  if(listing){
+      closeAI();
+      if(listing.tagName==="A") return;
+      location.href = roomHref(listing.dataset.openListing);
+      return;
+    }
+  const areaBtn = e.target.closest("[data-area]");
+  if(areaBtn){
+    homeArea = areaBtn.dataset.area;
+    hoodPin = 0;
+    famousFilter.hood = "all";
+    paintHood();
+    return;
+  }
+  if (e.target.closest("a.maps")) return;
+  const fam = e.target.closest("[data-famous-filter]");
+  if(fam){
+    famousFilter[fam.dataset.famousScope] = fam.dataset.famousFilter;
+    if (fam.dataset.famousScope==="hood") paintHood();
+    else {
+      const el = document.getElementById("famous-detail");
+      const { parts } = parseHash();
+      const listing = LISTINGS.find(x=>x.id===parts[1]) || LISTINGS[0];
+      if (el && listing) el.outerHTML = famousHTML(listing.area, "detail");
+    }
+    return;
+  }
+  const jump = e.target.closest("[data-jump-area]");
+  if(jump){
+    e.preventDefault();
+    homeArea = jump.dataset.jumpArea;
+    hoodPin = 0;
+    location.hash = "#/";
+    requestAnimationFrame(()=> {
+      const el = document.getElementById("hood");
+      if(el) el.scrollIntoView({behavior:"smooth", block:"start"});
+    });
+    return;
+  }
+  const gal = e.target.closest("[data-gal]");
+  if(gal){
+    const v = gal.dataset.gal;
+    if(v==="prev") setGallery(galleryIdx-1);
+    else if(v==="next") setGallery(galleryIdx+1);
+    else setGallery(Number(v));
+    return;
+  }
+  const pin = e.target.closest("[data-pin]");
+  if(pin){
+    const scope = pin.dataset.pinScope || "detail";
+    if(scope==="hood"){ hoodPin = Number(pin.dataset.pin); paintHood(); }
+    else paintNearby(scope, Number(pin.dataset.pin));
+    return;
+  }
+  const petsBtn = e.target.closest("[data-pets]");
+  if(petsBtn){
+    document.querySelectorAll("[data-pets]").forEach(b=>b.classList.toggle("on", b===petsBtn));
+    const hidden = document.getElementById("pets");
+    if(hidden) hidden.value = petsBtn.dataset.pets;
+    return;
+  }
+  const filterBtn = e.target.closest("[data-filter]");
+  if(filterBtn){
+    const k = filterBtn.dataset.filter;
+    if(k==="area") filters.area = filters.area ? null : filters.area;
+    else filters[k] = !filters[k];
+    document.getElementById("view-results").innerHTML = resultsView();
+    return;
+  }
+  if(e.target.closest("[data-open='ai']")){
+    openAI();
+    return;
+  }
+  if(e.target.closest("[data-close='ai']")){
+    closeAI();
+    return;
+  }
+  const promptBtn = e.target.closest("[data-ai-prompt]");
+  if(promptBtn){
+    sendAI(promptBtn.dataset.aiPrompt);
+    return;
+  }
+  if(e.target.closest("[data-open='line']")){
+    const btn = e.target.closest("[data-open='line']");
+    const lineId = btn.dataset.listing || null;
+    const modal = document.getElementById("lineModal");
+    modal.innerHTML = lineModalHTML(lineId);
+    modal.classList.add("on");
+    return;
+  }
+  if(e.target.closest("[data-copy-line]")){
+    const ta = document.getElementById("lineMsg");
+    const btn = e.target.closest("[data-copy-line]");
+    if(ta){
+      const done = () => { btn.textContent = "คัดลอกแล้ว (ตัวอย่าง)"; };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(ta.value).then(done).catch(()=>{ ta.select(); document.execCommand("copy"); done(); });
+      } else { ta.select(); document.execCommand("copy"); done(); }
+    }
+    return;
+  }
+  if(e.target.closest("[data-close='line']")){
+    document.getElementById("lineModal").classList.remove("on");
+    return;
+  }
+  const book = e.target.closest("[data-book]");
+  if(book){
+    const modal = document.getElementById("viewModal");
+    modal.innerHTML = viewModalHTML(book.dataset.book, false);
+    modal.classList.add("on");
+    return;
+  }
+  if(e.target.closest("[data-close='view']")){
+    document.getElementById("viewModal").classList.remove("on");
+    return;
+  }
+});
+
+document.addEventListener("submit", (e)=>{
+  if(e.target.id==="aiForm"){
+    e.preventDefault();
+    const box = document.getElementById("aiText");
+    sendAI(box ? box.value : "");
+    return;
+  }
+  if(e.target.id==="matchForm"){
+    e.preventDefault();
+    const fd = new FormData(e.target);
+    prefs = {
+      area: fd.get("area") || "any",
+      budget: Number(fd.get("budget")),
+      size: Number(fd.get("size")),
+      moveIn: fd.get("moveIn"),
+      pets: fd.get("pets") || "no"
+    };
+    filters = { seg: Number(fd.get("budget"))<=40000, pets: prefs.pets==="yes", walk5:false, area: (fd.get("area") && fd.get("area")!=="any") ? fd.get("area") : null };
+    location.hash = "#/results";
+    if((location.hash||"")==="#/results") render();
+    return;
+  }
+  if(e.target.id==="bookForm"){
+    e.preventDefault();
+    const id = e.target.dataset.bookId;
+    const modal = document.getElementById("viewModal");
+    modal.innerHTML = viewModalHTML(id, true);
+    return;
+  }
+});
+
+document.addEventListener("click", (e)=>{
+  if(e.target.classList.contains("overlay")) e.target.classList.remove("on");
+});
+
+
+  let galPointerX = null, galPointerY = null, galTracking = false;
+  function galStart(x, y, fromStage){
+    if(!fromStage) return;
+    galPointerX = x; galPointerY = y; galTracking = true;
+  }
+  function galEnd(x, y){
+    if(!galTracking || galPointerX == null) { galTracking = false; return; }
+    const dx = x - galPointerX, dy = y - galPointerY;
+    galPointerX = galPointerY = null; galTracking = false;
+    if(Math.abs(dx) < 36 || Math.abs(dx) < Math.abs(dy)) return;
+    setGallery(galleryIdx + (dx < 0 ? 1 : -1));
+  }
+  document.addEventListener("pointerdown", e => {
+    galStart(e.clientX, e.clientY, !!e.target.closest("#galleryStage"));
+  }, {passive:true});
+  document.addEventListener("pointerup", e => galEnd(e.clientX, e.clientY));
+  document.addEventListener("pointercancel", () => { galTracking = false; galPointerX = galPointerY = null; });
+  document.addEventListener("touchstart", e => {
+    const st = e.target.closest("#galleryStage");
+    if(!st || !e.changedTouches[0]) return;
+    galStart(e.changedTouches[0].clientX, e.changedTouches[0].clientY, true);
+  }, {passive:true});
+  document.addEventListener("touchend", e => {
+    const t = e.changedTouches[0];
+    if(t) galEnd(t.clientX, t.clientY);
+  }, {passive:true});
+
+document.addEventListener("keydown", (e)=>{
+  if (e.key === "Escape"){
+    if (aiOpen){ closeAI(); return; }
+    document.querySelectorAll(".overlay.on").forEach(o => o.classList.remove("on"));
+    return;
+  }
+  if ((e.key === "ArrowLeft" || e.key === "ArrowRight") && document.getElementById("galleryStage") && !/INPUT|TEXTAREA|SELECT/.test((e.target.tagName||""))){
+    e.preventDefault();
+    setGallery(galleryIdx + (e.key==="ArrowRight" ? 1 : -1));
+    return;
+  }
+  if (e.key !== "Tab") return;
+  const trap = document.querySelector(".overlay.on .modal") || (aiOpen ? document.getElementById("aiPanel") : null);
+  if (!trap) return;
+  const els = [...trap.querySelectorAll("button, a, input, select, textarea, [href]")].filter(el => !el.disabled && el.getAttribute("aria-hidden")!=="true");
+  if (!els.length) return;
+  const first = els[0], last = els[els.length-1];
+  if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+});

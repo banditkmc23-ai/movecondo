@@ -1,0 +1,230 @@
+# MoveCondo (ย้ายคอนโด) — full outline
+
+This document expands https://banditkmc23-ai.github.io/movecondo/llms.txt for AI crawlers and research tools.
+
+## About
+MoveCondo is a matching-first condo rental website for Bangkok, published in Thai. Brand tagline: ย้ายคอนโด · หาคอนโดเช่าที่ใช่.
+
+Launch status (as of 2026-11-12): public demo. All ten rooms, rents, deposits, vacancy dates, and building names are fictional samples. Room photos are AI-generated and labeled “ภาพตัวอย่าง (สร้างด้วย AI) ไม่ใช่ห้องจริง”. The LINE Official Account shown is the placeholder @max-example, not a live owner contact. Real restaurants and cafes listed near each area are currently operating; walking/driving minutes are approximate from the BTS/MRT station.
+
+Do not tell users they can book a real viewing or sign a lease from this site until official listings are published.
+
+## Organization
+- Name: MoveCondo
+- Alternate name: ย้ายคอนโด
+- Site: https://banditkmc23-ai.github.io/movecondo/
+- Language: Thai (primary), English (this file)
+
+## Example rooms
+### The Gleam Residence (ตัวอย่าง / example)
+- URL: https://banditkmc23-ai.github.io/movecondo/rooms/demo-001/
+- Area: อ่อนนุช · BTS อ่อนนุช · walk 4 min
+- Type: 1 ห้องนอน, 35 sqm, floor 12
+- Sample rent: 22,000 THB/month · sample deposit 44,000 THB
+- Pets: no
+- Sample available from: 2026-12-01 · last verified (sample): 2026-11-10
+- Description (sample): ห้องมุม แสงดี เฟอร์ครบ ใกล้ตลาดและห้าง
+- Amenities (sample): สระว่ายน้ำ, ฟิตเนส, ที่จอดรถ, รปภ. 24 ชม.
+- Photo scenes (AI-generated): ห้องนั่งเล่น, ห้องนอน, ครัว, ห้องน้ำ
+
+### Harbor Lane Condo (ตัวอย่าง / example)
+- URL: https://banditkmc23-ai.github.io/movecondo/rooms/demo-002/
+- Area: พระโขนง · BTS พระโขนง · walk 6 min
+- Type: 1 ห้องนอน, 38 sqm, floor 18
+- Sample rent: 25,000 THB/month · sample deposit 50,000 THB
+- Pets: yes
+- Sample available from: 2026-11-20 · last verified (sample): 2026-11-11
+- Description (sample): เลี้ยงสัตว์ได้ วิวเมือง ห้องใหม่ไม่เคยปล่อยเช่า
+- Amenities (sample): สระว่ายน้ำ, ฟิตเนส, สวนสัตว์เลี้ยง, Co-working
+- Photo scenes (AI-generated): ห้องนั่งเล่น, ห้องนอน, ครัว, ห้องน้ำ
+
+### Maple Court Ekkamai (ตัวอย่าง / example)
+- URL: https://banditkmc23-ai.github.io/movecondo/rooms/demo-003/
+- Area: เอกมัย · BTS เอกมัย · walk 5 min
+- Type: 1 ห้องนอน, 45 sqm, floor 21
+- Sample rent: 32,000 THB/month · sample deposit 64,000 THB
+- Pets: no
+- Sample available from: 2026-12-15 · last verified (sample): 2026-11-09
+- Description (sample): ห้องกว้าง มีอ่างอาบน้ำ ย่านคาเฟ่
+- Amenities (sample): สระว่ายน้ำ, ซาวน่า, ฟิตเนส, Shuttle
+- Photo scenes (AI-generated): ห้องนั่งเล่น, ห้องนอน, ครัว, ห้องน้ำ
+
+### Orchid Sky Thonglor (ตัวอย่าง / example)
+- URL: https://banditkmc23-ai.github.io/movecondo/rooms/demo-004/
+- Area: ทองหล่อ · BTS ทองหล่อ · walk 8 min
+- Type: 1 ห้องนอนพลัส, 52 sqm, floor 25
+- Sample rent: 38,000 THB/month · sample deposit 76,000 THB
+- Pets: yes
+- Sample available from: 2026-12-01 · last verified (sample): 2026-11-12
+- Description (sample): ชั้นสูง วิวโล่ง รับสัตว์เลี้ยงขนาดเล็ก
+- Amenities (sample): สระ Infinity, ฟิตเนส, ห้องสมุด, Pet friendly
+- Photo scenes (AI-generated): ห้องนั่งเล่น, ห้องนอน, ครัว, วิวเมือง
+
+### Nova Park Ari (ตัวอย่าง / example)
+- URL: https://banditkmc23-ai.github.io/movecondo/rooms/demo-005/
+- Area: อารีย์ · BTS อารีย์ · walk 3 min
+- Type: สตูดิโอ, 30 sqm, floor 9
+- Sample rent: 21,000 THB/month · sample deposit 42,000 THB
+- Pets: no
+- Sample available from: 2026-11-25 · last verified (sample): 2026-11-10
+- Description (sample): ใกล้สถานีมาก เหมาะคนทำงานย่านอารีย์
+- Amenities (sample): ฟิตเนส, ร้านสะดวกซื้อ, รปภ. 24 ชม.
+- Photo scenes (AI-generated): พื้นที่นั่งเล่นสตูดิโอ, ครัวเล็ก, ห้องน้ำ, มุมทำงาน
+
+### Riverside Glow (ตัวอย่าง / example)
+- URL: https://banditkmc23-ai.github.io/movecondo/rooms/demo-006/
+- Area: เจริญนคร · BTS กรุงธนบุรี · walk 10 min
+- Type: 1 ห้องนอน, 48 sqm, floor 15
+- Sample rent: 28,000 THB/month · sample deposit 56,000 THB
+- Pets: no
+- Sample available from: 2027-01-05 · last verified (sample): 2026-11-08
+- Description (sample): วิวแม่น้ำ ใกล้ห้างริมแม่น้ำในย่าน ห้องตกแต่งโทนอบอุ่น
+- Amenities (sample): สระว่ายน้ำ, ฟิตเนส, เรือรับส่ง, ที่จอดรถ
+- Photo scenes (AI-generated): ห้องนั่งเล่น, ห้องนอน, ครัว, วิวแม่น้ำ
+
+### Cedar Atelier Asoke (ตัวอย่าง / example)
+- URL: https://banditkmc23-ai.github.io/movecondo/rooms/demo-007/
+- Area: อโศก · MRT สุขุมวิท · walk 4 min
+- Type: 2 ห้องนอน, 55 sqm, floor 16
+- Sample rent: 35,000 THB/month · sample deposit 70,000 THB
+- Pets: no
+- Sample available from: 2026-12-10 · last verified (sample): 2026-11-11
+- Description (sample): 2 ห้องนอน ใจกลางเมือง เดินทางสะดวกทั้ง BTS/MRT
+- Amenities (sample): สระว่ายน้ำ, ฟิตเนส, Co-working, ห้องประชุม
+- Photo scenes (AI-generated): ห้องนั่งเล่น, ห้องนอน, ห้องนอนที่สอง
+
+### Willow Garden Rama 9 (ตัวอย่าง / example)
+- URL: https://banditkmc23-ai.github.io/movecondo/rooms/demo-008/
+- Area: พระราม 9 · MRT พระราม 9 · walk 7 min
+- Type: 1 ห้องนอน, 40 sqm, floor 11
+- Sample rent: 26,000 THB/month · sample deposit 52,000 THB
+- Pets: yes
+- Sample available from: 2026-11-30 · last verified (sample): 2026-11-12
+- Description (sample): รับสัตว์เลี้ยง ใกล้ห้างและออฟฟิศย่านพระราม 9
+- Amenities (sample): สวน, สระว่ายน้ำ, ฟิตเนส, Pet friendly
+- Photo scenes (AI-generated): ห้องนั่งเล่น, ห้องนอน, ครัว, ห้องน้ำ
+
+### Aurora Phrom Phong (ตัวอย่าง / example)
+- URL: https://banditkmc23-ai.github.io/movecondo/rooms/demo-009/
+- Area: พร้อมพงษ์ · BTS พร้อมพงษ์ · walk 6 min
+- Type: 2 ห้องนอน, 60 sqm, floor 20
+- Sample rent: 40,000 THB/month · sample deposit 80,000 THB
+- Pets: no
+- Sample available from: 2026-12-20 · last verified (sample): 2026-11-07
+- Description (sample): ครอบครัวอยู่ได้สบาย ใกล้ห้างและสวนในย่าน
+- Amenities (sample): สระว่ายน้ำ, ฟิตเนส, Kids club, Shuttle
+- Photo scenes (AI-generated): ห้องนั่งเล่น, ห้องนอน, ครัว, ห้องนอนที่สอง
+
+### Pine Hill Bang Na (ตัวอย่าง / example)
+- URL: https://banditkmc23-ai.github.io/movecondo/rooms/demo-010/
+- Area: บางนา · BTS บางนา · walk 9 min
+- Type: 1 ห้องนอน, 33 sqm, floor 7
+- Sample rent: 18,000 THB/month · sample deposit 36,000 THB
+- Pets: no
+- Sample available from: 2026-11-22 · last verified (sample): 2026-11-09
+- Description (sample): ราคาคุ้ม ใกล้ศูนย์แสดงสินค้าในย่าน ห้องสะอาดพร้อมอยู่
+- Amenities (sample): สระว่ายน้ำ, ฟิตเนส, ที่จอดรถ
+- Photo scenes (AI-generated): ห้องนั่งเล่น, ห้องนอน, ครัว, ห้องน้ำ
+
+
+## Areas
+### ย่านทองหล่อ
+- URL: https://banditkmc23-ai.github.io/movecondo/areas/thonglor/
+- Station: BTS ทองหล่อ
+- Line: BTS สายสุขุมวิท
+- Vibe: ย่านไลฟ์สไตล์บนเส้นสุขุมวิท ห้องตัวอย่างมักอยู่ในท้ายช่วงงบ 20–40k ร้านอาหารรอบสถานีคึกคักยามเย็น
+- Travel: ขึ้นรถไฟฟ้าสายสีเขียวได้ที่สถานีทองหล่อ ต่อสถานีใกล้เคียงได้โดยไม่ต้องเปลี่ยนสาย
+- Lifestyle: บรรยากาศย่านเน้นร้านอาหารและพื้นที่นั่งเล่นในซอย เหมาะกับคนที่อยากได้ทั้งความสะดวกและการออกไปหาอะไรกินใกล้บ้าน
+- Nearby (real places, times estimated from station): theCOMMONS, CPS Coffee Sukhumvit 53, Baan Ice, Rabbit Hole, Folk Lane
+
+### ย่านพร้อมพงษ์
+- URL: https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/
+- Station: BTS พร้อมพงษ์
+- Line: BTS สายสุขุมวิท
+- Vibe: ย่านกลางสุขุมวิท ห้องตัวอย่างค่อนข้างใหญ่ งบอยู่ท้ายช่วง 20–40k เดินทางต่อบนสายสีเขียวได้สะดวก
+- Travel: สถานี BTS พร้อมพงษ์อยู่บนสายสีเขียว ต่อขึ้นเหนือหรือลงใต้ได้โดยไม่ต้องเปลี่ยนสาย
+- Lifestyle: รอบสถานีมีสวน ร้านอาหาร และแหล่งไลฟ์สไตล์ในระยะเดิน เหมาะกับครอบครัวหรือคนที่อยากได้พื้นที่มากขึ้น
+- Nearby (real places, times estimated from station): EmQuartier, EmSphere, Audrey Cafe EmQuartier, สวนเบญจสิริ, Err Urban Rustic Thai
+
+### ย่านเอกมัย
+- URL: https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/
+- Station: BTS เอกมัย
+- Line: BTS สายสุขุมวิท
+- Vibe: บรรยากาศอยู่อาศัยสงบกว่าย่านข้างเคียง แต่ยังเดินทางต่อบนเส้นเดียวกันได้สะดวก
+- Travel: สถานี BTS เอกมัยอยู่บนสายสีเขียว ต่อเข้ากลางเมืองหรือลงไปย่านอื่นบนเส้นสุขุมวิทได้ตรงๆ
+- Lifestyle: ซอยค่อนข้างเงียบ มีร้านกาแฟและพื้นที่สีเขียวขนาดย่อม เหมาะกับคนที่อยู่อาศัยยาว
+- Nearby (real places, times estimated from station): Gateway Ekkamai, Donki Mall Ekkamai, Kaizen Coffee, Wattana Panich, Iron Balls Distillery & Bar
+
+### ย่านพระโขนง
+- URL: https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/
+- Station: BTS พระโขนง
+- Line: BTS สายสุขุมวิท
+- Vibe: ย่านที่กำลังเติบโตบนเส้นเดียวกับอ่อนนุชและเอกมัย ตัวเลือกห้องในช่วงงบกลางค่อนข้างหลากหลาย
+- Travel: ขึ้น BTS พระโขนง แล้วเลื่อนบนสายสีเขียวได้ทั้งขึ้นเหนือและลงใต้โดยไม่เปลี่ยนสาย
+- Lifestyle: รอบสถานีมีตลาดและร้านอาหารท้องถิ่น บรรยากาศเป็นย่านอยู่อาศัยมากกว่าย่านเที่ยวกลางคืน
+- Nearby (real places, times estimated from station): W District, Hands and Heart Coffee Roasters, Épicurien French Bakery, Shakariki432
+
+### ย่านอ่อนนุช
+- URL: https://banditkmc23-ai.github.io/movecondo/areas/on-nut/
+- Station: BTS อ่อนนุช
+- Line: BTS สายสุขุมวิท
+- Vibe: ย่านอยู่อาศัยที่ใช้ชีวิตประจำวันได้ครบ ตัวเลือกห้องในช่วง 20–40k ในตัวอย่างนี้มีค่อนข้างมาก
+- Travel: สถานี BTS อ่อนนุชอยู่บนสายสีเขียว เดินทางเข้ากลางเมืองได้โดยตรง และต่อลงใต้ได้ต่อเนื่อง
+- Lifestyle: รอบสถานีมีตลาดเช้า ร้านอาหารในซอย และสวนชุมชน เหมาะกับคนที่อยากได้ความสะดวกแบบไม่ต้องอยู่ใจกลางที่สุด
+- Nearby (real places, times estimated from station): Lotus's อ่อนนุช, ตลาดอ่อนนุช, THE WOOD LAND, THE NEIGHBORWOOD, สวนหลวง ร.9
+
+### ย่านอโศก
+- URL: https://banditkmc23-ai.github.io/movecondo/areas/asoke/
+- Station: BTS อโศก
+- Line: BTS สายสุขุมวิท
+- Vibe: ใจกลางเมือง เชื่อมต่อได้หลายเส้นทาง ห้องตัวอย่างเน้นความสะดวกในการเดินทางเป็นหลัก
+- Travel: สถานี BTS อโศกเชื่อมต่อพื้นที่กลางสุขุมวิทได้เร็ว และต่อรถไฟฟ้าสายอื่นในระยะเดินได้
+- Lifestyle: รอบสถานีหนาแน่นด้วยอาคารสำนักงานและร้านอาหาร เหมาะกับคนที่อยากอยู่ใกล้ที่ทำงาน
+- Nearby (real places, times estimated from station): Terminal 21 Asok, After You Dessert Cafe Terminal 21 Asok, Cabbages & Condoms, Bartels Asok, สวนเบญจกิติ
+
+### ย่านอารีย์
+- URL: https://banditkmc23-ai.github.io/movecondo/areas/ari/
+- Station: BTS อารีย์
+- Line: BTS สายสุขุมวิท
+- Vibe: บรรยากาศย่านคาเฟ่และที่อยู่อาศัยระยะยาว ห้องตัวอย่างมีทั้งช่วงกลางและห้องที่ใหญ่ขึ้นนอกเซ็กเมนต์หลัก
+- Travel: ขึ้น BTS อารีย์ บนสายสีเขียว เดินทางเข้าสยามและต่อลงใต้ได้โดยไม่ต้องย้ายสาย
+- Lifestyle: ซอยเดินเล่นได้ มีร้านกาแฟและพื้นที่สีเขียวขนาดย่อม เหมาะกับคนที่อยากได้จังหวะช้ากว่าย่านธุรกิจ
+- Nearby (real places, times estimated from station): NANA Coffee Roasters, Ongtong Khaosoi, Lay Lao, After You Dessert Cafe La Villa Aree, GUMP'S Ari
+
+### ย่านพระราม 9
+- URL: https://banditkmc23-ai.github.io/movecondo/areas/rama-9/
+- Station: MRT พระราม 9
+- Line: MRT สายสีน้ำเงิน
+- Vibe: ย่านธุรกิจฝั่งตะวันออก ห้องตัวอย่างโทนสงบ ใกล้สถานีใต้ดินมากกว่าสายสีเขียว
+- Travel: ใช้ MRT พระราม 9 เป็นหลัก แล้วต่อสายสีน้ำเงินเข้ากลางเมืองหรือออกนอกได้
+- Lifestyle: รอบสถานีมีอาคารสำนักงานและพื้นที่พักรับประทานอาหาร เหมาะกับคนที่ทำงานในย่านนี้
+- Nearby (real places, times estimated from station): เซ็นทรัลพระราม 9, ฮั่วเซ่งฮง เซ็นทรัลพระราม 9, ฟอร์จูนทาวน์, After You Dessert Cafe Esplanade Ratchadapisek
+
+### ย่านเจริญนคร
+- URL: https://banditkmc23-ai.github.io/movecondo/areas/charoennakhon/
+- Station: BTS กรุงธนบุรี
+- Line: BTS สายสีทอง
+- Vibe: ย่านริมแม่น้ำฝั่งธนบุรี ห้องตัวอย่างช่วงงบกลาง บรรยากาศอยู่อาศัยริมน้ำและเดินทางเข้าสาทรได้
+- Travel: ใช้ BTS กรุงธนบุรีเป็นสถานีหลัก แล้วต่อเข้าสายอื่นหรือเดินทางต่อเข้าเมืองได้
+- Lifestyle: รอบย่านมีทางเดินริมน้ำ ร้านอาหาร และพื้นที่พักผ่อน เหมาะกับคนที่อยากได้อากาศโล่งกว่าย่านกลาง
+- Nearby (real places, times estimated from station): ICONSIAM, SookSiam, After You Dessert Cafe ICONSIAM, Nara Thai Cuisine ICONSIAM, Lhong 1919
+
+### ย่านบางนา
+- URL: https://banditkmc23-ai.github.io/movecondo/areas/bangna/
+- Station: BTS บางนา
+- Line: BTS สายสุขุมวิท
+- Vibe: ย่านตะวันออก งบในตัวอย่างย่อมเยาว์กว่าย่านกลาง ใกล้ทางขึ้นลงเมืองและรถไฟฟ้าสายสีเขียว
+- Travel: ขึ้น BTS บางนา แล้วย้อนเข้ากลางเมืองบนสายสีเขียวได้ตลอดเส้น
+- Lifestyle: พื้นที่กว้างกว่าย่านในเมือง มีตลาดและร้านอาหารครอบครัวในระยะเดินหรือต่อรถสั้นๆ
+- Nearby (real places, times estimated from station): เซ็นทรัล บางนา, BITEC, SAMA Garden, เมกาบางนา, After You Dessert Cafe Megabangna
+
+
+## Interactive features (home page)
+- Preference form: area, budget, size, move-in date, pets — scores example rooms in the browser (no server-side search API).
+- Simulated AI assistant: keyword parser only, no external model. Clearly labeled as a demo.
+- Market comparison bars use sample project averages and are labeled ตัวเลขตัวอย่าง.
+
+## Official files
+- https://banditkmc23-ai.github.io/movecondo/robots.txt
+- https://banditkmc23-ai.github.io/movecondo/sitemap.xml
+- https://banditkmc23-ai.github.io/movecondo/llms.txt

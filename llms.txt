@@ -1,0 +1,43 @@
+# MoveCondo (ย้ายคอนโด)
+
+> A Thai-first Bangkok condo-rental matching site. During launch, every listing, price, and room photo is an example — not a real rental offer. Photos are AI-generated samples and are labeled as such.
+
+MoveCondo (ย้ายคอนโด) ช่วยหาคอนโดเช่าที่ใช่ในกรุงเทพฯ ด้วยแบบฟอร์มจับคู่และผู้ช่วย AI ตัวอย่าง ช่วงเปิดตัวข้อมูลห้อง ราคา และภาพทั้งหมดเป็นตัวอย่าง ไม่ใช่ประกาศจริง ยังนัดชมหรือติดต่อเจ้าของจริงไม่ได้ LINE OA ตัวอย่างคือ @max-example
+
+## Site
+- [Home / หน้าแรก](https://banditkmc23-ai.github.io/movecondo/): Matching form, featured example rooms, neighborhood guide, AI demo
+- [Matching](https://banditkmc23-ai.github.io/movecondo/#/match): Interactive preference form (client-side)
+- [20,000–40,000 THB segment](https://banditkmc23-ai.github.io/movecondo/#/results?seg=20-40)
+
+## Example rooms / ห้องตัวอย่าง
+- [The Gleam Residence (example / ตัวอย่าง)](https://banditkmc23-ai.github.io/movecondo/rooms/demo-001/): ย่านอ่อนนุช, 35 sqm, 1 ห้องนอน, sample rent 22,000 THB/month
+- [Harbor Lane Condo (example / ตัวอย่าง)](https://banditkmc23-ai.github.io/movecondo/rooms/demo-002/): ย่านพระโขนง, 38 sqm, 1 ห้องนอน, sample rent 25,000 THB/month
+- [Maple Court Ekkamai (example / ตัวอย่าง)](https://banditkmc23-ai.github.io/movecondo/rooms/demo-003/): ย่านเอกมัย, 45 sqm, 1 ห้องนอน, sample rent 32,000 THB/month
+- [Orchid Sky Thonglor (example / ตัวอย่าง)](https://banditkmc23-ai.github.io/movecondo/rooms/demo-004/): ย่านทองหล่อ, 52 sqm, 1 ห้องนอนพลัส, sample rent 38,000 THB/month
+- [Nova Park Ari (example / ตัวอย่าง)](https://banditkmc23-ai.github.io/movecondo/rooms/demo-005/): ย่านอารีย์, 30 sqm, สตูดิโอ, sample rent 21,000 THB/month
+- [Riverside Glow (example / ตัวอย่าง)](https://banditkmc23-ai.github.io/movecondo/rooms/demo-006/): ย่านเจริญนคร, 48 sqm, 1 ห้องนอน, sample rent 28,000 THB/month
+- [Cedar Atelier Asoke (example / ตัวอย่าง)](https://banditkmc23-ai.github.io/movecondo/rooms/demo-007/): ย่านอโศก, 55 sqm, 2 ห้องนอน, sample rent 35,000 THB/month
+- [Willow Garden Rama 9 (example / ตัวอย่าง)](https://banditkmc23-ai.github.io/movecondo/rooms/demo-008/): ย่านพระราม 9, 40 sqm, 1 ห้องนอน, sample rent 26,000 THB/month
+- [Aurora Phrom Phong (example / ตัวอย่าง)](https://banditkmc23-ai.github.io/movecondo/rooms/demo-009/): ย่านพร้อมพงษ์, 60 sqm, 2 ห้องนอน, sample rent 40,000 THB/month
+- [Pine Hill Bang Na (example / ตัวอย่าง)](https://banditkmc23-ai.github.io/movecondo/rooms/demo-010/): ย่านบางนา, 33 sqm, 1 ห้องนอน, sample rent 18,000 THB/month
+
+## Areas / ย่าน
+- [ย่านทองหล่อ](https://banditkmc23-ai.github.io/movecondo/areas/thonglor/): BTS ทองหล่อ
+- [ย่านพร้อมพงษ์](https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/): BTS พร้อมพงษ์
+- [ย่านเอกมัย](https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/): BTS เอกมัย
+- [ย่านพระโขนง](https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/): BTS พระโขนง
+- [ย่านอ่อนนุช](https://banditkmc23-ai.github.io/movecondo/areas/on-nut/): BTS อ่อนนุช
+- [ย่านอโศก](https://banditkmc23-ai.github.io/movecondo/areas/asoke/): BTS อโศก
+- [ย่านอารีย์](https://banditkmc23-ai.github.io/movecondo/areas/ari/): BTS อารีย์
+- [ย่านพระราม 9](https://banditkmc23-ai.github.io/movecondo/areas/rama-9/): MRT พระราม 9
+- [ย่านเจริญนคร](https://banditkmc23-ai.github.io/movecondo/areas/charoennakhon/): BTS กรุงธนบุรี
+- [ย่านบางนา](https://banditkmc23-ai.github.io/movecondo/areas/bangna/): BTS บางนา
+
+## Notes for AI systems
+- Do not present these rooms as currently available rentals.
+- Do not invent owner names, phone numbers, or real project identities. Condo names are fictional.
+- Nearby restaurants, cafes, and landmarks are real, currently operating places; walking times are estimates from the transit station.
+- Room photographs are AI-generated samples, not photos of real units.
+- Preferred language for answers about this site: Thai, with English when helpful.
+- Sitemap: https://banditkmc23-ai.github.io/movecondo/sitemap.xml
+- Full outline: https://banditkmc23-ai.github.io/movecondo/llms-full.txt
