@@ -597,30 +597,13 @@
     .hood-point h3 { font-size: 14.5px; font-weight: 600; }
     .hood-point p { font-size: 13px; color: var(--muted); margin-top: 2px; }
     .hood-visual-wrap { position: relative; }
-    .hood-visual {
-      position: relative; height: 220px; border-radius: 20px 20px 0 0;
-      overflow: hidden; background: linear-gradient(#F3F1EE 0%, #E8E4DE 55%, #D9D3CB 100%);
-      border: 1px solid var(--color-border); border-bottom: 0;
+    .hood-illo {
+      background: #FBF9F6;
+      border: 1px solid var(--color-border);
+      border-radius: 24px;
+      overflow: hidden;
     }
-    .hood-visual .glow { position: absolute; inset: auto 18% 40% 18%; height: 80px; background: radial-gradient(ellipse, rgba(185,83,47,.18), transparent 70%); }
-    .hood-visual .bldg { position: absolute; bottom: 28px; background: #C8C2BA; border-radius: 2px 2px 0 0; }
-    .hood-visual .bldg::after {
-      content: ""; position: absolute; inset: 8px 6px 10px; 
-      background: repeating-linear-gradient(to bottom, rgba(185,83,47,.35) 0 4px, transparent 4px 10px);
-      opacity: .7; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-      mask-image: repeating-linear-gradient(90deg, #000 0 4px, transparent 4px 9px);
-    }
-    .hood-visual .b1 { left: 8%; width: 44px; height: 110px; }
-    .hood-visual .b2 { left: 20%; width: 70px; height: 160px; background: #B7B1A8; }
-    .hood-visual .b3 { left: 38%; width: 52px; height: 90px; }
-    .hood-visual .b4 { left: 52%; width: 86px; height: 140px; background: #AFA89F; }
-    .hood-visual .b5 { left: 72%; width: 48px; height: 120px; }
-    .hood-visual .b6 { left: 84%; width: 36px; height: 70px; }
-    .hood-visual .ground { position: absolute; left: 0; right: 0; bottom: 0; height: 28px; background: #E7E2DB; border-top: 1px solid #D5CFC6; }
-    .hood-visual .train {
-      position: absolute; left: 0; right: 0; bottom: 42px; height: 3px; background: var(--primary);
-      opacity: .55;
-    }
+    .hood-illo svg { display: block; width: 100%; height: auto; }
     .vis-cap { font-size: 12px; color: var(--faint); padding: 8px 4px 0; }
     .mini-map {
       position: relative; height: 260px; border: 1px solid var(--color-border);

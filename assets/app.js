@@ -849,8 +849,6 @@ function placesHTML(places, active, prefix){
 function hoodHTML(){
   const area = homeArea;
   const prof = AREA_PROFILES[area];
-  const rooms = LISTINGS.filter(l=>l.area===area);
-  const places = areaNearby(area, rooms[0] ? rooms[0].walk : prof.walkTypical);
   const chips = AREAS.map(a=>`<button type="button" class="chip ${a===area?"on":""}" data-area="${a}" aria-pressed="${a===area?"true":"false"}">${a}</button>`).join("");
   return `
   <div class="hood" id="hood">
@@ -872,14 +870,8 @@ function hoodHTML(){
         <a class="btn btn-md btn-ghost" href="${areaHref(area)}">อ่านหน้าย่าน${area}</a>
       </div>
       <div class="hood-visual-wrap">
-        <div class="hood-visual" aria-hidden="true">
-          <div class="glow"></div>
-          <div class="bldg b1"></div><div class="bldg b2"></div><div class="bldg b3"></div>
-          <div class="bldg b4"></div><div class="bldg b5"></div><div class="bldg b6"></div>
-          <div class="train"></div><div class="ground"></div>
-        </div>
-        ${miniMapHTML(places, "ร้านดังในย่าน", hoodPin, "hood")}
-        <p class="vis-cap">ภาพประกอบจำลองและแผนที่อย่างง่าย ไม่ใช่ภาพถ่ายหรือแผนที่จริงของย่าน</p>
+        ${areaIlloHTML(area)}
+        <p class="vis-cap">ภาพประกอบ ไม่ใช่แผนที่จริง</p>
       </div>
     </div>
     ${famousHTML(area, "hood")}
@@ -1562,7 +1554,7 @@ function setupAiFabCollisionGuard(){
   if (document.body.classList.contains("room-page")) return;
   const fab = document.querySelector(".ai-fab");
   if (!fab) return;
-  const TEXT_SEL = "p, h1, h2, h3, h4, h5, h6, li, label, figcaption, dt, dd, .meta, .price, .lead, .nearby-lead, .hero-kicker, .hero-phrase, .badge-vacant, .place-meta, .place-chip, .place-maps, .section-head p, .page-hero p, footer p, footer a, .faq summary, .faq p, .crumbs, .chip, .btn, .hero-actions a";
+  const TEXT_SEL = "p, h1, h2, h3, h4, h5, h6, li, label, figcaption, dt, dd, .meta, .price, .lead, .nearby-lead, .hero-kicker, .hero-phrase, .badge-vacant, .place-meta, .place-chip, .place-maps, .section-head p, .page-hero p, footer p, footer a, .faq summary, .faq p, .crumbs, .chip, .btn, .hero-actions a, .vis-cap, .hood-illo";
   const mq = window.matchMedia("(max-width: 400px)");
   let ticking = false;
   function overlaps(a, b){
