@@ -1150,7 +1150,6 @@
     .nearby-lead { color: var(--muted); font-size: 15px; margin: 0 0 18px; line-height: 1.5; }
     .place-marquee {
       overflow: hidden; cursor: grab; touch-action: pan-x;
-      margin: 0 -4px;
     }
     .place-marquee:active, .place-marquee.is-dragging { cursor: grabbing; }
     .place-track {
@@ -1196,9 +1195,59 @@
       margin-top: auto;
     }
     .place-maps:hover { text-decoration: underline; }
-    .place-google-credit, .place-photo-notes {
-      margin: 12px 0 0; font-size: 12px; color: var(--muted); line-height: 1.55;
+    #nearby.nearby-box {
+      padding: 24px;
     }
+    /* Area pages: #nearby sits on <main>, so match the width of sibling .section blocks. */
+    main > #nearby.nearby-box {
+      width: min(var(--max), calc(100% - 48px));
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 640px) {
+      main > #nearby.nearby-box { width: calc(100% - 32px); }
+    }
+    #nearby .place-marquee {
+      margin: 0 -24px;
+    }
+    #nearby .place-track {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .place-google-credit {
+      margin: 14px 0 0; font-size: 12px; color: var(--muted); line-height: 1.55;
+    }
+    .place-photo-notes {
+      margin: 4px 0 0;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .place-photo-notes summary {
+      cursor: pointer;
+      list-style: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.4;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .place-photo-notes summary::-webkit-details-marker { display: none; }
+    .place-photo-notes summary::marker { content: ""; }
+    .place-photo-notes summary::after {
+      content: "";
+      width: 0; height: 0;
+      border-left: 3.5px solid transparent;
+      border-right: 3.5px solid transparent;
+      border-top: 5px solid currentColor;
+      opacity: .65;
+      translate: 0 1px;
+    }
+    .place-photo-notes[open] summary::after { transform: rotate(180deg); }
+    .place-photo-notes p { margin: 6px 0 0; font-size: 12px; color: var(--muted); line-height: 1.55; }
     @media (max-width: 700px) {
       .nearby-box { width: 100%; max-width: 100%; }
       .place-card { flex-basis: 200px; width: 200px; }
@@ -1219,7 +1268,7 @@
       overflow-x: clip;
     }
     .detail-main, .detail { min-width: 0; }
-    .place-marquee { margin: 0; }
+    #nearby .place-marquee { margin: 0 -24px; }
     .place-card, .place-body, .place-media { min-width: 0; max-width: 100%; }
     .place-body h3 { overflow-wrap: anywhere; }
     .map3d-shell { max-width: 100%; overflow: hidden; }
