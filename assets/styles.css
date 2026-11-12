@@ -293,10 +293,11 @@
       padding: 7px 16px 0; line-height: 1.35; letter-spacing: 0;
     }
     .badge-vacant {
-      position: absolute; left: 12px; bottom: 12px;
-      background: rgba(42, 33, 28, .86); color: #fff;
-      font-size: 12px; font-weight: 500; padding: 6px 10px; border-radius: 999px;
-      backdrop-filter: blur(6px); max-width: calc(100% - 24px);
+      position: absolute; left: 12px; top: 12px;
+      background: #1F8A4C; color: #fff;
+      font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px;
+      max-width: calc(100% - 24px);
+      z-index: 4;
     }
     .score-pill {
       position: absolute; top: 12px; right: 12px;
@@ -1354,6 +1355,8 @@
       position: absolute; inset: 0;
       z-index: 3; pointer-events: none;
     }
+    .gallery-stage > .badge-vacant { z-index: 4; pointer-events: none; }
+
     .gallery-ui .gal-btn,
     .gallery-ui .gal-count { pointer-events: auto; }
     .gallery-ui .gal-count {
@@ -1466,6 +1469,8 @@
         padding-bottom: 24px;
       }
     }
+    body.match-view .ai-fab,
+    body:has(#view-match.on) .ai-fab { display: none; }
 
 
     /* In-page sections shouldn't hide under the sticky header */

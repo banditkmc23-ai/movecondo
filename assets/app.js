@@ -1262,11 +1262,13 @@ function render(){
   }
 
   const top = parts[0] || "home";
+  document.body.classList.toggle("match-view", top==="match");
   if(top==="match"){
     match.classList.add("on"); match.innerHTML = matchView(prefs); setNav("match");
   } else if(top==="results"){
     results.classList.add("on"); results.innerHTML = resultsView(); setNav((q.get("seg")==="20-40" || filters.seg) ? "results" : "match");
   } else if(top==="listing"){
+    document.body.classList.remove("match-view");
     location.replace(SITE_BASE);
     return;
   } else {
@@ -1568,6 +1570,10 @@ function setupAiFabCollisionGuard(){
   }
   function update(){
     ticking = false;
+    if (document.body.classList.contains("match-view") || document.body.classList.contains("room-page")){
+      fab.classList.remove("ai-fab--clear", "ai-fab--measure");
+      return;
+    }
     if (!mq.matches){
       fab.classList.remove("ai-fab--clear", "ai-fab--measure");
       return;

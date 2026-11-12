@@ -167,11 +167,14 @@
     shell.innerHTML = "";
     const toolbar = el("div", "map3d-toolbar");
     const chips = el("div", "map3d-chips");
-    const cats = [];
+    const present = [];
     (data.places || []).forEach((p) => {
-      if (p.lat == null) return;
-      if (cats.indexOf(p.categoryKey) < 0) cats.push(p.categoryKey);
+      if (p.lat == null || !p.categoryKey) return;
+      if (present.indexOf(p.categoryKey) < 0) present.push(p.categoryKey);
     });
+    const CAT_ORDER = ["cafe", "restaurant", "spa", "shopping", "bar", "park"];
+    const cats = CAT_ORDER.filter((k) => present.indexOf(k) >= 0);
+    present.forEach((k) => { if (cats.indexOf(k) < 0) cats.push(k); });
     const active = new Set(cats);
     cats.forEach((k) => {
       const b = el("button", "map3d-chip on");
@@ -183,11 +186,12 @@
       b.appendChild(document.createTextNode(CAT_TH[k] || k));
       chips.appendChild(b);
     });
-    const reset = el("button", "map3d-reset");
-    reset.type = "button";
-    reset.textContent = "รีเซ็ตมุมมอง";
     toolbar.appendChild(chips);
-    toolbar.appendChild(reset);
+    const reset = el("button", "map3d-reset-ctrl");
+    reset.type = "button";
+    reset.title = "รีเซ็ตมุมมอง";
+    reset.setAttribute("aria-label", "รีเซ็ตมุมมอง");
+    reset.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>';
 
     const canvas = el("div", "map3d-canvas");
     canvas.setAttribute("role", "region");
@@ -215,6 +219,14 @@
     }), "bottom-right");
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: true, showZoom: true, showCompass: true }), "top-right");
     map.addControl(new maplibregl.FullscreenControl(), "top-right");
+    map.addControl({
+      onAdd: function() {
+        const wrap = el("div", "maplibregl-ctrl maplibregl-ctrl-group");
+        wrap.appendChild(reset);
+        return wrap;
+      },
+      onRemove: function() {}
+    }, "top-right");
 
     const markers = [];
     let popup = new maplibregl.Popup({ offset: 18, closeButton: true });
