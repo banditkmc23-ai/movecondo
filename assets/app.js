@@ -1008,7 +1008,7 @@ function famousHTML(area, scope){
   <section class="famous" id="famous-${scope}">
     <div class="eyebrow">ร้านดังใกล้คอนโด</div>
     <h2>ร้านอาหาร คาเฟ่ และจุดฮิตใกล้สถานี</h2>
-    <p class="lead-note">สถานที่เหล่านี้เป็นร้านและสถานที่จริงที่เปิดให้บริการ ชื่อโครงการคอนโดในหน้านี้ยังเป็นชื่อสมมติ ${NEARBY_NOTE}</p>
+    <p class="lead-note">สถานที่เหล่านี้เป็นร้านและสถานที่จริงที่เปิดให้บริการ ${NEARBY_NOTE}</p>
     <div class="famous-filters" aria-label="กรองประเภทร้าน">${chips}</div>
     <div class="famous-grid">${cards}</div>
     <p class="famous-disclaimer">${NEARBY_NOTE} ระยะทางคิดจากสถานีรถไฟฟ้า ไม่ใช่จากอาคารคอนโด และไม่มีคะแนนหรือจำนวนรีวิวสมมติ</p>
@@ -1859,7 +1859,7 @@ function pushAIReply(text){
     if (rec.rows.length){
       msg = "จากประกาศตอนนี้ ห้องเหล่านี้ใกล้กับที่คุณบอกค่ะ ทัก LINE แล้วบอกรหัสห้องได้เลย";
       rec.rows.forEach(row => { /* attach below */ });
-      aiMessages.push({ role:"bot", text: msg, rooms: rec.rows, chips: follow });
+      aiMsgs.push({ role:"bot", text: msg, listings: rec.rows, chips: follow });
       renderAI(); return;
     }
     msg = "ยังจับคู่ห้องจากข้อความนี้ไม่ได้ชัดเจนค่ะ บอกงบ ทำเล หรือทัก LINE ได้เลย";

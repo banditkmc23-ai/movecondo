@@ -85,7 +85,7 @@
     "สถานี": "Station", "ร้านดัง": "Popular spots", "ภาพประกอบ ไม่ใช่แผนที่จริง": "Illustration, not an actual map",
     "ร้านดังใกล้คอนโด": "Popular spots near the condo", "ร้านดังใกล้สถานี": "Popular spots near the station",
     "ร้านอาหาร คาเฟ่ และจุดฮิตใกล้สถานี": "Restaurants, cafés and hot spots near the station",
-    "สถานที่เหล่านี้เป็นร้านและสถานที่จริงที่เปิดให้บริการ ชื่อโครงการคอนโดในหน้านี้ยังเป็นชื่อสมมติ ระยะเวลาโดยประมาณ คำนวณจากสถานีรถไฟฟ้า": "These are real shops and places that are open for business. Condo project names on this page are still placeholders. Times are estimates from the train station.",
+    "สถานที่เหล่านี้เป็นร้านและสถานที่จริงที่เปิดให้บริการ ระยะเวลาโดยประมาณ คำนวณจากสถานีรถไฟฟ้า": "These are real shops and places that are open for business. Times are estimates from the train station.",
     "ระยะเวลาโดยประมาณ คำนวณจากสถานีรถไฟฟ้า ระยะทางคิดจากสถานีรถไฟฟ้า ไม่ใช่จากอาคารคอนโด และไม่มีคะแนนหรือจำนวนรีวิวสมมติ": "Times are estimates from the train station. Distances are measured from the station, not from the condo building, and there are no made-up ratings or review counts.",
     "สถานที่จริงใกล้โครงการ · ระยะเดินเป็นค่าประมาณ": "Real places near the project · walking times are estimates",
     "ระยะเดินเป็นค่าประมาณจากสถานี": "Walking times are estimates from the station",
@@ -230,7 +230,10 @@
     "ร้านดังย่านทองหล่อ": "Popular spots in Thonglor", "ใกล้คาเฟ่ย่านอารีย์": "Near cafés in Ari",
     "เดินทางย่านเจริญนคร": "Getting around Charoen Nakhon", "มีห้องว่างแล้วยัง": "Any rooms available?",
     "พิมพ์ความต้องการเป็นภาษาพูดได้...": "Describe what you need in your own words...", "ส่ง": "Send",
-    "กำลังหาข้อมูลย่าน...": "Looking up the area...", "ดูรายละเอียด": "View details", "นัดชมห้อง": "Book a viewing",
+    "กำลังหาข้อมูลย่าน...": "Looking up the area...",
+    "นัดชมห้อง": "Book a viewing", "รับคำขอนัดชมแล้ว": "Viewing request received", "ทัก LINE เพื่อบอกห้องที่สนใจได้เลยค่ะ": "Chat on LINE to tell us which room you're interested in.",
+    "นัดชมผ่าน LINE ได้เลย": "book a viewing via LINE", "ชื่อผู้เข้าชม": "Visitor name", "ใช้ชื่อสมมติได้": "A nickname is fine",
+    "วันที่นัด": "Date", "ช่วงเวลา": "Time", "ยืนยันนัดชม": "Confirm viewing", "ยกเลิก": "Cancel", "ดูรายละเอียด": "View details", "นัดชมห้อง": "Book a viewing",
     "จากประกาศตอนนี้ ห้องเหล่านี้ใกล้กับที่คุณบอกค่ะ ทัก LINE แล้วบอกรหัสห้องได้เลย": "From the current listings, these rooms are closest to what you described. Chat on LINE and tell us the room.",
     "ยังจับคู่ห้องจากข้อความนี้ไม่ได้ชัดเจนค่ะ บอกงบ ทำเล หรือทัก LINE ได้เลย": "I couldn't match rooms from that message yet. Tell me a budget or location, or chat on LINE.",
     "สำรวจย่านและร้านดังใกล้สถานีได้จากหน้าย่านค่ะ หรือทัก LINE ได้เลย": "Explore areas and popular spots near stations on the area pages, or chat on LINE.",
@@ -244,7 +247,8 @@
   /* Context-specific overrides: [css selector, thai, english] */
   var CTX = [
     [".match-form, .sel-chip, .match-breakdown, .match-tags, .tag-ok, .tag-no", "สวน", "Garden"],
-    [".hood-illo", "ร้านดัง", "Places"]
+    [".hood-illo", "ร้านดัง", "Places"],
+    [".detail-heading", "รายละเอียด", "About this room"]
   ];
 
   var TH_MONTH = { "ม.ค.": "Jan", "ก.พ.": "Feb", "มี.ค.": "Mar", "เม.ย.": "Apr", "พ.ค.": "May", "มิ.ย.": "Jun",
