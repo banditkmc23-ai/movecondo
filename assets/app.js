@@ -726,7 +726,7 @@ function mktHTML(l, wide){
     ${wide ? `<div class="mkt-scale"><span>ต่ำสุด ${money(l.min)}</span><span>เฉลี่ย ${money(l.avg)}</span><span>สูงสุด ${money(l.max)}</span></div>` : ``}
   </div>`;
 }
-function cardHTML(l, score){
+function cardHTML(l, score, breakdown){
   const href = roomHref(l.id);
   const alt = `ห้อง ${l.project} ย่าน${l.area}`;
   const files = (PHOTOS[l.id]||[]).slice(0,5);
@@ -758,12 +758,19 @@ function cardHTML(l, score){
   if(l.walk!=null && l.transit) bits.push(`${l.walk} นาทีถึง ${l.transit}` + (shuttleIds.has(l.id) ? " · มีรถ shuttle" : ""));
   else if(l.transit) bits.push(l.transit + (shuttleIds.has(l.id) ? " · มีรถ shuttle" : ""));
   const meta = bits.filter(Boolean).join(" · ");
+  let matchBits = "";
+  if(score!=null && breakdown && breakdown.length){
+    const ok = breakdown.filter(i=>i.ok);
+    matchBits = `<div class="match-meta"><span class="match-frac">ตรง ${ok.length} จาก ${breakdown.length} ข้อ</span></div>`
+      + (ok.length ? `<div class="match-tags">${ok.map(i=>`<span class="match-tag">✓ ${i.label}</span>`).join("")}</div>` : "");
+  }
   return `<article class="card">
     ${media}
     <a class="card-body" href="${href}">
       <h3>${l.project}</h3>
       <div class="price">${money(l.price)} บาท/เดือน</div>
       <div class="meta">${meta}</div>
+      ${matchBits}
     </a>
   </article>`;
 }
@@ -931,67 +938,246 @@ function homeView(){
   <div class="contact-cta" id="contact"><h2>สนใจห้องไหน ทักมาได้เลย</h2><p>บอกรหัสห้องในแชท เราจะช่วยตอบเรื่องห้องนั้น</p><a class="btn btn-lg btn-line" href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">ทัก LINE</a></div>`;
 }
 
+const MUST_OPTS = [
+  { id:"pool", label:"สระว่ายน้ำ", re:/สระว่ายน้ำ/ },
+  { id:"fitness", label:"ฟิตเนส", re:/ฟิตเนส/ },
+  { id:"washer", label:"เครื่องซักผ้า", re:/เครื่องซักผ้า/ },
+  { id:"corner", label:"ห้องมุม", re:/ห้องมุม/ },
+  { id:"shuttle", label:"รถรับส่ง/shuttle", re:/รถรับ|shuttle/i },
+  { id:"garden", label:"สวน", re:/สวน/ },
+  { id:"tub", label:"อ่างอาบน้ำ", re:/อ่างอาบน้ำ/ },
+  { id:"parking", label:"ที่จอดรถ", re:/ที่จอดรถ/ },
+  { id:"cowork", label:"Co-working space", re:/Co-working/i }
+];
+function listingHasMust(l, id){
+  const opt = MUST_OPTS.find(o=>o.id===id);
+  if(!opt) return false;
+  return (l.amenities||[]).some(a=>opt.re.test(a));
+}
+function listingType(l){
+  return l.type || l.beds || "";
+}
+function isTwoBed(l){
+  return /^2/.test(listingType(l));
+}
+function isOneBed(l){
+  return /1 ห้องนอน/.test(listingType(l));
+}
+function normPrefs(p){
+  p = p || {};
+  const areas = Array.isArray(p.areas) ? p.areas.slice() : (p.area && p.area!=="any" ? [p.area] : []);
+  return {
+    areas,
+    type: p.type || "any",
+    budgetMin: p.budgetMin != null ? Number(p.budgetMin) : 13500,
+    budgetMax: p.budgetMax != null ? Number(p.budgetMax) : (p.budget != null ? Number(p.budget) : 55000),
+    size: p.size != null ? Number(p.size) : 0,
+    walk: p.walk != null ? Number(p.walk) : 0,
+    contract: p.contract || "any",
+    moveIn: p.moveIn || "2026-12-01",
+    must: Array.isArray(p.must) ? p.must.slice() : [],
+    pets: p.pets || "no"
+  };
+}
+function listingAvailable(l){
+  return l.available || (l.status==="AVAILABLE" ? "2026-11-12" : "9999-12-31");
+}
+function typeMatches(l, type){
+  if(!type || type==="any") return true;
+  if(type==="1 ห้องนอน") return isOneBed(l);
+  if(type==="2 ห้องนอน+") return isTwoBed(l);
+  return listingType(l)===type;
+}
+function listingPasses(l, p){
+  p = normPrefs(p);
+  if(p.areas.length && !p.areas.includes(l.area)) return false;
+  if(!typeMatches(l, p.type)) return false;
+  if(l.price < p.budgetMin || l.price > p.budgetMax) return false;
+  if(p.size && l.size < p.size) return false;
+  if(p.walk && (l.walk==null || l.walk > p.walk)) return false;
+  for(let i=0;i<p.must.length;i++){ if(!listingHasMust(l, p.must[i])) return false; }
+  return true;
+}
+function matchBreakdown(l, p){
+  p = normPrefs(p);
+  const items = [];
+  if(p.areas.length) items.push({ key:"area", label:l.area, ok:p.areas.includes(l.area) });
+  if(p.type && p.type!=="any") items.push({ key:"type", label:listingType(l), ok:typeMatches(l, p.type) });
+  items.push({ key:"budget", label:money(l.price)+" บาท", ok:l.price>=p.budgetMin && l.price<=p.budgetMax });
+  if(p.size) items.push({ key:"size", label:l.size+" ตร.ม.", ok:l.size>=p.size });
+  if(p.walk) items.push({ key:"walk", label:"เดิน "+l.walk+" นาที", ok:l.walk!=null && l.walk<=p.walk });
+  if(p.contract==="1y") items.push({ key:"contract", label:"สัญญา 1 ปี", ok:true });
+  if(p.moveIn) items.push({ key:"move", label:"ย้ายเข้าได้", ok:listingAvailable(l)<=p.moveIn });
+  p.must.forEach(id=>{
+    const opt = MUST_OPTS.find(o=>o.id===id);
+    if(opt) items.push({ key:id, label:opt.label, ok:listingHasMust(l, id) });
+  });
+  return items;
+}
+function iconStep(name){
+  const common = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
+  if(name==="pin") return `<svg ${common}><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>`;
+  if(name==="bed") return `<svg ${common}><path d="M3 11.5V19"/><path d="M21 19V11.5"/><path d="M3 16h18"/><path d="M3 11.5h18"/><path d="M6 11.5V8.5A2.5 2.5 0 0 1 8.5 6h3A2.5 2.5 0 0 1 14 8.5V11.5"/></svg>`;
+  if(name==="wallet") return `<svg ${common}><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18"/><circle cx="16.5" cy="14.2" r="1.2"/></svg>`;
+  if(name==="ruler") return `<svg ${common}><rect x="3.5" y="7" width="17" height="10" rx="1.8"/><path d="M7 7v4M11 7v3M15 7v4M19 7v3"/></svg>`;
+  if(name==="walk") return `<svg ${common}><circle cx="13" cy="5" r="2"/><path d="M8 21l3.2-6.2 2.2 2.2V21"/><path d="M9 12.5l4-3 3.2 2.4 3.3-1.4"/></svg>`;
+  if(name==="cal") return `<svg ${common}><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>`;
+  if(name==="doc") return `<svg ${common}><path d="M7 3.5h7.5L20 9v11.5H7A1.5 1.5 0 0 1 5.5 19V5A1.5 1.5 0 0 1 7 3.5z"/><path d="M14.5 3.5V9H20"/><path d="M9 13h7M9 16.5h5"/></svg>`;
+  return `<svg ${common}><path d="M12 3.8l2.2 4.5 5 .7-3.6 3.5.8 5-4.4-2.3-4.4 2.3.8-5L4.8 9l5-.7L12 3.8z"/></svg>`;
+}
+function selChip(value, label, on){
+  return `<button type="button" class="sel-chip${on?" on":""}" data-chip-val="${value}" aria-pressed="${on?"true":"false"}">${label}</button>`;
+}
+function moneyPlain(n){
+  return Number(n).toLocaleString("th-TH");
+}
 function matchView(prefs){
-  const p = prefs || {};
-  const areaOpts = [`<option value="any">ไม่จำกัดทำเล</option>`].concat(AREAS.map(a=>`<option value="${a}" ${p.area===a?"selected":""}>${a}</option>`)).join("");
+  const p = normPrefs(prefs);
+  const areaChips = AREAS.map(a=>selChip(a, a, p.areas.includes(a))).join("");
+  const typeChips = [
+    selChip("any", "ไม่จำกัด", !p.type || p.type==="any"),
+    selChip("1 ห้องนอน", "1 ห้องนอน", p.type==="1 ห้องนอน"),
+    selChip("2 ห้องนอน+", "2 ห้องนอน+", p.type==="2 ห้องนอน+")
+  ].join("");
+  const sizeChips = [
+    [0,"ไม่จำกัด"],[30,"30 ตร.ม."],[35,"35 ตร.ม."],[40,"40 ตร.ม."],[50,"50 ตร.ม."],[70,"70 ตร.ม."]
+  ].map(([v,lb])=>selChip(String(v), lb, Number(p.size)===Number(v))).join("");
+  const walkChips = [
+    [0,"ไม่จำกัด"],[5,"≤ 5 นาที"],[10,"≤ 10 นาที"],[15,"≤ 15 นาที"]
+  ].map(([v,lb])=>selChip(String(v), lb, Number(p.walk)===Number(v))).join("");
+  const contractChips = [
+    selChip("any", "ไม่จำกัด", p.contract!=="1y"),
+    selChip("1y", "1 ปี", p.contract==="1y")
+  ].join("");
+  const mustChips = MUST_OPTS.map(o=>selChip(o.id, o.label, p.must.includes(o.id))).join("");
+  const matched = LISTINGS.filter(l=>listingPasses(l, p)).length;
   return `
-  <div class="page-hero">
+  <div class="page-hero match-hero">
     <a class="back" href="#/">${iconBack} กลับหน้าแรก</a>
-    <h1>บอกสิ่งที่คุณต้องการ</h1>
-    <p>บอกทำเล งบ และความต้องการ แล้วดูห้องที่เข้ากัน</p>
+    <div class="eyebrow">จับคู่ห้อง</div>
+    <h1>หาห้องที่ใช่ใน 30 วินาที</h1>
+    <p>เลือกทำเล งบ และสิ่งที่ขาดไม่ได้ แล้วดูห้องที่เข้ากันจากประกาศจริง</p>
   </div>
-  <form class="form-card" id="matchForm">
-    <div class="fields">
-      <div class="field">
-        <label for="area">ทำเลที่ต้องการ</label>
-        <select class="inp" id="area" name="area">${areaOpts}</select>
-        <span class="hint">มีหลายย่านในกรุงเทพฯ ให้เลือก เช่น ทองหล่อ พร้อมพงษ์ เจริญนคร อ่อนนุช</span>
-      </div>
-      <div class="field">
-        <label for="budget">งบค่าเช่าสูงสุด <span class="hint">บาท/เดือน</span></label>
-        <select class="inp" id="budget" name="budget">
-          <option value="20000" ${p.budget==20000?"selected":""}>20,000</option>
-          <option value="25000" ${p.budget==25000?"selected":""}>25,000</option>
-          <option value="30000" ${p.budget==30000?"selected":""}>30,000</option>
-          <option value="35000" ${!p.budget || p.budget==35000?"selected":""}>35,000</option>
-          <option value="40000" ${p.budget==40000?"selected":""}>40,000</option>
-          <option value="50000" ${p.budget==50000?"selected":""}>50,000</option>
-          <option value="55000" ${p.budget==55000?"selected":""}>55,000</option>
-          <option value="60000" ${p.budget==60000?"selected":""}>60,000</option>
-        </select>
-      </div>
-      <div class="seg-hint">ช่วง 20,000–40,000 บาท/เดือน เป็นเซ็กเมนต์ที่คนค้นหามาก — ค่าเริ่มต้นอยู่ที่ 35,000 บาท</div>
-      <div class="field">
-        <label for="size">ขนาดห้องขั้นต่ำ <span class="hint">ตารางเมตร</span></label>
-        <select class="inp" id="size" name="size">
-          <option value="25" ${p.size==25?"selected":""}>25 ตร.ม.</option>
-          <option value="30" ${!p.size || p.size==30?"selected":""}>30 ตร.ม.</option>
-          <option value="35" ${p.size==35?"selected":""}>35 ตร.ม.</option>
-          <option value="40" ${p.size==40?"selected":""}>40 ตร.ม.</option>
-          <option value="50" ${p.size==50?"selected":""}>50 ตร.ม.</option>
-          <option value="70" ${p.size==70?"selected":""}>70 ตร.ม.</option>
-          <option value="80" ${p.size==80?"selected":""}>80 ตร.ม.</option>
-          <option value="115" ${p.size==115?"selected":""}>115 ตร.ม.</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="moveIn">วันที่ย้ายเข้าได้</label>
-        <input class="inp" id="moveIn" name="moveIn" type="date" value="${p.moveIn||"2026-12-01"}" min="2026-11-12" />
-      </div>
-      <div class="field full">
-        <label>มีสัตว์เลี้ยงหรือไม่</label>
-        <div class="pets">
-          <button type="button" class="choice ${p.pets==="yes"?"on":""}" data-pets="yes" aria-pressed="${p.pets==="yes"?"true":"false"}">มีสัตว์เลี้ยง</button>
-          <button type="button" class="choice ${p.pets!=="yes"?"on":""}" data-pets="no" aria-pressed="${p.pets!=="yes"?"true":"false"}">ไม่มีสัตว์เลี้ยง</button>
-        </div>
-        <input type="hidden" name="pets" id="pets" value="${p.pets||"no"}" />
+  <form class="form-card match-form" id="matchForm">
+    <div class="match-step">
+      <div class="match-step-h">${iconStep("pin")}<span>ทำเลที่ต้องการ</span><em>เลือกได้หลายย่าน</em></div>
+      <div class="chip-select" data-chip-field="areas" data-multi="true">${areaChips}</div>
+    </div>
+    <div class="match-step">
+      <div class="match-step-h">${iconStep("bed")}<span>แบบห้อง</span></div>
+      <div class="chip-select" data-chip-field="type">${typeChips}</div>
+    </div>
+    <div class="match-step">
+      <div class="match-step-h">${iconStep("wallet")}<span>งบค่าเช่า</span><strong id="budgetLabel">${moneyPlain(p.budgetMin)} – ${moneyPlain(p.budgetMax)} บาท/เดือน</strong></div>
+      <div class="range-dual">
+        <div class="range-rail" aria-hidden="true"><div class="range-fill" id="budgetFill"></div></div>
+        <input type="range" id="budgetMin" name="budgetMin" min="13500" max="55000" step="500" value="${p.budgetMin}" aria-label="งบต่ำสุด">
+        <input type="range" id="budgetMax" name="budgetMax" min="13500" max="55000" step="500" value="${p.budgetMax}" aria-label="งบสูงสุด">
       </div>
     </div>
-    <div class="form-actions">
+    <div class="match-step">
+      <div class="match-step-h">${iconStep("ruler")}<span>ขนาดห้องขั้นต่ำ</span></div>
+      <div class="chip-select" data-chip-field="size">${sizeChips}</div>
+    </div>
+    <div class="match-step">
+      <div class="match-step-h">${iconStep("walk")}<span>เดินถึงสถานี</span></div>
+      <div class="chip-select" data-chip-field="walk">${walkChips}</div>
+    </div>
+    <div class="match-step">
+      <div class="match-step-h">${iconStep("doc")}<span>สัญญาขั้นต่ำ</span></div>
+      <div class="chip-select" data-chip-field="contract">${contractChips}</div>
+    </div>
+    <div class="match-step">
+      <div class="match-step-h">${iconStep("cal")}<span>วันที่ย้ายเข้าได้</span></div>
+      <input class="inp" id="moveIn" name="moveIn" type="date" value="${p.moveIn}" min="2026-11-12" />
+    </div>
+    <div class="match-step">
+      <div class="match-step-h">${iconStep("star")}<span>สิ่งที่ขาดไม่ได้</span><em>เลือกได้หลายข้อ</em></div>
+      <div class="chip-select" data-chip-field="must" data-multi="true">${mustChips}</div>
+    </div>
+    <div class="match-foot">
+      <div class="match-count" id="matchCount" aria-live="polite">พบ ${matched} ห้องที่ตรง</div>
       <button class="btn btn-lg btn-primary" type="submit">ดูห้องที่ตรงที่สุด</button>
-      <a class="btn btn-lg btn-ghost" href="#/results?seg=20-40">ดูเฉพาะช่วง 20–40k</a>
     </div>
   </form>`;
+}
+
+function readMatchForm(form){
+  if(!form) return normPrefs(prefs);
+  const onOf = (field)=>[...form.querySelectorAll(`[data-chip-field="${field}"] .sel-chip.on`)].map(b=>b.getAttribute("data-chip-val"));
+  const areas = onOf("areas");
+  const type = onOf("type")[0] || "any";
+  const size = Number(onOf("size")[0] || 0);
+  const walk = Number(onOf("walk")[0] || 0);
+  const contract = onOf("contract")[0] || "any";
+  let min = Number((form.querySelector("#budgetMin")||{}).value || 13500);
+  let max = Number((form.querySelector("#budgetMax")||{}).value || 55000);
+  if(min>max){ const t=min; min=max; max=t; }
+  return normPrefs({
+    areas, type, size, walk, contract,
+    budgetMin:min, budgetMax:max,
+    moveIn: (form.querySelector("#moveIn")||{}).value || "2026-12-01",
+    must: onOf("must"),
+    pets: "no"
+  });
+}
+function paintBudgetSlider(form){
+  if(!form) return;
+  const a = form.querySelector("#budgetMin");
+  const b = form.querySelector("#budgetMax");
+  const fill = form.querySelector("#budgetFill");
+  const lab = form.querySelector("#budgetLabel");
+  if(!a || !b) return;
+  let min = Number(a.value), max = Number(b.value);
+  if(min>max){ const t=min; min=max; max=t; }
+  const lo=13500, hi=55000, span=hi-lo;
+  if(fill){
+    fill.style.left = ((min-lo)/span*100)+"%" ;
+    fill.style.width = ((max-min)/span*100)+"%";
+  }
+  if(lab) lab.textContent = moneyPlain(min)+" – "+moneyPlain(max)+" บาท/เดือน";
+}
+function refreshMatchCount(form){
+  const p = readMatchForm(form);
+  const n = LISTINGS.filter(l=>listingPasses(l, p)).length;
+  const el = form.querySelector("#matchCount");
+  if(el) el.textContent = "พบ "+n+" ห้องที่ตรง";
+  paintBudgetSlider(form);
+}
+function bindMatchForm(){
+  const form = document.getElementById("matchForm");
+  if(!form || form.dataset.bound==="1") return;
+  form.dataset.bound = "1";
+  paintBudgetSlider(form);
+  form.addEventListener("click", (e)=>{
+    const chip = e.target.closest(".sel-chip");
+    if(!chip) return;
+    e.preventDefault();
+    const group = chip.closest(".chip-select");
+    if(!group) return;
+    if(group.dataset.multi==="true"){
+      chip.classList.toggle("on");
+      chip.setAttribute("aria-pressed", chip.classList.contains("on") ? "true" : "false");
+    } else {
+      group.querySelectorAll(".sel-chip").forEach(b=>{
+        const on = b===chip;
+        b.classList.toggle("on", on);
+        b.setAttribute("aria-pressed", on?"true":"false");
+      });
+    }
+    refreshMatchCount(form);
+  });
+  form.addEventListener("input", (e)=>{
+    if(e.target.id==="budgetMin" || e.target.id==="budgetMax"){
+      const a = form.querySelector("#budgetMin");
+      const b = form.querySelector("#budgetMax");
+      if(a && b && Number(a.value)>Number(b.value)){
+        if(e.target.id==="budgetMin") b.value = a.value;
+        else a.value = b.value;
+      }
+    }
+    refreshMatchCount(form);
+  });
 }
 
 let prefs = null;
@@ -999,45 +1185,40 @@ let filters = { seg:false, pets:false, walk5:false, area:null };
 
 function scoreListing(l, p){
   if(!p) return null;
-  let s = 20;
-  if(!p.area || p.area==="any") s += 12;
-  else if(l.area===p.area) s += 30;
-  else s += 0;
-  if(l.price <= p.budget){
-    s += 22;
-    const slack = (p.budget - l.price) / p.budget;
-    if(slack > 0.35) s -= 4;
-  } else if(l.price <= p.budget*1.08) s += 8;
-  else if(l.price <= p.budget*1.2) s -= 6;
-  else s -= 22;
-  if(l.size >= p.size) s += 14;
-  else if(l.size >= p.size*0.9) s += 7;
-  else s -= 6;
+  p = normPrefs(p);
+  const bits = matchBreakdown(l, p);
+  const hit = bits.filter(b=>b.ok).length;
+  const total = bits.length || 1;
+  let s = Math.round(20 + (hit/total)*70);
+  if(p.areas.length && p.areas.includes(l.area)) s += 6;
+  else if(p.areas.length) s -= 8;
+  if(l.price>=p.budgetMin && l.price<=p.budgetMax){
+    const mid = (p.budgetMin+p.budgetMax)/2;
+    const slack = Math.abs(l.price-mid) / Math.max(p.budgetMax-p.budgetMin, 1);
+    if(slack>0.7) s -= 2;
+  } else if(l.price <= p.budgetMax*1.08 && l.price >= p.budgetMin*0.92) s -= 4;
+  else s -= 18;
   if(p.pets==="yes"){ s += l.pets ? 18 : -26; }
-  const avail = l.available || (l.status==="AVAILABLE" ? "2026-11-12" : "9999-12-31");
-  if(avail <= p.moveIn) s += 10;
-  else s -= 14;
   return Math.max(24, Math.min(98, Math.round(s)));
 }
 
 function resultsView(){
-  const p = prefs || { area:"any", budget:35000, size:30, pets:"no", moveIn:"2026-12-01" };
-  const rows = LISTINGS.map(l => ({ l, score: scoreListing(l, p) })).sort((a,b)=>b.score-a.score);
-  const petNote = "";
-  const cards = rows.map(r => cardHTML(r.l, r.score)).join("");
+  const p = normPrefs(prefs || {});
+  const rows = LISTINGS.map(l => ({ l, score: scoreListing(l, p), bits: matchBreakdown(l, p) })).sort((a,b)=>b.score-a.score);
+  const cards = rows.map(r => cardHTML(r.l, r.score, r.bits)).join("");
   return `
   <div class="page-hero">
     <a class="back" href="#/match">${iconBack} ปรับความต้องการ</a>
     <h1>ห้องที่เข้ากันกับคุณ</h1>
-    <p>เรียงตามคะแนนความเหมาะสมจากงบ ทำเล ขนาด และวันที่ย้ายเข้า</p>
-    ${petNote}
+    <p>เรียงตามความเหมาะสมจากงบ ทำเล ขนาด และสิ่งที่คุณเลือก</p>
   </div>
-  <div class="section" id="listings"><div class="grid">${cards}</div></div>
+  <div class="section" id="listings"><div class="grid grid-results">${cards}</div></div>
   <div class="section" id="areas">
     <div class="section-head"><div><div class="eyebrow">สำรวจทำเล</div><h2>ย่านใกล้รถไฟฟ้า</h2></div></div>
     <nav class="hood-chips" aria-label="ย่านทั้งหมด">${areaChipsHTML()}</nav>
   </div>`;
 }
+
 
 function setGallery(idx){
   const stage = document.getElementById("galleryStage");
@@ -1250,13 +1431,13 @@ function render(){
   if(q.get("area") && AREAS.includes(q.get("area"))) filters.area = q.get("area");
   galleryIdx = 0;
   if(q.get("demo")==="1" && !prefs){
-    prefs = { area:"อ่อนนุช", budget:35000, size:30, moveIn:"2026-12-01", pets:"yes" };
+    prefs = { areas:["อ่อนนุช"], budgetMin:13500, budgetMax:35000, size:30, moveIn:"2026-12-01", pets:"no" };
   }
 
   const top = parts[0] || "home";
   document.body.classList.toggle("match-view", top==="match");
   if(top==="match"){
-    match.classList.add("on"); match.innerHTML = matchView(prefs); setNav("match");
+    match.classList.add("on"); match.innerHTML = matchView(prefs); setNav("match"); bindMatchForm();
   } else if(top==="results"){
     results.classList.add("on"); results.innerHTML = resultsView(); setNav((q.get("seg")==="20-40" || filters.seg) ? "results" : "match");
   } else if(top==="listing"){
@@ -1741,14 +1922,8 @@ document.addEventListener("submit", (e)=>{
   if(e.target.id==="matchForm"){
     e.preventDefault();
     const fd = new FormData(e.target);
-    prefs = {
-      area: fd.get("area") || "any",
-      budget: Number(fd.get("budget")),
-      size: Number(fd.get("size")),
-      moveIn: fd.get("moveIn"),
-      pets: fd.get("pets") || "no"
-    };
-    filters = { seg: Number(fd.get("budget"))<=40000, pets: prefs.pets==="yes", walk5:false, area: (fd.get("area") && fd.get("area")!=="any") ? fd.get("area") : null };
+    prefs = readMatchForm(e.target);
+    filters = { seg:false, pets:false, walk5:false, area: prefs.areas[0] || null };
     location.hash = "#/results";
     if((location.hash||"")==="#/results") render();
     return;
