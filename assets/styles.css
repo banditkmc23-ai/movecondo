@@ -60,7 +60,13 @@
       --max: 1160px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { background: var(--color-background); color: var(--ink); }
+    html, body { background: var(--color-background); color: var(--ink); max-width: 100%; overflow-x: clip; }
+    img, svg, video { max-width: 100%; }
+    p, h1, h2, h3, h4, li, .meta, .detail-summary, .hl b, .place-body h3, .feature-group, .room-hint {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      line-break: loose;
+    }
     html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 16px); scroll-padding-bottom: 96px; }
     body {
       font-family: "Prompt", "Noto Sans Thai", "Sarabun", sans-serif;
@@ -182,8 +188,9 @@
       margin-bottom: 16px;
       text-transform: none;
     }
-    .hero h1 { font-size: clamp(28px, 7vw, 48px); font-weight: 600; letter-spacing: -.03em; line-height: 1.2; max-width: 14ch; color: var(--ink); }
-    .hero h1 em { font-style: normal; color: var(--primary); }
+    .hero h1 { font-size: clamp(26px, 7vw, 44px); font-weight: 600; letter-spacing: -.03em; line-height: 1.2; max-width: 16ch; color: var(--ink); }
+    .hero h1 .hero-phrase { white-space: nowrap; }
+    .hero h1 em { font-style: normal; color: var(--primary); white-space: nowrap; }
     .hero .lead { margin-top: 16px; max-width: 40ch; font-size: 16px; font-weight: 400; color: var(--muted); line-height: 1.7; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
     .seg-chip-hero {
@@ -224,10 +231,10 @@
     }
 
     /* Cards grid */
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
     .card {
       background: #fff; border: 1px solid var(--color-border); border-radius: var(--radius-lg);
-      overflow: hidden; box-shadow: none; cursor: pointer;
+      overflow: hidden; box-shadow: none; cursor: pointer; min-width: 0; max-width: 100%;
       transition: border-color var(--ease), box-shadow var(--ease);
       display: flex; flex-direction: column; text-align: left; width: 100%;
       color: inherit;
@@ -245,9 +252,9 @@
     .card-body .price { font-size: 16px; font-weight: 600; color: var(--ink); }
     .card-body .meta { font-size: 13px; color: var(--muted); line-height: 1.45; }
     .cover { height: 200px; }
-    .card-slider { position: relative; height: 200px; background: var(--color-surface); }
+    .card-slider { position: relative; height: 200px; background: var(--color-surface); overflow: hidden; min-width: 0; width: 100%; max-width: 100%; }
     .card-track {
-      display: flex; height: 100%; user-select: none; -webkit-user-drag: none;
+      display: flex; height: 100%; width: 100%; max-width: 100%; min-width: 0; user-select: none; -webkit-user-drag: none;
       overflow-x: auto; overflow-y: hidden;
       scroll-snap-type: x mandatory;
       scroll-behavior: smooth;
@@ -524,7 +531,7 @@
     .c5 .plant { left: 8%; background: #446848; }
 
     @media (max-width: 900px) {
-      .grid, .trust, .steps, .area-guide { grid-template-columns: 1fr 1fr; }
+      .grid, .trust, .steps, .area-guide { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .detail-panel h1 { font-size: 24px; }
       .detail-price { font-size: 26px; margin: 6px 0 2px; }
       .mkt-box { margin: 10px 0 8px; }
@@ -535,9 +542,9 @@
     }
     @media (max-width: 640px) {
       main:has(+ .sticky-cta.show) { padding-bottom: 132px; }
-      .wrap, .hero, .trust, .section, .page-hero, .form-card, .detail, .hood, .faq-wrap, .gallery-hero, .detail-subnav { width: calc(100% - 32px); }
+      .wrap, .hero, .trust, .section, .page-hero, .form-card, .detail, .hood, .faq-wrap, .gallery-hero, .detail-subnav, .contact-cta { width: calc(100% - 32px); max-width: 100%; }
       .app-inner { width: calc(100% - 32px); }
-      .grid, .trust, .steps, .area-guide, .fields, .facts { grid-template-columns: 1fr; }
+      .grid, .trust, .steps, .area-guide, .fields, .facts { grid-template-columns: minmax(0, 1fr); }
       .hero { margin-top: 8px; padding: 32px 0 12px; }
       .hero-actions { gap: 10px; }
       .hero-actions .btn { min-width: 0; flex: 1 1 auto; }
@@ -783,7 +790,7 @@
     }
     .detail-subnav a:hover { border-color: var(--primary); color: var(--primary-dark); }
 
-    .detail { width: min(var(--max), calc(100% - 48px)); margin: 16px auto 0; display: grid; grid-template-columns: 1.2fr .8fr; grid-template-areas: "main panel"; gap: 24px; align-items: start; }
+    .detail { width: min(var(--max), calc(100% - 48px)); margin: 16px auto 0; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); grid-template-areas: "main panel"; gap: 24px; align-items: start; min-width: 0; }
     .detail-main { grid-area: main; display: flex; flex-direction: column; gap: 24px; }
     .detail-panel { grid-area: panel; background: #fff; border: 1px solid var(--color-border); border-radius: 24px; padding: 26px; position: sticky; top: calc(var(--header-h) + 16px); }
     .hl-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
@@ -828,7 +835,7 @@
 
     @media (max-width: 900px) {
       .hood-layout { grid-template-columns: 1fr; }
-      .detail { grid-template-columns: 1fr; grid-template-areas: "panel" "main"; }
+      .detail { grid-template-columns: minmax(0, 1fr); grid-template-areas: "panel" "main"; }
       .detail-panel { position: static; padding: 18px 16px 14px; }
       .detail-panel .cta-row { display: none; }
       .detail-panel .desc { display: none; }
@@ -1037,9 +1044,9 @@
     .card-body .price { font-size: 16px; font-weight: 600; color: var(--ink); }
     .card-body .meta { font-size: 13px; color: var(--muted); line-height: 1.45; }
     .cover { height: 200px; }
-    .card-slider { position: relative; height: 200px; background: var(--color-surface); }
+    .card-slider { position: relative; height: 200px; background: var(--color-surface); overflow: hidden; min-width: 0; width: 100%; max-width: 100%; }
     .card-track {
-      display: flex; height: 100%; user-select: none; -webkit-user-drag: none;
+      display: flex; height: 100%; width: 100%; max-width: 100%; min-width: 0; user-select: none; -webkit-user-drag: none;
       overflow-x: auto; overflow-y: hidden;
       scroll-snap-type: x mandatory;
       scroll-behavior: smooth;
@@ -1138,7 +1145,7 @@
     .card-dot.on::before { background: #fff; transform: translate(-50%,-50%) scale(1.2); }
 
     /* Nearby places marquee */
-    .nearby-box { width: min(var(--max), calc(100% - 48px)); margin: var(--space-6) auto 0; }
+    .nearby-box { width: 100%; max-width: 100%; margin: var(--space-6) auto 0; }
     .nearby-box h2 { font-size: clamp(22px, 3vw, 28px); font-weight: 600; letter-spacing: -.02em; margin: 0 0 6px; }
     .nearby-lead { color: var(--muted); font-size: 15px; margin: 0 0 18px; line-height: 1.5; }
     .place-marquee {
@@ -1193,10 +1200,26 @@
       margin: 12px 0 0; font-size: 12px; color: var(--muted); line-height: 1.55;
     }
     @media (max-width: 700px) {
-      .nearby-box { width: calc(100% - 32px); }
+      .nearby-box { width: 100%; max-width: 100%; }
       .place-card { flex-basis: 200px; width: 200px; }
     }
     @media (prefers-reduced-motion: reduce) {
       .place-marquee { overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
       .place-card { scroll-snap-align: start; }
     }
+
+
+    /* Prevent carousels and long Thai strings from causing page-level horizontal scroll */
+    .detail, .detail-main, .detail-side, .detail-more, .nearby-box, .section,
+    .gallery-hero, .map3d-section, .contact-cta, .faq-wrap, .hero {
+      min-width: 0;
+      max-width: 100%;
+    }
+    .detail-more, .nearby-box, .section, .gallery-hero, .map3d-section, .place-marquee {
+      overflow-x: clip;
+    }
+    .detail-main, .detail { min-width: 0; }
+    .place-marquee { margin: 0; }
+    .place-card, .place-body, .place-media { min-width: 0; max-width: 100%; }
+    .place-body h3 { overflow-wrap: anywhere; }
+    .map3d-shell { max-width: 100%; overflow: hidden; }

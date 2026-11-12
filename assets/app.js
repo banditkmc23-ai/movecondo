@@ -917,7 +917,7 @@ function homeView(){
   return `
   <div class="hero">
     <div class="hero-kicker">MoveCondo · ย้ายคอนโด</div>
-    <h1>หาคอนโดเช่าที่ <em>ตรงกับคุณ</em></h1>
+    <h1>หาคอนโดเช่าที่ <em class="hero-phrase">ตรงกับคุณ</em></h1>
     <p class="lead">ดูห้องจริงใกล้รถไฟฟ้าในกรุงเทพฯ แล้วเลือกห้องที่ใช่</p>
     <div class="hero-actions">
       <a class="btn btn-lg btn-primary" href="#listings">ดูห้องว่าง</a>
