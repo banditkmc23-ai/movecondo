@@ -8,11 +8,15 @@
     mrt: "#1D4F9C"
   };
   const VB = { w: 400, h: 372 };
-  const PLOT = { x: 18, y: 22, w: 364, h: 316 };
+  const PLOT = { x: 22, y: 28, w: 356, h: 300 };
   const FS = { name: 12, chip: 11, station: 12, road: 11, legend: 11, compass: 11 };
   const PIN_R = 12.5;
   const ST_R = 11.5;
   const CHIP_H = 14;
+  const GAP = 6;
+  const MAX_PINS = 3;
+  const LABEL_FLOOR = 342;
+  const MARGIN = 6;
 
   function esc(s) {
     return String(s)
@@ -145,31 +149,65 @@
     return { e: (lng - slng) * mLng, n: (lat - slat) * mLat };
   }
 
-  function textW(str, size) {
+  let _ctx = null;
+  function fontReady() {
+    return !!(global.__areaIlloFontReady);
+  }
+  function canvasText(str, size, weight) {
+    if (typeof document === "undefined") return null;
+    try {
+      if (!_ctx) _ctx = document.createElement("canvas").getContext("2d");
+      if (!_ctx) return null;
+      _ctx.font = (weight || "600") + " " + size + "px " + FONT;
+      const m = _ctx.measureText(String(str));
+      if (!m || !isFinite(m.width) || m.width <= 0) return null;
+      return m;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /* Conservative width so layout boxes are never tighter than painted glyphs. */
+  function estimateW(str, size) {
     let w = 0;
     for (const ch of String(str)) {
-      if (/[\u0E31\u0E34-\u0E3A\u0E47-\u0E4E]/.test(ch)) w += 0; // Thai combining marks
-      else if (ch === "\u0E33") w += size * 0.55; // sara am
-      else if (ch === " " || ch === "." || ch === "'" || ch === "’" || ch === "·") w += size * 0.28;
-      else if (/[~\-–—/]/.test(ch)) w += size * 0.45;
-      else if (/[A-Za-z0-9&+]/.test(ch)) w += size * 0.6;
-      else w += size * 0.9; // Thai / other letters
+      if (/[\u0E31\u0E34-\u0E3A\u0E47-\u0E4E]/.test(ch)) w += 0;
+      else if (ch === "\u0E33") w += size * 0.62;
+      else if (ch === " " || ch === "." || ch === "'" || ch === "’" || ch === "·") w += size * 0.32;
+      else if (/[~\-–—/]/.test(ch)) w += size * 0.5;
+      else if (/[Iilj.,:]/.test(ch)) w += size * 0.32;
+      else if (/[MW@]/.test(ch)) w += size * 0.82;
+      else if (/[A-Za-z0-9&+]/.test(ch)) w += size * 0.68;
+      else w += size * 1.02;
     }
     return w;
   }
 
-  function wrapLabel(text, maxCh) {
-    if (text.length <= maxCh) return [text];
-    const parts = text.split(/\s+/);
+  function textW(str, size, weight) {
+    const m = fontReady() ? canvasText(str, size, weight) : null;
+    const est = estimateW(str, size);
+    if (m) return Math.max(m.width, est * 0.92) + 0.5;
+    return est;
+  }
+
+  function wrapLabel(text, maxW, size) {
+    size = size || FS.name;
+    if (textW(text, size) <= maxW) return [text];
+    const parts = String(text).split(/\s+/).filter(Boolean);
     if (parts.length === 1) return [text];
-    const lines = ["", ""];
-    let li = 0;
+    const lines = [];
+    let cur = "";
     parts.forEach((w) => {
-      const next = lines[li] ? lines[li] + " " + w : w;
-      if (li === 0 && next.length > maxCh && lines[li]) li = 1;
-      lines[li] = lines[li] ? lines[li] + " " + w : w;
+      const next = cur ? cur + " " + w : w;
+      if (cur && textW(next, size) > maxW && lines.length < 1) {
+        lines.push(cur);
+        cur = w;
+      } else {
+        cur = next;
+      }
     });
-    return lines.filter(Boolean).slice(0, 2);
+    if (cur) lines.push(cur);
+    return lines.slice(0, 2);
   }
 
   function walkChip(meters) {
@@ -178,21 +216,32 @@
     return { kind: "walk", text: "เดิน ~" + mins + " นาที" };
   }
 
-  function boxesOverlap(a, b, pad) {
-    pad = pad || 4;
-    return a.x < b.x + b.w + pad && a.x + a.w + pad > b.x && a.y < b.y + b.h + pad && a.y + a.h + pad > b.y;
+  function boxesOverlap(a, b, gap) {
+    if (!a || !b) return false;
+    gap = gap == null ? GAP : gap;
+    return a.x < b.x + b.w + gap && a.x + a.w + gap > b.x && a.y < b.y + b.h + gap && a.y + a.h + gap > b.y;
   }
 
-  const LABEL_FLOOR = 336; // keep names/chips out of the legend band
+  function boxHits(b, list, gap) {
+    return list.some((o) => o && boxesOverlap(b, o, gap));
+  }
 
-  function clampBox(b) {
-    const m = 6;
+  function clampBox(b, floor) {
+    const m = MARGIN;
+    const fl = floor == null ? LABEL_FLOOR : floor;
     if (b.x < m) b.x = m;
     if (b.y < m) b.y = m;
     if (b.x + b.w > VB.w - m) b.x = VB.w - m - b.w;
-    if (b.y + b.h > LABEL_FLOOR) b.y = LABEL_FLOOR - b.h;
+    if (b.y + b.h > fl) b.y = fl - b.h;
     if (b.y < m) b.y = m;
+    if (b.x < m) b.x = m;
     return b;
+  }
+
+  function inBounds(b, floor) {
+    const m = MARGIN;
+    const fl = floor == null ? LABEL_FLOOR : floor;
+    return b.x >= m - 0.01 && b.y >= m - 0.01 && b.x + b.w <= VB.w - m + 0.01 && b.y + b.h <= fl + 0.01;
   }
 
   function vec(bearing, len) {
@@ -200,67 +249,87 @@
     return { x: Math.sin(r) * len, y: -Math.cos(r) * len };
   }
 
-  function layout(spec) {
+  function bearingOf(e, n) {
+    if (!e && !n) return 0;
+    return (Math.atan2(e, n) * 180) / Math.PI;
+  }
+
+  function angDiff(a, b) {
+    let d = Math.abs(a - b) % 360;
+    if (d > 180) d = 360 - d;
+    return d;
+  }
+
+  function pinBox(p) {
+    const r = PIN_R + 1.2;
+    return { x: p.x - r, y: p.y - r, w: r * 2, h: r * 2, role: "pin", name: p.short || p.name };
+  }
+
+  function stationDotBox(stS, hasXfer) {
+    const r = ST_R + (hasXfer ? 4 : 1.2);
+    return { x: stS.x - r, y: stS.y - r, w: r * 2, h: r * 2, role: "station-dot" };
+  }
+
+  const COMPASS_BOX = { x: 360, y: 4, w: 36, h: 48, role: "compass" };
+  const LEGEND_BOX = { x: 0, y: 348, w: 400, h: 24, role: "legend" };
+
+  function combinations(arr, k) {
+    const out = [];
+    function rec(start, acc) {
+      if (acc.length === k) { out.push(acc.slice()); return; }
+      for (let i = start; i < arr.length; i++) {
+        acc.push(arr[i]);
+        rec(i + 1, acc);
+        acc.pop();
+      }
+    }
+    rec(0, []);
+    return out;
+  }
+
+  function spreadScore(places, st) {
+    if (places.length < 2) return 1000;
+    const br = places.map((p) => {
+      const xy = en(p.lat, p.lng, st.lat, st.lng);
+      return bearingOf(xy.e, xy.n);
+    });
+    let minA = 180, minD = Infinity;
+    for (let i = 0; i < places.length; i++) {
+      for (let j = i + 1; j < places.length; j++) {
+        minA = Math.min(minA, angDiff(br[i], br[j]));
+        minD = Math.min(minD, hav(places[i].lat, places[i].lng, places[j].lat, places[j].lng));
+      }
+    }
+    return minA * 4 + Math.min(minD, 800) / 20;
+  }
+
+  function choosePlaces(spec) {
     const st = spec.station;
     const raw = spec.places.map((p) => {
       const m = hav(st.lat, st.lng, p.lat, p.lng);
       const xy = en(p.lat, p.lng, st.lat, st.lng);
-      return Object.assign({}, p, { meters: m, chip: walkChip(m), e: xy.e, n: xy.n });
+      const br = bearingOf(xy.e, xy.n);
+      const fallback = br || 0;
+      return Object.assign({}, p, {
+        meters: m,
+        chip: walkChip(m),
+        e: xy.e,
+        n: xy.n,
+        bearing: (xy.e === 0 && xy.n === 0) ? (45 + Math.random() * 0) : fallback
+      });
     });
-
-    const pts = raw.concat([{ e: 0, n: 0 }]);
-    let minE = Infinity, maxE = -Infinity, minN = Infinity, maxN = -Infinity;
-    pts.forEach((p) => {
-      if (p.e < minE) minE = p.e;
-      if (p.e > maxE) maxE = p.e;
-      if (p.n < minN) minN = p.n;
-      if (p.n > maxN) maxN = p.n;
+    /* Deterministic fallback bearing when a place sits on the station. */
+    raw.forEach((p, i) => {
+      if (p.e === 0 && p.n === 0) p.bearing = 40 + i * 70;
     });
-    const padM = Math.max(160, 0.36 * Math.max(maxE - minE, maxN - minN, 200));
-    minE -= padM; maxE += padM; minN -= padM; maxN += padM;
-    let s = Math.min(PLOT.w / (maxE - minE), PLOT.h / (maxN - minN));
-    s = Math.min(s, 0.38); // don't over-zoom a tiny cluster
-    const cx = (minE + maxE) / 2, cy = (minN + maxN) / 2;
-    function toScreen(e, n) {
-      return {
-        x: PLOT.x + PLOT.w / 2 + (e - cx) * s,
-        y: PLOT.y + PLOT.h / 2 - (n - cy) * s
-      };
-    }
-
-    const stS = toScreen(0, 0);
-    const pins = raw.map((p) => {
-      const sc = toScreen(p.e, p.n);
-      return Object.assign({}, p, sc);
+    if (raw.length <= MAX_PINS) return raw;
+    const combos = combinations(raw, MAX_PINS);
+    let best = combos[0], bestScore = -1e9;
+    combos.forEach((c) => {
+      const sc = spreadScore(c, st);
+      if (sc > bestScore) { bestScore = sc; best = c; }
     });
-
-    // keep a readable gap from the station
-    const ST_GAP = 62;
-    pins.forEach((p) => {
-      const dx = p.x - stS.x, dy = p.y - stS.y;
-      const d = Math.hypot(dx, dy) || 1;
-      if (d < ST_GAP) {
-        const k = ST_GAP / d;
-        p.x = stS.x + dx * k;
-        p.y = stS.y + dy * k;
-      }
-    });
-    // separate pins that sit on top of each other
-    const PIN_GAP = 56;
-    for (let i = 0; i < pins.length; i++) {
-      for (let j = i + 1; j < pins.length; j++) {
-        const dx = pins[j].x - pins[i].x, dy = pins[j].y - pins[i].y;
-        const d = Math.hypot(dx, dy) || 0.1;
-        if (d < PIN_GAP) {
-          const push = (PIN_GAP - d) / 2;
-          const ux = dx / d, uy = dy / d;
-          pins[i].x -= ux * push; pins[i].y -= uy * push;
-          pins[j].x += ux * push; pins[j].y += uy * push;
-        }
-      }
-    }
-
-    return { stS, pins, scale: s };
+    return best;
   }
 
   function roadPath(cx, cy, bearing, length) {
@@ -268,241 +337,484 @@
     return { x1: cx - v.x, y1: cy - v.y, x2: cx + v.x, y2: cy + v.y };
   }
 
-  function placeLabels(stS, pins, reserved, stBox) {
-    const boxes = reserved.slice();
-    const out = [];
-    const ordered = pins.slice().sort((a, b) => {
-      const da = Math.hypot(a.x - stS.x, a.y - stS.y);
-      const db = Math.hypot(b.x - stS.x, b.y - stS.y);
-      return da - db; // closest first, they need the tight slots
-    });
-    const pinHitBox = (q) => ({ x: q.x - (PIN_R + 3), y: q.y - (PIN_R + 3), w: (PIN_R + 3) * 2, h: (PIN_R + 3) * 2 });
-    const stHitBox = { x: stS.x - (ST_R + 4), y: stS.y - (ST_R + 4), w: (ST_R + 4) * 2, h: (ST_R + 4) * 2 };
+  function labelMetrics(p) {
+    const lines = wrapLabel(p.short || p.name, 118, FS.name);
+    const nameW = Math.max.apply(null, lines.map((ln) => textW(ln, FS.name, "600")));
+    const chipW = textW(p.chip.text, FS.chip, "600") + 14;
+    const bw = Math.max(nameW, chipW) + 8;
+    const lineH = 15;
+    const nameH = 5 + lines.length * lineH;
+    const bh = nameH + 3 + CHIP_H + 2;
+    return { lines, nameW, chipW, bw, bh, nameH, lineH };
+  }
 
-    function coversImportant(b) {
-      if (pins.some((q) => boxesOverlap(b, pinHitBox(q), 4))) return true;
-      if (boxesOverlap(b, stHitBox, 4)) return true;
-      if (stBox && boxesOverlap(b, stBox, 6)) return true;
-      return false;
-    }
+  function stLabelMetrics(spec) {
+    const stLines = spec.transfer ? [spec.station.name, spec.transfer.name] : [spec.station.name];
+    const stW = Math.max.apply(null, stLines.map((ln) => textW(ln, FS.station, "700"))) + 20;
+    const stH = stLines.length * 15 + 10;
+    return { stLines, stW, stH };
+  }
 
-    ordered.forEach((p) => {
-      const lines = wrapLabel(p.short || p.name, 12);
-      const nameW = Math.max.apply(null, lines.map((ln) => textW(ln, FS.name)));
-      const chipW = textW(p.chip.text, FS.chip) + 14;
-      const bw = Math.max(nameW, chipW) + 4;
-      const bh = lines.length * 15 + 16;
-      const rayx = p.x - stS.x, rayy = p.y - stS.y;
-      const d = Math.hypot(rayx, rayy) || 1;
-      const ux = rayx / d, uy = rayy / d;
-      let awayX = 1, awayY = -1;
-      let nd = Infinity;
-      pins.forEach((q) => {
-        if (q === p) return;
-        const dd = Math.hypot(q.x - p.x, q.y - p.y);
-        if (dd < nd) { nd = dd; awayX = p.x - q.x; awayY = p.y - q.y; }
-      });
-      const al = Math.hypot(awayX, awayY) || 1;
-      const ax = awayX / al, ay = awayY / al;
+  /* Keep relative bearing; push farther from the station until pin/pin and pin/station gaps hold. */
+  function layoutPins(places, spec) {
+    const minSt = 92;
+    const minPin = 118;
+    const hasXfer = !!spec.transfer;
 
-      const candidates = [];
-      function add(x, y) { candidates.push({ x: x, y: y }); }
-      [24, 32, 42, 52, 64].forEach((dist) => {
-        add(p.x + ax * dist - bw / 2, p.y + ay * dist);
-        add(p.x + ux * dist - bw / 2, p.y + uy * dist);
+    function project(padMul) {
+      const pts = places.concat([{ e: 0, n: 0 }]);
+      let minE = Infinity, maxE = -Infinity, minN = Infinity, maxN = -Infinity;
+      pts.forEach((p) => {
+        if (p.e < minE) minE = p.e;
+        if (p.e > maxE) maxE = p.e;
+        if (p.n < minN) minN = p.n;
+        if (p.n > maxN) maxN = p.n;
       });
-      [24, 34, 46, 58].forEach((dist) => {
-        add(p.x - bw / 2, p.y - dist - bh);
-        add(p.x - bw / 2, p.y + dist);
-        add(p.x + dist, p.y - bh / 2);
-        add(p.x - dist - bw, p.y - bh / 2);
-        add(p.x + dist, p.y + 12);
-        add(p.x - dist - bw, p.y + 12);
-        add(p.x + dist, p.y - 12 - bh);
-        add(p.x - dist - bw, p.y - 12 - bh);
-      });
-      // 12-way ring for leftover tight clusters
-      [36, 50].forEach((dist) => {
-        for (let a = 0; a < 12; a++) {
-          const rad = (a * Math.PI) / 6;
-          add(p.x + Math.cos(rad) * dist - bw / 2, p.y + Math.sin(rad) * dist - bh / 2);
-        }
-      });
-
-      let best = null, bestScore = -1e9;
-      function consider(raw, allowLabelHit) {
-        const b = clampBox({ x: raw.x, y: raw.y, w: bw, h: bh });
-        if (Math.abs(b.x - raw.x) > 28 || Math.abs(b.y - raw.y) > 28) return;
-        if (b.y + b.h > LABEL_FLOOR) return;
-        if (coversImportant(b)) return;
-        const cx = b.x + b.w / 2, cy = b.y + b.h / 2;
-        const dist = Math.hypot(cx - p.x, cy - p.y);
-        if (dist > 70) return; // keep labels close to their own pin
-        // don't sit closer to another pin than to this one
-        let otherD = Infinity;
-        pins.forEach((q) => {
-          if (q === p) return;
-          otherD = Math.min(otherD, Math.hypot(cx - q.x, cy - q.y));
-        });
-        if (otherD + 8 < dist) return;
-        const labelHit = boxes.some((o) => boxesOverlap(b, o, 5));
-        if (labelHit && !allowLabelHit) return;
-        let score = 90 - dist * 1.35;
-        const vl = dist || 1;
-        score += ((cx - p.x) / vl * ax + (cy - p.y) / vl * ay) * 8;
-        if (labelHit) score -= 100;
-        if (otherD < 50) score -= (50 - otherD);
-        if (score > bestScore) { bestScore = score; best = b; }
+      const span = Math.max(maxE - minE, maxN - minN, 200);
+      const padM = Math.max(220, 0.55 * span) * padMul;
+      minE -= padM; maxE += padM; minN -= padM; maxN += padM;
+      let s = Math.min(PLOT.w / (maxE - minE), PLOT.h / (maxN - minN));
+      const cx = (minE + maxE) / 2, cy = (minN + maxN) / 2;
+      function toScreen(e, n) {
+        return {
+          x: PLOT.x + PLOT.w / 2 + (e - cx) * s,
+          y: PLOT.y + PLOT.h / 2 - (n - cy) * s
+        };
       }
-      candidates.forEach((c) => consider(c, false));
-      if (!best) candidates.forEach((c) => consider(c, true));
-      const chosen = best || clampBox({ x: p.x - bw / 2, y: Math.min(p.y - 24 - bh, LABEL_FLOOR - bh), w: bw, h: bh });
-      boxes.push(chosen);
-      out.push({ pin: p, lines, box: chosen, chipW });
-    });
-
-    function nearPin(box, pin) {
-      const cx = box.x + box.w / 2, cy = box.y + box.h / 2;
-      return Math.hypot(cx - pin.x, cy - pin.y) < 78;
+      const stS = toScreen(0, 0);
+      const pins = places.map((p) => {
+        const sc = toScreen(p.e, p.n);
+        return Object.assign({}, p, sc);
+      });
+      return { stS, pins, scale: s };
     }
-    // slide leftover label overlaps apart, keeping each box near its pin and off pins
-    for (let pass = 0; pass < 5; pass++) {
-      for (let i = 0; i < out.length; i++) {
-        for (let j = i + 1; j < out.length; j++) {
-          const A = out[i].box, B = out[j].box;
-          if (!boxesOverlap(A, B, 5)) continue;
-          const a0 = { x: A.x, y: A.y }, b0 = { x: B.x, y: B.y };
-          const overlapX = Math.min(A.x + A.w, B.x + B.w) - Math.max(A.x, B.x) + 6;
-          const overlapY = Math.min(A.y + A.h, B.y + B.h) - Math.max(A.y, B.y) + 6;
-          if (overlapX <= overlapY) {
-            if (A.x <= B.x) { A.x -= overlapX / 2; B.x += overlapX / 2; }
-            else { B.x -= overlapX / 2; A.x += overlapX / 2; }
-          } else {
-            if (A.y <= B.y) { A.y -= overlapY / 2; B.y += overlapY / 2; }
-            else { B.y -= overlapY / 2; A.y += overlapY / 2; }
+
+    function pinInPlot(p) {
+      const r = PIN_R + 4;
+      return p.x - r >= MARGIN + 8 && p.x + r <= VB.w - MARGIN - 8 - 28 /* compass */
+        && p.y - r >= MARGIN + 8 && p.y + r <= LABEL_FLOOR - 8;
+    }
+
+    function tryFit(padMul) {
+      const { stS, pins, scale } = project(padMul);
+      /* Assigned radii along each place's geographic bearing. Preserve distance order. */
+      const ordered = pins.slice().sort((a, b) => a.meters - b.meters);
+      ordered.forEach((p) => {
+        const d = Math.hypot(p.x - stS.x, p.y - stS.y) || 0;
+        p._r = Math.max(d, minSt);
+      });
+      for (let pass = 0; pass < 80; pass++) {
+        let moved = false;
+        ordered.forEach((p, i) => {
+          if (p._r < minSt) { p._r = minSt; moved = true; }
+          if (i > 0 && p._r < ordered[i - 1]._r + 18) { p._r = ordered[i - 1]._r + 18; moved = true; }
+        });
+        for (let i = 0; i < ordered.length; i++) {
+          for (let j = i + 1; j < ordered.length; j++) {
+            const a = ordered[i], b = ordered[j];
+            const va = vec(a.bearing, a._r), vb = vec(b.bearing, b._r);
+            const dx = (stS.x + vb.x) - (stS.x + va.x);
+            const dy = (stS.y + vb.y) - (stS.y + va.y);
+            const d = Math.hypot(dx, dy);
+            if (d < minPin) {
+              /* Push the farther place out along its bearing. If almost colinear, push both. */
+              const need = (minPin - d) + 1;
+              const ad = angDiff(a.bearing, b.bearing);
+              if (ad < 28) {
+                b._r += Math.max(need, 16);
+                if (a._r < minSt + 20) a._r = minSt + 8;
+              } else {
+                b._r += need * 0.75;
+                a._r += need * 0.25;
+                if (a._r < minSt) a._r = minSt;
+              }
+              moved = true;
+            }
           }
-          clampBox(A); clampBox(B);
-          if (!nearPin(A, out[i].pin) || coversImportant(A)) { A.x = a0.x; A.y = a0.y; }
-          if (!nearPin(B, out[j].pin) || coversImportant(B)) { B.x = b0.x; B.y = b0.y; }
         }
+        if (!moved) break;
+      }
+      ordered.forEach((p) => {
+        const v = vec(p.bearing, p._r);
+        p.x = stS.x + v.x;
+        p.y = stS.y + v.y;
+      });
+      if (pins.some((p) => !pinInPlot(p))) return null;
+      /* Final pairwise check after rounding to the bearing rays. */
+      for (let i = 0; i < pins.length; i++) {
+        if (Math.hypot(pins[i].x - stS.x, pins[i].y - stS.y) < minSt - 1) return null;
+        for (let j = i + 1; j < pins.length; j++) {
+          if (Math.hypot(pins[j].x - pins[i].x, pins[j].y - pins[i].y) < minPin - 1) return null;
+        }
+      }
+      return { stS, pins, scale };
+    }
+
+    for (let k = 0; k < 10; k++) {
+      const fit = tryFit(1 + k * 0.22);
+      if (fit) return fit;
+    }
+    /* Last resort: zoom out hard and clamp radii to the plot along each ray. */
+    const fit = project(3.2);
+    fit.pins.forEach((p, i) => {
+      let r = minSt + i * 36;
+      for (let t = 0; t < 40; t++) {
+        const v = vec(p.bearing, r);
+        p.x = fit.stS.x + v.x;
+        p.y = fit.stS.y + v.y;
+        if (pinInPlot(p)) break;
+        r -= 4;
+      }
+    });
+    return fit;
+  }
+
+  function placeBox(bw, bh, anchors, obstacles, opts) {
+    opts = opts || {};
+    let best = null, bestScore = -1e9;
+    anchors.forEach((raw) => {
+      const b = clampBox({ x: raw.x, y: raw.y, w: bw, h: bh });
+      if (!inBounds(b)) return;
+      if (boxHits(b, obstacles, GAP)) return;
+      const cx = b.x + b.w / 2, cy = b.y + b.h / 2;
+      const ax = (raw.ax != null) ? raw.ax : cx, ay = (raw.ay != null) ? raw.ay : cy;
+      const dist = Math.hypot(cx - ax, cy - ay);
+      if (opts.maxDist && dist > opts.maxDist) return;
+      let score = (opts.baseScore || 0) - dist * (opts.distWeight || 1);
+      if (raw.bonus) score += raw.bonus;
+      /* Slight penalty if clamping slid the box a long way, but still allow it. */
+      score -= Math.hypot(b.x - raw.x, b.y - raw.y) * 0.25;
+      if (opts.preferAway) {
+        const vl = dist || 1;
+        score += ((cx - ax) / vl) * opts.preferAway.x + ((cy - ay) / vl) * opts.preferAway.y;
+      }
+      if (score > bestScore) { bestScore = score; best = b; }
+    });
+    return best;
+  }
+
+  function ringAnchors(ax, ay, bw, bh, dists, steps) {
+    const out = [];
+    dists.forEach((dist) => {
+      for (let a = 0; a < steps; a++) {
+        const rad = (a * 2 * Math.PI) / steps;
+        const cx = ax + Math.cos(rad) * dist;
+        const cy = ay + Math.sin(rad) * dist;
+        out.push({ x: cx - bw / 2, y: cy - bh / 2, ax: ax, ay: ay, bonus: 0 });
+      }
+    });
+    return out;
+  }
+
+  function sideAnchors(ax, ay, bw, bh, dists) {
+    const out = [];
+    dists.forEach((d) => {
+      out.push({ x: ax - bw / 2, y: ay - d - bh, ax: ax, ay: ay, bonus: 4 });
+      out.push({ x: ax - bw / 2, y: ay + d, ax: ax, ay: ay, bonus: 2 });
+      out.push({ x: ax + d, y: ay - bh / 2, ax: ax, ay: ay, bonus: 3 });
+      out.push({ x: ax - d - bw, y: ay - bh / 2, ax: ax, ay: ay, bonus: 3 });
+      out.push({ x: ax + d, y: ay - bh - 4, ax: ax, ay: ay, bonus: 2 });
+      out.push({ x: ax - d - bw, y: ay - bh - 4, ax: ax, ay: ay, bonus: 2 });
+      out.push({ x: ax + d, y: ay + 4, ax: ax, ay: ay, bonus: 2 });
+      out.push({ x: ax - d - bw, y: ay + 4, ax: ax, ay: ay, bonus: 2 });
+    });
+    return out;
+  }
+
+  function gridAnchors(ax, ay, bw, bh, step) {
+    const out = [];
+    step = step || 8;
+    for (let y = MARGIN; y <= LABEL_FLOOR - bh + 0.01; y += step) {
+      for (let x = MARGIN; x <= VB.w - MARGIN - bw + 0.01; x += step) {
+        out.push({ x: x, y: y, ax: ax, ay: ay });
       }
     }
     return out;
   }
 
-  function areaIlloHTML(area) {
+  function closestPointOnBox(box, x, y) {
+    const cx = Math.max(box.x, Math.min(x, box.x + box.w));
+    const cy = Math.max(box.y, Math.min(y, box.y + box.h));
+    return { x: cx, y: cy };
+  }
+
+  function leaderNeeded(pin, box) {
+    const pt = closestPointOnBox(box, pin.x, pin.y);
+    const d = Math.hypot(pt.x - pin.x, pt.y - pin.y);
+    return d > PIN_R + 8;
+  }
+
+  function layoutMap(area) {
     const spec = ILLO[area] || ILLO["ทองหล่อ"];
-    const { stS, pins } = layout(spec);
+    let chosen = choosePlaces(spec);
+    let built = null;
+
+    function attempt(places) {
+      attempt.lastFail = null;
+      const { stS, pins, scale } = layoutPins(places, spec);
+      if (global.__areaIlloDebug) console.log("  pins", places.map(p=>p.short||p.name).join(", "), "scale", scale && scale.toFixed(4));
+      const reserved = [COMPASS_BOX, LEGEND_BOX];
+      const stDot = stationDotBox(stS, !!spec.transfer);
+      reserved.push(stDot);
+      pins.forEach((p) => reserved.push(pinBox(p)));
+
+      const riverBox = riverLabelBox(spec);
+      if (riverBox) reserved.push(riverBox);
+
+      const stM = stLabelMetrics(spec);
+      const stAnchors = [];
+      const stDists = [18, 26, 36, 48, 62, 78, 96];
+      stDists.forEach((d) => {
+        sideAnchors(stS.x, stS.y, stM.stW, stM.stH, [d]).forEach((a) => stAnchors.push(a));
+      });
+      ringAnchors(stS.x, stS.y, stM.stW, stM.stH, stDists, 16).forEach((a) => stAnchors.push(a));
+      /* Corners as last-resort parking, still on a leader. */
+      [
+        { x: MARGIN, y: MARGIN },
+        { x: VB.w - stM.stW - 44, y: MARGIN },
+        { x: MARGIN, y: LABEL_FLOOR - stM.stH },
+        { x: VB.w - stM.stW - 44, y: LABEL_FLOOR - stM.stH }
+      ].forEach((c) => stAnchors.push({ x: c.x, y: c.y, ax: stS.x, ay: stS.y, bonus: -40 }));
+
+      let stBox = placeBox(stM.stW, stM.stH, stAnchors, reserved, { maxDist: 180, distWeight: 0.55 });
+      if (!stBox) stBox = placeBox(stM.stW, stM.stH, gridAnchors(stS.x, stS.y, stM.stW, stM.stH, 6), reserved, { maxDist: 240, distWeight: 0.8 });
+      if (!stBox) { attempt.lastFail = "station-label"; if (global.__areaIlloDebug) console.log("  FAIL stBox"); return null; }
+      stBox.role = "station-label";
+      reserved.push(stBox);
+
+      const labels = [];
+      const ordered = pins.slice().sort((a, b) => {
+        const edge = (p) => Math.min(p.x, VB.w - p.x, p.y, LABEL_FLOOR - p.y);
+        const ea = edge(a), eb = edge(b);
+        if (Math.abs(ea - eb) > 8) return ea - eb; // tightest edge first
+        const da = Math.hypot(a.x - stS.x, a.y - stS.y);
+        const db = Math.hypot(b.x - stS.x, b.y - stS.y);
+        return da - db;
+      });
+
+      for (let i = 0; i < ordered.length; i++) {
+        const p = ordered[i];
+        const m = labelMetrics(p);
+        const obstacles = reserved.concat(labels.map((lb) => lb.box));
+        /* Prefer the side away from the station and from the nearest other pin. */
+        let awayX = p.x - stS.x, awayY = p.y - stS.y;
+        let nd = Infinity;
+        pins.forEach((q) => {
+          if (q === p) return;
+          const dd = Math.hypot(q.x - p.x, q.y - p.y);
+          if (dd < nd) { nd = dd; awayX = p.x - q.x; awayY = p.y - q.y; }
+        });
+        const al = Math.hypot(awayX, awayY) || 1;
+        const axu = awayX / al, ayu = awayY / al;
+        const anchors = [];
+        [20, 28, 36, 46, 58, 72, 88, 104].forEach((dist) => {
+          anchors.push({ x: p.x + axu * dist - m.bw / 2, y: p.y + ayu * dist - m.bh / 2, ax: p.x, ay: p.y, bonus: 18 });
+          const v = vec(p.bearing, dist);
+          anchors.push({ x: p.x + v.x - m.bw / 2, y: p.y + v.y - m.bh / 2, ax: p.x, ay: p.y, bonus: 10 });
+        });
+        sideAnchors(p.x, p.y, m.bw, m.bh, [20, 28, 38, 50, 64, 80, 96]).forEach((a) => anchors.push(a));
+        ringAnchors(p.x, p.y, m.bw, m.bh, [28, 40, 54, 70, 88, 108], 16).forEach((a) => anchors.push(a));
+
+        let box = placeBox(m.bw, m.bh, anchors, obstacles, {
+          maxDist: 140,
+          distWeight: 1.15,
+          preferAway: { x: axu * 10, y: ayu * 10 }
+        });
+        if (!box) {
+          box = placeBox(m.bw, m.bh, anchors, obstacles, { maxDist: 220, distWeight: 0.7 });
+        }
+        if (!box) {
+          box = placeBox(m.bw, m.bh, gridAnchors(p.x, p.y, m.bw, m.bh, 6), obstacles, { maxDist: 240, distWeight: 1 });
+        }
+        if (!box) {
+          attempt.lastFail = p.short || p.name;
+          if (global.__areaIlloDebug) {
+            console.log("  FAIL label", p.short || p.name, "size", m.bw.toFixed(1), m.bh.toFixed(1), "pin", p.x.toFixed(1), p.y.toFixed(1));
+            obstacles.forEach((o) => console.log("   obs", o.role, o.name||"", [o.x,o.y,o.w,o.h].map(n=>n.toFixed(1)).join(",")));
+          }
+          return null;
+        }
+        const groupId = "place:" + (p.short || p.name);
+        box.role = "label";
+        box.name = p.short || p.name;
+        box.groupId = groupId;
+        const chipBox = {
+          x: box.x + (box.w - m.chipW) / 2,
+          y: box.y + m.nameH + 2,
+          w: m.chipW,
+          h: CHIP_H,
+          role: "chip",
+          name: p.chip.text,
+          groupId: groupId
+        };
+        const nameBox = {
+          x: box.x,
+          y: box.y,
+          w: box.w,
+          h: m.nameH,
+          role: "label-name",
+          name: p.short || p.name,
+          groupId: groupId
+        };
+        labels.push({
+          pin: p,
+          lines: m.lines,
+          box: box,
+          chipW: m.chipW,
+          chipBox: chipBox,
+          nameBox: nameBox,
+          nameH: m.nameH,
+          lineH: m.lineH,
+          leader: leaderNeeded(p, box)
+        });
+      }
+
+      const used = reserved.concat(labels.map((lb) => lb.box));
+      function roadAnchorsFor(bearing) {
+        const out = [];
+        const tw = 80;
+        [50, 70, 90, 110, 130, 155, 180, -50, -70, -90, -110, -130, -155, -180].forEach((t) => {
+          [14, 20, 28, 38, 48].forEach((off) => {
+            [90, -90].forEach((side) => {
+              const along = vec(bearing, t);
+              const perp = vec(bearing + side, off);
+              out.push({
+                x: stS.x + along.x + perp.x - tw / 2,
+                y: stS.y + along.y + perp.y - 7,
+                ax: stS.x + along.x,
+                ay: stS.y + along.y,
+                bonus: Math.abs(t) > 90 ? 6 : 0
+              });
+            });
+          });
+        });
+        return out;
+      }
+      function placeRoad(name, bearing) {
+        const w = textW(name, FS.road, "600") + 10, h = 16;
+        const anchors = roadAnchorsFor(bearing).map((a) => {
+          a.x = a.ax - w / 2 + (a.x + 40 - a.ax);
+          return { x: a.ax - w / 2 + (a.x - (a.ax - 40)), y: a.y, ax: a.ax, ay: a.ay, bonus: a.bonus };
+        });
+        /* Rebuild cleanly */
+        const clean = [];
+        [50, 70, 90, 110, 130, 155, 180, -50, -70, -90, -110, -130, -155, -180].forEach((t) => {
+          [14, 20, 28, 38, 48].forEach((off) => {
+            [90, -90].forEach((side) => {
+              const along = vec(bearing, t);
+              const perp = vec(bearing + side, off);
+              clean.push({
+                x: stS.x + along.x + perp.x - w / 2,
+                y: stS.y + along.y + perp.y - h / 2,
+                ax: stS.x + along.x,
+                ay: stS.y + along.y,
+                bonus: Math.abs(t) > 100 ? 8 : 0
+              });
+            });
+          });
+        });
+        const box = placeBox(w, h, clean, used, { maxDist: 120, distWeight: 0.35 });
+        if (!box) return null;
+        box.role = "road";
+        box.name = name;
+        used.push(box);
+        return { box: box, text: name };
+      }
+
+      const roadLbl = placeRoad(spec.road, spec.roadBearing);
+      let crossLbl = null;
+      if (spec.cross) crossLbl = placeRoad(spec.cross.name, spec.cross.bearing);
+
+      return {
+        spec, stS, pins, scale, stBox, stM, labels, roadLbl, crossLbl, riverBox,
+        boxes: collectBoxes(stS, pins, stBox, labels, roadLbl, crossLbl, riverBox, spec)
+      };
+    }
+
+    built = attempt(chosen);
+    if (!built && chosen.length > 2 && attempt.lastFail) {
+      const dropName = attempt.lastFail;
+      const reduced = chosen.filter((p) => (p.short || p.name) !== dropName);
+      if (reduced.length && reduced.length < chosen.length) built = attempt(reduced);
+    }
+    if (!built && chosen.length > 2) {
+      /* Drop the place that is angularly closest to another, preferring the nearer of that pair. */
+      let drop = chosen[chosen.length - 1], worst = 180;
+      for (let i = 0; i < chosen.length; i++) {
+        for (let j = i + 1; j < chosen.length; j++) {
+          const a = angDiff(chosen[i].bearing, chosen[j].bearing);
+          if (a < worst) {
+            worst = a;
+            drop = chosen[i].meters <= chosen[j].meters ? chosen[i] : chosen[j];
+          }
+        }
+      }
+      built = attempt(chosen.filter((p) => p !== drop));
+    }
+    if (!built) built = attempt(chosen.slice(0, Math.min(2, chosen.length)));
+    if (!built) built = attempt(chosen.slice(0, 1));
+    return built;
+  }
+
+  function riverLabelBox(spec) {
+    if (!spec.river) return null;
+    const text = spec.river.name;
+    const w = textW(text, FS.road, "600");
+    /* Rotated 90° around (352, 232): width becomes height. */
+    const cx = 352, cy = 232;
+    return { x: cx - 8, y: cy - w / 2, w: 16, h: w, role: "river", name: text };
+  }
+
+  function collectBoxes(stS, pins, stBox, labels, roadLbl, crossLbl, riverBox, spec) {
+    const boxes = [];
+    boxes.push(Object.assign({}, COMPASS_BOX));
+    boxes.push(Object.assign({}, LEGEND_BOX));
+    boxes.push(stationDotBox(stS, !!spec.transfer));
+    if (stBox) boxes.push(Object.assign({}, stBox));
+    pins.forEach((p) => boxes.push(pinBox(p)));
+    labels.forEach((lb) => {
+      boxes.push(Object.assign({}, lb.box));
+      boxes.push(Object.assign({}, lb.chipBox));
+      boxes.push(Object.assign({}, lb.nameBox));
+    });
+    if (roadLbl) boxes.push(Object.assign({}, roadLbl.box));
+    if (crossLbl) boxes.push(Object.assign({}, crossLbl.box));
+    if (riverBox) boxes.push(Object.assign({}, riverBox));
+    return boxes;
+  }
+
+  function sameGroup(a, b) {
+    if (!a || !b) return false;
+    if (a.groupId && b.groupId && a.groupId === b.groupId) return true;
+    return false;
+  }
+
+  function findOverlaps(boxes, gap) {
+    gap = gap == null ? GAP : gap;
+    const hits = [];
+    for (let i = 0; i < boxes.length; i++) {
+      for (let j = i + 1; j < boxes.length; j++) {
+        const a = boxes[i], b = boxes[j];
+        if (sameGroup(a, b)) continue;
+        if (boxesOverlap(a, b, gap)) {
+          hits.push({ a: a, b: b });
+        }
+      }
+    }
+    return hits;
+  }
+
+  function areaIlloHTML(area) {
+    const layout = layoutMap(area);
+    const spec = layout.spec;
+    const { stS, pins, stBox, stM, labels, roadLbl, crossLbl } = layout;
     const lineKey = spec.line === "mrt-along-cross" ? "mrt" : spec.line;
     const lineColor = LINE[lineKey] || LINE.sukhumvit;
     const railBearing = spec.railBearing != null ? spec.railBearing : spec.roadBearing;
     const drawMainRail = spec.line !== "mrt-along-cross";
 
-    const compassBox = { x: 360, y: 8, w: 34, h: 46 };
-    const legendBand = { x: 0, y: 336, w: 400, h: 36 };
-    const reserved = [compassBox, legendBand];
-
-    // station label — compact, never covers a pin
-    const stLines = spec.transfer ? [spec.station.name, spec.transfer.name] : [spec.station.name];
-    const stW = Math.max.apply(null, stLines.map((ln) => textW(ln, FS.station))) + 18;
-    const stH = stLines.length * 14 + 8;
-    pins.forEach((p) => reserved.push({ x: p.x - (PIN_R + 4), y: p.y - (PIN_R + 4), w: (PIN_R + 4) * 2, h: (PIN_R + 4) * 2 }));
-    reserved.push({ x: stS.x - (ST_R + 5), y: stS.y - (ST_R + 5), w: (ST_R + 5) * 2, h: (ST_R + 5) * 2 });
-    const pinN = pins.filter((p) => p.y < stS.y - 10).length;
-    const pinS = pins.filter((p) => p.y > stS.y + 10).length;
-    const pinE = pins.filter((p) => p.x > stS.x + 10).length;
-    const pinW = pins.filter((p) => p.x < stS.x - 10).length;
-    const stLabelCands = [];
-    function addSt(x, y) { stLabelCands.push({ x: x, y: y }); }
-    [20, 28, 38, 50].forEach((d) => {
-      if (pinE === 0) { addSt(stS.x + d, stS.y - stH / 2); addSt(stS.x + d, stS.y + 14); }
-      if (pinW === 0) { addSt(stS.x - d - stW, stS.y - stH / 2); addSt(stS.x - d - stW, stS.y + 14); }
-      if (pinS === 0) addSt(stS.x - stW / 2, stS.y + d);
-      if (pinN === 0) addSt(stS.x - stW / 2, stS.y - d - stH);
-    });
-    [20, 28, 38, 50, 62].forEach((d) => {
-      addSt(stS.x + d, stS.y - stH / 2);
-      addSt(stS.x - d - stW, stS.y - stH / 2);
-      addSt(stS.x - stW / 2, stS.y + d);
-      addSt(stS.x - stW / 2, stS.y - d - stH);
-      addSt(stS.x + d, stS.y + 14);
-      addSt(stS.x - d - stW, stS.y + 14);
-      addSt(stS.x + d, stS.y - 14 - stH);
-      addSt(stS.x - d - stW, stS.y - 14 - stH);
-    });
-    let stBox = null, bestScore = -1e9;
-    function stHitsPin(b) {
-      return pins.some((q) => boxesOverlap(b, { x: q.x - (PIN_R + 3), y: q.y - (PIN_R + 3), w: (PIN_R + 3) * 2, h: (PIN_R + 3) * 2 }, 6))
-        || boxesOverlap(b, { x: stS.x - (ST_R + 3), y: stS.y - (ST_R + 3), w: (ST_R + 3) * 2, h: (ST_R + 3) * 2 }, 4);
-    }
-    stLabelCands.forEach((cand) => {
-      const raw = { x: cand.x, y: cand.y, w: stW, h: stH };
-      const b = clampBox({ x: raw.x, y: raw.y, w: stW, h: stH });
-      if (Math.abs(b.x - raw.x) > 16 || Math.abs(b.y - raw.y) > 16) return;
-      if (b.y + b.h > LABEL_FLOOR) return;
-      if (stHitsPin(b)) return;
-      let score = 0;
-      let hit = false;
-      reserved.forEach((o) => {
-        if (boxesOverlap(b, o, 6)) { hit = true; score -= 120; }
-        else {
-          const gapX = Math.max(0, Math.max(o.x - (b.x + b.w), b.x - (o.x + o.w)));
-          const gapY = Math.max(0, Math.max(o.y - (b.y + b.h), b.y - (o.y + o.h)));
-          score += Math.min(gapX, 40) + Math.min(gapY, 40);
-        }
-      });
-      const cx = b.x + b.w / 2, cy = b.y + b.h / 2;
-      score -= Math.hypot(cx - stS.x, cy - stS.y) * 0.4;
-      if (hit) return;
-      if (score > bestScore) { bestScore = score; stBox = b; }
-    });
-    if (!stBox) {
-      // last resort: park the label in a free corner above the legend
-      const corners = [
-        { x: 10, y: LABEL_FLOOR - stH - 4, w: stW, h: stH },
-        { x: VB.w - stW - 44, y: LABEL_FLOOR - stH - 4, w: stW, h: stH },
-        { x: 10, y: 12, w: stW, h: stH },
-        { x: VB.w - stW - 44, y: 12, w: stW, h: stH }
-      ];
-      stBox = corners.find((b) => !stHitsPin(b) && reserved.every((o) => !boxesOverlap(b, o, 4))) || corners[0];
-    }
-    reserved.push(stBox);
-
-    const labels = placeLabels(stS, pins, reserved, stBox);
-
     const road = roadPath(stS.x, stS.y, spec.roadBearing, 420);
     const rail = roadPath(stS.x, stS.y, railBearing, 420);
-    function findPlain(text, anchors, boxes, size) {
-      const w = textW(text, size) + 8, h = 15;
-      let best = null, bestScore = -1e9;
-      for (let i = 0; i < anchors.length; i++) {
-        const raw = { x: anchors[i].x - w / 2, y: anchors[i].y - 7, w: w, h: h };
-        const b = clampBox({ x: raw.x, y: raw.y, w: w, h: h });
-        if (Math.abs(b.x - raw.x) > 10 || Math.abs(b.y - raw.y) > 10) continue;
-        if (b.y + b.h > LABEL_FLOOR) continue;
-        if (boxes.some((o) => boxesOverlap(b, o, 4))) continue;
-        const score = -Math.hypot(b.x - raw.x, b.y - raw.y);
-        if (score > bestScore) { bestScore = score; best = b; }
-      }
-      return best ? { box: best, text: text } : null;
-    }
-    function roadAnchorsFor(bearing) {
-      const out = [];
-      [60, 90, 120, 150, -60, -90, -120, -150, 180, -180].forEach((t) => {
-        [16, 22, 30, 38].forEach((off) => {
-          [90, -90].forEach((side) => {
-            const along = vec(bearing, t);
-            const perp = vec(bearing + side, off);
-            out.push({ x: stS.x + along.x + perp.x, y: stS.y + along.y + perp.y });
-          });
-        });
-      });
-      return out;
-    }
-
-    const usedBoxes = reserved.concat(labels.map((lb) => lb.box));
-    const roadLbl = findPlain(spec.road, roadAnchorsFor(spec.roadBearing), usedBoxes, FS.road);
-    if (roadLbl) usedBoxes.push(roadLbl.box);
 
     let soi = "";
     for (let t = -180; t <= 180; t += 42) {
@@ -534,16 +846,14 @@
           <path d="M6 14h32c-1.5 5-8 8-16 8s-14.5-3-16-8z" fill="${T}"/>
           <path d="M16 7h14l4 7H12z" fill="#9A4328"/>
         </g>
-        <text x="352" y="232" text-anchor="middle" fill="#4A6578" font-size="${FS.road}" font-weight="600" font-family="${FONT}" transform="rotate(90 352 232)">${esc(spec.river.name)}</text>`;
+        <text data-illo="river" data-illo-name="${esc(spec.river.name)}" x="352" y="232" text-anchor="middle" fill="#4A6578" font-size="${FS.road}" font-weight="600" font-family="${FONT}" transform="rotate(90 352 232)">${esc(spec.river.name)}</text>`;
     }
 
     let cross = "";
     if (spec.cross) {
       const cr = roadPath(stS.x, stS.y, spec.cross.bearing, 420);
       const ccol = LINE[spec.cross.line] || "#D6CFC6";
-      const cLbl = findPlain(spec.cross.name, roadAnchorsFor(spec.cross.bearing), usedBoxes, FS.road);
-      if (cLbl) usedBoxes.push(cLbl.box);
-      const cText = cLbl ? `<text x="${(cLbl.box.x + cLbl.box.w / 2).toFixed(1)}" y="${(cLbl.box.y + 11).toFixed(1)}" text-anchor="middle" fill="#7A736C" font-size="${FS.road}" font-weight="600" font-family="${FONT}">${esc(spec.cross.name)}</text>` : "";
+      const cText = crossLbl ? `<text data-illo="road" data-illo-name="${esc(spec.cross.name)}" x="${(crossLbl.box.x + crossLbl.box.w / 2).toFixed(1)}" y="${(crossLbl.box.y + 12).toFixed(1)}" text-anchor="middle" fill="#7A736C" font-size="${FS.road}" font-weight="600" font-family="${FONT}">${esc(spec.cross.name)}</text>` : "";
       cross = `
         <line x1="${cr.x1}" y1="${cr.y1}" x2="${cr.x2}" y2="${cr.y2}" stroke="#E6E2DC" stroke-width="18" stroke-linecap="butt"/>
         <line x1="${cr.x1}" y1="${cr.y1}" x2="${cr.x2}" y2="${cr.y2}" stroke="${ccol}" stroke-width="4.5" stroke-linecap="butt" opacity="0.95"/>
@@ -561,13 +871,23 @@
       return `<path d="M${sx.toFixed(1)} ${sy.toFixed(1)} Q ${px.toFixed(1)} ${py.toFixed(1)} ${ex.toFixed(1)} ${ey.toFixed(1)}" fill="none" stroke="${T}" stroke-width="1.35" stroke-dasharray="3 3.2" opacity=".7"/>`;
     }).join("");
 
+    const leaders = labels.map((lb) => {
+      if (!lb.leader) return "";
+      const p = lb.pin;
+      const pt = closestPointOnBox(lb.box, p.x, p.y);
+      const d = Math.hypot(pt.x - p.x, pt.y - p.y) || 1;
+      const sx = p.x + (pt.x - p.x) / d * (PIN_R + 1.5);
+      const sy = p.y + (pt.y - p.y) / d * (PIN_R + 1.5);
+      return `<line x1="${sx.toFixed(1)}" y1="${sy.toFixed(1)}" x2="${pt.x.toFixed(1)}" y2="${pt.y.toFixed(1)}" stroke="${T}" stroke-width="1.15" stroke-linecap="round" opacity=".7"/>`;
+    }).join("");
+
     const iconScale = 0.66;
     const iconOff = 12 * iconScale;
     const pinIcons = labels.map((lb) => {
       const p = lb.pin;
       const fill = PAD[p.kind] || PAD.mall;
       const icon = ICONS[p.kind] || ICONS.mall;
-      return `<g>
+      return `<g data-illo="pin" data-illo-name="${esc(p.short || p.name)}">
         <circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${PIN_R}" fill="#fff" stroke="${T}" stroke-width="1.55"/>
         <circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${PIN_R - 2.6}" fill="${fill}"/>
         <g transform="translate(${(p.x - iconOff).toFixed(1)},${(p.y - iconOff).toFixed(1)}) scale(${iconScale})">${icon}</g>
@@ -575,27 +895,29 @@
     }).join("");
     const pinLabs = labels.map((lb) => {
       const p = lb.pin;
-      const lh = 14.5;
+      const lh = lb.lineH;
       const name = lb.lines.map((ln, i) =>
-        `<text x="${(lb.box.x + lb.box.w / 2).toFixed(1)}" y="${(lb.box.y + 12 + i * lh).toFixed(1)}" text-anchor="middle" fill="#3A2F29" font-size="${FS.name}" font-weight="600" font-family="${FONT}">${esc(ln)}</text>`
+        `<text x="${(lb.box.x + lb.box.w / 2).toFixed(1)}" y="${(lb.box.y + 13 + i * lh).toFixed(1)}" text-anchor="middle" fill="#3A2F29" font-size="${FS.name}" font-weight="600" font-family="${FONT}">${esc(ln)}</text>`
       ).join("");
-      const chipY = lb.box.y + lb.lines.length * lh + 2;
-      const chipX = lb.box.x + lb.box.w / 2;
+      const chipY = lb.chipBox.y;
+      const chipX = lb.chipBox.x + lb.chipBox.w / 2;
       const chipBg = p.chip.kind === "ride" ? "#EFE8E0" : "#F3E6DC";
       const chipFg = p.chip.kind === "ride" ? "#6B625A" : T;
-      return `<g>
-        ${name}
-        <rect x="${(chipX - lb.chipW / 2).toFixed(1)}" y="${chipY.toFixed(1)}" width="${lb.chipW.toFixed(1)}" height="${CHIP_H}" rx="7" fill="${chipBg}"/>
-        <text x="${chipX.toFixed(1)}" y="${(chipY + 10.6).toFixed(1)}" text-anchor="middle" fill="${chipFg}" font-size="${FS.chip}" font-weight="600" font-family="${FONT}">${esc(p.chip.text)}</text>
+      return `<g data-illo="label" data-illo-name="${esc(p.short || p.name)}">
+        <g data-illo="label-name" data-illo-name="${esc(p.short || p.name)}">${name}</g>
+        <g data-illo="chip" data-illo-name="${esc(p.short || p.name)}">
+          <rect x="${lb.chipBox.x.toFixed(1)}" y="${chipY.toFixed(1)}" width="${lb.chipBox.w.toFixed(1)}" height="${CHIP_H}" rx="7" fill="${chipBg}"/>
+          <text x="${chipX.toFixed(1)}" y="${(chipY + 10.6).toFixed(1)}" text-anchor="middle" fill="${chipFg}" font-size="${FS.chip}" font-weight="600" font-family="${FONT}">${esc(p.chip.text)}</text>
+        </g>
       </g>`;
     }).join("");
 
-    const stText = stLines.map((ln, i) =>
-      `<text x="${(stBox.x + stBox.w / 2).toFixed(1)}" y="${(stBox.y + 12 + i * 13).toFixed(1)}" text-anchor="middle" fill="#fff" font-size="${FS.station}" font-weight="700" font-family="${FONT}">${esc(ln)}</text>`
+    const stText = stM.stLines.map((ln, i) =>
+      `<text x="${(stBox.x + stBox.w / 2).toFixed(1)}" y="${(stBox.y + 14 + i * 14).toFixed(1)}" text-anchor="middle" fill="#fff" font-size="${FS.station}" font-weight="700" font-family="${FONT}">${esc(ln)}</text>`
     ).join("");
 
     const xferDot = spec.transfer ? `<circle cx="${(stS.x + 5.5).toFixed(1)}" cy="${(stS.y - 6.5).toFixed(1)}" r="5.5" fill="#fff" stroke="${LINE.mrt}" stroke-width="2.1"/>` : "";
-    const roadText = roadLbl ? `<text x="${(roadLbl.box.x + roadLbl.box.w / 2).toFixed(1)}" y="${(roadLbl.box.y + 11).toFixed(1)}" text-anchor="middle" fill="#7A736C" font-size="${FS.road}" font-weight="600" font-family="${FONT}">${esc(spec.road)}</text>` : "";
+    const roadText = roadLbl ? `<text data-illo="road" data-illo-name="${esc(spec.road)}" x="${(roadLbl.box.x + roadLbl.box.w / 2).toFixed(1)}" y="${(roadLbl.box.y + 12).toFixed(1)}" text-anchor="middle" fill="#7A736C" font-size="${FS.road}" font-weight="600" font-family="${FONT}">${esc(spec.road)}</text>` : "";
 
     const svg = `<svg viewBox="0 0 ${VB.w} ${VB.h}" role="img" aria-label="ภาพประกอบแผนที่อย่างง่ายของย่าน${esc(area)} ไม่ใช่แผนที่จริง" xmlns="http://www.w3.org/2000/svg">
       <rect width="${VB.w}" height="${VB.h}" fill="#FBF9F6"/>
@@ -607,19 +929,24 @@
       ${drawMainRail ? `<line x1="${rail.x1}" y1="${rail.y1}" x2="${rail.x2}" y2="${rail.y2}" stroke="${lineColor}" stroke-width="4.5" stroke-linecap="butt"/>` : ""}
       ${roadText}
       ${paths}
-      <circle cx="${stS.x.toFixed(1)}" cy="${stS.y.toFixed(1)}" r="${ST_R}" fill="#fff" stroke="${lineColor}" stroke-width="4.2"/>
-      ${xferDot}
+      ${leaders}
+      <g data-illo="station-dot">
+        <circle cx="${stS.x.toFixed(1)}" cy="${stS.y.toFixed(1)}" r="${ST_R}" fill="#fff" stroke="${lineColor}" stroke-width="4.2"/>
+        ${xferDot}
+      </g>
       ${pinIcons}
-      <rect x="${stBox.x.toFixed(1)}" y="${stBox.y.toFixed(1)}" width="${stBox.w.toFixed(1)}" height="${stBox.h.toFixed(1)}" rx="7" fill="${lineColor}"/>
-      ${stText}
+      <g data-illo="station-label">
+        <rect x="${stBox.x.toFixed(1)}" y="${stBox.y.toFixed(1)}" width="${stBox.w.toFixed(1)}" height="${stBox.h.toFixed(1)}" rx="7" fill="${lineColor}"/>
+        ${stText}
+      </g>
       ${pinLabs}
-      <g transform="translate(376,26)">
+      <g data-illo="compass" transform="translate(376,26)">
         <circle r="11" fill="#fff" stroke="#E0DAD2" stroke-width="1"/>
         <path d="M0 7 L0 -8" stroke="${T}" stroke-width="1.45" stroke-linecap="round"/>
         <path d="M0 -9.5 L2.7 -3.4 L0 -5.2 L-2.7 -3.4 Z" fill="${T}"/>
         <text x="0" y="-12" text-anchor="middle" fill="${T}" font-size="${FS.compass}" font-weight="700" font-family="${FONT}">N</text>
       </g>
-      <g transform="translate(14,358)" font-family="${FONT}">
+      <g data-illo="legend" transform="translate(14,358)" font-family="${FONT}">
         <circle cx="6" cy="0" r="5" fill="#fff" stroke="${lineColor}" stroke-width="2.6"/>
         <text x="14" y="3.8" fill="#5A524C" font-size="${FS.legend}" font-weight="600">สถานี</text>
         <text x="50" y="3.8" fill="#C4BDB6" font-size="${FS.legend}">·</text>
@@ -629,9 +956,47 @@
     </svg>`;
 
     const clean = svg.replace(/<path d="M0 0" \/>/g, "").replace(/<g>\s*<path d="Mundefined[^"]*" \/>\s*/g, "<g>");
-    return `<div class="hood-illo">${clean}</div>`;
+    return `<div class="hood-illo" data-area-illo="${esc(area)}">${clean}</div>`;
   }
+
+  function refreshVisibleIllo() {
+    if (typeof document === "undefined") return;
+    const el = document.querySelector(".hood-illo");
+    const chip = document.querySelector(".hood-chips .chip.on, .hood-chips [aria-pressed='true']");
+    if (!el || !chip) return;
+    const area = (chip.getAttribute("data-area") || chip.textContent || "").trim();
+    if (!area || !ILLO[area]) return;
+    const tmp = document.createElement("div");
+    tmp.innerHTML = areaIlloHTML(area);
+    const next = tmp.firstElementChild;
+    if (next) el.replaceWith(next);
+  }
+
+  function armFontRefresh() {
+    if (typeof document === "undefined") return;
+    const go = function () {
+      global.__areaIlloFontReady = true;
+      refreshVisibleIllo();
+      global.__areaIlloReady = true;
+      document.dispatchEvent(new Event("areaillo-ready"));
+    };
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(go).catch(go);
+      setTimeout(function () {
+        if (!global.__areaIlloReady) go();
+      }, 2500);
+    } else {
+      go();
+    }
+  }
+  armFontRefresh();
 
   global.areaIlloHTML = areaIlloHTML;
   global.AREA_ILLO_SPEC = ILLO;
-})(window);
+  global.areaIlloLayout = layoutMap;
+  global.areaIlloOverlaps = function (area, gap) {
+    const layout = layoutMap(area);
+    return findOverlaps(layout.boxes, gap == null ? GAP : gap);
+  };
+  global.areaIlloRefresh = refreshVisibleIllo;
+})(typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : this);
