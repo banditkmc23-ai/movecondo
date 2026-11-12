@@ -1,6 +1,6 @@
 # MoveCondo (ย้ายคอนโด)
 
-MoveCondo ช่วยหาคอนโดเช่าที่ใช่ในกรุงเทพฯ มีประกาศห้องจริงให้ดู ไม่อนุญาตสัตว์เลี้ยงทุกห้อง ติดต่อทาง LINE Official Account @576yhgtz แล้วบอกรหัสห้อง (เช่น MC-001)
+MoveCondo ช่วยหาคอนโดเช่าที่ใช่ในกรุงเทพฯ มีประกาศห้องจริงให้ดู ไม่อนุญาตสัตว์เลี้ยงทุกห้อง ติดต่อทาง LINE แล้วบอกรหัสห้อง (เช่น MC-001)
 
 - Home: https://banditkmc23-ai.github.io/movecondo/
 - LINE: https://line.me/R/ti/p/%40576yhgtz
@@ -41,4 +41,4 @@ MoveCondo ช่วยหาคอนโดเช่าที่ใช่ใน�
 - เจริญนคร: https://banditkmc23-ai.github.io/movecondo/areas/charoennakhon/
 - บางนา: https://banditkmc23-ai.github.io/movecondo/areas/bangna/
 
-- Contact: LINE @576yhgtz (https://line.me/R/ti/p/%40576yhgtz)
+- Contact: LINE (https://line.me/R/ti/p/%40576yhgtz)

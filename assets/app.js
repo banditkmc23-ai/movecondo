@@ -703,8 +703,7 @@ function artHTML(art, scene){
 }
 function tagsHTML(l){
   return `<div class="tags">
-    ${l.pets ? `<span class="tag pet">รับสัตว์เลี้ยง</span>` : ``}
-    <span class="tag bts">เดิน ${l.walk} นาทีถึง ${l.transit}</span>
+    ${l.transit && l.walk!=null ? `<span class="tag bts">${l.walk} นาทีถึง ${l.transit}</span>` : (l.transit?`<span class="tag bts">${l.transit}</span>`:"")}
     <span class="tag">${l.size} ตร.ม. · ${l.beds}</span>
   </div>`;
 }
@@ -723,22 +722,44 @@ function mktHTML(l, wide){
   </div>`;
 }
 function cardHTML(l, score){
-  const cov = coverSrc(l.id);
-  const covImg = cov ? photoImg(cov, `ห้อง ${l.project} ย่าน${l.area}`, "cover-photo", 800, 450, false) : "";
-  const walk = (l.walk!=null && l.transit) ? `เดินประมาณ ${l.walk} นาทีถึง ${l.transit}` : (l.transit ? l.transit : "ระยะเดินยังไม่ยืนยัน");
-  return `<a class="card" href="${roomHref(l.id)}">
-    <div class="cover">
-      ${covImg}
-      ${score!=null ? `<span class="score-pill"><span>เข้ากัน</span>${score}%</span>` : ``}
-      <span class="badge-vacant">${l.statusLabel||"ว่าง"}</span>
-    </div>
-    <div class="card-body">
-      <div class="meta">${l.area} · ${l.type||l.beds} · ${l.size} ตร.ม.</div>
+  const href = roomHref(l.id);
+  const alt = `ห้อง ${l.project} ย่าน${l.area}`;
+  const files = (PHOTOS[l.id]||[]).slice(0,5);
+  const badge = l.statusLabel||"ว่าง";
+  let media;
+  if(files.length>1){
+    const figs = files.map((p,i)=>{
+      const src = photoUrl(l.id, p.file);
+      const lazy = i===0 ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"';
+      return `<figure class="card-slide"><img src="${src}" alt="${alt} ภาพที่ ${i+1}" width="800" height="450" ${lazy} draggable="false"></figure>`;
+    }).join("");
+    const dots = files.map((_,i)=>`<button type="button" class="card-dot${i===0?" on":""}" aria-label="ภาพที่ ${i+1}" aria-current="${i===0?"true":"false"}"></button>`).join("");
+    media = `<div class="card-slider" data-card-slider data-listing="${l.id}">
+      <a class="card-track" draggable="false" href="${href}" aria-label="ดูห้อง ${l.project}">${figs}</a>
+      ${score!=null?`<span class="score-pill"><span>เข้ากัน</span>${score}%</span>`:""}
+      <span class="badge-vacant">${badge}</span>
+      <div class="card-dots">${dots}</div>
+    </div>`;
+  } else {
+    const src = files[0] ? photoUrl(l.id, files[0].file) : coverSrc(l.id);
+    media = `<div class="cover">
+      ${src?`<a href="${href}"><img class="cover-photo" src="${src}" alt="${alt}" width="800" height="450" loading="lazy" decoding="async"></a>`:""}
+      ${score!=null?`<span class="score-pill"><span>เข้ากัน</span>${score}%</span>`:""}
+      <span class="badge-vacant">${badge}</span>
+    </div>`;
+  }
+  const bits = [l.area, l.type||l.beds, l.size?`${l.size} ตร.ม.`:null];
+  if(l.walk!=null && l.transit) bits.push(`${l.walk} นาทีถึง ${l.transit}`);
+  else if(l.transit) bits.push(l.transit);
+  const meta = bits.filter(Boolean).join(" · ");
+  return `<article class="card">
+    ${media}
+    <a class="card-body" href="${href}">
       <h3>${l.project}</h3>
       <div class="price">${money(l.price)} บาท/เดือน</div>
-      <div class="meta">${walk} · ไม่อนุญาตสัตว์เลี้ยง · รหัส ${l.id}</div>
-    </div>
-  </a>`;
+      <div class="meta">${meta}</div>
+    </a>
+  </article>`;
 }
 function nearbyPlaces(area){
   const block = NEARBY[area];
@@ -872,19 +893,18 @@ function faqHTML(){
   return `<div class="faq-wrap">
         <div class="eyebrow">คำถามที่พบบ่อย</div>
         <h2>ก่อนเริ่มหาห้อง</h2>
-        <details class="faq"><summary>สนใจห้องไหน ติดต่ออย่างไร</summary><p>ทัก LINE Official Account <a href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">${LINE_OA}</a> แล้วบอกรหัสห้อง (เช่น MC-001) เพื่อให้เรารู้ว่าสนใจห้องไหน</p></details>
-        <details class="faq"><summary>เลี้ยงสัตว์ได้หรือไม่</summary><p>ทุกห้องในเว็บนี้ไม่อนุญาตสัตว์เลี้ยง</p></details>
+        <details class="faq"><summary>สนใจห้องไหน ติดต่ออย่างไร</summary><p>ทัก <a href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">LINE</a> แล้วบอกรหัสห้อง (เช่น MC-001) เพื่อให้เรารู้ว่าสนใจห้องไหน</p></details>
         <details class="faq"><summary>ร้านดังในแต่ละย่านเป็นสถานที่จริงหรือไม่</summary><p>ใช่ ร้านอาหาร คาเฟ่ บาร์ และสถานที่ในหมวดร้านดังเป็นสถานที่จริงที่เปิดให้บริการ ระยะทางเป็นค่าประมาณจากสถานีหรือจากโครงการเมื่อมีพิกัด</p></details>
-        <details class="faq"><summary>ติดต่อ MoveCondo ได้อย่างไร</summary><p>ทัก LINE Official Account <a href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">${LINE_OA}</a> ได้เลย</p></details>
+        <details class="faq"><summary>ติดต่อ MoveCondo ได้อย่างไร</summary><p>ทัก <a href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">LINE</a> ได้เลย</p></details>
     </div>`;
 }
 function comingSoonHTML(){
   return `<div class="coming-soon" role="status">
       <div class="eyebrow">ประกาศเช่า</div>
       <h2>กำลังเพิ่มห้องจริงเร็ว ๆ นี้</h2>
-      <p>ขณะนี้เรากำลังเตรียมประกาศคอนโดเช่าจริง ในระหว่างนี้สำรวจย่าน ร้านอาหาร และคาเฟ่ใกล้สถานีได้เลย หรือทัก LINE ${LINE_OA} เพื่อบอกความต้องการ</p>
+      <p>ขณะนี้เรากำลังเตรียมประกาศคอนโดเช่าจริง ในระหว่างนี้สำรวจย่าน ร้านอาหาร และคาเฟ่ใกล้สถานีได้เลย หรือทัก LINE เพื่อบอกความต้องการ</p>
       <div class="hero-actions" style="justify-content:center">
-        <a class="btn btn-md btn-primary" href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">ทัก LINE ${LINE_OA}</a>
+        <a class="btn btn-md btn-primary" href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">ทัก LINE</a>
       </div>
     </div>`;
 }
@@ -896,21 +916,21 @@ function homeView(){
   const cards = LISTINGS.map(l => cardHTML(l)).join("");
   return `
   <div class="hero">
-    <div class="hero-kicker">MoveCondo · ย้ายคอนโด · หาคอนโดเช่าที่ใช่</div>
+    <div class="hero-kicker">MoveCondo · ย้ายคอนโด</div>
     <h1>หาคอนโดเช่าที่ <em>ตรงกับคุณ</em></h1>
-    <p class="lead">ดูคอนโดเช่าใกล้รถไฟฟ้าในกรุงเทพฯ จับคู่จากงบและทำเล แล้วทัก LINE ${LINE_OA} บอกรหัสห้องที่สนใจ</p>
+    <p class="lead">ดูห้องจริงใกล้รถไฟฟ้าในกรุงเทพฯ แล้วเลือกห้องที่ใช่</p>
     <div class="hero-actions">
       <a class="btn btn-lg btn-primary" href="#listings">ดูห้องว่าง</a>
       <a class="btn btn-lg btn-ghost" href="#/match">จับคู่ห้อง</a>
-      <a class="btn btn-lg btn-ghost" href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">ทัก LINE ${LINE_OA}</a>
     </div>
   </div>
   <div class="section" id="listings">
-    <div class="section-head"><div><div class="eyebrow">ประกาศเช่า</div><h2>คอนโดเช่าที่คัดมาให้</h2><p>${LISTINGS.length} ห้อง · ไม่อนุญาตสัตว์เลี้ยงทุกห้อง · ทัก LINE ${LINE_OA} แล้วบอกรหัสห้อง</p></div></div>
+    <div class="section-head"><div><div class="eyebrow">ประกาศเช่า</div><h2>คอนโดเช่าที่คัดมาให้</h2><p>${LISTINGS.length} ห้องจากโครงการใกล้รถไฟฟ้า</p></div></div>
     <div class="grid">${cards}</div>
   </div>
   <div class="band">${hoodHTML()}</div>
-  ${faqHTML()}`;
+  ${faqHTML()}
+  <div class="contact-cta" id="contact"><h2>สนใจห้องไหน ทักมาได้เลย</h2><p>บอกรหัสห้องในแชท เราจะช่วยตอบเรื่องห้องนั้น</p><a class="btn btn-lg btn-line" href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">ทัก LINE</a></div>`;
 }
 
 function matchView(prefs){
@@ -920,7 +940,7 @@ function matchView(prefs){
   <div class="page-hero">
     <a class="back" href="#/">${iconBack} กลับหน้าแรก</a>
     <h1>บอกสิ่งที่คุณต้องการ</h1>
-    <p>บอกทำเล งบ และความต้องการ แล้วดูห้องที่เข้ากัน ทุกห้องไม่อนุญาตสัตว์เลี้ยง</p>
+    <p>บอกทำเล งบ และความต้องการ แล้วดูห้องที่เข้ากัน</p>
   </div>
   <form class="form-card" id="matchForm">
     <div class="fields">
@@ -1005,13 +1025,13 @@ function scoreListing(l, p){
 function resultsView(){
   const p = prefs || { area:"any", budget:35000, size:30, pets:"no", moveIn:"2026-12-01" };
   const rows = LISTINGS.map(l => ({ l, score: scoreListing(l, p) })).sort((a,b)=>b.score-a.score);
-  const petNote = p.pets==="yes" ? `<p class="lead">ทุกห้องในรายการตอนนี้ไม่อนุญาตสัตว์เลี้ยง คะแนนจึงถูกปรับตามนั้น</p>` : "";
+  const petNote = "";
   const cards = rows.map(r => cardHTML(r.l, r.score)).join("");
   return `
   <div class="page-hero">
     <a class="back" href="#/match">${iconBack} ปรับความต้องการ</a>
     <h1>ห้องที่เข้ากันกับคุณ</h1>
-    <p>เรียงตามคะแนนความเหมาะสมจากงบ ทำเล ขนาด และวันที่ย้ายเข้า · ทุกห้องไม่อนุญาตสัตว์เลี้ยง</p>
+    <p>เรียงตามคะแนนความเหมาะสมจากงบ ทำเล ขนาด และวันที่ย้ายเข้า</p>
     ${petNote}
   </div>
   <div class="section" id="listings"><div class="grid">${cards}</div></div>
@@ -1024,6 +1044,10 @@ function resultsView(){
 function setGallery(idx){
   const stage = document.getElementById("galleryStage");
   if(!stage) return;
+  if(stage.querySelector(".gallery-track") && window.MoveCondoCarousel){
+    const api = (stage.closest(".gallery-hero")||stage).__mcCarousel;
+    if(api && api.go) { api.go(idx, true); return; }
+  }
   const photos = listingPhotos(stage.dataset.listing);
   if(!photos.length) return;
   galleryIdx = (idx + photos.length) % photos.length;
@@ -1097,7 +1121,6 @@ function detailView(id){
         <h2 style="font-size:22px;letter-spacing:-.02em;margin-bottom:12px">สิ่งที่ควรรู้ก่อนนัดชม</h2>
         <div class="hl-row">
           <div class="hl"><div class="ic">${iconWalk()}</div><div><h3>เดินถึงรถไฟฟ้า</h3><b>เดิน ${l.walk} นาทีถึง ${l.transit}</b></div></div>
-          <div class="hl"><div class="ic">${iconPaw()}</div><div><h3>สัตว์เลี้ยง</h3><b>${l.pets?"รับสัตว์เลี้ยงขนาดเล็ก":"ไม่อนุญาตสัตว์เลี้ยง"}</b></div></div>
           <div class="hl"><div class="ic">${iconPin()}</div><div><h3>ขนาดและแบบห้อง</h3><b>${l.size} ตร.ม. · ${l.beds}${l.floorRange?" · ช่วงชั้น "+l.floorRange:""}</b></div></div>
           <div class="hl"><div class="ic">${iconCal()}</div><div><h3>ย้ายเข้าได้</h3><b>${thDate(l.available)}</b></div></div>
         </div>
@@ -1135,7 +1158,7 @@ function detailView(id){
       <div class="vacant-row">ยืนยันว่าว่างล่าสุดเมื่อ ${thDate(l.confirmed)}</div>
       ${tagsHTML(l)}
       ${mktHTML(l,true)}
-      <p class="desc">นัดชมผ่านปุ่มด้านล่าง หรือทัก LINE @576yhgtz ไม่มีเบอร์โทรหรือชื่อเจ้าของในหน้านี้</p>
+      <p class="desc">นัดชมผ่านปุ่มด้านล่าง หรือทัก LINE ไม่มีเบอร์โทรหรือชื่อเจ้าของในหน้านี้</p>
       <div class="cta-row">
         <button class="btn btn-lg btn-primary" type="button" data-book="${l.id}">นัดชมห้อง</button>
         <a class="btn btn-lg btn-line" href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">ติดต่อ LINE</a>
@@ -1155,8 +1178,8 @@ function lineModalHTML(id){
   const code = id ? ` แล้วบอกรหัสห้อง <strong>${id}</strong>` : "";
   return `<div class="modal">
     <h3 id="lineTitle">ติดต่อผ่าน LINE</h3>
-    <p>ทัก MoveCondo ได้ที่ LINE Official Account <strong>${LINE_OA}</strong>${code} ปุ่มนี้ไม่ได้ใส่ข้อความล่วงหน้า</p>
-    <a class="btn btn-md btn-primary btn-full" href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">เปิด LINE @576yhgtz</a>
+    <p>ทัก MoveCondo ได้ที่ LINE${code} ปุ่มนี้ไม่ได้ใส่ข้อความล่วงหน้า</p>
+    <a class="btn btn-md btn-primary btn-full" href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">ทัก LINE</a>
     <button class="btn btn-md btn-ghost btn-full" type="button" data-close="line" style="margin-top:8px">ปิด</button>
   </div>`;
 }
@@ -1244,6 +1267,7 @@ function render(){
     home.classList.add("on"); home.innerHTML = homeView(); setNav("home");
   }
   window.scrollTo(0,0);
+  if (window.MoveCondoCarousel) window.MoveCondoCarousel.scan();
 }
 
 
@@ -1323,9 +1347,6 @@ function whyListing(l, needs){
   if (needs.areas && needs.areas.includes(l.area)) r.push("อยู่ในย่าน" + l.area + " ตามที่ขอ");
   if (needs.budget && l.price <= needs.budget) r.push("ค่าเช่า " + money(l.price) + " บาท อยู่ในงบ");
   else if (needs.budget && l.price > needs.budget) r.push("สูงกว่างบเล็กน้อย แต่ยังใกล้เคียง");
-  if (needs.pets && l.pets) r.push("รับสัตว์เลี้ยง");
-  if (needs.pets && !l.pets) r.push("ห้องนี้ไม่อนุญาตสัตว์เลี้ยง");
-  if (needs.pets && !l.pets) r.push("ห้องนี้ไม่อนุญาตสัตว์เลี้ยง");
   if (needs.bts && l.transit && l.walk!=null && l.walk<=5) r.push("เดิน " + l.walk + " นาทีถึง " + l.transit);
   else if (needs.bts && l.transit && l.walk!=null) r.push("ใกล้ " + l.transit + " (" + l.walk + " นาที)");
   else if (needs.bts && l.transit) r.push("ใกล้ " + l.transit);
@@ -1373,7 +1394,7 @@ function recommend(text){
 function greetMsg(){
   return {
     role:"bot",
-    text:"สวัสดีค่ะ ฉันเป็นผู้ช่วยของ MoveCondo (ย้ายคอนโด) บอกงบ ทำเล หรือจำนวนห้องนอนได้เลยค่ะ จะแนะนำจากประกาศจริงให้ ทุกห้องไม่อนุญาตสัตว์เลี้ยง ทัก LINE "+LINE_OA+" แล้วบอกรหัสห้องได้เลย",
+    text:"สวัสดีค่ะ ฉันเป็นผู้ช่วยของ MoveCondo (ย้ายคอนโด) บอกงบ ทำเล หรือจำนวนห้องนอนได้เลยค่ะ จะแนะนำจากประกาศจริงให้ ทัก LINE แล้วบอกรหัสห้องได้เลย",
     chips: AI_STARTERS
   };
 }
@@ -1463,12 +1484,12 @@ function pushAIReply(text){
   if (askingRooms && !needs.cafe){
     const rec = recommend(text);
     if (rec.rows.length){
-      msg = "จากประกาศตอนนี้ ห้องเหล่านี้ใกล้กับที่คุณบอกค่ะ ทุกห้องไม่อนุญาตสัตว์เลี้ยง ทัก LINE " + LINE_OA + " แล้วบอกรหัสห้องได้เลย";
+      msg = "จากประกาศตอนนี้ ห้องเหล่านี้ใกล้กับที่คุณบอกค่ะ ทัก LINE แล้วบอกรหัสห้องได้เลย";
       rec.rows.forEach(row => { /* attach below */ });
       aiMessages.push({ role:"bot", text: msg, rooms: rec.rows, chips: follow });
       renderAI(); return;
     }
-    msg = "ยังจับคู่ห้องจากข้อความนี้ไม่ได้ชัดเจนค่ะ บอกงบ ทำเล หรือทัก LINE " + LINE_OA + " ได้เลย";
+    msg = "ยังจับคู่ห้องจากข้อความนี้ไม่ได้ชัดเจนค่ะ บอกงบ ทำเล หรือทัก LINE ได้เลย";
   } else {
     const areas = needs.areas.length ? needs.areas : (homeArea ? [homeArea] : AREAS.slice(0,3));
     const mentions = [];
@@ -1482,7 +1503,7 @@ function pushAIReply(text){
     if (mentions.length){
       msg = (needs.cafe ? "คาเฟ่และร้านดังใกล้สถานี เช่น " : "ร้านดังใกล้สถานีในย่านที่ถาม เช่น ") + mentions.slice(0,4).join(" · ") + " — ระยะทางเป็นค่าประมาณจากสถานี";
     } else {
-      msg = "สำรวจย่านและร้านดังใกล้สถานีได้จากหน้าย่านค่ะ หรือทัก LINE " + LINE_OA;
+      msg = "สำรวจย่านและร้านดังใกล้สถานีได้จากหน้าย่านค่ะ หรือทัก LINE ได้เลย";
     }
   }
   aiMsgs.push({
@@ -1689,6 +1710,7 @@ document.addEventListener("click", (e)=>{
   let galPointerX = null, galPointerY = null, galTracking = false;
   function galStart(x, y, fromStage){
     if(!fromStage) return;
+    if(document.querySelector("#galleryStage .gallery-track")) return;
     galPointerX = x; galPointerY = y; galTracking = true;
   }
   function galEnd(x, y){
@@ -1735,71 +1757,5 @@ document.addEventListener("keydown", (e)=>{
 });
 
 
-function initStaticGallery(){
-  const stage = document.getElementById("galleryStage");
-  if(!stage) return;
-  const slides = [...stage.querySelectorAll(".gallery-slide")];
-  if(!slides.length) return;
-  const root = document.getElementById("gallery") || stage.parentElement;
-  const thumbs = root ? [...root.querySelectorAll(".thumb[data-gal]")] : [];
-  const count = root ? root.querySelector(".gal-count") : null;
-  let idx = 0;
-  function show(i){
-    idx = (i + slides.length) % slides.length;
-    slides.forEach((s,n)=> s.toggleAttribute("hidden", n!==idx));
-    thumbs.forEach((b,n)=>{
-      const on = n===idx;
-      b.classList.toggle("on", on);
-      b.setAttribute("aria-pressed", on?"true":"false");
-    });
-    if(count) count.textContent = String(idx+1).padStart(2,"0") + " / " + String(slides.length).padStart(2,"0");
-  }
-  if(!document.__mcGalBound){
-    document.addEventListener("click", (e)=>{
-      const t = e.target.closest("[data-gal]");
-      if(!t || !document.getElementById("galleryStage")) return;
-      const v = t.getAttribute("data-gal");
-      if(v==="prev") show(idx-1);
-      else if(v==="next") show(idx+1);
-      else if(/^\d+$/.test(v)) show(parseInt(v,10));
-    });
-    document.__mcGalBound = true;
-  }
-  show(0);
-}
-document.addEventListener("DOMContentLoaded", () => { initStaticGallery(); });
 
 
-function initStaticGallery(){
-  const stage = document.getElementById("galleryStage");
-  if(!stage) return;
-  const slides = [...stage.querySelectorAll(".gallery-slide")];
-  if(!slides.length) return;
-  const root = document.getElementById("gallery") || stage.parentElement;
-  const thumbs = root ? [...root.querySelectorAll(".thumb[data-gal]")] : [];
-  const count = root ? root.querySelector(".gal-count") : null;
-  let idx = 0;
-  function show(i){
-    idx = (i + slides.length) % slides.length;
-    slides.forEach((s,n)=> s.toggleAttribute("hidden", n!==idx));
-    thumbs.forEach((b,n)=>{
-      const on = n===idx;
-      b.classList.toggle("on", on);
-      b.setAttribute("aria-pressed", on?"true":"false");
-    });
-    if(count) count.textContent = String(idx+1).padStart(2,"0") + " / " + String(slides.length).padStart(2,"0");
-  }
-  if(!document.__mcGalBound){
-    document.addEventListener("click", (e)=>{
-      const t = e.target.closest("[data-gal]");
-      if(!t || !document.getElementById("galleryStage")) return;
-      const v = t.getAttribute("data-gal");
-      if(v==="prev") show(idx-1);
-      else if(v==="next") show(idx+1);
-      else if(/^\d+$/.test(v)) show(parseInt(v,10));
-    });
-    document.__mcGalBound = true;
-  }
-  show(0);
-}
-document.addEventListener("DOMContentLoaded", () => { initStaticGallery(); });

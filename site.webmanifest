@@ -1,7 +1,7 @@
 {
   "name": "MoveCondo",
   "short_name": "MoveCondo",
-  "description": "ย้ายคอนโด · หาคอนโดเช่าที่ใช่ในกรุงเทพฯ · ทัก LINE @576yhgtz",
+  "description": "ย้ายคอนโด · หาคอนโดเช่าที่ใช่ในกรุงเทพฯ · ทัก LINE",
   "start_url": "/movecondo/",
   "scope": "/movecondo/",
   "display": "browser",
