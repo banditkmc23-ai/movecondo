@@ -23,7 +23,7 @@
     .eyebrow { font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--ac); font-weight:600; }
     h1 { font-size:20px; margin:0; line-height:1.2; }
     h2 { font-size:16px; margin:0 0 12px; }
-    .btn { font:inherit; border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:999px; min-height:40px; padding:0 16px; cursor:pointer; }
+    .btn { white-space:nowrap; flex-shrink:0; font:inherit; border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:999px; min-height:40px; padding:0 16px; cursor:pointer; }
     .btn-primary { background:var(--ac); border-color:var(--ac); color:#fff; font-weight:600; }
     .seg { display:inline-flex; border:1px solid var(--line); border-radius:999px; padding:3px; gap:2px; }
     .seg button { font:inherit; border:0; background:transparent; border-radius:999px; padding:6px 14px; cursor:pointer; color:var(--mute); }
@@ -40,6 +40,7 @@
     .bar-row:first-of-type { border-top:0; }
     .bar-row .t { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     .bar-row .t small { color:var(--mute); }
+    .bar-row .v small { font-weight:400; }
     .bar-row .v { font-weight:600; font-variant-numeric:tabular-nums; }
     .bar-row .b { grid-column:1 / -1; height:6px; border-radius:6px; background:var(--ac-soft); overflow:hidden; }
     .bar-row .b i { display:block; height:100%; background:var(--ac); border-radius:6px; }
@@ -197,13 +198,14 @@
     if (!items.length) { el.innerHTML = '<p class="muted" style="margin:0">' + empty + "</p>"; return; }
     var max = Math.max.apply(null, items.map(function (x) { return x.v; })) || 1;
     el.innerHTML = items.map(function (x) {
-      return '<div class="bar-row"><div class="t" title="' + esc(x.title || "") + '">' + x.label + '</div><div class="v">' + fmt.format(x.v) + (x.sub ? ' <small class="muted">' + x.sub + "</small>" : "") + '</div><div class="b"><i style="width:' + Math.max(3, Math.round(x.v / max * 100)) + '%"></i></div></div>';
+      return '<div class="bar-row"><div class="t" title="' + esc(x.title || "") + '">' + x.label + '</div><div class="v">' + fmt.format(x.v) + ' <small class="muted">' + (x.unit || "คน") + (x.sub ? " · " + x.sub : "") + "</small>" + '</div><div class="b"><i style="width:' + Math.max(3, Math.round(x.v / max * 100)) + '%"></i></div></div>';
     }).join("");
   }
   function chart(daily) {
     var svg = $("chart"), W = svg.clientWidth || 600, H = svg.clientHeight || 220, pl = 30, pb = 22, pt = 10;
     var n = daily.length, max = Math.max(1, Math.max.apply(null, daily.map(function (d) { return d.pageviews; })));
-    var step = Math.pow(10, Math.floor(Math.log10(max))); var top = Math.ceil(max / step) * step; if (top < 4) top = 4;
+    var raw = max / 4, mag = Math.pow(10, Math.floor(Math.log10(raw))), nice = [1, 2, 5, 10].map(function (m) { return m * mag; }).filter(function (v) { return v >= raw; })[0];
+    var top = Math.max(4, Math.ceil(nice) * 4);
     var bw = (W - pl) / n, out = "";
     for (var g = 0; g <= 4; g++) { var y = pt + (H - pb - pt) * (1 - g / 4); out += '<line x1="' + pl + '" x2="' + W + '" y1="' + y + '" y2="' + y + '" stroke="#ece6e2"/><text x="' + (pl - 6) + '" y="' + (y + 4) + '" font-size="11" text-anchor="end" fill="#6b625d">' + Math.round(top * g / 4) + "</text>"; }
     var every = n > 14 ? Math.ceil(n / 8) : 1;
@@ -230,7 +232,7 @@
     $("updated").textContent = "อัปเดต " + new Date().toLocaleString("th-TH", { timeZone: "Asia/Bangkok", dateStyle: "medium", timeStyle: "short" }) + " (เวลาไทย)";
     chart(d.daily);
     rows($("pages"), d.top_pages.slice(0, 12).map(function (p) { return { label: esc(pageName(p.path)), title: p.path, v: p.visitors, sub: p.pageviews + " ครั้ง" }; }), "ยังไม่มีข้อมูล");
-    rows($("refs"), d.referrers.slice(0, 10).map(function (r) { return { label: refName(r.host), v: r.visitors, sub: "คน" }; }), "ยังไม่มีข้อมูล");
+    rows($("refs"), d.referrers.slice(0, 10).map(function (r) { return { label: refName(r.host), v: r.visitors, }; }), "ยังไม่มีข้อมูล");
     var m = d.devices.mobile || 0, k = d.devices.desktop || 0, tot = m + k;
     $("dev-split").innerHTML = tot ? '<i style="width:' + (m / tot * 100) + '%;background:#B9532F"></i><i style="width:' + (k / tot * 100) + '%;background:#f0d5c9"></i>' : "";
     $("devs").innerHTML = '<div class="legend" style="margin:0"><span><i style="background:#B9532F"></i>มือถือ ' + fmt.format(m) + (tot ? " (" + Math.round(m / tot * 100) + "%)" : "") + '</span><span><i style="background:#f0d5c9"></i>คอมพิวเตอร์ ' + fmt.format(k) + (tot ? " (" + Math.round(k / tot * 100) + "%)" : "") + "</span></div>";
@@ -240,7 +242,7 @@
       $("ai-pill").textContent = "เปิดใช้แล้ว";
       var kinds = { ai_bot: "AI", search_bot: "บอทค้นหา", other_bot: "บอทอื่น" };
       var el = $("ai-body"); el.innerHTML = '<div id="ai-rows"></div>';
-      rows($("ai-rows"), d.bots_by_agent.map(function (b) { return { label: esc(b.agent) + " <small>" + (kinds[b.kind] || b.kind) + "</small>", v: b.hits, sub: "ครั้ง" }; }), "ยังไม่มี AI เข้ามาในช่วงนี้");
+      rows($("ai-rows"), d.bots_by_agent.map(function (b) { return { label: esc(b.agent) + " <small>" + (kinds[b.kind] || b.kind) + "</small>", v: b.hits, unit: "ครั้ง" }; }), "ยังไม่มี AI เข้ามาในช่วงนี้");
     }
   }
   function load() {
