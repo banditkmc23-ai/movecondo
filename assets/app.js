@@ -23,7 +23,6 @@ const AREA_SLUGS = {
   "เจริญนคร": "charoennakhon",
   "บางนา": "bangna"
 };
-const LINE_OA = "@576yhgtz";
 const LINE_HREF = "https://line.me/R/ti/p/%40576yhgtz";
 
 const iconBack = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-8 7 8 7"/></svg>`;
