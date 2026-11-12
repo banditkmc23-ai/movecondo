@@ -387,8 +387,8 @@
     rows($("i-condos"), Object.keys(condos).map(function (k) { var c = condos[k]; return { label: esc(k) + " <small>" + esc(c.area) + " · " + Object.keys(c.n).length + " ห้อง</small>", v: c.people, sub: c.views + " ครั้ง" }; })
       .sort(function (a, b) { return b.v - a.v; }).slice(0, 10), "ยังไม่มีข้อมูล");
 
-    var bands = [["ต่ำกว่า 10,000", 0, 10000], ["10,000–15,000", 10000, 15000], ["15,000–20,000", 15000, 20000], ["20,000–30,000", 20000, 30000], ["30,000 ขึ้นไป", 30000, 1e9]];
-    var bv = bands.map(function (bd) { var p = 0, v = 0; rv.forEach(function (r) { var pr = rooms[r.room].price; if (pr >= bd[1] && pr < bd[2]) { p += r.visitors; v += r.views; } }); return { label: bd[0] + " บ.", v: p, sub: v + " ครั้ง", keep: 1 }; });
+    var bands = [["ต่ำกว่า 10,000 บ.", 0, 10000], ["10,000–15,000 บ.", 10000, 15000], ["15,000–20,000 บ.", 15000, 20000], ["20,000–30,000 บ.", 20000, 30000], ["30,000 บ. ขึ้นไป", 30000, 1e9]];
+    var bv = bands.map(function (bd) { var p = 0, v = 0; rv.forEach(function (r) { var pr = rooms[r.room].price; if (pr >= bd[1] && pr < bd[2]) { p += r.visitors; v += r.views; } }); return { label: bd[0], v: p, sub: v + " ครั้ง", keep: 1 }; });
     rows($("i-prices"), rv.length ? bv : [], "ยังไม่มีคนเปิดดูห้อง");
 
     rows($("i-search"), (x.search_terms || []).slice(0, 12).map(function (s) { return { label: "“" + esc(s.q) + "”", v: s.count, unit: "ครั้ง", sub: s.people + " คน · เจอ " + s.results + " ห้อง" }; }), "ยังไม่มีคนค้นหา");

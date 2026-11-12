@@ -77,7 +77,7 @@ begin
     select pv_id, session_id, path, sum((props->>'ms')::numeric) ms from e where name = 'engage' and pv_id is not null group by 1, 2, 3
   ), sess as (
     select s.sid, coalesce(sum(eng.ms), 0) ms, max(s.pages) pages from (
-      select coalesce(session_id, visitor_hash || day::text) sid, count(*) pages from v group by 1
+      select session_id sid, count(*) pages from v where session_id is not null group by 1
     ) s left join eng on eng.session_id = s.sid group by s.sid
   ), srch as (
     select props->>'q' q, (props->>'n')::int n, visitor_hash, day from e where name = 'search'
