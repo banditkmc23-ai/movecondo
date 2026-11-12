@@ -1,0 +1,77 @@
+{
+  "area": "อ่อนนุช",
+  "slug": "on-nut",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.05,
+  "center": {
+    "lat": 13.70561111,
+    "lng": 100.60108333
+  },
+  "stations": [
+    {
+      "id": "bts-on-nut",
+      "name": "BTS อ่อนนุช",
+      "name_en": "On Nut BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.70561111,
+      "lng": 100.60108333,
+      "source": "https://en.wikipedia.org/wiki/On_Nut_BTS_station",
+      "primary": true
+    }
+  ],
+  "places": [
+    {
+      "name": "Lotus's อ่อนนุช",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "mode": "เดิน",
+      "minutes": 3,
+      "mapsQuery": "Lotus's On Nut Bangkok",
+      "lat": 13.7050537,
+      "lng": 100.6004124
+    },
+    {
+      "name": "ตลาดอ่อนนุช",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "mode": "เดิน",
+      "minutes": 10,
+      "mapsQuery": "ตลาดอ่อนนุช On Nut Market Bangkok",
+      "lat": 13.7101783,
+      "lng": 100.6006696
+    },
+    {
+      "name": "THE WOOD LAND",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "mode": "เดิน",
+      "minutes": 8,
+      "mapsQuery": "THE WOOD LAND cafe Sukhumvit 52 On Nut Bangkok",
+      "gap": true
+    },
+    {
+      "name": "THE NEIGHBORWOOD",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "mode": "เดิน",
+      "minutes": 10,
+      "mapsQuery": "THE NEIGHBORWOOD T77 On Nut Bangkok",
+      "gap": true
+    },
+    {
+      "name": "สวนหลวง ร.9",
+      "category": "สวน",
+      "categoryKey": "park",
+      "mode": "รถ",
+      "minutes": 20,
+      "mapsQuery": "สวนหลวง ร.9 Suan Luang Rama IX Park Bangkok",
+      "lat": 13.6848125,
+      "lng": 100.663319
+    }
+  ],
+  "condo": null,
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "แผนที่แสดงสถานีและร้านดังใกล้เคียง เมื่อมีประกาศห้องจริง จะปักหมุดคอนโดสีน้ำตาลแดงได้จากข้อมูลห้อง"
+}

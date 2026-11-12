@@ -1,0 +1,83 @@
+{
+  "area": "บางนา",
+  "slug": "bangna",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.05,
+  "center": {
+    "lat": 13.6682,
+    "lng": 100.6047
+  },
+  "stations": [
+    {
+      "id": "bts-bang-na",
+      "name": "BTS บางนา",
+      "name_en": "Bang Na BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.6682,
+      "lng": 100.6047,
+      "source": "https://en.wikipedia.org/wiki/Bang_Na_BTS_station",
+      "primary": true
+    }
+  ],
+  "places": [
+    {
+      "name": "เซ็นทรัล บางนา",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "mode": "เดิน",
+      "minutes": 8,
+      "mapsQuery": "Central Bangna Bangkok",
+      "lat": 13.6695356,
+      "lng": 100.6345841
+    },
+    {
+      "name": "BITEC",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "mode": "เดิน",
+      "minutes": 5,
+      "mapsQuery": "BITEC Bang Na Bangkok",
+      "lat": 13.669801,
+      "lng": 100.6085436
+    },
+    {
+      "name": "SAMA Garden",
+      "category": "สวน",
+      "categoryKey": "park",
+      "mode": "เดิน",
+      "minutes": 8,
+      "mapsQuery": "SAMA Garden BITEC Bang Na Bangkok",
+      "approx": true,
+      "approx_note": "ตำแหน่งโดยประมาณ — ที่ไบเทค บางนา",
+      "lat": 13.669801,
+      "lng": 100.6085436
+    },
+    {
+      "name": "เมกาบางนา",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "mode": "รถ",
+      "minutes": 15,
+      "mapsQuery": "Mega Bangna Bangkok",
+      "lat": 13.6547397,
+      "lng": 100.6715645
+    },
+    {
+      "name": "After You Dessert Cafe Megabangna",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "mode": "รถ",
+      "minutes": 15,
+      "mapsQuery": "After You Mega Bangna Bangkok",
+      "approx": true,
+      "approx_note": "ตำแหน่งโดยประมาณ — ในเมกาบางนา",
+      "lat": 13.6547397,
+      "lng": 100.6715645
+    }
+  ],
+  "condo": null,
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "แผนที่แสดงสถานีและร้านดังใกล้เคียง เมื่อมีประกาศห้องจริง จะปักหมุดคอนโดสีน้ำตาลแดงได้จากข้อมูลห้อง"
+}

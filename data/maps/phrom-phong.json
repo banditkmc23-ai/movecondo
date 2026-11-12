@@ -1,0 +1,81 @@
+{
+  "area": "พร้อมพงษ์",
+  "slug": "phrom-phong",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 15.6,
+  "center": {
+    "lat": 13.73043889,
+    "lng": 100.56973056
+  },
+  "stations": [
+    {
+      "id": "bts-phrom-phong",
+      "name": "BTS พร้อมพงษ์",
+      "name_en": "Phrom Phong BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.73043889,
+      "lng": 100.56973056,
+      "source": "https://en.wikipedia.org/wiki/Phrom_Phong_BTS_station",
+      "primary": true
+    }
+  ],
+  "places": [
+    {
+      "name": "EmQuartier",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "mode": "เดิน",
+      "minutes": 3,
+      "mapsQuery": "EmQuartier Phrom Phong Bangkok",
+      "lat": 13.7319633,
+      "lng": 100.5696359
+    },
+    {
+      "name": "EmSphere",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "mode": "เดิน",
+      "minutes": 5,
+      "mapsQuery": "EmSphere Phrom Phong Bangkok",
+      "lat": 13.7325129,
+      "lng": 100.5660757
+    },
+    {
+      "name": "Audrey Cafe EmQuartier",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "mode": "เดิน",
+      "minutes": 4,
+      "mapsQuery": "Audrey Cafe EmQuartier Bangkok",
+      "approx": true,
+      "approx_note": "ตำแหน่งโดยประมาณ — ในเอ็มควอเทียร์",
+      "lat": 13.7319633,
+      "lng": 100.5696359
+    },
+    {
+      "name": "สวนเบญจสิริ",
+      "category": "สวน",
+      "categoryKey": "park",
+      "mode": "เดิน",
+      "minutes": 5,
+      "mapsQuery": "Benjasiri Park พร้อมพงษ์",
+      "lat": 13.7307028,
+      "lng": 100.5675148
+    },
+    {
+      "name": "Err Urban Rustic Thai",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "mode": "เดิน",
+      "minutes": 8,
+      "mapsQuery": "Err Urban Rustic Thai Sukhumvit 32 Bangkok",
+      "lat": 13.7249563,
+      "lng": 100.5794908
+    }
+  ],
+  "condo": null,
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "แผนที่แสดงสถานีและร้านดังใกล้เคียง เมื่อมีประกาศห้องจริง จะปักหมุดคอนโดสีน้ำตาลแดงได้จากข้อมูลห้อง"
+}

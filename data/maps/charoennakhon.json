@@ -1,0 +1,83 @@
+{
+  "area": "เจริญนคร",
+  "slug": "charoennakhon",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 15.6,
+  "center": {
+    "lat": 13.72083333,
+    "lng": 100.50277778
+  },
+  "stations": [
+    {
+      "id": "bts-krung-thon-buri",
+      "name": "BTS กรุงธนบุรี",
+      "name_en": "Krung Thon Buri BTS",
+      "system": "BTS",
+      "line_th": "สายสีลม / สายสีทอง",
+      "lat": 13.72083333,
+      "lng": 100.50277778,
+      "source": "https://en.wikipedia.org/wiki/Krung_Thon_Buri_BTS_station",
+      "primary": true
+    }
+  ],
+  "places": [
+    {
+      "name": "ICONSIAM",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "mode": "รถไฟฟ้า",
+      "minutes": 5,
+      "mapsQuery": "ICONSIAM Bangkok",
+      "lat": 13.7268227,
+      "lng": 100.510294
+    },
+    {
+      "name": "SookSiam",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "mode": "รถไฟฟ้า",
+      "minutes": 5,
+      "mapsQuery": "SookSiam ICONSIAM Bangkok",
+      "lat": 13.7262661,
+      "lng": 100.5100157
+    },
+    {
+      "name": "After You Dessert Cafe ICONSIAM",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "mode": "รถไฟฟ้า",
+      "minutes": 5,
+      "mapsQuery": "After You ICONSIAM Bangkok",
+      "approx": true,
+      "approx_note": "ตำแหน่งโดยประมาณ — ในไอคอนสยาม",
+      "lat": 13.7268227,
+      "lng": 100.510294
+    },
+    {
+      "name": "Nara Thai Cuisine ICONSIAM",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "mode": "รถไฟฟ้า",
+      "minutes": 5,
+      "mapsQuery": "Nara Thai Cuisine ICONSIAM Bangkok",
+      "approx": true,
+      "approx_note": "ตำแหน่งโดยประมาณ — ในไอคอนสยาม",
+      "lat": 13.7268227,
+      "lng": 100.510294
+    },
+    {
+      "name": "Lhong 1919",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "mode": "รถ",
+      "minutes": 10,
+      "mapsQuery": "Lhong 1919 Bangkok",
+      "lat": 13.734335,
+      "lng": 100.5075824
+    }
+  ],
+  "condo": null,
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "แผนที่แสดงสถานีและร้านดังใกล้เคียง เมื่อมีประกาศห้องจริง จะปักหมุดคอนโดสีน้ำตาลแดงได้จากข้อมูลห้อง"
+}

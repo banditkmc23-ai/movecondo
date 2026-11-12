@@ -1,0 +1,69 @@
+{
+  "area": "พระโขนง",
+  "slug": "phrakhanong",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.3,
+  "center": {
+    "lat": 13.71519444,
+    "lng": 100.59128333
+  },
+  "stations": [
+    {
+      "id": "bts-phra-khanong",
+      "name": "BTS พระโขนง",
+      "name_en": "Phra Khanong BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.71519444,
+      "lng": 100.59128333,
+      "source": "https://en.wikipedia.org/wiki/Phra_Khanong_BTS_station",
+      "primary": true
+    }
+  ],
+  "places": [
+    {
+      "name": "W District",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "mode": "เดิน",
+      "minutes": 5,
+      "mapsQuery": "W District Phra Khanong Bangkok",
+      "lat": 13.7147246,
+      "lng": 100.5935413
+    },
+    {
+      "name": "Hands and Heart Coffee Roasters",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "mode": "เดิน",
+      "minutes": 10,
+      "mapsQuery": "Hands and Heart Coffee Roasters Sukhumvit 67 Bangkok",
+      "gap": true
+    },
+    {
+      "name": "Épicurien French Bakery",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "mode": "เดิน",
+      "minutes": 5,
+      "mapsQuery": "Epicurien French Bakery W District Phra Khanong",
+      "approx": true,
+      "approx_note": "ตำแหน่งโดยประมาณ — ใน W District",
+      "lat": 13.7147246,
+      "lng": 100.5935413
+    },
+    {
+      "name": "Shakariki432",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "mode": "เดิน",
+      "minutes": 8,
+      "mapsQuery": "Shakariki432 Phra Khanong Bangkok",
+      "gap": true
+    }
+  ],
+  "condo": null,
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "แผนที่แสดงสถานีและร้านดังใกล้เคียง เมื่อมีประกาศห้องจริง จะปักหมุดคอนโดสีน้ำตาลแดงได้จากข้อมูลห้อง"
+}

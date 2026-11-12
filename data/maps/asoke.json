@@ -1,0 +1,92 @@
+{
+  "area": "อโศก",
+  "slug": "asoke",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.3,
+  "center": {
+    "lat": 13.73703333,
+    "lng": 100.56041944
+  },
+  "stations": [
+    {
+      "id": "bts-asok",
+      "name": "BTS อโศก",
+      "name_en": "Asok BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.73703333,
+      "lng": 100.56041944,
+      "source": "https://en.wikipedia.org/wiki/Asok_BTS_station",
+      "primary": true
+    },
+    {
+      "id": "mrt-sukhumvit",
+      "name": "MRT สุขุมวิท",
+      "name_en": "Sukhumvit MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.738524,
+      "lng": 100.561446,
+      "source": "https://en.wikipedia.org/wiki/Sukhumvit_MRT_station",
+      "primary": false
+    }
+  ],
+  "places": [
+    {
+      "name": "Terminal 21 Asok",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "mode": "เดิน",
+      "minutes": 2,
+      "mapsQuery": "Terminal 21 Asok Bangkok",
+      "lat": 13.7379057,
+      "lng": 100.5593354
+    },
+    {
+      "name": "After You Dessert Cafe Terminal 21 Asok",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "mode": "เดิน",
+      "minutes": 3,
+      "mapsQuery": "After You Terminal 21 Asok Bangkok",
+      "approx": true,
+      "approx_note": "ตำแหน่งโดยประมาณ — ในเทอร์มินอล 21 อโศก",
+      "lat": 13.7379057,
+      "lng": 100.5593354
+    },
+    {
+      "name": "Cabbages & Condoms",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "mode": "เดิน",
+      "minutes": 8,
+      "mapsQuery": "Cabbages and Condoms Sukhumvit 12 Bangkok",
+      "lat": 13.7364794,
+      "lng": 100.557891
+    },
+    {
+      "name": "Bartels Asok",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "mode": "เดิน",
+      "minutes": 8,
+      "mapsQuery": "Bartels Asok Bangkok",
+      "lat": 13.7384148,
+      "lng": 100.5590143
+    },
+    {
+      "name": "สวนเบญจกิติ",
+      "category": "สวน",
+      "categoryKey": "park",
+      "mode": "รถไฟฟ้า",
+      "minutes": 5,
+      "mapsQuery": "Benjakitti Forest Park Bangkok",
+      "lat": 13.7290819,
+      "lng": 100.5547642
+    }
+  ],
+  "condo": null,
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "แผนที่แสดงสถานีและร้านดังใกล้เคียง เมื่อมีประกาศห้องจริง จะปักหมุดคอนโดสีน้ำตาลแดงได้จากข้อมูลห้อง"
+}

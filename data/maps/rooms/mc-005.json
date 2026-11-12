@@ -1,0 +1,131 @@
+{
+  "area": "ทองหล่อ",
+  "slug": "thonglor",
+  "room": "MC-005",
+  "project": "Chapter Thonglor 25",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.743063,
+    "lng": 100.583812
+  },
+  "stations": [],
+  "places": [
+    {
+      "name": "TUBA Bar & Restaurant",
+      "category": "บาร์",
+      "categoryKey": "bar",
+      "lat": 13.738417,
+      "lng": 100.588487,
+      "distanceM": 722,
+      "walkMinEst": 11.7,
+      "rating": 4.6,
+      "reviewCount": 2634,
+      "mapsQuery": "13.738417,100.588487",
+      "sourceUrl": "https://wanderlog.com/place/details/375314/tuba-bar-restaurant"
+    },
+    {
+      "name": "The Commons Thonglor",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "lat": 13.735129,
+      "lng": 100.58223,
+      "distanceM": 899,
+      "walkMinEst": 14.6,
+      "rating": 4.5,
+      "reviewCount": 5005,
+      "mapsQuery": "13.735129,100.58223",
+      "sourceUrl": "https://wanderlog.com/place/details/124674/the-commons-thonglor"
+    },
+    {
+      "name": "ROAST coffee & eatery (The Commons)",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "lat": 13.735054,
+      "lng": 100.582268,
+      "distanceM": 906,
+      "walkMinEst": 14.7,
+      "rating": 4.5,
+      "reviewCount": 2839,
+      "mapsQuery": "13.735054,100.582268",
+      "sourceUrl": "https://wanderlog.com/place/details/396806/roast-coffee--eatery"
+    },
+    {
+      "name": "After You Dessert Cafe - Thonglor 13",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "lat": 13.733703,
+      "lng": 100.581364,
+      "distanceM": 1074,
+      "walkMinEst": 17.5,
+      "rating": 4.4,
+      "reviewCount": 1396,
+      "mapsQuery": "13.733703,100.581364",
+      "sourceUrl": "https://wanderlog.com/place/details/410345/after-you-dessert-cafe-thonglor-13"
+    },
+    {
+      "name": "CQK Hotpot Ekkamai-Thonglor",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.732227,
+      "lng": 100.586819,
+      "distanceM": 1248,
+      "walkMinEst": 20.3,
+      "rating": 4.9,
+      "reviewCount": 5313,
+      "mapsQuery": "13.732227,100.586819",
+      "sourceUrl": "https://wanderlog.com/place/details/11373425/cqk-hotpot-ekkamai-thonglor-branch"
+    },
+    {
+      "name": "Let's Relax Onsen and Spa (Thonglor)",
+      "category": "สปา",
+      "categoryKey": "spa",
+      "lat": 13.73183,
+      "lng": 100.582161,
+      "distanceM": 1262,
+      "walkMinEst": 20.5,
+      "rating": 4.5,
+      "reviewCount": 2134,
+      "mapsQuery": "13.73183,100.582161",
+      "sourceUrl": "https://wanderlog.com/place/details/409215/lets-relax-onsen-and-spa-thonglor"
+    },
+    {
+      "name": "DONKI Mall Thonglor",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "lat": 13.730913,
+      "lng": 100.585662,
+      "distanceM": 1366,
+      "walkMinEst": 22.2,
+      "rating": 4.2,
+      "reviewCount": 7047,
+      "mapsQuery": "13.730913,100.585662",
+      "sourceUrl": "https://wanderlog.com/place/details/459342/donki-mall-thonglor"
+    },
+    {
+      "name": "Shakariki432 Ekkamai",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.730555,
+      "lng": 100.58648,
+      "distanceM": 1420,
+      "walkMinEst": 23.1,
+      "rating": 4.8,
+      "reviewCount": 1457,
+      "mapsQuery": "13.730555,100.58648",
+      "sourceUrl": "https://wanderlog.com/place/details/2159979/shakariki432-ekkamai"
+    }
+  ],
+  "condo": {
+    "name": "Chapter Thonglor 25",
+    "lat": 13.743063,
+    "lng": 100.583812,
+    "approx": true
+  },
+  "mapMode": "condo-approx",
+  "nearbySource": "nearby-real.json",
+  "nearbyHook": "Places from nearby-real.json keyed by projectName. The Teak Sukhumvit 39 uses area fallback until its project entry arrives.",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "ตำแหน่งโดยประมาณ"
+}

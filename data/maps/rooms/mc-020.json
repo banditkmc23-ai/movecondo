@@ -1,0 +1,143 @@
+{
+  "area": "อโศก",
+  "slug": "asoke",
+  "room": "MC-020",
+  "project": "The Room Sukhumvit 21",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.7438055,
+    "lng": 100.5613178
+  },
+  "stations": [
+    {
+      "id": "mrt-phetchaburi",
+      "name": "MRT เพชรบุรี",
+      "name_en": "Phetchaburi MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.7491,
+      "lng": 100.563,
+      "source": "https://en.wikipedia.org/wiki/Phetchaburi_MRT_station",
+      "primary": true
+    }
+  ],
+  "places": [
+    {
+      "name": "Amaranth Spa & Massage",
+      "category": "สปา",
+      "categoryKey": "spa",
+      "lat": 13.739293,
+      "lng": 100.559562,
+      "distanceM": 536,
+      "walkMinEst": 8.7,
+      "rating": 4.7,
+      "reviewCount": 1053,
+      "mapsQuery": "13.739293,100.559562",
+      "sourceUrl": "https://wanderlog.com/place/details/4206529/amaranth-spa-massage"
+    },
+    {
+      "name": "Terminal 21 Asok",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "lat": 13.737964,
+      "lng": 100.560406,
+      "distanceM": 657,
+      "walkMinEst": 10.7,
+      "rating": 4.6,
+      "reviewCount": 21550,
+      "mapsQuery": "13.737964,100.560406",
+      "sourceUrl": "https://wanderlog.com/place/details/1055596/terminal-21-asok"
+    },
+    {
+      "name": "Oasis Spa (Bangkok, Sukhumvit 31)",
+      "category": "สปา",
+      "categoryKey": "spa",
+      "lat": 13.740833,
+      "lng": 100.56823,
+      "distanceM": 816,
+      "walkMinEst": 13.3,
+      "rating": 4.7,
+      "reviewCount": 2368,
+      "mapsQuery": "13.740833,100.56823",
+      "sourceUrl": "https://wanderlog.com/place/details/400028/oasis-spa-bangkok-sukhumvit-31"
+    },
+    {
+      "name": "Sri Trat Restaurant and Bar",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.736807,
+      "lng": 100.568074,
+      "distanceM": 1067,
+      "walkMinEst": 17.3,
+      "rating": 4.5,
+      "reviewCount": 2699,
+      "mapsQuery": "13.736807,100.568074",
+      "sourceUrl": "https://wanderlog.com/place/details/26847/sri-trat-restaurant-and-bar"
+    },
+    {
+      "name": "Sushi Masato",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.734487,
+      "lng": 100.566112,
+      "distanceM": 1158,
+      "walkMinEst": 18.8,
+      "rating": 4.8,
+      "reviewCount": 830,
+      "mapsQuery": "13.734487,100.566112",
+      "sourceUrl": "https://wanderlog.com/place/details/1074537/sushi-masato"
+    },
+    {
+      "name": "THE COFFEE CLUB - Maitria Hotel Sukhumvit",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "lat": 13.732742,
+      "lng": 100.562593,
+      "distanceM": 1238,
+      "walkMinEst": 20.1,
+      "rating": 4.7,
+      "reviewCount": 2247,
+      "mapsQuery": "13.732742,100.562593",
+      "sourceUrl": "https://wanderlog.com/place/details/2611995/the-coffee-club-maitria-hotel-sukhumvit"
+    },
+    {
+      "name": "A KEEN HOUSE - Emsphere",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "lat": 13.732532,
+      "lng": 100.566328,
+      "distanceM": 1365,
+      "walkMinEst": 22.2,
+      "rating": 4.7,
+      "reviewCount": 799,
+      "mapsQuery": "13.732532,100.566328",
+      "sourceUrl": "https://wanderlog.com/place/details/8700083/a-keen-house-emsphere"
+    },
+    {
+      "name": "EmSphere",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "lat": 13.732235,
+      "lng": 100.566295,
+      "distanceM": 1394,
+      "walkMinEst": 22.7,
+      "rating": 4.6,
+      "reviewCount": 6928,
+      "mapsQuery": "13.732235,100.566295",
+      "sourceUrl": "https://wanderlog.com/place/details/8428538/emsphere"
+    }
+  ],
+  "condo": {
+    "name": "The Room Sukhumvit 21",
+    "lat": 13.7438055,
+    "lng": 100.5613178,
+    "approx": false
+  },
+  "mapMode": "condo",
+  "nearbySource": "nearby-real.json",
+  "nearbyHook": "Places from nearby-real.json keyed by projectName. The Teak Sukhumvit 39 uses area fallback until its project entry arrives.",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "สถานีรถไฟฟ้าและร้านดังใกล้เคียงในรัศมีประมาณ 1.5 กม."
+}

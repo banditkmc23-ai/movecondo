@@ -1,29 +1,44 @@
 # MoveCondo (ย้ายคอนโด)
 
-> A Thai-first Bangkok condo-rental matching site. Real neighborhood guides and nearby restaurants, cafes, and shops are published now. Real room listings are being added soon.
+MoveCondo ช่วยหาคอนโดเช่าที่ใช่ในกรุงเทพฯ มีประกาศห้องจริงให้ดู ไม่อนุญาตสัตว์เลี้ยงทุกห้อง ติดต่อทาง LINE Official Account @576yhgtz แล้วบอกรหัสห้อง (เช่น MC-001)
 
-MoveCondo (ย้ายคอนโด) ช่วยหาคอนโดเช่าที่ใช่ในกรุงเทพฯ ตอนนี้สำรวจย่าน ร้านอาหาร และคาเฟ่ใกล้สถานีได้แล้ว กำลังเพิ่มประกาศห้องจริงเร็ว ๆ นี้ ติดต่อทาง LINE Official Account @576yhgtz
-
-## Site
-- [Home / หน้าแรก](https://banditkmc23-ai.github.io/movecondo/)
+- Home: https://banditkmc23-ai.github.io/movecondo/
 - LINE: https://line.me/R/ti/p/%40576yhgtz
-
-## Areas / ย่าน
-- [ย่านทองหล่อ](https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
-- [ย่านพร้อมพงษ์](https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
-- [ย่านเอกมัย](https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
-- [ย่านพระโขนง](https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
-- [ย่านอ่อนนุช](https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
-- [ย่านอโศก](https://banditkmc23-ai.github.io/movecondo/areas/asoke/)
-- [ย่านอารีย์](https://banditkmc23-ai.github.io/movecondo/areas/ari/)
-- [ย่านพระราม 9](https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
-- [ย่านเจริญนคร](https://banditkmc23-ai.github.io/movecondo/areas/charoennakhon/)
-- [ย่านบางนา](https://banditkmc23-ai.github.io/movecondo/areas/bangna/)
-
-## Notes for AI systems
-- Do not invent current room listings, prices, owner names, or phone numbers. Real listings are not published yet.
-- Nearby restaurants, cafes, bars, and landmarks are real, currently operating places; walking times are estimates from the transit station.
-- Preferred language: Thai, with English when helpful.
-- Contact: LINE @576yhgtz (https://line.me/R/ti/p/%40576yhgtz)
 - Sitemap: https://banditkmc23-ai.github.io/movecondo/sitemap.xml
-- Full outline: https://banditkmc23-ai.github.io/movecondo/llms-full.txt
+
+## Listings
+- MC-001 Aspire Onnut Station (อ่อนนุช, 1 ห้องนอน, 34 sqm, 22,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 2 นาทีถึง BTS อ่อนนุช): https://banditkmc23-ai.github.io/movecondo/rooms/mc-001/
+- MC-002 Bangkok Feliz Sukhumvit 69-2 (พระโขนง, 1 ห้องนอน, 34 sqm, 13,500 THB/mo, ว่าง, pets not allowed, เดินประมาณ 1 นาทีถึง BTS พระโขนง): https://banditkmc23-ai.github.io/movecondo/rooms/mc-002/
+- MC-003 Blocs 77 (อ่อนนุช, 1 ห้องนอน, 40 sqm, 18,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 5 นาทีถึง BTS อ่อนนุช): https://banditkmc23-ai.github.io/movecondo/rooms/mc-003/
+- MC-004 Ceil By Sansiri (เอกมัย, 1 ห้องนอน, 46 sqm, 25,000 THB/mo, ว่าง, pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-004/
+- MC-005 Chapter Thonglor 25 (ทองหล่อ, 1 ห้องนอน, 35 sqm, 22,000 THB/mo, ว่าง, pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-005/
+- MC-006 IDEO Mobi Sukhumvit 81 (อ่อนนุช, 2 ห้องนอน, 46 sqm, 24,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 2 นาทีถึง BTS อ่อนนุช): https://banditkmc23-ai.github.io/movecondo/rooms/mc-006/
+- MC-007 Kawa Haus (อ่อนนุช, 1 ห้องนอน, 33 sqm, 19,000 THB/mo, ว่าง, pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-007/
+- MC-008 Kawa Haus (อ่อนนุช, 1 ห้องนอน, 35 sqm, 20,000 THB/mo, ว่าง, pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-008/
+- MC-009 Kawa Haus (อ่อนนุช, 1 ห้องนอน, 38 sqm, 23,000 THB/mo, ว่าง, pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-009/
+- MC-010 Life Sukhumvit 48 (พระโขนง, 1 ห้องนอน, 30.5 sqm, 16,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 6 นาทีถึง BTS พระโขนง): https://banditkmc23-ai.github.io/movecondo/rooms/mc-010/
+- MC-011 Mori Haus (อ่อนนุช, 1 ห้องนอน, 47 sqm, 28,000 THB/mo, ว่าง, pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-011/
+- MC-012 Nia By Sansiri (อ่อนนุช, 2 ห้องนอน, 48 sqm, 25,000 THB/mo, ว่าง, pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-012/
+- MC-013 Noble Ora (ทองหล่อ, 2 ห้องนอน, 115 sqm, 55,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 8 นาทีถึง BTS ทองหล่อ): https://banditkmc23-ai.github.io/movecondo/rooms/mc-013/
+- MC-014 Oka Haus (ทองหล่อ, 2 ห้องนอน, 41 sqm, 29,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 18 นาทีถึง BTS ทองหล่อ): https://banditkmc23-ai.github.io/movecondo/rooms/mc-014/
+- MC-015 Rhythm Ekkamai (เอกมัย, 1 ห้องนอน, 30 sqm, 24,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 4 นาทีถึง BTS เอกมัย): https://banditkmc23-ai.github.io/movecondo/rooms/mc-015/
+- MC-016 The Alcove Thonglor 10 (เอกมัย, 1 ห้องนอน, 76 sqm, 35,000 THB/mo, ว่าง, pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-016/
+- MC-017 The Base Park West (อ่อนนุช, 1 ห้องนอน, 31 sqm, 16,000 THB/mo, ว่าง, pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-017/
+- MC-018 The Line Sukhumvit 71 (พระโขนง, 2 ห้องนอน, 61.1 sqm, 35,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 6 นาทีถึง BTS พระโขนง): https://banditkmc23-ai.github.io/movecondo/rooms/mc-018/
+- MC-019 The Niche Pride Thonglor-Petchaburi (ทองหล่อ, 1 ห้องนอน, 36 sqm, 16,000 THB/mo, ว่าง 30 พ.ย., pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-019/
+- MC-020 The Room Sukhumvit 21 (อโศก, 1 ห้องนอน, 53.09 sqm, 30,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 7 นาทีถึง MRT เพชรบุรี): https://banditkmc23-ai.github.io/movecondo/rooms/mc-020/
+- MC-021 The Teak Sukhumvit 39 (พร้อมพงษ์, 1 ห้องนอน, 41 sqm, 28,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 18 นาทีถึง BTS พร้อมพงษ์): https://banditkmc23-ai.github.io/movecondo/rooms/mc-021/
+
+## Areas
+- ทองหล่อ: https://banditkmc23-ai.github.io/movecondo/areas/thonglor/
+- พร้อมพงษ์: https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/
+- เอกมัย: https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/
+- พระโขนง: https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/
+- อ่อนนุช: https://banditkmc23-ai.github.io/movecondo/areas/on-nut/
+- อโศก: https://banditkmc23-ai.github.io/movecondo/areas/asoke/
+- อารีย์: https://banditkmc23-ai.github.io/movecondo/areas/ari/
+- พระราม 9: https://banditkmc23-ai.github.io/movecondo/areas/rama-9/
+- เจริญนคร: https://banditkmc23-ai.github.io/movecondo/areas/charoennakhon/
+- บางนา: https://banditkmc23-ai.github.io/movecondo/areas/bangna/
+
+- Contact: LINE @576yhgtz (https://line.me/R/ti/p/%40576yhgtz)

@@ -1,0 +1,73 @@
+{
+  "area": "พระราม 9",
+  "slug": "rama-9",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.3,
+  "center": {
+    "lat": 13.75722222,
+    "lng": 100.56527778
+  },
+  "stations": [
+    {
+      "id": "mrt-phra-ram-9",
+      "name": "MRT พระราม 9",
+      "name_en": "Phra Ram 9 MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.75722222,
+      "lng": 100.56527778,
+      "source": "https://en.wikipedia.org/wiki/Phra_Ram_9_MRT_station",
+      "primary": true
+    }
+  ],
+  "places": [
+    {
+      "name": "เซ็นทรัลพระราม 9",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "mode": "เดิน",
+      "minutes": 4,
+      "mapsQuery": "Central Rama 9 Bangkok",
+      "lat": 13.7585683,
+      "lng": 100.5660647
+    },
+    {
+      "name": "ฮั่วเซ่งฮง เซ็นทรัลพระราม 9",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "mode": "เดิน",
+      "minutes": 5,
+      "mapsQuery": "Hua Seng Hong Central Rama 9 Bangkok",
+      "approx": true,
+      "approx_note": "ตำแหน่งโดยประมาณ — ในเซ็นทรัลพระราม 9",
+      "lat": 13.7585683,
+      "lng": 100.5660647
+    },
+    {
+      "name": "ฟอร์จูนทาวน์",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "mode": "เดิน",
+      "minutes": 8,
+      "mapsQuery": "Fortune Town Rama 9 Bangkok",
+      "lat": 13.7587407,
+      "lng": 100.5651044
+    },
+    {
+      "name": "After You Dessert Cafe Esplanade Ratchadapisek",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "mode": "รถไฟฟ้า",
+      "minutes": 5,
+      "mapsQuery": "After You Esplanade Ratchadapisek Bangkok",
+      "approx": true,
+      "approx_note": "ตำแหน่งโดยประมาณ — ที่เอสพลานาด รัชดาภิเษก",
+      "lat": 13.7664596,
+      "lng": 100.5694672
+    }
+  ],
+  "condo": null,
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "แผนที่แสดงสถานีและร้านดังใกล้เคียง เมื่อมีประกาศห้องจริง จะปักหมุดคอนโดสีน้ำตาลแดงได้จากข้อมูลห้อง"
+}

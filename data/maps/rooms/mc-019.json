@@ -1,0 +1,117 @@
+{
+  "area": "ทองหล่อ",
+  "slug": "thonglor",
+  "room": "MC-019",
+  "project": "The Niche Pride Thonglor-Petchaburi",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.7443364546,
+    "lng": 100.583280237
+  },
+  "stations": [
+    {
+      "id": "mrt-phetchaburi",
+      "name": "MRT เพชรบุรี",
+      "name_en": "Phetchaburi MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.7491,
+      "lng": 100.563,
+      "source": "https://en.wikipedia.org/wiki/Phetchaburi_MRT_station",
+      "primary": true
+    }
+  ],
+  "places": [
+    {
+      "name": "TUBA Bar & Restaurant",
+      "category": "บาร์",
+      "categoryKey": "bar",
+      "lat": 13.738417,
+      "lng": 100.588487,
+      "distanceM": 866,
+      "walkMinEst": 14.1,
+      "rating": 4.6,
+      "reviewCount": 2634,
+      "mapsQuery": "13.738417,100.588487",
+      "sourceUrl": "https://wanderlog.com/place/details/375314/tuba-bar-restaurant"
+    },
+    {
+      "name": "The Commons Thonglor",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "lat": 13.735129,
+      "lng": 100.58223,
+      "distanceM": 1030,
+      "walkMinEst": 16.7,
+      "rating": 4.5,
+      "reviewCount": 5005,
+      "mapsQuery": "13.735129,100.58223",
+      "sourceUrl": "https://wanderlog.com/place/details/124674/the-commons-thonglor"
+    },
+    {
+      "name": "ROAST coffee & eatery (The Commons)",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "lat": 13.735054,
+      "lng": 100.582268,
+      "distanceM": 1038,
+      "walkMinEst": 16.9,
+      "rating": 4.5,
+      "reviewCount": 2839,
+      "mapsQuery": "13.735054,100.582268",
+      "sourceUrl": "https://wanderlog.com/place/details/396806/roast-coffee--eatery"
+    },
+    {
+      "name": "After You Dessert Cafe - Thonglor 13",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "lat": 13.733703,
+      "lng": 100.581364,
+      "distanceM": 1200,
+      "walkMinEst": 19.5,
+      "rating": 4.4,
+      "reviewCount": 1396,
+      "mapsQuery": "13.733703,100.581364",
+      "sourceUrl": "https://wanderlog.com/place/details/410345/after-you-dessert-cafe-thonglor-13"
+    },
+    {
+      "name": "Let's Relax Onsen and Spa (Thonglor)",
+      "category": "สปา",
+      "categoryKey": "spa",
+      "lat": 13.73183,
+      "lng": 100.582161,
+      "distanceM": 1396,
+      "walkMinEst": 22.7,
+      "rating": 4.5,
+      "reviewCount": 2134,
+      "mapsQuery": "13.73183,100.582161",
+      "sourceUrl": "https://wanderlog.com/place/details/409215/lets-relax-onsen-and-spa-thonglor"
+    },
+    {
+      "name": "CQK Hotpot Ekkamai-Thonglor",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.732227,
+      "lng": 100.586819,
+      "distanceM": 1400,
+      "walkMinEst": 22.8,
+      "rating": 4.9,
+      "reviewCount": 5313,
+      "mapsQuery": "13.732227,100.586819",
+      "sourceUrl": "https://wanderlog.com/place/details/11373425/cqk-hotpot-ekkamai-thonglor-branch"
+    }
+  ],
+  "condo": {
+    "name": "The Niche Pride Thonglor-Petchaburi",
+    "lat": 13.7443364546,
+    "lng": 100.583280237,
+    "approx": true
+  },
+  "mapMode": "condo-approx",
+  "nearbySource": "nearby-real.json",
+  "nearbyHook": "Places from nearby-real.json keyed by projectName. The Teak Sukhumvit 39 uses area fallback until its project entry arrives.",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "ตำแหน่งโดยประมาณ"
+}

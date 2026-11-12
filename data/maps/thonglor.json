@@ -1,0 +1,78 @@
+{
+  "area": "ทองหล่อ",
+  "slug": "thonglor",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 15.6,
+  "center": {
+    "lat": 13.72424444,
+    "lng": 100.57855833
+  },
+  "stations": [
+    {
+      "id": "bts-thong-lo",
+      "name": "BTS ทองหล่อ",
+      "name_en": "Thong Lo BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.72424444,
+      "lng": 100.57855833,
+      "source": "https://en.wikipedia.org/wiki/Thong_Lo_BTS_station",
+      "primary": true
+    }
+  ],
+  "places": [
+    {
+      "name": "theCOMMONS",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "mode": "รถ",
+      "minutes": 8,
+      "mapsQuery": "theCOMMONS Thonglor Bangkok",
+      "lat": 13.7349518,
+      "lng": 100.5821642
+    },
+    {
+      "name": "CPS Coffee Sukhumvit 53",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "mode": "เดิน",
+      "minutes": 5,
+      "mapsQuery": "CPS Coffee Sukhumvit 53 Thonglor Bangkok",
+      "lat": 13.7306182,
+      "lng": 100.5780633
+    },
+    {
+      "name": "Baan Ice",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "mode": "เดิน",
+      "minutes": 10,
+      "mapsQuery": "Baan Ice Thonglor Bangkok",
+      "lat": 13.7290826,
+      "lng": 100.5807186
+    },
+    {
+      "name": "Rabbit Hole",
+      "category": "บาร์",
+      "categoryKey": "bar",
+      "mode": "เดิน",
+      "minutes": 8,
+      "mapsQuery": "Rabbit Hole Thonglor Bangkok",
+      "lat": 13.7298981,
+      "lng": 100.5811206
+    },
+    {
+      "name": "Folk Lane",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "mode": "เดิน",
+      "minutes": 12,
+      "mapsQuery": "Folk Lane Sukhumvit 38 Bangkok",
+      "gap": true
+    }
+  ],
+  "condo": null,
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "แผนที่แสดงสถานีและร้านดังใกล้เคียง เมื่อมีประกาศห้องจริง จะปักหมุดคอนโดสีน้ำตาลแดงได้จากข้อมูลห้อง"
+}

@@ -1,0 +1,79 @@
+{
+  "area": "เอกมัย",
+  "slug": "ekkamai",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 15.6,
+  "center": {
+    "lat": 13.71955833,
+    "lng": 100.585175
+  },
+  "stations": [
+    {
+      "id": "bts-ekkamai",
+      "name": "BTS เอกมัย",
+      "name_en": "Ekkamai BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.71955833,
+      "lng": 100.585175,
+      "source": "https://en.wikipedia.org/wiki/Ekkamai_BTS_station",
+      "primary": true
+    }
+  ],
+  "places": [
+    {
+      "name": "Gateway Ekkamai",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "mode": "เดิน",
+      "minutes": 2,
+      "mapsQuery": "Gateway Ekkamai Bangkok",
+      "lat": 13.7184098,
+      "lng": 100.585363
+    },
+    {
+      "name": "Donki Mall Ekkamai",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "mode": "เดิน",
+      "minutes": 5,
+      "mapsQuery": "Donki Mall Ekkamai Bangkok",
+      "lat": 13.7307288,
+      "lng": 100.5856837
+    },
+    {
+      "name": "Kaizen Coffee",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "mode": "รถ",
+      "minutes": 6,
+      "mapsQuery": "Kaizen Coffee Ekkamai Bangkok",
+      "lat": 13.7397499,
+      "lng": 100.589555
+    },
+    {
+      "name": "Wattana Panich",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "mode": "รถ",
+      "minutes": 8,
+      "mapsQuery": "Wattana Panich Ekkamai Bangkok",
+      "lat": 13.7341744,
+      "lng": 100.5877215
+    },
+    {
+      "name": "Iron Balls Distillery & Bar",
+      "category": "บาร์",
+      "categoryKey": "bar",
+      "mode": "เดิน",
+      "minutes": 10,
+      "mapsQuery": "Iron Balls Ekkamai Bangkok",
+      "lat": 13.7232495,
+      "lng": 100.5842144
+    }
+  ],
+  "condo": null,
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "แผนที่แสดงสถานีและร้านดังใกล้เคียง เมื่อมีประกาศห้องจริง จะปักหมุดคอนโดสีน้ำตาลแดงได้จากข้อมูลห้อง"
+}

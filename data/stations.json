@@ -1,0 +1,248 @@
+{
+  "generated": "2026-11-12",
+  "attribution": "Station coordinates from English Wikipedia. Map style OpenFreeMap (OpenMapTiles, OpenStreetMap data).",
+  "stations": [
+    {
+      "id": "bts-ari",
+      "name_th": "BTS อารีย์",
+      "system": "BTS",
+      "line": "Sukhumvit",
+      "line_th": "สายสุขุมวิท",
+      "areas": [
+        "ari"
+      ],
+      "name_en": "Ari BTS",
+      "lat": 13.77970278,
+      "lng": 100.54464167,
+      "source": "https://en.wikipedia.org/wiki/Ari_BTS_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "bts-asok",
+      "name_th": "BTS อโศก",
+      "system": "BTS",
+      "line": "Sukhumvit",
+      "line_th": "สายสุขุมวิท",
+      "areas": [
+        "asoke"
+      ],
+      "name_en": "Asok BTS",
+      "lat": 13.73703333,
+      "lng": 100.56041944,
+      "source": "https://en.wikipedia.org/wiki/Asok_BTS_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "bts-bang-na",
+      "name_th": "BTS บางนา",
+      "system": "BTS",
+      "line": "Sukhumvit",
+      "line_th": "สายสุขุมวิท",
+      "areas": [
+        "bangna"
+      ],
+      "name_en": "Bang Na BTS",
+      "lat": 13.6682,
+      "lng": 100.6047,
+      "source": "https://en.wikipedia.org/wiki/Bang_Na_BTS_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "bts-ekkamai",
+      "name_th": "BTS เอกมัย",
+      "system": "BTS",
+      "line": "Sukhumvit",
+      "line_th": "สายสุขุมวิท",
+      "areas": [
+        "ekkamai"
+      ],
+      "name_en": "Ekkamai BTS",
+      "lat": 13.71955833,
+      "lng": 100.585175,
+      "source": "https://en.wikipedia.org/wiki/Ekkamai_BTS_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "bts-krung-thon-buri",
+      "name_th": "BTS กรุงธนบุรี",
+      "system": "BTS",
+      "line": "Silom / Gold",
+      "line_th": "สายสีลม / สายสีทอง",
+      "areas": [
+        "charoennakhon"
+      ],
+      "name_en": "Krung Thon Buri BTS",
+      "lat": 13.72083333,
+      "lng": 100.50277778,
+      "source": "https://en.wikipedia.org/wiki/Krung_Thon_Buri_BTS_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "bts-on-nut",
+      "name_th": "BTS อ่อนนุช",
+      "system": "BTS",
+      "line": "Sukhumvit",
+      "line_th": "สายสุขุมวิท",
+      "areas": [
+        "on-nut"
+      ],
+      "name_en": "On Nut BTS",
+      "lat": 13.70561111,
+      "lng": 100.60108333,
+      "source": "https://en.wikipedia.org/wiki/On_Nut_BTS_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "bts-phra-khanong",
+      "name_th": "BTS พระโขนง",
+      "system": "BTS",
+      "line": "Sukhumvit",
+      "line_th": "สายสุขุมวิท",
+      "areas": [
+        "phrakhanong"
+      ],
+      "name_en": "Phra Khanong BTS",
+      "lat": 13.71519444,
+      "lng": 100.59128333,
+      "source": "https://en.wikipedia.org/wiki/Phra_Khanong_BTS_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "bts-phrom-phong",
+      "name_th": "BTS พร้อมพงษ์",
+      "system": "BTS",
+      "line": "Sukhumvit",
+      "line_th": "สายสุขุมวิท",
+      "areas": [
+        "phrom-phong"
+      ],
+      "name_en": "Phrom Phong BTS",
+      "lat": 13.73043889,
+      "lng": 100.56973056,
+      "source": "https://en.wikipedia.org/wiki/Phrom_Phong_BTS_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "bts-thong-lo",
+      "name_th": "BTS ทองหล่อ",
+      "system": "BTS",
+      "line": "Sukhumvit",
+      "line_th": "สายสุขุมวิท",
+      "areas": [
+        "thonglor"
+      ],
+      "name_en": "Thong Lo BTS",
+      "lat": 13.72424444,
+      "lng": 100.57855833,
+      "source": "https://en.wikipedia.org/wiki/Thong_Lo_BTS_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "mrt-phra-ram-9",
+      "name_th": "MRT พระราม 9",
+      "system": "MRT",
+      "line": "Blue",
+      "line_th": "สายสีน้ำเงิน",
+      "areas": [
+        "rama-9"
+      ],
+      "name_en": "Phra Ram 9 MRT",
+      "lat": 13.75722222,
+      "lng": 100.56527778,
+      "source": "https://en.wikipedia.org/wiki/Phra_Ram_9_MRT_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "mrt-sukhumvit",
+      "name_th": "MRT สุขุมวิท",
+      "system": "MRT",
+      "line": "Blue",
+      "line_th": "สายสีน้ำเงิน",
+      "areas": [
+        "asoke"
+      ],
+      "name_en": "Sukhumvit MRT",
+      "lat": 13.738524,
+      "lng": 100.561446,
+      "source": "https://en.wikipedia.org/wiki/Sukhumvit_MRT_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "mrt-phetchaburi",
+      "name_th": "MRT เพชรบุรี",
+      "name_en": "Phetchaburi MRT",
+      "system": "MRT",
+      "line": "Blue",
+      "line_th": "สายสีน้ำเงิน",
+      "areas": [
+        "thonglor",
+        "asoke"
+      ],
+      "lat": 13.7491,
+      "lng": 100.563,
+      "source": "https://en.wikipedia.org/wiki/Phetchaburi_MRT_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "bts-bang-chak",
+      "name_th": "BTS บางจาก",
+      "name_en": "Bang Chak BTS",
+      "system": "BTS",
+      "line": "Sukhumvit",
+      "line_th": "สายสุขุมวิท",
+      "areas": [
+        "on-nut"
+      ],
+      "lat": 13.6969,
+      "lng": 100.6053,
+      "source": "https://en.wikipedia.org/wiki/Bang_Chak_BTS_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "bts-punnawithi",
+      "name_th": "BTS ปุณณวิถี",
+      "name_en": "Punnawithi BTS",
+      "system": "BTS",
+      "line": "Sukhumvit",
+      "line_th": "สายสุขุมวิท",
+      "areas": [
+        "on-nut",
+        "bangna"
+      ],
+      "lat": 13.68891944,
+      "lng": 100.60921111,
+      "source": "https://en.wikipedia.org/wiki/Punnawithi_BTS_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "bts-udom-suk",
+      "name_th": "BTS อุดมสุข",
+      "name_en": "Udom Suk BTS",
+      "system": "BTS",
+      "line": "Sukhumvit",
+      "line_th": "สายสุขุมวิท",
+      "areas": [
+        "bangna"
+      ],
+      "lat": 13.68031667,
+      "lng": 100.60965833,
+      "source": "https://en.wikipedia.org/wiki/Udom_Suk_BTS_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    }
+  ]
+}

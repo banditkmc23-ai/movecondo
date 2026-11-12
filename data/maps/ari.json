@@ -1,0 +1,81 @@
+{
+  "area": "อารีย์",
+  "slug": "ari",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.3,
+  "center": {
+    "lat": 13.77970278,
+    "lng": 100.54464167
+  },
+  "stations": [
+    {
+      "id": "bts-ari",
+      "name": "BTS อารีย์",
+      "name_en": "Ari BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.77970278,
+      "lng": 100.54464167,
+      "source": "https://en.wikipedia.org/wiki/Ari_BTS_station",
+      "primary": true
+    }
+  ],
+  "places": [
+    {
+      "name": "NANA Coffee Roasters",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "mode": "เดิน",
+      "minutes": 6,
+      "mapsQuery": "NANA Coffee Roasters Ari Bangkok",
+      "lat": 13.782685,
+      "lng": 100.5419711
+    },
+    {
+      "name": "Ongtong Khaosoi",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "mode": "เดิน",
+      "minutes": 2,
+      "mapsQuery": "Ongtong Khaosoi Ari Bangkok",
+      "lat": 13.7811037,
+      "lng": 100.5444506
+    },
+    {
+      "name": "Lay Lao",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "mode": "เดิน",
+      "minutes": 8,
+      "mapsQuery": "Lay Lao Ari Bangkok",
+      "lat": 13.781734,
+      "lng": 100.5437808
+    },
+    {
+      "name": "After You Dessert Cafe La Villa Aree",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "mode": "เดิน",
+      "minutes": 8,
+      "mapsQuery": "After You La Villa Aree Bangkok",
+      "approx": true,
+      "approx_note": "ตำแหน่งโดยประมาณ — ที่ลาวิลล่า อารีย์",
+      "lat": 13.7798656,
+      "lng": 100.5452292
+    },
+    {
+      "name": "GUMP'S Ari",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "mode": "เดิน",
+      "minutes": 10,
+      "mapsQuery": "GUMP'S Ari Bangkok",
+      "lat": 13.7830899,
+      "lng": 100.5432399
+    }
+  ],
+  "condo": null,
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "แผนที่แสดงสถานีและร้านดังใกล้เคียง เมื่อมีประกาศห้องจริง จะปักหมุดคอนโดสีน้ำตาลแดงได้จากข้อมูลห้อง"
+}

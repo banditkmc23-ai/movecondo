@@ -30,6 +30,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../assets/styles.css" />
+  <link rel="stylesheet" href="../../assets/map3d.css" />
   <!-- Google Search Console: owner must add a verification meta tag from Search Console, then submit sitemap.xml. Do not invent a code. -->
   
   <script type="application/ld+json">
@@ -84,7 +85,7 @@
   "alternateName": "ย้ายคอนโด",
   "url": "https://banditkmc23-ai.github.io/movecondo/",
   "logo": "https://banditkmc23-ai.github.io/movecondo/icon-512.png",
-  "description": "MoveCondo (ย้ายคอนโด) ช่วยหาคอนโดเช่าที่ใช่ในกรุงเทพฯ กำลังเพิ่มห้องจริงเร็ว ๆ นี้"
+  "description": "MoveCondo (ย้ายคอนโด) ช่วยหาคอนโดเช่าที่ใช่ในกรุงเทพฯ ทัก LINE @576yhgtz"
 }
 </script>
 
@@ -125,6 +126,16 @@
       <p><strong>ไลฟ์สไตล์รอบย่าน:</strong> พื้นที่กว้างกว่าย่านในเมือง มีตลาดและร้านอาหารครอบครัวในระยะเดินหรือต่อรถสั้นๆ</p>
       <p><strong>เดินถึง BTS บางนา:</strong> ย่านนี้อยู่ใกล้สถานี โดยทั่วไปเดินถึงได้ประมาณ 7 นาที</p>
     </section>
+    <section class="section map3d-section" id="map">
+      <div class="section-head">
+        <h2>แผนที่ 3 มิติรอบสถานี</h2>
+        <p>สถานีรถไฟฟ้าและร้านดังใกล้เคียง — หมุน เอียง และซูมได้ อาคารแสดงเป็นสามมิติเมื่อซูมใกล้ เมื่อมีประกาศห้องจริง จะปักหมุดคอนโดสีน้ำตาลแดงบนแผนที่นี้</p>
+      </div>
+      <div class="map3d-shell" data-map3d data-src="../../data/maps/bangna.json">
+        <div class="map3d-canvas" role="region" aria-label="แผนที่ 3 มิติย่านบางนา">กำลังเตรียมแผนที่…</div>
+      </div>
+    </section>
+
     <section class="section">
       <h2>ร้านดังใกล้สถานี</h2>
       <p class="llms-hint">ระยะเวลาโดยประมาณ คำนวณจากสถานีรถไฟฟ้า</p>
@@ -133,11 +144,8 @@
     <section class="section" id="rooms">
       <div class="coming-soon" role="status">
         <div class="eyebrow">ประกาศเช่า</div>
-        <h2>กำลังเพิ่มห้องจริงเร็ว ๆ นี้</h2>
-        <p>ขณะนี้เรากำลังเตรียมประกาศคอนโดเช่าจริง ในระหว่างนี้สำรวจย่าน ร้านอาหาร และคาเฟ่ใกล้สถานีได้เลย หรือทัก LINE @576yhgtz เพื่อบอกความต้องการ</p>
-        <div class="hero-actions" style="justify-content:center">
-          <a class="btn btn-md btn-primary" href="https://line.me/R/ti/p/%40576yhgtz" target="_blank" rel="noopener noreferrer">ทัก LINE @576yhgtz</a>
-        </div>
+        <h2>ยังไม่มีประกาศในย่านนี้</h2>
+        <p>สำรวจย่านอื่น หรือทัก LINE @576yhgtz เพื่อบอกความต้องการ</p>
       </div>
     </section>
       </main>
@@ -147,7 +155,7 @@
         <b>MoveCondo</b> · ย้ายคอนโด<br />
         หาคอนโดเช่าที่ใช่ในกรุงเทพฯ · LINE @576yhgtz
       </div>
-      <div>กำลังเพิ่มประกาศห้องจริงเร็ว ๆ นี้ สำรวจย่านและร้านดังใกล้สถานีได้ในระหว่างนี้</div>
+      <div>คอนโดเช่าย่านรถไฟฟ้าในกรุงเทพฯ · ทัก LINE @576yhgtz แล้วบอกรหัสห้องได้เลย</div>
     </div>
   </footer>
   <div class="overlay" id="viewModal" role="dialog" aria-modal="true" aria-labelledby="viewTitle"></div>
@@ -157,5 +165,7 @@
   </button>
   <aside class="ai-panel" id="aiPanel" role="dialog" aria-modal="true" aria-labelledby="aiTitle"></aside>
   <script src="../../assets/app.js" defer></script>
+  <script src="../../assets/map3d.js" defer></script>
+
 </body>
 </html>

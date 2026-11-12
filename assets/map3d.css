@@ -1,0 +1,85 @@
+/* MoveCondo 3D neighborhood map — local preview, not on the live push yet */
+.map3d-section { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; padding: 8px 0 28px; }
+.map3d-section .section-head { margin-bottom: 14px; }
+.map3d-section .section-head h2 { letter-spacing: -.03em; font-weight: 600; }
+.map3d-section .section-head p { color: var(--muted); margin-top: 6px; max-width: 62ch; font-size: 14.5px; }
+.map3d-shell {
+  position: relative;
+  border: 1px solid #E7E2DB;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #f3efe9;
+  box-shadow: 0 12px 40px rgba(40, 24, 16, .06);
+}
+.map3d-toolbar {
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+  padding: 10px 12px; background: rgba(255,255,255,.92);
+  border-bottom: 1px solid #E7E2DB; backdrop-filter: blur(8px);
+}
+.map3d-chips { display: flex; flex-wrap: wrap; gap: 6px; flex: 1; }
+.map3d-chip {
+  border: 1px solid #E0DAD2; background: #fff; color: #3a2f29;
+  border-radius: 999px; padding: 5px 11px; font: 600 12.5px/1.2 inherit;
+  cursor: pointer;
+}
+.map3d-chip.on, .map3d-chip[aria-pressed="true"] { background: #B9532F; border-color: #B9532F; color: #fff; }
+.map3d-chip .swatch { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; box-shadow: 0 0 0 1px rgba(0,0,0,.08); }
+.map3d-reset {
+  border: 1px solid #E0DAD2; background: #fff; border-radius: 999px;
+  padding: 5px 12px; font: 600 12.5px/1.2 inherit; cursor: pointer; white-space: nowrap;
+}
+.map3d-reset:hover { border-color: #B9532F; color: #B9532F; }
+.map3d-canvas { width: 100%; height: min(62vh, 560px); min-height: 360px; }
+@media (max-width: 700px) {
+  .map3d-section { width: calc(100% - 32px); }
+  .map3d-canvas { height: 70vh; min-height: 320px; }
+  .map3d-legend { bottom: 78px; left: 8px; }
+  .maplibregl-ctrl-attrib { max-width: 58%; font-size: 9px; }
+}
+.map3d-fallback {
+  padding: 28px 20px; color: #3a2f29;
+}
+.map3d-fallback ul { margin: 10px 0 0; padding-left: 1.1em; }
+.map3d-fallback li { margin: 4px 0; }
+.map3d-legend {
+  position: absolute; left: 12px; bottom: 36px; z-index: 2;
+  background: rgba(255,255,255,.94); border: 1px solid #E7E2DB;
+  border-radius: 12px; padding: 8px 10px; font-size: 12px;
+  box-shadow: 0 6px 18px rgba(40,24,16,.08);
+}
+.map3d-legend div { display: flex; align-items: center; gap: 7px; margin: 3px 0; }
+.map3d-legend i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; box-shadow: 0 0 0 2px #fff, 0 0 0 3px rgba(0,0,0,.06); }
+.map3d-legend i.condo { width: 12px; height: 12px; border-radius: 4px; }
+.map3d-attr {
+  position: absolute; right: 8px; bottom: 4px; z-index: 2;
+  font-size: 10px; color: #5b524c; background: rgba(255,255,255,.8);
+  padding: 1px 6px; border-radius: 4px;
+}
+/* markers */
+.mc-marker { border: 0; background: transparent; padding: 0; cursor: pointer; }
+.mc-marker .pin {
+  width: 16px; height: 16px; border-radius: 50%;
+  border: 2px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,.28);
+}
+.mc-marker.station .pin { width: 20px; height: 20px; background: #1F7A4D; }
+.mc-marker.station.mrt .pin { background: #1B57A5; }
+.mc-marker.condo .pin { width: 22px; height: 22px; border-radius: 6px; background: #B9532F; }
+.mc-marker.shopping .pin { background: #2F6B8A; }
+.mc-marker.cafe .pin { background: #C9862A; }
+.mc-marker.restaurant .pin { background: #9B3B2C; }
+.mc-marker.bar .pin { background: #5B3A6E; }
+.mc-marker.park .pin { background: #3F7A4C; }
+.mc-marker.spa .pin { background: #8A5A7A; }
+.mc-marker .lbl {
+  position: absolute; left: 50%; top: 100%; transform: translate(-50%, 3px);
+  white-space: nowrap; font: 600 11px/1.2 "Prompt","Noto Sans Thai",sans-serif;
+  color: #2b241f; text-shadow: 0 0 4px #fff, 0 0 6px #fff; pointer-events: none;
+}
+.mc-marker.on .pin { box-shadow: 0 0 0 3px rgba(185,83,47,.35), 0 2px 8px rgba(0,0,0,.28); }
+.mc-popup { font: 14px/1.45 "Prompt","Noto Sans Thai",sans-serif; color: #2b241f; min-width: 160px; }
+.mc-popup b { display: block; font-size: 15px; margin-bottom: 2px; }
+.mc-popup .meta { color: #5b524c; font-size: 13px; }
+.mc-popup .approx { color: #8a4b2a; font-size: 12px; margin-top: 4px; }
+.mc-popup a { color: #B9532F; font-weight: 600; }
+.maplibregl-popup-content { border-radius: 12px; padding: 10px 12px; box-shadow: 0 10px 28px rgba(40,24,16,.16); }
+.maplibregl-ctrl-top-right { top: 8px; right: 8px; }

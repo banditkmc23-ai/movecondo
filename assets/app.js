@@ -28,7 +28,6 @@ const LINE_HREF = "https://line.me/R/ti/p/%40576yhgtz";
 const SITE_BASE = (typeof location!=='undefined' && /\/movecondo(\/|$)/.test(location.pathname)) ? '/movecondo/' : '/';
 function roomHref(id){ return SITE_BASE + 'rooms/' + String(id).toLowerCase() + '/'; }
 function areaHref(area){ return SITE_BASE + 'areas/' + (AREA_SLUGS[area]||'') + '/'; }
-const PHOTOS = {};
 function photoUrl(id, file, kind){
   const base = SITE_BASE + "images/rooms/" + String(id).toLowerCase() + "/";
   if(kind==="cover") return base + "cover.webp";
@@ -51,7 +50,9 @@ function photoImg(src, alt, cls, w, h, eager){
   const load = eager ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"';
   return `<img class="${cls||""}" src="${src}" alt="${alt}" width="${w}" height="${h}" ${load} draggable="false">`;
 }
-const LISTINGS = [];
+const LISTINGS = [{"id": "MC-001", "project": "Aspire Onnut Station", "area": "อ่อนนุช", "price": 22000, "size": 34, "beds": "1 ห้องนอน", "type": "1 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": 2, "transit": "BTS อ่อนนุช", "floorRange": "1-5", "deposit": "2 months", "lastVerified": "2026-11-11", "blurb": "ให้เช่า Aspire Onnut Station | 1 Bed 34 ตร.ม. ห้องมุม 22,000 บ./เดือน | BTS อ่อนนุช 200 ม. | พร้อมอยู่\n\n1 Bedroom | 1 Bathroom\n34 SQ.M. | Corner Unit\nBuilt-in Furniture | Warm Brow", "amenities": ["เฟอร์นิเจอร์บิลต์อิน", "ห้องมุม"]}, {"id": "MC-002", "project": "Bangkok Feliz Sukhumvit 69-2", "area": "พระโขนง", "price": 13500, "size": 34, "beds": "1 ห้องนอน", "type": "1 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": 1, "transit": "BTS พระโขนง", "floorRange": "6-10", "deposit": "2 months", "lastVerified": "2026-11-07", "blurb": "ให้เช่า Bangkok Feliz Sukhumvit 69 | 1 Bed 34 SQM. 13,500 บาท/เดือน | ใกล้ BTS พระโขนง 100 เมตร\n\nทำเลสุขุมวิท 69 ติด BTS พระโขนง เดินเพียง 100 เมตรถึงสถานี เดินทางสะดวก เข้าเมืองง่", "amenities": ["เฟอร์นิเจอร์ครบ", "หันทิศเหนือ", "วิวเปิดโล่ง ไม่มีตึกบัง"]}, {"id": "MC-003", "project": "Blocs 77", "area": "อ่อนนุช", "price": 18000, "size": 40, "beds": "1 ห้องนอน", "type": "1 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": 5, "transit": "BTS อ่อนนุช", "floorRange": "11-15", "deposit": "2 months", "lastVerified": "2026-11-08", "blurb": "ให้เช่า Blocs 77 Sukhumvit 77 | 1 Bed 40 SQM. 18,000 บาท/เดือน | วิวคลอง ใกล้ BTS อ่อนนุช 400 m.\n\nทำเลสุขุมวิท 77 ใกล้ BTS อ่อนนุช เดินทางสะดวก ใกล้ T77 Community และแหล่งช้อปปิ้ง ", "amenities": ["หันทิศใต้", "วิวคลองพระโขนง", "ใกล้ T77 Community", "ใกล้ Big C อ่อนนุช", "ใกล้ Lotus's อ่อนนุช", "ใกล้ Habito Mall"]}, {"id": "MC-004", "project": "Ceil By Sansiri", "area": "เอกมัย", "price": 25000, "size": 46, "beds": "1 ห้องนอน", "type": "1 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": null, "transit": "BTS เอกมัย", "floorRange": "6-10", "deposit": "2 months", "lastVerified": "2026-11-10", "blurb": "ให้เช่า Ceil By Sansiri - Ekkamai 12 - 1 Bedroom 46 Sq.m 25,000 บ./เดือน | ห้องมุม วิวสวย พร้อมเข้าอยู่\n\n• 1 ห้องนอน | 1 ห้องนั่งเล่น | 1 ห้องน้ำ\n• ขนาด 46 ตร.ม. | ห้องมุม\n• วิวสวย", "amenities": ["ห้องมุม", "วิว 270 องศา", "เฟอร์นิเจอร์ครบ", "สระว่ายน้ำ", "ฟิตเนส", "สวน", "ที่จอดรถ 1 คัน", "รถรับส่งฟรีไป BTS เอกมัย"]}, {"id": "MC-005", "project": "Chapter Thonglor 25", "area": "ทองหล่อ", "price": 22000, "size": 35, "beds": "1 ห้องนอน", "type": "1 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": null, "transit": null, "floorRange": "1-5", "deposit": "2 months", "lastVerified": "2026-11-08", "blurb": "ให้เช่า Chapter Thonglor 25 1 Bedroom 35 Sq.m 22,000 บ./เดือน พร้อมเข้าอยู่\n\n• 1 ห้องนอน | 1 ห้องนั่งเล่น | 1 ห้องน้ำ\n• ขนาด 35 ตร.ม.\n\nเฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ\n\nสิ่งอำนวยค", "amenities": ["เฟอร์นิเจอร์ครบ", "สระว่ายน้ำ", "ฟิตเนส"]}, {"id": "MC-006", "project": "IDEO Mobi Sukhumvit 81", "area": "อ่อนนุช", "price": 24000, "size": 46, "beds": "2 ห้องนอน", "type": "2 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": 2, "transit": "BTS อ่อนนุช", "floorRange": "16-20", "deposit": "2 months", "lastVerified": "2026-11-07", "blurb": "ให้เช่า IDEO Mobi Sukhumvit 81 | 2 Bed 1 Bath 46 Sqm. ห้องมุม | 24,000 บ./เดือน ติด BTS อ่อนนุช | พร้อมอยู่\n\nรายละเอียดห้อง | Room Details\n• 2 Bedrooms 1 Bathroom 46 SQ.M.\n• Corner", "amenities": ["ห้องมุม", "เฟอร์นิเจอร์ครบ", "พร้อมเข้าอยู่"]}, {"id": "MC-007", "project": "Kawa Haus", "area": "อ่อนนุช", "price": 19000, "size": 33, "beds": "1 ห้องนอน", "type": "1 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": null, "transit": "BTS อ่อนนุช", "floorRange": "1-5", "deposit": "2 months", "lastVerified": "2026-11-10", "blurb": "ให้เช่า Kawa Haus 1 Bed 33 Sq.m. 19,000 บ./เดือน มีรถรับ-ส่ง ใกล้ BTS อ่อนนุช, Bangkok Prep, Habito Mall พร้อมอยู่\n\n1 ห้องนอน | 1 ห้องน้ำ\nขนาด 33 ตร.ม.\n\nเฟอร์นิเจอร์ + เครื่องใช้ไฟ", "amenities": ["เฟอร์นิเจอร์ครบ", "ฟิตเนส", "สระว่ายน้ำ", "บ่อแช่น้ำอุ่น–เย็น", "Co-working space", "Co-kitchen", "รถรับ–ส่งใน T77 Sansiri Campus และไป BTS อ่อนนุช"]}, {"id": "MC-008", "project": "Kawa Haus", "area": "อ่อนนุช", "price": 20000, "size": 35, "beds": "1 ห้องนอน", "type": "1 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": null, "transit": "BTS อ่อนนุช", "floorRange": "1-5", "deposit": "2 months", "lastVerified": "2026-11-10", "blurb": "ให้เช่า Kawa Haus 1 Bed 35 ตร.ม. 20,000 บ./เดือน | ใกล้ BTS อ่อนนุช, Bangkok Prep, Habito Mall พร้อมอยู่\n\n1 ห้องนอน | 1 ห้องน้ำ\nขนาด 35 ตร.ม.\n\nเฟอร์นิเจอร์ + เครื่องใช้ไฟฟ้าครบ พร้", "amenities": ["เฟอร์นิเจอร์ครบ", "ฟิตเนส", "สระว่ายน้ำ", "บ่อแช่น้ำอุ่น–เย็น", "Co-working space", "Co-kitchen", "รถรับ–ส่งใน T77 และไป BTS อ่อนนุช"]}, {"id": "MC-009", "project": "Kawa Haus", "area": "อ่อนนุช", "price": 23000, "size": 38, "beds": "1 ห้องนอน", "type": "1 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": null, "transit": "BTS อ่อนนุช", "floorRange": "6-10", "deposit": "2 months", "lastVerified": "2026-11-12", "blurb": "ให้เช่า Kawa Haus 1 Bedroom 38 Sq.m 23,000 บ./เดือน ห้องมุม วิวสระ และคลอง ใกล้ BTS อ่อนนุช มีรถรับ-ส่ง\n\n• 1 ห้องนอน 1 ห้องน้ำ ห้องมุม\n• ขนาด 38 ตร.ม.\n\nตกแต่งและเฟอร์นิเจอร์ครบ สวย", "amenities": ["ห้องมุม", "เฟอร์นิเจอร์ครบ", "วิวสระและคลอง", "รถรับ–ส่ง"]}, {"id": "MC-010", "project": "Life Sukhumvit 48", "area": "พระโขนง", "price": 16000, "size": 30.5, "beds": "1 ห้องนอน", "type": "1 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": 6, "transit": "BTS พระโขนง", "floorRange": "6-10", "deposit": "2 months", "lastVerified": "2026-11-07", "blurb": "ให้เช่า Life Sukhumvit 48 | 1 Bed 30.5 ตร.ม. 16,000 บ./เดือน ใกล้ BTS พระโขนง | พร้อมอยู่\n\n1 Bedroom 1 Bathroom\n30.5 SQ.M.\nFully Furnished & Fully Equipped\n1 Parking Space\n\nใกล้ BT", "amenities": ["เฟอร์นิเจอร์ครบ", "ที่จอดรถ 1 คัน"]}, {"id": "MC-011", "project": "Mori Haus", "area": "อ่อนนุช", "price": 28000, "size": 47, "beds": "1 ห้องนอน", "type": "1 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": null, "transit": "BTS อ่อนนุช", "floorRange": "1-5", "deposit": "2 months", "lastVerified": "2026-11-10", "blurb": "ให้เช่า Mori Haus - 1 Bedroom 47 Sq.m. 28,000 บ./เดือน มีอ่างอาบน้ำ T77 Community ใกล้ BTS อ่อนนุช มีรถรับ-ส่ง พร้อมเข้าอยู่ทันที\n\nทำเลย่านอ่อนนุช – T77 (Sansiri Community) เดินทาง", "amenities": ["อ่างอาบน้ำ", "เฟอร์นิเจอร์ครบ", "โทรทัศน์", "เครื่องซักผ้า", "ตู้เย็น", "ไมโครเวฟ", "กลอนดิจิทัล", "สระว่ายน้ำกลางแจ้ง", "ฟิตเนส", "สวน", "ระบบคีย์การ์ด", "รถรับ–ส่งและรถกอล์ฟฟรี", "วิวสระว่ายน้ำ"]}, {"id": "MC-012", "project": "Nia By Sansiri", "area": "อ่อนนุช", "price": 25000, "size": 48, "beds": "2 ห้องนอน", "type": "2 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": null, "transit": "BTS อ่อนนุช", "floorRange": "11-15", "deposit": "2 months", "lastVerified": "2026-11-07", "blurb": "ให้เช่า Nia By Sansiri สุขุมวิท 71 | 2 Bed 1 Bath 48 ตร.ม. ห้องมุม | 25,000 /เดือน ใกล้ BTS อ่อนนุช\n\nรายละเอียดห้อง\n• 2 ห้องนอน 1 ห้องน้ำ\n• ขนาด 48 ตร.ม.\n• เตียงขนาด 5 ฟุตทั้ง 2 ห้", "amenities": ["ห้องมุม", "เฟอร์นิเจอร์ครบ", "เตียง 5 ฟุต สองห้อง", "สระว่ายน้ำ", "ฟิตเนส", "Co-working space", "สวนบนดาดฟ้า"]}, {"id": "MC-013", "project": "Noble Ora", "area": "ทองหล่อ", "price": 55000, "size": 115, "beds": "2 ห้องนอน", "type": "2 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": 8, "transit": "BTS ทองหล่อ", "floorRange": "11-15", "deposit": "2 months", "lastVerified": "2026-11-08", "blurb": "Noble Ora for Rent | 2 Bedrooms | 115 SQ.M. Near BTS Thong Lo 600 m. 55,000 THB/month\n\nSpacious 2-bedroom, 2-bathroom unit, fully furnished and ready to move in.\n\nRoom Details\n• 2 ", "amenities": ["เฟอร์นิเจอร์ครบ", "อ่างอาบน้ำ", "สระว่ายน้ำ", "ฟิตเนส"]}, {"id": "MC-014", "project": "Oka Haus", "area": "ทองหล่อ", "price": 29000, "size": 41, "beds": "2 ห้องนอน", "type": "2 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": 18, "transit": "BTS ทองหล่อ", "floorRange": "31-35", "deposit": "2 months", "lastVerified": "2026-11-07", "blurb": "ให้เช่า Oka Haus 2 Bedroom 41 Sq.m 29,000 บ./เดือน ใกล้ BTS ทองหล่อ พร้อมเข้าอยู่\n\n• 2 ห้องนอน | 1 ห้องนั่งเล่น | 1 ห้องน้ำ\n• ขนาด 41 ตร.ม.\n\nเฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ\n\nสิ่ง", "amenities": ["เฟอร์นิเจอร์ครบ", "สระว่ายน้ำ", "ฟิตเนส"]}, {"id": "MC-015", "project": "Rhythm Ekkamai", "area": "เอกมัย", "price": 24000, "size": 30, "beds": "1 ห้องนอน", "type": "1 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": 4, "transit": "BTS เอกมัย", "floorRange": "6-10", "deposit": "2 months", "lastVerified": "2026-11-10", "blurb": "ให้เช่า Rhythm Ekkamai | 1 Bedroom 30 SQM. 24,000 บาท/เดือน ห้องมุม ใกล้ BTS เอกมัย 300 ม. พร้อมเข้าอยู่\n\nทำเลเอกมัย เดินทางสะดวก ใกล้แหล่งไลฟ์สไตล์ย่านเอกมัย–ทองหล่อ\n\nรายละเอียดห้", "amenities": ["ห้องมุม", "เฟอร์นิเจอร์ครบ", "หันทิศตะวันออก", "สระว่ายน้ำ", "ฟิตเนส", "สวน", "รปภ. 24 ชั่วโมง"]}, {"id": "MC-016", "project": "The Alcove Thonglor 10", "area": "เอกมัย", "price": 35000, "size": 76, "beds": "1 ห้องนอน", "type": "1 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": null, "transit": "BTS เอกมัย", "floorRange": "16-20", "deposit": "2 months", "lastVerified": "2026-11-07", "blurb": "ให้เช่า The Alcove Thonglor 10 - 1 Bedroom 76 Sq.m 35,000 บ./เดือน ใกล้ BTS เอกมัย ทองหล่อ พร้อมเข้าอยู่\n\n• 1 ห้องนอน | 1 ห้องนั่งเล่น | 1 ห้องน้ำ\n• ขนาด 76 ตร.ม.\n\nเฟอร์นิเจอร์และเ", "amenities": ["เฟอร์นิเจอร์ครบ", "สระว่ายน้ำ", "ฟิตเนส"]}, {"id": "MC-017", "project": "The Base Park West", "area": "อ่อนนุช", "price": 16000, "size": 31, "beds": "1 ห้องนอน", "type": "1 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": null, "transit": "BTS อ่อนนุช", "floorRange": "16-20", "deposit": "2 months", "lastVerified": "2026-11-07", "blurb": "ให้เช่า The Base Park West Sukhumvit 77 | 16,000 บ./เดือน | 1 Bed 31 ตร.ม. ห้องมุม | ใกล้ BTS อ่อนนุช | พร้อมเข้าอยู่\n\n• 1 ห้องนอน 1 ห้องน้ำ ห้องมุม\n• ขนาด 31 ตร.ม.\n• วิวเมือง ทางด", "amenities": ["ห้องมุม", "เฟอร์นิเจอร์ครบ", "วิวเมือง / ทางด่วน", "สระว่ายน้ำ", "ฟิตเนส", "สวน", "ที่จอดรถ", "ระบบคีย์การ์ด"]}, {"id": "MC-018", "project": "The Line Sukhumvit 71", "area": "พระโขนง", "price": 35000, "size": 61.1, "beds": "2 ห้องนอน", "type": "2 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": 6, "transit": "BTS พระโขนง", "floorRange": "6-10", "deposit": "2 months", "lastVerified": "2026-11-08", "blurb": "ให้เช่า The Line Sukhumvit 71 | 2 Bedroom 2 Bathroom | 61.1 SQM. | 35,000 บาท/เดือน\n\nทำเลสุขุมวิท 71 ใกล้ BTS พระโขนง เพียง 450 เมตร เดินทางสะดวก เชื่อมต่อเอกมัยและทองหล่อ\n\nรายละเอ", "amenities": ["เฟอร์นิเจอร์ครบ", "สระว่ายน้ำ", "ฟิตเนส", "Co-working space", "สวน", "รปภ. 24 ชั่วโมง"]}, {"id": "MC-019", "project": "The Niche Pride Thonglor-Petchaburi", "area": "ทองหล่อ", "price": 16000, "size": 36, "beds": "1 ห้องนอน", "type": "1 ห้องนอน", "pets": false, "available": "2026-11-30", "status": "OCCUPIED", "statusLabel": "ว่าง 30 พ.ย.", "walk": null, "transit": "MRT เพชรบุรี", "floorRange": "21-25", "deposit": "2 months", "lastVerified": "2026-11-08", "blurb": "ให้เช่า The Niche Pride Thonglor-Petchaburi 1 Bed 36 Sq.m 16,000 บ./เดือน วิวสูง วิวโล่ง ว่าง 30 พ.ย. นี้\n\n• ห้อง Fully Furnished พร้อมเข้าอยู่\n• หันทิศใต้ วิวฝั่งทองหล่อ–อโศก ไม่ม", "amenities": ["เฟอร์นิเจอร์ครบ", "หันทิศใต้", "วิวโล่งฝั่งทองหล่อ–อโศก", "รถรับ–ส่งไป BTS ทองหล่อ และ MRT เพชรบุรี"]}, {"id": "MC-020", "project": "The Room Sukhumvit 21", "area": "อโศก", "price": 30000, "size": 53.09, "beds": "1 ห้องนอน", "type": "1 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": 7, "transit": "MRT เพชรบุรี", "floorRange": "21-25", "deposit": "2 months", "lastVerified": "2026-11-07", "blurb": "ให้เช่า The Room สุขุมวิท 21 1 Bedroom 53.09 Sq.m 30,000 บ./เดือน วิวสวย ใกล้ MRT เพชรบุรี 550 เมตร พร้อมเข้าอยู่\n\n• 1 ห้องนอน | 1 ห้องนั่งเล่น | 1 ห้องน้ำ\n• ขนาด 53.09 ตร.ม.\n• วิว", "amenities": ["เฟอร์นิเจอร์ครบ", "สระว่ายน้ำ", "ฟิตเนส", "ห้องสมุด", "สวน", "ที่จอดรถ"]}, {"id": "MC-021", "project": "The Teak Sukhumvit 39", "area": "พร้อมพงษ์", "price": 28000, "size": 41, "beds": "1 ห้องนอน", "type": "1 ห้องนอน", "pets": false, "available": null, "status": "AVAILABLE", "statusLabel": "ว่าง", "walk": 18, "transit": "BTS พร้อมพงษ์", "floorRange": "6-10", "deposit": "2 months", "lastVerified": "2026-11-08", "blurb": "ให้เช่า The Teak Sukhumvit 39 - 1 Bed Plus 41 Sq.m (มีอ่างอาบน้ำ) 28,000 บ./เดือน ใกล้ BTS พร้อมพงษ์\n\n• 1 ห้องนอน 1 ห้องน้ำ พร้อมอ่างอาบน้ำ\n• 41 Sq.m.\n• ห้องนั่งเล่นและพื้นที่รับปร", "amenities": ["อ่างอาบน้ำ", "เฟอร์นิเจอร์ครบ", "มีชุดเครื่องนอน", "ห้องนั่งเล่นและพื้นที่รับประทานอาหาร", "ครัว/pantry พร้อมอุปกรณ์พื้นฐาน"]}];
+const PHOTOS = {"MC-001": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 1080, "h": 810}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 1080, "h": 810}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 1080, "h": 810}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 1080, "h": 810}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 1080, "h": 810}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 1080, "h": 810}, {"file": "7.webp", "label": "ภาพที่ 7", "w": 1080, "h": 810}, {"file": "8.webp", "label": "ภาพที่ 8", "w": 1080, "h": 810}], "MC-002": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 1080, "h": 810}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 1080, "h": 810}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 1080, "h": 810}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 1080, "h": 810}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 1080, "h": 810}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 1080, "h": 810}, {"file": "7.webp", "label": "ภาพที่ 7", "w": 1080, "h": 810}], "MC-003": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 960, "h": 720}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 720, "h": 960}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 960, "h": 720}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 960, "h": 720}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 960, "h": 720}], "MC-004": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 1080, "h": 810}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 1080, "h": 810}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 1080, "h": 810}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 1080, "h": 810}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 1080, "h": 810}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 1080, "h": 810}, {"file": "7.webp", "label": "ภาพที่ 7", "w": 1080, "h": 810}, {"file": "8.webp", "label": "ภาพที่ 8", "w": 1080, "h": 810}, {"file": "9.webp", "label": "ภาพที่ 9", "w": 1080, "h": 810}, {"file": "10.webp", "label": "ภาพที่ 10", "w": 1080, "h": 810}], "MC-005": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 1080, "h": 810}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 1080, "h": 810}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 1080, "h": 810}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 1080, "h": 810}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 1080, "h": 810}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 1080, "h": 810}, {"file": "7.webp", "label": "ภาพที่ 7", "w": 1080, "h": 810}, {"file": "8.webp", "label": "ภาพที่ 8", "w": 1080, "h": 810}], "MC-006": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 1080, "h": 810}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 1080, "h": 810}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 1080, "h": 810}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 1080, "h": 810}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 1080, "h": 810}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 1080, "h": 810}, {"file": "7.webp", "label": "ภาพที่ 7", "w": 1080, "h": 810}, {"file": "8.webp", "label": "ภาพที่ 8", "w": 1080, "h": 810}, {"file": "9.webp", "label": "ภาพที่ 9", "w": 1080, "h": 810}, {"file": "10.webp", "label": "ภาพที่ 10", "w": 1080, "h": 810}], "MC-007": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 1080, "h": 810}], "MC-008": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 1080, "h": 810}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 1080, "h": 810}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 1080, "h": 810}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 1080, "h": 810}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 1080, "h": 810}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 1080, "h": 810}], "MC-009": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 1080, "h": 810}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 1080, "h": 810}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 1080, "h": 810}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 1080, "h": 810}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 1080, "h": 810}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 1080, "h": 810}, {"file": "7.webp", "label": "ภาพที่ 7", "w": 1080, "h": 810}, {"file": "8.webp", "label": "ภาพที่ 8", "w": 1080, "h": 810}], "MC-010": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 1080, "h": 810}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 960, "h": 720}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 1080, "h": 810}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 1080, "h": 810}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 1080, "h": 810}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 1080, "h": 810}], "MC-011": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 1080, "h": 810}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 1080, "h": 810}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 1080, "h": 810}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 1080, "h": 810}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 1080, "h": 810}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 1080, "h": 810}, {"file": "7.webp", "label": "ภาพที่ 7", "w": 1080, "h": 810}, {"file": "8.webp", "label": "ภาพที่ 8", "w": 1080, "h": 810}, {"file": "9.webp", "label": "ภาพที่ 9", "w": 1080, "h": 810}], "MC-012": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 1080, "h": 810}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 1080, "h": 810}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 1080, "h": 810}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 1080, "h": 810}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 1080, "h": 810}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 1080, "h": 810}, {"file": "7.webp", "label": "ภาพที่ 7", "w": 1080, "h": 810}, {"file": "8.webp", "label": "ภาพที่ 8", "w": 1080, "h": 810}, {"file": "9.webp", "label": "ภาพที่ 9", "w": 1080, "h": 810}, {"file": "10.webp", "label": "ภาพที่ 10", "w": 1080, "h": 810}], "MC-013": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 1080, "h": 810}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 1080, "h": 810}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 1080, "h": 810}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 1080, "h": 810}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 1080, "h": 810}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 1080, "h": 810}, {"file": "7.webp", "label": "ภาพที่ 7", "w": 1080, "h": 810}, {"file": "8.webp", "label": "ภาพที่ 8", "w": 1080, "h": 810}], "MC-014": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 1080, "h": 810}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 810, "h": 1080}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 1080, "h": 810}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 810, "h": 1080}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 810, "h": 1080}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 810, "h": 1080}, {"file": "7.webp", "label": "ภาพที่ 7", "w": 810, "h": 1080}, {"file": "8.webp", "label": "ภาพที่ 8", "w": 810, "h": 1080}, {"file": "9.webp", "label": "ภาพที่ 9", "w": 813, "h": 1080}, {"file": "10.webp", "label": "ภาพที่ 10", "w": 1080, "h": 813}, {"file": "11.webp", "label": "ภาพที่ 11", "w": 1080, "h": 813}, {"file": "12.webp", "label": "ภาพที่ 12", "w": 1080, "h": 810}, {"file": "13.webp", "label": "ภาพที่ 13", "w": 1080, "h": 810}], "MC-015": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 810, "h": 1080}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 810, "h": 1080}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 810, "h": 1080}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 810, "h": 1080}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 810, "h": 1080}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 810, "h": 1080}, {"file": "7.webp", "label": "ภาพที่ 7", "w": 810, "h": 1080}, {"file": "8.webp", "label": "ภาพที่ 8", "w": 810, "h": 1080}], "MC-016": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 810, "h": 1080}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 810, "h": 1080}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 810, "h": 1080}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 810, "h": 1080}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 810, "h": 1080}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 810, "h": 1080}, {"file": "7.webp", "label": "ภาพที่ 7", "w": 720, "h": 960}, {"file": "8.webp", "label": "ภาพที่ 8", "w": 810, "h": 1080}, {"file": "9.webp", "label": "ภาพที่ 9", "w": 810, "h": 1080}], "MC-017": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 1080, "h": 810}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 1080, "h": 810}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 1080, "h": 810}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 1080, "h": 810}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 1080, "h": 810}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 1080, "h": 810}, {"file": "7.webp", "label": "ภาพที่ 7", "w": 1080, "h": 793}], "MC-018": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 1080, "h": 810}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 1080, "h": 810}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 1080, "h": 810}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 1080, "h": 810}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 1080, "h": 810}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 1080, "h": 810}, {"file": "7.webp", "label": "ภาพที่ 7", "w": 1080, "h": 810}, {"file": "8.webp", "label": "ภาพที่ 8", "w": 1080, "h": 810}, {"file": "9.webp", "label": "ภาพที่ 9", "w": 1080, "h": 810}], "MC-019": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 1080, "h": 810}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 1080, "h": 810}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 1080, "h": 810}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 1080, "h": 810}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 1080, "h": 810}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 1080, "h": 810}, {"file": "7.webp", "label": "ภาพที่ 7", "w": 1080, "h": 810}, {"file": "8.webp", "label": "ภาพที่ 8", "w": 1080, "h": 810}, {"file": "9.webp", "label": "ภาพที่ 9", "w": 1080, "h": 810}], "MC-020": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 810, "h": 1080}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 810, "h": 1080}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 810, "h": 1080}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 810, "h": 1080}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 810, "h": 1080}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 810, "h": 1080}, {"file": "7.webp", "label": "ภาพที่ 7", "w": 810, "h": 1080}, {"file": "8.webp", "label": "ภาพที่ 8", "w": 810, "h": 1080}, {"file": "9.webp", "label": "ภาพที่ 9", "w": 810, "h": 1080}, {"file": "10.webp", "label": "ภาพที่ 10", "w": 810, "h": 1080}, {"file": "11.webp", "label": "ภาพที่ 11", "w": 810, "h": 1080}, {"file": "12.webp", "label": "ภาพที่ 12", "w": 810, "h": 1080}, {"file": "13.webp", "label": "ภาพที่ 13", "w": 810, "h": 1080}], "MC-021": [{"file": "1.webp", "label": "ภาพที่ 1", "w": 1080, "h": 810}, {"file": "2.webp", "label": "ภาพที่ 2", "w": 1080, "h": 810}, {"file": "3.webp", "label": "ภาพที่ 3", "w": 1080, "h": 810}, {"file": "4.webp", "label": "ภาพที่ 4", "w": 1080, "h": 810}, {"file": "5.webp", "label": "ภาพที่ 5", "w": 1080, "h": 810}, {"file": "6.webp", "label": "ภาพที่ 6", "w": 1080, "h": 810}, {"file": "7.webp", "label": "ภาพที่ 7", "w": 1080, "h": 810}, {"file": "8.webp", "label": "ภาพที่ 8", "w": 1080, "h": 810}, {"file": "9.webp", "label": "ภาพที่ 9", "w": 1080, "h": 810}, {"file": "10.webp", "label": "ภาพที่ 10", "w": 1080, "h": 810}]};
+
 
 const NEARBY = {
   "ทองหล่อ": {
@@ -723,35 +724,22 @@ function mktHTML(l, wide){
 }
 function cardHTML(l, score){
   const cov = coverSrc(l.id);
-  const covImg = cov ? photoImg(cov, `ภาพตัวอย่างห้อง ${l.project} — ไม่ใช่ห้องจริง`, "cover-photo", 800, 450, false) : artHTML(l.art);
+  const covImg = cov ? photoImg(cov, `ห้อง ${l.project} ย่าน${l.area}`, "cover-photo", 800, 450, false) : "";
+  const walk = (l.walk!=null && l.transit) ? `เดินประมาณ ${l.walk} นาทีถึง ${l.transit}` : (l.transit ? l.transit : "ระยะเดินยังไม่ยืนยัน");
   return `<a class="card" href="${roomHref(l.id)}">
     <div class="cover">
       ${covImg}
-      
       ${score!=null ? `<span class="score-pill"><span>เข้ากัน</span>${score}%</span>` : ``}
-      <span class="badge-vacant">ยืนยันว่าว่างล่าสุดเมื่อ ${thDate(l.confirmed)}</span>
+      <span class="badge-vacant">${l.statusLabel||"ว่าง"}</span>
     </div>
-    <p class="photo-ai-caption">${PHOTO_AI_LABEL}</p>
     <div class="card-body">
-      <div class="meta">${l.area} · ย้ายเข้าได้ ${thDate(l.available)}</div>
+      <div class="meta">${l.area} · ${l.type||l.beds} · ${l.size} ตร.ม.</div>
       <h3>${l.project}</h3>
-      <div class="price">${money(l.price)} <small>บาท/เดือน</small></div>
-      ${mktHTML(l,false)}
-      ${tagsHTML(l)}
+      <div class="price">${money(l.price)} บาท/เดือน</div>
+      <div class="meta">${walk} · ไม่อนุญาตสัตว์เลี้ยง · รหัส ${l.id}</div>
     </div>
   </a>`;
 }
-
-
-const iconBack = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>`;
-const iconSpark = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.2 6.2L19 12l-5.8 2.8L12 21l-1.2-6.2L5 12l5.8-2.8L12 3z"/></svg>`;
-const iconSend = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`;
-const iconClose = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>`;
-const iconCheck = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7L10 17l-6-6"/><circle cx="12" cy="12" r="10" opacity=".25"/></svg>`;
-const iconTarget = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>`;
-const iconChart = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>`;
-
-
 function nearbyPlaces(area){
   const block = NEARBY[area];
   return block ? block.places.slice() : [];
@@ -869,7 +857,7 @@ function hoodHTML(){
     </div>
     ${famousHTML(area, "hood")}
     <div class="hood-rooms">
-      ${comingSoonHTML()}
+      
     </div>
   </div>`;
 }
@@ -881,16 +869,15 @@ function paintHood(){
   window.scrollTo(0, y);
 }
 function faqHTML(){
-  return `
-  <div class="faq-wrap">
-    <div class="eyebrow">คำถามที่พบบ่อย</div>
-    <h2>ก่อนเริ่มหาห้อง</h2>
-    <details class="faq"><summary>เมื่อไหร่จะมีประกาศห้องจริง</summary><p>เรากำลังเพิ่มคอนโดเช่าจริงเร็ว ๆ นี้ ในระหว่างนี้สำรวจย่านและร้านดังใกล้สถานีได้เลย หรือทัก LINE ${LINE_OA} เพื่อบอกงบและทำเลที่ต้องการ</p></details>
-    <details class="faq"><summary>ร้านดังในแต่ละย่านเป็นสถานที่จริงหรือไม่</summary><p>ใช่ ร้านอาหาร คาเฟ่ บาร์ และสถานที่ในหมวดร้านดังเป็นสถานที่จริงที่เปิดให้บริการ ระยะทางเป็นค่าประมาณจากสถานีรถไฟฟ้า</p></details>
-    <details class="faq"><summary>ติดต่อ MoveCondo ได้อย่างไร</summary><p>ทัก LINE Official Account <a href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">${LINE_OA}</a> ได้เลย</p></details>
-  </div>`;
+  return `<div class="faq-wrap">
+        <div class="eyebrow">คำถามที่พบบ่อย</div>
+        <h2>ก่อนเริ่มหาห้อง</h2>
+        <details class="faq"><summary>สนใจห้องไหน ติดต่ออย่างไร</summary><p>ทัก LINE Official Account <a href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">${LINE_OA}</a> แล้วบอกรหัสห้อง (เช่น MC-001) เพื่อให้เรารู้ว่าสนใจห้องไหน</p></details>
+        <details class="faq"><summary>เลี้ยงสัตว์ได้หรือไม่</summary><p>ทุกห้องในเว็บนี้ไม่อนุญาตสัตว์เลี้ยง</p></details>
+        <details class="faq"><summary>ร้านดังในแต่ละย่านเป็นสถานที่จริงหรือไม่</summary><p>ใช่ ร้านอาหาร คาเฟ่ บาร์ และสถานที่ในหมวดร้านดังเป็นสถานที่จริงที่เปิดให้บริการ ระยะทางเป็นค่าประมาณจากสถานีหรือจากโครงการเมื่อมีพิกัด</p></details>
+        <details class="faq"><summary>ติดต่อ MoveCondo ได้อย่างไร</summary><p>ทัก LINE Official Account <a href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">${LINE_OA}</a> ได้เลย</p></details>
+    </div>`;
 }
-
 function comingSoonHTML(){
   return `<div class="coming-soon" role="status">
       <div class="eyebrow">ประกาศเช่า</div>
@@ -906,17 +893,22 @@ function areaChipsHTML(prefix){
   return AREAS.map(a=>`<a class="chip" href="${areaHref(a)}">${a}</a>`).join(" ");
 }
 function homeView(){
+  const cards = LISTINGS.map(l => cardHTML(l)).join("");
   return `
   <div class="hero">
     <div class="hero-kicker">MoveCondo · ย้ายคอนโด · หาคอนโดเช่าที่ใช่</div>
     <h1>หาคอนโดเช่าที่ <em>ตรงกับคุณ</em></h1>
-    <p class="lead">สำรวจย่านใกล้รถไฟฟ้า ร้านอาหาร และคาเฟ่ดังรอบสถานี แล้วทัก LINE เพื่อบอกงบและทำเลที่ต้องการ เรากำลังเพิ่มประกาศห้องจริงเร็ว ๆ นี้</p>
+    <p class="lead">ดูคอนโดเช่าใกล้รถไฟฟ้าในกรุงเทพฯ จับคู่จากงบและทำเล แล้วทัก LINE ${LINE_OA} บอกรหัสห้องที่สนใจ</p>
     <div class="hero-actions">
-      <a class="btn btn-lg btn-primary" href="#areas">สำรวจย่าน</a>
+      <a class="btn btn-lg btn-primary" href="#listings">ดูห้องว่าง</a>
+      <a class="btn btn-lg btn-ghost" href="#/match">จับคู่ห้อง</a>
       <a class="btn btn-lg btn-ghost" href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">ทัก LINE ${LINE_OA}</a>
     </div>
   </div>
-  <div class="section">${comingSoonHTML()}</div>
+  <div class="section" id="listings">
+    <div class="section-head"><div><div class="eyebrow">ประกาศเช่า</div><h2>คอนโดเช่าที่คัดมาให้</h2><p>${LISTINGS.length} ห้อง · ไม่อนุญาตสัตว์เลี้ยงทุกห้อง · ทัก LINE ${LINE_OA} แล้วบอกรหัสห้อง</p></div></div>
+    <div class="grid">${cards}</div>
+  </div>
   <div class="band">${hoodHTML()}</div>
   ${faqHTML()}`;
 }
@@ -928,7 +920,7 @@ function matchView(prefs){
   <div class="page-hero">
     <a class="back" href="#/">${iconBack} กลับหน้าแรก</a>
     <h1>บอกสิ่งที่คุณต้องการ</h1>
-    <p>บอกทำเล งบ และความต้องการไว้ได้เลย เรากำลังเพิ่มประกาศห้องจริงเร็ว ๆ นี้</p>
+    <p>บอกทำเล งบ และความต้องการ แล้วดูห้องที่เข้ากัน ทุกห้องไม่อนุญาตสัตว์เลี้ยง</p>
   </div>
   <form class="form-card" id="matchForm">
     <div class="fields">
@@ -946,6 +938,8 @@ function matchView(prefs){
           <option value="35000" ${!p.budget || p.budget==35000?"selected":""}>35,000</option>
           <option value="40000" ${p.budget==40000?"selected":""}>40,000</option>
           <option value="50000" ${p.budget==50000?"selected":""}>50,000</option>
+          <option value="55000" ${p.budget==55000?"selected":""}>55,000</option>
+          <option value="60000" ${p.budget==60000?"selected":""}>60,000</option>
         </select>
       </div>
       <div class="seg-hint">ช่วง 20,000–40,000 บาท/เดือน เป็นเซ็กเมนต์ที่คนค้นหามาก — ค่าเริ่มต้นอยู่ที่ 35,000 บาท</div>
@@ -956,6 +950,10 @@ function matchView(prefs){
           <option value="30" ${!p.size || p.size==30?"selected":""}>30 ตร.ม.</option>
           <option value="35" ${p.size==35?"selected":""}>35 ตร.ม.</option>
           <option value="40" ${p.size==40?"selected":""}>40 ตร.ม.</option>
+          <option value="50" ${p.size==50?"selected":""}>50 ตร.ม.</option>
+          <option value="70" ${p.size==70?"selected":""}>70 ตร.ม.</option>
+          <option value="80" ${p.size==80?"selected":""}>80 ตร.ม.</option>
+          <option value="115" ${p.size==115?"selected":""}>115 ตร.ม.</option>
         </select>
       </div>
       <div class="field">
@@ -998,19 +996,25 @@ function scoreListing(l, p){
   else if(l.size >= p.size*0.9) s += 7;
   else s -= 6;
   if(p.pets==="yes"){ s += l.pets ? 18 : -26; }
-  if(l.available <= p.moveIn) s += 10;
+  const avail = l.available || (l.status==="AVAILABLE" ? "2026-11-12" : "9999-12-31");
+  if(avail <= p.moveIn) s += 10;
   else s -= 14;
   return Math.max(24, Math.min(98, Math.round(s)));
 }
 
 function resultsView(){
+  const p = prefs || { area:"any", budget:35000, size:30, pets:"no", moveIn:"2026-12-01" };
+  const rows = LISTINGS.map(l => ({ l, score: scoreListing(l, p) })).sort((a,b)=>b.score-a.score);
+  const petNote = p.pets==="yes" ? `<p class="lead">ทุกห้องในรายการตอนนี้ไม่อนุญาตสัตว์เลี้ยง คะแนนจึงถูกปรับตามนั้น</p>` : "";
+  const cards = rows.map(r => cardHTML(r.l, r.score)).join("");
   return `
   <div class="page-hero">
-    <a class="back" href="#/">${iconBack} กลับหน้าแรก</a>
-    <h1>กำลังเพิ่มห้องจริงเร็ว ๆ นี้</h1>
-    <p>ยังไม่มีประกาศเช่าในขณะนี้ สำรวจย่านและร้านดังใกล้สถานีได้เลย หรือทัก LINE เพื่อบอกความต้องการ</p>
+    <a class="back" href="#/match">${iconBack} ปรับความต้องการ</a>
+    <h1>ห้องที่เข้ากันกับคุณ</h1>
+    <p>เรียงตามคะแนนความเหมาะสมจากงบ ทำเล ขนาด และวันที่ย้ายเข้า · ทุกห้องไม่อนุญาตสัตว์เลี้ยง</p>
+    ${petNote}
   </div>
-  ${comingSoonHTML()}
+  <div class="section" id="listings"><div class="grid">${cards}</div></div>
   <div class="section" id="areas">
     <div class="section-head"><div><div class="eyebrow">สำรวจทำเล</div><h2>ย่านใกล้รถไฟฟ้า</h2></div></div>
     <nav class="hood-chips" aria-label="ย่านทั้งหมด">${areaChipsHTML()}</nav>
@@ -1093,8 +1097,8 @@ function detailView(id){
         <h2 style="font-size:22px;letter-spacing:-.02em;margin-bottom:12px">สิ่งที่ควรรู้ก่อนนัดชม</h2>
         <div class="hl-row">
           <div class="hl"><div class="ic">${iconWalk()}</div><div><h3>เดินถึงรถไฟฟ้า</h3><b>เดิน ${l.walk} นาทีถึง ${l.transit}</b></div></div>
-          <div class="hl"><div class="ic">${iconPaw()}</div><div><h3>สัตว์เลี้ยง</h3><b>${l.pets?"รับสัตว์เลี้ยงขนาดเล็ก":"ไม่รับสัตว์เลี้ยงในห้องนี้"}</b></div></div>
-          <div class="hl"><div class="ic">${iconPin()}</div><div><h3>ขนาดและแบบห้อง</h3><b>${l.size} ตร.ม. · ${l.beds} · ชั้น ${l.floor}</b></div></div>
+          <div class="hl"><div class="ic">${iconPaw()}</div><div><h3>สัตว์เลี้ยง</h3><b>${l.pets?"รับสัตว์เลี้ยงขนาดเล็ก":"ไม่อนุญาตสัตว์เลี้ยง"}</b></div></div>
+          <div class="hl"><div class="ic">${iconPin()}</div><div><h3>ขนาดและแบบห้อง</h3><b>${l.size} ตร.ม. · ${l.beds}${l.floorRange?" · ช่วงชั้น "+l.floorRange:""}</b></div></div>
           <div class="hl"><div class="ic">${iconCal()}</div><div><h3>ย้ายเข้าได้</h3><b>${thDate(l.available)}</b></div></div>
         </div>
       </section>
@@ -1148,9 +1152,10 @@ function stickyFor(id){
 }
 
 function lineModalHTML(id){
+  const code = id ? ` แล้วบอกรหัสห้อง <strong>${id}</strong>` : "";
   return `<div class="modal">
     <h3 id="lineTitle">ติดต่อผ่าน LINE</h3>
-    <p>ทัก MoveCondo ได้ที่ LINE Official Account <strong>${LINE_OA}</strong></p>
+    <p>ทัก MoveCondo ได้ที่ LINE Official Account <strong>${LINE_OA}</strong>${code} ปุ่มนี้ไม่ได้ใส่ข้อความล่วงหน้า</p>
     <a class="btn btn-md btn-primary btn-full" href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">เปิด LINE @576yhgtz</a>
     <button class="btn btn-md btn-ghost btn-full" type="button" data-close="line" style="margin-top:8px">ปิด</button>
   </div>`;
@@ -1319,8 +1324,11 @@ function whyListing(l, needs){
   if (needs.budget && l.price <= needs.budget) r.push("ค่าเช่า " + money(l.price) + " บาท อยู่ในงบ");
   else if (needs.budget && l.price > needs.budget) r.push("สูงกว่างบเล็กน้อย แต่ยังใกล้เคียง");
   if (needs.pets && l.pets) r.push("รับสัตว์เลี้ยง");
-  if (needs.bts && l.walk<=5) r.push("เดิน " + l.walk + " นาทีถึง " + l.transit);
-  else if (needs.bts) r.push("ใกล้ " + l.transit + " (" + l.walk + " นาที)");
+  if (needs.pets && !l.pets) r.push("ห้องนี้ไม่อนุญาตสัตว์เลี้ยง");
+  if (needs.pets && !l.pets) r.push("ห้องนี้ไม่อนุญาตสัตว์เลี้ยง");
+  if (needs.bts && l.transit && l.walk!=null && l.walk<=5) r.push("เดิน " + l.walk + " นาทีถึง " + l.transit);
+  else if (needs.bts && l.transit && l.walk!=null) r.push("ใกล้ " + l.transit + " (" + l.walk + " นาที)");
+  else if (needs.bts && l.transit) r.push("ใกล้ " + l.transit);
   if (needs.beds==="studio" && l.beds.includes("สตูดิโอ")) r.push("เป็นสตูดิโอตามที่ขอ");
   if (needs.beds==="1plus" && l.beds.includes("พลัส")) r.push("เป็น 1 ห้องนอนพลัสตามที่ขอ");
   if (needs.beds===1 && l.beds.includes("1")) r.push(l.beds.includes("พลัส") ? "เป็น 1 ห้องนอนพลัส ใกล้เคียงกับที่ขอ" : "เป็น 1 ห้องนอนตามที่ขอ");
@@ -1348,13 +1356,24 @@ function understandText(needs){
 
 function recommend(text){
   const needs = parseNeeds(text);
-  return { needs, rows: [] };
+  const prefs = {
+    area: needs.areas[0] || "any",
+    budget: needs.budget || 35000,
+    size: needs.size || 30,
+    pets: needs.pets ? "yes" : "no",
+    moveIn: needs.moveIn || "2026-12-01"
+  };
+  const rows = LISTINGS.map(l => {
+    const sc = scoreListing(l, prefs);
+    return { l, score: sc, why: whyListing(l, needs) };
+  }).sort((a,b)=>b.score-a.score).slice(0,3);
+  return { needs, rows };
 }
 
 function greetMsg(){
   return {
     role:"bot",
-    text:"สวัสดีค่ะ ฉันเป็นผู้ช่วยของ MoveCondo (ย้ายคอนโด) ตอนนี้กำลังเพิ่มห้องจริงเร็ว ๆ นี้ ถามเรื่องย่าน ร้านดังใกล้สถานี หรือทัก LINE เพื่อบอกความต้องการได้เลยค่ะ",
+    text:"สวัสดีค่ะ ฉันเป็นผู้ช่วยของ MoveCondo (ย้ายคอนโด) บอกงบ ทำเล หรือจำนวนห้องนอนได้เลยค่ะ จะแนะนำจากประกาศจริงให้ ทุกห้องไม่อนุญาตสัตว์เลี้ยง ทัก LINE "+LINE_OA+" แล้วบอกรหัสห้องได้เลย",
     chips: AI_STARTERS
   };
 }
@@ -1442,7 +1461,14 @@ function pushAIReply(text){
   const askingRooms = /ห้อง|เช่า|งบ|ว่าง|จับคู่|recommend|rent/.test(q) || needs.budget || needs.beds;
   let msg;
   if (askingRooms && !needs.cafe){
-    msg = "ขณะนี้กำลังเพิ่มห้องจริงเร็ว ๆ นี้ค่ะ ยังไม่มีประกาศให้แนะนำ ทัก LINE " + LINE_OA + " เพื่อบอกงบและทำเลได้เลย หรือเลือกดูย่านด้านล่าง";
+    const rec = recommend(text);
+    if (rec.rows.length){
+      msg = "จากประกาศตอนนี้ ห้องเหล่านี้ใกล้กับที่คุณบอกค่ะ ทุกห้องไม่อนุญาตสัตว์เลี้ยง ทัก LINE " + LINE_OA + " แล้วบอกรหัสห้องได้เลย";
+      rec.rows.forEach(row => { /* attach below */ });
+      aiMessages.push({ role:"bot", text: msg, rooms: rec.rows, chips: follow });
+      renderAI(); return;
+    }
+    msg = "ยังจับคู่ห้องจากข้อความนี้ไม่ได้ชัดเจนค่ะ บอกงบ ทำเล หรือทัก LINE " + LINE_OA + " ได้เลย";
   } else {
     const areas = needs.areas.length ? needs.areas : (homeArea ? [homeArea] : AREAS.slice(0,3));
     const mentions = [];
@@ -1707,3 +1733,73 @@ document.addEventListener("keydown", (e)=>{
   if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
   else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
 });
+
+
+function initStaticGallery(){
+  const stage = document.getElementById("galleryStage");
+  if(!stage) return;
+  const slides = [...stage.querySelectorAll(".gallery-slide")];
+  if(!slides.length) return;
+  const root = document.getElementById("gallery") || stage.parentElement;
+  const thumbs = root ? [...root.querySelectorAll(".thumb[data-gal]")] : [];
+  const count = root ? root.querySelector(".gal-count") : null;
+  let idx = 0;
+  function show(i){
+    idx = (i + slides.length) % slides.length;
+    slides.forEach((s,n)=> s.toggleAttribute("hidden", n!==idx));
+    thumbs.forEach((b,n)=>{
+      const on = n===idx;
+      b.classList.toggle("on", on);
+      b.setAttribute("aria-pressed", on?"true":"false");
+    });
+    if(count) count.textContent = String(idx+1).padStart(2,"0") + " / " + String(slides.length).padStart(2,"0");
+  }
+  if(!document.__mcGalBound){
+    document.addEventListener("click", (e)=>{
+      const t = e.target.closest("[data-gal]");
+      if(!t || !document.getElementById("galleryStage")) return;
+      const v = t.getAttribute("data-gal");
+      if(v==="prev") show(idx-1);
+      else if(v==="next") show(idx+1);
+      else if(/^\d+$/.test(v)) show(parseInt(v,10));
+    });
+    document.__mcGalBound = true;
+  }
+  show(0);
+}
+document.addEventListener("DOMContentLoaded", () => { initStaticGallery(); });
+
+
+function initStaticGallery(){
+  const stage = document.getElementById("galleryStage");
+  if(!stage) return;
+  const slides = [...stage.querySelectorAll(".gallery-slide")];
+  if(!slides.length) return;
+  const root = document.getElementById("gallery") || stage.parentElement;
+  const thumbs = root ? [...root.querySelectorAll(".thumb[data-gal]")] : [];
+  const count = root ? root.querySelector(".gal-count") : null;
+  let idx = 0;
+  function show(i){
+    idx = (i + slides.length) % slides.length;
+    slides.forEach((s,n)=> s.toggleAttribute("hidden", n!==idx));
+    thumbs.forEach((b,n)=>{
+      const on = n===idx;
+      b.classList.toggle("on", on);
+      b.setAttribute("aria-pressed", on?"true":"false");
+    });
+    if(count) count.textContent = String(idx+1).padStart(2,"0") + " / " + String(slides.length).padStart(2,"0");
+  }
+  if(!document.__mcGalBound){
+    document.addEventListener("click", (e)=>{
+      const t = e.target.closest("[data-gal]");
+      if(!t || !document.getElementById("galleryStage")) return;
+      const v = t.getAttribute("data-gal");
+      if(v==="prev") show(idx-1);
+      else if(v==="next") show(idx+1);
+      else if(/^\d+$/.test(v)) show(parseInt(v,10));
+    });
+    document.__mcGalBound = true;
+  }
+  show(0);
+}
+document.addEventListener("DOMContentLoaded", () => { initStaticGallery(); });
