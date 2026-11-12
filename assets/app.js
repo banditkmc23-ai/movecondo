@@ -1983,7 +1983,7 @@ function aiMiniHTML(row){
       <span class="score-pill" style="position:static"><span>เข้ากัน</span>${row.score}%</span>
     </div>
     <ul class="why">${row.why.map(w=>`<li>${w}</li>`).join("")}</ul>
-    <div class="acts" onclick="event.stopPropagation()">
+    <div class="acts">
       <a class="btn btn-sm btn-primary" href="${roomHref(l.id)}">ดูรายละเอียด</a>
       <button class="btn btn-sm btn-ghost" type="button" data-book="${l.id}">นัดชมห้อง</button>
       <a class="btn btn-sm btn-line" href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">LINE</a>
@@ -2191,7 +2191,7 @@ document.addEventListener("click", (e) => {
 
 document.addEventListener("click", (e)=>{
   const listing = e.target.closest("[data-open-listing]");
-  if(listing){
+  if(listing && !e.target.closest(".acts, [data-book]")){
       closeAI();
       if(listing.tagName==="A") return;
       location.href = roomHref(listing.dataset.openListing);
