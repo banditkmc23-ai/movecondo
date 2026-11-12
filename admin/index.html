@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>สถิติผู้เข้าชม | MoveCondo</title>
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta name="googlebot" content="noindex,nofollow" />
+  <meta name="referrer" content="no-referrer" />
+  <meta name="theme-color" content="#B9532F" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --ac:#B9532F; --ac-soft:#f6e9e3; --ink:#1c1816; --mute:#6b625d; --line:#ece6e2; --bg:#fff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Prompt","Noto Sans Thai",sans-serif; color:var(--ink); background:var(--bg); -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:1120px; margin:0 auto; padding:20px 16px 56px; }
+    header { display:flex; align-items:center; gap:12px; justify-content:space-between; padding-bottom:16px; border-bottom:1px solid var(--line); margin-bottom:20px; }
+    .brand { display:flex; align-items:center; gap:10px; }
+    .logo { width:36px; height:36px; border-radius:10px; background:var(--ac); color:#fff; font-weight:700; display:grid; place-items:center; }
+    .eyebrow { font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--ac); font-weight:600; }
+    h1 { font-size:20px; margin:0; line-height:1.2; }
+    h2 { font-size:16px; margin:0 0 12px; }
+    .btn { font:inherit; border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:999px; min-height:40px; padding:0 16px; cursor:pointer; }
+    .btn-primary { background:var(--ac); border-color:var(--ac); color:#fff; font-weight:600; }
+    .seg { display:inline-flex; border:1px solid var(--line); border-radius:999px; padding:3px; gap:2px; }
+    .seg button { font:inherit; border:0; background:transparent; border-radius:999px; padding:6px 14px; cursor:pointer; color:var(--mute); }
+    .seg button[aria-pressed="true"] { background:var(--ac); color:#fff; }
+    .card { border:1px solid var(--line); border-radius:16px; padding:18px; background:#fff; }
+    .grid { display:grid; gap:14px; }
+    .kpis { grid-template-columns:repeat(2,1fr); }
+    .kpi .n { font-size:34px; font-weight:700; line-height:1.1; }
+    .kpi .l { color:var(--mute); font-size:14px; }
+    .kpi.hl { background:var(--ac-soft); border-color:transparent; }
+    .kpi.hl .n { color:var(--ac); }
+    .two { grid-template-columns:1fr; }
+    .bar-row { display:grid; grid-template-columns:1fr auto; gap:4px 12px; align-items:center; padding:8px 0; border-top:1px solid var(--line); font-size:14px; }
+    .bar-row:first-of-type { border-top:0; }
+    .bar-row .t { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .bar-row .t small { color:var(--mute); }
+    .bar-row .v { font-weight:600; font-variant-numeric:tabular-nums; }
+    .bar-row .b { grid-column:1 / -1; height:6px; border-radius:6px; background:var(--ac-soft); overflow:hidden; }
+    .bar-row .b i { display:block; height:100%; background:var(--ac); border-radius:6px; }
+    .chart { width:100%; height:200px; display:block; }
+    .legend { display:flex; gap:16px; font-size:13px; color:var(--mute); margin-top:8px; }
+    .legend i { display:inline-block; width:10px; height:10px; border-radius:3px; margin-right:6px; vertical-align:middle; }
+    .muted { color:var(--mute); font-size:14px; }
+    .ai { border-style:dashed; }
+    .pill { display:inline-block; font-size:12px; padding:3px 10px; border-radius:999px; background:var(--ac-soft); color:var(--ac); font-weight:600; }
+    .split { display:flex; height:14px; border-radius:8px; overflow:hidden; background:var(--line); margin:10px 0 8px; }
+    .split i { display:block; height:100%; }
+    #login { max-width:380px; margin:8vh auto 0; }
+    label { display:block; font-size:14px; margin:12px 0 6px; }
+    input { width:100%; font:inherit; padding:11px 14px; border:1px solid var(--line); border-radius:12px; }
+    input:focus { outline:2px solid var(--ac); outline-offset:1px; border-color:transparent; }
+    .err { color:#a3261b; font-size:14px; min-height:20px; margin-top:10px; }
+    .toolbar { display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between; margin-bottom:14px; }
+    footer { margin-top:28px; font-size:13px; color:var(--mute); display:flex; flex-wrap:wrap; gap:8px 16px; align-items:center; }
+    footer label { display:inline-flex; gap:8px; align-items:center; margin:0; font-size:13px; }
+    footer input { width:auto; }
+    [hidden] { display:none !important; }
+    @media (min-width:760px) {
+      .wrap { padding:28px 28px 64px; }
+      .kpis { grid-template-columns:repeat(4,1fr); }
+      .two { grid-template-columns:1fr 1fr; }
+      .chart { height:240px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><div class="logo">M</div><div><div class="eyebrow">Stats</div><h1>สถิติผู้เข้าชม MoveCondo</h1></div></div>
+    <button class="btn" id="logout" hidden>ออกจากระบบ</button>
+  </header>
+
+  <section id="login" hidden>
+    <div class="card">
+      <h2>เข้าสู่ระบบเจ้าของเว็บ</h2>
+      <p class="muted" style="margin:0 0 4px">หน้านี้สำหรับเจ้าของเว็บเท่านั้น</p>
+      <form id="login-form">
+        <label for="email">อีเมล</label>
+        <input id="email" type="email" autocomplete="username" required />
+        <label for="password">รหัสผ่าน</label>
+        <input id="password" type="password" autocomplete="current-password" required />
+        <div class="err" id="login-err" role="alert"></div>
+        <button class="btn btn-primary" style="width:100%;margin-top:6px" type="submit">เข้าสู่ระบบ</button>
+      </form>
+    </div>
+  </section>
+
+  <main id="dash" hidden>
+    <div class="toolbar">
+      <div class="muted" id="updated">กำลังโหลด…</div>
+      <div class="seg" role="group" aria-label="ช่วงเวลา">
+        <button type="button" data-days="7" aria-pressed="true">7 วัน</button>
+        <button type="button" data-days="30" aria-pressed="false">30 วัน</button>
+      </div>
+    </div>
+
+    <div class="grid kpis">
+      <div class="card kpi hl"><div class="l">คนเข้าเว็บวันนี้</div><div class="n" id="k-today">–</div></div>
+      <div class="card kpi"><div class="l">หน้าที่เปิดวันนี้</div><div class="n" id="k-today-pv">–</div></div>
+      <div class="card kpi"><div class="l" id="k-range-l">คนเข้าเว็บ 7 วัน</div><div class="n" id="k-range">–</div></div>
+      <div class="card kpi"><div class="l" id="k-range-pv-l">หน้าที่เปิด 7 วัน</div><div class="n" id="k-range-pv">–</div></div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h2>จำนวนคนเข้าเว็บรายวัน</h2>
+      <svg class="chart" id="chart" role="img" aria-label="กราฟจำนวนคนเข้าเว็บรายวัน"></svg>
+      <div class="legend"><span><i style="background:#B9532F"></i>คน</span><span><i style="background:#f0d5c9"></i>หน้าที่เปิด</span></div>
+    </div>
+
+    <div class="grid two" style="margin-top:14px">
+      <div class="card"><h2>หน้าที่คนดูมากที่สุด</h2><div id="pages"></div></div>
+      <div class="card"><h2>คนมาจากไหน</h2><div id="refs"></div></div>
+      <div class="card">
+        <h2>มือถือ / คอมพิวเตอร์</h2>
+        <div class="split" id="dev-split"></div>
+        <div id="devs"></div>
+        <h2 style="margin-top:18px">ภาษาที่ใช้ดูเว็บ</h2>
+        <div id="langs"></div>
+      </div>
+      <div class="card ai">
+        <h2>AI ที่เข้าเว็บ <span class="pill" id="ai-pill">รอโดเมน</span></h2>
+        <div id="ai-body">
+          <p class="muted" style="margin:0 0 8px">จะเริ่มนับได้เมื่อเว็บมีโดเมนของตัวเอง (เช่น movecondo.com) ที่ต่อผ่าน Cloudflare</p>
+          <p class="muted" style="margin:0">ตอนนั้นระบบจะแยกให้เห็นว่า ChatGPT, Gemini, Perplexity, Claude และบอทค้นหาอย่าง Google เข้ามากี่ครั้ง ระบบหลังบ้านเตรียมไว้แล้ว</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <span>นับเฉพาะคน ไม่เก็บชื่อ เบอร์ IP หรือคุกกี้ · วันตามเวลาไทย</span>
+      <label><input type="checkbox" id="nostats" /> ไม่นับการเข้าเว็บจากเครื่องนี้</label>
+    </footer>
+  </main>
+</div>
+
+<script>
+(function () {
+  // ---- config -------------------------------------------------------------
+  // Publishable key is safe in the browser: it can only add a visit row.
+  // Who may read the stats is controlled in the database (private.stats_admins).
+  var SB = "https://cypxbfueevkaytqqeynd.supabase.co";
+  var KEY = "sb_publishable_hBlz3-ebT0TbATbvcLkPVg_3zGI02yS";
+  var SITE = "/movecondo/";
+  // -------------------------------------------------------------------------
+  var $ = function (id) { return document.getElementById(id); };
+  var S_KEY = "mc-stats-session", days = 7, names = {}, session = null;
+  var fmt = new Intl.NumberFormat("th-TH");
+
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function save(s) { session = s; if (s) localStorage.setItem(S_KEY, JSON.stringify(s)); else localStorage.removeItem(S_KEY); }
+  function auth(body, grant) {
+    return fetch(SB + "/auth/v1/token?grant_type=" + grant, { method: "POST", headers: { apikey: KEY, "Content-Type": "application/json" }, body: JSON.stringify(body) })
+      .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw j; return { at: j.access_token, rt: j.refresh_token, exp: Date.now() + (j.expires_in || 3600) * 1000 }; }); });
+  }
+  function token() {
+    if (!session) return Promise.reject({ code: "nosession" });
+    if (session.exp - Date.now() > 60000) return Promise.resolve(session.at);
+    return auth({ refresh_token: session.rt }, "refresh_token").then(function (s) { save(s); return s.at; });
+  }
+  function rpc(d) {
+    return token().then(function (t) {
+      return fetch(SB + "/rest/v1/rpc/stats_summary", { method: "POST", headers: { apikey: KEY, Authorization: "Bearer " + t, "Content-Type": "application/json" }, body: JSON.stringify({ days: d }) });
+    }).then(function (r) { return r.json().then(function (j) { if (!r.ok) throw j; return j; }); });
+  }
+
+  function show(which) { $("login").hidden = which !== "login"; $("dash").hidden = which !== "dash"; $("logout").hidden = which !== "dash"; }
+
+  function loadNames() {
+    return fetch("../rooms.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (j) {
+      (j.rooms || []).forEach(function (r) { names["rooms/" + r.id.toLowerCase() + "/"] = r.project + " · " + r.id; });
+      (j.areas || []).forEach(function (a) { names["areas/" + a.slug + "/"] = "ย่าน" + a.th; });
+    }).catch(function () {});
+  }
+  function pageName(p) {
+    var rest = p.indexOf(SITE) === 0 ? p.slice(SITE.length) : p.replace(/^\//, "");
+    var hash = "", i = rest.indexOf("#");
+    if (i >= 0) { hash = rest.slice(i); rest = rest.slice(0, i); }
+    rest = rest.replace(/index\.html$/, "");
+    var routes = { "#/match": "จับคู่ห้อง", "#/results": "ผลการจับคู่ห้อง", "#/rooms": "ห้องว่างทั้งหมด" };
+    if (!rest) return hash ? (routes[hash] || "หน้าแรก " + hash) : "หน้าแรก";
+    if (rest === "404.html") return "หน้าไม่พบ (404)";
+    return names[rest] || ("/" + rest + hash);
+  }
+  function refName(h) {
+    if (!h) return "เข้าตรง / ไม่ทราบที่มา";
+    var m = [[/google\./, "Google"], [/(^|\.)line\.me$|line\.naver/, "LINE"], [/facebook\.com|fb\.com|m\.facebook/, "Facebook"], [/instagram/, "Instagram"], [/tiktok/, "TikTok"], [/bing\.com/, "Bing"], [/chatgpt\.com|openai\.com/, "ChatGPT"], [/perplexity/, "Perplexity"], [/gemini\.google|bard\.google/, "Gemini"], [/(^|\.)x\.com$|t\.co$|twitter/, "X (Twitter)"], [/youtube/, "YouTube"]];
+    for (var i = 0; i < m.length; i++) if (m[i][0].test(h)) return m[i][1] + ' <small>' + esc(h) + '</small>';
+    return esc(h);
+  }
+  function rows(el, items, empty) {
+    if (!items.length) { el.innerHTML = '<p class="muted" style="margin:0">' + empty + "</p>"; return; }
+    var max = Math.max.apply(null, items.map(function (x) { return x.v; })) || 1;
+    el.innerHTML = items.map(function (x) {
+      return '<div class="bar-row"><div class="t" title="' + esc(x.title || "") + '">' + x.label + '</div><div class="v">' + fmt.format(x.v) + (x.sub ? ' <small class="muted">' + x.sub + "</small>" : "") + '</div><div class="b"><i style="width:' + Math.max(3, Math.round(x.v / max * 100)) + '%"></i></div></div>';
+    }).join("");
+  }
+  function chart(daily) {
+    var svg = $("chart"), W = svg.clientWidth || 600, H = svg.clientHeight || 220, pl = 30, pb = 22, pt = 10;
+    var n = daily.length, max = Math.max(1, Math.max.apply(null, daily.map(function (d) { return d.pageviews; })));
+    var step = Math.pow(10, Math.floor(Math.log10(max))); var top = Math.ceil(max / step) * step; if (top < 4) top = 4;
+    var bw = (W - pl) / n, out = "";
+    for (var g = 0; g <= 4; g++) { var y = pt + (H - pb - pt) * (1 - g / 4); out += '<line x1="' + pl + '" x2="' + W + '" y1="' + y + '" y2="' + y + '" stroke="#ece6e2"/><text x="' + (pl - 6) + '" y="' + (y + 4) + '" font-size="11" text-anchor="end" fill="#6b625d">' + Math.round(top * g / 4) + "</text>"; }
+    var every = n > 14 ? Math.ceil(n / 8) : 1;
+    daily.forEach(function (d, i) {
+      var x = pl + i * bw, h1 = (H - pb - pt) * d.pageviews / top, h2 = (H - pb - pt) * d.visitors / top, w = Math.max(2, bw * 0.62);
+      var dt = new Date(d.day + "T00:00:00"), lab = dt.getDate() + "/" + (dt.getMonth() + 1);
+      out += '<g><title>' + lab + ": " + d.visitors + " คน · " + d.pageviews + " หน้า</title>";
+      out += '<rect x="' + (x + (bw - w) / 2) + '" y="' + (H - pb - h1) + '" width="' + w + '" height="' + h1 + '" rx="3" fill="#f0d5c9"/>';
+      out += '<rect x="' + (x + (bw - w) / 2) + '" y="' + (H - pb - h2) + '" width="' + w + '" height="' + h2 + '" rx="3" fill="#B9532F"/></g>';
+      if (i % every === 0 || i === n - 1) out += '<text x="' + (x + bw / 2) + '" y="' + (H - 6) + '" font-size="11" text-anchor="middle" fill="#6b625d">' + lab + "</text>";
+    });
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H); svg.innerHTML = out;
+  }
+
+  var last = null;
+  function render(d) {
+    last = d;
+    $("k-today").textContent = fmt.format(d.today_visitors);
+    $("k-today-pv").textContent = fmt.format(d.today_pageviews);
+    $("k-range").textContent = fmt.format(d.total_visitors);
+    $("k-range-pv").textContent = fmt.format(d.total_pageviews);
+    $("k-range-l").textContent = "คนเข้าเว็บ " + d.days + " วัน";
+    $("k-range-pv-l").textContent = "หน้าที่เปิด " + d.days + " วัน";
+    $("updated").textContent = "อัปเดต " + new Date().toLocaleString("th-TH", { timeZone: "Asia/Bangkok", dateStyle: "medium", timeStyle: "short" }) + " (เวลาไทย)";
+    chart(d.daily);
+    rows($("pages"), d.top_pages.slice(0, 12).map(function (p) { return { label: esc(pageName(p.path)), title: p.path, v: p.visitors, sub: p.pageviews + " ครั้ง" }; }), "ยังไม่มีข้อมูล");
+    rows($("refs"), d.referrers.slice(0, 10).map(function (r) { return { label: refName(r.host), v: r.visitors, sub: "คน" }; }), "ยังไม่มีข้อมูล");
+    var m = d.devices.mobile || 0, k = d.devices.desktop || 0, tot = m + k;
+    $("dev-split").innerHTML = tot ? '<i style="width:' + (m / tot * 100) + '%;background:#B9532F"></i><i style="width:' + (k / tot * 100) + '%;background:#f0d5c9"></i>' : "";
+    $("devs").innerHTML = '<div class="legend" style="margin:0"><span><i style="background:#B9532F"></i>มือถือ ' + fmt.format(m) + (tot ? " (" + Math.round(m / tot * 100) + "%)" : "") + '</span><span><i style="background:#f0d5c9"></i>คอมพิวเตอร์ ' + fmt.format(k) + (tot ? " (" + Math.round(k / tot * 100) + "%)" : "") + "</span></div>";
+    var th = d.langs.th || 0, en = d.langs.en || 0;
+    $("langs").innerHTML = '<div class="legend" style="margin:0"><span>ไทย ' + fmt.format(th) + " คน</span><span>English " + fmt.format(en) + " คน</span></div>";
+    if (d.edge_enabled) {
+      $("ai-pill").textContent = "เปิดใช้แล้ว";
+      var kinds = { ai_bot: "AI", search_bot: "บอทค้นหา", other_bot: "บอทอื่น" };
+      var el = $("ai-body"); el.innerHTML = '<div id="ai-rows"></div>';
+      rows($("ai-rows"), d.bots_by_agent.map(function (b) { return { label: esc(b.agent) + " <small>" + (kinds[b.kind] || b.kind) + "</small>", v: b.hits, sub: "ครั้ง" }; }), "ยังไม่มี AI เข้ามาในช่วงนี้");
+    }
+  }
+  function load() {
+    $("updated").textContent = "กำลังโหลด…";
+    return rpc(days).then(render).catch(function (e) {
+      if (e && (e.code === "42501" || e.code === "nosession" || e.code === "PGRST301" || e.error_code === "refresh_token_not_found")) {
+        save(null); show("login");
+        $("login-err").textContent = e.code === "42501" ? "บัญชีนี้ยังไม่ได้รับสิทธิ์ดูสถิติ" : "";
+      } else { $("updated").textContent = "โหลดข้อมูลไม่สำเร็จ ลองรีเฟรชอีกครั้ง"; }
+    });
+  }
+
+  $("login-form").addEventListener("submit", function (ev) {
+    ev.preventDefault(); $("login-err").textContent = "";
+    auth({ email: $("email").value.trim().toLowerCase(), password: $("password").value }, "password")
+      .then(function (s) { save(s); $("password").value = ""; try { localStorage.setItem("mc-nostats", "1"); } catch (e) {} $("nostats").checked = true; show("dash"); return load(); })
+      .catch(function () { $("login-err").textContent = "อีเมลหรือรหัสผ่านไม่ถูกต้อง"; });
+  });
+  $("logout").addEventListener("click", function () {
+    var at = session && session.at;
+    if (at) fetch(SB + "/auth/v1/logout", { method: "POST", headers: { apikey: KEY, Authorization: "Bearer " + at } }).catch(function () {});
+    save(null); show("login");
+  });
+  Array.prototype.forEach.call(document.querySelectorAll(".seg button"), function (b) {
+    b.addEventListener("click", function () {
+      days = +b.getAttribute("data-days");
+      Array.prototype.forEach.call(document.querySelectorAll(".seg button"), function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      load();
+    });
+  });
+  $("nostats").addEventListener("change", function () { try { if (this.checked) localStorage.setItem("mc-nostats", "1"); else localStorage.removeItem("mc-nostats"); } catch (e) {} });
+  var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(function () { if (last) chart(last.daily); }, 150); });
+
+  try { session = JSON.parse(localStorage.getItem(S_KEY) || "null"); } catch (e) {}
+  try { $("nostats").checked = localStorage.getItem("mc-nostats") === "1"; } catch (e) {}
+  loadNames().then(function () { if (session) { show("dash"); load(); } else show("login"); });
+})();
+</script>
+</body>
+</html>

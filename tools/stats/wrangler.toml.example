@@ -1,0 +1,13 @@
+# Copy to wrangler.toml when the custom domain is live on Cloudflare.
+name = "movecondo-edge-stats"
+main = "cloudflare-worker.js"
+compatibility_date = "2026-11-01"
+
+# Run on every request to the custom domain (replace with the real domain).
+routes = [{ pattern = "movecondo.example/*", zone_name = "movecondo.example" }]
+
+[vars]
+SUPABASE_URL = "https://cypxbfueevkaytqqeynd.supabase.co"
+# ORIGIN = "https://banditkmc23-ai.github.io"   # only if Cloudflare is not already proxying to GitHub Pages
+
+# Secret (never commit): npx wrangler secret put SUPABASE_SERVICE_ROLE_KEY
