@@ -129,8 +129,8 @@
       filter: ["!", ["has", "hide_3d"]],
       paint: {
         "fill-extrusion-color": "#e9e6e2",
-        "fill-extrusion-height": ["coalesce", ["get", "render_height"], ["get", "height"], 8],
-        "fill-extrusion-base": ["coalesce", ["get", "render_min_height"], ["get", "min_height"], 0],
+        "fill-extrusion-height": ["case", ["==", ["typeof", ["coalesce", ["get", "render_height"], ["get", "height"]]], "number"], ["max", 0, ["coalesce", ["get", "render_height"], ["get", "height"], 8]], 8],
+        "fill-extrusion-base": ["case", ["==", ["typeof", ["coalesce", ["get", "render_min_height"], ["get", "min_height"]]], "number"], ["max", 0, ["coalesce", ["get", "render_min_height"], ["get", "min_height"], 0]], 0],
         "fill-extrusion-opacity": 0.42
       }
     };

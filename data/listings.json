@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-12",
+  "generated": "2026-11-12T17:50:00+07:00",
   "rooms": [
     {
       "id": "MC-001",
@@ -26,7 +26,7 @@
       "floorRange": "1-5",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
-      "available": null,
+      "available": "now",
       "pets": false,
       "lastVerified": "2026-11-11",
       "amenities": [
@@ -44,9 +44,7 @@
         "images/rooms/mc-001/7.webp",
         "images/rooms/mc-001/8.webp"
       ],
-      "unverified": [
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-002",
@@ -91,9 +89,7 @@
         "images/rooms/mc-002/6.webp",
         "images/rooms/mc-002/7.webp"
       ],
-      "unverified": [
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-003",
@@ -139,9 +135,7 @@
         "images/rooms/mc-003/4.webp",
         "images/rooms/mc-003/5.webp"
       ],
-      "unverified": [
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-004",
@@ -153,7 +147,7 @@
       "station": "BTS เอกมัย",
       "stationRaw": "BTS Ekkamai",
       "stationId": "bts-ekkamai",
-      "walk": null,
+      "walk": 16,
       "lat": 13.7305566,
       "lng": 100.5877946,
       "coordApprox": false,
@@ -168,7 +162,7 @@
       "floorRange": "6-10",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
-      "available": null,
+      "available": "now",
       "pets": false,
       "lastVerified": "2026-11-10",
       "amenities": [
@@ -194,10 +188,7 @@
         "images/rooms/mc-004/9.webp",
         "images/rooms/mc-004/10.webp"
       ],
-      "unverified": [
-        "walkMinutes",
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-005",
@@ -206,15 +197,15 @@
       "area": "ทองหล่อ",
       "areaSlug": "thonglor",
       "areaRaw": "Thonglor, Khlong Tan Nuea, Watthana",
-      "station": null,
-      "stationRaw": null,
-      "stationId": null,
-      "walk": null,
-      "lat": 13.743063,
-      "lng": 100.583812,
-      "coordApprox": true,
-      "coordNote": "ตำแหน่งโดยประมาณ",
-      "mapMode": "condo-approx",
+      "station": "BTS พร้อมพงษ์",
+      "stationRaw": "BTS Phrom Phong",
+      "stationId": "bts-phrom-phong",
+      "walk": 26,
+      "lat": 13.7428221,
+      "lng": 100.5837746,
+      "coordApprox": false,
+      "coordNote": null,
+      "mapMode": "condo",
       "price": 22000,
       "deposit": "2 months",
       "size": 35,
@@ -224,7 +215,7 @@
       "floorRange": "1-5",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
-      "available": null,
+      "available": "now",
       "pets": false,
       "lastVerified": "2026-11-08",
       "amenities": [
@@ -243,11 +234,7 @@
         "images/rooms/mc-005/7.webp",
         "images/rooms/mc-005/8.webp"
       ],
-      "unverified": [
-        "walkMinutes",
-        "nearestStation",
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-006",
@@ -274,7 +261,7 @@
       "floorRange": "16-20",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
-      "available": null,
+      "available": "now",
       "pets": false,
       "lastVerified": "2026-11-07",
       "amenities": [
@@ -295,9 +282,7 @@
         "images/rooms/mc-006/9.webp",
         "images/rooms/mc-006/10.webp"
       ],
-      "unverified": [
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-007",
@@ -309,7 +294,7 @@
       "station": "BTS อ่อนนุช",
       "stationRaw": "BTS On Nut",
       "stationId": "bts-on-nut",
-      "walk": null,
+      "walk": 14,
       "lat": 13.7150067,
       "lng": 100.6052636,
       "coordApprox": false,
@@ -324,7 +309,7 @@
       "floorRange": "1-5",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
-      "available": null,
+      "available": "now",
       "pets": false,
       "lastVerified": "2026-11-10",
       "amenities": [
@@ -340,10 +325,7 @@
       "photos": [
         "images/rooms/mc-007/1.webp"
       ],
-      "unverified": [
-        "walkMinutes",
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-008",
@@ -355,7 +337,7 @@
       "station": "BTS อ่อนนุช",
       "stationRaw": "BTS On Nut",
       "stationId": "bts-on-nut",
-      "walk": null,
+      "walk": 14,
       "lat": 13.7150067,
       "lng": 100.6052636,
       "coordApprox": false,
@@ -370,7 +352,7 @@
       "floorRange": "1-5",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
-      "available": null,
+      "available": "now",
       "pets": false,
       "lastVerified": "2026-11-10",
       "amenities": [
@@ -391,10 +373,7 @@
         "images/rooms/mc-008/5.webp",
         "images/rooms/mc-008/6.webp"
       ],
-      "unverified": [
-        "walkMinutes",
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-009",
@@ -406,7 +385,7 @@
       "station": "BTS อ่อนนุช",
       "stationRaw": "BTS On Nut",
       "stationId": "bts-on-nut",
-      "walk": null,
+      "walk": 14,
       "lat": 13.7150067,
       "lng": 100.6052636,
       "coordApprox": false,
@@ -441,10 +420,7 @@
         "images/rooms/mc-009/7.webp",
         "images/rooms/mc-009/8.webp"
       ],
-      "unverified": [
-        "walkMinutes",
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-010",
@@ -471,7 +447,7 @@
       "floorRange": "6-10",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
-      "available": null,
+      "available": "now",
       "pets": false,
       "lastVerified": "2026-11-07",
       "amenities": [
@@ -487,9 +463,7 @@
         "images/rooms/mc-010/5.webp",
         "images/rooms/mc-010/6.webp"
       ],
-      "unverified": [
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-011",
@@ -501,7 +475,7 @@
       "station": "BTS อ่อนนุช",
       "stationRaw": "BTS On Nut",
       "stationId": "bts-on-nut",
-      "walk": null,
+      "walk": 14,
       "lat": 13.7152917,
       "lng": 100.6029639,
       "coordApprox": false,
@@ -516,7 +490,7 @@
       "floorRange": "1-5",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
-      "available": null,
+      "available": "now",
       "pets": false,
       "lastVerified": "2026-11-10",
       "amenities": [
@@ -546,10 +520,7 @@
         "images/rooms/mc-011/8.webp",
         "images/rooms/mc-011/9.webp"
       ],
-      "unverified": [
-        "walkMinutes",
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-012",
@@ -561,12 +532,12 @@
       "station": "BTS อ่อนนุช",
       "stationRaw": "BTS On Nut",
       "stationId": "bts-on-nut",
-      "walk": null,
-      "lat": 13.7149114609,
-      "lng": 100.600047875,
-      "coordApprox": true,
-      "coordNote": "ตำแหน่งโดยประมาณ",
-      "mapMode": "condo-approx",
+      "walk": 13,
+      "lat": 13.7146889,
+      "lng": 100.5998564,
+      "coordApprox": false,
+      "coordNote": null,
+      "mapMode": "condo",
       "price": 25000,
       "deposit": "2 months",
       "size": 48,
@@ -576,7 +547,7 @@
       "floorRange": "11-15",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
-      "available": null,
+      "available": "now",
       "pets": false,
       "lastVerified": "2026-11-07",
       "amenities": [
@@ -601,10 +572,7 @@
         "images/rooms/mc-012/9.webp",
         "images/rooms/mc-012/10.webp"
       ],
-      "unverified": [
-        "walkMinutes",
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-013",
@@ -616,12 +584,12 @@
       "station": "BTS ทองหล่อ",
       "stationRaw": "BTS Thong Lo",
       "stationId": "bts-thong-lo",
-      "walk": 8,
-      "lat": 13.736638,
-      "lng": 100.584033,
-      "coordApprox": true,
-      "coordNote": "ตำแหน่งโดยประมาณ",
-      "mapMode": "condo-approx",
+      "walk": 19,
+      "lat": 13.7362598,
+      "lng": 100.5845094,
+      "coordApprox": false,
+      "coordNote": null,
+      "mapMode": "condo",
       "price": 55000,
       "deposit": "2 months",
       "size": 115,
@@ -631,7 +599,7 @@
       "floorRange": "11-15",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
-      "available": null,
+      "available": "now",
       "pets": false,
       "lastVerified": "2026-11-08",
       "amenities": [
@@ -651,9 +619,7 @@
         "images/rooms/mc-013/7.webp",
         "images/rooms/mc-013/8.webp"
       ],
-      "unverified": [
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-014",
@@ -680,7 +646,7 @@
       "floorRange": "31-35",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
-      "available": null,
+      "available": "now",
       "pets": false,
       "lastVerified": "2026-11-07",
       "amenities": [
@@ -704,9 +670,7 @@
         "images/rooms/mc-014/12.webp",
         "images/rooms/mc-014/13.webp"
       ],
-      "unverified": [
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-015",
@@ -719,11 +683,11 @@
       "stationRaw": "BTS Ekkamai",
       "stationId": "bts-ekkamai",
       "walk": 4,
-      "lat": 13.722473,
-      "lng": 100.58455,
-      "coordApprox": true,
-      "coordNote": "ตำแหน่งโดยประมาณ",
-      "mapMode": "condo-approx",
+      "lat": 13.7228134,
+      "lng": 100.5842322,
+      "coordApprox": false,
+      "coordNote": null,
+      "mapMode": "condo",
       "price": 24000,
       "deposit": "2 months",
       "size": 30,
@@ -733,7 +697,7 @@
       "floorRange": "6-10",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
-      "available": null,
+      "available": "now",
       "pets": false,
       "lastVerified": "2026-11-10",
       "amenities": [
@@ -756,9 +720,7 @@
         "images/rooms/mc-015/7.webp",
         "images/rooms/mc-015/8.webp"
       ],
-      "unverified": [
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-016",
@@ -770,7 +732,7 @@
       "station": "BTS เอกมัย",
       "stationRaw": "BTS Ekkamai",
       "stationId": "bts-ekkamai",
-      "walk": null,
+      "walk": 16,
       "lat": 13.7312446,
       "lng": 100.5863832,
       "coordApprox": false,
@@ -785,7 +747,7 @@
       "floorRange": "16-20",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
-      "available": null,
+      "available": "now",
       "pets": false,
       "lastVerified": "2026-11-07",
       "amenities": [
@@ -805,10 +767,7 @@
         "images/rooms/mc-016/8.webp",
         "images/rooms/mc-016/9.webp"
       ],
-      "unverified": [
-        "walkMinutes",
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-017",
@@ -820,7 +779,7 @@
       "station": "BTS อ่อนนุช",
       "stationRaw": "BTS On Nut",
       "stationId": "bts-on-nut",
-      "walk": null,
+      "walk": 10,
       "lat": 13.7130176,
       "lng": 100.6001123,
       "coordApprox": false,
@@ -835,7 +794,7 @@
       "floorRange": "16-20",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
-      "available": null,
+      "available": "now",
       "pets": false,
       "lastVerified": "2026-11-07",
       "amenities": [
@@ -858,10 +817,7 @@
         "images/rooms/mc-017/6.webp",
         "images/rooms/mc-017/7.webp"
       ],
-      "unverified": [
-        "walkMinutes",
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-018",
@@ -888,7 +844,7 @@
       "floorRange": "6-10",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
-      "available": null,
+      "available": "now",
       "pets": false,
       "lastVerified": "2026-11-08",
       "amenities": [
@@ -911,9 +867,7 @@
         "images/rooms/mc-018/8.webp",
         "images/rooms/mc-018/9.webp"
       ],
-      "unverified": [
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-019",
@@ -925,12 +879,12 @@
       "station": "MRT เพชรบุรี",
       "stationRaw": "MRT Phetchaburi",
       "stationId": "mrt-phetchaburi",
-      "walk": null,
-      "lat": 13.7443364546,
-      "lng": 100.583280237,
-      "coordApprox": true,
-      "coordNote": "ตำแหน่งโดยประมาณ",
-      "mapMode": "condo-approx",
+      "walk": 28,
+      "lat": 13.7446969,
+      "lng": 100.5833205,
+      "coordApprox": false,
+      "coordNote": null,
+      "mapMode": "condo",
       "price": 16000,
       "deposit": "2 months",
       "size": 36,
@@ -961,9 +915,7 @@
         "images/rooms/mc-019/8.webp",
         "images/rooms/mc-019/9.webp"
       ],
-      "unverified": [
-        "walkMinutes"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-020",
@@ -990,7 +942,7 @@
       "floorRange": "21-25",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
-      "available": null,
+      "available": "now",
       "pets": false,
       "lastVerified": "2026-11-07",
       "amenities": [
@@ -1017,9 +969,7 @@
         "images/rooms/mc-020/12.webp",
         "images/rooms/mc-020/13.webp"
       ],
-      "unverified": [
-        "availableFrom"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-021",
@@ -1034,9 +984,9 @@
       "walk": 18,
       "lat": 13.7407141,
       "lng": 100.5734826,
-      "coordApprox": true,
-      "coordNote": "ตำแหน่งโดยประมาณ",
-      "mapMode": "condo-approx",
+      "coordApprox": false,
+      "coordNote": null,
+      "mapMode": "condo",
       "price": 28000,
       "deposit": "2 months",
       "size": 41,
@@ -1069,9 +1019,7 @@
         "images/rooms/mc-021/9.webp",
         "images/rooms/mc-021/10.webp"
       ],
-      "unverified": [
-        "availableFrom"
-      ]
+      "unverified": []
     }
   ]
 }

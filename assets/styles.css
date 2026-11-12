@@ -1176,7 +1176,7 @@
       pointer-events: none;
     }
     .place-illu { display: flex; align-items: center; justify-content: center; }
-    .place-illu svg { width: 44px; height: 44px; stroke: var(--primary); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .place-illu svg { width: 44px; height: 44px; stroke: var(--primary); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
     .place-illu-shopping { background: #E8EEE9; }
     .place-illu-cafe { background: #F3EBE0; }
     .place-illu-restaurant { background: #F3E6E0; }
@@ -1424,4 +1424,24 @@
       .room-page footer.site {
         padding-bottom: 24px;
       }
+    }
+
+
+    /* In-page sections shouldn't hide under the sticky header */
+    .section, .map3d-section, .room-specs, .detail-more, .nearby-box,
+    .page-hero, #listings, #contact, #map, #nearby, #details, #highlights, #rooms {
+      scroll-margin-top: calc(var(--header-h) + 12px);
+    }
+
+    /* Home / area: keep the AI chip from covering card meta on mobile */
+    @media (max-width: 700px) {
+      body:not(.room-page) .ai-fab {
+        width: 52px; min-width: 52px; height: 52px; min-height: 52px;
+        padding: 0; justify-content: center; gap: 0;
+        font-size: 0; line-height: 0;
+        bottom: 28px; right: 14px;
+      }
+      body:not(.room-page) .ai-fab .mark { width: 28px; height: 28px; font-size: 16px; }
+      body:not(.room-page) .card-body .meta { padding-right: 64px; }
+      body:not(.room-page) main { padding-bottom: 88px; }
     }
