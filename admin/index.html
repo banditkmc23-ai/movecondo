@@ -52,7 +52,12 @@
     .pill { display:inline-block; font-size:12px; padding:3px 10px; border-radius:999px; background:var(--ac-soft); color:var(--ac); font-weight:600; }
     .split { display:flex; height:14px; border-radius:8px; overflow:hidden; background:var(--line); margin:10px 0 8px; }
     .split i { display:block; height:100%; }
-    #login { max-width:380px; margin:8vh auto 0; }
+    #login, #forgot, #setpw { max-width:380px; margin:8vh auto 0; }
+    .linkbtn { font:inherit; background:none; border:0; color:var(--ac); cursor:pointer; padding:8px 0; text-decoration:underline; text-underline-offset:3px; }
+    .ok { color:#2f6b3a; font-size:14px; min-height:20px; margin-top:10px; }
+    textarea { width:100%; font:inherit; font-size:13px; padding:10px 12px; border:1px solid var(--line); border-radius:12px; min-height:84px; resize:vertical; }
+    .err:empty, .ok:empty { min-height:0; margin-top:6px; }
+    details summary { cursor:pointer; color:var(--mute); font-size:14px; margin-top:14px; }
     label { display:block; font-size:14px; margin:12px 0 6px; }
     input { width:100%; font:inherit; padding:11px 14px; border:1px solid var(--line); border-radius:12px; }
     input:focus { outline:2px solid var(--ac); outline-offset:1px; border-color:transparent; }
@@ -88,6 +93,47 @@
         <input id="password" type="password" autocomplete="current-password" required />
         <div class="err" id="login-err" role="alert"></div>
         <button class="btn btn-primary" style="width:100%;margin-top:6px" type="submit">เข้าสู่ระบบ</button>
+      </form>
+      <div style="text-align:center;margin-top:8px"><button type="button" class="linkbtn" id="to-forgot">ตั้งรหัสผ่านครั้งแรก / ลืมรหัสผ่าน</button></div>
+    </div>
+  </section>
+
+  <section id="forgot" hidden>
+    <div class="card">
+      <h2>ตั้ง / ลืมรหัสผ่าน</h2>
+      <p class="muted" style="margin:0 0 4px">กรอกอีเมลเจ้าของเว็บ ระบบจะส่งลิงก์ไปให้ตั้งรหัสผ่านใหม่ด้วยตัวเอง</p>
+      <form id="forgot-form">
+        <label for="f-email">อีเมล</label>
+        <input id="f-email" type="email" autocomplete="username" required />
+        <div class="err" id="forgot-err" role="alert"></div>
+        <div class="ok" id="forgot-ok" role="status"></div>
+        <button class="btn btn-primary" style="width:100%;margin-top:6px" type="submit">ส่งลิงก์ตั้งรหัสผ่าน</button>
+      </form>
+      <details>
+        <summary>กดลิงก์ในอีเมลแล้วเปิดไม่ขึ้น?</summary>
+        <p class="muted" style="margin:8px 0">คัดลอกลิงก์จากอีเมล (หรือที่อยู่เว็บที่เปิดไม่ขึ้นหลังกดลิงก์) มาวางที่นี่</p>
+        <form id="paste-form">
+          <textarea id="paste-link" placeholder="วางลิงก์ที่นี่" aria-label="ลิงก์จากอีเมล"></textarea>
+          <div class="err" id="paste-err" role="alert"></div>
+          <button class="btn" style="width:100%;margin-top:6px" type="submit">ใช้ลิงก์นี้</button>
+        </form>
+      </details>
+      <div style="text-align:center;margin-top:8px"><button type="button" class="linkbtn" data-back>กลับไปหน้าเข้าสู่ระบบ</button></div>
+    </div>
+  </section>
+
+  <section id="setpw" hidden>
+    <div class="card">
+      <h2>ตั้งรหัสผ่านใหม่</h2>
+      <p class="muted" style="margin:0 0 4px" id="setpw-who">อย่างน้อย 8 ตัวอักษร</p>
+      <form id="setpw-form">
+        <input type="email" id="setpw-email" autocomplete="username" hidden />
+        <label for="pw1">รหัสผ่านใหม่</label>
+        <input id="pw1" type="password" autocomplete="new-password" minlength="8" required />
+        <label for="pw2">พิมพ์รหัสผ่านอีกครั้ง</label>
+        <input id="pw2" type="password" autocomplete="new-password" minlength="8" required />
+        <div class="err" id="setpw-err" role="alert"></div>
+        <button class="btn btn-primary" style="width:100%;margin-top:6px" type="submit">บันทึกรหัสผ่านและเข้าสู่ระบบ</button>
       </form>
     </div>
   </section>
@@ -170,7 +216,7 @@
     }).then(function (r) { return r.json().then(function (j) { if (!r.ok) throw j; return j; }); });
   }
 
-  function show(which) { $("login").hidden = which !== "login"; $("dash").hidden = which !== "dash"; $("logout").hidden = which !== "dash"; }
+  function show(which) { $("forgot").hidden = which !== "forgot"; $("setpw").hidden = which !== "setpw"; $("login").hidden = which !== "login"; $("dash").hidden = which !== "dash"; $("logout").hidden = which !== "dash"; }
 
   function loadNames() {
     return fetch("../rooms.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (j) {
@@ -276,9 +322,66 @@
   $("nostats").addEventListener("change", function () { try { if (this.checked) localStorage.setItem("mc-nostats", "1"); else localStorage.removeItem("mc-nostats"); } catch (e) {} });
   var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(function () { if (last) chart(last.daily); }, 150); });
 
+  // ---- set / reset password -------------------------------------------------
+  var ADMIN_URL = location.origin + location.pathname;
+  var recovery = null; // short-lived session from the email link
+  function sessFromParams(q) {
+    return { at: q.get("access_token"), rt: q.get("refresh_token"), exp: Date.now() + (+q.get("expires_in") || 3600) * 1000 };
+  }
+  function startSetPw(s) {
+    recovery = s; show("setpw");
+    fetch(SB + "/auth/v1/user", { headers: { apikey: KEY, Authorization: "Bearer " + s.at } }).then(function (r) { return r.json(); })
+      .then(function (u) { if (u && u.email) { $("setpw-who").textContent = "บัญชี " + u.email + " · อย่างน้อย 8 ตัวอักษร"; $("setpw-email").value = u.email; } }).catch(function () {});
+  }
+  function useLink(text) {
+    text = (text || "").trim();
+    var hashPart = text.indexOf("#") >= 0 ? text.slice(text.indexOf("#") + 1) : "";
+    var hq = new URLSearchParams(hashPart);
+    if (hq.get("access_token")) return Promise.resolve(sessFromParams(hq));
+    if (hq.get("error_description")) return Promise.reject(hq.get("error_description"));
+    var u; try { u = new URL(text); } catch (e) { return Promise.reject("ลิงก์ไม่ถูกต้อง"); }
+    var th = u.searchParams.get("token_hash") || u.searchParams.get("token"), type = u.searchParams.get("type") || "recovery";
+    if (!th) return Promise.reject("ไม่พบรหัสในลิงก์นี้");
+    return fetch(SB + "/auth/v1/verify", { method: "POST", headers: { apikey: KEY, "Content-Type": "application/json" }, body: JSON.stringify({ type: type, token_hash: th }) })
+      .then(function (r) { return r.json().then(function (j) { if (!r.ok || !j.access_token) throw "ลิงก์หมดอายุหรือถูกใช้ไปแล้ว ขอลิงก์ใหม่อีกครั้ง"; return { at: j.access_token, rt: j.refresh_token, exp: Date.now() + (j.expires_in || 3600) * 1000 }; }); });
+  }
+  $("to-forgot").addEventListener("click", function () { $("f-email").value = $("email").value; show("forgot"); });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-back]"), function (b) { b.addEventListener("click", function () { show("login"); }); });
+  $("forgot-form").addEventListener("submit", function (ev) {
+    ev.preventDefault(); $("forgot-err").textContent = ""; $("forgot-ok").textContent = "";
+    var btn = this.querySelector("button[type=submit]"); btn.disabled = true;
+    fetch(SB + "/auth/v1/recover?redirect_to=" + encodeURIComponent(ADMIN_URL), { method: "POST", headers: { apikey: KEY, "Content-Type": "application/json" }, body: JSON.stringify({ email: $("f-email").value.trim().toLowerCase() }) })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { if (!r.ok) throw j; }); })
+      .then(function () { $("forgot-ok").textContent = "ถ้าอีเมลนี้เป็นของเจ้าของเว็บ จะได้รับลิงก์ภายในไม่กี่นาที (ดูในโฟลเดอร์สแปมด้วย)"; })
+      .catch(function (j) { $("forgot-err").textContent = (j && (j.error_code === "over_email_send_rate_limit" || j.code === 429)) ? "ขอลิงก์บ่อยเกินไป รอสักครู่แล้วลองใหม่" : "ส่งลิงก์ไม่สำเร็จ ลองใหม่อีกครั้ง"; })
+      .then(function () { btn.disabled = false; });
+  });
+  $("paste-form").addEventListener("submit", function (ev) {
+    ev.preventDefault(); $("paste-err").textContent = "";
+    useLink($("paste-link").value).then(startSetPw).catch(function (m) { $("paste-err").textContent = typeof m === "string" ? m : "ใช้ลิงก์นี้ไม่ได้"; });
+  });
+  $("setpw-form").addEventListener("submit", function (ev) {
+    ev.preventDefault(); $("setpw-err").textContent = "";
+    if ($("pw1").value !== $("pw2").value) { $("setpw-err").textContent = "รหัสผ่านสองช่องไม่ตรงกัน"; return; }
+    fetch(SB + "/auth/v1/user", { method: "PUT", headers: { apikey: KEY, Authorization: "Bearer " + recovery.at, "Content-Type": "application/json" }, body: JSON.stringify({ password: $("pw1").value }) })
+      .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw j; }); })
+      .then(function () {
+        $("pw1").value = $("pw2").value = ""; save(recovery); recovery = null;
+        try { localStorage.setItem("mc-nostats", "1"); } catch (e) {} $("nostats").checked = true;
+        show("dash"); load();
+      })
+      .catch(function (j) { $("setpw-err").textContent = (j && j.error_code === "weak_password") ? "รหัสผ่านง่ายเกินไป ลองให้ยาวขึ้น" : (j && j.error_code === "same_password") ? "ใช้รหัสผ่านใหม่ที่ไม่ซ้ำของเดิม" : "บันทึกไม่สำเร็จ ลิงก์อาจหมดอายุ ขอลิงก์ใหม่อีกครั้ง"; });
+  });
+  var initialHash = location.hash ? new URLSearchParams(location.hash.slice(1)) : null;
+  if (initialHash && (initialHash.get("access_token") || initialHash.get("error"))) history.replaceState(null, "", location.pathname);
+
   try { session = JSON.parse(localStorage.getItem(S_KEY) || "null"); } catch (e) {}
   try { $("nostats").checked = localStorage.getItem("mc-nostats") === "1"; } catch (e) {}
-  loadNames().then(function () { if (session) { show("dash"); load(); } else show("login"); });
+  loadNames().then(function () {
+    if (initialHash && initialHash.get("access_token") && /recovery|invite|magiclink|signup/.test(initialHash.get("type") || "")) return startSetPw(sessFromParams(initialHash));
+    if (initialHash && initialHash.get("error_description")) { show("forgot"); $("forgot-err").textContent = "ลิงก์หมดอายุหรือถูกใช้ไปแล้ว ขอลิงก์ใหม่ได้ที่นี่"; return; }
+    if (session) { show("dash"); load(); } else show("login");
+  });
 })();
 </script>
 </body>
