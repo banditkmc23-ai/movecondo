@@ -36,6 +36,15 @@
     .kpi.hl { background:var(--ac-soft); border-color:transparent; }
     .kpi.hl .n { color:var(--ac); }
     .two { grid-template-columns:1fr; }
+    .mini { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-bottom:14px; }
+    .mini div { background:#faf7f5; border-radius:12px; padding:10px 12px; }
+    .mini b { display:block; font-size:22px; line-height:1.2; }
+    .mini span { font-size:13px; color:var(--mute); }
+    .sec-title { font-size:13px; color:var(--mute); margin:16px 0 4px; font-weight:600; }
+    .chips { display:flex; flex-wrap:wrap; gap:6px; }
+    .chips span { font-size:13px; background:#faf7f5; border-radius:999px; padding:4px 10px; }
+    .chips span b { color:var(--ac); margin-left:4px; }
+    .sec-h { margin:26px 0 10px; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--ac); font-weight:600; }
     .bar-row { display:grid; grid-template-columns:1fr auto; gap:4px 12px; align-items:center; padding:8px 0; border-top:1px solid var(--line); font-size:14px; }
     .bar-row:first-of-type { border-top:0; }
     .bar-row .t { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
@@ -71,6 +80,7 @@
       .wrap { padding:28px 28px 64px; }
       .kpis { grid-template-columns:repeat(4,1fr); }
       .two { grid-template-columns:1fr 1fr; }
+      .mini { grid-template-columns:repeat(4,1fr); }
       .chart { height:240px; }
     }
   </style>
@@ -160,7 +170,51 @@
       <div class="legend"><span><i style="background:#B9532F"></i>คน</span><span><i style="background:#f0d5c9"></i>หน้าที่เปิด</span></div>
     </div>
 
-    <div class="grid two" style="margin-top:14px">
+    <div class="sec-h">Engagement</div>
+    <div class="card">
+      <h2>คนอยู่ในเว็บนานแค่ไหน</h2>
+      <div class="mini">
+        <div><b id="t-visit">–</b><span>เฉลี่ยต่อการเข้าเว็บ 1 ครั้ง</span></div>
+        <div><b id="t-median">–</b><span>ค่ากลาง (ครึ่งหนึ่งอยู่นานกว่านี้)</span></div>
+        <div><b id="t-page">–</b><span>เฉลี่ยต่อ 1 หน้า</span></div>
+        <div><b id="t-pages">–</b><span>จำนวนหน้าต่อการเข้าเว็บ</span></div>
+      </div>
+      <div class="grid two" style="gap:18px">
+        <div><div class="sec-title">การเข้าเว็บแบ่งตามเวลาที่อยู่</div><div id="t-buckets"></div></div>
+        <div><div class="sec-title">เวลาเฉลี่ยต่อหน้า (หน้าที่คนเปิดบ่อย)</div><div id="t-pagelist"></div></div>
+      </div>
+      <p class="muted" style="margin:10px 0 0;font-size:13px">นับเฉพาะเวลาที่เปิดหน้าเว็บอยู่และมีการใช้งาน (หยุดนับเมื่อไม่ขยับเกิน 2 นาที) · 1 ครั้ง = เข้าเว็บต่อเนื่อง ไม่ห่างเกิน 30 นาที</p>
+    </div>
+
+    <div class="sec-h">Rooms · Areas · Prices</div>
+    <div class="grid two">
+      <div class="card"><h2>ห้องที่คนดูมากที่สุด</h2><div id="i-rooms"></div></div>
+      <div class="card"><h2>ทำเลที่คนสนใจ</h2><div id="i-areas"></div><p class="muted" style="margin:8px 0 0;font-size:13px">รวมการดูหน้าย่าน และการดูห้องในย่านนั้น</p></div>
+      <div class="card"><h2>คอนโดที่คนดูมากที่สุด</h2><div id="i-condos"></div></div>
+      <div class="card"><h2>ช่วงราคาที่คนดู</h2><div id="i-prices"></div><p class="muted" style="margin:8px 0 0;font-size:13px">จากค่าเช่าต่อเดือนของห้องที่ถูกเปิดดู</p></div>
+    </div>
+
+    <div class="sec-h">Search · Match</div>
+    <div class="grid two">
+      <div class="card"><h2>คำค้นหายอดนิยม</h2><div id="i-search"></div>
+        <div class="sec-title">ค้นหาแล้วไม่เจอห้อง</div><div id="i-nores"></div></div>
+      <div class="card"><h2>สิ่งที่ลูกค้าเลือกใน “จับคู่ห้อง”</h2><div id="i-match"></div></div>
+    </div>
+
+    <div class="sec-h">Conversion</div>
+    <div class="grid two">
+      <div class="card"><h2>กดทัก LINE</h2>
+        <div class="mini" style="grid-template-columns:repeat(3,1fr)">
+          <div><b id="l-total">–</b><span>ครั้งที่กด</span></div>
+          <div><b id="l-people">–</b><span>คนที่กด</span></div>
+          <div><b id="l-rate">–</b><span>ของคนที่เข้าเว็บ</span></div>
+        </div>
+        <div class="sec-title">กดจากหน้าไหน</div><div id="l-list"></div></div>
+      <div class="card"><h2>ปัดดูรูปห้อง</h2><div id="i-swipes"></div><p class="muted" style="margin:8px 0 0;font-size:13px">นับเฉพาะตอนลูกค้าปัดหรือกดเลื่อนรูปเอง ไม่นับรูปที่เลื่อนอัตโนมัติ</p></div>
+    </div>
+
+    <div class="sec-h">Traffic</div>
+    <div class="grid two" >
       <div class="card"><h2>หน้าที่คนดูมากที่สุด</h2><div id="pages"></div></div>
       <div class="card"><h2>คนมาจากไหน</h2><div id="refs"></div></div>
       <div class="card">
@@ -196,7 +250,7 @@
   var SITE = "/movecondo/";
   // -------------------------------------------------------------------------
   var $ = function (id) { return document.getElementById(id); };
-  var S_KEY = "mc-stats-session", days = 7, names = {}, session = null;
+  var S_KEY = "mc-stats-session", days = 7, names = {}, rooms = {}, areaTh = {}, session = null;
   var fmt = new Intl.NumberFormat("th-TH");
 
   function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
@@ -210,9 +264,9 @@
     if (session.exp - Date.now() > 60000) return Promise.resolve(session.at);
     return auth({ refresh_token: session.rt }, "refresh_token").then(function (s) { save(s); return s.at; });
   }
-  function rpc(d) {
+  function rpc(d, fn) {
     return token().then(function (t) {
-      return fetch(SB + "/rest/v1/rpc/stats_summary", { method: "POST", headers: { apikey: KEY, Authorization: "Bearer " + t, "Content-Type": "application/json" }, body: JSON.stringify({ days: d }) });
+      return fetch(SB + "/rest/v1/rpc/" + (fn || "stats_summary"), { method: "POST", headers: { apikey: KEY, Authorization: "Bearer " + t, "Content-Type": "application/json" }, body: JSON.stringify({ days: d }) });
     }).then(function (r) { return r.json().then(function (j) { if (!r.ok) throw j; return j; }); });
   }
 
@@ -220,7 +274,11 @@
 
   function loadNames() {
     return fetch("../rooms.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (j) {
-      (j.rooms || []).forEach(function (r) { names["rooms/" + r.id.toLowerCase() + "/"] = r.project + " · " + r.id; });
+      (j.rooms || []).forEach(function (r) {
+        names["rooms/" + r.id.toLowerCase() + "/"] = r.project + " · " + r.id;
+        rooms[r.id] = { project: r.project, area: (r.area && r.area.th) || "", slug: ((r.area && r.area.url) || "").replace(/\/$/, "").split("/").pop(), price: r.rent_thb_per_month, type: (r.type && r.type.th) || "" };
+      });
+      (j.areas || []).forEach(function (a) { areaTh[a.slug] = a.th; });
       (j.areas || []).forEach(function (a) { names["areas/" + a.slug + "/"] = "ย่าน" + a.th; });
     }).catch(function () {});
   }
@@ -244,7 +302,7 @@
     if (!items.length) { el.innerHTML = '<p class="muted" style="margin:0">' + empty + "</p>"; return; }
     var max = Math.max.apply(null, items.map(function (x) { return x.v; })) || 1;
     el.innerHTML = items.map(function (x) {
-      return '<div class="bar-row"><div class="t" title="' + esc(x.title || "") + '">' + x.label + '</div><div class="v">' + fmt.format(x.v) + ' <small class="muted">' + (x.unit || "คน") + (x.sub ? " · " + x.sub : "") + "</small>" + '</div><div class="b"><i style="width:' + Math.max(3, Math.round(x.v / max * 100)) + '%"></i></div></div>';
+      return '<div class="bar-row"><div class="t" title="' + esc(x.title || "") + '">' + x.label + '</div><div class="v">' + fmt.format(x.v) + ' <small class="muted">' + (x.unit || "คน") + (x.sub ? " · " + x.sub : "") + "</small>" + '</div><div class="b"><i style="width:' + (x.v > 0 ? Math.max(3, Math.round(x.v / max * 100)) : 0) + '%"></i></div></div>';
     }).join("");
   }
   function chart(daily) {
@@ -291,9 +349,72 @@
       rows($("ai-rows"), d.bots_by_agent.map(function (b) { return { label: esc(b.agent) + " <small>" + (kinds[b.kind] || b.kind) + "</small>", v: b.hits, unit: "ครั้ง" }; }), "ยังไม่มี AI เข้ามาในช่วงนี้");
     }
   }
+  function dur(ms) {
+    ms = Math.round(+ms || 0); var s = Math.round(ms / 1000);
+    if (s < 60) return s + " วินาที";
+    var m = Math.floor(s / 60), r = s % 60;
+    if (m < 60) return m + " นาที" + (r ? " " + r + " วิ" : "");
+    return Math.floor(m / 60) + " ชม. " + (m % 60) + " นาที";
+  }
+  function money(n) { return fmt.format(n) + " บ."; }
+  function chips(el, obj, map, empty) {
+    var ks = Object.keys(obj || {}).sort(function (a, b) { return obj[b] - obj[a]; });
+    el.innerHTML = ks.length ? '<div class="chips">' + ks.map(function (k) { return "<span>" + esc(map ? map(k) : k) + "<b>" + fmt.format(obj[k]) + "</b></span>"; }).join("") + "</div>" : '<p class="muted" style="margin:0">' + (empty || "ยังไม่มีข้อมูล") + "</p>";
+  }
+  function insights(x) {
+    $("t-visit").textContent = x.sessions ? dur(x.avg_session_ms) : "–";
+    $("t-median").textContent = x.sessions ? dur(x.median_session_ms) : "–";
+    $("t-page").textContent = x.avg_page_ms ? dur(x.avg_page_ms) : "–";
+    $("t-pages").textContent = x.sessions ? String(x.avg_pages_per_session) : "–";
+    var b = x.session_buckets || {};
+    rows($("t-buckets"), [["lt10", "ไม่ถึง 10 วินาที"], ["s10_30", "10–30 วินาที"], ["s30_120", "30 วินาที – 2 นาที"], ["m2_5", "2–5 นาที"], ["gt5m", "มากกว่า 5 นาที"]]
+      .map(function (k) { return { label: k[1], v: b[k[0]] || 0, unit: "ครั้ง", keep: 1 }; }), "ยังไม่มีข้อมูล");
+    rows($("t-pagelist"), (x.page_time || []).slice(0, 8).map(function (p) { return { label: esc(pageName(p.path)), title: p.path, v: Math.round(p.avg_ms / 1000), unit: "วิ", sub: p.views + " ครั้ง" }; }), "ยังไม่มีข้อมูล");
+
+    var rv = (x.room_views || []).filter(function (r) { return rooms[r.room]; });
+    rows($("i-rooms"), rv.slice(0, 10).map(function (r) { var i = rooms[r.room];
+      return { label: esc(i.project) + ' <small>' + esc(i.area) + " · " + money(i.price) + "/ด. · " + esc(r.room) + "</small>", v: r.visitors, sub: r.views + " ครั้ง" + (r.avg_ms ? " · " + dur(r.avg_ms) : "") }; }), "ยังไม่มีคนเปิดดูห้อง");
+
+    var areas = {};
+    function addA(slug, th, k, n) { if (!th) return; var a = areas[slug] || (areas[slug] = { th: th, page: 0, room: 0 }); a[k] += n; }
+    (x.area_page_views || []).forEach(function (a) { addA(a.slug, areaTh[a.slug], "page", a.views); });
+    rv.forEach(function (r) { var i = rooms[r.room]; addA(i.slug || i.area, i.area, "room", r.views); });
+    rows($("i-areas"), Object.keys(areas).map(function (k) { var a = areas[k]; return { label: "ย่าน" + esc(a.th), v: a.page + a.room, unit: "ครั้ง", sub: "ห้อง " + a.room + " · หน้าย่าน " + a.page }; })
+      .sort(function (a, b) { return b.v - a.v; }), "ยังไม่มีข้อมูล");
+
+    var condos = {};
+    rv.forEach(function (r) { var i = rooms[r.room], c = condos[i.project] || (condos[i.project] = { area: i.area, people: 0, views: 0, n: {} }); c.people += r.visitors; c.views += r.views; c.n[r.room] = 1; });
+    rows($("i-condos"), Object.keys(condos).map(function (k) { var c = condos[k]; return { label: esc(k) + " <small>" + esc(c.area) + " · " + Object.keys(c.n).length + " ห้อง</small>", v: c.people, sub: c.views + " ครั้ง" }; })
+      .sort(function (a, b) { return b.v - a.v; }).slice(0, 10), "ยังไม่มีข้อมูล");
+
+    var bands = [["ต่ำกว่า 10,000", 0, 10000], ["10,000–15,000", 10000, 15000], ["15,000–20,000", 15000, 20000], ["20,000–30,000", 20000, 30000], ["30,000 ขึ้นไป", 30000, 1e9]];
+    var bv = bands.map(function (bd) { var p = 0, v = 0; rv.forEach(function (r) { var pr = rooms[r.room].price; if (pr >= bd[1] && pr < bd[2]) { p += r.visitors; v += r.views; } }); return { label: bd[0] + " บ.", v: p, sub: v + " ครั้ง", keep: 1 }; });
+    rows($("i-prices"), rv.length ? bv : [], "ยังไม่มีคนเปิดดูห้อง");
+
+    rows($("i-search"), (x.search_terms || []).slice(0, 12).map(function (s) { return { label: "“" + esc(s.q) + "”", v: s.count, unit: "ครั้ง", sub: s.people + " คน · เจอ " + s.results + " ห้อง" }; }), "ยังไม่มีคนค้นหา");
+    rows($("i-nores"), (x.search_no_results || []).slice(0, 10).map(function (s) { return { label: "“" + esc(s.q) + "”", v: s.count, unit: "ครั้ง" }; }), "ยังไม่มี");
+
+    var mEl = $("i-match");
+    if (!x.match_total) { mEl.innerHTML = '<p class="muted" style="margin:0">ยังไม่มีคนใช้จับคู่ห้อง</p>'; }
+    else {
+      mEl.innerHTML = '<p class="muted" style="margin:0 0 6px">ใช้ทั้งหมด ' + fmt.format(x.match_total) + ' ครั้ง</p><div class="sec-title">ทำเล</div><div id="m-a"></div><div class="sec-title">แบบห้อง</div><div id="m-t"></div><div class="sec-title">งบที่ตั้ง (บาท/เดือน)</div><div id="m-b"></div><div class="sec-title">สิ่งที่ต้องมี</div><div id="m-m"></div>';
+      chips($("m-a"), x.match_areas, null, "ไม่ได้เลือก");
+      chips($("m-t"), x.match_types, function (k) { return k === "any" ? "ไม่ระบุ" : k; });
+      var bud = {}; (x.match_budgets || []).forEach(function (b) { bud[fmt.format(b.min) + "–" + fmt.format(b.max)] = b.count; });
+      chips($("m-b"), bud);
+      chips($("m-m"), x.match_must, null, "ไม่ได้เลือก");
+    }
+
+    $("l-total").textContent = fmt.format(x.line_total || 0);
+    $("l-people").textContent = fmt.format(x.line_people || 0);
+    $("l-rate").textContent = x.people ? Math.round((x.line_people || 0) / x.people * 1000) / 10 + "%" : "–";
+    var lp = {}; (x.line_by || []).forEach(function (l) { var k = l.room && rooms[l.room] ? rooms[l.room].project + " · " + l.room : pageName(l.path); lp[k] = (lp[k] || 0) + l.count; });
+    rows($("l-list"), Object.keys(lp).map(function (k) { return { label: esc(k), v: lp[k], unit: "ครั้ง" }; }).sort(function (a, b) { return b.v - a.v; }).slice(0, 10), "ยังไม่มีคนกดทัก LINE");
+    rows($("i-swipes"), (x.swipes || []).filter(function (s) { return rooms[s.room]; }).slice(0, 10).map(function (s) { var i = rooms[s.room]; return { label: esc(i.project) + " <small>" + esc(s.room) + "</small>", v: s.swipes, unit: "ครั้ง", sub: s.people + " คน" }; }), "ยังไม่มีข้อมูล");
+  }
   function load() {
     $("updated").textContent = "กำลังโหลด…";
-    return rpc(days).then(render).catch(function (e) {
+    return Promise.all([rpc(days), rpc(days, "stats_insights")]).then(function (r) { render(r[0]); insights(r[1]); }).catch(function (e) {
       if (e && (e.code === "42501" || e.code === "nosession" || e.code === "PGRST301" || e.error_code === "refresh_token_not_found")) {
         save(null); show("login");
         $("login-err").textContent = e.code === "42501" ? "บัญชีนี้ยังไม่ได้รับสิทธิ์ดูสถิติ" : "";

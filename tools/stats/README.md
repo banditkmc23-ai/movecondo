@@ -9,9 +9,23 @@ Counts **people** today; ready to count **AI assistants and bots** once the site
 | Owner dashboard | `/movecondo/admin/` (noindex, not linked, not in sitemap/llms files) | live |
 | Edge counter (AI/bots) | `tools/stats/cloudflare-worker.js` | **not deployed** – needs custom domain on Cloudflare |
 
+## What is tracked (v2)
+* `visits`: one row per page view (path, TH/EN, referrer host, mobile/desktop, daily visitor id,
+  30-minute session id, page-view id).
+* `events` (insert-only, strict per-event checks):
+  * `engage` {ms}: visible + active time on a page (stops counting 2 min after the last scroll/tap/key),
+    sent when the page is hidden/closed or the in-page route changes.
+  * `search` {q, n, via}: hero search words, cleaned in the browser and checked again in the database
+    (lowercase, <= 60 chars, no digit runs of 6+, nothing containing @), number of rooms found.
+  * `match` {areas, type, size, walk, contract, bmin, bmax, must}: จับคู่ห้อง choices (site-defined values only).
+  * `line_click` {room, place}: LINE button clicks.
+  * `photo_swipe` {room, n}: user swipes/clicks in a room's photo carousel (auto-advance not counted).
+* Dashboard RPCs (admin allowlist only): `stats_summary(days)`, `stats_insights(days)`.
+  Room names, areas and prices are joined in the dashboard from `rooms.json`.
+
 ## Privacy (PDPA)
 The tracker sends only: page path, TH/EN, the referring site's hostname (first page only), mobile/desktop,
-and a random id that changes every day (localStorage `mc-vid`). No cookies, no IP, no names, no fingerprinting.
+random ids (daily visitor id `mc-vid`, 30-minute session id `mc-sid`, per-page id) and the events listed above. No cookies, no IP, no names, no fingerprinting.
 It skips `navigator.webdriver`, bot-like user agents, and any browser where the dashboard set `mc-nostats=1`.
 
 ## Security model
@@ -46,4 +60,4 @@ The dashboard's "AI ที่เข้าเว็บ" card switches on automati
 Free projects pause after ~7 days with too little database activity; normal site traffic keeps it awake.
 A paused project can be resumed from the Supabase dashboard within 90 days (data kept).
 
-Schema: `tools/stats/schema.sql`.
+Schema: `tools/stats/schema.sql` (v1) and `tools/stats/schema-v2-events.sql` (v2).
