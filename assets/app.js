@@ -921,12 +921,25 @@ function homeView(){
   const cards = LISTINGS.map(l => cardHTML(l)).join("");
   return `
   <div class="hero">
-    <div class="hero-kicker">MoveCondo · ย้ายคอนโด</div>
-    <h1>หาคอนโดเช่าที่ <em class="hero-phrase">ตรงกับคุณ</em></h1>
-    <p class="lead">ดูห้องจริงใกล้รถไฟฟ้าในกรุงเทพฯ แล้วเลือกห้องที่ใช่</p>
-    <div class="hero-actions">
-      <a class="btn btn-lg btn-primary" href="#listings">ดูห้องว่าง</a>
-      <a class="btn btn-lg btn-ghost" href="#/match">จับคู่ห้อง</a>
+    <div class="hero-copy">
+      <div class="hero-kicker">MoveCondo · ย้ายคอนโด</div>
+      <h1>หาคอนโดเช่าที่ <em class="hero-phrase">ตรงกับคุณ</em></h1>
+      <p class="lead">ดูห้องจริงใกล้รถไฟฟ้าในกรุงเทพฯ แล้วเลือกห้องที่ใช่</p>
+      <div class="hero-actions">
+        <a class="btn btn-lg btn-primary" href="#listings">ดูห้องว่าง</a>
+        <a class="btn btn-lg btn-ghost" href="#/match">จับคู่ห้อง</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img
+        src="images/hero-home-sm.webp?v=20261112x"
+        srcset="images/hero-home-sm.webp?v=20261112x 700w, images/hero-home.webp?v=20261112x 1200w"
+        sizes="(min-width: 1024px) 50vw, 100vw"
+        width="1200"
+        height="900"
+        alt="บ้านไม้กรอบกระจกใต้ต้นไม้ใหญ่"
+        decoding="async"
+      />
     </div>
   </div>
   <div class="section" id="listings">
