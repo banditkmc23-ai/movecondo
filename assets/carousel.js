@@ -49,6 +49,28 @@
     track.addEventListener("pointercancel", end);
   }
 
+  function isWebKitEngine() {
+    const ua = navigator.userAgent || "";
+    const isiOS = /iP(hone|ad|od)/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    const isWebKit = /\bWebKit\b/.test(ua) && !/\b(Chromium|Chrome|Edg|OPR|Android)\b/.test(ua);
+    return isiOS || isWebKit;
+  }
+
+  function animateScrollLeft(el, to, ms, done) {
+    const from = el.scrollLeft;
+    const dist = to - from;
+    if (Math.abs(dist) < 1) { el.scrollLeft = to; if (done) done(); return; }
+    const t0 = performance.now();
+    function frame(now) {
+      const t = Math.min(1, (now - t0) / (ms || 380));
+      const ease = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+      el.scrollLeft = from + dist * ease;
+      if (t < 1) requestAnimationFrame(frame);
+      else { el.scrollLeft = to; if (done) done(); }
+    }
+    requestAnimationFrame(frame);
+  }
+
   function mountRoomGallery(root) {
     if (!root || root.__mcCarousel) return root && root.__mcCarousel;
     const stage = root.querySelector(".gallery-stage") || root;
@@ -66,38 +88,87 @@
     if (!slides.length) return null;
     slides.forEach((s) => s.removeAttribute("hidden"));
     const thumbs = [...root.querySelectorAll(".thumb[data-gal]")];
+    const thumbStrip = root.querySelector(".gallery-nav .thumbs, .thumbs");
     const count = root.querySelector(".gal-count");
     const n = slides.length;
-    let idx = 0, timer = null, idle = null, paused = false, inView = true;
+    let idx = 0, timer = null, idle = null, paused = false, inView = true, holding = false, snapping = false;
     const canAuto = n > 1 && !reduce();
+    const webkitBug = isWebKitEngine();
 
     function width() { return track.clientWidth || stage.clientWidth || 1; }
+
+    function restoreSnap() {
+      snapping = false;
+      track.style.scrollSnapType = "";
+      track.style.scrollBehavior = "";
+    }
+
+    function scrollToIndex(i, smooth, wrapping) {
+      const left = i * width();
+      snapping = true;
+      track.style.scrollSnapType = "none";
+      track.style.scrollBehavior = "auto";
+      const finish = () => { restoreSnap(); };
+      // iOS/WebKit: scrollTo({ behavior: "smooth" }) is a no-op (or fights) when
+      // the scroller has CSS scroll-snap. Animate scrollLeft ourselves instead.
+      const useSmooth = smooth && !reduce() && !wrapping;
+      if (useSmooth && webkitBug) {
+        animateScrollLeft(track, left, 400, finish);
+      } else if (useSmooth) {
+        track.scrollTo({ left, behavior: "smooth" });
+        const done = () => { track.removeEventListener("scrollend", done); finish(); };
+        track.addEventListener("scrollend", done);
+        setTimeout(done, 500);
+      } else {
+        track.scrollLeft = left;
+        requestAnimationFrame(finish);
+      }
+    }
+
     function go(i, smooth) {
-      idx = (i + n) % n;
-      track.scrollTo({ left: idx * width(), behavior: (smooth && !reduce()) ? "smooth" : "auto" });
+      const next = (i + n) % n;
+      const wrapping = n > 2 && Math.abs(next - idx) !== 1 && !(idx === n - 1 && next === 0) && !(idx === 0 && next === n - 1)
+        ? false
+        : (idx === n - 1 && next === 0) || (idx === 0 && next === n - 1);
+      // Loop last→first (and first→last) instantly so we don't rewind through every slide.
+      const instantWrap = (idx === n - 1 && next === 0) || (idx === 0 && next === n - 1);
+      idx = next;
+      scrollToIndex(idx, smooth && !instantWrap, instantWrap);
       sync();
     }
+
     function sync() {
       slides.forEach((s, i) => s.classList.toggle("on", i === idx));
       thumbs.forEach((b, i) => {
         const on = i === idx;
         b.classList.toggle("on", on);
         b.setAttribute("aria-pressed", on ? "true" : "false");
+        if (on && thumbStrip) {
+          const left = b.offsetLeft - (thumbStrip.clientWidth - b.offsetWidth) / 2;
+          try {
+            thumbStrip.scrollTo({ left: Math.max(0, left), behavior: reduce() ? "auto" : "smooth" });
+          } catch (err) {
+            thumbStrip.scrollLeft = Math.max(0, left);
+          }
+        }
       });
       if (count) count.textContent = pad(idx + 1, n);
       stage.setAttribute("data-index", String(idx));
     }
+
     function readIdx() {
+      if (snapping) return;
       const w = width();
       const next = Math.round(track.scrollLeft / w);
       if (next !== idx && next >= 0 && next < n) { idx = next; sync(); }
     }
+
     function stopAuto() {
       if (timer) { clearInterval(timer); timer = null; }
     }
     function startAuto() {
       stopAuto();
-      if (!canAuto || paused || !inView || document.hidden) return;
+      if (!canAuto || paused || holding || !inView || document.hidden) return;
       timer = setInterval(() => go(idx + 1, true), ROOM_MS);
     }
     function interact() {
@@ -109,7 +180,11 @@
 
     enableDrag(track, interact);
     track.addEventListener("scroll", () => { readIdx(); }, { passive: true });
-    track.addEventListener("touchstart", interact, { passive: true });
+    // Pause only while a finger is down; resume after idle. A touchstart-only
+    // pause could stick on iOS if touchend is swallowed.
+    track.addEventListener("touchstart", () => { holding = true; stopAuto(); }, { passive: true });
+    track.addEventListener("touchend", () => { holding = false; interact(); }, { passive: true });
+    track.addEventListener("touchcancel", () => { holding = false; interact(); }, { passive: true });
     track.setAttribute("tabindex", "0");
 
     root.addEventListener("click", (e) => {
@@ -131,21 +206,34 @@
       interact();
     });
 
+    // threshold 0 + isIntersecting: iOS often reports a tiny ratio at rest,
+    // so a 0.2 cutoff could leave autoplay stopped while the gallery is visible.
     const io = new IntersectionObserver((ents) => {
-      inView = ents.some((en) => en.isIntersecting && en.intersectionRatio > 0.2);
+      inView = ents.some((en) => en.isIntersecting);
       if (inView) startAuto(); else stopAuto();
-    }, { threshold: [0, 0.2, 0.5] });
+    }, { threshold: 0, rootMargin: "80px 0px" });
+    io.observe(stage);
     io.observe(root);
 
     document.addEventListener("visibilitychange", () => {
       if (document.hidden) stopAuto(); else startAuto();
     });
 
-    window.addEventListener("resize", () => go(idx, false));
+    window.addEventListener("resize", () => {
+      scrollToIndex(idx, false, true);
+    });
     go(0, false);
     startAuto();
+    // Fallback if IntersectionObserver never fires (some WebKit first-paint cases).
+    setTimeout(() => {
+      const r = stage.getBoundingClientRect();
+      if (r.bottom > 40 && r.top < (window.innerHeight || 800) + 40) {
+        inView = true;
+        startAuto();
+      }
+    }, 200);
 
-    const api = { go, get index() { return idx; }, get count() { return n; }, pause() { interact(); }, play() { paused = false; startAuto(); } };
+    const api = { go, get index() { return idx; }, get count() { return n; }, pause() { interact(); }, play() { paused = false; holding = false; startAuto(); } };
     root.__mcCarousel = api;
     return api;
   }

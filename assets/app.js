@@ -893,7 +893,7 @@ function faqHTML(){
   return `<div class="faq-wrap">
         <div class="eyebrow">คำถามที่พบบ่อย</div>
         <h2>ก่อนเริ่มหาห้อง</h2>
-        <details class="faq"><summary>สนใจห้องไหน ติดต่ออย่างไร</summary><p>ทัก <a href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">LINE</a> แล้วบอกรหัสห้อง (เช่น MC-001) เพื่อให้เรารู้ว่าสนใจห้องไหน</p></details>
+        <details class="faq"><summary>สนใจห้องไหน ติดต่ออย่างไร</summary><p>ทัก <a href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">LINE</a> แล้วบอกชื่อโครงการหรือห้องที่สนใจได้เลย</p></details>
         <details class="faq"><summary>ร้านดังในแต่ละย่านเป็นสถานที่จริงหรือไม่</summary><p>ใช่ ร้านอาหาร คาเฟ่ บาร์ และสถานที่ในหมวดร้านดังเป็นสถานที่จริงที่เปิดให้บริการ ระยะทางเป็นค่าประมาณจากสถานีหรือจากโครงการเมื่อมีพิกัด</p></details>
         <details class="faq"><summary>ติดต่อ MoveCondo ได้อย่างไร</summary><p>ทัก <a href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">LINE</a> ได้เลย</p></details>
     </div>`;
@@ -1175,7 +1175,7 @@ function stickyFor(id){
 }
 
 function lineModalHTML(id){
-  const code = id ? ` แล้วบอกรหัสห้อง <strong>${id}</strong>` : "";
+  const code = "";
   return `<div class="modal">
     <h3 id="lineTitle">ติดต่อผ่าน LINE</h3>
     <p>ทัก MoveCondo ได้ที่ LINE${code} ปุ่มนี้ไม่ได้ใส่ข้อความล่วงหน้า</p>
