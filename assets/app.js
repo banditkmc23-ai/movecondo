@@ -1095,23 +1095,210 @@ function areaChipsHTML(prefix){
   prefix = prefix || "";
   return AREAS.map(a=>`<a class="chip" href="${areaHref(a)}">${a}</a>`).join(" ");
 }
+
+let homeSearchQuery = "";
+let homeSearchScroll = false;
+let heroSearchDocBound = false;
+
+function normSearch(s){
+  return String(s || "").toLowerCase().replace(/\s+/g, " ").trim();
+}
+function areaAliases(area){
+  const row = (typeof AREA_ALIASES !== "undefined" ? AREA_ALIASES : []).find(a => a[0] === area);
+  return row ? row[1] : [area];
+}
+function areasMatchingQuery(q){
+  const n = normSearch(q);
+  if(!n) return [];
+  return AREAS.filter(area => {
+    if(normSearch(area).includes(n) || n.includes(normSearch(area))) return true;
+    return areaAliases(area).some(a => {
+      const an = normSearch(a);
+      return an.includes(n) || n.includes(an);
+    });
+  });
+}
+function listingMatchesQuery(l, q){
+  const n = normSearch(q);
+  if(!n) return true;
+  const bits = [l.project, l.area, l.transit, l.type, l.beds, ...(areaAliases(l.area))];
+  if(l.transit) bits.push(String(l.transit).replace(/^(BTS|MRT)\s+/i, ""));
+  if(normSearch(bits.join(" ")).includes(n)) return true;
+  if(areasMatchingQuery(q).includes(l.area)) return true;
+  if(/(1\s*bed|1br|1\s*นอน|หนึ่งห้อง)/i.test(q) && /1/.test(l.type || "") && !/2/.test(l.type || "")) return true;
+  if(/(2\s*bed|2br|2\s*นอน|สองห้อง)/i.test(q) && /2/.test(l.type || "")) return true;
+  return false;
+}
+function heroSearchHTML(){
+  const q = escapeHtml(homeSearchQuery || "");
+  const hideClear = homeSearchQuery ? "" : " hidden";
+  const filled = homeSearchQuery ? " is-filled" : "";
+  return `<div class="hero-search">
+      <form class="hero-search-form" role="search" action="#listings">
+        <div class="hero-search-pill${filled}">
+          <span class="hero-search-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span>
+          <span class="hero-search-placeholder" aria-hidden="true" data-i18n="search.placeholder">ค้นหาคอนโดที่ใช่สำหรับคุณ</span>
+          <input class="hero-search-input" type="search" name="q" value="${q}"
+            placeholder="ค้นหาคอนโดที่ใช่สำหรับคุณ"
+            data-i18n="search.placeholder" data-i18n-placeholder="Find the right condo for you"
+            maxlength="80" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+            enterkeyhint="search" aria-label="ค้นหาคอนโด" data-i18n-aria-label="Search condos"
+            aria-autocomplete="list" aria-controls="hero-search-suggest" aria-expanded="false" />
+          <button type="button" class="hero-search-clear"${hideClear} aria-label="ล้างคำค้นหา" data-i18n="search.clear" data-i18n-aria-label="Clear search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+          <button type="submit" class="hero-search-submit" aria-label="ค้นหา" data-i18n="search.submit" data-i18n-aria-label="Search">
+            <svg class="hero-search-submit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <span class="hero-search-submit-label">ค้นหา</span>
+          </button>
+        </div>
+        <div class="hero-search-suggest" id="hero-search-suggest" role="listbox" hidden></div>
+      </form>
+    </div>`;
+}
+function searchEmptyHTML(){
+  return `<div class="search-empty" role="status">
+      <p data-i18n="search.empty">ไม่พบห้องที่ตรงกับคำค้นหา</p>
+      <div class="search-empty-actions">
+        <a class="btn btn-md btn-primary" href="#/match" data-i18n="nav.match">จับคู่ห้อง</a>
+        <button type="button" class="btn btn-md btn-ghost" data-clear-search data-i18n="search.clear">ล้างคำค้นหา</button>
+      </div>
+    </div>`;
+}
+function applyHomeSearch(raw, scroll){
+  const next = String(raw || "").trim();
+  homeSearchQuery = next;
+  homeSearchScroll = !!scroll;
+  const hash = next ? "#/?q=" + encodeURIComponent(next) : "#/";
+  const cur = location.hash || "#/";
+  const same = cur === hash || (next === "" && (cur === "" || cur === "#" || cur === "#/"));
+  if(same) render();
+  else location.hash = hash;
+}
+function paintSearchSuggest(box, q){
+  const suggest = box.querySelector(".hero-search-suggest");
+  const input = box.querySelector(".hero-search-input");
+  if(!suggest || !input) return;
+  const n = normSearch(q);
+  if(!n){ suggest.hidden = true; input.setAttribute("aria-expanded", "false"); return; }
+  const areas = areasMatchingQuery(q);
+  const rooms = LISTINGS.filter(l => listingMatchesQuery(l, q));
+  if(!areas.length && !rooms.length){
+    suggest.innerHTML = `<div class="hero-suggest-group"><div class="hero-suggest-label" data-i18n="search.empty">ไม่พบห้องที่ตรงกับคำค้นหา</div>
+      <a class="hero-suggest-item" href="#/match" role="option" data-i18n="nav.match">จับคู่ห้อง</a></div>`;
+    suggest.hidden = false;
+    input.setAttribute("aria-expanded", "true");
+    return;
+  }
+  let html = "";
+  if(areas.length){
+    html += `<div class="hero-suggest-group"><div class="hero-suggest-label" data-i18n="search.areas">ย่าน</div>` +
+      areas.map(a => `<button type="button" class="hero-suggest-item" role="option" data-search-area="${escapeHtml(a)}"><b>ย่าน${escapeHtml(a)}</b><span>${LISTINGS.filter(l=>l.area===a).length} ห้อง</span></button>`).join("") +
+      `</div>`;
+  }
+  if(rooms.length){
+    const shown = rooms.slice(0, 6);
+    html += `<div class="hero-suggest-group"><div class="hero-suggest-label" data-i18n="search.rooms">ห้อง</div>` +
+      shown.map(l => `<a class="hero-suggest-item" role="option" href="${roomHref(l.id)}"><b>${escapeHtml(l.project)}</b><span>${escapeHtml(l.area)} · ${money(l.price)}</span></a>`).join("") +
+      `</div>`;
+    if(rooms.length){
+      html += `<button type="button" class="hero-suggest-all" data-search-apply="${escapeHtml(q)}">พบ ${rooms.length} ห้องที่ตรง</button>`;
+    }
+  }
+  suggest.innerHTML = html;
+  suggest.hidden = false;
+  input.setAttribute("aria-expanded", "true");
+}
+function bindHeroSearch(){
+  const box = document.querySelector("#view-home.on .hero-search") || document.querySelector(".hero-search");
+  if(!box || box.dataset.bound === "1") return;
+  box.dataset.bound = "1";
+  const form = box.querySelector(".hero-search-form");
+  const input = box.querySelector(".hero-search-input");
+  const clear = box.querySelector(".hero-search-clear");
+  const suggest = box.querySelector(".hero-search-suggest");
+  if(!form || !input) return;
+  const pill = box.querySelector(".hero-search-pill");
+  const syncClear = () => {
+    const filled = !!input.value.trim();
+    if(clear) clear.hidden = !filled;
+    if(pill) pill.classList.toggle("is-filled", filled);
+  };
+  syncClear();
+  input.addEventListener("input", () => {
+    syncClear();
+    paintSearchSuggest(box, input.value);
+  });
+  input.addEventListener("focus", () => { if(input.value.trim()) paintSearchSuggest(box, input.value); });
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if(suggest) suggest.hidden = true;
+    input.setAttribute("aria-expanded", "false");
+    applyHomeSearch(input.value, true);
+  });
+  if(clear){
+    clear.addEventListener("click", (e) => {
+      e.preventDefault();
+      input.value = "";
+      syncClear();
+      if(suggest) suggest.hidden = true;
+      applyHomeSearch("", false);
+      input.focus();
+    });
+  }
+  box.addEventListener("click", (e) => {
+    const areaBtn = e.target.closest("[data-search-area]");
+    if(areaBtn){
+      e.preventDefault();
+      applyHomeSearch(areaBtn.dataset.searchArea, true);
+      return;
+    }
+    const allBtn = e.target.closest("[data-search-apply]");
+    if(allBtn){
+      e.preventDefault();
+      applyHomeSearch(allBtn.dataset.searchApply, true);
+    }
+  });
+  if(!heroSearchDocBound){
+    heroSearchDocBound = true;
+    document.addEventListener("click", (e) => {
+      document.querySelectorAll(".hero-search").forEach(b => {
+        const s = b.querySelector(".hero-search-suggest");
+        const i = b.querySelector(".hero-search-input");
+        if(s && !b.contains(e.target)){
+          s.hidden = true;
+          if(i) i.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+    document.addEventListener("keydown", (e) => {
+      if(e.key !== "Escape") return;
+      document.querySelectorAll(".hero-search-suggest").forEach(s => { s.hidden = true; });
+      document.querySelectorAll(".hero-search-input").forEach(i => i.setAttribute("aria-expanded", "false"));
+    });
+  }
+}
+
 function homeView(){
-  const cards = LISTINGS.map(l => cardHTML(l)).join("");
+  const q = (homeSearchQuery || "").trim();
+  const matched = q ? LISTINGS.filter(l => listingMatchesQuery(l, q)) : LISTINGS;
+  const cards = matched.map(l => cardHTML(l)).join("");
+  const countLine = q
+    ? (matched.length ? `พบ ${matched.length} ห้องที่ตรง` : "")
+    : `${LISTINGS.length} ห้องจากโครงการใกล้รถไฟฟ้า`;
+  const body = matched.length ? `<div class="grid">${cards}</div>` : searchEmptyHTML();
   return `
   <div class="hero">
     <div class="hero-copy">
       <div class="hero-kicker">MoveCondo · ย้ายคอนโด</div>
       <h1>หาคอนโดเช่าที่ <em class="hero-phrase">ตรงกับคุณ</em></h1>
       <p class="lead">ดูห้องจริงใกล้รถไฟฟ้าในกรุงเทพฯ แล้วเลือกห้องที่ใช่</p>
-      <div class="hero-actions">
-        <a class="btn btn-lg btn-primary" href="#listings">ดูห้องว่าง</a>
-        <a class="btn btn-lg btn-ghost" href="#/match">จับคู่ห้อง</a>
-      </div>
+      ${heroSearchHTML()}
     </div>
     <div class="hero-visual">
       <img
-        src="images/hero-home-sm.webp?v=20261112ab"
-        srcset="images/hero-home-sm.webp?v=20261112ab 700w, images/hero-home.webp?v=20261112ab 1200w"
+        src="images/hero-home-sm.webp?v=20261112ac"
+        srcset="images/hero-home-sm.webp?v=20261112ac 700w, images/hero-home.webp?v=20261112ac 1200w"
         sizes="(min-width: 1024px) 50vw, 100vw"
         width="1200"
         height="900"
@@ -1121,8 +1308,8 @@ function homeView(){
     </div>
   </div>
   <div class="section" id="listings">
-    <div class="section-head"><div><div class="eyebrow">ประกาศเช่า</div><h2>คอนโดเช่าที่คัดมาให้</h2><p>${LISTINGS.length} ห้องจากโครงการใกล้รถไฟฟ้า</p></div></div>
-    <div class="grid">${cards}</div>
+    <div class="section-head"><div><div class="eyebrow">ประกาศเช่า</div><h2>คอนโดเช่าที่คัดมาให้</h2>${countLine ? `<p>${countLine}</p>` : ""}</div></div>
+    ${body}
   </div>
   <div class="band">${hoodHTML()}</div>
   ${faqHTML()}
@@ -1636,9 +1823,21 @@ function render(){
     location.replace(SITE_BASE);
     return;
   } else {
+    const qq = (q.get("q") || "").trim();
+    homeSearchQuery = qq;
     home.classList.add("on"); home.innerHTML = homeView(); setNav("home");
+    bindHeroSearch();
   }
-  window.scrollTo(0,0);
+  const scrollListings = homeSearchScroll;
+  homeSearchScroll = false;
+  if(scrollListings){
+    requestAnimationFrame(() => {
+      const el = document.getElementById("listings");
+      if(el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  } else {
+    window.scrollTo(0,0);
+  }
   if (window.MoveCondoCarousel) window.MoveCondoCarousel.scan();
   if (window.__movecondoFabGuard) window.__movecondoFabGuard();
 }
@@ -1982,6 +2181,13 @@ function setupAiFabCollisionGuard(){
 
 window.addEventListener("hashchange", render);
 window.addEventListener("DOMContentLoaded", ()=>{ render(); if (shouldDemoAI()) openAI({demo:true}); setupAiFabCollisionGuard(); });
+document.addEventListener("click", (e) => {
+  const clearBtn = e.target.closest("[data-clear-search]");
+  if(clearBtn){
+    e.preventDefault();
+    applyHomeSearch("", false);
+  }
+});
 
 document.addEventListener("click", (e)=>{
   const listing = e.target.closest("[data-open-listing]");
