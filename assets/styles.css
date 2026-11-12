@@ -1815,3 +1815,9 @@
         max-width: min(36rem, calc(100vw - min(58vw, calc(100vw - 28rem)) - 3.75rem));
       }
     }
+
+    /* Soon-available badge (amber) + load-more paging */
+    .badge-vacant.badge-soon { background: #B45309; color: #fff; }
+    .card[hidden] { display: none !important; }
+    .load-more-wrap { display: flex; justify-content: center; margin: 22px 0 6px; }
+    .load-more-wrap .load-more { min-width: 180px; }

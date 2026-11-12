@@ -1,0 +1,166 @@
+{
+  "area": "เอกมัย",
+  "slug": "ekkamai",
+  "room": "MC-078",
+  "project": "Ceil By Sansiri",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.7305566,
+    "lng": 100.5877946
+  },
+  "stations": [
+    {
+      "id": "bts-thong-lo",
+      "name": "BTS ทองหล่อ",
+      "name_en": "Thong Lo BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.72424444,
+      "lng": 100.57855833,
+      "source": "https://en.wikipedia.org/wiki/Thong_Lo_BTS_station",
+      "primary": true
+    },
+    {
+      "id": "bts-ekkamai",
+      "name": "BTS เอกมัย",
+      "name_en": "Ekkamai BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.71955833,
+      "lng": 100.585175,
+      "source": "https://en.wikipedia.org/wiki/Ekkamai_BTS_station",
+      "primary": false
+    }
+  ],
+  "places": [
+    {
+      "name": "Shakariki432 Ekkamai",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.730555,
+      "lng": 100.58648,
+      "distanceM": 142,
+      "walkMinEst": 2.3,
+      "rating": 4.8,
+      "reviewCount": 1457,
+      "mapsQuery": "13.730555,100.58648",
+      "sourceUrl": "https://wanderlog.com/place/details/2159979/shakariki432-ekkamai"
+    },
+    {
+      "name": "CQK Hotpot Ekkamai-Thonglor",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.732227,
+      "lng": 100.586819,
+      "distanceM": 214,
+      "walkMinEst": 3.5,
+      "rating": 4.9,
+      "reviewCount": 5313,
+      "mapsQuery": "13.732227,100.586819",
+      "sourceUrl": "https://wanderlog.com/place/details/11373425/cqk-hotpot-ekkamai-thonglor-branch"
+    },
+    {
+      "name": "DONKI Mall Thonglor",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "lat": 13.730913,
+      "lng": 100.585662,
+      "distanceM": 234,
+      "walkMinEst": 3.8,
+      "rating": 4.2,
+      "reviewCount": 7047,
+      "mapsQuery": "13.730913,100.585662",
+      "sourceUrl": "https://wanderlog.com/place/details/459342/donki-mall-thonglor"
+    },
+    {
+      "name": "Let's Relax Onsen and Spa (Thonglor)",
+      "category": "สปา",
+      "categoryKey": "spa",
+      "lat": 13.73183,
+      "lng": 100.582161,
+      "distanceM": 625,
+      "walkMinEst": 10.2,
+      "rating": 4.5,
+      "reviewCount": 2134,
+      "mapsQuery": "13.73183,100.582161",
+      "sourceUrl": "https://wanderlog.com/place/details/409215/lets-relax-onsen-and-spa-thonglor"
+    },
+    {
+      "name": "After You Dessert Cafe - Thonglor 13",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "lat": 13.733703,
+      "lng": 100.581364,
+      "distanceM": 778,
+      "walkMinEst": 12.6,
+      "rating": 4.4,
+      "reviewCount": 1396,
+      "mapsQuery": "13.733703,100.581364",
+      "sourceUrl": "https://wanderlog.com/place/details/410345/after-you-dessert-cafe-thonglor-13"
+    },
+    {
+      "name": "ROAST coffee & eatery (The Commons)",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "lat": 13.735054,
+      "lng": 100.582268,
+      "distanceM": 779,
+      "walkMinEst": 12.7,
+      "rating": 4.5,
+      "reviewCount": 2839,
+      "mapsQuery": "13.735054,100.582268",
+      "sourceUrl": "https://wanderlog.com/place/details/396806/roast-coffee--eatery"
+    },
+    {
+      "name": "TUBA Bar & Restaurant",
+      "category": "บาร์",
+      "categoryKey": "bar",
+      "lat": 13.738417,
+      "lng": 100.588487,
+      "distanceM": 877,
+      "walkMinEst": 14.3,
+      "rating": 4.6,
+      "reviewCount": 2634,
+      "mapsQuery": "13.738417,100.588487",
+      "sourceUrl": "https://wanderlog.com/place/details/375314/tuba-bar-restaurant"
+    },
+    {
+      "name": "Iron Balls Distillery & Bar",
+      "category": "บาร์",
+      "categoryKey": "bar",
+      "lat": 13.723373,
+      "lng": 100.584328,
+      "distanceM": 882,
+      "walkMinEst": 14.3,
+      "rating": 4.6,
+      "reviewCount": 518,
+      "mapsQuery": "13.723373,100.584328",
+      "sourceUrl": "https://wanderlog.com/place/details/2128011/iron-balls-distillery-bar"
+    },
+    {
+      "name": "Kashikiri Onsen and Spa Sukhumvit 49",
+      "category": "สปา",
+      "categoryKey": "spa",
+      "lat": 13.730548,
+      "lng": 100.576148,
+      "distanceM": 1258,
+      "walkMinEst": 20.4,
+      "rating": 4.6,
+      "reviewCount": 499,
+      "mapsQuery": "13.730548,100.576148",
+      "sourceUrl": "https://wanderlog.com/place/details/1727390/kashikiri-onsen-and-spa-sukhumvit-49"
+    }
+  ],
+  "condo": {
+    "name": "Ceil By Sansiri",
+    "lat": 13.7305566,
+    "lng": 100.5877946,
+    "approx": false
+  },
+  "mapMode": "condo",
+  "nearbySource": "nearby-real.json (area pool)",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "สถานีรถไฟฟ้าและร้านดังใกล้เคียงในรัศมีประมาณ 1.5 กม."
+}

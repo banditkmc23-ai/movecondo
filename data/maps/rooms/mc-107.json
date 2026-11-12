@@ -1,0 +1,48 @@
+{
+  "area": "สามย่าน-สีลม",
+  "slug": "samyan-silom",
+  "room": "MC-107",
+  "project": "Noble Revo Silom",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.719385,
+    "lng": 100.519244
+  },
+  "stations": [
+    {
+      "id": "bts-surasak",
+      "name": "BTS สุรศักดิ์",
+      "name_en": "Surasak BTS",
+      "system": "BTS",
+      "line_th": "สายสีลม",
+      "lat": 13.7193,
+      "lng": 100.5214,
+      "source": "https://en.wikipedia.org/wiki/Surasak_BTS_station",
+      "primary": true
+    },
+    {
+      "id": "bts-chong-nonsi",
+      "name": "BTS ช่องนนทรี",
+      "name_en": "Chong Nonsi BTS",
+      "system": "BTS",
+      "line_th": "สายสีลม",
+      "lat": 13.72378611,
+      "lng": 100.52944444,
+      "source": "https://en.wikipedia.org/wiki/Chong_Nonsi_BTS_station",
+      "primary": false
+    }
+  ],
+  "places": [],
+  "condo": {
+    "name": "Noble Revo Silom",
+    "lat": 13.719385,
+    "lng": 100.519244,
+    "approx": false
+  },
+  "mapMode": "condo",
+  "nearbySource": "nearby-real.json (area pool)",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "สถานีรถไฟฟ้าและร้านดังใกล้เคียงในรัศมีประมาณ 1.5 กม."
+}

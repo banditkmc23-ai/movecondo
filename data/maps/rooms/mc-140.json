@@ -1,0 +1,59 @@
+{
+  "area": "พระราม 4",
+  "slug": "rama-4",
+  "room": "MC-140",
+  "project": "Coco Parc Rama 4",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.721861,
+    "lng": 100.553421
+  },
+  "stations": [
+    {
+      "id": "mrt-khlong-toei",
+      "name": "MRT คลองเตย",
+      "name_en": "Khlong Toei MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.7224,
+      "lng": 100.554,
+      "source": "https://en.wikipedia.org/wiki/Khlong_Toei_MRT_station",
+      "primary": true
+    },
+    {
+      "id": "mrt-queen-sirikit-national-convention-centre",
+      "name": "MRT ศูนย์การประชุมแห่งชาติสิริกิติ์",
+      "name_en": "Queen Sirikit National Convention Centre MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.7231,
+      "lng": 100.56,
+      "source": "https://en.wikipedia.org/wiki/Queen_Sirikit_National_Convention_Centre_MRT_station",
+      "primary": false
+    },
+    {
+      "id": "mrt-lumphini",
+      "name": "MRT ลุมพินี",
+      "name_en": "Lumphini MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.7256,
+      "lng": 100.546,
+      "source": "https://en.wikipedia.org/wiki/Lumphini_MRT_station",
+      "primary": false
+    }
+  ],
+  "places": [],
+  "condo": {
+    "name": "Coco Parc Rama 4",
+    "lat": 13.721861,
+    "lng": 100.553421,
+    "approx": false
+  },
+  "mapMode": "condo",
+  "nearbySource": "nearby-real.json (area pool)",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "สถานีรถไฟฟ้าและร้านดังใกล้เคียงในรัศมีประมาณ 1.5 กม."
+}

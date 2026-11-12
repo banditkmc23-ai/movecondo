@@ -1,0 +1,140 @@
+{
+  "area": "อ่อนนุช",
+  "slug": "on-nut",
+  "room": "MC-070",
+  "project": "The Base Sukhumvit 77",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.710999,
+    "lng": 100.602507
+  },
+  "stations": [
+    {
+      "id": "bts-on-nut",
+      "name": "BTS อ่อนนุช",
+      "name_en": "On Nut BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.70561111,
+      "lng": 100.60108333,
+      "source": "https://en.wikipedia.org/wiki/On_Nut_BTS_station",
+      "primary": true
+    },
+    {
+      "id": "bts-phra-khanong",
+      "name": "BTS พระโขนง",
+      "name_en": "Phra Khanong BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.71519444,
+      "lng": 100.59128333,
+      "source": "https://en.wikipedia.org/wiki/Phra_Khanong_BTS_station",
+      "primary": false
+    }
+  ],
+  "places": [
+    {
+      "name": "Onnuch FreshMart",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "lat": 13.710215,
+      "lng": 100.600668,
+      "distanceM": 217,
+      "walkMinEst": 3.5,
+      "rating": 4.2,
+      "reviewCount": 1372,
+      "mapsQuery": "13.710215,100.600668",
+      "sourceUrl": "https://wanderlog.com/place/details/4025948/onnuch-freshmart"
+    },
+    {
+      "name": "Berlin's Doner Kebab - Habito Mall",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.712805,
+      "lng": 100.600907,
+      "distanceM": 265,
+      "walkMinEst": 4.3,
+      "rating": 4.6,
+      "reviewCount": 293,
+      "mapsQuery": "13.712805,100.600907",
+      "sourceUrl": "https://wanderlog.com/place/details/2601862/berlins-doner-kebab-habito-mall"
+    },
+    {
+      "name": "T77 Community (Habito)",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "lat": 13.712925,
+      "lng": 100.600876,
+      "distanceM": 277,
+      "walkMinEst": 4.5,
+      "rating": 4.5,
+      "reviewCount": 587,
+      "mapsQuery": "13.712925,100.600876",
+      "sourceUrl": "https://wanderlog.com/place/details/460120/t77-community"
+    },
+    {
+      "name": "Lao Garden",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.713457,
+      "lng": 100.601236,
+      "distanceM": 306,
+      "walkMinEst": 5.0,
+      "rating": 4.5,
+      "reviewCount": 664,
+      "mapsQuery": "13.713457,100.601236",
+      "sourceUrl": "https://wanderlog.com/place/details/428589/lao-garden"
+    },
+    {
+      "name": "CHIANG MAI MASSAGE ONNUT",
+      "category": "สปา",
+      "categoryKey": "spa",
+      "lat": 13.706965,
+      "lng": 100.600746,
+      "distanceM": 487,
+      "walkMinEst": 7.9,
+      "rating": 4.4,
+      "reviewCount": 902,
+      "mapsQuery": "13.706965,100.600746",
+      "sourceUrl": "https://wanderlog.com/place/details/6481597/chiang-mai-massage-onnut"
+    },
+    {
+      "name": "Little Fox Home On Nut",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "lat": 13.711327,
+      "lng": 100.608616,
+      "distanceM": 661,
+      "walkMinEst": 10.7,
+      "rating": 4.3,
+      "reviewCount": 1861,
+      "mapsQuery": "13.711327,100.608616",
+      "sourceUrl": "https://wanderlog.com/place/details/1075054/little-fox-home-on-nut"
+    },
+    {
+      "name": "iki haus",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "lat": 13.723582,
+      "lng": 100.595657,
+      "distanceM": 1583,
+      "walkMinEst": 25.7,
+      "rating": 4.6,
+      "reviewCount": 372,
+      "mapsQuery": "13.723582,100.595657",
+      "sourceUrl": "https://wanderlog.com/place/details/8459087/iki-haus"
+    }
+  ],
+  "condo": {
+    "name": "The Base Sukhumvit 77",
+    "lat": 13.710999,
+    "lng": 100.602507,
+    "approx": false
+  },
+  "mapMode": "condo",
+  "nearbySource": "nearby-real.json (area pool)",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "สถานีรถไฟฟ้าและร้านดังใกล้เคียงในรัศมีประมาณ 1.5 กม."
+}

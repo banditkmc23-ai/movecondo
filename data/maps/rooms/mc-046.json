@@ -1,0 +1,48 @@
+{
+  "area": "ห้วยขวาง",
+  "slug": "huai-khwang",
+  "room": "MC-046",
+  "project": "The Tempo Ratchada",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.779177,
+    "lng": 100.575633
+  },
+  "stations": [
+    {
+      "id": "mrt-huai-khwang",
+      "name": "MRT ห้วยขวาง",
+      "name_en": "Huai Khwang MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.7786,
+      "lng": 100.574,
+      "source": "https://en.wikipedia.org/wiki/Huai_Khwang_MRT_station",
+      "primary": true
+    },
+    {
+      "id": "mrt-sutthisan",
+      "name": "MRT สุทธิสาร",
+      "name_en": "Sutthisan MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.79,
+      "lng": 100.574,
+      "source": "https://en.wikipedia.org/wiki/Sutthisan_MRT_station",
+      "primary": false
+    }
+  ],
+  "places": [],
+  "condo": {
+    "name": "The Tempo Ratchada",
+    "lat": 13.779177,
+    "lng": 100.575633,
+    "approx": false
+  },
+  "mapMode": "condo",
+  "nearbySource": "nearby-real.json (area pool)",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "สถานีรถไฟฟ้าและร้านดังใกล้เคียงในรัศมีประมาณ 1.5 กม."
+}

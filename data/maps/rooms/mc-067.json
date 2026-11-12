@@ -1,0 +1,164 @@
+{
+  "area": "อโศก",
+  "slug": "asoke",
+  "room": "MC-067",
+  "project": "Fynn Asoke",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.735689,
+    "lng": 100.55673
+  },
+  "stations": [
+    {
+      "id": "bts-asok",
+      "name": "BTS อโศก",
+      "name_en": "Asok BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.73703333,
+      "lng": 100.56041944,
+      "source": "https://en.wikipedia.org/wiki/Asok_BTS_station",
+      "primary": true
+    },
+    {
+      "id": "bts-nana",
+      "name": "BTS นานา",
+      "name_en": "Nana BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.74060278,
+      "lng": 100.55539722,
+      "source": "https://en.wikipedia.org/wiki/Nana_BTS_station",
+      "primary": false
+    },
+    {
+      "id": "mrt-sukhumvit",
+      "name": "MRT สุขุมวิท",
+      "name_en": "Sukhumvit MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.738524,
+      "lng": 100.561446,
+      "source": "https://en.wikipedia.org/wiki/Sukhumvit_MRT_station",
+      "primary": false
+    }
+  ],
+  "places": [
+    {
+      "name": "Terminal 21 Asok",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "lat": 13.737964,
+      "lng": 100.560406,
+      "distanceM": 471,
+      "walkMinEst": 7.7,
+      "rating": 4.6,
+      "reviewCount": 21550,
+      "mapsQuery": "13.737964,100.560406",
+      "sourceUrl": "https://wanderlog.com/place/details/1055596/terminal-21-asok"
+    },
+    {
+      "name": "Amaranth Spa & Massage",
+      "category": "สปา",
+      "categoryKey": "spa",
+      "lat": 13.739293,
+      "lng": 100.559562,
+      "distanceM": 504,
+      "walkMinEst": 8.2,
+      "rating": 4.7,
+      "reviewCount": 1053,
+      "mapsQuery": "13.739293,100.559562",
+      "sourceUrl": "https://wanderlog.com/place/details/4206529/amaranth-spa-massage"
+    },
+    {
+      "name": "THE COFFEE CLUB - Maitria Hotel Sukhumvit",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "lat": 13.732742,
+      "lng": 100.562593,
+      "distanceM": 713,
+      "walkMinEst": 11.6,
+      "rating": 4.7,
+      "reviewCount": 2247,
+      "mapsQuery": "13.732742,100.562593",
+      "sourceUrl": "https://wanderlog.com/place/details/2611995/the-coffee-club-maitria-hotel-sukhumvit"
+    },
+    {
+      "name": "Sushi Masato",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.734487,
+      "lng": 100.566112,
+      "distanceM": 1022,
+      "walkMinEst": 16.6,
+      "rating": 4.8,
+      "reviewCount": 830,
+      "mapsQuery": "13.734487,100.566112",
+      "sourceUrl": "https://wanderlog.com/place/details/1074537/sushi-masato"
+    },
+    {
+      "name": "A KEEN HOUSE - Emsphere",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "lat": 13.732532,
+      "lng": 100.566328,
+      "distanceM": 1095,
+      "walkMinEst": 17.8,
+      "rating": 4.7,
+      "reviewCount": 799,
+      "mapsQuery": "13.732532,100.566328",
+      "sourceUrl": "https://wanderlog.com/place/details/8700083/a-keen-house-emsphere"
+    },
+    {
+      "name": "EmSphere",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "lat": 13.732235,
+      "lng": 100.566295,
+      "distanceM": 1102,
+      "walkMinEst": 17.9,
+      "rating": 4.6,
+      "reviewCount": 6928,
+      "mapsQuery": "13.732235,100.566295",
+      "sourceUrl": "https://wanderlog.com/place/details/8428538/emsphere"
+    },
+    {
+      "name": "Sri Trat Restaurant and Bar",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.736807,
+      "lng": 100.568074,
+      "distanceM": 1232,
+      "walkMinEst": 20.0,
+      "rating": 4.5,
+      "reviewCount": 2699,
+      "mapsQuery": "13.736807,100.568074",
+      "sourceUrl": "https://wanderlog.com/place/details/26847/sri-trat-restaurant-and-bar"
+    },
+    {
+      "name": "Oasis Spa (Bangkok, Sukhumvit 31)",
+      "category": "สปา",
+      "categoryKey": "spa",
+      "lat": 13.740833,
+      "lng": 100.56823,
+      "distanceM": 1368,
+      "walkMinEst": 22.2,
+      "rating": 4.7,
+      "reviewCount": 2368,
+      "mapsQuery": "13.740833,100.56823",
+      "sourceUrl": "https://wanderlog.com/place/details/400028/oasis-spa-bangkok-sukhumvit-31"
+    }
+  ],
+  "condo": {
+    "name": "Fynn Asoke",
+    "lat": 13.735689,
+    "lng": 100.55673,
+    "approx": false
+  },
+  "mapMode": "condo",
+  "nearbySource": "nearby-real.json (area pool)",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "สถานีรถไฟฟ้าและร้านดังใกล้เคียงในรัศมีประมาณ 1.5 กม."
+}

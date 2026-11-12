@@ -34,12 +34,18 @@ def parse_room(slug):
     s = read(f"rooms/{slug}/index.html")
     g = lambda p: un(re.search(p, s, re.S).group(1))
     facts = [(un(a), un(b)) for a, b in re.findall(r'<div><span>([^<]+)</span><b>([^<]+)</b></div>', s)]
-    feats = [(un(h), [un(x) for x in re.findall(r"<li>(.*?)</li>", ul)])
+    feats = [(un(h), [un(x) for x in re.findall(r"<li[^>]*>(.*?)</li>", ul)])
              for h, ul in re.findall(r'</span>([^<]+)</h3>\s*<ul class="feature-list">(.*?)</ul>', s, re.S)]
-    badge = re.search(r'id="galleryStage".*?<span class="badge-vacant">(.*?)</span>', s, re.S)
+    # English given in the page itself (data-en) wins over the dictionary.
+    en_over = {un(t): un(e) for e, t in re.findall(r'<li data-en="([^"]*)">(.*?)</li>', s)}
+    m = re.search(r'class="detail-summary" data-en="([^"]*)">(.*?)</p>', s, re.S)
+    if m: en_over[un(m.group(2))] = un(m.group(1))
+    badge = re.search(r'id="galleryStage".*?<span class="badge-vacant[^"]*"([^>]*)>(.*?)</span>', s, re.S)
+    af = re.search(r'data-avail-from="(\d{4}-\d{2}-\d{2})"', badge.group(1)) if badge else None
     return dict(project=g(r"<h1>(.*?)</h1>"), kicker=g(r'class="room-kicker">(.*?)</p>'),
-                summary=g(r'class="detail-summary">(.*?)</p>'), facts=facts, feats=feats,
-                updated=g(r'room-facts-updated">(.*?)</p>'), badge=un(badge.group(1)) if badge else "ว่าง",
+                summary=g(r'class="detail-summary"[^>]*>(.*?)</p>'), facts=facts, feats=feats, en_over=en_over,
+                avail_attr=af.group(1) if af else None,
+                updated=g(r'room-facts-updated">(.*?)</p>'), badge=un(badge.group(2)) if badge else "ว่าง",
                 photos=re.findall(r'<img src="\.\./\.\./(images/rooms/[^"]+?/\d+\.webp)"', s.split('class="gallery-nav"')[0]))
 
 def area_pages():
@@ -68,22 +74,24 @@ for d in sorted(glob.glob("rooms/mc-*/")):
     slug = d.split("/")[1]; rid = slug.upper()
     L = listings[rid]; P = parse_room(slug)
     F = dict(P["facts"])
-    beds = int(re.match(r"(\d+)", F.get("แบบห้อง", L["type"])).group(1))
+    type_th = F.get("แบบห้อง") or L.get("type")
+    bm = re.match(r"(\d+)", type_th or "")
+    beds = int(bm.group(1)) if bm else (0 if type_th == "สตูดิโอ" else None)
     walk_txt = F.get("ระยะเดิน", "")
     status_th = P["badge"]
     avail_from = None
     if status_th != "ว่าง":
-        avail_from = thai_date_to_iso(status_th) or (L.get("available") if re.match(r"\d{4}-", str(L.get("available"))) else None)
+        avail_from = P["avail_attr"] or thai_date_to_iso(status_th) or (L.get("available") if re.match(r"\d{4}-", str(L.get("available"))) else None)
     lease = F.get("สัญญาขั้นต่ำ")
     rooms.append(dict(
         id=rid, slug=slug, url=f"{BASE}rooms/{slug}/", url_en=f"{BASE}rooms/{slug}/?lang=en",
         project=P["project"], area_th=L["area"], area_slug=L["areaSlug"], area_url=f"{BASE}areas/{L['areaSlug']}/",
-        type_th=F.get("แบบห้อง", L["type"]), bedrooms=beds, size=L["size"], floor_th=F.get("ชั้น"),
+        type_th=type_th, bedrooms=beds, size=L["size"], size_label=L.get("sizeLabel") or (f"{L['size']:g} ตร.ม." if L.get("size") else None), floor_th=F.get("ชั้น"),
         price=L["price"], deposit_th=F.get("เงินมัดจำ"), advance_th=F.get("ล่วงหน้า"), lease_th=lease,
         movein_th=F.get("วันเข้าอยู่"), status_th=status_th, avail_from=avail_from,
         station_th=L["station"], walk=L["walk"], shuttle=("shuttle" in walk_txt), walk_th=walk_txt,
         lat=L["lat"], lng=L["lng"], coord_approx=bool(L.get("coordApprox")),
-        summary_th=P["summary"], feats=P["feats"], updated_th=P["updated"], last_verified=L.get("lastVerified"),
+        summary_th=P["summary"], feats=P["feats"], en_over=P["en_over"], updated_th=P["updated"], last_verified=L.get("lastVerified"),
         photos=[BASE + p for p in P["photos"]] or [BASE + p for p in L["photos"]],
     ))
 areas = area_pages()
@@ -91,10 +99,11 @@ areas = area_pages()
 need = []
 for r in rooms:
     need += [r["area_th"], r["type_th"], r["floor_th"], r["deposit_th"], r["advance_th"], r["lease_th"], r["movein_th"],
-             r["status_th"], r["station_th"], r["walk_th"], r["summary_th"]]
+             r["status_th"], r["station_th"], r["walk_th"], r["summary_th"], r["size_label"]]
     for h, items in r["feats"]: need += [h] + items
 need += [a["th"] for a in areas]
 EN = translate(need)
+for r in rooms: EN.update(r["en_over"])
 def en(s):
     if not s: return s
     t = EN.get(s, s)
@@ -113,8 +122,16 @@ def availability(r):
     return "https://schema.org/InStock" if not r["avail_from"] else "https://schema.org/PreOrder"
 
 def status_en(r): return en(r["status_th"])
-def walk_en(r): return f"about {r['walk']} min walk to {en(r['station_th'])}" + (" (shuttle available)" if r["shuttle"] else "")
-def walk_th(r): return f"เดินประมาณ {r['walk']} นาทีถึง {r['station_th']}" + (" (มีรถ shuttle)" if r["shuttle"] else "")
+def walk_en(r):
+    if not r["station_th"]: return "nearest station: ask on LINE"
+    if r["walk"] is None: return f"near {en(r['station_th'])}" + (" (shuttle available)" if r["shuttle"] else "")
+    return f"about {r['walk']} min walk to {en(r['station_th'])}" + (" (shuttle available)" if r["shuttle"] else "")
+def walk_th(r):
+    if not r["station_th"]: return "สอบถามสถานีใกล้ที่สุดทาง LINE"
+    if r["walk"] is None: return f"ใกล้ {r['station_th']}" + (" (มีรถ shuttle)" if r["shuttle"] else "")
+    return f"เดินประมาณ {r['walk']} นาทีถึง {r['station_th']}" + (" (มีรถ shuttle)" if r["shuttle"] else "")
+def ts_th(r): return " ".join(x for x in [r["type_th"], r["size_label"]] if x)
+def ts_en(r): return " ".join(x for x in [en(r["type_th"]) if r["type_th"] else None, en(r["size_label"]) if r["size_label"] else None] if x)
 def money(n): return f"{n:,}"
 def amen(r):
     return [i for h, items in r["feats"] if h in ("เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า", "ส่วนกลางโครงการ") for i in items]
@@ -124,7 +141,7 @@ def room_public(r):
     return {
         "id": r["id"], "url": r["url"], "url_en": r["url_en"], "project": r["project"],
         "area": {"th": r["area_th"], "en": AREA_EN.get(r["area_slug"], en(r["area_th"])), "url": r["area_url"]},
-        "type": {"th": r["type_th"], "en": en(r["type_th"])}, "bedrooms": r["bedrooms"],
+        "type": {"th": r["type_th"], "en": en(r["type_th"])} if r["type_th"] else None, "bedrooms": r["bedrooms"],
         "size_sqm": r["size"], "floor": {"th": r["floor_th"], "en": en(r["floor_th"])} if r["floor_th"] else None,
         "rent_thb_per_month": r["price"], "currency": "THB",
         "deposit": {"th": r["deposit_th"], "en": en(r["deposit_th"])} if r["deposit_th"] else None,
@@ -134,9 +151,9 @@ def room_public(r):
         "available_from": r["avail_from"],
         "status": {"th": r["status_th"], "en": status_en(r)},
         "move_in": {"th": r["movein_th"], "en": en(r["movein_th"])} if r["movein_th"] else None,
-        "nearest_station": {"th": r["station_th"], "en": en(r["station_th"])},
+        "nearest_station": {"th": r["station_th"], "en": en(r["station_th"])} if r["station_th"] else None,
         "walk_minutes_to_station": r["walk"], "shuttle_to_station": r["shuttle"],
-        "building_location": {"lat": r["lat"], "lng": r["lng"], "approximate": r["coord_approx"], "note": "Project building location, not a unit."},
+        "building_location": {"lat": r["lat"], "lng": r["lng"], "approximate": r["coord_approx"], "note": "Project building location, not a unit."} if r["lat"] is not None else None,
         "summary": {"th": r["summary_th"], "en": en(r["summary_th"])},
         "features": [{"group": {"th": h, "en": en(h)}, "items": [{"th": i, "en": en(i)} for i in items]} for h, items in r["feats"]],
         "petsAllowed": False,
@@ -165,9 +182,9 @@ def rfc(d):
     return format_datetime(dt.replace(hour=9, tzinfo=timezone(timedelta(hours=7))))
 items = []
 for r in rooms:
-    title = f"{r['project']} · {r['type_th']} {r['size']} ตร.ม. · {money(r['price'])} บาท/เดือน · ย่าน{r['area_th']}"
+    title = " · ".join(x for x in [r['project'], ts_th(r), f"{money(r['price'])} บาท/เดือน", f"ย่าน{r['area_th']}"] if x)
     desc = (f"{r['summary_th']} · {r['status_th']} · {walk_th(r)}\n"
-            f"{r['project']} ({AREA_EN.get(r['area_slug'])}): {en(r['type_th'])}, {r['size']} sq.m., {money(r['price'])} THB/month, "
+            f"{r['project']} ({AREA_EN.get(r['area_slug'])}): " + "".join(x + ", " for x in [en(r['type_th']) if r['type_th'] else None, en(r['size_label']) if r['size_label'] else None] if x) + f"{money(r['price'])} THB/month, "
             f"{status_en(r)}, {walk_en(r)}. {en(r['summary_th'])}")
     items.append(f"""    <item>
       <title>{x(title)}</title>
@@ -194,10 +211,10 @@ write("feed.xml", f"""<?xml version="1.0" encoding="UTF-8"?>
 
 # ---------- llms.txt / llms-full.txt ----------
 def line_th(r):
-    return (f"- [{r['project']} · {r['type_th']} {r['size']} ตร.ม. · {money(r['price'])} บาท/เดือน]({r['url']}): "
+    return (f"- [{' · '.join(x for x in [r['project'], ts_th(r), money(r['price']) + ' บาท/เดือน'] if x)}]({r['url']}): "
             f"ย่าน{r['area_th']} · {r['status_th']} · {walk_th(r)} · รหัส {r['id']}")
 def line_en(r):
-    return (f"- [{r['project']} · {en(r['type_th'])} {r['size']} sq.m. · {money(r['price'])} THB/month]({r['url_en']}): "
+    return (f"- [{' · '.join(x for x in [r['project'], ts_en(r), money(r['price']) + ' THB/month'] if x)}]({r['url_en']}): "
             f"{AREA_EN.get(r['area_slug'])} · {status_en(r)} · {walk_en(r)} · code {r['id']}")
 areas_with = [a for a in areas if any(r["area_slug"] == a["slug"] for r in rooms)]
 prices = [r["price"] for r in rooms]
@@ -238,7 +255,7 @@ def full_block(r):
              "",
              "ภาษาไทย:",
              f"- ย่าน: {r['area_th']} ({r['area_url']})",
-             f"- แบบห้อง: {r['type_th']} · ขนาด: {r['size']} ตร.ม." + (f" · {r['floor_th']}" if r['floor_th'] else ""),
+             "- " + " · ".join(x for x in [f"แบบห้อง: {r['type_th']}" if r['type_th'] else None, f"ขนาด: {r['size_label']}" if r['size_label'] else None, r['floor_th']] if x),
              f"- ค่าเช่า: {money(r['price'])} บาท/เดือน" + (f" · มัดจำ {r['deposit_th']}" if r['deposit_th'] else "") + (f" · ล่วงหน้า {r['advance_th']}" if r['advance_th'] else "") + (f" · สัญญาขั้นต่ำ {r['lease_th']}" if r['lease_th'] else ""),
              f"- สถานะ: {r['status_th']}" + (f" · วันเข้าอยู่: {r['movein_th']}" if r['movein_th'] else ""),
              f"- การเดินทาง: {walk_th(r)}",
@@ -246,7 +263,7 @@ def full_block(r):
     for h, items in r["feats"]: lines.append(f"- {h}: {', '.join(items)}")
     lines += ["", "English:",
               f"- Area: {AREA_EN.get(r['area_slug'])}",
-              f"- Type: {en(r['type_th'])} · Size: {r['size']} sq.m." + (f" · {en(r['floor_th'])}" if r['floor_th'] else ""),
+              "- " + " · ".join(x for x in [f"Type: {en(r['type_th'])}" if r['type_th'] else None, f"Size: {en(r['size_label'])}" if r['size_label'] else None, en(r['floor_th']) if r['floor_th'] else None] if x),
               f"- Rent: {money(r['price'])} THB/month" + (f" · Deposit {en(r['deposit_th'])}" if r['deposit_th'] else "") + (f" · Advance {en(r['advance_th'])}" if r['advance_th'] else "") + (f" · Minimum lease {en(r['lease_th'])}" if r['lease_th'] else ""),
               f"- Status: {status_en(r)}" + (f" · Move-in: {en(r['movein_th'])}" if r['movein_th'] else ""),
               f"- Getting there: {walk_en(r)}",
@@ -267,7 +284,7 @@ write("llms-full.txt", full)
 
 # ---------- JSON-LD ----------
 def room_ld(r):
-    geo = {"@type": "GeoCoordinates", "latitude": r["lat"], "longitude": r["lng"]}
+    geo = {"@type": "GeoCoordinates", "latitude": r["lat"], "longitude": r["lng"]} if r["lat"] is not None else None
     offer = {"@type": "Offer", "url": r["url"], "price": r["price"], "priceCurrency": "THB",
              "availability": availability(r),
              "businessFunction": "http://purl.org/goodrelations/v1#LeaseOut",
@@ -283,22 +300,23 @@ def room_ld(r):
     if r["shuttle"]: props.append(("รถรับส่งไปสถานี", "มี"))
     ld = {
         "@context": "https://schema.org", "@type": "Apartment", "@id": r["url"] + "#apartment",
-        "name": f"{r['project']} ย่าน{r['area_th']} {r['type_th']} {r['size']} ตร.ม.",
-        "alternateName": f"{r['project']}, {AREA_EN.get(r['area_slug'])} — {en(r['type_th'])}, {r['size']} sq.m. for rent",
+        "name": " ".join(x for x in [r['project'], f"ย่าน{r['area_th']}", ts_th(r)] if x),
+        "alternateName": f"{r['project']}, {AREA_EN.get(r['area_slug'])} — " + ", ".join(x for x in [en(r['type_th']) if r['type_th'] else None, en(r['size_label']) if r['size_label'] else None] if x) + (" for rent" if (r['type_th'] or r['size_label']) else "for rent"),
         "description": r["summary_th"],
         "disambiguatingDescription": en(r["summary_th"]),
         "url": r["url"], "image": r["photos"], "petsAllowed": False,
-        "floorSize": {"@type": "QuantitativeValue", "value": r["size"], "unitCode": "MTK"},
-        "numberOfRooms": {"@type": "QuantitativeValue", "value": r["bedrooms"], "unitText": "ห้องนอน / bedrooms"},
-        "numberOfBedrooms": r["bedrooms"],
     }
+    if r["size"]: ld["floorSize"] = {"@type": "QuantitativeValue", "value": r["size"], "unitCode": "MTK"}
+    if r["bedrooms"] is not None:
+        ld["numberOfRooms"] = {"@type": "QuantitativeValue", "value": r["bedrooms"], "unitText": "ห้องนอน / bedrooms"}
+        ld["numberOfBedrooms"] = r["bedrooms"]
     if r["floor_th"]: ld["floorLevel"] = r["floor_th"].replace("ชั้น ", "")
     ld.update({
         "address": {"@type": "PostalAddress", "addressLocality": r["area_th"], "addressRegion": "กรุงเทพมหานคร", "addressCountry": "TH"},
-        "geo": geo,
-        "containedInPlace": {"@type": "ApartmentComplex", "name": r["project"], "geo": geo,
+        "containedInPlace": {"@type": "ApartmentComplex", "name": r["project"],
                              "address": {"@type": "PostalAddress", "addressLocality": r["area_th"], "addressRegion": "กรุงเทพมหานคร", "addressCountry": "TH"}},
     })
+    if geo: ld["geo"] = geo; ld["containedInPlace"]["geo"] = geo
     am = amen(r)
     if am: ld["amenityFeature"] = [{"@type": "LocationFeatureSpecification", "name": a, "value": True} for a in am]
     ld["additionalProperty"] = [{"@type": "PropertyValue", "name": n, "value": v} for n, v in props if v not in (None, "")]
@@ -312,7 +330,7 @@ def itemlist_ld(name, url, rs):
     return {"@context": "https://schema.org", "@type": "ItemList", "@id": url + "#rooms", "name": name, "url": url,
             "numberOfItems": len(rs), "itemListOrder": "https://schema.org/ItemListUnordered",
             "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": r["url"],
-                                 "name": f"{r['project']} · {r['type_th']} {r['size']} ตร.ม. · {money(r['price'])} บาท/เดือน"} for i, r in enumerate(rs)]}
+                                 "name": " · ".join(x for x in [r['project'], ts_th(r), f"{money(r['price'])} บาท/เดือน"] if x)} for i, r in enumerate(rs)]}
 
 def script(ld, sid): return f'<script type="application/ld+json" id="{sid}">\n' + json.dumps(ld, ensure_ascii=False, indent=2) + "\n</script>"
 

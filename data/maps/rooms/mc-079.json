@@ -1,0 +1,59 @@
+{
+  "area": "พระราม 4",
+  "slug": "rama-4",
+  "room": "MC-079",
+  "project": "Life Rama 4 - Asoke",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.72008,
+    "lng": 100.561831
+  },
+  "stations": [
+    {
+      "id": "mrt-queen-sirikit-national-convention-centre",
+      "name": "MRT ศูนย์การประชุมแห่งชาติสิริกิติ์",
+      "name_en": "Queen Sirikit National Convention Centre MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.7231,
+      "lng": 100.56,
+      "source": "https://en.wikipedia.org/wiki/Queen_Sirikit_National_Convention_Centre_MRT_station",
+      "primary": true
+    },
+    {
+      "id": "mrt-khlong-toei",
+      "name": "MRT คลองเตย",
+      "name_en": "Khlong Toei MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.7224,
+      "lng": 100.554,
+      "source": "https://en.wikipedia.org/wiki/Khlong_Toei_MRT_station",
+      "primary": false
+    },
+    {
+      "id": "bts-phrom-phong",
+      "name": "BTS พร้อมพงษ์",
+      "name_en": "Phrom Phong BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.73043889,
+      "lng": 100.56973056,
+      "source": "https://en.wikipedia.org/wiki/Phrom_Phong_BTS_station",
+      "primary": false
+    }
+  ],
+  "places": [],
+  "condo": {
+    "name": "Life Rama 4 - Asoke",
+    "lat": 13.72008,
+    "lng": 100.561831,
+    "approx": false
+  },
+  "mapMode": "condo",
+  "nearbySource": "nearby-real.json (area pool)",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "สถานีรถไฟฟ้าและร้านดังใกล้เคียงในรัศมีประมาณ 1.5 กม."
+}

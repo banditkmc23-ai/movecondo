@@ -1,0 +1,59 @@
+{
+  "area": "บางนา",
+  "slug": "bangna",
+  "room": "MC-226",
+  "project": "Whizdom Connect Sukhumvit",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.686482,
+    "lng": 100.612897
+  },
+  "stations": [
+    {
+      "id": "bts-punnawithi",
+      "name": "BTS ปุณณวิถี",
+      "name_en": "Punnawithi BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.68891944,
+      "lng": 100.60921111,
+      "source": "https://en.wikipedia.org/wiki/Punnawithi_BTS_station",
+      "primary": true
+    },
+    {
+      "id": "bts-udom-suk",
+      "name": "BTS อุดมสุข",
+      "name_en": "Udom Suk BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.68031667,
+      "lng": 100.60965833,
+      "source": "https://en.wikipedia.org/wiki/Udom_Suk_BTS_station",
+      "primary": false
+    },
+    {
+      "id": "bts-bang-chak",
+      "name": "BTS บางจาก",
+      "name_en": "Bang Chak BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.6969,
+      "lng": 100.6053,
+      "source": "https://en.wikipedia.org/wiki/Bang_Chak_BTS_station",
+      "primary": false
+    }
+  ],
+  "places": [],
+  "condo": {
+    "name": "Whizdom Connect Sukhumvit",
+    "lat": 13.686482,
+    "lng": 100.612897,
+    "approx": false
+  },
+  "mapMode": "condo",
+  "nearbySource": "nearby-real.json (area pool)",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "สถานีรถไฟฟ้าและร้านดังใกล้เคียงในรัศมีประมาณ 1.5 กม."
+}

@@ -1,0 +1,151 @@
+{
+  "area": "พร้อมพงษ์",
+  "slug": "phrom-phong",
+  "room": "MC-218",
+  "project": "Park Origin Phrom Phong",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.72512,
+    "lng": 100.565654
+  },
+  "stations": [
+    {
+      "id": "mrt-queen-sirikit-national-convention-centre",
+      "name": "MRT ศูนย์การประชุมแห่งชาติสิริกิติ์",
+      "name_en": "Queen Sirikit National Convention Centre MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.7231,
+      "lng": 100.56,
+      "source": "https://en.wikipedia.org/wiki/Queen_Sirikit_National_Convention_Centre_MRT_station",
+      "primary": true
+    },
+    {
+      "id": "bts-phrom-phong",
+      "name": "BTS พร้อมพงษ์",
+      "name_en": "Phrom Phong BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.73043889,
+      "lng": 100.56973056,
+      "source": "https://en.wikipedia.org/wiki/Phrom_Phong_BTS_station",
+      "primary": false
+    },
+    {
+      "id": "mrt-khlong-toei",
+      "name": "MRT คลองเตย",
+      "name_en": "Khlong Toei MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.7224,
+      "lng": 100.554,
+      "source": "https://en.wikipedia.org/wiki/Khlong_Toei_MRT_station",
+      "primary": false
+    }
+  ],
+  "places": [
+    {
+      "name": "Benchasiri Park",
+      "category": "สวน",
+      "categoryKey": "park",
+      "lat": 13.730677,
+      "lng": 100.567501,
+      "distanceM": 649,
+      "walkMinEst": 10.6,
+      "rating": 4.5,
+      "reviewCount": 6818,
+      "mapsQuery": "13.730677,100.567501",
+      "sourceUrl": "https://wanderlog.com/place/details/124537/benchasiri-park"
+    },
+    {
+      "name": "EmQuartier",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "lat": 13.731225,
+      "lng": 100.569476,
+      "distanceM": 795,
+      "walkMinEst": 12.9,
+      "rating": 4.5,
+      "reviewCount": 24902,
+      "mapsQuery": "13.731225,100.569476",
+      "sourceUrl": "https://wanderlog.com/place/details/93809/emquartier"
+    },
+    {
+      "name": "THE COFFEE CLUB - Maitria Hotel Sukhumvit",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "lat": 13.732742,
+      "lng": 100.562593,
+      "distanceM": 910,
+      "walkMinEst": 14.8,
+      "rating": 4.7,
+      "reviewCount": 2247,
+      "mapsQuery": "13.732742,100.562593",
+      "sourceUrl": "https://wanderlog.com/place/details/2611995/the-coffee-club-maitria-hotel-sukhumvit"
+    },
+    {
+      "name": "Sushi Masato",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.734487,
+      "lng": 100.566112,
+      "distanceM": 1043,
+      "walkMinEst": 16.9,
+      "rating": 4.8,
+      "reviewCount": 830,
+      "mapsQuery": "13.734487,100.566112",
+      "sourceUrl": "https://wanderlog.com/place/details/1074537/sushi-masato"
+    },
+    {
+      "name": "Sri Trat Restaurant and Bar",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.736807,
+      "lng": 100.568074,
+      "distanceM": 1326,
+      "walkMinEst": 21.5,
+      "rating": 4.5,
+      "reviewCount": 2699,
+      "mapsQuery": "13.736807,100.568074",
+      "sourceUrl": "https://wanderlog.com/place/details/26847/sri-trat-restaurant-and-bar"
+    },
+    {
+      "name": "Terminal 21 Asok",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "lat": 13.737964,
+      "lng": 100.560406,
+      "distanceM": 1537,
+      "walkMinEst": 25.0,
+      "rating": 4.6,
+      "reviewCount": 21550,
+      "mapsQuery": "13.737964,100.560406",
+      "sourceUrl": "https://wanderlog.com/place/details/1055596/terminal-21-asok"
+    },
+    {
+      "name": "Oasis Spa (Bangkok, Sukhumvit 31)",
+      "category": "สปา",
+      "categoryKey": "spa",
+      "lat": 13.740833,
+      "lng": 100.56823,
+      "distanceM": 1769,
+      "walkMinEst": 28.7,
+      "rating": 4.7,
+      "reviewCount": 2368,
+      "mapsQuery": "13.740833,100.56823",
+      "sourceUrl": "https://wanderlog.com/place/details/400028/oasis-spa-bangkok-sukhumvit-31"
+    }
+  ],
+  "condo": {
+    "name": "Park Origin Phrom Phong",
+    "lat": 13.72512,
+    "lng": 100.565654,
+    "approx": false
+  },
+  "mapMode": "condo",
+  "nearbySource": "nearby-real.json (area pool)",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "สถานีรถไฟฟ้าและร้านดังใกล้เคียงในรัศมีประมาณ 1.5 กม."
+}

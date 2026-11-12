@@ -1,0 +1,177 @@
+{
+  "area": "พระโขนง",
+  "slug": "phrakhanong",
+  "room": "MC-247",
+  "project": "Wyne By Sansiri",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.712683,
+    "lng": 100.593842
+  },
+  "stations": [
+    {
+      "id": "bts-phra-khanong",
+      "name": "BTS พระโขนง",
+      "name_en": "Phra Khanong BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.71519444,
+      "lng": 100.59128333,
+      "source": "https://en.wikipedia.org/wiki/Phra_Khanong_BTS_station",
+      "primary": true
+    },
+    {
+      "id": "bts-on-nut",
+      "name": "BTS อ่อนนุช",
+      "name_en": "On Nut BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.70561111,
+      "lng": 100.60108333,
+      "source": "https://en.wikipedia.org/wiki/On_Nut_BTS_station",
+      "primary": false
+    },
+    {
+      "id": "bts-ekkamai",
+      "name": "BTS เอกมัย",
+      "name_en": "Ekkamai BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.71955833,
+      "lng": 100.585175,
+      "source": "https://en.wikipedia.org/wiki/Ekkamai_BTS_station",
+      "primary": false
+    }
+  ],
+  "places": [
+    {
+      "name": "Berlin's Doner Kebab - Habito Mall",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.712805,
+      "lng": 100.600907,
+      "distanceM": 763,
+      "walkMinEst": 12.4,
+      "rating": 4.6,
+      "reviewCount": 293,
+      "mapsQuery": "13.712805,100.600907",
+      "sourceUrl": "https://wanderlog.com/place/details/2601862/berlins-doner-kebab-habito-mall"
+    },
+    {
+      "name": "Onnuch FreshMart",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "lat": 13.710215,
+      "lng": 100.600668,
+      "distanceM": 787,
+      "walkMinEst": 12.8,
+      "rating": 4.2,
+      "reviewCount": 1372,
+      "mapsQuery": "13.710215,100.600668",
+      "sourceUrl": "https://wanderlog.com/place/details/4025948/onnuch-freshmart"
+    },
+    {
+      "name": "Lao Garden",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.713457,
+      "lng": 100.601236,
+      "distanceM": 803,
+      "walkMinEst": 13.1,
+      "rating": 4.5,
+      "reviewCount": 664,
+      "mapsQuery": "13.713457,100.601236",
+      "sourceUrl": "https://wanderlog.com/place/details/428589/lao-garden"
+    },
+    {
+      "name": "CHIANG MAI MASSAGE ONNUT",
+      "category": "สปา",
+      "categoryKey": "spa",
+      "lat": 13.706965,
+      "lng": 100.600746,
+      "distanceM": 980,
+      "walkMinEst": 15.9,
+      "rating": 4.4,
+      "reviewCount": 902,
+      "mapsQuery": "13.706965,100.600746",
+      "sourceUrl": "https://wanderlog.com/place/details/6481597/chiang-mai-massage-onnut"
+    },
+    {
+      "name": "Gateway Ekamai",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "lat": 13.718899,
+      "lng": 100.585348,
+      "distanceM": 1149,
+      "walkMinEst": 18.7,
+      "rating": 4.2,
+      "reviewCount": 11749,
+      "mapsQuery": "13.718899,100.585348",
+      "sourceUrl": "https://wanderlog.com/place/details/124597/gateway-ekamai"
+    },
+    {
+      "name": "iki haus",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "lat": 13.723582,
+      "lng": 100.595657,
+      "distanceM": 1228,
+      "walkMinEst": 19.9,
+      "rating": 4.6,
+      "reviewCount": 372,
+      "mapsQuery": "13.723582,100.595657",
+      "sourceUrl": "https://wanderlog.com/place/details/8459087/iki-haus"
+    },
+    {
+      "name": "Iron Balls Distillery & Bar",
+      "category": "บาร์",
+      "categoryKey": "bar",
+      "lat": 13.723373,
+      "lng": 100.584328,
+      "distanceM": 1571,
+      "walkMinEst": 25.5,
+      "rating": 4.6,
+      "reviewCount": 518,
+      "mapsQuery": "13.723373,100.584328",
+      "sourceUrl": "https://wanderlog.com/place/details/2128011/iron-balls-distillery-bar"
+    },
+    {
+      "name": "Loft Thai Spa & Massage - Sukhumvit 38",
+      "category": "สปา",
+      "categoryKey": "spa",
+      "lat": 13.717133,
+      "lng": 100.579517,
+      "distanceM": 1625,
+      "walkMinEst": 26.4,
+      "rating": 4.9,
+      "reviewCount": 1266,
+      "mapsQuery": "13.717133,100.579517",
+      "sourceUrl": "https://wanderlog.com/place/details/4283540/loft-thai-spa-massage-sukhumvit-38"
+    },
+    {
+      "name": "PRIDI",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "lat": 13.727739,
+      "lng": 100.592366,
+      "distanceM": 1682,
+      "walkMinEst": 27.3,
+      "rating": 4.5,
+      "reviewCount": 390,
+      "mapsQuery": "13.727739,100.592366",
+      "sourceUrl": "https://wanderlog.com/place/details/2530082/pridi"
+    }
+  ],
+  "condo": {
+    "name": "Wyne By Sansiri",
+    "lat": 13.712683,
+    "lng": 100.593842,
+    "approx": false
+  },
+  "mapMode": "condo",
+  "nearbySource": "nearby-real.json (area pool)",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "สถานีรถไฟฟ้าและร้านดังใกล้เคียงในรัศมีประมาณ 1.5 กม."
+}

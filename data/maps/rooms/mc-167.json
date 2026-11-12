@@ -1,0 +1,59 @@
+{
+  "area": "พระราม 9",
+  "slug": "rama-9",
+  "room": "MC-167",
+  "project": "Nue District R9",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.75714,
+    "lng": 100.567828
+  },
+  "stations": [
+    {
+      "id": "mrt-phra-ram-9",
+      "name": "MRT พระราม 9",
+      "name_en": "Phra Ram 9 MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.75722222,
+      "lng": 100.56527778,
+      "source": "https://en.wikipedia.org/wiki/Phra_Ram_9_MRT_station",
+      "primary": true
+    },
+    {
+      "id": "mrt-thailand-cultural-centre",
+      "name": "MRT ศูนย์วัฒนธรรมแห่งประเทศไทย",
+      "name_en": "Thailand Cultural Centre MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.7661,
+      "lng": 100.57,
+      "source": "https://en.wikipedia.org/wiki/Thailand_Cultural_Centre_MRT_station",
+      "primary": false
+    },
+    {
+      "id": "mrt-phetchaburi",
+      "name": "MRT เพชรบุรี",
+      "name_en": "Phetchaburi MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.7491,
+      "lng": 100.563,
+      "source": "https://en.wikipedia.org/wiki/Phetchaburi_MRT_station",
+      "primary": false
+    }
+  ],
+  "places": [],
+  "condo": {
+    "name": "Nue District R9",
+    "lat": 13.75714,
+    "lng": 100.567828,
+    "approx": false
+  },
+  "mapMode": "condo",
+  "nearbySource": "nearby-real.json (area pool)",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "สถานีรถไฟฟ้าและร้านดังใกล้เคียงในรัศมีประมาณ 1.5 กม."
+}

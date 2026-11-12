@@ -24,13 +24,18 @@
   var AREA = {
     "ทองหล่อ": "Thonglor", "พร้อมพงษ์": "Phrom Phong", "เอกมัย": "Ekkamai", "พระโขนง": "Phra Khanong",
     "อ่อนนุช": "On Nut", "อโศก": "Asok", "อารีย์": "Ari", "พระราม 9": "Rama 9",
-    "เจริญนคร": "Charoen Nakhon", "บางนา": "Bang Na"
+    "เจริญนคร": "Charoen Nakhon", "บางนา": "Bang Na",
+    "ชิดลม": "Chit Lom", "พระราม 4": "Rama 4", "สามย่าน-สีลม": "Sam Yan–Silom", "ห้วยขวาง": "Huai Khwang"
   };
   var NAMES = {
     "BTS อ่อนนุช": "BTS On Nut", "BTS ทองหล่อ": "BTS Thong Lo", "BTS พร้อมพงษ์": "BTS Phrom Phong",
     "BTS เอกมัย": "BTS Ekkamai", "BTS พระโขนง": "BTS Phra Khanong", "BTS อโศก": "BTS Asok",
     "BTS อารีย์": "BTS Ari", "BTS บางนา": "BTS Bang Na", "BTS กรุงธนบุรี": "BTS Krung Thon Buri",
     "BTS อุดมสุข": "BTS Udom Suk", "BTS เจริญนคร": "BTS Charoen Nakhon", "BTS เจริญนคร (สายสีทอง)": "BTS Charoen Nakhon (Gold Line)",
+    "BTS นานา": "BTS Nana", "BTS ชิดลม": "BTS Chit Lom", "BTS เพลินจิต": "BTS Phloen Chit", "BTS ราชดำริ": "BTS Ratchadamri",
+    "BTS บางจาก": "BTS Bang Chak", "BTS ปุณณวิถี": "BTS Punnawithi", "BTS สุรศักดิ์": "BTS Surasak", "BTS ช่องนนทรี": "BTS Chong Nonsi",
+    "BTS ศาลาแดง": "BTS Sala Daeng", "MRT สามย่าน": "MRT Sam Yan", "MRT คลองเตย": "MRT Khlong Toei", "MRT ห้วยขวาง": "MRT Huai Khwang",
+    "MRT สุทธิสาร": "MRT Sutthisan", "MRT ลุมพินี": "MRT Lumphini", "MRT สีลม": "MRT Si Lom",
     "MRT พระราม 9": "MRT Phra Ram 9", "MRT เพชรบุรี": "MRT Phetchaburi", "MRT สุขุมวิท": "MRT Sukhumvit",
     "MRT ศูนย์การประชุมแห่งชาติสิริกิติ์": "MRT Queen Sirikit National Convention Centre",
     "MRT ศูนย์วัฒนธรรมแห่งประเทศไทย": "MRT Thailand Cultural Centre",
@@ -226,7 +231,16 @@
     "นัดชมห้อง": "Book a viewing", "รับคำขอนัดชมแล้ว": "Viewing request received", "ทัก LINE เพื่อบอกห้องที่สนใจได้เลยค่ะ": "Chat on LINE to tell us which room you're interested in.",
     "นัดชมผ่าน LINE ได้เลย": "book a viewing via LINE", "ชื่อผู้เข้าชม": "Visitor name", "ใช้ชื่อสมมติได้": "A nickname is fine",
     "วันที่นัด": "Date", "ช่วงเวลา": "Time", "ยืนยันนัดชม": "Confirm viewing", "ยกเลิก": "Cancel", "ดูรายละเอียด": "View details", "นัดชมห้อง": "Book a viewing",
-    "ใกล้รถไฟฟ้า": "Near the train"
+    "ใกล้รถไฟฟ้า": "Near the train",
+    /* 248-room import: types, floor bands, paging, soon-available, new area pages */
+    "สตูดิโอ": "Studio", "ดูเพล็กซ์": "Duplex", "1+1 ห้องนอน": "1+1 bedrooms", "1 ห้องนอน (ดูเพล็กซ์)": "1-bedroom duplex",
+    "ชั้นต่ำ (1–10)": "Low floor (1–10)", "ชั้นกลาง (11–20)": "Mid floor (11–20)", "ชั้นสูง (21 ขึ้นไป)": "High floor (21+)",
+    "ดูเพิ่มเติม": "Show more", "กำลังจะว่าง": "Available soon",
+    "หน้านี้รวบรวมห้องให้เช่าในย่านนี้ ข้อมูลการเดินทางเป็นข้อมูลทั่วไปของย่าน": "This page lists rooms for rent in this area. Travel notes are general information about the area.",
+    "ย่านใจกลางเมืองรอบถนนเพลินจิต หลังสวน และชิดลม ใกล้ห้างใหญ่และออฟฟิศ": "Central Bangkok around Phloen Chit, Lang Suan and Chit Lom, close to major malls and offices.",
+    "ย่านริมถนนพระราม 4 ใกล้ศูนย์การประชุมแห่งชาติสิริกิติ์และสวนเบญจกิติ": "Along Rama 4 Road, near the Queen Sirikit National Convention Centre and Benjakitti Park.",
+    "ย่านเมืองเก่าและย่านธุรกิจ ใกล้จุฬาฯ สามย่าน และถนนสีลม": "Around Chulalongkorn University, Sam Yan and the Silom business district.",
+    "ย่านรัชดาภิเษก–ห้วยขวาง ตามแนว MRT สายสีน้ำเงิน": "The Ratchadaphisek–Huai Khwang area along the MRT Blue Line."
   };
 
   /* Context-specific overrides: [css selector, thai, english] */
@@ -268,6 +282,9 @@
     [/^([\d,]+) – ([\d,]+) บาท\/เดือน$/, function (m) { return m[1] + " – " + m[2] + " THB/month"; }],
     [/^([\d,]+) บาท$/, function (m) { return m[1] + " THB"; }],
     [/^(\d+(?:\.\d+)?) ตร\.ม\.$/, function (m) { return m[1] + " sq.m."; }],
+    [/^(\d+(?:\.\d+)?)\s*[–-]\s*(\d+(?:\.\d+)?) ตร\.ม\.$/, function (m) { return m[1] + "–" + m[2] + " sq.m."; }],
+    [/^กำลังจะว่าง · ว่าง (\d+) (\S+?)(?: (\d{4}))?$/, function (m) { return "Available from " + thDate(m[1], m[2], m[3]); }],
+    [/^สถานีใกล้ย่านนี้ ได้แก่ (.+)$/, function (m) { return "Stations near this area: " + m[1].split(" และ ").map(name).join(" and "); }],
     [/^(\d+) ห้องนอน (\d+(?:\.\d+)?) ตร\.ม\.$/, function (m) { return m[1] + " bed · " + m[2] + " sq.m."; }],
     [/^(\d+) ห้องนอน$/, function (m) { return m[1] + plural(m[1], " bedroom", " bedrooms"); }],
     [/^(\d+) ห้องน้ำ$/, function (m) { return m[1] + plural(m[1], " bathroom", " bathrooms"); }],
@@ -324,6 +341,10 @@
     [/^ใกล้ ?(.+)$/, function (m) { var n = name(m[1]); return TH_RE.test(n) ? null : "Near " + n; }],
     [/^(.+) ย่าน(.+) (\d+) ห้องนอน ([\d.]+) ตร\.ม\. ให้เช่า ([\d,]+) บาท\/เดือน \| MoveCondo$/, function (m) {
       return m[1] + ", " + name(m[2]) + " — " + m[3] + "-bedroom, " + m[4] + " sq.m. for rent, " + m[5] + " THB/month | MoveCondo"; }],
+    [/^(.+) ย่าน(.+?) (?:(.+?) )?ให้เช่า ([\d,]+) บาท\/เดือน \| MoveCondo$/, function (m) {
+      var t = m[3] ? tr(m[3]) : ""; if (TH_RE.test(t)) return null;
+      return m[1] + ", " + name(m[2]) + " — " + (t ? t + " " : "") + "for rent, " + m[4] + " THB/month | MoveCondo"; }],
+    [/^(.+?) ([\d.]+(?:\s*[–-]\s*[\d.]+)?) ตร\.ม\.$/, function (m) { var t = tr(m[1]); return TH_RE.test(t) ? null : t + ", " + m[2] + " sq.m."; }],
     [/^ย่าน(.+) — ร้านดังและการเดินทาง \| MoveCondo$/, function (m) { return name(m[1]) + " — Popular spots & getting around | MoveCondo"; }],
     [/^สำรวจย่าน ?(.+?) (?:ใกล้ (.+?) )?ร้านดังใกล้สถานี การเดินทาง และไลฟ์สไตล์ย่าน — (.+)$/, function (m) {
       var tail = m[3] === "มีคอนโดเช่าจริงให้ดูแล้วที่ MoveCondo" ? "real rental condos are now listed on MoveCondo." :
@@ -396,6 +417,8 @@
       if (v && TH_RE.test(v)) { var t = tr(v, el); if (t !== v) el.setAttribute(a, t); }
     }
     if (el.tagName === "A") localizeLink(el);
+    var de = el.getAttribute("data-en");
+    if (de && !el.__mcEn && TH_RE.test(el.textContent || "")) { el.__mcEn = 1; el.textContent = de; }
   }
   function localizeLink(a) {
     var h = a.getAttribute("href");

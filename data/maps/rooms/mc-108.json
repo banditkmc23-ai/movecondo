@@ -1,0 +1,59 @@
+{
+  "area": "ชิดลม",
+  "slug": "chidlom",
+  "room": "MC-108",
+  "project": "Noble Ploenchit",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.743948,
+    "lng": 100.548566
+  },
+  "stations": [
+    {
+      "id": "bts-phloen-chit",
+      "name": "BTS เพลินจิต",
+      "name_en": "Phloen Chit BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.74308056,
+      "lng": 100.54901944,
+      "source": "https://en.wikipedia.org/wiki/Phloen_Chit_BTS_station",
+      "primary": true
+    },
+    {
+      "id": "bts-chit-lom",
+      "name": "BTS ชิดลม",
+      "name_en": "Chit Lom BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.74410833,
+      "lng": 100.54309722,
+      "source": "https://en.wikipedia.org/wiki/Chit_Lom_BTS_station",
+      "primary": false
+    },
+    {
+      "id": "bts-nana",
+      "name": "BTS นานา",
+      "name_en": "Nana BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.74060278,
+      "lng": 100.55539722,
+      "source": "https://en.wikipedia.org/wiki/Nana_BTS_station",
+      "primary": false
+    }
+  ],
+  "places": [],
+  "condo": {
+    "name": "Noble Ploenchit",
+    "lat": 13.743948,
+    "lng": 100.548566,
+    "approx": false
+  },
+  "mapMode": "condo",
+  "nearbySource": "nearby-real.json (area pool)",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "สถานีรถไฟฟ้าและร้านดังใกล้เคียงในรัศมีประมาณ 1.5 กม."
+}

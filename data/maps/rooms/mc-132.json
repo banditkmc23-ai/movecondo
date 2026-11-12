@@ -1,0 +1,59 @@
+{
+  "area": "สามย่าน-สีลม",
+  "slug": "samyan-silom",
+  "room": "MC-132",
+  "project": "Culture Chula",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.730681,
+    "lng": 100.53234
+  },
+  "stations": [
+    {
+      "id": "bts-sala-daeng",
+      "name": "BTS ศาลาแดง",
+      "name_en": "Sala Daeng BTS",
+      "system": "BTS",
+      "line_th": "สายสีลม",
+      "lat": 13.72850833,
+      "lng": 100.53413333,
+      "source": "https://en.wikipedia.org/wiki/Sala_Daeng_BTS_station",
+      "primary": true
+    },
+    {
+      "id": "mrt-sam-yan",
+      "name": "MRT สามย่าน",
+      "name_en": "Sam Yan MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.73277778,
+      "lng": 100.52944444,
+      "source": "https://en.wikipedia.org/wiki/Sam_Yan_MRT_station",
+      "primary": false
+    },
+    {
+      "id": "mrt-si-lom",
+      "name": "MRT สีลม",
+      "name_en": "Si Lom MRT",
+      "system": "MRT",
+      "line_th": "สายสีน้ำเงิน",
+      "lat": 13.7292,
+      "lng": 100.5375,
+      "source": "https://en.wikipedia.org/wiki/Si_Lom_MRT_station",
+      "primary": false
+    }
+  ],
+  "places": [],
+  "condo": {
+    "name": "Culture Chula",
+    "lat": 13.730681,
+    "lng": 100.53234,
+    "approx": false
+  },
+  "mapMode": "condo",
+  "nearbySource": "nearby-real.json (area pool)",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "สถานีรถไฟฟ้าและร้านดังใกล้เคียงในรัศมีประมาณ 1.5 กม."
+}

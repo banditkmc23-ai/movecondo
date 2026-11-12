@@ -1,0 +1,177 @@
+{
+  "area": "ทองหล่อ",
+  "slug": "thonglor",
+  "room": "MC-098",
+  "project": "Noble Remix Thonglor",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.724113,
+    "lng": 100.577105
+  },
+  "stations": [
+    {
+      "id": "bts-thong-lo",
+      "name": "BTS ทองหล่อ",
+      "name_en": "Thong Lo BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.72424444,
+      "lng": 100.57855833,
+      "source": "https://en.wikipedia.org/wiki/Thong_Lo_BTS_station",
+      "primary": true
+    },
+    {
+      "id": "bts-ekkamai",
+      "name": "BTS เอกมัย",
+      "name_en": "Ekkamai BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.71955833,
+      "lng": 100.585175,
+      "source": "https://en.wikipedia.org/wiki/Ekkamai_BTS_station",
+      "primary": false
+    },
+    {
+      "id": "bts-phrom-phong",
+      "name": "BTS พร้อมพงษ์",
+      "name_en": "Phrom Phong BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.73043889,
+      "lng": 100.56973056,
+      "source": "https://en.wikipedia.org/wiki/Phrom_Phong_BTS_station",
+      "primary": false
+    }
+  ],
+  "places": [
+    {
+      "name": "MIA Bangkok",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.721349,
+      "lng": 100.571279,
+      "distanceM": 700,
+      "walkMinEst": 11.4,
+      "rating": 4.8,
+      "reviewCount": 563,
+      "mapsQuery": "13.721349,100.571279",
+      "sourceUrl": "https://wanderlog.com/place/details/1074904/mia-bangkok"
+    },
+    {
+      "name": "Kashikiri Onsen and Spa Sukhumvit 49",
+      "category": "สปา",
+      "categoryKey": "spa",
+      "lat": 13.730548,
+      "lng": 100.576148,
+      "distanceM": 723,
+      "walkMinEst": 11.7,
+      "rating": 4.6,
+      "reviewCount": 499,
+      "mapsQuery": "13.730548,100.576148",
+      "sourceUrl": "https://wanderlog.com/place/details/1727390/kashikiri-onsen-and-spa-sukhumvit-49"
+    },
+    {
+      "name": "Iron Balls Distillery & Bar",
+      "category": "บาร์",
+      "categoryKey": "bar",
+      "lat": 13.723373,
+      "lng": 100.584328,
+      "distanceM": 785,
+      "walkMinEst": 12.7,
+      "rating": 4.6,
+      "reviewCount": 518,
+      "mapsQuery": "13.723373,100.584328",
+      "sourceUrl": "https://wanderlog.com/place/details/2128011/iron-balls-distillery-bar"
+    },
+    {
+      "name": "Loft Thai Spa & Massage - Sukhumvit 38",
+      "category": "สปา",
+      "categoryKey": "spa",
+      "lat": 13.717133,
+      "lng": 100.579517,
+      "distanceM": 819,
+      "walkMinEst": 13.3,
+      "rating": 4.9,
+      "reviewCount": 1266,
+      "mapsQuery": "13.717133,100.579517",
+      "sourceUrl": "https://wanderlog.com/place/details/4283540/loft-thai-spa-massage-sukhumvit-38"
+    },
+    {
+      "name": "Sorn",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.7231,
+      "lng": 100.568525,
+      "distanceM": 934,
+      "walkMinEst": 15.2,
+      "rating": 4.6,
+      "reviewCount": 617,
+      "mapsQuery": "13.7231,100.568525",
+      "sourceUrl": "https://wanderlog.com/place/details/1074159/sorn"
+    },
+    {
+      "name": "K Village",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "lat": 13.720357,
+      "lng": 100.568909,
+      "distanceM": 979,
+      "walkMinEst": 15.9,
+      "rating": 4.3,
+      "reviewCount": 3206,
+      "mapsQuery": "13.720357,100.568909",
+      "sourceUrl": "https://wanderlog.com/place/details/1806245/k-village"
+    },
+    {
+      "name": "Let's Relax Onsen and Spa (Thonglor)",
+      "category": "สปา",
+      "categoryKey": "spa",
+      "lat": 13.73183,
+      "lng": 100.582161,
+      "distanceM": 1017,
+      "walkMinEst": 16.5,
+      "rating": 4.5,
+      "reviewCount": 2134,
+      "mapsQuery": "13.73183,100.582161",
+      "sourceUrl": "https://wanderlog.com/place/details/409215/lets-relax-onsen-and-spa-thonglor"
+    },
+    {
+      "name": "Gateway Ekamai",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "lat": 13.718899,
+      "lng": 100.585348,
+      "distanceM": 1063,
+      "walkMinEst": 17.3,
+      "rating": 4.2,
+      "reviewCount": 11749,
+      "mapsQuery": "13.718899,100.585348",
+      "sourceUrl": "https://wanderlog.com/place/details/124597/gateway-ekamai"
+    },
+    {
+      "name": "After You Dessert Cafe - Thonglor 13",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "lat": 13.733703,
+      "lng": 100.581364,
+      "distanceM": 1161,
+      "walkMinEst": 18.9,
+      "rating": 4.4,
+      "reviewCount": 1396,
+      "mapsQuery": "13.733703,100.581364",
+      "sourceUrl": "https://wanderlog.com/place/details/410345/after-you-dessert-cafe-thonglor-13"
+    }
+  ],
+  "condo": {
+    "name": "Noble Remix Thonglor",
+    "lat": 13.724113,
+    "lng": 100.577105,
+    "approx": false
+  },
+  "mapMode": "condo",
+  "nearbySource": "nearby-real.json (area pool)",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "สถานีรถไฟฟ้าและร้านดังใกล้เคียงในรัศมีประมาณ 1.5 กม."
+}
