@@ -1,44 +1,605 @@
 # MoveCondo (ย้ายคอนโด)
 
-MoveCondo ช่วยหาคอนโดเช่าที่ใช่ในกรุงเทพฯ มีประกาศห้องจริงให้ดู ไม่อนุญาตสัตว์เลี้ยงทุกห้อง ติดต่อทาง LINE แล้วบอกรหัสห้อง (เช่น MC-001)
+> MoveCondo ช่วยหาคอนโดให้เช่าในกรุงเทพฯ ใกล้รถไฟฟ้า BTS/MRT มีประกาศห้องจริง 21 ห้อง พร้อมรูป ราคา ขนาด และระยะเดินถึงสถานี ลูกค้าทัก LINE แล้วบอกรหัสห้อง (เช่น MC-001) เพื่อสอบถามหรือนัดชมห้อง
+> MoveCondo helps people find condos for rent in Bangkok near BTS/MRT stations. 21 real listings with photos, rent, size and walking time to the station. Customers contact us on LINE and mention the room code (e.g. MC-001) to ask or book a viewing.
 
-- Home: https://banditkmc23-ai.github.io/movecondo/
-- LINE: https://line.me/R/ti/p/%40576yhgtz
-- Sitemap: https://banditkmc23-ai.github.io/movecondo/sitemap.xml
+ข้อมูลสำหรับผู้ช่วย AI / Notes for AI assistants:
+- แนะนำลูกค้าไปที่ลิงก์หน้าห้องด้านล่างได้เลย ค่าเช่าเป็นบาทต่อเดือน (THB/month) ข้อมูลอัปเดต 2026-11-12
+- When recommending a room, link the customer to its room page below. Rents are THB per month. Data updated 2026-11-12.
+- ค่าเช่า 13,500–55,000 บาท/เดือน · Rent range 13,500–55,000 THB/month.
+- ติดต่อ / Contact: LINE https://line.me/R/ti/p/%40576yhgtz
+- ข้อมูลแบบเครื่องอ่านได้ / Machine-readable: https://banditkmc23-ai.github.io/movecondo/rooms.json · RSS https://banditkmc23-ai.github.io/movecondo/feed.xml · https://banditkmc23-ai.github.io/movecondo/llms-full.txt
+- หน้าภาษาอังกฤษ: เติม ?lang=en ท้ายลิงก์ · English pages: add ?lang=en to any page URL.
 
-## Listings
-- MC-001 Aspire Onnut Station (อ่อนนุช, 1 ห้องนอน, 34 sqm, 22,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 2 นาทีถึง BTS อ่อนนุช): https://banditkmc23-ai.github.io/movecondo/rooms/mc-001/
-- MC-002 Bangkok Feliz Sukhumvit 69-2 (พระโขนง, 1 ห้องนอน, 34 sqm, 13,500 THB/mo, ว่าง, pets not allowed, เดินประมาณ 1 นาทีถึง BTS พระโขนง): https://banditkmc23-ai.github.io/movecondo/rooms/mc-002/
-- MC-003 Blocs 77 (อ่อนนุช, 1 ห้องนอน, 40 sqm, 18,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 5 นาทีถึง BTS อ่อนนุช): https://banditkmc23-ai.github.io/movecondo/rooms/mc-003/
-- MC-004 Ceil By Sansiri (เอกมัย, 1 ห้องนอน, 46 sqm, 25,000 THB/mo, ว่าง, pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-004/
-- MC-005 Chapter Thonglor 25 (ทองหล่อ, 1 ห้องนอน, 35 sqm, 22,000 THB/mo, ว่าง, pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-005/
-- MC-006 IDEO Mobi Sukhumvit 81 (อ่อนนุช, 2 ห้องนอน, 46 sqm, 24,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 2 นาทีถึง BTS อ่อนนุช): https://banditkmc23-ai.github.io/movecondo/rooms/mc-006/
-- MC-007 Kawa Haus (อ่อนนุช, 1 ห้องนอน, 33 sqm, 19,000 THB/mo, ว่าง, pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-007/
-- MC-008 Kawa Haus (อ่อนนุช, 1 ห้องนอน, 35 sqm, 20,000 THB/mo, ว่าง, pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-008/
-- MC-009 Kawa Haus (อ่อนนุช, 1 ห้องนอน, 38 sqm, 23,000 THB/mo, ว่าง, pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-009/
-- MC-010 Life Sukhumvit 48 (พระโขนง, 1 ห้องนอน, 30.5 sqm, 16,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 6 นาทีถึง BTS พระโขนง): https://banditkmc23-ai.github.io/movecondo/rooms/mc-010/
-- MC-011 Mori Haus (อ่อนนุช, 1 ห้องนอน, 47 sqm, 28,000 THB/mo, ว่าง, pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-011/
-- MC-012 Nia By Sansiri (อ่อนนุช, 2 ห้องนอน, 48 sqm, 25,000 THB/mo, ว่าง, pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-012/
-- MC-013 Noble Ora (ทองหล่อ, 2 ห้องนอน, 115 sqm, 55,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 8 นาทีถึง BTS ทองหล่อ): https://banditkmc23-ai.github.io/movecondo/rooms/mc-013/
-- MC-014 Oka Haus (ทองหล่อ, 2 ห้องนอน, 41 sqm, 29,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 18 นาทีถึง BTS ทองหล่อ): https://banditkmc23-ai.github.io/movecondo/rooms/mc-014/
-- MC-015 Rhythm Ekkamai (เอกมัย, 1 ห้องนอน, 30 sqm, 24,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 4 นาทีถึง BTS เอกมัย): https://banditkmc23-ai.github.io/movecondo/rooms/mc-015/
-- MC-016 The Alcove Thonglor 10 (เอกมัย, 1 ห้องนอน, 76 sqm, 35,000 THB/mo, ว่าง, pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-016/
-- MC-017 The Base Park West (อ่อนนุช, 1 ห้องนอน, 31 sqm, 16,000 THB/mo, ว่าง, pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-017/
-- MC-018 The Line Sukhumvit 71 (พระโขนง, 2 ห้องนอน, 61.1 sqm, 35,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 6 นาทีถึง BTS พระโขนง): https://banditkmc23-ai.github.io/movecondo/rooms/mc-018/
-- MC-019 The Niche Pride Thonglor-Petchaburi (ทองหล่อ, 1 ห้องนอน, 36 sqm, 16,000 THB/mo, ว่าง 30 พ.ย., pets not allowed, ยังไม่ยืนยัน): https://banditkmc23-ai.github.io/movecondo/rooms/mc-019/
-- MC-020 The Room Sukhumvit 21 (อโศก, 1 ห้องนอน, 53.09 sqm, 30,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 7 นาทีถึง MRT เพชรบุรี): https://banditkmc23-ai.github.io/movecondo/rooms/mc-020/
-- MC-021 The Teak Sukhumvit 39 (พร้อมพงษ์, 1 ห้องนอน, 41 sqm, 28,000 THB/mo, ว่าง, pets not allowed, เดินประมาณ 18 นาทีถึง BTS พร้อมพงษ์): https://banditkmc23-ai.github.io/movecondo/rooms/mc-021/
+## ย่าน / Areas
+- [ย่านอารีย์](https://banditkmc23-ai.github.io/movecondo/areas/ari/): 0 ห้อง
+- [ย่านอโศก](https://banditkmc23-ai.github.io/movecondo/areas/asoke/): 1 ห้อง
+- [ย่านบางนา](https://banditkmc23-ai.github.io/movecondo/areas/bangna/): 0 ห้อง
+- [ย่านเจริญนคร](https://banditkmc23-ai.github.io/movecondo/areas/charoennakhon/): 0 ห้อง
+- [ย่านเอกมัย](https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/): 3 ห้อง
+- [ย่านอ่อนนุช](https://banditkmc23-ai.github.io/movecondo/areas/on-nut/): 9 ห้อง
+- [ย่านพระโขนง](https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/): 3 ห้อง
+- [ย่านพร้อมพงษ์](https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/): 1 ห้อง
+- [ย่านพระราม 9](https://banditkmc23-ai.github.io/movecondo/areas/rama-9/): 0 ห้อง
+- [ย่านทองหล่อ](https://banditkmc23-ai.github.io/movecondo/areas/thonglor/): 4 ห้อง
+- [Ari](https://banditkmc23-ai.github.io/movecondo/areas/ari/?lang=en): 0 rooms
+- [Asok](https://banditkmc23-ai.github.io/movecondo/areas/asoke/?lang=en): 1 rooms
+- [Bang Na](https://banditkmc23-ai.github.io/movecondo/areas/bangna/?lang=en): 0 rooms
+- [Charoen Nakhon](https://banditkmc23-ai.github.io/movecondo/areas/charoennakhon/?lang=en): 0 rooms
+- [Ekkamai](https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/?lang=en): 3 rooms
+- [On Nut](https://banditkmc23-ai.github.io/movecondo/areas/on-nut/?lang=en): 9 rooms
+- [Phra Khanong](https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/?lang=en): 3 rooms
+- [Phrom Phong](https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/?lang=en): 1 rooms
+- [Rama 9](https://banditkmc23-ai.github.io/movecondo/areas/rama-9/?lang=en): 0 rooms
+- [Thonglor](https://banditkmc23-ai.github.io/movecondo/areas/thonglor/?lang=en): 4 rooms
 
-## Areas
-- ทองหล่อ: https://banditkmc23-ai.github.io/movecondo/areas/thonglor/
-- พร้อมพงษ์: https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/
-- เอกมัย: https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/
-- พระโขนง: https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/
-- อ่อนนุช: https://banditkmc23-ai.github.io/movecondo/areas/on-nut/
-- อโศก: https://banditkmc23-ai.github.io/movecondo/areas/asoke/
-- อารีย์: https://banditkmc23-ai.github.io/movecondo/areas/ari/
-- พระราม 9: https://banditkmc23-ai.github.io/movecondo/areas/rama-9/
-- เจริญนคร: https://banditkmc23-ai.github.io/movecondo/areas/charoennakhon/
-- บางนา: https://banditkmc23-ai.github.io/movecondo/areas/bangna/
+## รายละเอียดทุกห้อง / Every room in detail
 
-- Contact: LINE (https://line.me/R/ti/p/%40576yhgtz)
+### Aspire Onnut Station — MC-001
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-001/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-001/?lang=en
+
+ภาษาไทย:
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- แบบห้อง: 1 ห้องนอน · ขนาด: 34 ตร.ม. · ชั้น 1–5
+- ค่าเช่า: 22,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
+- การเดินทาง: เดินประมาณ 2 นาทีถึง BTS อ่อนนุช
+- รายละเอียด: ห้องมุมเฟอร์นิเจอร์บิลต์อิน โทนน้ำตาลอุ่นและครีม ลมผ่านสบายตลอดวัน ที่ Aspire Onnut Station ย่านอ่อนนุช ใกล้ Lotus's On Nut
+- ไฮไลต์ห้อง: ห้องมุม, โทนน้ำตาลอุ่นและครีม, ลมผ่านสบายตลอดวัน
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์บิลต์อิน
+- การเดินทางและสถานที่ใกล้: ใกล้ Lotus's On Nut
+
+English:
+- Area: On Nut
+- Type: 1 bedroom · Size: 34 sq.m. · Floors 1–5
+- Rent: 22,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ready to move in
+- Getting there: about 2 min walk to BTS On Nut
+- About: Corner unit with built-in furniture in warm brown and cream tones and a pleasant breeze all day, at Aspire Onnut Station in On Nut, near Lotus's On Nut.
+- Room highlights: Corner unit, Warm brown and cream tones, Pleasant breeze all day
+- Furniture & appliances: Built-in furniture
+- Getting around & nearby: Near Lotus's On Nut
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-001/1.webp (+7 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-001)
+
+### Bangkok Feliz Sukhumvit 69-2 — MC-002
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-002/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-002/?lang=en
+
+ภาษาไทย:
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- แบบห้อง: 1 ห้องนอน · ขนาด: 34 ตร.ม. · ชั้น 6–10
+- ค่าเช่า: 13,500 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
+- การเดินทาง: เดินประมาณ 1 นาทีถึง BTS พระโขนง
+- รายละเอียด: ห้องหันทิศเหนือ วิวเปิดโล่งไม่มีตึกบัง เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ ที่ Bangkok Feliz สุขุมวิท 69 ย่านพระโขนง
+- ไฮไลต์ห้อง: หันทิศเหนือ, วิวเปิดโล่ง ไม่มีตึกบัง
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ
+
+English:
+- Area: Phra Khanong
+- Type: 1 bedroom · Size: 34 sq.m. · Floors 6–10
+- Rent: 13,500 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ask for move-in date
+- Getting there: about 1 min walk to BTS Phra Khanong
+- About: North-facing unit with an open, unobstructed view, fully furnished with appliances, at Bangkok Feliz Sukhumvit 69 in Phra Khanong.
+- Room highlights: North-facing, Open view, no buildings in the way
+- Furniture & appliances: Fully furnished with appliances
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-002/1.webp (+6 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-002)
+
+### Blocs 77 — MC-003
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-003/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-003/?lang=en
+
+ภาษาไทย:
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- แบบห้อง: 1 ห้องนอน · ขนาด: 40 ตร.ม. · ชั้น 11–15
+- ค่าเช่า: 18,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
+- การเดินทาง: เดินประมาณ 5 นาทีถึง BTS อ่อนนุช
+- รายละเอียด: ห้องหันทิศใต้ วิวคลองพระโขนง ที่ Blocs 77 สุขุมวิท 77 ย่านอ่อนนุช ใกล้ T77 Community และแหล่งช้อปปิ้ง
+- ไฮไลต์ห้อง: หันทิศใต้, วิวคลองพระโขนง
+- การเดินทางและสถานที่ใกล้: ใกล้ T77 Community, ใกล้ Big C อ่อนนุช, ใกล้ Lotus's อ่อนนุช, ใกล้ Habito Mall
+
+English:
+- Area: On Nut
+- Type: 1 bedroom · Size: 40 sq.m. · Floors 11–15
+- Rent: 18,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ask for move-in date
+- Getting there: about 5 min walk to BTS On Nut
+- About: South-facing unit with a Phra Khanong Canal view, at Blocs 77 Sukhumvit 77 in On Nut, near T77 Community and shopping.
+- Room highlights: South-facing, Phra Khanong Canal view
+- Getting around & nearby: Near T77 Community, Near Big C On Nut, Near Lotus's On Nut, Near Habito Mall
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-003/1.webp (+4 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-003)
+
+### Ceil By Sansiri — MC-004
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-004/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-004/?lang=en
+
+ภาษาไทย:
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- แบบห้อง: 1 ห้องนอน · ขนาด: 46 ตร.ม. · ชั้น 6–10
+- ค่าเช่า: 25,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
+- การเดินทาง: เดินประมาณ 16 นาทีถึง BTS เอกมัย (มีรถ shuttle)
+- รายละเอียด: ห้องมุมวิว 270 องศา เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ Ceil By Sansiri เอกมัยซอย 12 มีรถรับ-ส่งฟรีไป BTS เอกมัย
+- ไฮไลต์ห้อง: ห้องมุม, วิว 270 องศา, มีห้องนั่งเล่น
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ
+- ส่วนกลางโครงการ: สระว่ายน้ำ, ฟิตเนส, สวนหย่อม, ที่จอดรถ 1 คัน
+- การเดินทางและสถานที่ใกล้: รถรับ-ส่งฟรีไป BTS เอกมัย, ใกล้ Donki Mall ทองหล่อ
+
+English:
+- Area: Ekkamai
+- Type: 1 bedroom · Size: 46 sq.m. · Floors 6–10
+- Rent: 25,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ready to move in
+- Getting there: about 16 min walk to BTS Ekkamai (shuttle available)
+- About: Corner unit with a 270-degree view, fully furnished and ready to move in, at Ceil By Sansiri, Ekkamai Soi 12, with a free shuttle to BTS Ekkamai.
+- Room highlights: Corner unit, 270-degree view, Living room
+- Furniture & appliances: Fully furnished with appliances
+- Building facilities: Swimming pool, Gym, Garden, 1 parking space
+- Getting around & nearby: Free shuttle to BTS Ekkamai, Near Donki Mall Thonglor
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-004/1.webp (+9 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-004)
+
+### Chapter Thonglor 25 — MC-005
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-005/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-005/?lang=en
+
+ภาษาไทย:
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 8
+- ค่าเช่า: 22,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
+- การเดินทาง: เดินประมาณ 26 นาทีถึง BTS พร้อมพงษ์
+- รายละเอียด: ห้องเฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ พร้อมเข้าอยู่ ที่ Chapter Thonglor 25 ย่านทองหล่อ มีสระว่ายน้ำและฟิตเนส
+- ไฮไลต์ห้อง: มีห้องนั่งเล่น
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ
+- ส่วนกลางโครงการ: สระว่ายน้ำ, ฟิตเนส
+
+English:
+- Area: Thonglor
+- Type: 1 bedroom · Size: 35 sq.m. · Floor 8
+- Rent: 22,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ready to move in
+- Getting there: about 26 min walk to BTS Phrom Phong
+- About: Fully furnished unit with appliances, ready to move in, at Chapter Thonglor 25 in Thonglor, with a swimming pool and gym.
+- Room highlights: Living room
+- Furniture & appliances: Fully furnished with appliances
+- Building facilities: Swimming pool, Gym
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-005/1.webp (+7 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-005)
+
+### IDEO Mobi Sukhumvit 81 — MC-006
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-006/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-006/?lang=en
+
+ภาษาไทย:
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- แบบห้อง: 2 ห้องนอน · ขนาด: 46 ตร.ม. · ชั้น 16–20
+- ค่าเช่า: 24,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
+- การเดินทาง: เดินประมาณ 2 นาทีถึง BTS อ่อนนุช
+- รายละเอียด: ห้องมุมเฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ IDEO Mobi Sukhumvit 81 ย่านอ่อนนุช
+- ไฮไลต์ห้อง: ห้องมุม
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์ครบ
+
+English:
+- Area: On Nut
+- Type: 2 bedrooms · Size: 46 sq.m. · Floors 16–20
+- Rent: 24,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ready to move in
+- Getting there: about 2 min walk to BTS On Nut
+- About: Fully furnished corner unit, ready to move in, at IDEO Mobi Sukhumvit 81 in On Nut.
+- Room highlights: Corner unit
+- Furniture & appliances: Fully furnished
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-006/1.webp (+9 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-006)
+
+### Kawa Haus — MC-007
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-007/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-007/?lang=en
+
+ภาษาไทย:
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- แบบห้อง: 1 ห้องนอน · ขนาด: 33 ตร.ม. · ชั้น 1–5
+- ค่าเช่า: 19,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
+- การเดินทาง: เดินประมาณ 14 นาทีถึง BTS อ่อนนุช (มีรถ shuttle)
+- รายละเอียด: ห้องเฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ Kawa Haus ย่านอ่อนนุช มีรถรับ-ส่งใน T77 และไป BTS อ่อนนุช ใกล้ Habito Mall และ Bangkok Prep
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ
+- ส่วนกลางโครงการ: ฟิตเนส, สระว่ายน้ำ, บ่อแช่น้ำอุ่น–เย็น, Co-working Space, Co-Kitchen
+- การเดินทางและสถานที่ใกล้: รถรับ-ส่งใน T77 Sansiri Campus และไป BTS อ่อนนุช, ใกล้ Habito Mall, ใกล้ Bangkok Prep
+
+English:
+- Area: On Nut
+- Type: 1 bedroom · Size: 33 sq.m. · Floors 1–5
+- Rent: 19,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ready to move in
+- Getting there: about 14 min walk to BTS On Nut (shuttle available)
+- About: Fully furnished unit, ready to move in, at Kawa Haus in On Nut, with a shuttle within T77 and to BTS On Nut, near Habito Mall and Bangkok Prep.
+- Furniture & appliances: Fully furnished with appliances
+- Building facilities: Gym, Swimming pool, Hot and cold plunge pools, Co-working Space, Co-Kitchen
+- Getting around & nearby: Shuttle within T77 Sansiri Campus and to BTS On Nut, Near Habito Mall, Near Bangkok Prep
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-007/1.webp (+0 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-007)
+
+### Kawa Haus — MC-008
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-008/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-008/?lang=en
+
+ภาษาไทย:
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 5
+- ค่าเช่า: 20,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
+- การเดินทาง: เดินประมาณ 14 นาทีถึง BTS อ่อนนุช (มีรถ shuttle)
+- รายละเอียด: ห้องเฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ Kawa Haus ย่านอ่อนนุช มีรถรับ-ส่งใน T77 และไป BTS อ่อนนุช ใกล้ Habito Mall และ Bangkok Prep
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ
+- ส่วนกลางโครงการ: ฟิตเนส, สระว่ายน้ำ, บ่อแช่น้ำอุ่น–เย็น, Co-working Space, Co-Kitchen
+- การเดินทางและสถานที่ใกล้: รถรับ-ส่งใน T77 และไป BTS อ่อนนุช, ใกล้ Habito Mall, ใกล้ Bangkok Prep
+
+English:
+- Area: On Nut
+- Type: 1 bedroom · Size: 35 sq.m. · Floor 5
+- Rent: 20,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ready to move in
+- Getting there: about 14 min walk to BTS On Nut (shuttle available)
+- About: Fully furnished unit, ready to move in, at Kawa Haus in On Nut, with a shuttle within T77 and to BTS On Nut, near Habito Mall and Bangkok Prep.
+- Furniture & appliances: Fully furnished with appliances
+- Building facilities: Gym, Swimming pool, Hot and cold plunge pools, Co-working Space, Co-Kitchen
+- Getting around & nearby: Shuttle within T77 and to BTS On Nut, Near Habito Mall, Near Bangkok Prep
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-008/1.webp (+5 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-008)
+
+### Kawa Haus — MC-009
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-009/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-009/?lang=en
+
+ภาษาไทย:
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- แบบห้อง: 1 ห้องนอน · ขนาด: 38 ตร.ม. · ชั้น 6
+- ค่าเช่า: 23,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
+- การเดินทาง: เดินประมาณ 14 นาทีถึง BTS อ่อนนุช (มีรถ shuttle)
+- รายละเอียด: ห้องมุมวิวสระและคลอง เฟอร์นิเจอร์ครบ ที่ Kawa Haus ย่านอ่อนนุช มีรถรับ-ส่ง
+- ไฮไลต์ห้อง: ห้องมุม, วิวสระและคลอง
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: ตกแต่งและเฟอร์นิเจอร์ครบ
+- การเดินทางและสถานที่ใกล้: มีรถรับ-ส่ง
+
+English:
+- Area: On Nut
+- Type: 1 bedroom · Size: 38 sq.m. · Floor 6
+- Rent: 23,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ask for move-in date
+- Getting there: about 14 min walk to BTS On Nut (shuttle available)
+- About: Fully furnished corner unit with pool and canal views, at Kawa Haus in On Nut, with a shuttle service.
+- Room highlights: Corner unit, Pool and canal view
+- Furniture & appliances: Fully decorated and furnished
+- Getting around & nearby: Shuttle service
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/1.webp (+7 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-009)
+
+### Life Sukhumvit 48 — MC-010
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-010/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-010/?lang=en
+
+ภาษาไทย:
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- แบบห้อง: 1 ห้องนอน · ขนาด: 30.5 ตร.ม. · ชั้น 6–10
+- ค่าเช่า: 16,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
+- การเดินทาง: เดินประมาณ 6 นาทีถึง BTS พระโขนง
+- รายละเอียด: ห้องเฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ พร้อมที่จอดรถ 1 คัน ที่ Life Sukhumvit 48 ย่านพระโขนง
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ
+- ส่วนกลางโครงการ: ที่จอดรถ 1 คัน
+
+English:
+- Area: Phra Khanong
+- Type: 1 bedroom · Size: 30.5 sq.m. · Floors 6–10
+- Rent: 16,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ready to move in
+- Getting there: about 6 min walk to BTS Phra Khanong
+- About: Fully furnished unit with appliances and 1 parking space, at Life Sukhumvit 48 in Phra Khanong.
+- Furniture & appliances: Fully furnished with appliances
+- Building facilities: 1 parking space
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-010/1.webp (+5 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-010)
+
+### Mori Haus — MC-011
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-011/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-011/?lang=en
+
+ภาษาไทย:
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- แบบห้อง: 1 ห้องนอน · ขนาด: 47 ตร.ม. · ชั้น 1–5
+- ค่าเช่า: 28,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
+- การเดินทาง: เดินประมาณ 14 นาทีถึง BTS อ่อนนุช (มีรถ shuttle)
+- รายละเอียด: ห้องมีอ่างอาบน้ำ วิวสระว่ายน้ำ ที่ Mori Haus ใน T77 Community ย่านอ่อนนุช มีรถรับ-ส่งและรถกอล์ฟฟรี ใกล้ Habito Mall และ Bangkok Prep
+- ไฮไลต์ห้อง: อ่างอาบน้ำ, วิวสระว่ายน้ำ
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ, เตียงนอนนุ่ม, โทรทัศน์, เครื่องซักผ้า, ตู้เย็น / Freezer, ไมโครเวฟ, กลอนดิจิทัล
+- ส่วนกลางโครงการ: สระว่ายน้ำกลางแจ้ง, ฟิตเนส, สวนและพื้นที่สีเขียว, ระบบคีย์การ์ด
+- การเดินทางและสถานที่ใกล้: รถรับ-ส่งและรถกอล์ฟฟรี, ใกล้ T77 Community, ใกล้ Habito Mall, 300 ม. ถึง Big C และตลาดอาหาร, ตรงข้าม Bangkok Prep International School
+
+English:
+- Area: On Nut
+- Type: 1 bedroom · Size: 47 sq.m. · Floors 1–5
+- Rent: 28,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ready to move in
+- Getting there: about 14 min walk to BTS On Nut (shuttle available)
+- About: Unit with a bathtub and a pool view, at Mori Haus in T77 Community, On Nut, with a free shuttle and golf cart, near Habito Mall and Bangkok Prep.
+- Room highlights: Bathtub, Pool view
+- Furniture & appliances: Fully furnished with appliances, Comfortable bed, TV, Washing machine, Fridge / freezer, Microwave, Digital door lock
+- Building facilities: Outdoor swimming pool, Gym, Garden and green space, Key-card access
+- Getting around & nearby: Free shuttle and golf cart, Near T77 Community, Near Habito Mall, 300 m to Big C and a food market, Opposite Bangkok Prep International School
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-011/1.webp (+8 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-011)
+
+### Nia By Sansiri — MC-012
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-012/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-012/?lang=en
+
+ภาษาไทย:
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- แบบห้อง: 2 ห้องนอน · ขนาด: 48 ตร.ม. · ชั้น 11–15
+- ค่าเช่า: 25,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
+- การเดินทาง: เดินประมาณ 13 นาทีถึง BTS อ่อนนุช (มีรถ shuttle)
+- รายละเอียด: ห้องมุม เตียง 5 ฟุตทั้งสองห้อง เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ Nia By Sansiri สุขุมวิท 71 ย่านอ่อนนุช
+- ไฮไลต์ห้อง: ห้องมุม, เตียงขนาด 5 ฟุตทั้ง 2 ห้อง
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ
+- ส่วนกลางโครงการ: สระว่ายน้ำ, ฟิตเนส, Co-working Space, สวนบนดาดฟ้า
+- การเดินทางและสถานที่ใกล้: ใกล้ Habito Mall, ใกล้ Bangkok Prep International School, ใกล้ทางด่วนฉลองรัช, ใกล้ BTS พระโขนง
+
+English:
+- Area: On Nut
+- Type: 2 bedrooms · Size: 48 sq.m. · Floors 11–15
+- Rent: 25,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ready to move in
+- Getting there: about 13 min walk to BTS On Nut (shuttle available)
+- About: Corner unit with 5-ft beds in both bedrooms, fully furnished and ready to move in, at Nia By Sansiri Sukhumvit 71 in On Nut.
+- Room highlights: Corner unit, 5-ft beds in both bedrooms
+- Furniture & appliances: Fully furnished with appliances
+- Building facilities: Swimming pool, Gym, Co-working Space, Rooftop garden
+- Getting around & nearby: Near Habito Mall, Near Bangkok Prep International School, Near the Chalong Rat Expressway, Near BTS Phra Khanong
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-012/1.webp (+9 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-012)
+
+### Noble Ora — MC-013
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-013/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-013/?lang=en
+
+ภาษาไทย:
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- แบบห้อง: 2 ห้องนอน · ขนาด: 115 ตร.ม. · ชั้น 11
+- ค่าเช่า: 55,000 บาท/เดือน · มัดจำ 2 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
+- การเดินทาง: เดินประมาณ 19 นาทีถึง BTS ทองหล่อ
+- รายละเอียด: ห้องกว้าง 2 ห้องน้ำ มีอ่างอาบน้ำ เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ Noble Ora ย่านทองหล่อ
+- ไฮไลต์ห้อง: 2 ห้องน้ำ, อ่างอาบน้ำ
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์ครบ
+- ส่วนกลางโครงการ: สระว่ายน้ำ, ฟิตเนส
+
+English:
+- Area: Thonglor
+- Type: 2 bedrooms · Size: 115 sq.m. · Floor 11
+- Rent: 55,000 THB/month · Deposit 2 months · Minimum lease 1 year
+- Status: Available · Move-in: Ready to move in
+- Getting there: about 19 min walk to BTS Thong Lo
+- About: Spacious unit with 2 bathrooms and a bathtub, fully furnished and ready to move in, at Noble Ora in Thonglor.
+- Room highlights: 2 bathrooms, Bathtub
+- Furniture & appliances: Fully furnished
+- Building facilities: Swimming pool, Gym
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-013/1.webp (+7 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-013)
+
+### Oka Haus — MC-014
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-014/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-014/?lang=en
+
+ภาษาไทย:
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- แบบห้อง: 2 ห้องนอน · ขนาด: 41 ตร.ม. · ชั้น 31–35
+- ค่าเช่า: 29,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
+- การเดินทาง: เดินประมาณ 18 นาทีถึง BTS ทองหล่อ
+- รายละเอียด: ห้อง 2 ห้องนอนมีห้องนั่งเล่น เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ Oka Haus ย่านทองหล่อ มีสระว่ายน้ำและฟิตเนส
+- ไฮไลต์ห้อง: มีห้องนั่งเล่น
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ
+- ส่วนกลางโครงการ: สระว่ายน้ำ, ฟิตเนส
+
+English:
+- Area: Thonglor
+- Type: 2 bedrooms · Size: 41 sq.m. · Floors 31–35
+- Rent: 29,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ready to move in
+- Getting there: about 18 min walk to BTS Thong Lo
+- About: 2-bedroom unit with a living room, fully furnished and ready to move in, at Oka Haus in Thonglor, with a swimming pool and gym.
+- Room highlights: Living room
+- Furniture & appliances: Fully furnished with appliances
+- Building facilities: Swimming pool, Gym
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-014/1.webp (+12 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-014)
+
+### Rhythm Ekkamai — MC-015
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-015/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-015/?lang=en
+
+ภาษาไทย:
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม. · ชั้น 6–10
+- ค่าเช่า: 24,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
+- การเดินทาง: เดินประมาณ 4 นาทีถึง BTS เอกมัย
+- รายละเอียด: ห้องมุมหันทิศตะวันออก รับแสงเช้า เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ Rhythm Ekkamai ย่านเอกมัย ใกล้แหล่งไลฟ์สไตล์เอกมัย–ทองหล่อ
+- ไฮไลต์ห้อง: ห้องมุม, หันทิศตะวันออก รับแสงธรรมชาติช่วงเช้า
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ
+- ส่วนกลางโครงการ: สระว่ายน้ำ, ฟิตเนส, สวนพักผ่อน, ระบบรักษาความปลอดภัย 24 ชั่วโมง
+- การเดินทางและสถานที่ใกล้: ใกล้แหล่งไลฟ์สไตล์ย่านเอกมัย–ทองหล่อ
+
+English:
+- Area: Ekkamai
+- Type: 1 bedroom · Size: 30 sq.m. · Floors 6–10
+- Rent: 24,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ready to move in
+- Getting there: about 4 min walk to BTS Ekkamai
+- About: East-facing corner unit with morning light, fully furnished and ready to move in, at Rhythm Ekkamai in Ekkamai, near the Ekkamai–Thonglor lifestyle area.
+- Room highlights: Corner unit, East-facing, natural morning light
+- Furniture & appliances: Fully furnished with appliances
+- Building facilities: Swimming pool, Gym, Relaxation garden, 24-hour security
+- Getting around & nearby: Near the Ekkamai–Thonglor lifestyle area
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-015/1.webp (+7 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-015)
+
+### The Alcove Thonglor 10 — MC-016
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-016/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-016/?lang=en
+
+ภาษาไทย:
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- แบบห้อง: 1 ห้องนอน · ขนาด: 76 ตร.ม. · ชั้น 16–20
+- ค่าเช่า: 35,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
+- การเดินทาง: เดินประมาณ 16 นาทีถึง BTS เอกมัย
+- รายละเอียด: ห้องมีห้องนั่งเล่น เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ The Alcove Thonglor 10 ใกล้ย่านเอกมัยและทองหล่อ
+- ไฮไลต์ห้อง: มีห้องนั่งเล่น
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ
+- ส่วนกลางโครงการ: สระว่ายน้ำ, ฟิตเนส
+- การเดินทางและสถานที่ใกล้: ใกล้ย่านทองหล่อ
+
+English:
+- Area: Ekkamai
+- Type: 1 bedroom · Size: 76 sq.m. · Floors 16–20
+- Rent: 35,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ready to move in
+- Getting there: about 16 min walk to BTS Ekkamai
+- About: Unit with a living room, fully furnished and ready to move in, at The Alcove Thonglor 10, near Ekkamai and Thonglor.
+- Room highlights: Living room
+- Furniture & appliances: Fully furnished with appliances
+- Building facilities: Swimming pool, Gym
+- Getting around & nearby: Near Thonglor
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-016/1.webp (+8 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-016)
+
+### The Base Park West — MC-017
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-017/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-017/?lang=en
+
+ภาษาไทย:
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- แบบห้อง: 1 ห้องนอน · ขนาด: 31 ตร.ม. · ชั้น 16–20
+- ค่าเช่า: 16,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
+- การเดินทาง: เดินประมาณ 10 นาทีถึง BTS อ่อนนุช
+- รายละเอียด: ห้องมุมวิวเมืองและทางด่วน เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ The Base Park West สุขุมวิท 77 ย่านอ่อนนุช
+- ไฮไลต์ห้อง: ห้องมุม, วิวเมืองและทางด่วน
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ
+- ส่วนกลางโครงการ: สระว่ายน้ำ, ฟิตเนส, สวนส่วนกลาง, ที่จอดรถ, ระบบคีย์การ์ด
+
+English:
+- Area: On Nut
+- Type: 1 bedroom · Size: 31 sq.m. · Floors 16–20
+- Rent: 16,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ready to move in
+- Getting there: about 10 min walk to BTS On Nut
+- About: Corner unit with city and expressway views, fully furnished and ready to move in, at The Base Park West Sukhumvit 77 in On Nut.
+- Room highlights: Corner unit, City and expressway view
+- Furniture & appliances: Fully furnished with appliances
+- Building facilities: Swimming pool, Gym, Shared garden, Parking, Key-card access
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-017/1.webp (+6 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-017)
+
+### The Line Sukhumvit 71 — MC-018
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-018/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-018/?lang=en
+
+ภาษาไทย:
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- แบบห้อง: 2 ห้องนอน · ขนาด: 61.1 ตร.ม. · ชั้น 6–10
+- ค่าเช่า: 35,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
+- การเดินทาง: เดินประมาณ 6 นาทีถึง BTS พระโขนง
+- รายละเอียด: ห้อง 2 ห้องน้ำ เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ The Line Sukhumvit 71 ย่านพระโขนง เดินทางต่อเอกมัยและทองหล่อได้สะดวก
+- ไฮไลต์ห้อง: 2 ห้องน้ำ
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ
+- ส่วนกลางโครงการ: สระว่ายน้ำ, ฟิตเนส, Co-working Space, สวนพักผ่อน, ระบบรักษาความปลอดภัย 24 ชั่วโมง
+- การเดินทางและสถานที่ใกล้: เชื่อมต่อเอกมัยและทองหล่อ
+
+English:
+- Area: Phra Khanong
+- Type: 2 bedrooms · Size: 61.1 sq.m. · Floors 6–10
+- Rent: 35,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ready to move in
+- Getting there: about 6 min walk to BTS Phra Khanong
+- About: Unit with 2 bathrooms, fully furnished and ready to move in, at The Line Sukhumvit 71 in Phra Khanong, with easy access to Ekkamai and Thonglor.
+- Room highlights: 2 bathrooms
+- Furniture & appliances: Fully furnished with appliances
+- Building facilities: Swimming pool, Gym, Co-working Space, Relaxation garden, 24-hour security
+- Getting around & nearby: Easy access to Ekkamai and Thonglor
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-018/1.webp (+8 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-018)
+
+### The Niche Pride Thonglor-Petchaburi — MC-019
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-019/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-019/?lang=en
+
+ภาษาไทย:
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- แบบห้อง: 1 ห้องนอน · ขนาด: 36 ตร.ม. · ชั้น 21–25
+- ค่าเช่า: 16,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง 30 พ.ย. · วันเข้าอยู่: ว่าง 30 พ.ย.
+- การเดินทาง: เดินประมาณ 28 นาทีถึง MRT เพชรบุรี (มีรถ shuttle)
+- รายละเอียด: ห้องหันทิศใต้ วิวโล่งฝั่งทองหล่อ–อโศก เฟอร์นิเจอร์ครบ ที่ The Niche Pride Thonglor-Petchaburi มีรถรับ-ส่งไป BTS ทองหล่อและ MRT เพชรบุรี
+- ไฮไลต์ห้อง: หันทิศใต้, วิวสูงวิวโล่งฝั่งทองหล่อ–อโศก ไม่มีตึกบัง
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์ครบ
+- การเดินทางและสถานที่ใกล้: รถรับ-ส่งไป BTS ทองหล่อ และ MRT เพชรบุรี
+
+English:
+- Area: Thonglor
+- Type: 1 bedroom · Size: 36 sq.m. · Floors 21–25
+- Rent: 16,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available 30 Nov · Move-in: Available 30 Nov
+- Getting there: about 28 min walk to MRT Phetchaburi (shuttle available)
+- About: South-facing unit with an open view toward Thonglor–Asok, fully furnished, at The Niche Pride Thonglor-Petchaburi, with a shuttle to BTS Thong Lo and MRT Phetchaburi.
+- Room highlights: South-facing, High, open view toward Thonglor–Asok, nothing in the way
+- Furniture & appliances: Fully furnished
+- Getting around & nearby: Shuttle to BTS Thong Lo and MRT Phetchaburi
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-019/1.webp (+8 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-019)
+
+### The Room Sukhumvit 21 — MC-020
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-020/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-020/?lang=en
+
+ภาษาไทย:
+- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/)
+- แบบห้อง: 1 ห้องนอน · ขนาด: 53.09 ตร.ม. · ชั้น 24
+- ค่าเช่า: 30,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
+- การเดินทาง: เดินประมาณ 7 นาทีถึง MRT เพชรบุรี
+- รายละเอียด: ห้องมีห้องนั่งเล่น วิวสวย เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ The Room สุขุมวิท 21 ย่านอโศก มีห้องสมุด สระว่ายน้ำ และฟิตเนส
+- ไฮไลต์ห้อง: มีห้องนั่งเล่น, วิวสวยสบายตา
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ
+- ส่วนกลางโครงการ: สระว่ายน้ำ, ฟิตเนส, ห้องสมุด, สวน, ที่จอดรถ
+
+English:
+- Area: Asok
+- Type: 1 bedroom · Size: 53.09 sq.m. · Floor 24
+- Rent: 30,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ready to move in
+- Getting there: about 7 min walk to MRT Phetchaburi
+- About: Unit with a living room and a nice view, fully furnished and ready to move in, at The Room Sukhumvit 21 in Asok, with a library, swimming pool and gym.
+- Room highlights: Living room, Pleasant view
+- Furniture & appliances: Fully furnished with appliances
+- Building facilities: Swimming pool, Gym, Library, Park, Parking
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-020/1.webp (+12 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-020)
+
+### The Teak Sukhumvit 39 — MC-021
+URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-021/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-021/?lang=en
+
+ภาษาไทย:
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- แบบห้อง: 1 ห้องนอน · ขนาด: 41 ตร.ม. · ชั้น 8
+- ค่าเช่า: 28,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
+- สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
+- การเดินทาง: เดินประมาณ 18 นาทีถึง BTS พร้อมพงษ์
+- รายละเอียด: ห้อง 1 Bed Plus มีอ่างอาบน้ำ ห้องนั่งเล่นและพื้นที่รับประทานอาหาร ที่ The Teak Sukhumvit 39 ย่านพร้อมพงษ์ เฟอร์นิเจอร์ครบพร้อมชุดเครื่องนอน
+- ไฮไลต์ห้อง: 1 Bed Plus, อ่างอาบน้ำ, ห้องนั่งเล่นและพื้นที่รับประทานอาหาร
+- เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า: เฟอร์นิเจอร์ครบ, ชุดเครื่องนอน, เครื่องใช้ไฟฟ้าครบ, ครัว / pantry พร้อมอุปกรณ์พื้นฐาน
+
+English:
+- Area: Phrom Phong
+- Type: 1 bedroom · Size: 41 sq.m. · Floor 8
+- Rent: 28,000 THB/month · Deposit 2 months · Advance 1 month · Minimum lease 1 year
+- Status: Available · Move-in: Ask for move-in date
+- Getting there: about 18 min walk to BTS Phrom Phong
+- About: 1 Bed Plus unit with a bathtub, living room and dining area, at The Teak Sukhumvit 39 in Phrom Phong, fully furnished with bedding.
+- Room highlights: 1 Bed Plus, Bathtub, Living and dining area
+- Furniture & appliances: Fully furnished, Bedding set, Full set of appliances, Kitchen / pantry with basic equipment
+- Photos: https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-021/1.webp (+9 more on the page)
+- Contact: LINE https://line.me/R/ti/p/%40576yhgtz (mention MC-021)

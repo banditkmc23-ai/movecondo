@@ -19,3 +19,14 @@ carousels, and nearby-place marquees.
 
 When a listing or nearby place changes, edit the relevant HTML (and files under
 `data/`) directly.
+
+## Files for AI agents and search engines
+
+`llms.txt`, `llms-full.txt`, `rooms.json`, `feed.xml`, `sitemap.xml`, `robots.txt`, the
+room-page JSON-LD (`<script id="ld-room">`) and the home/area ItemList JSON-LD
+(`<script id="ld-itemlist">`) are generated from the hand-maintained HTML by:
+
+    python3 tools/build-agent-files.py
+
+It only replaces those JSON-LD blocks and feed `<link rel="alternate">` hints; it never
+touches page layout. Re-run it after editing any room's facts or price.

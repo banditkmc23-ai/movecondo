@@ -29,7 +29,6 @@ const LINE_HREF = "https://line.me/R/ti/p/%40576yhgtz";
 const iconBack = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-8 7 8 7"/></svg>`;
 const iconCheck = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>`;
 const iconClose = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>`;
-const iconSend = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l16-8-6 16-2-6-8-2z"/></svg>`;
 const SITE_BASE = (typeof location!=='undefined' && /\/movecondo(\/|$)/.test(location.pathname)) ? '/movecondo/' : '/';
 function roomHref(id){ return SITE_BASE + 'rooms/' + String(id).toLowerCase() + '/'; }
 function areaHref(area){ return SITE_BASE + 'areas/' + (AREA_SLUGS[area]||'') + '/'; }
@@ -1839,17 +1838,10 @@ function render(){
     window.scrollTo(0,0);
   }
   if (window.MoveCondoCarousel) window.MoveCondoCarousel.scan();
-  if (window.__movecondoFabGuard) window.__movecondoFabGuard();
 }
 
 
-/* ---- Simulated AI condo assistant (no external API) ---- */
-const AI_STARTERS = [
-  "ร้านดังย่านทองหล่อ",
-  "ใกล้คาเฟ่ย่านอารีย์",
-  "เดินทางย่านเจริญนคร",
-  "มีห้องว่างแล้วยัง"
-];
+/* ---- Area name aliases (used by home search) ---- */
 const AREA_ALIASES = [
   ["พระราม 9", ["พระราม 9","พระรามเก้า","rama 9","rama9"]],
   ["พระโขนง", ["พระโขนง","phra khanong","phrakhanong"]],
@@ -1863,324 +1855,9 @@ const AREA_ALIASES = [
   ["เจริญนคร", ["เจริญนคร","charoen nakhon","charoennakhon","กรุงธนบุรี"]]
 ];
 
-let aiOpen = false;
-let aiMsgs = [];
-let aiDemoRan = false;
-
-function parseNeeds(text){
-  const needs = { raw:text, areas:[], budget:null, pets:false, beds:null, size:null, bts:false, moveIn:null, cafe:false };
-  const lower = text.toLowerCase();
-  for (const [area, aliases] of AREA_ALIASES){
-    if (aliases.some(a => lower.includes(a.toLowerCase()) || text.includes(a))) needs.areas.push(area);
-  }
-  const mun = text.match(/(\d+(?:\.\d+)?)\s*หมื่น/);
-  const pan = text.match(/(\d+)\s*พัน/);
-  const k = text.match(/\b(\d{1,2})\s*k\b/i);
-  const baht = text.match(/(?:งบ|ไม่เกิน|ราว|ประมาณ)?\s*(\d{1,2}[,\s]\d{3}|\d{4,6})\s*(บาท)?/);
-  if (mun) needs.budget = Math.round(parseFloat(mun[1]) * 10000);
-  else if (pan) needs.budget = parseInt(pan[1],10) * 1000;
-  else if (k) needs.budget = parseInt(k[1],10) * 1000;
-  else if (baht) needs.budget = parseInt(baht[1].replace(/[,\s]/g,""),10);
-  if (needs.budget && needs.budget < 1000) needs.budget *= 1000;
-  if (/(เลี้ยง)?\s*(แมว|หมา|สุนัข|สัตว์เลี้ยง)|pet|รับสัตว์/.test(text) && !/ไม่(ได้)?\s*เลี้ยง|ไม่มีสัตว์/.test(text)) needs.pets = true;
-  if (/สตูดิโอ|studio/i.test(text)) needs.beds = "studio";
-  else if (/1\s*ห้องนอน\s*พลัส|1br\+|วันเบด\s*พลัส/i.test(text)) needs.beds = "1plus";
-  else if (/2\s*ห้องนอน|2br/.test(text)) needs.beds = 2;
-  else if (/1\s*ห้องนอน|หนึ่งห้องนอน|ห้องนอนเดียว|1br/.test(text)) needs.beds = 1;
-  const sz = text.match(/(\d+)\s*ตร\.?\s*ม/);
-  if (sz) needs.size = parseInt(sz[1],10);
-  if (/bts|mrt|รถไฟฟ้า|ใกล้\s*bts|เดินถึง/i.test(text)) needs.bts = true;
-  if (/เดือนหน้า|ย้ายเข้าเดือนหน้า/.test(text)) needs.moveIn = "2026-12-15";
-  if (/คาเฟ่|ร้านกาแฟ|ใกล้คาเฟ่|ร้านดัง|ของหวาน|ร้านอาหาร/.test(text)) needs.cafe = true;
-  return needs;
-}
-
-function scoreForNeeds(l, needs){
-  const p = {
-    area: (needs.areas && needs.areas.length===1) ? needs.areas[0] : "any",
-    budget: needs.budget || 50000,
-    size: needs.size || 25,
-    moveIn: needs.moveIn || "2026-12-01",
-    pets: needs.pets ? "yes" : "no"
-  };
-  let s = scoreListing(l, p);
-  if (needs.areas && needs.areas.length>1 && needs.areas.includes(l.area)) s = Math.min(98, s+16);
-  if (needs.bts && l.walk<=5) s = Math.min(98, s+8);
-  else if (needs.bts && l.walk>8) s -= 8;
-  if (needs.beds==="studio") s += l.beds.includes("สตูดิโอ") ? 8 : -6;
-  if (needs.beds==="1plus") s += l.beds.includes("พลัส") ? 10 : -4;
-  if (needs.beds===1) s += (l.beds.includes("1") && !l.beds.includes("พลัส")) ? 8 : (l.beds.includes("พลัส") ? 4 : -4);
-  if (needs.beds===2) s += l.beds.includes("2") ? 8 : -4;
-  return Math.max(24, Math.min(98, Math.round(s)));
-}
-
-function whyListing(l, needs){
-  const r = [];
-  if (needs.areas && needs.areas.includes(l.area)) r.push("อยู่ในย่าน" + l.area + " ตามที่ขอ");
-  if (needs.budget && l.price <= needs.budget) r.push("ค่าเช่า " + money(l.price) + " บาท อยู่ในงบ");
-  else if (needs.budget && l.price > needs.budget) r.push("สูงกว่างบเล็กน้อย แต่ยังใกล้เคียง");
-  if (needs.bts && l.transit && l.walk!=null && l.walk<=5) r.push("เดิน " + l.walk + " นาทีถึง " + l.transit);
-  else if (needs.bts && l.transit && l.walk!=null) r.push("ใกล้ " + l.transit + " (" + l.walk + " นาที)");
-  else if (needs.bts && l.transit) r.push("ใกล้ " + l.transit);
-  if (needs.beds==="studio" && l.beds.includes("สตูดิโอ")) r.push("เป็นสตูดิโอตามที่ขอ");
-  if (needs.beds==="1plus" && l.beds.includes("พลัส")) r.push("เป็น 1 ห้องนอนพลัสตามที่ขอ");
-  if (needs.beds===1 && l.beds.includes("1")) r.push(l.beds.includes("พลัส") ? "เป็น 1 ห้องนอนพลัส ใกล้เคียงกับที่ขอ" : "เป็น 1 ห้องนอนตามที่ขอ");
-  if (needs.beds===2 && l.beds.includes("2")) r.push("เป็น 2 ห้องนอนตามที่ขอ");
-  if (needs.cafe){
-    const cafe = nearbyPlaces(l.area).find(p => p.category==="คาเฟ่") || nearbyPlaces(l.area)[0];
-    if (cafe) r.push("ใกล้ " + cafe.name + " (" + placeTime(cafe) + " จากสถานี)");
-  }
-  if (!r.length) r.push("คะแนนความเหมาะสมสูงเมื่อเทียบกับห้องอื่นในตัวอย่าง");
-  return r.slice(0,3);
-}
-
-function understandText(needs){
-  const bits = [];
-  if (needs.budget) bits.push("งบไม่เกิน " + money(needs.budget) + " บาท");
-  if (needs.areas.length) bits.push("ทำเล " + needs.areas.join(" หรือ "));
-  if (needs.pets) bits.push("เลี้ยงสัตว์ได้");
-  if (needs.bts) bits.push("ใกล้รถไฟฟ้า");
-  if (needs.cafe) bits.push("ใกล้คาเฟ่หรือร้านดังในย่าน");
-  if (needs.beds==="studio") bits.push("ห้องสตูดิโอ");
-  if (needs.beds===1) bits.push("1 ห้องนอน");
-  if (needs.size) bits.push("จาก " + needs.size + " ตร.ม.");
-  return bits.length ? "เข้าใจว่าต้องการ" + bits.join(" · ") : "รับความต้องการแล้วค่ะ จะแนะนำย่านและร้านดังใกล้สถานีให้";
-}
-
-function recommend(text){
-  const needs = parseNeeds(text);
-  const prefs = {
-    area: needs.areas[0] || "any",
-    budget: needs.budget || 35000,
-    size: needs.size || 30,
-    pets: needs.pets ? "yes" : "no",
-    moveIn: needs.moveIn || "2026-12-01"
-  };
-  const rows = LISTINGS.map(l => {
-    const sc = scoreListing(l, prefs);
-    return { l, score: sc, why: whyListing(l, needs) };
-  }).sort((a,b)=>b.score-a.score).slice(0,3);
-  return { needs, rows };
-}
-
-function greetMsg(){
-  return {
-    role:"bot",
-    text:"สวัสดีค่ะ ฉันเป็นผู้ช่วยของ MoveCondo (ย้ายคอนโด) บอกงบ ทำเล หรือจำนวนห้องนอนได้เลยค่ะ จะแนะนำจากประกาศจริงให้ ทัก LINE แล้วบอกรหัสห้องได้เลย",
-    chips: AI_STARTERS
-  };
-}
-
-function aiMiniHTML(row){
-  const l = row.l;
-  return `<article class="ai-mini" data-open-listing="${l.id}">
-    <div class="top">
-      <div>
-        <div class="meta">${l.area} · ${l.size} ตร.ม. · ${l.beds}</div>
-        <h3>${l.project}</h3>
-        <div class="price">${money(l.price)} บาท/เดือน</div>
-      </div>
-      <span class="score-pill" style="position:static"><span>เข้ากัน</span>${row.score}%</span>
-    </div>
-    <ul class="why">${row.why.map(w=>`<li>${w}</li>`).join("")}</ul>
-    <div class="acts">
-      <a class="btn btn-sm btn-primary" href="${roomHref(l.id)}">ดูรายละเอียด</a>
-      <button class="btn btn-sm btn-ghost" type="button" data-book="${l.id}">นัดชมห้อง</button>
-      <a class="btn btn-sm btn-line" href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">LINE</a>
-    </div>
-  </article>`;
-}
-
-function renderAI(){
-  const el = document.getElementById("aiPanel");
-  if (!el) return;
-  document.body.classList.toggle("ai-open", aiOpen);
-  document.querySelectorAll("[data-open='ai']").forEach(b => b.setAttribute("aria-expanded", aiOpen ? "true" : "false"));
-  if (!aiOpen){ el.innerHTML = ""; return; }
-  const msgs = aiMsgs.length ? aiMsgs : [greetMsg()];
-  el.innerHTML = `
-    <div class="ai-head">
-      <div class="logo" aria-hidden="true">M</div>
-      <div>
-        <h2 id="aiTitle">ผู้ช่วย AI หาคอนโด</h2>
-        <p>MoveCondo · ย้ายคอนโด</p>
-      </div>
-      <button class="x" type="button" data-close="ai" aria-label="ปิด">${iconClose}</button>
-    </div>
-    <div class="ai-demo-banner">ตัวอย่างการทำงาน — <strong>ยังไม่ได้เชื่อม AI จริง</strong></div>
-    <div class="ai-log" id="aiLog">
-      ${msgs.map(m => `
-        <div class="ai-msg ${m.role}">
-          <div class="ai-bubble">${m.text}</div>
-          ${m.listings ? `<div class="ai-cards">${m.listings.map(aiMiniHTML).join("")}</div>` : ""}
-          ${m.chips ? `<div class="ai-chips">${m.chips.map(c=>`<button type="button" class="ai-chip" data-ai-prompt="${c}">${c}</button>`).join("")}</div>` : ""}
-        </div>`).join("")}
-    </div>
-    <form class="ai-input" id="aiForm">
-      <input id="aiText" type="text" placeholder="พิมพ์ความต้องการเป็นภาษาพูดได้..." autocomplete="off" />
-      <button class="send" type="submit" aria-label="ส่ง">${iconSend}</button>
-    </form>`;
-  const log = document.getElementById("aiLog");
-  if (log){
-    const user = log.querySelector(".ai-msg.user");
-    if (user) user.scrollIntoView({block:"start", inline:"nearest"});
-    else log.scrollTop = log.scrollHeight;
-  }
-  const input = document.getElementById("aiText");
-  if (input && window.innerWidth > 640) input.focus();
-}
-
-let aiLastFocus = null;
-function openAI(opts){
-  aiOpen = true;
-  aiLastFocus = document.activeElement;
-  if (!aiMsgs.length) aiMsgs = [greetMsg()];
-  renderAI();
-  if (opts && opts.demo) runAIDemo();
-  const closeBtn = document.querySelector("#aiPanel [data-close='ai']");
-  if (closeBtn && !(opts && opts.demo)) closeBtn.focus();
-}
-
-function closeAI(){
-  aiOpen = false;
-  renderAI();
-  if (aiLastFocus && typeof aiLastFocus.focus === "function") aiLastFocus.focus();
-}
-
-function pushAIReply(text){
-  const { needs } = recommend(text);
-  const follow = ["ร้านดังย่านทองหล่อ","ใกล้คาเฟ่ย่านอารีย์","มีห้องว่างแล้วยัง"];
-  const q = (text||"").toLowerCase();
-  const askingRooms = /ห้อง|เช่า|งบ|ว่าง|จับคู่|recommend|rent/.test(q) || needs.budget || needs.beds;
-  let msg;
-  if (askingRooms && !needs.cafe){
-    const rec = recommend(text);
-    if (rec.rows.length){
-      msg = "จากประกาศตอนนี้ ห้องเหล่านี้ใกล้กับที่คุณบอกค่ะ ทัก LINE แล้วบอกรหัสห้องได้เลย";
-      rec.rows.forEach(row => { /* attach below */ });
-      aiMsgs.push({ role:"bot", text: msg, listings: rec.rows, chips: follow });
-      renderAI(); return;
-    }
-    msg = "ยังจับคู่ห้องจากข้อความนี้ไม่ได้ชัดเจนค่ะ บอกงบ ทำเล หรือทัก LINE ได้เลย";
-  } else {
-    const areas = needs.areas.length ? needs.areas : (homeArea ? [homeArea] : AREAS.slice(0,3));
-    const mentions = [];
-    areas.forEach(a => {
-      const list = (typeof nearbyPlaces==="function" ? nearbyPlaces(a) : (NEARBY[a]&&NEARBY[a].places)||[]);
-      const filtered = needs.cafe ? list.filter(p => p.category==="คาเฟ่") : list;
-      (filtered.length ? filtered : list).slice(0,2).forEach(p => {
-        mentions.push(p.name + " ย่าน" + a + " (" + placeTime(p) + ")");
-      });
-    });
-    if (mentions.length){
-      msg = (needs.cafe ? "คาเฟ่และร้านดังใกล้สถานี เช่น " : "ร้านดังใกล้สถานีในย่านที่ถาม เช่น ") + mentions.slice(0,4).join(" · ") + " — ระยะทางเป็นค่าประมาณจากสถานี";
-    } else {
-      msg = "สำรวจย่านและร้านดังใกล้สถานีได้จากหน้าย่านค่ะ หรือทัก LINE ได้เลย";
-    }
-  }
-  aiMsgs.push({
-    role:"bot",
-    text: msg,
-    listings: [],
-    chips: follow
-  });
-  renderAI();
-}
-
-function sendAI(text){
-  const q = (text||"").trim();
-  if (!q) return;
-  if (!aiMsgs.length) aiMsgs = [greetMsg()];
-  aiMsgs.push({ role:"user", text:q });
-  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduced){ renderAI(); pushAIReply(q); return; }
-  aiMsgs.push({ role:"bot", text:"กำลังหาข้อมูลย่าน...", pending:true });
-  renderAI();
-  const log = document.getElementById("aiLog");
-  if (log) log.setAttribute("aria-busy","true");
-  setTimeout(() => {
-    aiMsgs = aiMsgs.filter(m => !m.pending);
-    if (log) log.setAttribute("aria-busy","false");
-    pushAIReply(q);
-  }, 400);
-}
-
-function runAIDemo(){
-  if (aiDemoRan) return;
-  aiDemoRan = true;
-  const q = "ใกล้คาเฟ่ย่านอารีย์";
-  aiMsgs = [greetMsg(), { role:"user", text:q }];
-  renderAI();
-  pushAIReply(q);
-}
-
-function shouldDemoAI(){
-  const q = new URLSearchParams(location.search);
-  const hq = new URLSearchParams((location.hash.split("?")[1]||""));
-  return q.get("ai")==="demo" || hq.get("ai")==="demo";
-}
-
-
-function setupAiFabCollisionGuard(){
-  if (document.body.classList.contains("room-page")) return;
-  const fab = document.querySelector(".ai-fab");
-  if (!fab) return;
-  const TEXT_SEL = "p, h1, h2, h3, h4, h5, h6, li, label, figcaption, dt, dd, .meta, .price, .lead, .nearby-lead, .hero-kicker, .hero-phrase, .badge-vacant, .place-meta, .place-chip, .place-maps, .section-head p, .page-hero p, footer p, footer a, .faq summary, .faq p, .crumbs, .chip, .btn, .hero-actions a, .vis-cap, .hood-illo";
-  const mq = window.matchMedia("(max-width: 400px)");
-  let ticking = false;
-  function overlaps(a, b){
-    return a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
-  }
-  function update(){
-    ticking = false;
-    if (document.body.classList.contains("match-view") || document.body.classList.contains("room-page")){
-      fab.classList.remove("ai-fab--clear", "ai-fab--measure");
-      return;
-    }
-    if (!mq.matches){
-      fab.classList.remove("ai-fab--clear", "ai-fab--measure");
-      return;
-    }
-    fab.classList.remove("ai-fab--clear");
-    fab.classList.add("ai-fab--measure");
-    const gap = 8;
-    const fr = fab.getBoundingClientRect();
-    const box = { left: fr.left - gap, right: fr.right + gap, top: fr.top - gap, bottom: fr.bottom + gap };
-    let hit = false;
-    const nodes = document.querySelectorAll(TEXT_SEL);
-    for (let i = 0; i < nodes.length; i++){
-      const el = nodes[i];
-      if (fab.contains(el)) continue;
-      const r = el.getBoundingClientRect();
-      if (r.width < 1 || r.height < 1) continue;
-      if (r.bottom < 0 || r.top > window.innerHeight || r.right < 0 || r.left > window.innerWidth) continue;
-      if (overlaps(box, r)){ hit = true; break; }
-    }
-    fab.classList.remove("ai-fab--measure");
-    fab.classList.toggle("ai-fab--clear", !hit);
-  }
-  function requestUpdate(){
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(update);
-  }
-  window.__movecondoFabGuard = requestUpdate;
-  window.addEventListener("scroll", requestUpdate, { passive: true, capture: true });
-  window.addEventListener("resize", requestUpdate);
-  window.addEventListener("hashchange", () => setTimeout(requestUpdate, 50));
-  if (mq.addEventListener) mq.addEventListener("change", requestUpdate);
-  else if (mq.addListener) mq.addListener(requestUpdate);
-  if (window.visualViewport){
-    visualViewport.addEventListener("resize", requestUpdate);
-    visualViewport.addEventListener("scroll", requestUpdate);
-  }
-  requestUpdate();
-  setTimeout(requestUpdate, 300);
-  setTimeout(requestUpdate, 1000);
-}
 
 window.addEventListener("hashchange", render);
-window.addEventListener("DOMContentLoaded", ()=>{ render(); if (shouldDemoAI()) openAI({demo:true}); setupAiFabCollisionGuard(); });
+window.addEventListener("DOMContentLoaded", ()=>{ render(); });
 document.addEventListener("click", (e) => {
   const clearBtn = e.target.closest("[data-clear-search]");
   if(clearBtn){
@@ -2192,7 +1869,6 @@ document.addEventListener("click", (e) => {
 document.addEventListener("click", (e)=>{
   const listing = e.target.closest("[data-open-listing]");
   if(listing && !e.target.closest(".acts, [data-book]")){
-      closeAI();
       if(listing.tagName==="A") return;
       location.href = roomHref(listing.dataset.openListing);
       return;
@@ -2260,19 +1936,6 @@ document.addEventListener("click", (e)=>{
     document.getElementById("view-results").innerHTML = resultsView();
     return;
   }
-  if(e.target.closest("[data-open='ai']")){
-    openAI();
-    return;
-  }
-  if(e.target.closest("[data-close='ai']")){
-    closeAI();
-    return;
-  }
-  const promptBtn = e.target.closest("[data-ai-prompt]");
-  if(promptBtn){
-    sendAI(promptBtn.dataset.aiPrompt);
-    return;
-  }
   if(e.target.closest("[data-open='line']")){
     const btn = e.target.closest("[data-open='line']");
     const lineId = btn.dataset.listing || null;
@@ -2310,12 +1973,6 @@ document.addEventListener("click", (e)=>{
 });
 
 document.addEventListener("submit", (e)=>{
-  if(e.target.id==="aiForm"){
-    e.preventDefault();
-    const box = document.getElementById("aiText");
-    sendAI(box ? box.value : "");
-    return;
-  }
   if(e.target.id==="matchForm"){
     e.preventDefault();
     const fd = new FormData(e.target);
@@ -2369,7 +2026,6 @@ document.addEventListener("click", (e)=>{
 
 document.addEventListener("keydown", (e)=>{
   if (e.key === "Escape"){
-    if (aiOpen){ closeAI(); return; }
     document.querySelectorAll(".overlay.on").forEach(o => o.classList.remove("on"));
     return;
   }
@@ -2379,7 +2035,7 @@ document.addEventListener("keydown", (e)=>{
     return;
   }
   if (e.key !== "Tab") return;
-  const trap = document.querySelector(".overlay.on .modal") || (aiOpen ? document.getElementById("aiPanel") : null);
+  const trap = document.querySelector(".overlay.on .modal");
   if (!trap) return;
   const els = [...trap.querySelectorAll("button, a, input, select, textarea, [href]")].filter(el => !el.disabled && el.getAttribute("aria-hidden")!=="true");
   if (!els.length) return;

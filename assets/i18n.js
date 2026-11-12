@@ -223,25 +223,10 @@
     "ห้องหันทิศใต้ วิวโล่งฝั่งทองหล่อ–อโศก เฟอร์นิเจอร์ครบ ที่ The Niche Pride Thonglor-Petchaburi มีรถรับ-ส่งไป BTS ทองหล่อและ MRT เพชรบุรี": "South-facing unit with an open view toward Thonglor–Asok, fully furnished, at The Niche Pride Thonglor-Petchaburi, with a shuttle to BTS Thong Lo and MRT Phetchaburi.",
     "ห้องมีห้องนั่งเล่น วิวสวย เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ The Room สุขุมวิท 21 ย่านอโศก มีห้องสมุด สระว่ายน้ำ และฟิตเนส": "Unit with a living room and a nice view, fully furnished and ready to move in, at The Room Sukhumvit 21 in Asok, with a library, swimming pool and gym.",
     "ห้อง 1 Bed Plus มีอ่างอาบน้ำ ห้องนั่งเล่นและพื้นที่รับประทานอาหาร ที่ The Teak Sukhumvit 39 ย่านพร้อมพงษ์ เฟอร์นิเจอร์ครบพร้อมชุดเครื่องนอน": "1 Bed Plus unit with a bathtub, living room and dining area, at The Teak Sukhumvit 39 in Phrom Phong, fully furnished with bedding.",
-    /* AI widget */
-    "ผู้ช่วย AI": "AI assistant", "ผู้ช่วย AI หาคอนโด": "AI condo assistant", "ตัวอย่างการทำงาน —": "Demo only —",
-    "ยังไม่ได้เชื่อม AI จริง": "not connected to a real AI yet",
-    "สวัสดีค่ะ ฉันเป็นผู้ช่วยของ MoveCondo (ย้ายคอนโด) บอกงบ ทำเล หรือจำนวนห้องนอนได้เลยค่ะ จะแนะนำจากประกาศจริงให้ ทัก LINE แล้วบอกรหัสห้องได้เลย": "Hi! I'm the MoveCondo assistant. Tell me your budget, location or number of bedrooms and I'll suggest rooms from real listings. You can also chat on LINE and tell us the room.",
-    "ร้านดังย่านทองหล่อ": "Popular spots in Thonglor", "ใกล้คาเฟ่ย่านอารีย์": "Near cafés in Ari",
-    "เดินทางย่านเจริญนคร": "Getting around Charoen Nakhon", "มีห้องว่างแล้วยัง": "Any rooms available?",
-    "พิมพ์ความต้องการเป็นภาษาพูดได้...": "Describe what you need in your own words...", "ส่ง": "Send",
-    "กำลังหาข้อมูลย่าน...": "Looking up the area...",
     "นัดชมห้อง": "Book a viewing", "รับคำขอนัดชมแล้ว": "Viewing request received", "ทัก LINE เพื่อบอกห้องที่สนใจได้เลยค่ะ": "Chat on LINE to tell us which room you're interested in.",
     "นัดชมผ่าน LINE ได้เลย": "book a viewing via LINE", "ชื่อผู้เข้าชม": "Visitor name", "ใช้ชื่อสมมติได้": "A nickname is fine",
     "วันที่นัด": "Date", "ช่วงเวลา": "Time", "ยืนยันนัดชม": "Confirm viewing", "ยกเลิก": "Cancel", "ดูรายละเอียด": "View details", "นัดชมห้อง": "Book a viewing",
-    "จากประกาศตอนนี้ ห้องเหล่านี้ใกล้กับที่คุณบอกค่ะ ทัก LINE แล้วบอกรหัสห้องได้เลย": "From the current listings, these rooms are closest to what you described. Chat on LINE and tell us the room.",
-    "ยังจับคู่ห้องจากข้อความนี้ไม่ได้ชัดเจนค่ะ บอกงบ ทำเล หรือทัก LINE ได้เลย": "I couldn't match rooms from that message yet. Tell me a budget or location, or chat on LINE.",
-    "สำรวจย่านและร้านดังใกล้สถานีได้จากหน้าย่านค่ะ หรือทัก LINE ได้เลย": "Explore areas and popular spots near stations on the area pages, or chat on LINE.",
-    "รับความต้องการแล้วค่ะ จะแนะนำย่านและร้านดังใกล้สถานีให้": "Got it. I'll suggest areas and popular spots near the station.",
-    "สูงกว่างบเล็กน้อย แต่ยังใกล้เคียง": "A little over budget, but close",
-    "คะแนนความเหมาะสมสูงเมื่อเทียบกับห้องอื่นในตัวอย่าง": "Scores well compared with other rooms",
-    "ใกล้รถไฟฟ้า": "Near the train", "ใกล้คาเฟ่หรือร้านดังในย่าน": "Near cafés or popular spots", "ห้องสตูดิโอ": "Studio",
-    "เลี้ยงสัตว์ได้": ""
+    "ใกล้รถไฟฟ้า": "Near the train"
   };
 
   /* Context-specific overrides: [css selector, thai, english] */
@@ -345,24 +330,7 @@
         (m[3] === "MoveCondo กำลังเพิ่มห้องจริงเร็ว ๆ นี้" ? "MoveCondo is adding real rooms soon." : tr(m[3]));
       return "Explore " + name(m[1]) + (m[2] ? " near " + name(m[2]) : "") + ": popular spots near the station, getting around and local lifestyle — " + tail; }],
     [/^(.+) ย่าน(.+)$/, function (m) { var a = name(m[2]); return TH_RE.test(a) || TH_RE.test(m[1]) ? null : m[1] + ", " + a; }],
-    [/^ย่าน(.+)$/, function (m) { var a = name(m[1]); return TH_RE.test(a) ? null : a; }],
-    /* AI widget replies */
-    [/^(คาเฟ่และร้านดังใกล้สถานี|ร้านดังใกล้สถานีในย่านที่ถาม) เช่น (.+) — ระยะทางเป็นค่าประมาณจากสถานี$/, function (m) {
-      var items = m[2].split(" · ").map(function (it) {
-        var mm = it.match(/^(.+) ย่าน(.+?) \((.+)\)$/);
-        return mm ? mm[1] + ", " + name(mm[2]) + " (" + tr(mm[3]) + ")" : tr(it);
-      });
-      return (m[1] === "คาเฟ่และร้านดังใกล้สถานี" ? "Cafés and popular spots near the station, e.g. " : "Popular spots near the station in that area, e.g. ") +
-        items.join(" · ") + " — distances are estimates from the station"; }],
-    [/^อยู่ในย่าน(.+) ตามที่ขอ$/, function (m) { return "In " + name(m[1]) + ", as requested"; }],
-    [/^ค่าเช่า ([\d,]+) บาท อยู่ในงบ$/, function (m) { return "Rent " + m[1] + " THB, within budget"; }],
-    [/^ใกล้ (.+) \((\d+) นาที\)$/, function (m) { return "Near " + name(m[1]) + " (" + m[2] + " min)"; }],
-    [/^ใกล้ (.+) \((.+) จากสถานี\)$/, function (m) { return "Near " + name(m[1]) + " (" + tr(m[2]) + " from the station)"; }],
-    [/^เป็น(.+)ตามที่ขอ$/, function (m) { return tr(m[1]) + ", as requested"; }],
-    [/^งบไม่เกิน ([\d,]+) บาท$/, function (m) { return "Budget up to " + m[1] + " THB"; }],
-    [/^ทำเล (.+)$/, function (m) { return "Location: " + m[1].split(" หรือ ").map(name).join(" or "); }],
-    [/^เข้าใจว่าต้องการ(.+)$/, function (m) { var p = m[1].split(" · ").map(tr).filter(Boolean); return p.length ? "Got it, you're looking for: " + p.join(" · ") : EXACT["รับความต้องการแล้วค่ะ จะแนะนำย่านและร้านดังใกล้สถานีให้"]; }],
-    [/^จาก (\d+) ตร\.ม\.$/, function (m) { return "From " + m[1] + " sq.m."; }]
+    [/^ย่าน(.+)$/, function (m) { var a = name(m[1]); return TH_RE.test(a) ? null : a; }]
   ];
 
   function creditNames(s) {
@@ -415,9 +383,8 @@
     if (!v || !TH_RE.test(v)) return;
     var el = n.parentElement;
     if (skipNode(el)) return;
-    var userMsg = el.closest && el.closest(".ai-msg.user");
     var core = v.replace(/\s+/g, " ").trim();
-    var t = userMsg ? (EXACT[core] != null ? EXACT[core] : core) : tr(core, el);
+    var t = tr(core, el);
     if (t === core) return;
     var lead = /^\s/.test(v) ? " " : "", trail = /\s$/.test(v) ? " " : "";
     n.nodeValue = t === "" ? "" : lead + t + trail;

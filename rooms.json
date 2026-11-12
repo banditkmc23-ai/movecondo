@@ -1,0 +1,2824 @@
+{
+  "name": "MoveCondo (ย้ายคอนโด)",
+  "description": {
+    "th": "คอนโดให้เช่าในกรุงเทพฯ ใกล้รถไฟฟ้า ห้องจริงพร้อมรูป ทัก LINE เพื่อนัดชมห้อง",
+    "en": "Condos for rent in Bangkok near BTS/MRT. Real listings with photos; contact via LINE to book a viewing."
+  },
+  "home": "https://banditkmc23-ai.github.io/movecondo/",
+  "home_en": "https://banditkmc23-ai.github.io/movecondo/?lang=en",
+  "updated": "2026-11-12",
+  "currency": "THB",
+  "contact": {
+    "line": "https://line.me/R/ti/p/%40576yhgtz"
+  },
+  "llms_txt": "https://banditkmc23-ai.github.io/movecondo/llms.txt",
+  "sitemap": "https://banditkmc23-ai.github.io/movecondo/sitemap.xml",
+  "areas": [
+    {
+      "slug": "ari",
+      "th": "อารีย์",
+      "en": "Ari",
+      "url": "https://banditkmc23-ai.github.io/movecondo/areas/ari/",
+      "rooms": 0
+    },
+    {
+      "slug": "asoke",
+      "th": "อโศก",
+      "en": "Asok",
+      "url": "https://banditkmc23-ai.github.io/movecondo/areas/asoke/",
+      "rooms": 1
+    },
+    {
+      "slug": "bangna",
+      "th": "บางนา",
+      "en": "Bang Na",
+      "url": "https://banditkmc23-ai.github.io/movecondo/areas/bangna/",
+      "rooms": 0
+    },
+    {
+      "slug": "charoennakhon",
+      "th": "เจริญนคร",
+      "en": "Charoen Nakhon",
+      "url": "https://banditkmc23-ai.github.io/movecondo/areas/charoennakhon/",
+      "rooms": 0
+    },
+    {
+      "slug": "ekkamai",
+      "th": "เอกมัย",
+      "en": "Ekkamai",
+      "url": "https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/",
+      "rooms": 3
+    },
+    {
+      "slug": "on-nut",
+      "th": "อ่อนนุช",
+      "en": "On Nut",
+      "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/",
+      "rooms": 9
+    },
+    {
+      "slug": "phrakhanong",
+      "th": "พระโขนง",
+      "en": "Phra Khanong",
+      "url": "https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/",
+      "rooms": 3
+    },
+    {
+      "slug": "phrom-phong",
+      "th": "พร้อมพงษ์",
+      "en": "Phrom Phong",
+      "url": "https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/",
+      "rooms": 1
+    },
+    {
+      "slug": "rama-9",
+      "th": "พระราม 9",
+      "en": "Rama 9",
+      "url": "https://banditkmc23-ai.github.io/movecondo/areas/rama-9/",
+      "rooms": 0
+    },
+    {
+      "slug": "thonglor",
+      "th": "ทองหล่อ",
+      "en": "Thonglor",
+      "url": "https://banditkmc23-ai.github.io/movecondo/areas/thonglor/",
+      "rooms": 4
+    }
+  ],
+  "rooms": [
+    {
+      "id": "MC-001",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-001/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-001/?lang=en",
+      "project": "Aspire Onnut Station",
+      "area": {
+        "th": "อ่อนนุช",
+        "en": "On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 34,
+      "floor": {
+        "th": "ชั้น 1–5",
+        "en": "Floors 1–5"
+      },
+      "rent_thb_per_month": 22000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "BTS อ่อนนุช",
+        "en": "BTS On Nut"
+      },
+      "walk_minutes_to_station": 2,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.707512,
+        "lng": 100.5991837,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องมุมเฟอร์นิเจอร์บิลต์อิน โทนน้ำตาลอุ่นและครีม ลมผ่านสบายตลอดวัน ที่ Aspire Onnut Station ย่านอ่อนนุช ใกล้ Lotus's On Nut",
+        "en": "Corner unit with built-in furniture in warm brown and cream tones and a pleasant breeze all day, at Aspire Onnut Station in On Nut, near Lotus's On Nut."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "ห้องมุม",
+              "en": "Corner unit"
+            },
+            {
+              "th": "โทนน้ำตาลอุ่นและครีม",
+              "en": "Warm brown and cream tones"
+            },
+            {
+              "th": "ลมผ่านสบายตลอดวัน",
+              "en": "Pleasant breeze all day"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์บิลต์อิน",
+              "en": "Built-in furniture"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "การเดินทางและสถานที่ใกล้",
+            "en": "Getting around & nearby"
+          },
+          "items": [
+            {
+              "th": "ใกล้ Lotus's On Nut",
+              "en": "Near Lotus's On Nut"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-001/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-001/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-001/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-001/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-001/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-001/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-001/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-001/8.webp"
+      ],
+      "last_verified": "2026-11-11",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-002",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-002/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-002/?lang=en",
+      "project": "Bangkok Feliz Sukhumvit 69-2",
+      "area": {
+        "th": "พระโขนง",
+        "en": "Phra Khanong",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 34,
+      "floor": {
+        "th": "ชั้น 6–10",
+        "en": "Floors 6–10"
+      },
+      "rent_thb_per_month": 13500,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS พระโขนง",
+        "en": "BTS Phra Khanong"
+      },
+      "walk_minutes_to_station": 1,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7159073,
+        "lng": 100.5918298,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องหันทิศเหนือ วิวเปิดโล่งไม่มีตึกบัง เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ ที่ Bangkok Feliz สุขุมวิท 69 ย่านพระโขนง",
+        "en": "North-facing unit with an open, unobstructed view, fully furnished with appliances, at Bangkok Feliz Sukhumvit 69 in Phra Khanong."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "หันทิศเหนือ",
+              "en": "North-facing"
+            },
+            {
+              "th": "วิวเปิดโล่ง ไม่มีตึกบัง",
+              "en": "Open view, no buildings in the way"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ",
+              "en": "Fully furnished with appliances"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-002/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-002/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-002/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-002/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-002/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-002/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-002/7.webp"
+      ],
+      "last_verified": "2026-11-07",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-003",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-003/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-003/?lang=en",
+      "project": "Blocs 77",
+      "area": {
+        "th": "อ่อนนุช",
+        "en": "On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 40,
+      "floor": {
+        "th": "ชั้น 11–15",
+        "en": "Floors 11–15"
+      },
+      "rent_thb_per_month": 18000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS อ่อนนุช",
+        "en": "BTS On Nut"
+      },
+      "walk_minutes_to_station": 5,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7106321,
+        "lng": 100.6015501,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องหันทิศใต้ วิวคลองพระโขนง ที่ Blocs 77 สุขุมวิท 77 ย่านอ่อนนุช ใกล้ T77 Community และแหล่งช้อปปิ้ง",
+        "en": "South-facing unit with a Phra Khanong Canal view, at Blocs 77 Sukhumvit 77 in On Nut, near T77 Community and shopping."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "หันทิศใต้",
+              "en": "South-facing"
+            },
+            {
+              "th": "วิวคลองพระโขนง",
+              "en": "Phra Khanong Canal view"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "การเดินทางและสถานที่ใกล้",
+            "en": "Getting around & nearby"
+          },
+          "items": [
+            {
+              "th": "ใกล้ T77 Community",
+              "en": "Near T77 Community"
+            },
+            {
+              "th": "ใกล้ Big C อ่อนนุช",
+              "en": "Near Big C On Nut"
+            },
+            {
+              "th": "ใกล้ Lotus's อ่อนนุช",
+              "en": "Near Lotus's On Nut"
+            },
+            {
+              "th": "ใกล้ Habito Mall",
+              "en": "Near Habito Mall"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-003/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-003/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-003/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-003/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-003/5.webp"
+      ],
+      "last_verified": "2026-11-08",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-004",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-004/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-004/?lang=en",
+      "project": "Ceil By Sansiri",
+      "area": {
+        "th": "เอกมัย",
+        "en": "Ekkamai",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 46,
+      "floor": {
+        "th": "ชั้น 6–10",
+        "en": "Floors 6–10"
+      },
+      "rent_thb_per_month": 25000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "BTS เอกมัย",
+        "en": "BTS Ekkamai"
+      },
+      "walk_minutes_to_station": 16,
+      "shuttle_to_station": true,
+      "building_location": {
+        "lat": 13.7305566,
+        "lng": 100.5877946,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องมุมวิว 270 องศา เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ Ceil By Sansiri เอกมัยซอย 12 มีรถรับ-ส่งฟรีไป BTS เอกมัย",
+        "en": "Corner unit with a 270-degree view, fully furnished and ready to move in, at Ceil By Sansiri, Ekkamai Soi 12, with a free shuttle to BTS Ekkamai."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "ห้องมุม",
+              "en": "Corner unit"
+            },
+            {
+              "th": "วิว 270 องศา",
+              "en": "270-degree view"
+            },
+            {
+              "th": "มีห้องนั่งเล่น",
+              "en": "Living room"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ",
+              "en": "Fully furnished with appliances"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "สระว่ายน้ำ",
+              "en": "Swimming pool"
+            },
+            {
+              "th": "ฟิตเนส",
+              "en": "Gym"
+            },
+            {
+              "th": "สวนหย่อม",
+              "en": "Garden"
+            },
+            {
+              "th": "ที่จอดรถ 1 คัน",
+              "en": "1 parking space"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "การเดินทางและสถานที่ใกล้",
+            "en": "Getting around & nearby"
+          },
+          "items": [
+            {
+              "th": "รถรับ-ส่งฟรีไป BTS เอกมัย",
+              "en": "Free shuttle to BTS Ekkamai"
+            },
+            {
+              "th": "ใกล้ Donki Mall ทองหล่อ",
+              "en": "Near Donki Mall Thonglor"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-004/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-004/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-004/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-004/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-004/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-004/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-004/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-004/8.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-004/9.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-004/10.webp"
+      ],
+      "last_verified": "2026-11-10",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-005",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-005/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-005/?lang=en",
+      "project": "Chapter Thonglor 25",
+      "area": {
+        "th": "ทองหล่อ",
+        "en": "Thonglor",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/thonglor/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 35,
+      "floor": {
+        "th": "ชั้น 8",
+        "en": "Floor 8"
+      },
+      "rent_thb_per_month": 22000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "BTS พร้อมพงษ์",
+        "en": "BTS Phrom Phong"
+      },
+      "walk_minutes_to_station": 26,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7428221,
+        "lng": 100.5837746,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องเฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ พร้อมเข้าอยู่ ที่ Chapter Thonglor 25 ย่านทองหล่อ มีสระว่ายน้ำและฟิตเนส",
+        "en": "Fully furnished unit with appliances, ready to move in, at Chapter Thonglor 25 in Thonglor, with a swimming pool and gym."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "มีห้องนั่งเล่น",
+              "en": "Living room"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ",
+              "en": "Fully furnished with appliances"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "สระว่ายน้ำ",
+              "en": "Swimming pool"
+            },
+            {
+              "th": "ฟิตเนส",
+              "en": "Gym"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-005/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-005/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-005/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-005/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-005/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-005/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-005/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-005/8.webp"
+      ],
+      "last_verified": "2026-11-08",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-006",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-006/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-006/?lang=en",
+      "project": "IDEO Mobi Sukhumvit 81",
+      "area": {
+        "th": "อ่อนนุช",
+        "en": "On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
+      },
+      "type": {
+        "th": "2 ห้องนอน",
+        "en": "2 bedrooms"
+      },
+      "bedrooms": 2,
+      "size_sqm": 46,
+      "floor": {
+        "th": "ชั้น 16–20",
+        "en": "Floors 16–20"
+      },
+      "rent_thb_per_month": 24000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "BTS อ่อนนุช",
+        "en": "BTS On Nut"
+      },
+      "walk_minutes_to_station": 2,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7047391,
+        "lng": 100.6022481,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องมุมเฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ IDEO Mobi Sukhumvit 81 ย่านอ่อนนุช",
+        "en": "Fully furnished corner unit, ready to move in, at IDEO Mobi Sukhumvit 81 in On Nut."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "ห้องมุม",
+              "en": "Corner unit"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์ครบ",
+              "en": "Fully furnished"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-006/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-006/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-006/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-006/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-006/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-006/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-006/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-006/8.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-006/9.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-006/10.webp"
+      ],
+      "last_verified": "2026-11-07",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-007",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-007/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-007/?lang=en",
+      "project": "Kawa Haus",
+      "area": {
+        "th": "อ่อนนุช",
+        "en": "On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 33,
+      "floor": {
+        "th": "ชั้น 1–5",
+        "en": "Floors 1–5"
+      },
+      "rent_thb_per_month": 19000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "BTS อ่อนนุช",
+        "en": "BTS On Nut"
+      },
+      "walk_minutes_to_station": 14,
+      "shuttle_to_station": true,
+      "building_location": {
+        "lat": 13.7150067,
+        "lng": 100.6052636,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องเฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ Kawa Haus ย่านอ่อนนุช มีรถรับ-ส่งใน T77 และไป BTS อ่อนนุช ใกล้ Habito Mall และ Bangkok Prep",
+        "en": "Fully furnished unit, ready to move in, at Kawa Haus in On Nut, with a shuttle within T77 and to BTS On Nut, near Habito Mall and Bangkok Prep."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ",
+              "en": "Fully furnished with appliances"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "ฟิตเนส",
+              "en": "Gym"
+            },
+            {
+              "th": "สระว่ายน้ำ",
+              "en": "Swimming pool"
+            },
+            {
+              "th": "บ่อแช่น้ำอุ่น–เย็น",
+              "en": "Hot and cold plunge pools"
+            },
+            {
+              "th": "Co-working Space",
+              "en": "Co-working Space"
+            },
+            {
+              "th": "Co-Kitchen",
+              "en": "Co-Kitchen"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "การเดินทางและสถานที่ใกล้",
+            "en": "Getting around & nearby"
+          },
+          "items": [
+            {
+              "th": "รถรับ-ส่งใน T77 Sansiri Campus และไป BTS อ่อนนุช",
+              "en": "Shuttle within T77 Sansiri Campus and to BTS On Nut"
+            },
+            {
+              "th": "ใกล้ Habito Mall",
+              "en": "Near Habito Mall"
+            },
+            {
+              "th": "ใกล้ Bangkok Prep",
+              "en": "Near Bangkok Prep"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-007/1.webp"
+      ],
+      "last_verified": "2026-11-10",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-008",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-008/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-008/?lang=en",
+      "project": "Kawa Haus",
+      "area": {
+        "th": "อ่อนนุช",
+        "en": "On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 35,
+      "floor": {
+        "th": "ชั้น 5",
+        "en": "Floor 5"
+      },
+      "rent_thb_per_month": 20000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "BTS อ่อนนุช",
+        "en": "BTS On Nut"
+      },
+      "walk_minutes_to_station": 14,
+      "shuttle_to_station": true,
+      "building_location": {
+        "lat": 13.7150067,
+        "lng": 100.6052636,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องเฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ Kawa Haus ย่านอ่อนนุช มีรถรับ-ส่งใน T77 และไป BTS อ่อนนุช ใกล้ Habito Mall และ Bangkok Prep",
+        "en": "Fully furnished unit, ready to move in, at Kawa Haus in On Nut, with a shuttle within T77 and to BTS On Nut, near Habito Mall and Bangkok Prep."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ",
+              "en": "Fully furnished with appliances"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "ฟิตเนส",
+              "en": "Gym"
+            },
+            {
+              "th": "สระว่ายน้ำ",
+              "en": "Swimming pool"
+            },
+            {
+              "th": "บ่อแช่น้ำอุ่น–เย็น",
+              "en": "Hot and cold plunge pools"
+            },
+            {
+              "th": "Co-working Space",
+              "en": "Co-working Space"
+            },
+            {
+              "th": "Co-Kitchen",
+              "en": "Co-Kitchen"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "การเดินทางและสถานที่ใกล้",
+            "en": "Getting around & nearby"
+          },
+          "items": [
+            {
+              "th": "รถรับ-ส่งใน T77 และไป BTS อ่อนนุช",
+              "en": "Shuttle within T77 and to BTS On Nut"
+            },
+            {
+              "th": "ใกล้ Habito Mall",
+              "en": "Near Habito Mall"
+            },
+            {
+              "th": "ใกล้ Bangkok Prep",
+              "en": "Near Bangkok Prep"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-008/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-008/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-008/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-008/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-008/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-008/6.webp"
+      ],
+      "last_verified": "2026-11-10",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-009",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-009/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-009/?lang=en",
+      "project": "Kawa Haus",
+      "area": {
+        "th": "อ่อนนุช",
+        "en": "On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 38,
+      "floor": {
+        "th": "ชั้น 6",
+        "en": "Floor 6"
+      },
+      "rent_thb_per_month": 23000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS อ่อนนุช",
+        "en": "BTS On Nut"
+      },
+      "walk_minutes_to_station": 14,
+      "shuttle_to_station": true,
+      "building_location": {
+        "lat": 13.7150067,
+        "lng": 100.6052636,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องมุมวิวสระและคลอง เฟอร์นิเจอร์ครบ ที่ Kawa Haus ย่านอ่อนนุช มีรถรับ-ส่ง",
+        "en": "Fully furnished corner unit with pool and canal views, at Kawa Haus in On Nut, with a shuttle service."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "ห้องมุม",
+              "en": "Corner unit"
+            },
+            {
+              "th": "วิวสระและคลอง",
+              "en": "Pool and canal view"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "ตกแต่งและเฟอร์นิเจอร์ครบ",
+              "en": "Fully decorated and furnished"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "การเดินทางและสถานที่ใกล้",
+            "en": "Getting around & nearby"
+          },
+          "items": [
+            {
+              "th": "มีรถรับ-ส่ง",
+              "en": "Shuttle service"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/8.webp"
+      ],
+      "last_verified": "2026-11-12",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-010",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-010/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-010/?lang=en",
+      "project": "Life Sukhumvit 48",
+      "area": {
+        "th": "พระโขนง",
+        "en": "Phra Khanong",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 30.5,
+      "floor": {
+        "th": "ชั้น 6–10",
+        "en": "Floors 6–10"
+      },
+      "rent_thb_per_month": 16000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "BTS พระโขนง",
+        "en": "BTS Phra Khanong"
+      },
+      "walk_minutes_to_station": 6,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7111348,
+        "lng": 100.5945596,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องเฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ พร้อมที่จอดรถ 1 คัน ที่ Life Sukhumvit 48 ย่านพระโขนง",
+        "en": "Fully furnished unit with appliances and 1 parking space, at Life Sukhumvit 48 in Phra Khanong."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ",
+              "en": "Fully furnished with appliances"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "ที่จอดรถ 1 คัน",
+              "en": "1 parking space"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-010/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-010/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-010/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-010/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-010/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-010/6.webp"
+      ],
+      "last_verified": "2026-11-07",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-011",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-011/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-011/?lang=en",
+      "project": "Mori Haus",
+      "area": {
+        "th": "อ่อนนุช",
+        "en": "On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 47,
+      "floor": {
+        "th": "ชั้น 1–5",
+        "en": "Floors 1–5"
+      },
+      "rent_thb_per_month": 28000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "BTS อ่อนนุช",
+        "en": "BTS On Nut"
+      },
+      "walk_minutes_to_station": 14,
+      "shuttle_to_station": true,
+      "building_location": {
+        "lat": 13.7152917,
+        "lng": 100.6029639,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องมีอ่างอาบน้ำ วิวสระว่ายน้ำ ที่ Mori Haus ใน T77 Community ย่านอ่อนนุช มีรถรับ-ส่งและรถกอล์ฟฟรี ใกล้ Habito Mall และ Bangkok Prep",
+        "en": "Unit with a bathtub and a pool view, at Mori Haus in T77 Community, On Nut, with a free shuttle and golf cart, near Habito Mall and Bangkok Prep."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "อ่างอาบน้ำ",
+              "en": "Bathtub"
+            },
+            {
+              "th": "วิวสระว่ายน้ำ",
+              "en": "Pool view"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ",
+              "en": "Fully furnished with appliances"
+            },
+            {
+              "th": "เตียงนอนนุ่ม",
+              "en": "Comfortable bed"
+            },
+            {
+              "th": "โทรทัศน์",
+              "en": "TV"
+            },
+            {
+              "th": "เครื่องซักผ้า",
+              "en": "Washing machine"
+            },
+            {
+              "th": "ตู้เย็น / Freezer",
+              "en": "Fridge / freezer"
+            },
+            {
+              "th": "ไมโครเวฟ",
+              "en": "Microwave"
+            },
+            {
+              "th": "กลอนดิจิทัล",
+              "en": "Digital door lock"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "สระว่ายน้ำกลางแจ้ง",
+              "en": "Outdoor swimming pool"
+            },
+            {
+              "th": "ฟิตเนส",
+              "en": "Gym"
+            },
+            {
+              "th": "สวนและพื้นที่สีเขียว",
+              "en": "Garden and green space"
+            },
+            {
+              "th": "ระบบคีย์การ์ด",
+              "en": "Key-card access"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "การเดินทางและสถานที่ใกล้",
+            "en": "Getting around & nearby"
+          },
+          "items": [
+            {
+              "th": "รถรับ-ส่งและรถกอล์ฟฟรี",
+              "en": "Free shuttle and golf cart"
+            },
+            {
+              "th": "ใกล้ T77 Community",
+              "en": "Near T77 Community"
+            },
+            {
+              "th": "ใกล้ Habito Mall",
+              "en": "Near Habito Mall"
+            },
+            {
+              "th": "300 ม. ถึง Big C และตลาดอาหาร",
+              "en": "300 m to Big C and a food market"
+            },
+            {
+              "th": "ตรงข้าม Bangkok Prep International School",
+              "en": "Opposite Bangkok Prep International School"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-011/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-011/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-011/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-011/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-011/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-011/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-011/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-011/8.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-011/9.webp"
+      ],
+      "last_verified": "2026-11-10",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-012",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-012/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-012/?lang=en",
+      "project": "Nia By Sansiri",
+      "area": {
+        "th": "อ่อนนุช",
+        "en": "On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
+      },
+      "type": {
+        "th": "2 ห้องนอน",
+        "en": "2 bedrooms"
+      },
+      "bedrooms": 2,
+      "size_sqm": 48,
+      "floor": {
+        "th": "ชั้น 11–15",
+        "en": "Floors 11–15"
+      },
+      "rent_thb_per_month": 25000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "BTS อ่อนนุช",
+        "en": "BTS On Nut"
+      },
+      "walk_minutes_to_station": 13,
+      "shuttle_to_station": true,
+      "building_location": {
+        "lat": 13.7146889,
+        "lng": 100.5998564,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องมุม เตียง 5 ฟุตทั้งสองห้อง เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ Nia By Sansiri สุขุมวิท 71 ย่านอ่อนนุช",
+        "en": "Corner unit with 5-ft beds in both bedrooms, fully furnished and ready to move in, at Nia By Sansiri Sukhumvit 71 in On Nut."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "ห้องมุม",
+              "en": "Corner unit"
+            },
+            {
+              "th": "เตียงขนาด 5 ฟุตทั้ง 2 ห้อง",
+              "en": "5-ft beds in both bedrooms"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ",
+              "en": "Fully furnished with appliances"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "สระว่ายน้ำ",
+              "en": "Swimming pool"
+            },
+            {
+              "th": "ฟิตเนส",
+              "en": "Gym"
+            },
+            {
+              "th": "Co-working Space",
+              "en": "Co-working Space"
+            },
+            {
+              "th": "สวนบนดาดฟ้า",
+              "en": "Rooftop garden"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "การเดินทางและสถานที่ใกล้",
+            "en": "Getting around & nearby"
+          },
+          "items": [
+            {
+              "th": "ใกล้ Habito Mall",
+              "en": "Near Habito Mall"
+            },
+            {
+              "th": "ใกล้ Bangkok Prep International School",
+              "en": "Near Bangkok Prep International School"
+            },
+            {
+              "th": "ใกล้ทางด่วนฉลองรัช",
+              "en": "Near the Chalong Rat Expressway"
+            },
+            {
+              "th": "ใกล้ BTS พระโขนง",
+              "en": "Near BTS Phra Khanong"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-012/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-012/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-012/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-012/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-012/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-012/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-012/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-012/8.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-012/9.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-012/10.webp"
+      ],
+      "last_verified": "2026-11-07",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-013",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-013/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-013/?lang=en",
+      "project": "Noble Ora",
+      "area": {
+        "th": "ทองหล่อ",
+        "en": "Thonglor",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/thonglor/"
+      },
+      "type": {
+        "th": "2 ห้องนอน",
+        "en": "2 bedrooms"
+      },
+      "bedrooms": 2,
+      "size_sqm": 115,
+      "floor": {
+        "th": "ชั้น 11",
+        "en": "Floor 11"
+      },
+      "rent_thb_per_month": 55000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": null,
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "BTS ทองหล่อ",
+        "en": "BTS Thong Lo"
+      },
+      "walk_minutes_to_station": 19,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7362598,
+        "lng": 100.5845094,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องกว้าง 2 ห้องน้ำ มีอ่างอาบน้ำ เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ Noble Ora ย่านทองหล่อ",
+        "en": "Spacious unit with 2 bathrooms and a bathtub, fully furnished and ready to move in, at Noble Ora in Thonglor."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "2 ห้องน้ำ",
+              "en": "2 bathrooms"
+            },
+            {
+              "th": "อ่างอาบน้ำ",
+              "en": "Bathtub"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์ครบ",
+              "en": "Fully furnished"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "สระว่ายน้ำ",
+              "en": "Swimming pool"
+            },
+            {
+              "th": "ฟิตเนส",
+              "en": "Gym"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-013/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-013/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-013/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-013/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-013/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-013/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-013/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-013/8.webp"
+      ],
+      "last_verified": "2026-11-08",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-014",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-014/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-014/?lang=en",
+      "project": "Oka Haus",
+      "area": {
+        "th": "ทองหล่อ",
+        "en": "Thonglor",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/thonglor/"
+      },
+      "type": {
+        "th": "2 ห้องนอน",
+        "en": "2 bedrooms"
+      },
+      "bedrooms": 2,
+      "size_sqm": 41,
+      "floor": {
+        "th": "ชั้น 31–35",
+        "en": "Floors 31–35"
+      },
+      "rent_thb_per_month": 29000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "BTS ทองหล่อ",
+        "en": "BTS Thong Lo"
+      },
+      "walk_minutes_to_station": 18,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7169019,
+        "lng": 100.5746752,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 2 ห้องนอนมีห้องนั่งเล่น เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ Oka Haus ย่านทองหล่อ มีสระว่ายน้ำและฟิตเนส",
+        "en": "2-bedroom unit with a living room, fully furnished and ready to move in, at Oka Haus in Thonglor, with a swimming pool and gym."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "มีห้องนั่งเล่น",
+              "en": "Living room"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ",
+              "en": "Fully furnished with appliances"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "สระว่ายน้ำ",
+              "en": "Swimming pool"
+            },
+            {
+              "th": "ฟิตเนส",
+              "en": "Gym"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-014/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-014/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-014/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-014/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-014/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-014/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-014/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-014/8.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-014/9.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-014/10.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-014/11.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-014/12.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-014/13.webp"
+      ],
+      "last_verified": "2026-11-07",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-015",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-015/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-015/?lang=en",
+      "project": "Rhythm Ekkamai",
+      "area": {
+        "th": "เอกมัย",
+        "en": "Ekkamai",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 30,
+      "floor": {
+        "th": "ชั้น 6–10",
+        "en": "Floors 6–10"
+      },
+      "rent_thb_per_month": 24000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "BTS เอกมัย",
+        "en": "BTS Ekkamai"
+      },
+      "walk_minutes_to_station": 4,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7228134,
+        "lng": 100.5842322,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องมุมหันทิศตะวันออก รับแสงเช้า เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ Rhythm Ekkamai ย่านเอกมัย ใกล้แหล่งไลฟ์สไตล์เอกมัย–ทองหล่อ",
+        "en": "East-facing corner unit with morning light, fully furnished and ready to move in, at Rhythm Ekkamai in Ekkamai, near the Ekkamai–Thonglor lifestyle area."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "ห้องมุม",
+              "en": "Corner unit"
+            },
+            {
+              "th": "หันทิศตะวันออก รับแสงธรรมชาติช่วงเช้า",
+              "en": "East-facing, natural morning light"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ",
+              "en": "Fully furnished with appliances"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "สระว่ายน้ำ",
+              "en": "Swimming pool"
+            },
+            {
+              "th": "ฟิตเนส",
+              "en": "Gym"
+            },
+            {
+              "th": "สวนพักผ่อน",
+              "en": "Relaxation garden"
+            },
+            {
+              "th": "ระบบรักษาความปลอดภัย 24 ชั่วโมง",
+              "en": "24-hour security"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "การเดินทางและสถานที่ใกล้",
+            "en": "Getting around & nearby"
+          },
+          "items": [
+            {
+              "th": "ใกล้แหล่งไลฟ์สไตล์ย่านเอกมัย–ทองหล่อ",
+              "en": "Near the Ekkamai–Thonglor lifestyle area"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-015/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-015/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-015/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-015/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-015/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-015/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-015/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-015/8.webp"
+      ],
+      "last_verified": "2026-11-10",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-016",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-016/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-016/?lang=en",
+      "project": "The Alcove Thonglor 10",
+      "area": {
+        "th": "เอกมัย",
+        "en": "Ekkamai",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 76,
+      "floor": {
+        "th": "ชั้น 16–20",
+        "en": "Floors 16–20"
+      },
+      "rent_thb_per_month": 35000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "BTS เอกมัย",
+        "en": "BTS Ekkamai"
+      },
+      "walk_minutes_to_station": 16,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7312446,
+        "lng": 100.5863832,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องมีห้องนั่งเล่น เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ The Alcove Thonglor 10 ใกล้ย่านเอกมัยและทองหล่อ",
+        "en": "Unit with a living room, fully furnished and ready to move in, at The Alcove Thonglor 10, near Ekkamai and Thonglor."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "มีห้องนั่งเล่น",
+              "en": "Living room"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ",
+              "en": "Fully furnished with appliances"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "สระว่ายน้ำ",
+              "en": "Swimming pool"
+            },
+            {
+              "th": "ฟิตเนส",
+              "en": "Gym"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "การเดินทางและสถานที่ใกล้",
+            "en": "Getting around & nearby"
+          },
+          "items": [
+            {
+              "th": "ใกล้ย่านทองหล่อ",
+              "en": "Near Thonglor"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-016/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-016/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-016/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-016/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-016/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-016/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-016/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-016/8.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-016/9.webp"
+      ],
+      "last_verified": "2026-11-07",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-017",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-017/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-017/?lang=en",
+      "project": "The Base Park West",
+      "area": {
+        "th": "อ่อนนุช",
+        "en": "On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 31,
+      "floor": {
+        "th": "ชั้น 16–20",
+        "en": "Floors 16–20"
+      },
+      "rent_thb_per_month": 16000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "BTS อ่อนนุช",
+        "en": "BTS On Nut"
+      },
+      "walk_minutes_to_station": 10,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7130176,
+        "lng": 100.6001123,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องมุมวิวเมืองและทางด่วน เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ The Base Park West สุขุมวิท 77 ย่านอ่อนนุช",
+        "en": "Corner unit with city and expressway views, fully furnished and ready to move in, at The Base Park West Sukhumvit 77 in On Nut."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "ห้องมุม",
+              "en": "Corner unit"
+            },
+            {
+              "th": "วิวเมืองและทางด่วน",
+              "en": "City and expressway view"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ",
+              "en": "Fully furnished with appliances"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "สระว่ายน้ำ",
+              "en": "Swimming pool"
+            },
+            {
+              "th": "ฟิตเนส",
+              "en": "Gym"
+            },
+            {
+              "th": "สวนส่วนกลาง",
+              "en": "Shared garden"
+            },
+            {
+              "th": "ที่จอดรถ",
+              "en": "Parking"
+            },
+            {
+              "th": "ระบบคีย์การ์ด",
+              "en": "Key-card access"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-017/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-017/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-017/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-017/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-017/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-017/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-017/7.webp"
+      ],
+      "last_verified": "2026-11-07",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-018",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-018/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-018/?lang=en",
+      "project": "The Line Sukhumvit 71",
+      "area": {
+        "th": "พระโขนง",
+        "en": "Phra Khanong",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/"
+      },
+      "type": {
+        "th": "2 ห้องนอน",
+        "en": "2 bedrooms"
+      },
+      "bedrooms": 2,
+      "size_sqm": 61.1,
+      "floor": {
+        "th": "ชั้น 6–10",
+        "en": "Floors 6–10"
+      },
+      "rent_thb_per_month": 35000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "BTS พระโขนง",
+        "en": "BTS Phra Khanong"
+      },
+      "walk_minutes_to_station": 6,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.715418,
+        "lng": 100.5942085,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 2 ห้องน้ำ เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ The Line Sukhumvit 71 ย่านพระโขนง เดินทางต่อเอกมัยและทองหล่อได้สะดวก",
+        "en": "Unit with 2 bathrooms, fully furnished and ready to move in, at The Line Sukhumvit 71 in Phra Khanong, with easy access to Ekkamai and Thonglor."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "2 ห้องน้ำ",
+              "en": "2 bathrooms"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ",
+              "en": "Fully furnished with appliances"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "สระว่ายน้ำ",
+              "en": "Swimming pool"
+            },
+            {
+              "th": "ฟิตเนส",
+              "en": "Gym"
+            },
+            {
+              "th": "Co-working Space",
+              "en": "Co-working Space"
+            },
+            {
+              "th": "สวนพักผ่อน",
+              "en": "Relaxation garden"
+            },
+            {
+              "th": "ระบบรักษาความปลอดภัย 24 ชั่วโมง",
+              "en": "24-hour security"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "การเดินทางและสถานที่ใกล้",
+            "en": "Getting around & nearby"
+          },
+          "items": [
+            {
+              "th": "เชื่อมต่อเอกมัยและทองหล่อ",
+              "en": "Easy access to Ekkamai and Thonglor"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-018/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-018/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-018/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-018/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-018/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-018/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-018/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-018/8.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-018/9.webp"
+      ],
+      "last_verified": "2026-11-08",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-019",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-019/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-019/?lang=en",
+      "project": "The Niche Pride Thonglor-Petchaburi",
+      "area": {
+        "th": "ทองหล่อ",
+        "en": "Thonglor",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/thonglor/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 36,
+      "floor": {
+        "th": "ชั้น 21–25",
+        "en": "Floors 21–25"
+      },
+      "rent_thb_per_month": 16000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_from",
+      "available_from": "2026-11-30",
+      "status": {
+        "th": "ว่าง 30 พ.ย.",
+        "en": "Available 30 Nov"
+      },
+      "move_in": {
+        "th": "ว่าง 30 พ.ย.",
+        "en": "Available 30 Nov"
+      },
+      "nearest_station": {
+        "th": "MRT เพชรบุรี",
+        "en": "MRT Phetchaburi"
+      },
+      "walk_minutes_to_station": 28,
+      "shuttle_to_station": true,
+      "building_location": {
+        "lat": 13.7446969,
+        "lng": 100.5833205,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องหันทิศใต้ วิวโล่งฝั่งทองหล่อ–อโศก เฟอร์นิเจอร์ครบ ที่ The Niche Pride Thonglor-Petchaburi มีรถรับ-ส่งไป BTS ทองหล่อและ MRT เพชรบุรี",
+        "en": "South-facing unit with an open view toward Thonglor–Asok, fully furnished, at The Niche Pride Thonglor-Petchaburi, with a shuttle to BTS Thong Lo and MRT Phetchaburi."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "หันทิศใต้",
+              "en": "South-facing"
+            },
+            {
+              "th": "วิวสูงวิวโล่งฝั่งทองหล่อ–อโศก ไม่มีตึกบัง",
+              "en": "High, open view toward Thonglor–Asok, nothing in the way"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์ครบ",
+              "en": "Fully furnished"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "การเดินทางและสถานที่ใกล้",
+            "en": "Getting around & nearby"
+          },
+          "items": [
+            {
+              "th": "รถรับ-ส่งไป BTS ทองหล่อ และ MRT เพชรบุรี",
+              "en": "Shuttle to BTS Thong Lo and MRT Phetchaburi"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-019/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-019/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-019/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-019/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-019/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-019/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-019/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-019/8.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-019/9.webp"
+      ],
+      "last_verified": "2026-11-08",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-020",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-020/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-020/?lang=en",
+      "project": "The Room Sukhumvit 21",
+      "area": {
+        "th": "อโศก",
+        "en": "Asok",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/asoke/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 53.09,
+      "floor": {
+        "th": "ชั้น 24",
+        "en": "Floor 24"
+      },
+      "rent_thb_per_month": 30000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "MRT เพชรบุรี",
+        "en": "MRT Phetchaburi"
+      },
+      "walk_minutes_to_station": 7,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7438055,
+        "lng": 100.5613178,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องมีห้องนั่งเล่น วิวสวย เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ The Room สุขุมวิท 21 ย่านอโศก มีห้องสมุด สระว่ายน้ำ และฟิตเนส",
+        "en": "Unit with a living room and a nice view, fully furnished and ready to move in, at The Room Sukhumvit 21 in Asok, with a library, swimming pool and gym."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "มีห้องนั่งเล่น",
+              "en": "Living room"
+            },
+            {
+              "th": "วิวสวยสบายตา",
+              "en": "Pleasant view"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ",
+              "en": "Fully furnished with appliances"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "สระว่ายน้ำ",
+              "en": "Swimming pool"
+            },
+            {
+              "th": "ฟิตเนส",
+              "en": "Gym"
+            },
+            {
+              "th": "ห้องสมุด",
+              "en": "Library"
+            },
+            {
+              "th": "สวน",
+              "en": "Park"
+            },
+            {
+              "th": "ที่จอดรถ",
+              "en": "Parking"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-020/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-020/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-020/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-020/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-020/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-020/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-020/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-020/8.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-020/9.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-020/10.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-020/11.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-020/12.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-020/13.webp"
+      ],
+      "last_verified": "2026-11-07",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-021",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-021/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-021/?lang=en",
+      "project": "The Teak Sukhumvit 39",
+      "area": {
+        "th": "พร้อมพงษ์",
+        "en": "Phrom Phong",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 41,
+      "floor": {
+        "th": "ชั้น 8",
+        "en": "Floor 8"
+      },
+      "rent_thb_per_month": 28000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS พร้อมพงษ์",
+        "en": "BTS Phrom Phong"
+      },
+      "walk_minutes_to_station": 18,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7407141,
+        "lng": 100.5734826,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 1 Bed Plus มีอ่างอาบน้ำ ห้องนั่งเล่นและพื้นที่รับประทานอาหาร ที่ The Teak Sukhumvit 39 ย่านพร้อมพงษ์ เฟอร์นิเจอร์ครบพร้อมชุดเครื่องนอน",
+        "en": "1 Bed Plus unit with a bathtub, living room and dining area, at The Teak Sukhumvit 39 in Phrom Phong, fully furnished with bedding."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "1 Bed Plus",
+              "en": "1 Bed Plus"
+            },
+            {
+              "th": "อ่างอาบน้ำ",
+              "en": "Bathtub"
+            },
+            {
+              "th": "ห้องนั่งเล่นและพื้นที่รับประทานอาหาร",
+              "en": "Living and dining area"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์ครบ",
+              "en": "Fully furnished"
+            },
+            {
+              "th": "ชุดเครื่องนอน",
+              "en": "Bedding set"
+            },
+            {
+              "th": "เครื่องใช้ไฟฟ้าครบ",
+              "en": "Full set of appliances"
+            },
+            {
+              "th": "ครัว / pantry พร้อมอุปกรณ์พื้นฐาน",
+              "en": "Kitchen / pantry with basic equipment"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-021/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-021/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-021/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-021/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-021/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-021/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-021/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-021/8.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-021/9.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-021/10.webp"
+      ],
+      "last_verified": "2026-11-08",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    }
+  ]
+}

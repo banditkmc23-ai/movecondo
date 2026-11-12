@@ -77,10 +77,10 @@
     }
     img { max-width: 100%; display: block; }
     button, input, select, textarea { font-family: inherit; font-size: inherit; color: inherit; }
-    button, a, .card, .chip, .ai-chip, .choice, .seg-chip-hero { cursor: pointer; }
+    button, a, .card, .chip, .choice, .seg-chip-hero { cursor: pointer; }
     button { border: 0; background: none; }
     a { color: inherit; text-decoration: none; }
-    button, a, .chip, .choice, .ai-chip, .ai-fab, .seg-chip-hero { touch-action: manipulation; }
+    button, a, .chip, .choice, .seg-chip-hero { touch-action: manipulation; }
     :focus-visible {
       outline: 2px solid var(--color-ring);
       outline-offset: 2px;
@@ -970,107 +970,9 @@
       .feature-groups { gap: 20px; margin-bottom: 24px; }
     }
 
-    /* AI assistant */
-
-    .ai-fab {
-      position: fixed; right: 22px; bottom: 22px; z-index: 70;
-      display: inline-flex; align-items: center; gap: 10px;
-      min-height: 48px; padding: 0 16px 0 10px; border-radius: 999px;
-      background: var(--primary);
-      color: var(--color-on-primary); font-weight: 600; font-size: 14.5px;
-      box-shadow: 0 4px 16px rgba(185, 83, 47, .25);
-    }
-    .ai-fab:hover { background: var(--primary-dark); }
-    .ai-fab .mark { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,.16); display: grid; place-items: center; }
-    .ai-fab .mark svg { width: 16px; height: 16px; }
-
-    body:has(.sticky-cta.show) .ai-fab { bottom: 88px; }
-    body.ai-open .ai-fab { display: none; }
-    .ai-panel {
-      display: none; position: fixed; z-index: 71;
-      right: 22px; bottom: 22px; width: 400px;
-      height: min(680px, calc(100vh - 36px));
-      background: #fff; border: 1px solid var(--color-border); border-radius: 20px;
-      box-shadow: 0 8px 28px rgba(26,23,21,.12);
-      flex-direction: column; overflow: hidden;
-      overscroll-behavior: contain;
-    }
-    body.ai-open .ai-panel { display: flex; }
-    .ai-head {
-      background: var(--color-background);
-      color: var(--ink); padding: 12px 14px 12px 16px;
-      display: flex; align-items: center; gap: 10px; flex: none;
-      border-bottom: 1px solid var(--color-border);
-    }
-    .ai-head .logo { width: 36px; height: 36px; border-radius: 12px; font-size: 18px; box-shadow: none; }
-    .ai-head h2 { font-size: 15.5px; font-weight: 600; line-height: 1.2; }
-    .ai-head p { font-size: 12px; color: var(--muted); font-weight: 400; }
-    .ai-head .x {
-      margin-left: auto; width: var(--touch); height: var(--touch); border-radius: 10px;
-      background: var(--color-surface); color: var(--ink);
-      display: grid; place-items: center;
-    }
-    .ai-head .x svg { width: 20px; height: 20px; }
-    .ai-demo-banner {
-      background: var(--color-surface); color: var(--ink); font-size: 12px; text-align: center;
-      padding: 8px 10px; flex: none; border-bottom: 1px solid var(--color-border);
-    }
-    .ai-demo-banner strong { color: var(--primary); }
-    .ai-log { flex: 1; overflow: auto; padding: 16px 14px 8px; display: flex; flex-direction: column; gap: 10px; background: var(--color-surface); overscroll-behavior: contain; }
-    .ai-msg { max-width: 92%; font-size: 13.5px; line-height: 1.55; }
-    .ai-msg.bot { align-self: flex-start; }
-    .ai-msg.user { align-self: flex-end; }
-    .ai-bubble { padding: 10px 12px; border-radius: 16px; }
-    .ai-msg.bot .ai-bubble { background: #fff; border: 1px solid var(--line); border-bottom-left-radius: 6px; }
-    .ai-msg.user .ai-bubble {
-      background: var(--primary);
-      color: var(--color-on-primary); border-bottom-right-radius: 6px;
-    }
-    .ai-cards { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
-    .ai-mini {
-      text-align: left; width: 100%; background: #fff; border: 1px solid var(--line);
-      border-radius: 16px; padding: 10px 12px; cursor: pointer;
-    }
-    .ai-mini:hover { border-color: #E2B8A4; }
-    .ai-mini .top { display: flex; justify-content: space-between; gap: 8px; align-items: start; }
-    .ai-mini h3 { font-size: 14.5px; font-weight: 600; letter-spacing: -.02em; }
-    .ai-mini .meta { font-size: 12px; color: var(--muted); }
-    .ai-mini .price { font-size: 15px; font-weight: 650; margin-top: 2px; }
-    .ai-mini .why { margin: 6px 0 0; padding-left: 16px; color: var(--muted); font-size: 12px; }
-    .ai-mini .acts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-    .ai-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-    .ai-chip {
-      min-height: var(--touch); padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 500;
-      background: #fff; border: 1px solid var(--color-border-strong); color: var(--ink);
-      display: inline-flex; align-items: center;
-    }
-    .ai-chip:hover { border-color: var(--primary); color: var(--primary-dark); }
-    .ai-input {
-      flex: none; display: flex; gap: 8px; padding: 10px 12px 12px;
-      background: #fff; border-top: 1px solid var(--line);
-    }
-    .ai-input input {
-      flex: 1; min-height: var(--touch); border-radius: 12px; border: 1px solid var(--color-border-strong);
-      background: #fff; padding: 0 12px; outline: none;
-    }
-    .ai-input input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(185,83,47,.16); }
-    .ai-input .send {
-      width: 44px; height: 44px; border-radius: 14px; flex: none;
-      background: var(--primary); color: #fff; font-size: 18px;
-    }
-    @media (max-width: 640px) {
-      .ai-panel {
-        inset: 0; right: 0; bottom: 0; width: 100%; height: 100%;
-        border-radius: 0; border: 0;
-      }
-      .ai-fab { right: 16px; }
-      body:has(.sticky-cta.show) .ai-fab { display: none; }
-    }
 
 
     .overlay { overscroll-behavior: contain; }
-    .ai-input .send { display: grid; place-items: center; }
-    .ai-input .send svg { width: 18px; height: 18px; }
     .back svg { width: 16px; height: 16px; }
     .choice { min-height: var(--touch); }
     .page-hero h1 { font-size: clamp(26px, 3vw, 36px); letter-spacing: -.03em; font-weight: 600; }
@@ -1492,8 +1394,6 @@
         min-height: 44px;
         padding: 0 16px;
       }
-      /* The dock already fills the bottom; keep the AI chip off the thumbs and bar. */
-      .room-page .ai-fab { display: none; }
       .room-page main {
         padding-bottom: calc(108px + env(safe-area-inset-bottom, 0px));
       }
@@ -1501,8 +1401,6 @@
         padding-bottom: 24px;
       }
     }
-    body.match-view .ai-fab,
-    body:has(#view-match.on) .ai-fab { display: none; }
 
 
     /* In-page sections shouldn't hide under the sticky header */
@@ -1510,34 +1408,6 @@
     .page-hero, #listings, #contact, #map, #nearby, #details, #highlights, #rooms {
       scroll-margin-top: calc(var(--header-h) + 12px);
     }
-
-    /* Home / area: compact icon-only AI chip under 400px; never cover text */
-    @media (max-width: 400px) {
-      body:not(.room-page) .ai-fab {
-        width: 44px; min-width: 44px; height: 44px; min-height: 44px;
-        padding: 0; justify-content: center; gap: 0;
-        font-size: 0; line-height: 0;
-        border-radius: 50%;
-        right: 14px;
-        bottom: calc(16px + env(safe-area-inset-bottom, 0px));
-      }
-      body:not(.room-page) .ai-fab .mark { width: 26px; height: 26px; }
-      body:not(.room-page) main {
-        padding-bottom: calc(44px + 16px + 24px + env(safe-area-inset-bottom, 0px));
-      }
-      /* Hidden until JS confirms the resting spot does not cover text */
-      body:not(.room-page) .ai-fab:not(.ai-fab--clear):not(.ai-fab--measure) {
-        visibility: hidden;
-        pointer-events: none;
-        bottom: -120px;
-      }
-      body:not(.room-page) .ai-fab.ai-fab--measure {
-        visibility: hidden;
-        pointer-events: none;
-        bottom: calc(16px + env(safe-area-inset-bottom, 0px));
-      }
-    }
-
 
     /* Full-width related rooms and map below the 2-col details block */
     .section-related { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
