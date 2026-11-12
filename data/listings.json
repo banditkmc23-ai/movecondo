@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-12T23:30:00+07:00",
+  "generated": "2026-11-13T00:04:07+07:00",
   "rooms": [
     {
       "id": "MC-001",
@@ -23,7 +23,7 @@
       "type": "1 ห้องนอน",
       "typeRaw": "1 Bed",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-5",
+      "floorRange": "4",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": "now",
@@ -44,7 +44,8 @@
         "images/rooms/mc-001/7.webp",
         "images/rooms/mc-001/8.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "4"
     },
     {
       "id": "MC-002",
@@ -68,7 +69,7 @@
       "type": "1 ห้องนอน",
       "typeRaw": "1 Bed",
       "beds": "1 ห้องนอน",
-      "floorRange": "6-10",
+      "floorRange": "8",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
@@ -89,7 +90,8 @@
         "images/rooms/mc-002/6.webp",
         "images/rooms/mc-002/7.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "8"
     },
     {
       "id": "MC-003",
@@ -113,7 +115,7 @@
       "type": "1 ห้องนอน",
       "typeRaw": "1 Bed",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-15",
+      "floorRange": "11",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
@@ -135,7 +137,8 @@
         "images/rooms/mc-003/4.webp",
         "images/rooms/mc-003/5.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "11"
     },
     {
       "id": "MC-004",
@@ -159,7 +162,7 @@
       "type": "1 ห้องนอน",
       "typeRaw": "1 Bed",
       "beds": "1 ห้องนอน",
-      "floorRange": "6-10",
+      "floorRange": "9",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": "now",
@@ -188,7 +191,8 @@
         "images/rooms/mc-004/9.webp",
         "images/rooms/mc-004/10.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "9"
     },
     {
       "id": "MC-005",
@@ -212,7 +216,7 @@
       "type": "1 ห้องนอน",
       "typeRaw": "1 Bed",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-5",
+      "floorRange": "4",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": "now",
@@ -234,7 +238,8 @@
         "images/rooms/mc-005/7.webp",
         "images/rooms/mc-005/8.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "4"
     },
     {
       "id": "MC-006",
@@ -258,7 +263,7 @@
       "type": "2 ห้องนอน",
       "typeRaw": "2 Bed",
       "beds": "2 ห้องนอน",
-      "floorRange": "16-20",
+      "floorRange": "16",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": "now",
@@ -282,7 +287,8 @@
         "images/rooms/mc-006/9.webp",
         "images/rooms/mc-006/10.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "16"
     },
     {
       "id": "MC-007",
@@ -306,7 +312,7 @@
       "type": "1 ห้องนอน",
       "typeRaw": "1 Bed",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-5",
+      "floorRange": "3",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": "now",
@@ -325,7 +331,8 @@
       "photos": [
         "images/rooms/mc-007/1.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "3"
     },
     {
       "id": "MC-008",
@@ -349,7 +356,7 @@
       "type": "1 ห้องนอน",
       "typeRaw": "1 Bed",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-5",
+      "floorRange": "5",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": "now",
@@ -373,7 +380,8 @@
         "images/rooms/mc-008/5.webp",
         "images/rooms/mc-008/6.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "5"
     },
     {
       "id": "MC-009",
@@ -397,7 +405,7 @@
       "type": "1 ห้องนอน",
       "typeRaw": "1 Bed",
       "beds": "1 ห้องนอน",
-      "floorRange": "6-10",
+      "floorRange": "6",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
@@ -420,7 +428,8 @@
         "images/rooms/mc-009/7.webp",
         "images/rooms/mc-009/8.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "6"
     },
     {
       "id": "MC-010",
@@ -444,7 +453,7 @@
       "type": "1 ห้องนอน",
       "typeRaw": "1 Bed",
       "beds": "1 ห้องนอน",
-      "floorRange": "6-10",
+      "floorRange": "8",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": "now",
@@ -463,7 +472,8 @@
         "images/rooms/mc-010/5.webp",
         "images/rooms/mc-010/6.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "8"
     },
     {
       "id": "MC-011",
@@ -487,7 +497,7 @@
       "type": "1 ห้องนอน",
       "typeRaw": "1 Bed",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-5",
+      "floorRange": "5",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": "now",
@@ -520,7 +530,8 @@
         "images/rooms/mc-011/8.webp",
         "images/rooms/mc-011/9.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "5"
     },
     {
       "id": "MC-012",
@@ -544,7 +555,7 @@
       "type": "2 ห้องนอน",
       "typeRaw": "2 Bed",
       "beds": "2 ห้องนอน",
-      "floorRange": "11-15",
+      "floorRange": "15",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": "now",
@@ -572,7 +583,8 @@
         "images/rooms/mc-012/9.webp",
         "images/rooms/mc-012/10.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "15"
     },
     {
       "id": "MC-013",
@@ -596,7 +608,7 @@
       "type": "2 ห้องนอน",
       "typeRaw": "2 Bed",
       "beds": "2 ห้องนอน",
-      "floorRange": "11-15",
+      "floorRange": "11",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": "now",
@@ -619,7 +631,8 @@
         "images/rooms/mc-013/7.webp",
         "images/rooms/mc-013/8.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "11"
     },
     {
       "id": "MC-014",
@@ -643,7 +656,7 @@
       "type": "2 ห้องนอน",
       "typeRaw": "2 Bed",
       "beds": "2 ห้องนอน",
-      "floorRange": "31-35",
+      "floorRange": "33",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": "now",
@@ -670,7 +683,8 @@
         "images/rooms/mc-014/12.webp",
         "images/rooms/mc-014/13.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "33"
     },
     {
       "id": "MC-015",
@@ -694,7 +708,7 @@
       "type": "1 ห้องนอน",
       "typeRaw": "1 Bed",
       "beds": "1 ห้องนอน",
-      "floorRange": "6-10",
+      "floorRange": "9",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": "now",
@@ -720,7 +734,8 @@
         "images/rooms/mc-015/7.webp",
         "images/rooms/mc-015/8.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "9"
     },
     {
       "id": "MC-016",
@@ -744,7 +759,7 @@
       "type": "1 ห้องนอน",
       "typeRaw": "1 Bed",
       "beds": "1 ห้องนอน",
-      "floorRange": "16-20",
+      "floorRange": "16",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": "now",
@@ -767,7 +782,8 @@
         "images/rooms/mc-016/8.webp",
         "images/rooms/mc-016/9.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "16"
     },
     {
       "id": "MC-017",
@@ -791,7 +807,7 @@
       "type": "1 ห้องนอน",
       "typeRaw": "1 Bed",
       "beds": "1 ห้องนอน",
-      "floorRange": "16-20",
+      "floorRange": "20",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": "now",
@@ -817,7 +833,8 @@
         "images/rooms/mc-017/6.webp",
         "images/rooms/mc-017/7.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "20"
     },
     {
       "id": "MC-018",
@@ -841,7 +858,7 @@
       "type": "2 ห้องนอน",
       "typeRaw": "2 Bed",
       "beds": "2 ห้องนอน",
-      "floorRange": "6-10",
+      "floorRange": "7",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": "now",
@@ -867,7 +884,8 @@
         "images/rooms/mc-018/8.webp",
         "images/rooms/mc-018/9.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "7"
     },
     {
       "id": "MC-019",
@@ -891,7 +909,7 @@
       "type": "1 ห้องนอน",
       "typeRaw": "1 Bed",
       "beds": "1 ห้องนอน",
-      "floorRange": "21-25",
+      "floorRange": "22",
       "status": "OCCUPIED",
       "statusLabel": "กำลังจะว่าง · ว่าง 29 พ.ย.",
       "available": "2026-11-29",
@@ -915,7 +933,8 @@
         "images/rooms/mc-019/8.webp",
         "images/rooms/mc-019/9.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "22"
     },
     {
       "id": "MC-020",
@@ -939,7 +958,7 @@
       "type": "1 ห้องนอน",
       "typeRaw": "1 Bed",
       "beds": "1 ห้องนอน",
-      "floorRange": "21-25",
+      "floorRange": "24",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": "now",
@@ -969,7 +988,8 @@
         "images/rooms/mc-020/12.webp",
         "images/rooms/mc-020/13.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "24"
     },
     {
       "id": "MC-021",
@@ -993,7 +1013,7 @@
       "type": "1 ห้องนอน",
       "typeRaw": "1 Bed",
       "beds": "1 ห้องนอน",
-      "floorRange": "6-10",
+      "floorRange": "8",
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
@@ -1019,7 +1039,8 @@
         "images/rooms/mc-021/9.webp",
         "images/rooms/mc-021/10.webp"
       ],
-      "unverified": []
+      "unverified": [],
+      "floor": "8"
     },
     {
       "id": "MC-022",
@@ -1040,13 +1061,14 @@
       "sizeLabel": "35.1 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "29",
+      "floorRange": "29",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1062,9 +1084,7 @@
         "images/rooms/mc-022/5.webp",
         "images/rooms/mc-022/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-023",
@@ -1085,13 +1105,14 @@
       "sizeLabel": "54 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "8",
+      "floorRange": "8",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เครื่องใช้ไฟฟ้าครบ"
@@ -1106,9 +1127,7 @@
         "images/rooms/mc-023/5.webp",
         "images/rooms/mc-023/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-024",
@@ -1129,13 +1148,14 @@
       "sizeLabel": "30 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "28",
+      "floorRange": "28",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวเมือง",
         "พร้อมเข้าอยู่",
@@ -1153,9 +1173,7 @@
         "images/rooms/mc-024/5.webp",
         "images/rooms/mc-024/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-025",
@@ -1176,13 +1194,14 @@
       "sizeLabel": "30 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "4",
+      "floorRange": "4",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เฟอร์นิเจอร์ครบ",
@@ -1196,9 +1215,7 @@
         "images/rooms/mc-025/3.webp",
         "images/rooms/mc-025/4.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-026",
@@ -1219,13 +1236,14 @@
       "sizeLabel": "65 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "6",
+      "floorRange": "6",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1240,9 +1258,7 @@
         "images/rooms/mc-026/4.webp",
         "images/rooms/mc-026/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-027",
@@ -1263,13 +1279,14 @@
       "sizeLabel": "31 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "19",
+      "floorRange": "19",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "หันทิศเหนือ",
@@ -1286,9 +1303,7 @@
         "images/rooms/mc-027/5.webp",
         "images/rooms/mc-027/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-028",
@@ -1309,13 +1324,14 @@
       "sizeLabel": "36 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "4",
+      "floorRange": "4",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1330,9 +1346,7 @@
         "images/rooms/mc-028/4.webp",
         "images/rooms/mc-028/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-029",
@@ -1353,13 +1367,14 @@
       "sizeLabel": "48 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "8",
+      "floorRange": "8",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "พร้อมเข้าอยู่",
@@ -1375,9 +1390,7 @@
         "images/rooms/mc-029/4.webp",
         "images/rooms/mc-029/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-030",
@@ -1398,13 +1411,14 @@
       "sizeLabel": "60.4 ตร.ม.",
       "type": "3 ห้องนอน",
       "beds": "3 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "19",
+      "floorRange": "19",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวไม่มีตึกบัง",
         "หันทิศตะวันออก"
@@ -1417,9 +1431,7 @@
         "images/rooms/mc-030/3.webp",
         "images/rooms/mc-030/4.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-031",
@@ -1440,13 +1452,14 @@
       "sizeLabel": "29 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "6",
+      "floorRange": "6",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1461,9 +1474,7 @@
         "images/rooms/mc-031/4.webp",
         "images/rooms/mc-031/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-032",
@@ -1484,13 +1495,14 @@
       "sizeLabel": "30 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "10",
+      "floorRange": "10",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1506,9 +1518,7 @@
         "images/rooms/mc-032/5.webp",
         "images/rooms/mc-032/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-033",
@@ -1529,13 +1539,14 @@
       "sizeLabel": "35 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "12",
+      "floorRange": "12",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1551,9 +1562,7 @@
         "images/rooms/mc-033/5.webp",
         "images/rooms/mc-033/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-034",
@@ -1574,13 +1583,14 @@
       "sizeLabel": "35 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "7",
+      "floorRange": "7",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "วิวสระว่ายน้ำ",
@@ -1598,9 +1608,7 @@
         "images/rooms/mc-034/4.webp",
         "images/rooms/mc-034/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-035",
@@ -1621,13 +1629,14 @@
       "sizeLabel": "30 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "14",
+      "floorRange": "14",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1641,9 +1650,7 @@
         "images/rooms/mc-035/3.webp",
         "images/rooms/mc-035/4.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-036",
@@ -1664,13 +1671,14 @@
       "sizeLabel": "38 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "3",
+      "floorRange": "3",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1686,9 +1694,7 @@
         "images/rooms/mc-036/5.webp",
         "images/rooms/mc-036/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-037",
@@ -1709,13 +1715,14 @@
       "sizeLabel": "38 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "3",
+      "floorRange": "3",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1731,9 +1738,7 @@
         "images/rooms/mc-037/5.webp",
         "images/rooms/mc-037/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-038",
@@ -1754,13 +1759,14 @@
       "sizeLabel": null,
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "4",
+      "floorRange": "4",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1776,9 +1782,7 @@
         "images/rooms/mc-038/5.webp",
         "images/rooms/mc-038/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-039",
@@ -1799,13 +1803,14 @@
       "sizeLabel": "31 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "3",
+      "floorRange": "3",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศตะวันออก",
         "พร้อมเข้าอยู่",
@@ -1820,9 +1825,7 @@
         "images/rooms/mc-039/3.webp",
         "images/rooms/mc-039/4.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-040",
@@ -1843,13 +1846,14 @@
       "sizeLabel": "32.5 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "11",
+      "floorRange": "11",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1862,9 +1866,7 @@
         "images/rooms/mc-040/2.webp",
         "images/rooms/mc-040/3.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-041",
@@ -1885,13 +1887,14 @@
       "sizeLabel": "37 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "6",
+      "floorRange": "6",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เครื่องใช้ไฟฟ้าครบ",
@@ -1909,9 +1912,7 @@
         "images/rooms/mc-041/5.webp",
         "images/rooms/mc-041/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-042",
@@ -1932,13 +1933,14 @@
       "sizeLabel": "27 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "7",
+      "floorRange": "7",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1954,9 +1956,7 @@
         "images/rooms/mc-042/5.webp",
         "images/rooms/mc-042/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-043",
@@ -1977,13 +1977,14 @@
       "sizeLabel": "31 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "9",
+      "floorRange": "9",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1997,9 +1998,7 @@
         "images/rooms/mc-043/3.webp",
         "images/rooms/mc-043/4.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-044",
@@ -2020,13 +2019,14 @@
       "sizeLabel": "33 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "3",
+      "floorRange": "3",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เฟอร์นิเจอร์ครบ",
@@ -2044,9 +2044,7 @@
         "images/rooms/mc-044/5.webp",
         "images/rooms/mc-044/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-045",
@@ -2067,13 +2065,14 @@
       "sizeLabel": "36 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "4",
+      "floorRange": "4",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสระว่ายน้ำ",
         "พร้อมเข้าอยู่",
@@ -2092,9 +2091,7 @@
         "images/rooms/mc-045/5.webp",
         "images/rooms/mc-045/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-046",
@@ -2115,13 +2112,14 @@
       "sizeLabel": "27 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "3",
+      "floorRange": "3",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -2137,9 +2135,7 @@
         "images/rooms/mc-046/5.webp",
         "images/rooms/mc-046/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-047",
@@ -2160,20 +2156,24 @@
       "sizeLabel": "180 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
+      "layout": "2 ห้องนอน 2 ห้องนั่งเล่น",
+      "bathrooms": 4,
+      "livingRooms": 2,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เฟอร์นิเจอร์ครบ",
         "ที่จอดรถ"
       ],
-      "description": "ห้อง 2 ห้องนอน ขนาด 180 ตร.ม. ที่ Townhome Thonglor 19 ย่านทองหล่อ เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่",
-      "descriptionEn": "2-bedroom, 180 sq.m. at Townhome Thonglor 19, Thonglor. Fully furnished. Ready to move in.",
+      "description": "ห้อง 2 ห้องนอน 2 ห้องนั่งเล่น 4 ห้องน้ำ ขนาด 180 ตร.ม. ที่ Townhome Thonglor 19 ย่านทองหล่อ เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่",
+      "descriptionEn": "2 bedrooms, 2 living rooms, 4 bathrooms, 180 sq.m. at Townhome Thonglor 19, Thonglor. Fully furnished. Ready to move in.",
       "photos": [
         "images/rooms/mc-047/1.webp",
         "images/rooms/mc-047/2.webp",
@@ -2205,13 +2205,14 @@
       "sizeLabel": "49 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "12A",
+      "floorRange": "12A",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "พร้อมเข้าอยู่",
@@ -2228,9 +2229,7 @@
         "images/rooms/mc-048/5.webp",
         "images/rooms/mc-048/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-049",
@@ -2251,13 +2250,14 @@
       "sizeLabel": "35 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "9",
+      "floorRange": "9",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 35 ตร.ม. ที่ The President Sukhumvit 81 ย่านอ่อนนุช",
       "descriptionEn": "1-bedroom, 35 sq.m. at The President Sukhumvit 81, On Nut.",
@@ -2267,9 +2267,7 @@
         "images/rooms/mc-049/3.webp",
         "images/rooms/mc-049/4.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-050",
@@ -2290,13 +2288,14 @@
       "sizeLabel": "31 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "22",
+      "floorRange": "22",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศใต้"
       ],
@@ -2310,9 +2309,7 @@
         "images/rooms/mc-050/5.webp",
         "images/rooms/mc-050/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-051",
@@ -2333,13 +2330,14 @@
       "sizeLabel": "33 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "16",
+      "floorRange": "16",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่"
       ],
@@ -2352,9 +2350,7 @@
         "images/rooms/mc-051/4.webp",
         "images/rooms/mc-051/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-052",
@@ -2375,13 +2371,14 @@
       "sizeLabel": "29.2 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "19",
+      "floorRange": "19",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสระว่ายน้ำ",
         "หันทิศเหนือ",
@@ -2398,9 +2395,7 @@
         "images/rooms/mc-052/4.webp",
         "images/rooms/mc-052/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-053",
@@ -2421,13 +2416,14 @@
       "sizeLabel": "98 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "12–13",
+      "floorRange": "12-13",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องดูเพล็กซ์",
         "พร้อมเข้าอยู่",
@@ -2445,9 +2441,7 @@
         "images/rooms/mc-053/5.webp",
         "images/rooms/mc-053/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-054",
@@ -2468,13 +2462,14 @@
       "sizeLabel": "140 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ที่จอดรถ"
       ],
@@ -2511,13 +2506,14 @@
       "sizeLabel": "36 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "32",
+      "floorRange": "32",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 36 ตร.ม. ที่ The Niche Pride Thonglor-Petchaburi ย่านทองหล่อ",
       "descriptionEn": "1-bedroom, 36 sq.m. at The Niche Pride Thonglor-Petchaburi, Thonglor.",
@@ -2529,9 +2525,7 @@
         "images/rooms/mc-055/5.webp",
         "images/rooms/mc-055/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-056",
@@ -2552,13 +2546,14 @@
       "sizeLabel": "35.5 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "16",
+      "floorRange": "16",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวเมือง",
         "พร้อมเข้าอยู่",
@@ -2577,9 +2572,7 @@
         "images/rooms/mc-056/5.webp",
         "images/rooms/mc-056/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-057",
@@ -2600,13 +2593,14 @@
       "sizeLabel": "29 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "30",
+      "floorRange": "30",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -2618,9 +2612,7 @@
         "images/rooms/mc-057/1.webp",
         "images/rooms/mc-057/2.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-058",
@@ -2641,13 +2633,14 @@
       "sizeLabel": "54 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "8",
+      "floorRange": "8",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -2663,9 +2656,7 @@
         "images/rooms/mc-058/5.webp",
         "images/rooms/mc-058/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-059",
@@ -2686,13 +2677,14 @@
       "sizeLabel": "40 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "27",
+      "floorRange": "27",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศใต้",
         "พร้อมเข้าอยู่",
@@ -2710,9 +2702,7 @@
         "images/rooms/mc-059/4.webp",
         "images/rooms/mc-059/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-060",
@@ -2733,13 +2723,14 @@
       "sizeLabel": "45 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "21",
+      "floorRange": "21",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "วิวสวน",
@@ -2758,9 +2749,7 @@
         "images/rooms/mc-060/5.webp",
         "images/rooms/mc-060/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-061",
@@ -2781,13 +2770,14 @@
       "sizeLabel": "32 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "10",
+      "floorRange": "10",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวเมือง",
         "พร้อมเข้าอยู่",
@@ -2804,9 +2794,7 @@
         "images/rooms/mc-061/5.webp",
         "images/rooms/mc-061/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-062",
@@ -2827,13 +2815,14 @@
       "sizeLabel": "32 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "16",
+      "floorRange": "16",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "หันทิศตะวันตก",
@@ -2849,9 +2838,7 @@
         "images/rooms/mc-062/5.webp",
         "images/rooms/mc-062/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-063",
@@ -2872,13 +2859,14 @@
       "sizeLabel": "41 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "8",
+      "floorRange": "8",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -2895,9 +2883,7 @@
         "images/rooms/mc-063/5.webp",
         "images/rooms/mc-063/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-064",
@@ -2918,13 +2904,14 @@
       "sizeLabel": "30 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -2963,13 +2950,14 @@
       "sizeLabel": "38.26 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "12A",
+      "floorRange": "12A",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -2985,9 +2973,7 @@
         "images/rooms/mc-065/5.webp",
         "images/rooms/mc-065/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-066",
@@ -3008,13 +2994,14 @@
       "sizeLabel": "35.25 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "12",
+      "floorRange": "12",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวเมือง",
         "พร้อมเข้าอยู่",
@@ -3032,9 +3019,7 @@
         "images/rooms/mc-066/5.webp",
         "images/rooms/mc-066/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-067",
@@ -3055,13 +3040,14 @@
       "sizeLabel": "41 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "3",
+      "floorRange": "3",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3077,9 +3063,7 @@
         "images/rooms/mc-067/5.webp",
         "images/rooms/mc-067/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-068",
@@ -3100,13 +3084,14 @@
       "sizeLabel": "40 ตร.ม.",
       "type": "ดูเพล็กซ์",
       "beds": "ดูเพล็กซ์",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "25",
+      "floorRange": "25",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องดูเพล็กซ์",
         "วิวเมือง",
@@ -3125,9 +3110,7 @@
         "images/rooms/mc-068/5.webp",
         "images/rooms/mc-068/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-069",
@@ -3148,13 +3131,14 @@
       "sizeLabel": "30 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "32",
+      "floorRange": "32",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เฟอร์นิเจอร์ครบ",
@@ -3173,9 +3157,7 @@
         "images/rooms/mc-069/5.webp",
         "images/rooms/mc-069/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-070",
@@ -3196,13 +3178,14 @@
       "sizeLabel": null,
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "พร้อมเข้าอยู่",
@@ -3239,13 +3222,14 @@
       "sizeLabel": "32 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "7",
+      "floorRange": "7",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3263,9 +3247,7 @@
         "images/rooms/mc-071/5.webp",
         "images/rooms/mc-071/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-072",
@@ -3286,13 +3268,14 @@
       "sizeLabel": "33 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "14",
+      "floorRange": "14",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3308,9 +3291,7 @@
         "images/rooms/mc-072/5.webp",
         "images/rooms/mc-072/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-073",
@@ -3331,13 +3312,14 @@
       "sizeLabel": "46 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "5",
+      "floorRange": "5",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสระว่ายน้ำ",
         "พร้อมเข้าอยู่",
@@ -3355,9 +3337,7 @@
         "images/rooms/mc-073/5.webp",
         "images/rooms/mc-073/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-074",
@@ -3378,13 +3358,14 @@
       "sizeLabel": "30 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวเมือง",
         "หันทิศใต้",
@@ -3426,13 +3407,14 @@
       "sizeLabel": "27.5 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "สระว่ายน้ำ",
         "ฟิตเนส",
@@ -3471,13 +3453,14 @@
       "sizeLabel": "55.19 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "6",
+      "floorRange": "6",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3494,9 +3477,7 @@
         "images/rooms/mc-076/5.webp",
         "images/rooms/mc-076/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-077",
@@ -3517,13 +3498,14 @@
       "sizeLabel": "75 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "9",
+      "floorRange": "9",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวไม่มีตึกบัง",
         "วิวสระว่ายน้ำ",
@@ -3541,9 +3523,7 @@
         "images/rooms/mc-077/4.webp",
         "images/rooms/mc-077/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-078",
@@ -3564,13 +3544,14 @@
       "sizeLabel": "35.31 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "6",
+      "floorRange": "6",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3585,9 +3566,7 @@
         "images/rooms/mc-078/4.webp",
         "images/rooms/mc-078/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-079",
@@ -3608,13 +3587,14 @@
       "sizeLabel": "35 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "25",
+      "floorRange": "25",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสวน",
         "หันทิศเหนือ",
@@ -3632,9 +3612,7 @@
         "images/rooms/mc-079/5.webp",
         "images/rooms/mc-079/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-080",
@@ -3655,13 +3633,14 @@
       "sizeLabel": "25 ตร.ม.",
       "type": "สตูดิโอ",
       "beds": "สตูดิโอ",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3700,13 +3679,14 @@
       "sizeLabel": "57 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "15",
+      "floorRange": "15",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3722,9 +3702,7 @@
         "images/rooms/mc-081/5.webp",
         "images/rooms/mc-081/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-082",
@@ -3745,13 +3723,14 @@
       "sizeLabel": "47 ตร.ม.",
       "type": "1 ห้องนอน (ดูเพล็กซ์)",
       "beds": "1 ห้องนอน (ดูเพล็กซ์)",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "24",
+      "floorRange": "24",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องดูเพล็กซ์",
         "พร้อมเข้าอยู่",
@@ -3768,9 +3747,7 @@
         "images/rooms/mc-082/5.webp",
         "images/rooms/mc-082/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-083",
@@ -3791,13 +3768,14 @@
       "sizeLabel": "33 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "26",
+      "floorRange": "26",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวเมือง",
         "พร้อมเข้าอยู่",
@@ -3814,9 +3792,7 @@
         "images/rooms/mc-083/5.webp",
         "images/rooms/mc-083/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-084",
@@ -3837,13 +3813,14 @@
       "sizeLabel": "33 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "20",
+      "floorRange": "20",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3859,9 +3836,7 @@
         "images/rooms/mc-084/5.webp",
         "images/rooms/mc-084/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-085",
@@ -3882,13 +3857,14 @@
       "sizeLabel": "38.65 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3927,13 +3903,14 @@
       "sizeLabel": "45 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3973,13 +3950,14 @@
       "sizeLabel": "86 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวเมือง",
         "พร้อมเข้าอยู่",
@@ -4020,13 +3998,14 @@
       "sizeLabel": "70 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "28",
+      "floorRange": "28",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวเมือง",
         "พร้อมเข้าอยู่",
@@ -4043,9 +4022,7 @@
         "images/rooms/mc-088/5.webp",
         "images/rooms/mc-088/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-089",
@@ -4066,13 +4043,14 @@
       "sizeLabel": "30 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "11",
+      "floorRange": "11",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -4088,9 +4066,7 @@
         "images/rooms/mc-089/5.webp",
         "images/rooms/mc-089/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-090",
@@ -4111,13 +4087,14 @@
       "sizeLabel": "55 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "17",
+      "floorRange": "17",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -4132,9 +4109,7 @@
         "images/rooms/mc-090/4.webp",
         "images/rooms/mc-090/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-091",
@@ -4155,13 +4130,14 @@
       "sizeLabel": "31.15 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "18",
+      "floorRange": "18",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -4178,9 +4154,7 @@
         "images/rooms/mc-091/5.webp",
         "images/rooms/mc-091/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-092",
@@ -4201,13 +4175,14 @@
       "sizeLabel": "31 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "28",
+      "floorRange": "28",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -4223,9 +4198,7 @@
         "images/rooms/mc-092/5.webp",
         "images/rooms/mc-092/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-093",
@@ -4246,13 +4219,14 @@
       "sizeLabel": "33 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "15",
+      "floorRange": "15",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -4268,9 +4242,7 @@
         "images/rooms/mc-093/5.webp",
         "images/rooms/mc-093/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-094",
@@ -4291,13 +4263,14 @@
       "sizeLabel": "52 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวเมือง"
       ],
@@ -4334,13 +4307,14 @@
       "sizeLabel": "45 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 2 ห้องนอน ขนาด 45 ตร.ม. ที่ Park Origin Thonglor ย่านทองหล่อ",
       "descriptionEn": "2-bedroom, 45 sq.m. at Park Origin Thonglor, Thonglor.",
@@ -4375,13 +4349,14 @@
       "sizeLabel": "83 ตร.ม.",
       "type": "1 ห้องนอน (ดูเพล็กซ์)",
       "beds": "1 ห้องนอน (ดูเพล็กซ์)",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องดูเพล็กซ์",
         "พร้อมเข้าอยู่",
@@ -4421,13 +4396,14 @@
       "sizeLabel": "38.5 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "17",
+      "floorRange": "17",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศตะวันตก",
         "พร้อมเข้าอยู่",
@@ -4444,9 +4420,7 @@
         "images/rooms/mc-097/4.webp",
         "images/rooms/mc-097/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-098",
@@ -4467,13 +4441,14 @@
       "sizeLabel": "42 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "14",
+      "floorRange": "14",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 42 ตร.ม. ที่ Noble Remix Thonglor ย่านทองหล่อ",
       "descriptionEn": "1-bedroom, 42 sq.m. at Noble Remix Thonglor, Thonglor.",
@@ -4485,9 +4460,7 @@
         "images/rooms/mc-098/5.webp",
         "images/rooms/mc-098/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-099",
@@ -4508,13 +4481,14 @@
       "sizeLabel": "39 ตร.ม.",
       "type": null,
       "beds": null,
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "16",
+      "floorRange": "16",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวไม่มีตึกบัง"
       ],
@@ -4528,9 +4502,7 @@
         "images/rooms/mc-099/5.webp",
         "images/rooms/mc-099/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-100",
@@ -4551,13 +4523,14 @@
       "sizeLabel": "29 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "24",
+      "floorRange": "24",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสวน",
         "หันทิศเหนือ"
@@ -4572,9 +4545,7 @@
         "images/rooms/mc-100/5.webp",
         "images/rooms/mc-100/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-101",
@@ -4595,13 +4566,14 @@
       "sizeLabel": "46 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "8",
+      "floorRange": "8",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสระว่ายน้ำ",
         "หันทิศเหนือ",
@@ -4618,9 +4590,7 @@
         "images/rooms/mc-101/5.webp",
         "images/rooms/mc-101/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-102",
@@ -4641,13 +4611,14 @@
       "sizeLabel": "25 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "4",
+      "floorRange": "4",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 25 ตร.ม. ที่ Quintara Mhy'zen Phromphong ย่านพร้อมพงษ์",
       "descriptionEn": "1-bedroom, 25 sq.m. at Quintara Mhy'zen Phromphong, Phrom Phong.",
@@ -4658,9 +4629,7 @@
         "images/rooms/mc-102/4.webp",
         "images/rooms/mc-102/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-103",
@@ -4681,13 +4650,14 @@
       "sizeLabel": "33 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "30",
+      "floorRange": "30",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศเหนือ",
         "อ่างอาบน้ำ",
@@ -4704,9 +4674,7 @@
         "images/rooms/mc-103/5.webp",
         "images/rooms/mc-103/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-104",
@@ -4727,13 +4695,14 @@
       "sizeLabel": "60 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "22",
+      "floorRange": "22",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวไม่มีตึกบัง",
         "อ่างอาบน้ำ"
@@ -4748,9 +4717,7 @@
         "images/rooms/mc-104/5.webp",
         "images/rooms/mc-104/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-105",
@@ -4771,13 +4738,14 @@
       "sizeLabel": "30 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "27",
+      "floorRange": "27",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 30 ตร.ม. ที่ Rhythm Asoke 2 ย่านพระราม 9",
       "descriptionEn": "1-bedroom, 30 sq.m. at Rhythm Asoke 2, Rama 9.",
@@ -4789,9 +4757,7 @@
         "images/rooms/mc-105/5.webp",
         "images/rooms/mc-105/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-106",
@@ -4812,13 +4778,14 @@
       "sizeLabel": "44 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "19",
+      "floorRange": "19",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศตะวันออก",
         "สระว่ายน้ำ",
@@ -4835,9 +4802,7 @@
         "images/rooms/mc-106/5.webp",
         "images/rooms/mc-106/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-107",
@@ -4858,13 +4823,14 @@
       "sizeLabel": "33.72 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "18",
+      "floorRange": "18",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศเหนือ",
         "พร้อมเข้าอยู่"
@@ -4879,9 +4845,7 @@
         "images/rooms/mc-107/5.webp",
         "images/rooms/mc-107/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-108",
@@ -4902,13 +4866,14 @@
       "sizeLabel": "48 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "12",
+      "floorRange": "12",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสระว่ายน้ำ",
         "สระว่ายน้ำ"
@@ -4922,9 +4887,7 @@
         "images/rooms/mc-108/4.webp",
         "images/rooms/mc-108/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-109",
@@ -4945,13 +4908,14 @@
       "sizeLabel": "60 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "อ่างอาบน้ำ",
         "เครื่องซักผ้า",
@@ -4991,13 +4955,14 @@
       "sizeLabel": "45 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "8",
+      "floorRange": "8",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องแบบลอฟต์ 2 ชั้น",
         "วิวเมือง",
@@ -5016,9 +4981,7 @@
         "images/rooms/mc-110/5.webp",
         "images/rooms/mc-110/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-111",
@@ -5039,13 +5002,14 @@
       "sizeLabel": "35 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "12",
+      "floorRange": "12",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 35 ตร.ม. ที่ Rhythm Ekkamai Estate ย่านเอกมัย",
       "descriptionEn": "1-bedroom, 35 sq.m. at Rhythm Ekkamai Estate, Ekkamai.",
@@ -5056,9 +5020,7 @@
         "images/rooms/mc-111/4.webp",
         "images/rooms/mc-111/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-112",
@@ -5079,13 +5041,14 @@
       "sizeLabel": "30 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศใต้"
       ],
@@ -5122,13 +5085,14 @@
       "sizeLabel": "34 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "33",
+      "floorRange": "33",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เฟอร์นิเจอร์ครบ"
       ],
@@ -5139,9 +5103,7 @@
         "images/rooms/mc-113/2.webp",
         "images/rooms/mc-113/3.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-114",
@@ -5162,13 +5124,14 @@
       "sizeLabel": "34 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "17",
+      "floorRange": "17",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศใต้",
         "พร้อมเข้าอยู่",
@@ -5187,9 +5150,7 @@
         "images/rooms/mc-114/3.webp",
         "images/rooms/mc-114/4.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-115",
@@ -5210,13 +5171,14 @@
       "sizeLabel": "38.65 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "12A",
+      "floorRange": "12A",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "สระว่ายน้ำ",
         "ฟิตเนส",
@@ -5232,9 +5194,7 @@
         "images/rooms/mc-115/5.webp",
         "images/rooms/mc-115/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-116",
@@ -5255,13 +5215,14 @@
       "sizeLabel": "50 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "3",
+      "floorRange": "3",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "อ่างอาบน้ำ",
         "เครื่องซักผ้า",
@@ -5279,9 +5240,7 @@
         "images/rooms/mc-116/5.webp",
         "images/rooms/mc-116/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-117",
@@ -5302,13 +5261,14 @@
       "sizeLabel": "46 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "7",
+      "floorRange": "7",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "เครื่องใช้ไฟฟ้าครบ",
@@ -5325,9 +5285,7 @@
         "images/rooms/mc-117/5.webp",
         "images/rooms/mc-117/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-118",
@@ -5348,13 +5306,14 @@
       "sizeLabel": "49 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "10",
+      "floorRange": "10",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "เฟอร์นิเจอร์บิลต์อิน",
@@ -5373,9 +5332,7 @@
         "images/rooms/mc-118/5.webp",
         "images/rooms/mc-118/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-119",
@@ -5396,13 +5353,14 @@
       "sizeLabel": "47 ตร.ม.",
       "type": "1+1 ห้องนอน",
       "beds": "1+1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "3",
+      "floorRange": "3",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสวน",
         "สระว่ายน้ำ",
@@ -5419,9 +5377,7 @@
         "images/rooms/mc-119/5.webp",
         "images/rooms/mc-119/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-120",
@@ -5442,13 +5398,14 @@
       "sizeLabel": "43.2 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "10",
+      "floorRange": "10",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "วิวเมือง",
@@ -5468,9 +5425,7 @@
         "images/rooms/mc-120/5.webp",
         "images/rooms/mc-120/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-121",
@@ -5491,13 +5446,14 @@
       "sizeLabel": "35 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "3",
+      "floorRange": "3",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศตะวันออก",
         "สระว่ายน้ำ",
@@ -5513,9 +5469,7 @@
         "images/rooms/mc-121/5.webp",
         "images/rooms/mc-121/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-122",
@@ -5536,13 +5490,14 @@
       "sizeLabel": "42 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "22",
+      "floorRange": "22",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เครื่องซักผ้า",
         "สระว่ายน้ำ",
@@ -5558,9 +5513,7 @@
         "images/rooms/mc-122/5.webp",
         "images/rooms/mc-122/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-123",
@@ -5581,13 +5534,14 @@
       "sizeLabel": "60 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม"
       ],
@@ -5623,13 +5577,14 @@
       "sizeLabel": "52 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "18",
+      "floorRange": "18",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 52 ตร.ม. ที่ Siri At Sukhumvit ย่านทองหล่อ",
       "descriptionEn": "1-bedroom, 52 sq.m. at Siri At Sukhumvit, Thonglor.",
@@ -5641,9 +5596,7 @@
         "images/rooms/mc-124/5.webp",
         "images/rooms/mc-124/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-125",
@@ -5664,13 +5617,14 @@
       "sizeLabel": "30.5 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "24",
+      "floorRange": "24",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 30.5 ตร.ม. ที่ The Lumpini 24 ย่านพร้อมพงษ์",
       "descriptionEn": "1-bedroom, 30.5 sq.m. at The Lumpini 24, Phrom Phong.",
@@ -5682,9 +5636,7 @@
         "images/rooms/mc-125/5.webp",
         "images/rooms/mc-125/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-126",
@@ -5705,13 +5657,14 @@
       "sizeLabel": "45 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "35",
+      "floorRange": "35",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 2 ห้องนอน ขนาด 45 ตร.ม. ที่ Skyrise Sukhumvit 64 ย่านบางนา",
       "descriptionEn": "2-bedroom, 45 sq.m. at Skyrise Sukhumvit 64, Bang Na.",
@@ -5723,9 +5676,7 @@
         "images/rooms/mc-126/5.webp",
         "images/rooms/mc-126/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-127",
@@ -5746,13 +5697,14 @@
       "sizeLabel": "43 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "21",
+      "floorRange": "21",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 43 ตร.ม. ที่ The Esse Sukhumvit 36 ย่านทองหล่อ",
       "descriptionEn": "1-bedroom, 43 sq.m. at The Esse Sukhumvit 36, Thonglor.",
@@ -5763,9 +5715,7 @@
         "images/rooms/mc-127/4.webp",
         "images/rooms/mc-127/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-128",
@@ -5786,13 +5736,14 @@
       "sizeLabel": "57 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "7",
+      "floorRange": "7",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "สระว่ายน้ำ",
         "ฟิตเนส",
@@ -5808,9 +5759,7 @@
         "images/rooms/mc-128/5.webp",
         "images/rooms/mc-128/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-129",
@@ -5831,13 +5780,14 @@
       "sizeLabel": "35 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "23",
+      "floorRange": "23",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศตะวันออก",
         "สระว่ายน้ำ",
@@ -5855,9 +5805,7 @@
         "images/rooms/mc-129/5.webp",
         "images/rooms/mc-129/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-130",
@@ -5878,13 +5826,14 @@
       "sizeLabel": "48 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "7",
+      "floorRange": "7",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสวน"
       ],
@@ -5898,9 +5847,7 @@
         "images/rooms/mc-130/5.webp",
         "images/rooms/mc-130/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-131",
@@ -5921,13 +5868,14 @@
       "sizeLabel": "56.5 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "1",
+      "floorRange": "1",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เฟอร์นิเจอร์ครบ"
@@ -5942,9 +5890,7 @@
         "images/rooms/mc-131/5.webp",
         "images/rooms/mc-131/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-132",
@@ -5965,13 +5911,14 @@
       "sizeLabel": "36 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "14",
+      "floorRange": "14",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เครื่องซักผ้า"
       ],
@@ -5984,9 +5931,7 @@
         "images/rooms/mc-132/4.webp",
         "images/rooms/mc-132/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-133",
@@ -6007,13 +5952,14 @@
       "sizeLabel": "55 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 55 ตร.ม. ที่ The Lumpini 24 ย่านพร้อมพงษ์",
       "descriptionEn": "1-bedroom, 55 sq.m. at The Lumpini 24, Phrom Phong.",
@@ -6048,13 +5994,14 @@
       "sizeLabel": "35 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "9",
+      "floorRange": "9",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 35 ตร.ม. ที่ Noble Around 33 ย่านพร้อมพงษ์",
       "descriptionEn": "1-bedroom, 35 sq.m. at Noble Around 33, Phrom Phong.",
@@ -6066,9 +6013,7 @@
         "images/rooms/mc-134/5.webp",
         "images/rooms/mc-134/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-135",
@@ -6089,13 +6034,14 @@
       "sizeLabel": "85 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "8",
+      "floorRange": "8",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 2 ห้องนอน ขนาด 85 ตร.ม. ที่ Q Langsuan ย่านชิดลม",
       "descriptionEn": "2-bedroom, 85 sq.m. at Q Langsuan, Chit Lom.",
@@ -6107,9 +6053,7 @@
         "images/rooms/mc-135/5.webp",
         "images/rooms/mc-135/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-136",
@@ -6130,13 +6074,14 @@
       "sizeLabel": "51 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "21",
+      "floorRange": "21",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 51 ตร.ม. ที่ Siri At Sukhumvit ย่านทองหล่อ",
       "descriptionEn": "1-bedroom, 51 sq.m. at Siri At Sukhumvit, Thonglor.",
@@ -6148,9 +6093,7 @@
         "images/rooms/mc-136/5.webp",
         "images/rooms/mc-136/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-137",
@@ -6171,13 +6114,14 @@
       "sizeLabel": "34 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "12",
+      "floorRange": "12",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม"
       ],
@@ -6191,9 +6135,7 @@
         "images/rooms/mc-137/5.webp",
         "images/rooms/mc-137/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-138",
@@ -6214,13 +6156,14 @@
       "sizeLabel": "50 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "20",
+      "floorRange": "20",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เครื่องซักผ้า",
         "สระว่ายน้ำ",
@@ -6236,9 +6179,7 @@
         "images/rooms/mc-138/5.webp",
         "images/rooms/mc-138/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-139",
@@ -6259,13 +6200,14 @@
       "sizeLabel": "54 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "24",
+      "floorRange": "24",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม"
       ],
@@ -6278,9 +6220,7 @@
         "images/rooms/mc-139/4.webp",
         "images/rooms/mc-139/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-140",
@@ -6301,13 +6241,14 @@
       "sizeLabel": "36.46 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "พร้อมเข้าอยู่"
@@ -6345,13 +6286,14 @@
       "sizeLabel": "51 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "11",
+      "floorRange": "11",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 51 ตร.ม. ที่ Noble Ploenchit ย่านชิดลม",
       "descriptionEn": "1-bedroom, 51 sq.m. at Noble Ploenchit, Chit Lom.",
@@ -6361,9 +6303,7 @@
         "images/rooms/mc-141/3.webp",
         "images/rooms/mc-141/4.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-142",
@@ -6384,13 +6324,14 @@
       "sizeLabel": "46 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวไม่มีตึกบัง",
         "พร้อมเข้าอยู่"
@@ -6428,13 +6369,14 @@
       "sizeLabel": "32.25 ตร.ม.",
       "type": null,
       "beds": null,
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "14",
+      "floorRange": "14",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศตะวันออก",
         "สระว่ายน้ำ",
@@ -6451,9 +6393,7 @@
         "images/rooms/mc-143/5.webp",
         "images/rooms/mc-143/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-144",
@@ -6474,13 +6414,14 @@
       "sizeLabel": "84 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "11",
+      "floorRange": "11",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 2 ห้องนอน ขนาด 84 ตร.ม. ที่ Khun by Yoo ย่านทองหล่อ",
       "descriptionEn": "2-bedroom, 84 sq.m. at Khun by Yoo, Thonglor.",
@@ -6492,9 +6433,7 @@
         "images/rooms/mc-144/5.webp",
         "images/rooms/mc-144/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-145",
@@ -6515,13 +6454,14 @@
       "sizeLabel": "55 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "12A",
+      "floorRange": "12A",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "อ่างอาบน้ำ"
@@ -6536,9 +6476,7 @@
         "images/rooms/mc-145/5.webp",
         "images/rooms/mc-145/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-146",
@@ -6559,13 +6497,14 @@
       "sizeLabel": "35 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "35",
+      "floorRange": "35",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศตะวันออก",
         "พร้อมเข้าอยู่"
@@ -6580,9 +6519,7 @@
         "images/rooms/mc-146/5.webp",
         "images/rooms/mc-146/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-147",
@@ -6603,13 +6540,14 @@
       "sizeLabel": "35 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "15",
+      "floorRange": "15",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 35 ตร.ม. ที่ Aestiq Thonglor ย่านทองหล่อ",
       "descriptionEn": "1-bedroom, 35 sq.m. at Aestiq Thonglor, Thonglor.",
@@ -6621,9 +6559,7 @@
         "images/rooms/mc-147/5.webp",
         "images/rooms/mc-147/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-148",
@@ -6644,13 +6580,14 @@
       "sizeLabel": "35 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "30",
+      "floorRange": "30",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศเหนือ"
       ],
@@ -6664,9 +6601,7 @@
         "images/rooms/mc-148/5.webp",
         "images/rooms/mc-148/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-149",
@@ -6687,13 +6622,14 @@
       "sizeLabel": "32.4 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "14",
+      "floorRange": "14",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสวน",
         "พร้อมเข้าอยู่",
@@ -6709,9 +6645,7 @@
         "images/rooms/mc-149/5.webp",
         "images/rooms/mc-149/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-150",
@@ -6732,13 +6666,14 @@
       "sizeLabel": "38.14 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "25",
+      "floorRange": "25",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวไม่มีตึกบัง",
         "หันทิศตะวันตก"
@@ -6753,9 +6688,7 @@
         "images/rooms/mc-150/5.webp",
         "images/rooms/mc-150/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-151",
@@ -6776,13 +6709,14 @@
       "sizeLabel": "30 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "6",
+      "floorRange": "6",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศตะวันตก"
       ],
@@ -6796,9 +6730,7 @@
         "images/rooms/mc-151/5.webp",
         "images/rooms/mc-151/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-152",
@@ -6819,13 +6751,14 @@
       "sizeLabel": "48 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "24",
+      "floorRange": "24",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "วิวสระว่ายน้ำ",
@@ -6842,9 +6775,7 @@
         "images/rooms/mc-152/5.webp",
         "images/rooms/mc-152/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-153",
@@ -6865,13 +6796,14 @@
       "sizeLabel": "36.43 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "5",
+      "floorRange": "5",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "พร้อมเข้าอยู่"
@@ -6886,9 +6818,7 @@
         "images/rooms/mc-153/5.webp",
         "images/rooms/mc-153/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-154",
@@ -6909,13 +6839,14 @@
       "sizeLabel": "32 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "31",
+      "floorRange": "31",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่"
       ],
@@ -6929,9 +6860,7 @@
         "images/rooms/mc-154/5.webp",
         "images/rooms/mc-154/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-155",
@@ -6952,13 +6881,14 @@
       "sizeLabel": "70 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่"
       ],
@@ -6995,13 +6925,14 @@
       "sizeLabel": "38 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "29",
+      "floorRange": "29",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "พร้อมเข้าอยู่",
@@ -7017,9 +6948,7 @@
         "images/rooms/mc-156/4.webp",
         "images/rooms/mc-156/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-158",
@@ -7040,13 +6969,14 @@
       "sizeLabel": "40.5 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "27",
+      "floorRange": "27",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เครื่องซักผ้า",
         "สระว่ายน้ำ",
@@ -7063,9 +6993,7 @@
         "images/rooms/mc-158/5.webp",
         "images/rooms/mc-158/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-159",
@@ -7086,13 +7014,14 @@
       "sizeLabel": "58 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "5",
+      "floorRange": "5",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "พร้อมเข้าอยู่"
@@ -7107,9 +7036,7 @@
         "images/rooms/mc-159/5.webp",
         "images/rooms/mc-159/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-160",
@@ -7130,13 +7057,14 @@
       "sizeLabel": "26 ตร.ม.",
       "type": "สตูดิโอ",
       "beds": "สตูดิโอ",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "3",
+      "floorRange": "3",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -7152,9 +7080,7 @@
         "images/rooms/mc-160/5.webp",
         "images/rooms/mc-160/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-161",
@@ -7175,13 +7101,14 @@
       "sizeLabel": "32 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "33",
+      "floorRange": "33",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เครื่องซักผ้า",
@@ -7199,9 +7126,7 @@
         "images/rooms/mc-161/5.webp",
         "images/rooms/mc-161/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-162",
@@ -7222,13 +7147,14 @@
       "sizeLabel": "35 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "8",
+      "floorRange": "8",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เฟอร์นิเจอร์ครบ",
         "สระว่ายน้ำ"
@@ -7242,9 +7168,7 @@
         "images/rooms/mc-162/4.webp",
         "images/rooms/mc-162/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-163",
@@ -7265,13 +7189,14 @@
       "sizeLabel": "33 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "10",
+      "floorRange": "10",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสระว่ายน้ำ",
         "สระว่ายน้ำ"
@@ -7286,9 +7211,7 @@
         "images/rooms/mc-163/5.webp",
         "images/rooms/mc-163/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-164",
@@ -7309,13 +7232,14 @@
       "sizeLabel": "35 ตร.ม.",
       "type": "ดูเพล็กซ์",
       "beds": "ดูเพล็กซ์",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "10",
+      "floorRange": "10",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง ดูเพล็กซ์ ขนาด 35 ตร.ม. ที่ Ideo Morph 38 ย่านทองหล่อ",
       "descriptionEn": "Duplex, 35 sq.m. at Ideo Morph 38, Thonglor.",
@@ -7327,9 +7251,7 @@
         "images/rooms/mc-164/5.webp",
         "images/rooms/mc-164/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-165",
@@ -7350,13 +7272,14 @@
       "sizeLabel": "96.96 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "24",
+      "floorRange": "24",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "อ่างอาบน้ำ",
         "เครื่องซักผ้า"
@@ -7371,9 +7294,7 @@
         "images/rooms/mc-165/5.webp",
         "images/rooms/mc-165/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-166",
@@ -7394,13 +7315,14 @@
       "sizeLabel": "68 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "16",
+      "floorRange": "16",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -7416,9 +7338,7 @@
         "images/rooms/mc-166/5.webp",
         "images/rooms/mc-166/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-167",
@@ -7439,13 +7359,14 @@
       "sizeLabel": "62 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "27",
+      "floorRange": "27",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เฟอร์นิเจอร์ครบ",
         "ที่จอดรถ"
@@ -7459,9 +7380,7 @@
         "images/rooms/mc-167/4.webp",
         "images/rooms/mc-167/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-168",
@@ -7482,13 +7401,14 @@
       "sizeLabel": "27.14 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "26",
+      "floorRange": "26",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "สระว่ายน้ำ",
         "ฟิตเนส",
@@ -7505,9 +7425,7 @@
         "images/rooms/mc-168/5.webp",
         "images/rooms/mc-168/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-169",
@@ -7528,13 +7446,14 @@
       "sizeLabel": "31 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "26",
+      "floorRange": "26",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสระว่ายน้ำ"
       ],
@@ -7548,9 +7467,7 @@
         "images/rooms/mc-169/5.webp",
         "images/rooms/mc-169/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-170",
@@ -7571,13 +7488,14 @@
       "sizeLabel": "27 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "27",
+      "floorRange": "27",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -7593,9 +7511,7 @@
         "images/rooms/mc-170/5.webp",
         "images/rooms/mc-170/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-171",
@@ -7616,13 +7532,14 @@
       "sizeLabel": "42.5 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "7",
+      "floorRange": "7",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เครื่องซักผ้า",
@@ -7638,9 +7555,7 @@
         "images/rooms/mc-171/3.webp",
         "images/rooms/mc-171/4.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-172",
@@ -7661,13 +7576,14 @@
       "sizeLabel": "60 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม"
       ],
@@ -7702,13 +7618,14 @@
       "sizeLabel": "46 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "6",
+      "floorRange": "6",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เครื่องซักผ้า"
       ],
@@ -7722,9 +7639,7 @@
         "images/rooms/mc-173/5.webp",
         "images/rooms/mc-173/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-174",
@@ -7745,13 +7660,14 @@
       "sizeLabel": "33–34 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "23",
+      "floorRange": "23",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -7767,9 +7683,7 @@
         "images/rooms/mc-174/5.webp",
         "images/rooms/mc-174/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-175",
@@ -7790,13 +7704,14 @@
       "sizeLabel": "58 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "27",
+      "floorRange": "27",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เครื่องซักผ้า"
       ],
@@ -7810,9 +7725,7 @@
         "images/rooms/mc-175/5.webp",
         "images/rooms/mc-175/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-176",
@@ -7833,13 +7746,14 @@
       "sizeLabel": "34 ตร.ม.",
       "type": null,
       "beds": null,
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "9",
+      "floorRange": "9",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เฟอร์นิเจอร์บิลต์อิน",
         "เครื่องซักผ้า",
@@ -7856,9 +7770,7 @@
         "images/rooms/mc-176/5.webp",
         "images/rooms/mc-176/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-177",
@@ -7879,13 +7791,14 @@
       "sizeLabel": "28 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "24",
+      "floorRange": "24",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เฟอร์นิเจอร์บิลต์อิน",
         "เครื่องใช้ไฟฟ้าครบ"
@@ -7900,9 +7813,7 @@
         "images/rooms/mc-177/5.webp",
         "images/rooms/mc-177/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-178",
@@ -7923,13 +7834,14 @@
       "sizeLabel": "74 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "30",
+      "floorRange": "30",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวเมือง",
         "วิวสวน",
@@ -7945,9 +7857,7 @@
         "images/rooms/mc-178/5.webp",
         "images/rooms/mc-178/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-179",
@@ -7968,13 +7878,14 @@
       "sizeLabel": "65 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวไม่มีตึกบัง",
         "วิวเมือง",
@@ -8015,13 +7926,14 @@
       "sizeLabel": "37 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "30",
+      "floorRange": "30",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสวน",
         "พร้อมเข้าอยู่",
@@ -8037,9 +7949,7 @@
         "images/rooms/mc-180/5.webp",
         "images/rooms/mc-180/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-181",
@@ -8060,13 +7970,14 @@
       "sizeLabel": "58 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "สระว่ายน้ำ",
@@ -8105,13 +8016,14 @@
       "sizeLabel": "52 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "23",
+      "floorRange": "23",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศตะวันออก",
         "สระว่ายน้ำ",
@@ -8128,9 +8040,7 @@
         "images/rooms/mc-182/5.webp",
         "images/rooms/mc-182/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-183",
@@ -8151,13 +8061,14 @@
       "sizeLabel": null,
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "34",
+      "floorRange": "34",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวเมือง",
         "เฟอร์นิเจอร์ครบ",
@@ -8175,9 +8086,7 @@
         "images/rooms/mc-183/5.webp",
         "images/rooms/mc-183/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-184",
@@ -8198,13 +8107,14 @@
       "sizeLabel": "41 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "19",
+      "floorRange": "19",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวเมือง",
         "พร้อมเข้าอยู่"
@@ -8219,9 +8129,7 @@
         "images/rooms/mc-184/5.webp",
         "images/rooms/mc-184/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-185",
@@ -8242,13 +8150,14 @@
       "sizeLabel": "30 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "4",
+      "floorRange": "4",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เฟอร์นิเจอร์บิลต์อิน",
         "เครื่องซักผ้า",
@@ -8267,9 +8176,7 @@
         "images/rooms/mc-185/5.webp",
         "images/rooms/mc-185/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-186",
@@ -8290,13 +8197,14 @@
       "sizeLabel": "35 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "20",
+      "floorRange": "20",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่"
       ],
@@ -8310,9 +8218,7 @@
         "images/rooms/mc-186/5.webp",
         "images/rooms/mc-186/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-187",
@@ -8333,13 +8239,14 @@
       "sizeLabel": "30 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "33",
+      "floorRange": "33",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เฟอร์นิเจอร์ครบ"
       ],
@@ -8353,9 +8260,7 @@
         "images/rooms/mc-187/5.webp",
         "images/rooms/mc-187/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-188",
@@ -8376,13 +8281,14 @@
       "sizeLabel": null,
       "type": "สตูดิโอ",
       "beds": "สตูดิโอ",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่"
       ],
@@ -8417,13 +8323,14 @@
       "sizeLabel": "38.5 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "24",
+      "floorRange": "24",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "พร้อมเข้าอยู่"
@@ -8438,9 +8345,7 @@
         "images/rooms/mc-189/5.webp",
         "images/rooms/mc-189/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-190",
@@ -8461,13 +8366,14 @@
       "sizeLabel": "36 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "4",
+      "floorRange": "4",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เฟอร์นิเจอร์ครบ",
         "อ่างอาบน้ำ",
@@ -8485,9 +8391,7 @@
         "images/rooms/mc-190/5.webp",
         "images/rooms/mc-190/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-191",
@@ -8508,13 +8412,14 @@
       "sizeLabel": "35 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "5",
+      "floorRange": "5",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสวน",
         "เครื่องซักผ้า",
@@ -8532,9 +8437,7 @@
         "images/rooms/mc-191/5.webp",
         "images/rooms/mc-191/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-192",
@@ -8555,13 +8458,14 @@
       "sizeLabel": "56.6 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "5",
+      "floorRange": "5",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสวน",
         "อ่างอาบน้ำ",
@@ -8579,9 +8483,7 @@
         "images/rooms/mc-192/5.webp",
         "images/rooms/mc-192/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-193",
@@ -8602,13 +8504,14 @@
       "sizeLabel": "58 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "6",
+      "floorRange": "6",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "อ่างอาบน้ำ"
@@ -8623,9 +8526,7 @@
         "images/rooms/mc-193/5.webp",
         "images/rooms/mc-193/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-194",
@@ -8646,13 +8547,14 @@
       "sizeLabel": "31 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "2",
+      "floorRange": "2",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เฟอร์นิเจอร์บิลต์อิน",
         "เครื่องซักผ้า"
@@ -8667,9 +8569,7 @@
         "images/rooms/mc-194/5.webp",
         "images/rooms/mc-194/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-195",
@@ -8690,13 +8590,14 @@
       "sizeLabel": "55 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "19",
+      "floorRange": "19",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "หันทิศเหนือ"
@@ -8711,9 +8612,7 @@
         "images/rooms/mc-195/5.webp",
         "images/rooms/mc-195/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-196",
@@ -8734,13 +8633,14 @@
       "sizeLabel": "50 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "26",
+      "floorRange": "26",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เครื่องซักผ้า",
         "ที่จอดรถ"
@@ -8754,9 +8654,7 @@
         "images/rooms/mc-196/4.webp",
         "images/rooms/mc-196/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-197",
@@ -8777,13 +8675,14 @@
       "sizeLabel": "62 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "เครื่องซักผ้า",
@@ -8825,13 +8724,14 @@
       "sizeLabel": "30 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "23",
+      "floorRange": "23",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เฟอร์นิเจอร์ครบ",
         "สระว่ายน้ำ",
@@ -8847,9 +8747,7 @@
         "images/rooms/mc-198/4.webp",
         "images/rooms/mc-198/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-199",
@@ -8870,13 +8768,14 @@
       "sizeLabel": "50 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "9",
+      "floorRange": "9",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม"
       ],
@@ -8890,9 +8789,7 @@
         "images/rooms/mc-199/5.webp",
         "images/rooms/mc-199/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-200",
@@ -8913,13 +8810,14 @@
       "sizeLabel": "55 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "12",
+      "floorRange": "12",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "วิวเมือง",
@@ -8936,55 +8834,7 @@
         "images/rooms/mc-200/5.webp",
         "images/rooms/mc-200/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
-    },
-    {
-      "id": "MC-201",
-      "slug": "mc-201",
-      "project": "Life Sukhumvit 62",
-      "area": "อ่อนนุช",
-      "areaSlug": "on-nut",
-      "station": "BTS บางจาก",
-      "walk": 2,
-      "walkSource": "source description",
-      "lat": null,
-      "lng": null,
-      "coordApprox": false,
-      "coordSource": null,
-      "price": 27000,
-      "deposit": "2 months",
-      "size": 49.33,
-      "sizeLabel": "49.33 ตร.ม.",
-      "type": "2 ห้องนอน",
-      "beds": "2 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
-      "status": "AVAILABLE",
-      "statusLabel": "ว่าง",
-      "available": null,
-      "pets": false,
-      "lastVerified": "2026-11-12",
-      "amenities": [
-        "ห้องมุม",
-        "วิวเมือง",
-        "เฟอร์นิเจอร์ครบ",
-        "เฟอร์นิเจอร์บิลต์อิน"
-      ],
-      "description": "ห้อง 2 ห้องนอน ขนาด 49.33 ตร.ม. ที่ Life Sukhumvit 62 ย่านอ่อนนุช ห้องมุม วิวเมือง เฟอร์นิเจอร์ครบ เฟอร์นิเจอร์บิลต์อิน",
-      "descriptionEn": "2-bedroom, 49.33 sq.m. at Life Sukhumvit 62, On Nut. Corner unit, City view, Fully furnished, Built-in furniture.",
-      "photos": [
-        "images/rooms/mc-201/1.webp",
-        "images/rooms/mc-201/2.webp",
-        "images/rooms/mc-201/3.webp",
-        "images/rooms/mc-201/4.webp",
-        "images/rooms/mc-201/5.webp",
-        "images/rooms/mc-201/6.webp"
-      ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-202",
@@ -9005,13 +8855,14 @@
       "sizeLabel": "25 ตร.ม.",
       "type": "สตูดิโอ",
       "beds": "สตูดิโอ",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "16",
+      "floorRange": "16",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่"
       ],
@@ -9025,9 +8876,7 @@
         "images/rooms/mc-202/5.webp",
         "images/rooms/mc-202/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-203",
@@ -9048,13 +8897,14 @@
       "sizeLabel": "45 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "17",
+      "floorRange": "17",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม"
       ],
@@ -9068,9 +8918,7 @@
         "images/rooms/mc-203/5.webp",
         "images/rooms/mc-203/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-204",
@@ -9091,13 +8939,14 @@
       "sizeLabel": "65 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "19",
+      "floorRange": "19",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เฟอร์นิเจอร์ครบ",
         "อ่างอาบน้ำ",
@@ -9113,9 +8962,7 @@
         "images/rooms/mc-204/5.webp",
         "images/rooms/mc-204/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-205",
@@ -9136,13 +8983,14 @@
       "sizeLabel": "30 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "31",
+      "floorRange": "31",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสระว่ายน้ำ",
         "สระว่ายน้ำ"
@@ -9157,9 +9005,7 @@
         "images/rooms/mc-205/5.webp",
         "images/rooms/mc-205/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-206",
@@ -9180,13 +9026,14 @@
       "sizeLabel": "35 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "12A",
+      "floorRange": "12A",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสระว่ายน้ำ",
         "สระว่ายน้ำ"
@@ -9201,9 +9048,7 @@
         "images/rooms/mc-206/5.webp",
         "images/rooms/mc-206/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-207",
@@ -9224,13 +9069,14 @@
       "sizeLabel": "45 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "9",
+      "floorRange": "9",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 45 ตร.ม. ที่ The Room Sukhumvit 62 ย่านบางนา",
       "descriptionEn": "1-bedroom, 45 sq.m. at The Room Sukhumvit 62, Bang Na.",
@@ -9242,9 +9088,7 @@
         "images/rooms/mc-207/5.webp",
         "images/rooms/mc-207/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-208",
@@ -9265,13 +9109,14 @@
       "sizeLabel": "52 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "9",
+      "floorRange": "9",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสระว่ายน้ำ",
         "เฟอร์นิเจอร์บิลต์อิน",
@@ -9291,9 +9136,7 @@
         "images/rooms/mc-208/5.webp",
         "images/rooms/mc-208/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-209",
@@ -9314,13 +9157,14 @@
       "sizeLabel": "52 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "9",
+      "floorRange": "9",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เฟอร์นิเจอร์บิลต์อิน",
         "เครื่องซักผ้า"
@@ -9335,9 +9179,7 @@
         "images/rooms/mc-209/5.webp",
         "images/rooms/mc-209/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-210",
@@ -9358,13 +9200,14 @@
       "sizeLabel": "37 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "23",
+      "floorRange": "23",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม"
       ],
@@ -9378,9 +9221,7 @@
         "images/rooms/mc-210/5.webp",
         "images/rooms/mc-210/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-211",
@@ -9401,13 +9242,14 @@
       "sizeLabel": "46 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "25",
+      "floorRange": "25",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 46 ตร.ม. ที่ Laviq Thonglor Sukhumvit 57 ย่านทองหล่อ",
       "descriptionEn": "1-bedroom, 46 sq.m. at Laviq Thonglor Sukhumvit 57, Thonglor.",
@@ -9417,9 +9259,7 @@
         "images/rooms/mc-211/3.webp",
         "images/rooms/mc-211/4.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-212",
@@ -9440,13 +9280,14 @@
       "sizeLabel": "40 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "3",
+      "floorRange": "3",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เครื่องซักผ้า",
         "สระว่ายน้ำ",
@@ -9463,9 +9304,7 @@
         "images/rooms/mc-212/5.webp",
         "images/rooms/mc-212/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-213",
@@ -9486,13 +9325,14 @@
       "sizeLabel": "32 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "15",
+      "floorRange": "15",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เครื่องซักผ้า"
       ],
@@ -9506,9 +9346,7 @@
         "images/rooms/mc-213/5.webp",
         "images/rooms/mc-213/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-214",
@@ -9529,13 +9367,14 @@
       "sizeLabel": "49 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "4",
+      "floorRange": "4",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 2 ห้องนอน ขนาด 49 ตร.ม. ที่ Life Sukhumvit 48 ย่านพระโขนง",
       "descriptionEn": "2-bedroom, 49 sq.m. at Life Sukhumvit 48, Phra Khanong.",
@@ -9547,9 +9386,7 @@
         "images/rooms/mc-214/5.webp",
         "images/rooms/mc-214/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-215",
@@ -9570,13 +9407,14 @@
       "sizeLabel": "51 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "5",
+      "floorRange": "5",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสวน",
         "หันทิศเหนือ",
@@ -9592,9 +9430,7 @@
         "images/rooms/mc-215/5.webp",
         "images/rooms/mc-215/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-216",
@@ -9615,13 +9451,14 @@
       "sizeLabel": "33 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "18",
+      "floorRange": "18",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "สระว่ายน้ำ",
         "ซาวน่า"
@@ -9636,9 +9473,7 @@
         "images/rooms/mc-216/5.webp",
         "images/rooms/mc-216/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-217",
@@ -9659,13 +9494,14 @@
       "sizeLabel": "70 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "10",
+      "floorRange": "10",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เฟอร์นิเจอร์ครบ",
         "เครื่องซักผ้า",
@@ -9683,9 +9519,7 @@
         "images/rooms/mc-217/4.webp",
         "images/rooms/mc-217/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-218",
@@ -9706,13 +9540,14 @@
       "sizeLabel": "30 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "12",
+      "floorRange": "12",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เฟอร์นิเจอร์ครบ",
         "สระว่ายน้ำ",
@@ -9728,9 +9563,7 @@
         "images/rooms/mc-218/5.webp",
         "images/rooms/mc-218/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-219",
@@ -9751,13 +9584,14 @@
       "sizeLabel": "27 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "11",
+      "floorRange": "11",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศเหนือ",
         "เฟอร์นิเจอร์ครบ",
@@ -9772,9 +9606,7 @@
         "images/rooms/mc-219/4.webp",
         "images/rooms/mc-219/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-220",
@@ -9795,13 +9627,14 @@
       "sizeLabel": "50 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "38",
+      "floorRange": "38",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศใต้",
         "เฟอร์นิเจอร์ครบ"
@@ -9816,9 +9649,7 @@
         "images/rooms/mc-220/5.webp",
         "images/rooms/mc-220/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-221",
@@ -9839,13 +9670,14 @@
       "sizeLabel": "33 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "30",
+      "floorRange": "30",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เครื่องใช้ไฟฟ้าครบ"
       ],
@@ -9858,9 +9690,7 @@
         "images/rooms/mc-221/4.webp",
         "images/rooms/mc-221/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-222",
@@ -9881,13 +9711,14 @@
       "sizeLabel": "30.88 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "3",
+      "floorRange": "3",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "สระว่ายน้ำ",
         "ฟิตเนส",
@@ -9904,9 +9735,7 @@
         "images/rooms/mc-222/5.webp",
         "images/rooms/mc-222/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-223",
@@ -9927,13 +9756,14 @@
       "sizeLabel": "35 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "23",
+      "floorRange": "23",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เครื่องซักผ้า",
@@ -9949,9 +9779,7 @@
         "images/rooms/mc-223/4.webp",
         "images/rooms/mc-223/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-224",
@@ -9972,13 +9800,14 @@
       "sizeLabel": "55 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวเมือง"
       ],
@@ -10015,13 +9844,14 @@
       "sizeLabel": "28 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "24",
+      "floorRange": "24",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เครื่องซักผ้า",
         "สระว่ายน้ำ",
@@ -10037,9 +9867,7 @@
         "images/rooms/mc-225/5.webp",
         "images/rooms/mc-225/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-226",
@@ -10060,13 +9888,14 @@
       "sizeLabel": "30 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
+      "floor": "10",
+      "floorRange": "10",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "วิวสวน",
         "พร้อมเข้าอยู่",
@@ -10084,9 +9913,7 @@
         "images/rooms/mc-226/5.webp",
         "images/rooms/mc-226/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-227",
@@ -10107,13 +9934,14 @@
       "sizeLabel": "60 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "27",
+      "floorRange": "27",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "เฟอร์นิเจอร์ครบ",
         "เครื่องซักผ้า",
@@ -10130,9 +9958,7 @@
         "images/rooms/mc-227/5.webp",
         "images/rooms/mc-227/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-228",
@@ -10153,13 +9979,14 @@
       "sizeLabel": "51 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "12A",
+      "floorRange": "12A",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เครื่องใช้ไฟฟ้าครบ",
@@ -10178,9 +10005,7 @@
         "images/rooms/mc-228/5.webp",
         "images/rooms/mc-228/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-229",
@@ -10201,13 +10026,14 @@
       "sizeLabel": "42 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "17",
+      "floorRange": "17",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เฟอร์นิเจอร์ครบ"
@@ -10222,9 +10048,7 @@
         "images/rooms/mc-229/5.webp",
         "images/rooms/mc-229/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-230",
@@ -10245,13 +10069,14 @@
       "sizeLabel": "45 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
+      "floor": null,
       "floorRange": null,
       "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "หันทิศตะวันตก",
         "พร้อมเข้าอยู่"
@@ -10289,13 +10114,14 @@
       "sizeLabel": "42 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "40",
+      "floorRange": "40",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องแบบลอฟต์ 2 ชั้น",
         "วิวไม่มีตึกบัง",
@@ -10311,9 +10137,7 @@
         "images/rooms/mc-231/5.webp",
         "images/rooms/mc-231/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-232",
@@ -10334,13 +10158,14 @@
       "sizeLabel": "60 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "18",
+      "floorRange": "18",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่"
       ],
@@ -10354,9 +10179,7 @@
         "images/rooms/mc-232/5.webp",
         "images/rooms/mc-232/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-233",
@@ -10377,13 +10200,14 @@
       "sizeLabel": "76 ตร.ม.",
       "type": "3 ห้องนอน",
       "beds": "3 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "18",
+      "floorRange": "18",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "ห้องมุม",
         "วิวเมือง",
@@ -10402,9 +10226,7 @@
         "images/rooms/mc-233/3.webp",
         "images/rooms/mc-233/4.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-234",
@@ -10425,13 +10247,14 @@
       "sizeLabel": "68 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "51",
+      "floorRange": "51",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [],
       "description": "ห้อง 2 ห้องนอน ขนาด 68 ตร.ม. ที่ Park Origin Thonglor ย่านทองหล่อ",
       "descriptionEn": "2-bedroom, 68 sq.m. at Park Origin Thonglor, Thonglor.",
@@ -10443,9 +10266,7 @@
         "images/rooms/mc-234/5.webp",
         "images/rooms/mc-234/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-235",
@@ -10466,13 +10287,14 @@
       "sizeLabel": "80 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "20",
+      "floorRange": "20",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เฟอร์นิเจอร์ครบ",
@@ -10488,9 +10310,7 @@
         "images/rooms/mc-235/5.webp",
         "images/rooms/mc-235/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-236",
@@ -10511,13 +10331,14 @@
       "sizeLabel": "57.57 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "21+",
-      "floorBand": "high",
+      "floor": "23",
+      "floorRange": "23",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เฟอร์นิเจอร์ครบ",
@@ -10531,9 +10352,7 @@
         "images/rooms/mc-236/3.webp",
         "images/rooms/mc-236/4.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-237",
@@ -10554,13 +10373,14 @@
       "sizeLabel": "72 ตร.ม.",
       "type": "2 ห้องนอน",
       "beds": "2 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "14",
+      "floorRange": "14",
+      "floorBand": null,
       "status": "AVAILABLE",
       "statusLabel": "ว่าง",
       "available": null,
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "อ่างอาบน้ำ",
         "เครื่องซักผ้า",
@@ -10579,549 +10399,7 @@
         "images/rooms/mc-237/5.webp",
         "images/rooms/mc-237/6.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
-    },
-    {
-      "id": "MC-238",
-      "slug": "mc-238",
-      "project": "The Base Sukhumvit 50",
-      "area": "อ่อนนุช",
-      "areaSlug": "on-nut",
-      "station": "BTS อ่อนนุช",
-      "walk": 16,
-      "walkSource": "estimate: straight-line from OSM building to station x1.3 / 80 m per min",
-      "lat": 13.70498,
-      "lng": 100.591997,
-      "coordApprox": false,
-      "coordSource": "OpenStreetMap: The Base Sukhumvit 50, Phra Khanong Subdistrict, Khlong Toei District, Bangkok, ",
-      "price": 13000,
-      "deposit": "2 months",
-      "size": 26.0,
-      "sizeLabel": "26 ตร.ม.",
-      "type": "สตูดิโอ",
-      "beds": "สตูดิโอ",
-      "floorRange": "1-10",
-      "floorBand": "low",
-      "status": "OCCUPIED",
-      "statusLabel": "กำลังจะว่าง · ว่าง 31 ต.ค. 2570",
-      "available": "2027-10-31",
-      "pets": false,
-      "lastVerified": "2026-11-12",
-      "amenities": [
-        "พร้อมเข้าอยู่",
-        "เฟอร์นิเจอร์ครบ",
-        "สระว่ายน้ำ",
-        "ฟิตเนส",
-        "Co-working space"
-      ],
-      "description": "ห้อง สตูดิโอ ขนาด 26 ตร.ม. ที่ The Base Sukhumvit 50 ย่านอ่อนนุช เฟอร์นิเจอร์ครบ ว่างตั้งแต่ 31 ต.ค. 2570",
-      "descriptionEn": "Studio, 26 sq.m. at The Base Sukhumvit 50, On Nut. Fully furnished. Available from 31 Oct 2027.",
-      "photos": [
-        "images/rooms/mc-238/1.webp",
-        "images/rooms/mc-238/2.webp",
-        "images/rooms/mc-238/3.webp",
-        "images/rooms/mc-238/4.webp",
-        "images/rooms/mc-238/5.webp",
-        "images/rooms/mc-238/6.webp"
-      ],
-      "unverified": [
-        "floor (band only)"
-      ]
-    },
-    {
-      "id": "MC-239",
-      "slug": "mc-239",
-      "project": "The Base Park West",
-      "area": "อ่อนนุช",
-      "areaSlug": "on-nut",
-      "station": "BTS อ่อนนุช",
-      "walk": 13,
-      "walkSource": "estimate: straight-line from OSM building to station x1.3 / 80 m per min",
-      "lat": 13.7130176,
-      "lng": 100.6001123,
-      "coordApprox": false,
-      "coordSource": "existing MoveCondo listing (OpenStreetMap)",
-      "price": 16000,
-      "deposit": "2 months",
-      "size": 30.0,
-      "sizeLabel": "30 ตร.ม.",
-      "type": "1 ห้องนอน",
-      "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
-      "status": "OCCUPIED",
-      "statusLabel": "กำลังจะว่าง · ว่าง 20 ม.ค. 2570",
-      "available": "2027-01-20",
-      "pets": false,
-      "lastVerified": "2026-11-12",
-      "amenities": [
-        "พร้อมเข้าอยู่",
-        "เครื่องใช้ไฟฟ้าครบ"
-      ],
-      "description": "ห้อง 1 ห้องนอน ขนาด 30 ตร.ม. ที่ The Base Park West ย่านอ่อนนุช เครื่องใช้ไฟฟ้าครบ ว่างตั้งแต่ 20 ม.ค. 2570",
-      "descriptionEn": "1-bedroom, 30 sq.m. at The Base Park West, On Nut. Appliances included. Available from 20 Jan 2027.",
-      "photos": [
-        "images/rooms/mc-239/1.webp",
-        "images/rooms/mc-239/2.webp",
-        "images/rooms/mc-239/3.webp",
-        "images/rooms/mc-239/4.webp",
-        "images/rooms/mc-239/5.webp",
-        "images/rooms/mc-239/6.webp"
-      ],
-      "unverified": [
-        "floor (band only)"
-      ]
-    },
-    {
-      "id": "MC-240",
-      "slug": "mc-240",
-      "project": "Kawa Haus",
-      "area": "อ่อนนุช",
-      "areaSlug": "on-nut",
-      "station": "BTS อ่อนนุช",
-      "walk": 18,
-      "walkSource": "estimate: straight-line from OSM building to station x1.3 / 80 m per min",
-      "lat": 13.7150067,
-      "lng": 100.6052636,
-      "coordApprox": false,
-      "coordSource": "existing MoveCondo listing (OpenStreetMap)",
-      "price": 21000,
-      "deposit": "2 months",
-      "size": 38.0,
-      "sizeLabel": "38 ตร.ม.",
-      "type": "1 ห้องนอน",
-      "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
-      "status": "OCCUPIED",
-      "statusLabel": "กำลังจะว่าง · ว่าง 6 พ.ย. 2570",
-      "available": "2027-11-06",
-      "pets": false,
-      "lastVerified": "2026-11-12",
-      "amenities": [
-        "พร้อมเข้าอยู่",
-        "เครื่องใช้ไฟฟ้าครบ",
-        "สระว่ายน้ำ",
-        "ฟิตเนส",
-        "Co-working space"
-      ],
-      "description": "ห้อง 1 ห้องนอน ขนาด 38 ตร.ม. ที่ Kawa Haus ย่านอ่อนนุช เครื่องใช้ไฟฟ้าครบ ว่างตั้งแต่ 6 พ.ย. 2570",
-      "descriptionEn": "1-bedroom, 38 sq.m. at Kawa Haus, On Nut. Appliances included. Available from 6 Nov 2027.",
-      "photos": [
-        "images/rooms/mc-240/1.webp"
-      ],
-      "unverified": [
-        "floor (band only)"
-      ]
-    },
-    {
-      "id": "MC-241",
-      "slug": "mc-241",
-      "project": "The Base Park West",
-      "area": "อ่อนนุช",
-      "areaSlug": "on-nut",
-      "station": "BTS อ่อนนุช",
-      "walk": 13,
-      "walkSource": "estimate: straight-line from OSM building to station x1.3 / 80 m per min",
-      "lat": 13.7130176,
-      "lng": 100.6001123,
-      "coordApprox": false,
-      "coordSource": "existing MoveCondo listing (OpenStreetMap)",
-      "price": 14000,
-      "deposit": "2 months",
-      "size": 31.0,
-      "sizeLabel": "31 ตร.ม.",
-      "type": "1 ห้องนอน",
-      "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
-      "status": "OCCUPIED",
-      "statusLabel": "กำลังจะว่าง · ว่าง 15 ต.ค. 2570",
-      "available": "2027-10-15",
-      "pets": false,
-      "lastVerified": "2026-11-12",
-      "amenities": [
-        "ห้องมุม",
-        "วิวเมือง",
-        "พร้อมเข้าอยู่",
-        "เครื่องใช้ไฟฟ้าครบ",
-        "สระว่ายน้ำ",
-        "ฟิตเนส",
-        "ที่จอดรถ"
-      ],
-      "description": "ห้อง 1 ห้องนอน ขนาด 31 ตร.ม. ที่ The Base Park West ย่านอ่อนนุช ห้องมุม วิวเมือง เครื่องใช้ไฟฟ้าครบ ว่างตั้งแต่ 15 ต.ค. 2570",
-      "descriptionEn": "1-bedroom, 31 sq.m. at The Base Park West, On Nut. Corner unit, City view, Appliances included. Available from 15 Oct 2027.",
-      "photos": [
-        "images/rooms/mc-241/1.webp",
-        "images/rooms/mc-241/2.webp",
-        "images/rooms/mc-241/3.webp",
-        "images/rooms/mc-241/4.webp",
-        "images/rooms/mc-241/5.webp",
-        "images/rooms/mc-241/6.webp"
-      ],
-      "unverified": [
-        "floor (band only)"
-      ]
-    },
-    {
-      "id": "MC-242",
-      "slug": "mc-242",
-      "project": "Nia By Sansiri",
-      "area": "อ่อนนุช",
-      "areaSlug": "on-nut",
-      "station": "BTS อ่อนนุช",
-      "walk": null,
-      "walkSource": null,
-      "lat": 13.7146889,
-      "lng": 100.5998564,
-      "coordApprox": false,
-      "coordSource": "existing MoveCondo listing (OpenStreetMap)",
-      "price": 27000,
-      "deposit": "2 months",
-      "size": 54.0,
-      "sizeLabel": "54 ตร.ม.",
-      "type": "2 ห้องนอน",
-      "beds": "2 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
-      "status": "OCCUPIED",
-      "statusLabel": "กำลังจะว่าง · ว่าง 2 พ.ย. 2570",
-      "available": "2027-11-02",
-      "pets": false,
-      "lastVerified": "2026-11-12",
-      "amenities": [
-        "ห้องมุม",
-        "พร้อมเข้าอยู่",
-        "เครื่องใช้ไฟฟ้าครบ",
-        "สระว่ายน้ำ",
-        "ฟิตเนส",
-        "Co-working space"
-      ],
-      "description": "ห้อง 2 ห้องนอน ขนาด 54 ตร.ม. ที่ Nia By Sansiri ย่านอ่อนนุช ห้องมุม เครื่องใช้ไฟฟ้าครบ ว่างตั้งแต่ 2 พ.ย. 2570",
-      "descriptionEn": "2-bedroom, 54 sq.m. at Nia By Sansiri, On Nut. Corner unit, Appliances included. Available from 2 Nov 2027.",
-      "photos": [
-        "images/rooms/mc-242/1.webp",
-        "images/rooms/mc-242/2.webp",
-        "images/rooms/mc-242/3.webp",
-        "images/rooms/mc-242/4.webp",
-        "images/rooms/mc-242/5.webp",
-        "images/rooms/mc-242/6.webp"
-      ],
-      "unverified": [
-        "floor (band only)"
-      ]
-    },
-    {
-      "id": "MC-243",
-      "slug": "mc-243",
-      "project": "IDEO Sukhumvit Rama 4",
-      "area": "พระโขนง",
-      "areaSlug": "phrakhanong",
-      "station": "BTS พระโขนง",
-      "walk": 4,
-      "walkSource": "source stationDist",
-      "lat": null,
-      "lng": null,
-      "coordApprox": false,
-      "coordSource": null,
-      "price": 16500,
-      "deposit": "2 months",
-      "size": 35.0,
-      "sizeLabel": "35 ตร.ม.",
-      "type": "1 ห้องนอน",
-      "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
-      "status": "OCCUPIED",
-      "statusLabel": "กำลังจะว่าง · ว่าง 1 ต.ค. 2570",
-      "available": "2027-10-01",
-      "pets": false,
-      "lastVerified": "2026-11-12",
-      "amenities": [
-        "เครื่องใช้ไฟฟ้าครบ",
-        "เครื่องซักผ้า"
-      ],
-      "description": "ห้อง 1 ห้องนอน ขนาด 35 ตร.ม. ที่ IDEO Sukhumvit Rama 4 ย่านพระโขนง เครื่องใช้ไฟฟ้าครบ เครื่องซักผ้า ว่างตั้งแต่ 1 ต.ค. 2570",
-      "descriptionEn": "1-bedroom, 35 sq.m. at IDEO Sukhumvit Rama 4, Phra Khanong. Appliances included, Washing machine. Available from 1 Oct 2027.",
-      "photos": [
-        "images/rooms/mc-243/1.webp",
-        "images/rooms/mc-243/2.webp",
-        "images/rooms/mc-243/3.webp",
-        "images/rooms/mc-243/4.webp",
-        "images/rooms/mc-243/5.webp"
-      ],
-      "unverified": [
-        "floor (band only)"
-      ]
-    },
-    {
-      "id": "MC-244",
-      "slug": "mc-244",
-      "project": "Bless Residence Ekkamai",
-      "area": "เอกมัย",
-      "areaSlug": "ekkamai",
-      "station": "BTS เอกมัย",
-      "walk": null,
-      "walkSource": null,
-      "lat": null,
-      "lng": null,
-      "coordApprox": false,
-      "coordSource": null,
-      "price": 13000,
-      "deposit": "2 months",
-      "size": 27.0,
-      "sizeLabel": "27 ตร.ม.",
-      "type": "1 ห้องนอน",
-      "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
-      "status": "OCCUPIED",
-      "statusLabel": "กำลังจะว่าง · ว่าง 9 ต.ค. 2570",
-      "available": "2027-10-09",
-      "pets": false,
-      "lastVerified": "2026-11-12",
-      "amenities": [
-        "พร้อมเข้าอยู่",
-        "เครื่องซักผ้า"
-      ],
-      "description": "ห้อง 1 ห้องนอน ขนาด 27 ตร.ม. ที่ Bless Residence Ekkamai ย่านเอกมัย เครื่องซักผ้า ว่างตั้งแต่ 9 ต.ค. 2570",
-      "descriptionEn": "1-bedroom, 27 sq.m. at Bless Residence Ekkamai, Ekkamai. Washing machine. Available from 9 Oct 2027.",
-      "photos": [
-        "images/rooms/mc-244/1.webp",
-        "images/rooms/mc-244/2.webp",
-        "images/rooms/mc-244/3.webp",
-        "images/rooms/mc-244/4.webp",
-        "images/rooms/mc-244/5.webp",
-        "images/rooms/mc-244/6.webp"
-      ],
-      "unverified": [
-        "floor (band only)"
-      ]
-    },
-    {
-      "id": "MC-245",
-      "slug": "mc-245",
-      "project": "The Base Park West",
-      "area": "อ่อนนุช",
-      "areaSlug": "on-nut",
-      "station": "BTS อ่อนนุช",
-      "walk": 13,
-      "walkSource": "estimate: straight-line from OSM building to station x1.3 / 80 m per min",
-      "lat": 13.7130176,
-      "lng": 100.6001123,
-      "coordApprox": false,
-      "coordSource": "existing MoveCondo listing (OpenStreetMap)",
-      "price": 16500,
-      "deposit": "2 months",
-      "size": 30.0,
-      "sizeLabel": "30 ตร.ม.",
-      "type": "1 ห้องนอน",
-      "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
-      "status": "OCCUPIED",
-      "statusLabel": "กำลังจะว่าง · ว่าง 31 ต.ค. 2570",
-      "available": "2027-10-31",
-      "pets": false,
-      "lastVerified": "2026-11-12",
-      "amenities": [
-        "ห้องมุม",
-        "หันทิศตะวันตก",
-        "เฟอร์นิเจอร์ครบ"
-      ],
-      "description": "ห้อง 1 ห้องนอน ขนาด 30 ตร.ม. ที่ The Base Park West ย่านอ่อนนุช ห้องมุม หันทิศตะวันตก เฟอร์นิเจอร์ครบ ว่างตั้งแต่ 31 ต.ค. 2570",
-      "descriptionEn": "1-bedroom, 30 sq.m. at The Base Park West, On Nut. Corner unit, West-facing, Fully furnished. Available from 31 Oct 2027.",
-      "photos": [
-        "images/rooms/mc-245/1.webp",
-        "images/rooms/mc-245/2.webp",
-        "images/rooms/mc-245/3.webp",
-        "images/rooms/mc-245/4.webp",
-        "images/rooms/mc-245/5.webp",
-        "images/rooms/mc-245/6.webp"
-      ],
-      "unverified": [
-        "floor (band only)"
-      ]
-    },
-    {
-      "id": "MC-246",
-      "slug": "mc-246",
-      "project": "The Excel Hideaway Sukhumvit 71",
-      "area": "พระโขนง",
-      "areaSlug": "phrakhanong",
-      "station": "BTS พระโขนง",
-      "walk": 18,
-      "walkSource": "estimate: straight-line from OSM building to station x1.3 / 80 m per min",
-      "lat": 13.717334,
-      "lng": 100.601455,
-      "coordApprox": false,
-      "coordSource": "OpenStreetMap: The Excel Hideaway Sukhumvit 71, Phra Khanong Nuea Subdistrict, Vadhana District",
-      "price": 11000,
-      "deposit": "2 months",
-      "size": 28.5,
-      "sizeLabel": "28.5 ตร.ม.",
-      "type": "1 ห้องนอน",
-      "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
-      "status": "OCCUPIED",
-      "statusLabel": "กำลังจะว่าง · ว่าง 13 พ.ย. 2570",
-      "available": "2027-11-13",
-      "pets": false,
-      "lastVerified": "2026-11-12",
-      "amenities": [
-        "ห้องมุม",
-        "พร้อมเข้าอยู่",
-        "สระว่ายน้ำ",
-        "ฟิตเนส"
-      ],
-      "description": "ห้อง 1 ห้องนอน ขนาด 28.5 ตร.ม. ที่ The Excel Hideaway Sukhumvit 71 ย่านพระโขนง ห้องมุม ว่างตั้งแต่ 13 พ.ย. 2570",
-      "descriptionEn": "1-bedroom, 28.5 sq.m. at The Excel Hideaway Sukhumvit 71, Phra Khanong. Corner unit. Available from 13 Nov 2027.",
-      "photos": [
-        "images/rooms/mc-246/1.webp",
-        "images/rooms/mc-246/2.webp",
-        "images/rooms/mc-246/3.webp",
-        "images/rooms/mc-246/4.webp",
-        "images/rooms/mc-246/5.webp",
-        "images/rooms/mc-246/6.webp"
-      ],
-      "unverified": [
-        "floor (band only)"
-      ]
-    },
-    {
-      "id": "MC-247",
-      "slug": "mc-247",
-      "project": "Wyne By Sansiri",
-      "area": "พระโขนง",
-      "areaSlug": "phrakhanong",
-      "station": "BTS พระโขนง",
-      "walk": 4,
-      "walkSource": "source stationDist",
-      "lat": 13.712683,
-      "lng": 100.593842,
-      "coordApprox": false,
-      "coordSource": "OpenStreetMap: Wyne, Sukhumvit Road, Piyavach Community, Phra Khanong Subdistrict, Khlong Toei ",
-      "price": 20000,
-      "deposit": "2 months",
-      "size": 39.0,
-      "sizeLabel": "39 ตร.ม.",
-      "type": "1 ห้องนอน",
-      "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
-      "status": "OCCUPIED",
-      "statusLabel": "กำลังจะว่าง · ว่าง 1 พ.ย. 2570",
-      "available": "2027-11-01",
-      "pets": false,
-      "lastVerified": "2026-11-12",
-      "amenities": [
-        "ห้องมุม",
-        "พร้อมเข้าอยู่"
-      ],
-      "description": "ห้อง 1 ห้องนอน ขนาด 39 ตร.ม. ที่ Wyne By Sansiri ย่านพระโขนง ห้องมุม ว่างตั้งแต่ 1 พ.ย. 2570",
-      "descriptionEn": "1-bedroom, 39 sq.m. at Wyne By Sansiri, Phra Khanong. Corner unit. Available from 1 Nov 2027.",
-      "photos": [
-        "images/rooms/mc-247/1.webp",
-        "images/rooms/mc-247/2.webp",
-        "images/rooms/mc-247/3.webp",
-        "images/rooms/mc-247/4.webp"
-      ],
-      "unverified": [
-        "floor (band only)"
-      ]
-    },
-    {
-      "id": "MC-248",
-      "slug": "mc-248",
-      "project": "Nue District R9",
-      "area": "พระราม 9",
-      "areaSlug": "rama-9",
-      "station": "MRT พระราม 9",
-      "walk": 4,
-      "walkSource": "estimate: straight-line from OSM building to station x1.3 / 80 m per min",
-      "lat": 13.75714,
-      "lng": 100.567828,
-      "coordApprox": false,
-      "coordSource": "OpenStreetMap: Nue District R9, Huai Khwang Subdistrict, Huai Khwang District, Bangkok, 10310, ",
-      "price": 15000,
-      "deposit": "2 months",
-      "size": 27.0,
-      "sizeLabel": "27 ตร.ม.",
-      "type": "1 ห้องนอน",
-      "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
-      "status": "OCCUPIED",
-      "statusLabel": "กำลังจะว่าง · ว่าง 31 ต.ค. 2570",
-      "available": "2027-10-31",
-      "pets": false,
-      "lastVerified": "2026-11-12",
-      "amenities": [
-        "พร้อมเข้าอยู่"
-      ],
-      "description": "ห้อง 1 ห้องนอน ขนาด 27 ตร.ม. ที่ Nue District R9 ย่านพระราม 9 ว่างตั้งแต่ 31 ต.ค. 2570",
-      "descriptionEn": "1-bedroom, 27 sq.m. at Nue District R9, Rama 9. Available from 31 Oct 2027.",
-      "photos": [
-        "images/rooms/mc-248/1.webp",
-        "images/rooms/mc-248/2.webp",
-        "images/rooms/mc-248/3.webp",
-        "images/rooms/mc-248/4.webp",
-        "images/rooms/mc-248/5.webp",
-        "images/rooms/mc-248/6.webp"
-      ],
-      "unverified": [
-        "floor (band only)"
-      ]
-    },
-    {
-      "id": "MC-249",
-      "slug": "mc-249",
-      "project": "Kawa Haus",
-      "area": "อ่อนนุช",
-      "areaSlug": "on-nut",
-      "station": "BTS อ่อนนุช",
-      "walk": 18,
-      "walkSource": "estimate: straight-line from OSM building to station x1.3 / 80 m per min",
-      "lat": 13.7150067,
-      "lng": 100.6052636,
-      "coordApprox": false,
-      "coordSource": "existing MoveCondo listing (OpenStreetMap)",
-      "price": 18000,
-      "deposit": "2 months",
-      "size": 34.0,
-      "sizeLabel": "34 ตร.ม.",
-      "type": "1 ห้องนอน",
-      "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
-      "status": "OCCUPIED",
-      "statusLabel": "กำลังจะว่าง · ว่าง 9 พ.ย. 2570",
-      "available": "2027-11-09",
-      "pets": false,
-      "lastVerified": "2026-11-12",
-      "amenities": [
-        "พร้อมเข้าอยู่",
-        "เฟอร์นิเจอร์ครบ",
-        "สระว่ายน้ำ",
-        "ฟิตเนส",
-        "Co-working space",
-        "ที่จอดรถ"
-      ],
-      "description": "ห้อง 1 ห้องนอน ขนาด 34 ตร.ม. ที่ Kawa Haus ย่านอ่อนนุช เฟอร์นิเจอร์ครบ ว่างตั้งแต่ 9 พ.ย. 2570",
-      "descriptionEn": "1-bedroom, 34 sq.m. at Kawa Haus, On Nut. Fully furnished. Available from 9 Nov 2027.",
-      "photos": [
-        "images/rooms/mc-249/1.webp",
-        "images/rooms/mc-249/2.webp",
-        "images/rooms/mc-249/3.webp",
-        "images/rooms/mc-249/4.webp",
-        "images/rooms/mc-249/5.webp"
-      ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     },
     {
       "id": "MC-250",
@@ -11142,13 +10420,14 @@
       "sizeLabel": "31 ตร.ม.",
       "type": "1 ห้องนอน",
       "beds": "1 ห้องนอน",
-      "floorRange": "11-20",
-      "floorBand": "mid",
+      "floor": "12",
+      "floorRange": "12",
+      "floorBand": null,
       "status": "OCCUPIED",
       "statusLabel": "กำลังจะว่าง · ว่าง 30 พ.ย.",
       "available": "2026-11-30",
       "pets": false,
-      "lastVerified": "2026-11-12",
+      "lastVerified": "2026-11-13",
       "amenities": [
         "สระว่ายน้ำ",
         "ฟิตเนส"
@@ -11162,56 +10441,7 @@
         "images/rooms/mc-250/4.webp",
         "images/rooms/mc-250/5.webp"
       ],
-      "unverified": [
-        "floor (band only)"
-      ]
-    },
-    {
-      "id": "MC-251",
-      "slug": "mc-251",
-      "project": "The Teak Sukhumvit 39",
-      "area": "พร้อมพงษ์",
-      "areaSlug": "phrom-phong",
-      "station": "BTS พร้อมพงษ์",
-      "walk": 20,
-      "walkSource": "estimate: straight-line from OSM building to station x1.3 / 80 m per min",
-      "lat": 13.7407141,
-      "lng": 100.5734826,
-      "coordApprox": false,
-      "coordSource": "existing MoveCondo listing (OpenStreetMap)",
-      "price": 20000,
-      "deposit": null,
-      "size": 35.3,
-      "sizeLabel": "35.3 ตร.ม.",
-      "type": "1 ห้องนอน",
-      "beds": "1 ห้องนอน",
-      "floorRange": "1-10",
-      "floorBand": "low",
-      "status": "OCCUPIED",
-      "statusLabel": "กำลังจะว่าง · ว่าง 6 มี.ค. 2570",
-      "available": "2027-03-06",
-      "pets": false,
-      "lastVerified": "2026-11-12",
-      "amenities": [
-        "ห้องมุม",
-        "วิวสวน",
-        "อ่างอาบน้ำ",
-        "เครื่องซักผ้า",
-        "สระว่ายน้ำ"
-      ],
-      "description": "ห้อง 1 ห้องนอน ขนาด 35.3 ตร.ม. ที่ The Teak Sukhumvit 39 ย่านพร้อมพงษ์ ห้องมุม วิวสวน อ่างอาบน้ำ เครื่องซักผ้า ว่างตั้งแต่ 6 มี.ค. 2570",
-      "descriptionEn": "1-bedroom, 35.3 sq.m. at The Teak Sukhumvit 39, Phrom Phong. Corner unit, Garden view, Bathtub, Washing machine. Available from 6 Mar 2027.",
-      "photos": [
-        "images/rooms/mc-251/1.webp",
-        "images/rooms/mc-251/2.webp",
-        "images/rooms/mc-251/3.webp",
-        "images/rooms/mc-251/4.webp",
-        "images/rooms/mc-251/5.webp",
-        "images/rooms/mc-251/6.webp"
-      ],
-      "unverified": [
-        "floor (band only)"
-      ]
+      "unverified": []
     }
   ]
 }

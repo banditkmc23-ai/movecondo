@@ -72,6 +72,7 @@ def thai_date_to_iso(txt):
 rooms = []
 for d in sorted(glob.glob("rooms/mc-*/")):
     slug = d.split("/")[1]; rid = slug.upper()
+    if "data-mc-removed" in read(f"{d}index.html")[:200]: continue  # redirect stub for a removed room
     L = listings[rid]; P = parse_room(slug)
     F = dict(P["facts"])
     type_th = F.get("แบบห้อง") or L.get("type")
@@ -310,6 +311,10 @@ def room_ld(r):
     if r["bedrooms"] is not None:
         ld["numberOfRooms"] = {"@type": "QuantitativeValue", "value": r["bedrooms"], "unitText": "ห้องนอน / bedrooms"}
         ld["numberOfBedrooms"] = r["bedrooms"]
+    L = listings.get(r["id"], {})
+    if L.get("bathrooms"): ld["numberOfBathroomsTotal"] = L["bathrooms"]
+    if L.get("livingRooms"):
+        ld["numberOfRooms"] = {"@type": "QuantitativeValue", "value": r["bedrooms"] + L["livingRooms"], "unitText": "ห้องนอน + ห้องนั่งเล่น / bedrooms + living rooms"}
     if r["floor_th"]: ld["floorLevel"] = r["floor_th"].replace("ชั้น ", "")
     ld.update({
         "address": {"@type": "PostalAddress", "addressLocality": r["area_th"], "addressRegion": "กรุงเทพมหานคร", "addressCountry": "TH"},

@@ -1821,3 +1821,4 @@
     .card[hidden] { display: none !important; }
     .load-more-wrap { display: flex; justify-content: center; margin: 22px 0 6px; }
     .load-more-wrap .load-more { min-width: 180px; }
+.card.soon-out{display:none!important}
