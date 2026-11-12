@@ -156,6 +156,35 @@
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:CentralPlaza_Grand_Rama_IX_-_Entrance.jpg",
       "credit": "Magnamonkun / CC BY 3.0",
       "note": "Downloaded from Wikimedia Commons, converted to WebP, stored locally. Screened for faces, phone numbers and personal details."
+    },
+    {
+      "slug": "bitec",
+      "file": "images/places/bitec.webp",
+      "names": [
+        "BITEC"
+      ],
+      "author": "Pescov",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commonsTitle": "File:BITEC.JPG",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:BITEC.JPG",
+      "credit": "Pescov / CC BY-SA 4.0",
+      "note": "Downloaded from Wikimedia Commons, converted to WebP, stored locally. Screened for faces, phone numbers and personal details."
+    },
+    {
+      "slug": "mega-bangna",
+      "file": "images/places/mega-bangna.webp",
+      "names": [
+        "เมกาบางนา",
+        "Mega Bangna"
+      ],
+      "author": "Sry85",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commonsTitle": "File:Maga Bangna 26-8-2017.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maga_Bangna_26-8-2017.jpg",
+      "credit": "Sry85 / CC BY-SA 4.0",
+      "note": "Downloaded from Wikimedia Commons, converted to WebP, stored locally. Screened for faces, phone numbers and personal details."
     }
   ]
 }

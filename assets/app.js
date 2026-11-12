@@ -788,6 +788,174 @@ function placeTime(p){
   const verb = p.mode || "เดิน";
   return verb + "ประมาณ " + p.minutes + " นาที";
 }
+const PLACE_PHOTOS = [
+  {
+    "slug": "benchasiri-park",
+    "file": "images/places/benchasiri-park.webp",
+    "names": [
+      "Benchasiri Park",
+      "สวนเบญจสิริ"
+    ],
+    "author": "Slyronit",
+    "license": "CC BY-SA 4.0",
+    "credit": "Slyronit / CC BY-SA 4.0",
+    "w": 1200,
+    "h": 900
+  },
+  {
+    "slug": "emquartier",
+    "file": "images/places/emquartier.webp",
+    "names": [
+      "EmQuartier"
+    ],
+    "author": "กสิณธร ราชโอรส",
+    "license": "CC BY-SA 4.0",
+    "credit": "กสิณธร ราชโอรส / CC BY-SA 4.0",
+    "w": 1200,
+    "h": 901
+  },
+  {
+    "slug": "emsphere",
+    "file": "images/places/emsphere.webp",
+    "names": [
+      "EmSphere"
+    ],
+    "author": "Dharmadana",
+    "license": "CC BY 4.0",
+    "credit": "Dharmadana / CC BY 4.0",
+    "w": 1200,
+    "h": 900
+  },
+  {
+    "slug": "terminal-21-asok",
+    "file": "images/places/terminal-21-asok.webp",
+    "names": [
+      "Terminal 21 Asok"
+    ],
+    "author": "Sry85",
+    "license": "CC BY-SA 3.0",
+    "credit": "Sry85 / CC BY-SA 3.0",
+    "w": 1200,
+    "h": 900
+  },
+  {
+    "slug": "gateway-ekkamai",
+    "file": "images/places/gateway-ekkamai.webp",
+    "names": [
+      "Gateway Ekamai",
+      "Gateway Ekkamai"
+    ],
+    "author": "Amin",
+    "license": "CC BY-SA 4.0",
+    "credit": "Amin / CC BY-SA 4.0",
+    "w": 1200,
+    "h": 1600
+  },
+  {
+    "slug": "iconsiam",
+    "file": "images/places/iconsiam.webp",
+    "names": [
+      "ICONSIAM"
+    ],
+    "author": "Slyronit",
+    "license": "CC BY-SA 4.0",
+    "credit": "Slyronit / CC BY-SA 4.0",
+    "w": 1200,
+    "h": 900
+  },
+  {
+    "slug": "lhong-1919",
+    "file": "images/places/lhong-1919.webp",
+    "names": [
+      "Lhong 1919"
+    ],
+    "author": "Supanut Arunoprayote",
+    "license": "CC BY 4.0",
+    "credit": "Supanut Arunoprayote / CC BY 4.0",
+    "w": 1200,
+    "h": 650
+  },
+  {
+    "slug": "central-bangna",
+    "file": "images/places/central-bangna.webp",
+    "names": [
+      "เซ็นทรัล บางนา"
+    ],
+    "author": "กสิณธร ราชโอรส",
+    "license": "CC BY-SA 4.0",
+    "credit": "กสิณธร ราชโอรส / CC BY-SA 4.0",
+    "w": 1200,
+    "h": 901
+  },
+  {
+    "slug": "benjakitti-park",
+    "file": "images/places/benjakitti-park.webp",
+    "names": [
+      "สวนเบญจกิติ"
+    ],
+    "author": "Slyronit",
+    "license": "CC BY-SA 4.0",
+    "credit": "Slyronit / CC BY-SA 4.0",
+    "w": 1200,
+    "h": 900
+  },
+  {
+    "slug": "suan-luang-rama-9",
+    "file": "images/places/suan-luang-rama-9.webp",
+    "names": [
+      "สวนหลวง ร.9"
+    ],
+    "author": "Boonlert",
+    "license": "CC0",
+    "credit": "Boonlert / CC0",
+    "w": 1200,
+    "h": 865
+  },
+  {
+    "slug": "central-rama-9",
+    "file": "images/places/central-rama-9.webp",
+    "names": [
+      "เซ็นทรัลพระราม 9"
+    ],
+    "author": "Magnamonkun",
+    "license": "CC BY 3.0",
+    "credit": "Magnamonkun / CC BY 3.0",
+    "w": 1200,
+    "h": 717
+  },
+  {
+    "slug": "bitec",
+    "file": "images/places/bitec.webp",
+    "names": [
+      "BITEC"
+    ],
+    "author": "Pescov",
+    "license": "CC BY-SA 4.0",
+    "credit": "Pescov / CC BY-SA 4.0",
+    "w": 600,
+    "h": 450
+  },
+  {
+    "slug": "mega-bangna",
+    "file": "images/places/mega-bangna.webp",
+    "names": [
+      "เมกาบางนา",
+      "Mega Bangna"
+    ],
+    "author": "Sry85",
+    "license": "CC BY-SA 4.0",
+    "credit": "Sry85 / CC BY-SA 4.0",
+    "w": 600,
+    "h": 450
+  }
+];
+function placePhotoFor(name){
+  const key = String(name||"").trim().toLowerCase();
+  return PLACE_PHOTOS.find(p => (p.names||[]).some(n => String(n).trim().toLowerCase()===key)) || null;
+}
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+}
 let famousFilter = { hood:"all", detail:"all" };
 const FAMOUS_CHIPS = [
   ["all","ทั้งหมด"],
@@ -819,14 +987,23 @@ function famousHTML(area, scope){
     if (id!=="all" && n===0) return "";
     return `<button type="button" class="chip ${filt===id?"on":""}" data-famous-filter="${id}" data-famous-scope="${scope}" aria-pressed="${filt===id?"true":"false"}">${label} (${n})</button>`;
   }).join("");
-  const cards = rows.length ? rows.map((p,i)=>`
-    <article class="famous-card">
-      <div class="ico">${placeKindIcon(p.category)}</div>
-      <div class="cat">${p.category}</div>
-      <h3>${p.name}</h3>
-      <div class="time">${placeTime(p)} · จาก ${p.station}</div>
-      <a class="maps" href="${mapsUrl(p)}" target="_blank" rel="noopener noreferrer">เปิดใน Google Maps</a>
-    </article>`).join("") : `<div class="famous-empty">ยังไม่มีรายการในหมวดนี้สำหรับย่าน${area}</div>`;
+  const withPhoto = rows.filter(p => placePhotoFor(p.name));
+  const withoutPhoto = rows.filter(p => !placePhotoFor(p.name));
+  const ordered = withPhoto.concat(withoutPhoto);
+  const usedPhotos = [];
+  withPhoto.forEach(p => {
+    const ph = placePhotoFor(p.name);
+    if (ph && !usedPhotos.some(u => u.slug===ph.slug)) usedPhotos.push(ph);
+  });
+  const cards = ordered.length ? ordered.map(p => {
+    const photo = placePhotoFor(p.name);
+    const body = `<div class="famous-body"><div class="cat">${escapeHtml(p.category)}</div><h3>${escapeHtml(p.name)}</h3><div class="time">${escapeHtml(placeTime(p))} · จาก ${escapeHtml(p.station||"")}</div><a class="maps" href="${mapsUrl(p)}" target="_blank" rel="noopener noreferrer">เปิดใน Google Maps</a></div>`;
+    if (photo) {
+      return `<article class="famous-card has-photo"><div class="famous-media"><img src="${SITE_BASE}${photo.file}" alt="${escapeHtml(p.name)}" width="${photo.w}" height="${photo.h}" loading="lazy" decoding="async"><span class="place-photo-credit">${escapeHtml(photo.credit)}</span></div>${body}</article>`;
+    }
+    return `<article class="famous-card is-text">${body}</article>`;
+  }).join("") : `<div class="famous-empty">ยังไม่มีรายการในหมวดนี้สำหรับย่าน${area}</div>`;
+  const photoNotes = usedPhotos.length ? `<details class="place-photo-notes"><summary>เครดิตภาพ</summary><p>ภาพ: ${usedPhotos.map(ph => `${escapeHtml(ph.author)} (${escapeHtml(ph.names[0])}), ${escapeHtml(ph.license)}, Wikimedia Commons`).join(" · ")}</p></details>` : "";
   return `
   <section class="famous" id="famous-${scope}">
     <div class="eyebrow">ร้านดังใกล้คอนโด</div>
@@ -835,6 +1012,7 @@ function famousHTML(area, scope){
     <div class="famous-filters" aria-label="กรองประเภทร้าน">${chips}</div>
     <div class="famous-grid">${cards}</div>
     <p class="famous-disclaimer">${NEARBY_NOTE} ระยะทางคิดจากสถานีรถไฟฟ้า ไม่ใช่จากอาคารคอนโด และไม่มีคะแนนหรือจำนวนรีวิวสมมติ</p>
+    ${photoNotes}
   </section>`;
 }
 function iconTransit(){ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11h16M6 11V8a4 4 0 014-4h4a4 4 0 014 4v3"/><path d="M6 16h.01M18 16h.01M5 11v5h14v-5"/><path d="M3 20h3M18 20h3"/></svg>`; }
