@@ -1,4 +1,4 @@
-/* MoveCondo reusable 3D neighborhood map (MapLibre + OpenFreeMap liberty).
+/* MoveCondo reusable 3D neighborhood map (MapLibre + OpenFreeMap positron).
  *
  * Area pages mount with data-map3d + data-src pointing at /data/maps/<slug>.json
  * (station + real nearby places, no fictional condos).
@@ -10,11 +10,13 @@
  * Condo markers use terracotta #B9532F and may be labelled "ตำแหน่งโดยประมาณ".
  */
 (function () {
-  const STYLE = "https://tiles.openfreemap.org/styles/liberty";
+  const STYLE = "https://tiles.openfreemap.org/styles/positron";
   const ML_JS = "https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js";
   const ML_CSS = "https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css";
   const CAT_TH = { shopping: "ช็อปปิ้ง", cafe: "คาเฟ่", restaurant: "ร้านอาหาร", bar: "บาร์", park: "สวน", spa: "สปา" };
-  const CAT_COLOR = { shopping: "#2F6B8A", cafe: "#C9862A", restaurant: "#9B3B2C", bar: "#5B3A6E", park: "#3F7A4C", spa: "#8A5A7A" };
+  const STATION_COLOR = "#3A3A3A";
+  const CONDO_COLOR = "#B9532F";
+  const PLACE_FILL = "#ffffff";
 
   function hasWebGL() {
     try {
@@ -75,10 +77,49 @@
       " ดูรายการสถานีและร้านดังด้านล่างได้เลย</p><ul>" + rows + "</ul></div>";
   }
 
+  // Hide clutter once Positron loads. Keep major roads, water, rail, and a few place labels.
+  const HIDE_LAYER_IDS = [
+    "building",
+    "highway_path",
+    "highway-name-path",
+    "highway-name-minor",
+    "highway-shield-non-us",
+    "highway-shield-us-interstate",
+    "road_shield_us",
+    "aeroway-taxiway",
+    "aeroway-runway-casing",
+    "aeroway-area",
+    "aeroway-runway",
+    "airport",
+    "label_other",
+    "label_village",
+    "label_state",
+    "waterway_line_label",
+    "landcover_ice_shelf",
+    "landcover_glacier"
+  ];
+
+  function minifyStyle(map) {
+    HIDE_LAYER_IDS.forEach((id) => {
+      if (map.getLayer(id)) {
+        try { map.setLayoutProperty(id, "visibility", "none"); } catch (e) {}
+      }
+    });
+    // Thin residential sois so major roads stay dominant.
+    if (map.getLayer("highway_minor")) {
+      try { map.setPaintProperty("highway_minor", "line-opacity", 0.35); } catch (e) {}
+    }
+  }
+
   function ensureBuildings(map) {
     if (map.getLayer("building-3d")) return;
     if (!map.getSource("openmaptiles")) return;
-    const before = map.getLayer("boundary_3") ? "boundary_3" : undefined;
+    if (map.getLayer("building")) {
+      try { map.setLayoutProperty("building", "visibility", "none"); } catch (e) {}
+    }
+    // Keep labels above the extrusion.
+    const before = map.getLayer("waterway_line_label") ? "waterway_line_label"
+      : (map.getLayer("boundary_3") ? "boundary_3" : undefined);
     const layer = {
       id: "building-3d",
       type: "fill-extrusion",
@@ -87,10 +128,10 @@
       minzoom: 14,
       filter: ["!", ["has", "hide_3d"]],
       paint: {
-        "fill-extrusion-color": "hsl(35,8%,85%)",
+        "fill-extrusion-color": "#e9e6e2",
         "fill-extrusion-height": ["coalesce", ["get", "render_height"], ["get", "height"], 8],
         "fill-extrusion-base": ["coalesce", ["get", "render_min_height"], ["get", "min_height"], 0],
-        "fill-extrusion-opacity": 0.8
+        "fill-extrusion-opacity": 0.42
       }
     };
     if (before) map.addLayer(layer, before);
@@ -138,7 +179,6 @@
       b.setAttribute("aria-pressed", "true");
       b.dataset.cat = k;
       const sw = el("span", "swatch");
-      sw.style.background = CAT_COLOR[k] || "#888";
       b.appendChild(sw);
       b.appendChild(document.createTextNode(CAT_TH[k] || k));
       chips.appendChild(b);
@@ -268,23 +308,23 @@
 
     function renderLegend() {
       const bits = [];
-      if (data.condo && data.condo.lat != null) bits.push('<div><i class="condo" style="background:#B9532F"></i>คอนโด</div>');
-      bits.push('<div><i style="background:#1F7A4D"></i>สถานี BTS</div>');
-      if ((data.stations || []).some((s) => s.system === "MRT")) bits.push('<div><i style="background:#1B57A5"></i>สถานี MRT</div>');
-      cats.forEach((k) => bits.push("<div><i style=\"background:" + (CAT_COLOR[k] || "#888") + "\"></i>" + (CAT_TH[k] || k) + "</div>"));
+      if (data.condo && data.condo.lat != null) bits.push('<div><i class="condo" style="background:' + CONDO_COLOR + '"></i>คอนโด</div>');
+      bits.push('<div><i class="station" style="background:' + STATION_COLOR + '"></i>สถานี</div>');
+      if (cats.length) bits.push('<div><i class="place"></i>ร้านดัง</div>');
       legend.innerHTML = bits.join("");
     }
     renderLegend();
 
     shell.__mcMap = map;
     map.on("load", () => {
+      minifyStyle(map);
       ensureBuildings(map);
       map.addSource("mc-walk", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
       map.addLayer({
         id: "mc-walk",
         type: "line",
         source: "mc-walk",
-        paint: { "line-color": "#B9532F", "line-width": 3, "line-dasharray": [2, 1.4], "line-opacity": 0.9 }
+        paint: { "line-color": "#5A5550", "line-width": 2.5, "line-dasharray": [2, 1.4], "line-opacity": 0.7 }
       });
       walkSrcReady = true;
 

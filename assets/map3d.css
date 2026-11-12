@@ -1,4 +1,4 @@
-/* MoveCondo 3D neighborhood map — local preview, not on the live push yet */
+/* MoveCondo 3D neighborhood map — OpenFreeMap positron, light extrusions */
 .map3d-section { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; padding: 8px 0 28px; }
 .map3d-section .section-head { margin-bottom: 14px; }
 .map3d-section .section-head h2 { letter-spacing: -.03em; font-weight: 600; }
@@ -23,7 +23,7 @@
   cursor: pointer;
 }
 .map3d-chip.on, .map3d-chip[aria-pressed="true"] { background: #B9532F; border-color: #B9532F; color: #fff; }
-.map3d-chip .swatch { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; box-shadow: 0 0 0 1px rgba(0,0,0,.08); }
+.map3d-chip .swatch { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; background: #fff; box-shadow: inset 0 0 0 1.5px #B9532F; }
 .map3d-reset {
   border: 1px solid #E0DAD2; background: #fff; border-radius: 999px;
   padding: 5px 12px; font: 600 12.5px/1.2 inherit; cursor: pointer; white-space: nowrap;
@@ -50,26 +50,36 @@
 .map3d-legend div { display: flex; align-items: center; gap: 7px; margin: 3px 0; }
 .map3d-legend i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; box-shadow: 0 0 0 2px #fff, 0 0 0 3px rgba(0,0,0,.06); }
 .map3d-legend i.condo { width: 12px; height: 12px; border-radius: 4px; }
+.map3d-legend i.station { background: #3A3A3A; }
+.map3d-legend i.place { width: 8px; height: 8px; background: #fff; box-shadow: inset 0 0 0 1.5px #B9532F; }
 .map3d-attr {
   position: absolute; right: 8px; bottom: 4px; z-index: 2;
   font-size: 10px; color: #5b524c; background: rgba(255,255,255,.8);
   padding: 1px 6px; border-radius: 4px;
 }
-/* markers */
+/* markers: terracotta only on the condo pin; stations dark gray; places small outlined dots */
 .mc-marker { border: 0; background: transparent; padding: 0; cursor: pointer; }
 .mc-marker .pin {
   width: 16px; height: 16px; border-radius: 50%;
-  border: 2px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,.28);
+  box-shadow: 0 1px 4px rgba(0,0,0,.22);
 }
-.mc-marker.station .pin { width: 20px; height: 20px; background: #1F7A4D; }
-.mc-marker.station.mrt .pin { background: #1B57A5; }
-.mc-marker.condo .pin { width: 22px; height: 22px; border-radius: 6px; background: #B9532F; }
-.mc-marker.shopping .pin { background: #2F6B8A; }
-.mc-marker.cafe .pin { background: #C9862A; }
-.mc-marker.restaurant .pin { background: #9B3B2C; }
-.mc-marker.bar .pin { background: #5B3A6E; }
-.mc-marker.park .pin { background: #3F7A4C; }
-.mc-marker.spa .pin { background: #8A5A7A; }
+.mc-marker.station .pin,
+.mc-marker.station.mrt .pin {
+  width: 16px; height: 16px;
+  background: #3A3A3A;
+  border: 2px solid #fff;
+}
+.mc-marker.condo .pin {
+  width: 22px; height: 22px; border-radius: 6px;
+  background: #B9532F;
+  border: 2px solid #fff;
+}
+.mc-marker.place .pin {
+  width: 8px; height: 8px;
+  background: #fff;
+  border: 1.5px solid #B9532F;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2);
+}
 .mc-marker .lbl {
   position: absolute; left: 50%; top: 100%; transform: translate(-50%, 3px);
   white-space: nowrap; font: 600 11px/1.2 "Prompt","Noto Sans Thai",sans-serif;
