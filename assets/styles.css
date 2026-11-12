@@ -1625,7 +1625,7 @@
       .match-step-h strong { margin-left: 0; width: 100%; }
     }
 
-    /* Home hero visual — photo on the right (desktop), under copy on smaller screens */
+    /* Home hero visual — full-bleed photo on top (<1024), image on the right (desktop) */
     .hero-copy { min-width: 0; }
     .hero-visual {
       margin-top: 28px;
@@ -1634,6 +1634,7 @@
       background: #F6EFE9;
       min-width: 0;
       max-width: 100%;
+      position: relative;
     }
     .hero-visual img {
       display: block;
@@ -1643,12 +1644,62 @@
       object-fit: cover;
       object-position: 62% 42%;
     }
-    @media (min-width: 700px) and (max-width: 1023px) {
-      .hero-visual img { height: 280px; }
+    @media (max-width: 1023px) {
+      .hero {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 0 28px;
+        border-radius: 0;
+      }
+      .hero-visual {
+        order: -1;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 320px;
+        border-radius: 0;
+        background: #F6EFE9;
+      }
+      .hero-visual img {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: 58% 36%;
+      }
+      .hero-visual::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 40%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255,255,255,0) 0%,
+          rgba(255,255,255,.45) 40%,
+          rgba(255,255,255,.88) 72%,
+          #fff 100%
+        );
+        pointer-events: none;
+      }
+      .hero-copy {
+        position: relative;
+        z-index: 1;
+        margin-top: -64px;
+        padding: 0 24px 8px;
+      }
     }
-    @media (max-width: 390px) {
-      .hero-visual { margin-top: 20px; border-radius: 20px; }
-      .hero-visual img { height: 180px; }
+    @media (max-width: 640px) {
+      .hero-visual { height: 300px; }
+      .hero-copy { margin-top: -56px; padding: 0 16px 8px; }
+    }
+    @media (min-width: 700px) and (max-width: 1023px) {
+      .hero-visual { height: 340px; }
+      .hero-copy { margin-top: -72px; padding: 0 32px 12px; }
     }
     @media (min-width: 1024px) {
       .hero {
@@ -1658,12 +1709,14 @@
         align-items: center;
         padding: 56px 0 32px;
       }
-      .hero-copy { display: flex; flex-direction: column; justify-content: center; }
+      .hero-copy { display: flex; flex-direction: column; justify-content: center; margin-top: 0; padding: 0; }
       .hero-visual {
+        order: 0;
         margin-top: 0;
         height: 420px;
         border-radius: 24px;
       }
+      .hero-visual::after { display: none; }
       .hero-visual img {
         height: 100%;
         object-position: 40% 58%;

@@ -1110,8 +1110,8 @@ function homeView(){
     </div>
     <div class="hero-visual">
       <img
-        src="images/hero-home-sm.webp?v=20261112x"
-        srcset="images/hero-home-sm.webp?v=20261112x 700w, images/hero-home.webp?v=20261112x 1200w"
+        src="images/hero-home-sm.webp?v=20261112z"
+        srcset="images/hero-home-sm.webp?v=20261112z 700w, images/hero-home.webp?v=20261112z 1200w"
         sizes="(min-width: 1024px) 50vw, 100vw"
         width="1200"
         height="900"
