@@ -545,7 +545,7 @@
       main:has(+ .sticky-cta.show) { padding-bottom: 132px; }
       .wrap, .hero, .trust, .section, .page-hero, .form-card, .detail, .hood, .faq-wrap, .gallery-hero, .detail-subnav, .contact-cta, .crumbs, .room-intro { width: calc(100% - 32px); max-width: 100%; }
       .app-inner { width: calc(100% - 32px); }
-      .grid, .trust, .steps, .area-guide, .fields, .facts { grid-template-columns: minmax(0, 1fr); }
+      .grid, .trust, .steps, .area-guide, .fields { grid-template-columns: minmax(0, 1fr); }
       .hero { margin-top: 8px; padding: 32px 0 12px; }
       .hero-actions { gap: 10px; }
       .hero-actions .btn { min-width: 0; flex: 1 1 auto; }
@@ -910,6 +910,47 @@
     .listing-full-body { color: #4A433E; font-size: 14px; line-height: 1.7; padding: 4px 0 8px; }
     .listing-full-body p { margin: 0 0 12px; }
     .listing-full-body p:last-child { margin-bottom: 0; }
+
+    .room-facts {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 0 20px;
+      margin: 8px 0 4px;
+      min-width: 0;
+    }
+    .room-facts > div {
+      min-width: 0;
+      padding: 12px 0;
+      border-top: 1px solid #EFEAE4;
+    }
+    .room-facts > div span {
+      display: block;
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .room-facts > div b {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+    .room-facts-updated {
+      margin: 8px 0 0;
+      font-size: 12.5px;
+      font-weight: 400;
+      color: var(--muted);
+    }
+    @media (max-width: 640px) {
+      .room-facts,
+      .detail-more .room-facts,
+      .detail-more .facts {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      }
+    }
+
     @media (max-width: 700px) {
       .detail-more { padding: 22px 18px 26px; }
       .feature-list { grid-template-columns: 1fr; gap: 8px; }
@@ -1433,15 +1474,29 @@
       scroll-margin-top: calc(var(--header-h) + 12px);
     }
 
-    /* Home / area: keep the AI chip from covering card meta on mobile */
-    @media (max-width: 700px) {
+    /* Home / area: compact icon-only AI chip under 400px; never cover text */
+    @media (max-width: 400px) {
       body:not(.room-page) .ai-fab {
-        width: 52px; min-width: 52px; height: 52px; min-height: 52px;
+        width: 44px; min-width: 44px; height: 44px; min-height: 44px;
         padding: 0; justify-content: center; gap: 0;
         font-size: 0; line-height: 0;
-        bottom: 28px; right: 14px;
+        border-radius: 50%;
+        right: 14px;
+        bottom: calc(16px + env(safe-area-inset-bottom, 0px));
       }
-      body:not(.room-page) .ai-fab .mark { width: 28px; height: 28px; font-size: 16px; }
-      body:not(.room-page) .card-body .meta { padding-right: 64px; }
-      body:not(.room-page) main { padding-bottom: 88px; }
+      body:not(.room-page) .ai-fab .mark { width: 26px; height: 26px; }
+      body:not(.room-page) main {
+        padding-bottom: calc(44px + 16px + 24px + env(safe-area-inset-bottom, 0px));
+      }
+      /* Hidden until JS confirms the resting spot does not cover text */
+      body:not(.room-page) .ai-fab:not(.ai-fab--clear):not(.ai-fab--measure) {
+        visibility: hidden;
+        pointer-events: none;
+        bottom: -120px;
+      }
+      body:not(.room-page) .ai-fab.ai-fab--measure {
+        visibility: hidden;
+        pointer-events: none;
+        bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+      }
     }

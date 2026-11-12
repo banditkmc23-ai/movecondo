@@ -1274,6 +1274,7 @@ function render(){
   }
   window.scrollTo(0,0);
   if (window.MoveCondoCarousel) window.MoveCondoCarousel.scan();
+  if (window.__movecondoFabGuard) window.__movecondoFabGuard();
 }
 
 
@@ -1554,8 +1555,63 @@ function shouldDemoAI(){
   return q.get("ai")==="demo" || hq.get("ai")==="demo";
 }
 
+
+function setupAiFabCollisionGuard(){
+  if (document.body.classList.contains("room-page")) return;
+  const fab = document.querySelector(".ai-fab");
+  if (!fab) return;
+  const TEXT_SEL = "p, h1, h2, h3, h4, h5, h6, li, label, figcaption, dt, dd, .meta, .price, .lead, .nearby-lead, .hero-kicker, .hero-phrase, .badge-vacant, .place-meta, .place-chip, .place-maps, .section-head p, .page-hero p, footer p, footer a, .faq summary, .faq p, .crumbs, .chip, .btn, .hero-actions a";
+  const mq = window.matchMedia("(max-width: 400px)");
+  let ticking = false;
+  function overlaps(a, b){
+    return a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
+  }
+  function update(){
+    ticking = false;
+    if (!mq.matches){
+      fab.classList.remove("ai-fab--clear", "ai-fab--measure");
+      return;
+    }
+    fab.classList.remove("ai-fab--clear");
+    fab.classList.add("ai-fab--measure");
+    const gap = 8;
+    const fr = fab.getBoundingClientRect();
+    const box = { left: fr.left - gap, right: fr.right + gap, top: fr.top - gap, bottom: fr.bottom + gap };
+    let hit = false;
+    const nodes = document.querySelectorAll(TEXT_SEL);
+    for (let i = 0; i < nodes.length; i++){
+      const el = nodes[i];
+      if (fab.contains(el)) continue;
+      const r = el.getBoundingClientRect();
+      if (r.width < 1 || r.height < 1) continue;
+      if (r.bottom < 0 || r.top > window.innerHeight || r.right < 0 || r.left > window.innerWidth) continue;
+      if (overlaps(box, r)){ hit = true; break; }
+    }
+    fab.classList.remove("ai-fab--measure");
+    fab.classList.toggle("ai-fab--clear", !hit);
+  }
+  function requestUpdate(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(update);
+  }
+  window.__movecondoFabGuard = requestUpdate;
+  window.addEventListener("scroll", requestUpdate, { passive: true, capture: true });
+  window.addEventListener("resize", requestUpdate);
+  window.addEventListener("hashchange", () => setTimeout(requestUpdate, 50));
+  if (mq.addEventListener) mq.addEventListener("change", requestUpdate);
+  else if (mq.addListener) mq.addListener(requestUpdate);
+  if (window.visualViewport){
+    visualViewport.addEventListener("resize", requestUpdate);
+    visualViewport.addEventListener("scroll", requestUpdate);
+  }
+  requestUpdate();
+  setTimeout(requestUpdate, 300);
+  setTimeout(requestUpdate, 1000);
+}
+
 window.addEventListener("hashchange", render);
-window.addEventListener("DOMContentLoaded", ()=>{ render(); if (shouldDemoAI()) openAI({demo:true}); });
+window.addEventListener("DOMContentLoaded", ()=>{ render(); if (shouldDemoAI()) openAI({demo:true}); setupAiFabCollisionGuard(); });
 
 document.addEventListener("click", (e)=>{
   const listing = e.target.closest("[data-open-listing]");
