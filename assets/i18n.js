@@ -289,6 +289,7 @@
   }
 
   var RULES = [
+    [/^ประมาณ (\d+) นาที · มีรถ shuttle$/, function (m) { return "About " + m[1] + " min · shuttle"; }],
     [/^พบ (\d+) ห้อง$/, function (m) { return m[1] + plural(m[1], " room found", " rooms found"); }],
     [/^ดู (\d+) ห้อง$/, function (m) { return "Show " + m[1] + plural(m[1], " room", " rooms"); }],
     [/^(\d+) ห้อง$/, function (m) { return m[1] + plural(m[1], " room", " rooms"); }],

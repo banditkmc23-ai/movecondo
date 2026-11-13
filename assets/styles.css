@@ -1938,3 +1938,20 @@ html.fs-open, html.fs-open body { overflow: hidden; }
 .hero-suggest-project { flex-direction: column; align-items: flex-start; gap: 2px; }
 .hero-suggest-project span { white-space: normal; }
 @media (min-width: 1024px) { .search-side .ff-presets .sel-chip { padding: 6px 11px; } }
+
+/* Room facts ("รายละเอียด · Detail"): label and value on one line */
+.room-facts > div { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; padding: 11px 0; }
+.room-facts > div span { flex: none; margin: 0; font-size: 13.5px; line-height: 1.4; white-space: nowrap; }
+.room-facts > div b { flex: 0 1 auto; min-width: 0; text-align: right; line-height: 1.4; overflow-wrap: normal; word-break: keep-all; }
+@media (max-width: 899px) {
+  .room-facts, .detail-more .room-facts { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 480px) {
+  .room-facts > div { gap: 8px; }
+  .room-facts > div span { font-size: 13px; }
+  .room-facts > div b { font-size: 14.5px; letter-spacing: -.01em; }
+}
+@media (max-width: 385px) {
+  .room-facts > div span { font-size: 12.5px; }
+  .room-facts > div b { font-size: 14px; }
+}
