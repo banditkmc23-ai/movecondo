@@ -94,13 +94,18 @@
       return q.replace(/[0-9๐-๙]{6,}/g, "").replace(/\s+/g, " ").trim().slice(0, 60).trim();
     }
     var via = "submit", sentQ = {};
-    function sendSearch(q, num, how) {
+    function sendSearch(q, num, how, extra) {
       q = clean(q); if (!q || sentQ[pv + q]) return; sentQ[pv + q] = 1;
-      ev("search", { q: q, n: Math.max(0, Math.min(999, num | 0)), via: how });
+      var p = { q: q, n: Math.max(0, Math.min(999, num | 0)), via: how };
+      if (extra) for (var k in extra) p[k] = extra[k];
+      if (JSON.stringify(p).length > 480) { delete p.f; }
+      ev("search", p);
     }
     function results() {
       var home = d.getElementById("view-home");
-      return !home ? 0 : home.querySelector(".search-empty") ? 0 : home.querySelectorAll(".grid .card").length;
+      if (!home || home.querySelector(".search-empty")) return 0;
+      var c = home.querySelector(".search-count"), m = c && /(\d+)/.exec(c.textContent || "");
+      return m ? +m[1] : home.querySelectorAll(".grid .card").length;
     }
     function searchCheck() {
       var m = /[?&]q=([^&]*)/.exec(location.hash || "");
@@ -127,12 +132,13 @@
     d.addEventListener("click", function (e) {
       var t = e.target && e.target.closest ? e.target : null; if (!t) return;
       if (t.closest("[data-search-area]")) via = "area";
+      else if (t.closest("[data-search-station]")) via = "suggest";
       else if (t.closest("[data-search-apply]")) via = "all";
       var sug = t.closest(".hero-suggest-item[href]");
-      if (sug && /rooms\/mc-\d{3}/.test(sug.getAttribute("href") || "")) {
+      if (sug && /rooms\/mc-\d{3}|\/condo\//.test(sug.getAttribute("href") || "")) {
         var box = sug.closest(".hero-search"), inp = box && box.querySelector(".hero-search-input");
         var all = box && box.querySelector(".hero-suggest-all"), cnt = all ? parseInt((all.textContent.match(/\d+/) || ["0"])[0], 10) : box ? box.querySelectorAll(".hero-suggest-item[href*='rooms/']").length : 1;
-        if (inp) sendSearch(inp.value, cnt, "suggest");
+        if (inp) sendSearch(inp.value, cnt, /\/condo\//.test(sug.getAttribute("href") || "") ? "suggest" : "suggest");
       }
       var a = t.closest('a[href*="line.me"]');
       if (a) {
@@ -149,6 +155,18 @@
     d.addEventListener("touchend", function (e) { var p = e.changedTouches && e.changedTouches[0]; if (sx != null && p && Math.abs(p.clientX - sx) > 30 && Math.abs(p.clientX - sx) > Math.abs(p.clientY - sy)) swiped(st); sx = null; }, { passive: true, capture: true });
     d.addEventListener("pointerdown", function (e) { if (e.pointerType === "mouse") { st = e.target; sx = e.clientX; sy = e.clientY; } }, true);
     d.addEventListener("pointerup", function (e) { if (e.pointerType === "mouse" && sx != null && Math.abs(e.clientX - sx) > 30 && Math.abs(e.clientX - sx) > Math.abs(e.clientY - sy)) swiped(st); if (e.pointerType === "mouse") sx = null; }, true);
+    // ---- advanced-search filters (numbers, room types and station names only) ----
+    var fT = null;
+    d.addEventListener("mc:search-filters", function (e) {
+      var x = e.detail || {}; clearTimeout(fT);
+      fT = setTimeout(function () {
+        var n = function (v) { v = Math.round(+v || 0); return v > 0 && v < 1e7 ? v : 0; };
+        var list = function (a, k) { return (Array.isArray(a) ? a : []).map(function (v) { return String(v).slice(0, 40); }).filter(function (v) { return !/@|\d{6,}/.test(v); }).slice(0, k); };
+        // The stats table only accepts the existing event names, so filters ride along on a keyword "search" event.
+        if (!x.q) return;
+        sendSearch(x.q, x.n, "all", { f: { pmin: n(x.pmin), pmax: n(x.pmax), smin: n(x.smin), smax: n(x.smax), type: list(x.type, 4), st: list(x.st, 4), sort: String(x.sort || "rec").slice(0, 12) } });
+      }, 900);
+    });
     // ---- start -----------------------------------------------------------------
     function go() { (w.requestIdleCallback || function (f) { setTimeout(f, 1500); })(pageview, { timeout: 4000 }); }
     if (d.readyState === "complete") go(); else w.addEventListener("load", go);
