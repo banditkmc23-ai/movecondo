@@ -9,3 +9,11 @@
 -- RLS on; anon/authenticated: column-limited INSERT with check (status='new' and admin_note is null and consent);
 -- authenticated: SELECT + UPDATE(status, admin_note) only when private.is_stats_admin().
 -- Trigger private.partner_rate_limit(): max 3 per email/phone per hour, 30 total per 10 minutes.
+
+-- Migration partner_applications_coagent (2026-11-13)
+-- business_type may be 'coagent'; interests ⊆ {ads, coagent, listing, other} (1–4 items)
+-- New optional columns: agent_rooms ('1-5','6-20','21-50','50+'), agent_kind ('independent','company'),
+--   agent_years smallint 0–60, owner_permission boolean.
+-- Check partner_applications_agent_fields_check: agent_* / owner_permission must be null unless 'coagent' = any(interests).
+-- grant insert (agent_rooms, agent_kind, agent_years, owner_permission) to anon, authenticated.
+-- Commission split is never stored or published: agreed case by case.

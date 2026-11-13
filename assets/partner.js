@@ -17,6 +17,7 @@
     interests: ["เลือกอย่างน้อย 1 เรื่องที่สนใจ", "Choose at least one interest"],
     website: ["ลิงก์เว็บไซต์ยาวเกินไป", "Website link is too long"],
     consent: ["กรุณายืนยันการให้ข้อมูล", "Please tick the consent box"],
+    agent_years: ["ประสบการณ์ต้องเป็นตัวเลข 0–60 ปี", "Experience must be a number from 0 to 60 years"],
     fast: ["ส่งเร็วเกินไป ลองอีกครั้งใน 1 นาที", "Please wait a minute before sending again"],
     rate: ["ส่งใบสมัครบ่อยเกินไป ลองใหม่ภายหลัง หรือทัก LINE ได้เลย", "Too many applications. Try again later or message us on LINE."],
     fail: ["ส่งไม่สำเร็จ ลองอีกครั้ง หรือทัก LINE ได้เลย", "Could not send. Try again or message us on LINE."],
@@ -24,6 +25,22 @@
   };
   function msg(k) { return M[k][EN ? 1 : 0]; }
   form.querySelectorAll("option[data-th]").forEach(function (o) { o.textContent = EN ? o.getAttribute("data-en") : o.getAttribute("data-th"); });
+  // Co-Agent: extra optional fields appear when Co-Agent is chosen as the type or an interest
+  var co = document.getElementById("pfCo");
+  function isCo() { return form.elements.business_type.value === "coagent" || !!form.querySelector('input[name="interests"][value="coagent"]:checked'); }
+  function syncCo() { var on = isCo(); co.hidden = !on; form.classList.toggle("is-coagent", on); }
+  form.addEventListener("change", function (e) {
+    if (e.target.name === "business_type" && e.target.value === "coagent") { var c = form.querySelector('input[name="interests"][value="coagent"]'); if (c) c.checked = true; }
+    syncCo();
+  });
+  function presetCo() {
+    form.elements.business_type.value = "coagent";
+    var c = form.querySelector('input[name="interests"][value="coagent"]'); if (c) c.checked = true;
+    syncCo();
+  }
+  document.addEventListener("click", function (e) { if (e.target.closest && e.target.closest("[data-coagent-apply]")) presetCo(); });
+  if (/^#(co-agent|coagent)$/.test(location.hash) && /[?&]apply=1/.test(location.search)) presetCo();
+  syncCo();
   function v(n) { var el = form.elements[n]; return el ? String(el.value || "").trim() : ""; }
   function checked(n) { return Array.prototype.map.call(form.querySelectorAll('input[name="' + n + '"]:checked'), function (i) { return i.value; }); }
   function bad(name, key) {
@@ -42,6 +59,15 @@
       areas: checked("areas").slice(0, 20), interests: checked("interests"), website: v("website") || null,
       message: v("message") || null, consent: !!form.elements.consent.checked, lang: EN ? "en" : "th"
     };
+    if (d.interests.indexOf("coagent") === -1 && d.business_type === "coagent") d.interests.push("coagent");
+    if (d.interests.indexOf("coagent") !== -1) {
+      var yrs = v("agent_years"), kind = form.querySelector('input[name="agent_kind"]:checked');
+      d.agent_rooms = v("agent_rooms") || null;
+      d.agent_kind = kind ? kind.value : null;
+      d.agent_years = yrs === "" ? null : +yrs;
+      d.owner_permission = form.elements.owner_permission.checked ? true : null;
+      if (d.agent_years != null && !(Number.isInteger(d.agent_years) && d.agent_years >= 0 && d.agent_years <= 60)) return bad("agent_years");
+    }
     var digits = d.phone.replace(/\D/g, "");
     if (d.business_name.length < 2 || d.business_name.length > 120) return bad("business_name");
     if (!d.business_type) return bad("business_type");

@@ -97,6 +97,8 @@
     .pa dt { color:var(--mute); }
     .pa dd { margin:0; overflow-wrap:anywhere; white-space:pre-wrap; }
     .st { font:inherit; font-size:13px; border:1px solid var(--line); border-radius:999px; padding:4px 10px; background:#fff; }
+    .seg-st { display:flex; gap:8px; flex-wrap:wrap; }
+    .co-tag { display:inline-block; font-size:11.5px; font-weight:600; color:#fff; background:var(--ac); border-radius:999px; padding:1px 8px; vertical-align:middle; margin-left:6px; }
     .st-new { border-color:var(--ac); color:var(--ac); }
     .st-contacted { border-color:#9A5B12; color:#9A5B12; }
     .st-done { border-color:#047A34; color:#047A34; }
@@ -264,6 +266,7 @@
       <div class="pa-tools">
         <div class="seg-st" role="group" aria-label="สถานะ">
           <select class="st" id="pa-filter" aria-label="กรองสถานะ"><option value="">ทุกสถานะ</option><option value="new">ใหม่</option><option value="contacted">ติดต่อแล้ว</option><option value="done">เสร็จแล้ว</option></select>
+          <select class="st" id="pa-type" aria-label="กรองประเภท"><option value="">ทุกประเภท</option><option value="coagent">Co-Agent</option><option value="ads">ลงโฆษณา</option><option value="listing">ฝากห้อง</option><option value="other">ร่วมมืออื่น ๆ</option></select>
         </div>
         <div style="display:flex;gap:8px"><button class="btn" type="button" id="pa-reload">รีเฟรช</button><button class="btn btn-primary" type="button" id="pa-csv">ดาวน์โหลด CSV</button></div>
       </div>
@@ -532,8 +535,10 @@
 
   // ---- Partner applications ------------------------------------------------
   var PA = [], paLoaded = false;
-  var PA_TYPES = { shop: "ร้านค้า", restaurant: "ร้านอาหาร / คาเฟ่", moving: "บริการขนย้าย", cleaning: "ทำความสะอาด", furniture: "เฟอร์นิเจอร์ / ของแต่งบ้าน", owner: "เจ้าของห้อง", other: "อื่น ๆ" };
-  var PA_INT = { ads: "ลงโฆษณา", listing: "ฝากห้องปล่อยเช่า", other: "ร่วมมืออื่น ๆ" };
+  var PA_TYPES = { shop: "ร้านค้า", restaurant: "ร้านอาหาร / คาเฟ่", moving: "บริการขนย้าย", cleaning: "ทำความสะอาด", furniture: "เฟอร์นิเจอร์ / ของแต่งบ้าน", owner: "เจ้าของห้อง", coagent: "Co-Agent / นายหน้า", other: "อื่น ๆ" };
+  var PA_INT = { ads: "ลงโฆษณา", coagent: "Co-Agent", listing: "ฝากห้องปล่อยเช่า", other: "ร่วมมืออื่น ๆ" };
+  var PA_KIND = { independent: "นายหน้าอิสระ", company: "บริษัทนายหน้า" };
+  function paIs(a, k) { return k === "coagent" ? (a.business_type === "coagent" || (a.interests || []).indexOf("coagent") !== -1) : (a.interests || []).indexOf(k) !== -1; }
   var PA_ST = { "new": "ใหม่", contacted: "ติดต่อแล้ว", done: "เสร็จแล้ว" };
   function rest(path, opt) {
     return token().then(function (t) {
@@ -544,19 +549,19 @@
   function paDate(s) { try { return new Date(s).toLocaleString("th-TH", { timeZone: "Asia/Bangkok", dateStyle: "medium", timeStyle: "short" }); } catch (e) { return s; } }
   function paLink(u) { u = String(u || ""); var h = /^https?:\/\//i.test(u) ? u : (/^[\w.-]+\.[a-z]{2,}(\/|$)/i.test(u) ? "https://" + u : ""); return h ? '<a href="' + esc(h) + '" target="_blank" rel="noopener noreferrer nofollow">' + esc(u) + "</a>" : esc(u); }
   function paRender() {
-    var f = $("pa-filter").value, list = PA.filter(function (a) { return !f || a.status === f; });
+    var f = $("pa-filter").value, ty = $("pa-type").value, list = PA.filter(function (a) { return (!f || a.status === f) && (!ty || paIs(a, ty)); });
     var nNew = PA.filter(function (a) { return a.status === "new"; }).length;
     $("pa-cnt").hidden = !nNew; $("pa-cnt").textContent = nNew;
     $("pa-status").textContent = PA.length ? ("ทั้งหมด " + PA.length + " ใบสมัคร · ใหม่ " + nNew) : "ยังไม่มีใบสมัคร";
     $("pa-list").innerHTML = list.map(function (a) {
       var opts = Object.keys(PA_ST).map(function (k) { return '<option value="' + k + '"' + (a.status === k ? " selected" : "") + ">" + PA_ST[k] + "</option>"; }).join("");
       var row = function (k, v) { return v ? "<dt>" + k + "</dt><dd>" + v + "</dd>" : ""; };
-      return '<article class="pa"><div class="pa-top"><div><h3>' + esc(a.business_name) + '</h3><div class="meta">' + esc(PA_TYPES[a.business_type] || a.business_type) + " · " + esc(paDate(a.created_at)) + (a.lang === "en" ? " · EN" : "") + '</div></div>' +
+      return '<article class="pa"><div class="pa-top"><div><h3>' + esc(a.business_name) + (paIs(a, "coagent") ? ' <span class="co-tag">Co-Agent</span>' : "") + '</h3><div class="meta">' + esc(PA_TYPES[a.business_type] || a.business_type) + " · " + esc(paDate(a.created_at)) + (a.lang === "en" ? " · EN" : "") + '</div></div>' +
         '<select class="st st-' + esc(a.status) + '" data-pa="' + a.id + '" aria-label="สถานะ">' + opts + "</select></div><dl>" +
         row("ผู้ติดต่อ", esc(a.contact_name)) + row("โทร", '<a href="tel:' + esc(a.phone.replace(/[^0-9+]/g, "")) + '">' + esc(a.phone) + "</a>") +
         row("อีเมล", '<a href="mailto:' + esc(a.email) + '">' + esc(a.email) + "</a>") + row("LINE ID", a.line_id ? esc(a.line_id) : "") +
         row("สนใจ", esc((a.interests || []).map(function (x) { return PA_INT[x] || x; }).join(", "))) + row("ทำเล", esc((a.areas || []).join(", "))) +
-        row("เว็บไซต์", a.website ? paLink(a.website) : "") + row("ข้อความ", a.message ? esc(a.message) : "") + "</dl></article>";
+        (paIs(a, "coagent") ? row("ห้องในมือ", a.agent_rooms ? esc(a.agent_rooms) + " ห้อง" : "") + row("รูปแบบ", esc(PA_KIND[a.agent_kind] || "")) + row("ประสบการณ์", a.agent_years != null ? esc(a.agent_years) + " ปี" : "") + row("สิทธิ์เจ้าของ", a.owner_permission ? "ยืนยันว่าได้รับอนุญาตจากเจ้าของแล้ว" : "ยังไม่ยืนยัน") : "") + row("เว็บไซต์", a.website ? paLink(a.website) : "") + row("ข้อความ", a.message ? esc(a.message) : "") + "</dl></article>";
     }).join("");
   }
   function paLoad() {
@@ -572,6 +577,7 @@
   }
   Array.prototype.forEach.call(document.querySelectorAll(".tabs button"), function (b) { b.addEventListener("click", function () { tab(b.dataset.tab); }); });
   $("pa-filter").addEventListener("change", paRender);
+  $("pa-type").addEventListener("change", paRender);
   $("pa-reload").addEventListener("click", paLoad);
   $("pa-list").addEventListener("change", function (e) {
     var sel = e.target.closest("select[data-pa]"); if (!sel) return;
@@ -581,9 +587,9 @@
       .catch(function () { alert("บันทึกสถานะไม่สำเร็จ"); sel.disabled = false; });
   });
   $("pa-csv").addEventListener("click", function () {
-    var cols = ["created_at", "status", "business_name", "business_type", "contact_name", "phone", "email", "line_id", "interests", "areas", "website", "message", "lang"];
+    var cols = ["created_at", "status", "business_name", "business_type", "contact_name", "phone", "email", "line_id", "interests", "areas", "website", "message", "agent_rooms", "agent_kind", "agent_years", "owner_permission", "lang"];
     var q = function (v) { v = Array.isArray(v) ? v.join("; ") : (v == null ? "" : String(v)); if (/^[=+\-@]/.test(v)) v = "'" + v; return '"' + v.replace(/"/g, '""') + '"'; };
-    var csv = "\ufeff" + cols.join(",") + "\n" + PA.map(function (a) { return cols.map(function (c) { return q(c === "created_at" ? paDate(a[c]) : c === "business_type" ? (PA_TYPES[a[c]] || a[c]) : c === "status" ? PA_ST[a[c]] : a[c]); }).join(","); }).join("\n");
+    var csv = "\ufeff" + cols.join(",") + "\n" + PA.map(function (a) { return cols.map(function (c) { return q(c === "created_at" ? paDate(a[c]) : c === "business_type" ? (PA_TYPES[a[c]] || a[c]) : c === "status" ? PA_ST[a[c]] : c === "agent_kind" ? (PA_KIND[a[c]] || "") : c === "owner_permission" ? (a[c] ? "yes" : "") : c === "interests" ? (a[c] || []).map(function (x) { return PA_INT[x] || x; }) : a[c]); }).join(","); }).join("\n");
     var url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" })), link = document.createElement("a");
     link.href = url; link.download = "movecondo-partners-" + new Date().toISOString().slice(0, 10) + ".csv"; document.body.appendChild(link); link.click(); link.remove(); setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
   });
