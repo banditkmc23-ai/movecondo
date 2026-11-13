@@ -29,6 +29,10 @@ def write(p, s):
 def un(s): return html.unescape(re.sub(r"\s+", " ", s)).strip()
 
 listings = {r["id"]: r for r in json.load(open("data/listings.json", encoding="utf-8"))["rooms"]}
+# condo project pages (condo/<slug>/) + data/projects.json are rebuilt first so everything stays in sync
+subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "build-project-pages.py")], check=True)
+PROJECTS = json.load(open("data/projects.json", encoding="utf-8"))["projects"]
+PROJECT_URL = {p["name"]: p["url"] for p in PROJECTS}
 
 def parse_room(slug):
     s = read(f"rooms/{slug}/index.html")
@@ -158,7 +162,7 @@ def room_public(r):
         "summary": {"th": r["summary_th"], "en": en(r["summary_th"])},
         "features": [{"group": {"th": h, "en": en(h)}, "items": [{"th": i, "en": en(i)} for i in items]} for h, items in r["feats"]],
         "petsAllowed": False,
-        "images": r["photos"], "last_verified": r["last_verified"],
+        "images": r["photos"], "last_verified": r["last_verified"], "project_url": PROJECT_URL.get(r["project"]),
         "contact": {"line": LINE_URL, "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"},
     }
 
@@ -170,6 +174,8 @@ feed = {
     "contact": {"line": LINE_URL}, "llms_txt": BASE + "llms.txt", "sitemap": BASE + "sitemap.xml",
     "areas": [{"slug": a["slug"], "th": a["th"], "en": AREA_EN[a["slug"]], "url": f"{BASE}areas/{a['slug']}/",
                "rooms": sum(1 for r in rooms if r["area_slug"] == a["slug"])} for a in areas],
+    "projects": [{"name": p["name"], "url": p["url"], "url_en": p["url"] + "?lang=en", "area_th": p["area"], "rooms": p["count"],
+                  "price_min": p["priceMin"], "price_max": p["priceMax"], "station_th": p["station"], "walk_min": p["walk"]} for p in PROJECTS],
     "rooms": [room_public(r) for r in rooms],
 }
 write("rooms.json", json.dumps(feed, ensure_ascii=False, indent=2) + "\n")
@@ -234,6 +240,9 @@ head = f"""# MoveCondo (ย้ายคอนโด)
 """
 area_lines_th = "\n".join(f"- [ย่าน{a['th']}]({BASE}areas/{a['slug']}/): {sum(1 for r in rooms if r['area_slug']==a['slug'])} ห้อง" for a in areas)
 area_lines_en = "\n".join(f"- [{AREA_EN[a['slug']]}]({BASE}areas/{a['slug']}/?lang=en): {sum(1 for r in rooms if r['area_slug']==a['slug'])} rooms" for a in areas)
+def proj_range(p): return money(p["priceMin"]) if p["priceMin"] == p["priceMax"] else f"{money(p['priceMin'])}–{money(p['priceMax'])}"
+proj_lines_th = "\n".join(f"- [{p['name']}]({p['url']}): ย่าน{p['area']} · {p['count']} ห้อง · {proj_range(p)} บาท/เดือน" for p in PROJECTS)
+proj_lines_en = "\n".join(f"- [{p['name']}]({p['url']}?lang=en): {AREA_EN.get(p['areaSlug'])} · {p['count']} room{'s' if p['count'] != 1 else ''} · {proj_range(p)} THB/month" for p in PROJECTS)
 short = head + f"""
 ## ห้องให้เช่า (ภาษาไทย)
 {chr(10).join(line_th(r) for r in rooms)}
@@ -245,6 +254,10 @@ short = head + f"""
 {area_lines_th}
 {area_lines_en}
 
+## โครงการ (ห้องว่างทั้งหมดในแต่ละคอนโด) / Condo projects (all available rooms per project)
+{proj_lines_th}
+{proj_lines_en}
+
 ## Optional
 - [Full details of every room / รายละเอียดทุกห้อง]({BASE}llms-full.txt)
 - [Rooms JSON feed]({BASE}rooms.json)
@@ -255,7 +268,7 @@ def full_block(r):
              f"URL: {r['url']}  ·  English: {r['url_en']}",
              "",
              "ภาษาไทย:",
-             f"- ย่าน: {r['area_th']} ({r['area_url']})",
+             f"- ย่าน: {r['area_th']} ({r['area_url']})" + (f" · โครงการ: {PROJECT_URL[r['project']]}" if r['project'] in PROJECT_URL else ""),
              "- " + " · ".join(x for x in [f"แบบห้อง: {r['type_th']}" if r['type_th'] else None, f"ขนาด: {r['size_label']}" if r['size_label'] else None, r['floor_th']] if x),
              f"- ค่าเช่า: {money(r['price'])} บาท/เดือน" + (f" · มัดจำ {r['deposit_th']}" if r['deposit_th'] else "") + (f" · ล่วงหน้า {r['advance_th']}" if r['advance_th'] else "") + (f" · สัญญาขั้นต่ำ {r['lease_th']}" if r['lease_th'] else ""),
              f"- สถานะ: {r['status_th']}" + (f" · วันเข้าอยู่: {r['movein_th']}" if r['movein_th'] else ""),
@@ -276,6 +289,10 @@ full = head + f"""
 ## ย่าน / Areas
 {area_lines_th}
 {area_lines_en}
+
+## โครงการ / Condo projects
+{proj_lines_th}
+{proj_lines_en}
 
 ## รายละเอียดทุกห้อง / Every room in detail
 
@@ -382,6 +399,7 @@ def url_entry(path, prio, lastmod):
     <priority>{prio}</priority>
   </url>"""
 entries = [url_entry("", "1.0", TODAY)] + [url_entry(f"areas/{a['slug']}/", "0.8", TODAY) for a in areas] \
+        + [url_entry(p["url"][len(BASE):], "0.8", TODAY) for p in PROJECTS] \
         + [url_entry(f"rooms/{r['slug']}/", "0.9", TODAY) for r in rooms]
 write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(entries) + "\n</urlset>\n")
 
@@ -392,12 +410,12 @@ write("robots.txt", "# MoveCondo welcomes search engines and AI assistants.\n# R
 
 # ---------- safety scan ----------
 bad = 0
-for f in ["rooms.json", "feed.xml", "llms.txt", "llms-full.txt", "robots.txt", "sitemap.xml"]:
+for f in ["rooms.json", "feed.xml", "llms.txt", "llms-full.txt", "robots.txt", "sitemap.xml"] + sorted(glob.glob("condo/*/index.html")):
     t = read(f)
     for rx in FORBIDDEN:
         for m in rx.finditer(t):
             ctx = t[max(0, m.start() - 40): m.end() + 10]
-            if f == "rooms.json" and "petsAllowed" in ctx: continue
+            if (f == "rooms.json" or f.startswith("condo/")) and "petsAllowed" in ctx: continue
             print("FORBIDDEN", f, rx.pattern, repr(ctx), file=sys.stderr); bad += 1
-print(f"rooms={len(rooms)} areas={len(areas)} forbidden_hits={bad}")
+print(f"rooms={len(rooms)} areas={len(areas)} projects={len(PROJECTS)} forbidden_hits={bad}")
 sys.exit(1 if bad else 0)

@@ -41,13 +41,253 @@
 - [Sam Yan–Silom](https://banditkmc23-ai.github.io/movecondo/areas/samyan-silom/?lang=en): 2 rooms
 - [Thonglor](https://banditkmc23-ai.github.io/movecondo/areas/thonglor/?lang=en): 44 rooms
 
+## โครงการ / Condo projects
+- [Aspire Onnut Station](https://banditkmc23-ai.github.io/movecondo/condo/aspire-onnut-station/): ย่านอ่อนนุช · 4 ห้อง · 17,000–21,000 บาท/เดือน
+- [Bangkok Feliz Sukhumvit 69-2](https://banditkmc23-ai.github.io/movecondo/condo/bangkok-feliz-sukhumvit-69-2/): ย่านพระโขนง · 1 ห้อง · 13,500 บาท/เดือน
+- [Blocs 77](https://banditkmc23-ai.github.io/movecondo/condo/blocs-77/): ย่านอ่อนนุช · 2 ห้อง · 18,000–20,000 บาท/เดือน
+- [Ceil By Sansiri](https://banditkmc23-ai.github.io/movecondo/condo/ceil-by-sansiri/): ย่านเอกมัย · 4 ห้อง · 23,000–32,000 บาท/เดือน
+- [Chapter Thonglor 25](https://banditkmc23-ai.github.io/movecondo/condo/chapter-thonglor-25/): ย่านทองหล่อ · 6 ห้อง · 20,000–35,000 บาท/เดือน
+- [IDEO Mobi Sukhumvit 81](https://banditkmc23-ai.github.io/movecondo/condo/ideo-mobi-sukhumvit-81/): ย่านอ่อนนุช · 1 ห้อง · 24,000 บาท/เดือน
+- [Kawa Haus](https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/): ย่านอ่อนนุช · 8 ห้อง · 19,000–24,000 บาท/เดือน
+- [Life Sukhumvit 48](https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-48/): ย่านพระโขนง · 8 ห้อง · 16,000–35,000 บาท/เดือน
+- [Mori Haus](https://banditkmc23-ai.github.io/movecondo/condo/mori-haus/): ย่านอ่อนนุช · 3 ห้อง · 24,000–50,000 บาท/เดือน
+- [Nia By Sansiri](https://banditkmc23-ai.github.io/movecondo/condo/nia-by-sansiri/): ย่านอ่อนนุช · 4 ห้อง · 16,000–30,000 บาท/เดือน
+- [Noble Ora](https://banditkmc23-ai.github.io/movecondo/condo/noble-ora/): ย่านทองหล่อ · 1 ห้อง · 55,000 บาท/เดือน
+- [Oka Haus](https://banditkmc23-ai.github.io/movecondo/condo/oka-haus/): ย่านทองหล่อ · 5 ห้อง · 19,000–40,000 บาท/เดือน
+- [Rhythm Ekkamai](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-ekkamai/): ย่านเอกมัย · 3 ห้อง · 24,000–65,000 บาท/เดือน
+- [The Alcove Thonglor 10](https://banditkmc23-ai.github.io/movecondo/condo/the-alcove-thonglor-10/): ย่านเอกมัย · 2 ห้อง · 35,000–45,000 บาท/เดือน
+- [The Base Park West](https://banditkmc23-ai.github.io/movecondo/condo/the-base-park-west/): ย่านอ่อนนุช · 3 ห้อง · 12,000–16,000 บาท/เดือน
+- [The Line Sukhumvit 71](https://banditkmc23-ai.github.io/movecondo/condo/the-line-sukhumvit-71/): ย่านพระโขนง · 3 ห้อง · 19,000–35,000 บาท/เดือน
+- [The Room Sukhumvit 21](https://banditkmc23-ai.github.io/movecondo/condo/the-room-sukhumvit-21/): ย่านอโศก · 2 ห้อง · 30,000–39,000 บาท/เดือน
+- [The Teak Sukhumvit 39](https://banditkmc23-ai.github.io/movecondo/condo/the-teak-sukhumvit-39/): ย่านพร้อมพงษ์ · 7 ห้อง · 18,000–42,000 บาท/เดือน
+- [Wyne By Sansiri](https://banditkmc23-ai.github.io/movecondo/condo/wyne-by-sansiri/): ย่านพระโขนง · 2 ห้อง · 18,000–20,000 บาท/เดือน
+- [The Base Sukhumvit 77](https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/): ย่านอ่อนนุช · 9 ห้อง · 12,000–26,000 บาท/เดือน
+- [XT Ekkamai](https://banditkmc23-ai.github.io/movecondo/condo/xt-ekkamai/): ย่านเอกมัย · 3 ห้อง · 18,000–24,000 บาท/เดือน
+- [Modiz Sukhumvit 50](https://banditkmc23-ai.github.io/movecondo/condo/modiz-sukhumvit-50/): ย่านอ่อนนุช · 2 ห้อง · 15,000–16,000 บาท/เดือน
+- [Nue District R9](https://banditkmc23-ai.github.io/movecondo/condo/nue-district-r9/): ย่านพระราม 9 · 2 ห้อง · 42,000–52,000 บาท/เดือน
+- [Rhythm Sukhumvit 44/1](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-44-1/): ย่านพระโขนง · 1 ห้อง · 22,000 บาท/เดือน
+- [Hasu Haus](https://banditkmc23-ai.github.io/movecondo/condo/hasu-haus/): ย่านอ่อนนุช · 2 ห้อง · 20,000–48,000 บาท/เดือน
+- [The Niche Mono Sukhumvit 50](https://banditkmc23-ai.github.io/movecondo/condo/the-niche-mono-sukhumvit-50/): ย่านอ่อนนุช · 1 ห้อง · 13,500 บาท/เดือน
+- [The Tree Onnut Station](https://banditkmc23-ai.github.io/movecondo/condo/the-tree-onnut-station/): ย่านอ่อนนุช · 1 ห้อง · 14,500 บาท/เดือน
+- [Le Cote](https://banditkmc23-ai.github.io/movecondo/condo/le-cote/): ย่านทองหล่อ · 1 ห้อง · 17,500 บาท/เดือน
+- [The Tempo Ratchada](https://banditkmc23-ai.github.io/movecondo/condo/the-tempo-ratchada/): ย่านห้วยขวาง · 1 ห้อง · 15,000 บาท/เดือน
+- [Townhome Thonglor 19](https://banditkmc23-ai.github.io/movecondo/condo/townhome-thonglor-19/): ย่านทองหล่อ · 1 ห้อง · 90,000 บาท/เดือน
+- [The President Sukhumvit 81](https://banditkmc23-ai.github.io/movecondo/condo/the-president-sukhumvit-81/): ย่านอ่อนนุช · 1 ห้อง · 17,000 บาท/เดือน
+- [Q House Sukhumvit 79](https://banditkmc23-ai.github.io/movecondo/condo/q-house-sukhumvit-79/): ย่านอ่อนนุช · 2 ห้อง · 19,000–40,000 บาท/เดือน
+- [The Crest Sukhumvit 34](https://banditkmc23-ai.github.io/movecondo/condo/the-crest-sukhumvit-34/): ย่านทองหล่อ · 1 ห้อง · 85,000 บาท/เดือน
+- [House Soi Soonvijai](https://banditkmc23-ai.github.io/movecondo/condo/house-soi-soonvijai/): ย่านพระราม 9 · 1 ห้อง · 62,000 บาท/เดือน
+- [The Niche Pride Thonglor-Petchaburi](https://banditkmc23-ai.github.io/movecondo/condo/the-niche-pride-thonglor-petchaburi/): ย่านทองหล่อ · 3 ห้อง · 16,000–18,000 บาท/เดือน
+- [Life Asoke Hype](https://banditkmc23-ai.github.io/movecondo/condo/life-asoke-hype/): ย่านพระราม 9 · 4 ห้อง · 22,500–26,000 บาท/เดือน
+- [The Lumpini 24](https://banditkmc23-ai.github.io/movecondo/condo/the-lumpini-24/): ย่านพร้อมพงษ์ · 3 ห้อง · 23,000–40,000 บาท/เดือน
+- [The Tree Pattanakarn-Ekkamai](https://banditkmc23-ai.github.io/movecondo/condo/the-tree-pattanakarn-ekkamai/): ย่านเอกมัย · 1 ห้อง · 25,000 บาท/เดือน
+- [Chewathai Residence Asoke](https://banditkmc23-ai.github.io/movecondo/condo/chewathai-residence-asoke/): ย่านพระราม 9 · 1 ห้อง · 27,000 บาท/เดือน
+- [IDEO Rama 9-Asoke](https://banditkmc23-ai.github.io/movecondo/condo/ideo-rama-9-asoke/): ย่านพระราม 9 · 1 ห้อง · 20,000 บาท/เดือน
+- [The Base Park East](https://banditkmc23-ai.github.io/movecondo/condo/the-base-park-east/): ย่านอ่อนนุช · 1 ห้อง · 16,000 บาท/เดือน
+- [C Ekkamai](https://banditkmc23-ai.github.io/movecondo/condo/c-ekkamai/): ย่านเอกมัย · 3 ห้อง · 17,500–30,000 บาท/เดือน
+- [Life One Wireless](https://banditkmc23-ai.github.io/movecondo/condo/life-one-wireless/): ย่านชิดลม · 1 ห้อง · 26,500 บาท/เดือน
+- [Rhythm Ekkamai Estate](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-ekkamai-estate/): ย่านเอกมัย · 2 ห้อง · 30,000–38,000 บาท/เดือน
+- [Fynn Asoke](https://banditkmc23-ai.github.io/movecondo/condo/fynn-asoke/): ย่านอโศก · 1 ห้อง · 38,000 บาท/เดือน
+- [Knightsbridge Space Sukhumvit-Rama 4](https://banditkmc23-ai.github.io/movecondo/condo/knightsbridge-space-sukhumvit-rama-4/): ย่านพระโขนง · 1 ห้อง · 40,000 บาท/เดือน
+- [Whizdom Connect Sukhumvit](https://banditkmc23-ai.github.io/movecondo/condo/whizdom-connect-sukhumvit/): ย่านบางนา · 2 ห้อง · 16,000–18,000 บาท/เดือน
+- [Ideo S93](https://banditkmc23-ai.github.io/movecondo/condo/ideo-s93/): ย่านอ่อนนุช · 2 ห้อง · 15,000–19,000 บาท/เดือน
+- [Noble Form Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/noble-form-thonglor/): ย่านทองหล่อ · 2 ห้อง · 33,000–35,000 บาท/เดือน
+- [The Base Sukhumvit 50](https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-50/): ย่านอ่อนนุช · 2 ห้อง · 24,000–25,000 บาท/เดือน
+- [Noble Around 33](https://banditkmc23-ai.github.io/movecondo/condo/noble-around-33/): ย่านพร้อมพงษ์ · 2 ห้อง · 25,000–55,000 บาท/เดือน
+- [The Hyde Sukhumvit 13](https://banditkmc23-ai.github.io/movecondo/condo/the-hyde-sukhumvit-13/): ย่านอโศก · 1 ห้อง · 58,000 บาท/เดือน
+- [Life Rama 4 - Asoke](https://banditkmc23-ai.github.io/movecondo/condo/life-rama-4-asoke/): ย่านพระราม 4 · 2 ห้อง · 27,000–27,500 บาท/เดือน
+- [Mycondo Sukhumvit 52](https://banditkmc23-ai.github.io/movecondo/condo/mycondo-sukhumvit-52/): ย่านอ่อนนุช · 1 ห้อง · 12,000 บาท/เดือน
+- [The Tree Sukhumvit 71](https://banditkmc23-ai.github.io/movecondo/condo/the-tree-sukhumvit-71/): ย่านพระโขนง · 1 ห้อง · 35,000 บาท/เดือน
+- [Ideo Mobi Asoke](https://banditkmc23-ai.github.io/movecondo/condo/ideo-mobi-asoke/): ย่านพระราม 9 · 1 ห้อง · 35,000 บาท/เดือน
+- [Park Origin Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/park-origin-thonglor/): ย่านทองหล่อ · 5 ห้อง · 30,000–75,000 บาท/เดือน
+- [28 Chidlom](https://banditkmc23-ai.github.io/movecondo/condo/28-chidlom/): ย่านชิดลม · 2 ห้อง · 42,000 บาท/เดือน
+- [The Lofts Asoke](https://banditkmc23-ai.github.io/movecondo/condo/the-lofts-asoke/): ย่านอโศก · 1 ห้อง · 75,000 บาท/เดือน
+- [Waterford Diamond Sukhumvit 30/1](https://banditkmc23-ai.github.io/movecondo/condo/waterford-diamond-sukhumvit-30-1/): ย่านพร้อมพงษ์ · 1 ห้อง · 36,000 บาท/เดือน
+- [Park Origin 24 Phrom Phong](https://banditkmc23-ai.github.io/movecondo/condo/park-origin-24-phrom-phong/): ย่านพร้อมพงษ์ · 3 ห้อง · 40,000–42,000 บาท/เดือน
+- [Rhythm Asoke](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-asoke/): ย่านพระราม 9 · 3 ห้อง · 20,000–28,000 บาท/เดือน
+- [Culture Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/culture-thonglor/): ย่านทองหล่อ · 1 ห้อง · 55,000 บาท/เดือน
+- [The Emporio Place Sukhumvit 24](https://banditkmc23-ai.github.io/movecondo/condo/the-emporio-place-sukhumvit-24/): ย่านพร้อมพงษ์ · 1 ห้อง · 55,000 บาท/เดือน
+- [The Esse Sukhumvit 36](https://banditkmc23-ai.github.io/movecondo/condo/the-esse-sukhumvit-36/): ย่านทองหล่อ · 3 ห้อง · 45,000–48,000 บาท/เดือน
+- [Noble Remix Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/noble-remix-thonglor/): ย่านทองหล่อ · 2 ห้อง · 25,000–56,000 บาท/เดือน
+- [Aspire Rama 9](https://banditkmc23-ai.github.io/movecondo/condo/aspire-rama-9/): ย่านพระราม 9 · 1 ห้อง · 18,000 บาท/เดือน
+- [Life Asoke](https://banditkmc23-ai.github.io/movecondo/condo/life-asoke/): ย่านพระราม 9 · 1 ห้อง · 17,000 บาท/เดือน
+- [Quintara Mhy'zen Phromphong](https://banditkmc23-ai.github.io/movecondo/condo/quintara-mhy-zen-phromphong/): ย่านพร้อมพงษ์ · 1 ห้อง · 16,000 บาท/เดือน
+- [Rhythm Asoke 2](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-asoke-2/): ย่านพระราม 9 · 1 ห้อง · 18,000 บาท/เดือน
+- [Siamese Sukhumvit 48](https://banditkmc23-ai.github.io/movecondo/condo/siamese-sukhumvit-48/): ย่านอ่อนนุช · 1 ห้อง · 28,000 บาท/เดือน
+- [Noble Revo Silom](https://banditkmc23-ai.github.io/movecondo/condo/noble-revo-silom/): ย่านสามย่าน-สีลม · 1 ห้อง · 22,000 บาท/เดือน
+- [Noble Ploenchit](https://banditkmc23-ai.github.io/movecondo/condo/noble-ploenchit/): ย่านชิดลม · 2 ห้อง · 33,000–35,000 บาท/เดือน
+- [Qube Suites Sukhumvit 46](https://banditkmc23-ai.github.io/movecondo/condo/qube-suites-sukhumvit-46/): ย่านพระโขนง · 1 ห้อง · 28,000 บาท/เดือน
+- [Ramada by Wyndham (Siamese) Sukhumvit 87](https://banditkmc23-ai.github.io/movecondo/condo/ramada-by-wyndham-siamese-sukhumvit-87/): ย่านอ่อนนุช · 1 ห้อง · 25,000 บาท/เดือน
+- [The Reserve Sukhumvit 61](https://banditkmc23-ai.github.io/movecondo/condo/the-reserve-sukhumvit-61/): ย่านเอกมัย · 1 ห้อง · 55,000 บาท/เดือน
+- [Edge Sukhumvit 23](https://banditkmc23-ai.github.io/movecondo/condo/edge-sukhumvit-23/): ย่านอโศก · 2 ห้อง · 25,000–38,000 บาท/เดือน
+- [Noble State 39](https://banditkmc23-ai.github.io/movecondo/condo/noble-state-39/): ย่านพร้อมพงษ์ · 6 ห้อง · 30,000–60,000 บาท/เดือน
+- [Siri At Sukhumvit](https://banditkmc23-ai.github.io/movecondo/condo/siri-at-sukhumvit/): ย่านทองหล่อ · 3 ห้อง · 35,000–37,000 บาท/เดือน
+- [Skyrise Sukhumvit 64](https://banditkmc23-ai.github.io/movecondo/condo/skyrise-sukhumvit-64/): ย่านบางนา · 1 ห้อง · 24,000 บาท/เดือน
+- [Beatniq Sukhumvit 32](https://banditkmc23-ai.github.io/movecondo/condo/beatniq-sukhumvit-32/): ย่านทองหล่อ · 2 ห้อง · 57,000–60,000 บาท/เดือน
+- [Life Sukhumvit 62](https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-62/): ย่านอ่อนนุช · 5 ห้อง · 13,000–25,000 บาท/เดือน
+- [Whizdom Inspire Sukhumvit](https://banditkmc23-ai.github.io/movecondo/condo/whizdom-inspire-sukhumvit/): ย่านบางนา · 4 ห้อง · 20,000–42,500 บาท/เดือน
+- [Address Sukhumvit 61](https://banditkmc23-ai.github.io/movecondo/condo/address-sukhumvit-61/): ย่านเอกมัย · 1 ห้อง · 40,000 บาท/เดือน
+- [Culture Chula](https://banditkmc23-ai.github.io/movecondo/condo/culture-chula/): ย่านสามย่าน-สีลม · 1 ห้อง · 33,000 บาท/เดือน
+- [Q Langsuan](https://banditkmc23-ai.github.io/movecondo/condo/q-langsuan/): ย่านชิดลม · 1 ห้อง · 70,000 บาท/เดือน
+- [Noble Reveal Ekkamai](https://banditkmc23-ai.github.io/movecondo/condo/noble-reveal-ekkamai/): ย่านเอกมัย · 2 ห้อง · 33,000–36,000 บาท/เดือน
+- [Coco Parc Rama 4](https://banditkmc23-ai.github.io/movecondo/condo/coco-parc-rama-4/): ย่านพระราม 4 · 1 ห้อง · 44,000 บาท/เดือน
+- [Rhythm Sukhumvit 50](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-50/): ย่านอ่อนนุช · 2 ห้อง · 30,000–40,000 บาท/เดือน
+- [Ideo Mix Sukhumvit 103](https://banditkmc23-ai.github.io/movecondo/condo/ideo-mix-sukhumvit-103/): ย่านบางนา · 1 ห้อง · 14,400 บาท/เดือน
+- [Khun by Yoo](https://banditkmc23-ai.github.io/movecondo/condo/khun-by-yoo/): ย่านทองหล่อ · 1 ห้อง · 120,000 บาท/เดือน
+- [Noble Around Ari](https://banditkmc23-ai.github.io/movecondo/condo/noble-around-ari/): ย่านอารีย์ · 1 ห้อง · 32,000 บาท/เดือน
+- [Aestiq Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/aestiq-thonglor/): ย่านทองหล่อ · 1 ห้อง · 48,000 บาท/เดือน
+- [Grand Park View Asoke](https://banditkmc23-ai.github.io/movecondo/condo/grand-park-view-asoke/): ย่านอโศก · 2 ห้อง · 23,000–28,000 บาท/เดือน
+- [The Room Sukhumvit 79](https://banditkmc23-ai.github.io/movecondo/condo/the-room-sukhumvit-79/): ย่านอ่อนนุช · 1 ห้อง · 25,000 บาท/เดือน
+- [The Base Petchburi-Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/the-base-petchburi-thonglor/): ย่านทองหล่อ · 1 ห้อง · 18,000 บาท/เดือน
+- [Ideo Morph 38](https://banditkmc23-ai.github.io/movecondo/condo/ideo-morph-38/): ย่านทองหล่อ · 1 ห้อง · 32,000 บาท/เดือน
+- [One9Five Asoke-Rama 9](https://banditkmc23-ai.github.io/movecondo/condo/one9five-asoke-rama-9/): ย่านพระราม 9 · 1 ห้อง · 56,000 บาท/เดือน
+- [Aspire Sukhumvit 48](https://banditkmc23-ai.github.io/movecondo/condo/aspire-sukhumvit-48/): ย่านพระโขนง · 3 ห้อง · 12,000–14,000 บาท/เดือน
+- [Sense Sukhumvit](https://banditkmc23-ai.github.io/movecondo/condo/sense-sukhumvit/): ย่านบางนา · 1 ห้อง · 16,000 บาท/เดือน
+- [Life Sukhumvit 65](https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-65/): ย่านพระโขนง · 1 ห้อง · 35,000 บาท/เดือน
+- [The Clover Thonglor 18](https://banditkmc23-ai.github.io/movecondo/condo/the-clover-thonglor-18/): ย่านทองหล่อ · 1 ห้อง · 19,000 บาท/เดือน
+- [Noble BE19](https://banditkmc23-ai.github.io/movecondo/condo/noble-be19/): ย่านอโศก · 1 ห้อง · 70,000 บาท/เดือน
+- [Ideo Q36 Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/ideo-q36-thonglor/): ย่านทองหล่อ · 1 ห้อง · 65,000 บาท/เดือน
+- [Noble BE33](https://banditkmc23-ai.github.io/movecondo/condo/noble-be33/): ย่านพร้อมพงษ์ · 2 ห้อง · 39,500–70,000 บาท/เดือน
+- [Whizdom Essence Sukhumvit 101](https://banditkmc23-ai.github.io/movecondo/condo/whizdom-essence-sukhumvit-101/): ย่านบางนา · 1 ห้อง · 38,000 บาท/เดือน
+- [The Nest Sukhumvit 71](https://banditkmc23-ai.github.io/movecondo/condo/the-nest-sukhumvit-71/): ย่านพระโขนง · 1 ห้อง · 13,500 บาท/เดือน
+- [Ashton Asoke-Rama 9](https://banditkmc23-ai.github.io/movecondo/condo/ashton-asoke-rama-9/): ย่านพระราม 9 · 2 ห้อง · 38,000–46,000 บาท/เดือน
+- [The XXXIX Sukhumvit 39](https://banditkmc23-ai.github.io/movecondo/condo/the-xxxix-sukhumvit-39/): ย่านพร้อมพงษ์ · 1 ห้อง · 59,000 บาท/เดือน
+- [Mayfair Place Sukhumvit 50](https://banditkmc23-ai.github.io/movecondo/condo/mayfair-place-sukhumvit-50/): ย่านอ่อนนุช · 1 ห้อง · 23,000 บาท/เดือน
+- [The Room Sukhumvit 62](https://banditkmc23-ai.github.io/movecondo/condo/the-room-sukhumvit-62/): ย่านบางนา · 1 ห้อง · 25,000 บาท/เดือน
+- [IDEO Sukhumvit 93](https://banditkmc23-ai.github.io/movecondo/condo/ideo-sukhumvit-93/): ย่านอ่อนนุช · 2 ห้อง · 25,000–35,000 บาท/เดือน
+- [Laviq Thonglor Sukhumvit 57](https://banditkmc23-ai.github.io/movecondo/condo/laviq-thonglor-sukhumvit-57/): ย่านทองหล่อ · 1 ห้อง · 45,000 บาท/เดือน
+- [The Nest Ploenchit](https://banditkmc23-ai.github.io/movecondo/condo/the-nest-ploenchit/): ย่านชิดลม · 1 ห้อง · 28,000 บาท/เดือน
+- [H Sukhumvit 43](https://banditkmc23-ai.github.io/movecondo/condo/h-sukhumvit-43/): ย่านพร้อมพงษ์ · 1 ห้อง · 54,000 บาท/เดือน
+- [Park Origin Phrom Phong](https://banditkmc23-ai.github.io/movecondo/condo/park-origin-phrom-phong/): ย่านพร้อมพงษ์ · 1 ห้อง · 24,000 บาท/เดือน
+- [The Line Sukhumvit 101](https://banditkmc23-ai.github.io/movecondo/condo/the-line-sukhumvit-101/): ย่านบางนา · 1 ห้อง · 14,000 บาท/เดือน
+- [Sky Walk Residences](https://banditkmc23-ai.github.io/movecondo/condo/sky-walk-residences/): ย่านพระโขนง · 1 ห้อง · 35,000 บาท/เดือน
+- [Quattro by Sansiri](https://banditkmc23-ai.github.io/movecondo/condo/quattro-by-sansiri/): ย่านทองหล่อ · 1 ห้อง · 67,000 บาท/เดือน
+- [Aspire Onnut Station](https://banditkmc23-ai.github.io/movecondo/condo/aspire-onnut-station/?lang=en): On Nut · 4 rooms · 17,000–21,000 THB/month
+- [Bangkok Feliz Sukhumvit 69-2](https://banditkmc23-ai.github.io/movecondo/condo/bangkok-feliz-sukhumvit-69-2/?lang=en): Phra Khanong · 1 room · 13,500 THB/month
+- [Blocs 77](https://banditkmc23-ai.github.io/movecondo/condo/blocs-77/?lang=en): On Nut · 2 rooms · 18,000–20,000 THB/month
+- [Ceil By Sansiri](https://banditkmc23-ai.github.io/movecondo/condo/ceil-by-sansiri/?lang=en): Ekkamai · 4 rooms · 23,000–32,000 THB/month
+- [Chapter Thonglor 25](https://banditkmc23-ai.github.io/movecondo/condo/chapter-thonglor-25/?lang=en): Thonglor · 6 rooms · 20,000–35,000 THB/month
+- [IDEO Mobi Sukhumvit 81](https://banditkmc23-ai.github.io/movecondo/condo/ideo-mobi-sukhumvit-81/?lang=en): On Nut · 1 room · 24,000 THB/month
+- [Kawa Haus](https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/?lang=en): On Nut · 8 rooms · 19,000–24,000 THB/month
+- [Life Sukhumvit 48](https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-48/?lang=en): Phra Khanong · 8 rooms · 16,000–35,000 THB/month
+- [Mori Haus](https://banditkmc23-ai.github.io/movecondo/condo/mori-haus/?lang=en): On Nut · 3 rooms · 24,000–50,000 THB/month
+- [Nia By Sansiri](https://banditkmc23-ai.github.io/movecondo/condo/nia-by-sansiri/?lang=en): On Nut · 4 rooms · 16,000–30,000 THB/month
+- [Noble Ora](https://banditkmc23-ai.github.io/movecondo/condo/noble-ora/?lang=en): Thonglor · 1 room · 55,000 THB/month
+- [Oka Haus](https://banditkmc23-ai.github.io/movecondo/condo/oka-haus/?lang=en): Thonglor · 5 rooms · 19,000–40,000 THB/month
+- [Rhythm Ekkamai](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-ekkamai/?lang=en): Ekkamai · 3 rooms · 24,000–65,000 THB/month
+- [The Alcove Thonglor 10](https://banditkmc23-ai.github.io/movecondo/condo/the-alcove-thonglor-10/?lang=en): Ekkamai · 2 rooms · 35,000–45,000 THB/month
+- [The Base Park West](https://banditkmc23-ai.github.io/movecondo/condo/the-base-park-west/?lang=en): On Nut · 3 rooms · 12,000–16,000 THB/month
+- [The Line Sukhumvit 71](https://banditkmc23-ai.github.io/movecondo/condo/the-line-sukhumvit-71/?lang=en): Phra Khanong · 3 rooms · 19,000–35,000 THB/month
+- [The Room Sukhumvit 21](https://banditkmc23-ai.github.io/movecondo/condo/the-room-sukhumvit-21/?lang=en): Asok · 2 rooms · 30,000–39,000 THB/month
+- [The Teak Sukhumvit 39](https://banditkmc23-ai.github.io/movecondo/condo/the-teak-sukhumvit-39/?lang=en): Phrom Phong · 7 rooms · 18,000–42,000 THB/month
+- [Wyne By Sansiri](https://banditkmc23-ai.github.io/movecondo/condo/wyne-by-sansiri/?lang=en): Phra Khanong · 2 rooms · 18,000–20,000 THB/month
+- [The Base Sukhumvit 77](https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/?lang=en): On Nut · 9 rooms · 12,000–26,000 THB/month
+- [XT Ekkamai](https://banditkmc23-ai.github.io/movecondo/condo/xt-ekkamai/?lang=en): Ekkamai · 3 rooms · 18,000–24,000 THB/month
+- [Modiz Sukhumvit 50](https://banditkmc23-ai.github.io/movecondo/condo/modiz-sukhumvit-50/?lang=en): On Nut · 2 rooms · 15,000–16,000 THB/month
+- [Nue District R9](https://banditkmc23-ai.github.io/movecondo/condo/nue-district-r9/?lang=en): Rama 9 · 2 rooms · 42,000–52,000 THB/month
+- [Rhythm Sukhumvit 44/1](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-44-1/?lang=en): Phra Khanong · 1 room · 22,000 THB/month
+- [Hasu Haus](https://banditkmc23-ai.github.io/movecondo/condo/hasu-haus/?lang=en): On Nut · 2 rooms · 20,000–48,000 THB/month
+- [The Niche Mono Sukhumvit 50](https://banditkmc23-ai.github.io/movecondo/condo/the-niche-mono-sukhumvit-50/?lang=en): On Nut · 1 room · 13,500 THB/month
+- [The Tree Onnut Station](https://banditkmc23-ai.github.io/movecondo/condo/the-tree-onnut-station/?lang=en): On Nut · 1 room · 14,500 THB/month
+- [Le Cote](https://banditkmc23-ai.github.io/movecondo/condo/le-cote/?lang=en): Thonglor · 1 room · 17,500 THB/month
+- [The Tempo Ratchada](https://banditkmc23-ai.github.io/movecondo/condo/the-tempo-ratchada/?lang=en): Huai Khwang · 1 room · 15,000 THB/month
+- [Townhome Thonglor 19](https://banditkmc23-ai.github.io/movecondo/condo/townhome-thonglor-19/?lang=en): Thonglor · 1 room · 90,000 THB/month
+- [The President Sukhumvit 81](https://banditkmc23-ai.github.io/movecondo/condo/the-president-sukhumvit-81/?lang=en): On Nut · 1 room · 17,000 THB/month
+- [Q House Sukhumvit 79](https://banditkmc23-ai.github.io/movecondo/condo/q-house-sukhumvit-79/?lang=en): On Nut · 2 rooms · 19,000–40,000 THB/month
+- [The Crest Sukhumvit 34](https://banditkmc23-ai.github.io/movecondo/condo/the-crest-sukhumvit-34/?lang=en): Thonglor · 1 room · 85,000 THB/month
+- [House Soi Soonvijai](https://banditkmc23-ai.github.io/movecondo/condo/house-soi-soonvijai/?lang=en): Rama 9 · 1 room · 62,000 THB/month
+- [The Niche Pride Thonglor-Petchaburi](https://banditkmc23-ai.github.io/movecondo/condo/the-niche-pride-thonglor-petchaburi/?lang=en): Thonglor · 3 rooms · 16,000–18,000 THB/month
+- [Life Asoke Hype](https://banditkmc23-ai.github.io/movecondo/condo/life-asoke-hype/?lang=en): Rama 9 · 4 rooms · 22,500–26,000 THB/month
+- [The Lumpini 24](https://banditkmc23-ai.github.io/movecondo/condo/the-lumpini-24/?lang=en): Phrom Phong · 3 rooms · 23,000–40,000 THB/month
+- [The Tree Pattanakarn-Ekkamai](https://banditkmc23-ai.github.io/movecondo/condo/the-tree-pattanakarn-ekkamai/?lang=en): Ekkamai · 1 room · 25,000 THB/month
+- [Chewathai Residence Asoke](https://banditkmc23-ai.github.io/movecondo/condo/chewathai-residence-asoke/?lang=en): Rama 9 · 1 room · 27,000 THB/month
+- [IDEO Rama 9-Asoke](https://banditkmc23-ai.github.io/movecondo/condo/ideo-rama-9-asoke/?lang=en): Rama 9 · 1 room · 20,000 THB/month
+- [The Base Park East](https://banditkmc23-ai.github.io/movecondo/condo/the-base-park-east/?lang=en): On Nut · 1 room · 16,000 THB/month
+- [C Ekkamai](https://banditkmc23-ai.github.io/movecondo/condo/c-ekkamai/?lang=en): Ekkamai · 3 rooms · 17,500–30,000 THB/month
+- [Life One Wireless](https://banditkmc23-ai.github.io/movecondo/condo/life-one-wireless/?lang=en): Chit Lom · 1 room · 26,500 THB/month
+- [Rhythm Ekkamai Estate](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-ekkamai-estate/?lang=en): Ekkamai · 2 rooms · 30,000–38,000 THB/month
+- [Fynn Asoke](https://banditkmc23-ai.github.io/movecondo/condo/fynn-asoke/?lang=en): Asok · 1 room · 38,000 THB/month
+- [Knightsbridge Space Sukhumvit-Rama 4](https://banditkmc23-ai.github.io/movecondo/condo/knightsbridge-space-sukhumvit-rama-4/?lang=en): Phra Khanong · 1 room · 40,000 THB/month
+- [Whizdom Connect Sukhumvit](https://banditkmc23-ai.github.io/movecondo/condo/whizdom-connect-sukhumvit/?lang=en): Bang Na · 2 rooms · 16,000–18,000 THB/month
+- [Ideo S93](https://banditkmc23-ai.github.io/movecondo/condo/ideo-s93/?lang=en): On Nut · 2 rooms · 15,000–19,000 THB/month
+- [Noble Form Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/noble-form-thonglor/?lang=en): Thonglor · 2 rooms · 33,000–35,000 THB/month
+- [The Base Sukhumvit 50](https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-50/?lang=en): On Nut · 2 rooms · 24,000–25,000 THB/month
+- [Noble Around 33](https://banditkmc23-ai.github.io/movecondo/condo/noble-around-33/?lang=en): Phrom Phong · 2 rooms · 25,000–55,000 THB/month
+- [The Hyde Sukhumvit 13](https://banditkmc23-ai.github.io/movecondo/condo/the-hyde-sukhumvit-13/?lang=en): Asok · 1 room · 58,000 THB/month
+- [Life Rama 4 - Asoke](https://banditkmc23-ai.github.io/movecondo/condo/life-rama-4-asoke/?lang=en): Rama 4 · 2 rooms · 27,000–27,500 THB/month
+- [Mycondo Sukhumvit 52](https://banditkmc23-ai.github.io/movecondo/condo/mycondo-sukhumvit-52/?lang=en): On Nut · 1 room · 12,000 THB/month
+- [The Tree Sukhumvit 71](https://banditkmc23-ai.github.io/movecondo/condo/the-tree-sukhumvit-71/?lang=en): Phra Khanong · 1 room · 35,000 THB/month
+- [Ideo Mobi Asoke](https://banditkmc23-ai.github.io/movecondo/condo/ideo-mobi-asoke/?lang=en): Rama 9 · 1 room · 35,000 THB/month
+- [Park Origin Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/park-origin-thonglor/?lang=en): Thonglor · 5 rooms · 30,000–75,000 THB/month
+- [28 Chidlom](https://banditkmc23-ai.github.io/movecondo/condo/28-chidlom/?lang=en): Chit Lom · 2 rooms · 42,000 THB/month
+- [The Lofts Asoke](https://banditkmc23-ai.github.io/movecondo/condo/the-lofts-asoke/?lang=en): Asok · 1 room · 75,000 THB/month
+- [Waterford Diamond Sukhumvit 30/1](https://banditkmc23-ai.github.io/movecondo/condo/waterford-diamond-sukhumvit-30-1/?lang=en): Phrom Phong · 1 room · 36,000 THB/month
+- [Park Origin 24 Phrom Phong](https://banditkmc23-ai.github.io/movecondo/condo/park-origin-24-phrom-phong/?lang=en): Phrom Phong · 3 rooms · 40,000–42,000 THB/month
+- [Rhythm Asoke](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-asoke/?lang=en): Rama 9 · 3 rooms · 20,000–28,000 THB/month
+- [Culture Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/culture-thonglor/?lang=en): Thonglor · 1 room · 55,000 THB/month
+- [The Emporio Place Sukhumvit 24](https://banditkmc23-ai.github.io/movecondo/condo/the-emporio-place-sukhumvit-24/?lang=en): Phrom Phong · 1 room · 55,000 THB/month
+- [The Esse Sukhumvit 36](https://banditkmc23-ai.github.io/movecondo/condo/the-esse-sukhumvit-36/?lang=en): Thonglor · 3 rooms · 45,000–48,000 THB/month
+- [Noble Remix Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/noble-remix-thonglor/?lang=en): Thonglor · 2 rooms · 25,000–56,000 THB/month
+- [Aspire Rama 9](https://banditkmc23-ai.github.io/movecondo/condo/aspire-rama-9/?lang=en): Rama 9 · 1 room · 18,000 THB/month
+- [Life Asoke](https://banditkmc23-ai.github.io/movecondo/condo/life-asoke/?lang=en): Rama 9 · 1 room · 17,000 THB/month
+- [Quintara Mhy'zen Phromphong](https://banditkmc23-ai.github.io/movecondo/condo/quintara-mhy-zen-phromphong/?lang=en): Phrom Phong · 1 room · 16,000 THB/month
+- [Rhythm Asoke 2](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-asoke-2/?lang=en): Rama 9 · 1 room · 18,000 THB/month
+- [Siamese Sukhumvit 48](https://banditkmc23-ai.github.io/movecondo/condo/siamese-sukhumvit-48/?lang=en): On Nut · 1 room · 28,000 THB/month
+- [Noble Revo Silom](https://banditkmc23-ai.github.io/movecondo/condo/noble-revo-silom/?lang=en): Sam Yan–Silom · 1 room · 22,000 THB/month
+- [Noble Ploenchit](https://banditkmc23-ai.github.io/movecondo/condo/noble-ploenchit/?lang=en): Chit Lom · 2 rooms · 33,000–35,000 THB/month
+- [Qube Suites Sukhumvit 46](https://banditkmc23-ai.github.io/movecondo/condo/qube-suites-sukhumvit-46/?lang=en): Phra Khanong · 1 room · 28,000 THB/month
+- [Ramada by Wyndham (Siamese) Sukhumvit 87](https://banditkmc23-ai.github.io/movecondo/condo/ramada-by-wyndham-siamese-sukhumvit-87/?lang=en): On Nut · 1 room · 25,000 THB/month
+- [The Reserve Sukhumvit 61](https://banditkmc23-ai.github.io/movecondo/condo/the-reserve-sukhumvit-61/?lang=en): Ekkamai · 1 room · 55,000 THB/month
+- [Edge Sukhumvit 23](https://banditkmc23-ai.github.io/movecondo/condo/edge-sukhumvit-23/?lang=en): Asok · 2 rooms · 25,000–38,000 THB/month
+- [Noble State 39](https://banditkmc23-ai.github.io/movecondo/condo/noble-state-39/?lang=en): Phrom Phong · 6 rooms · 30,000–60,000 THB/month
+- [Siri At Sukhumvit](https://banditkmc23-ai.github.io/movecondo/condo/siri-at-sukhumvit/?lang=en): Thonglor · 3 rooms · 35,000–37,000 THB/month
+- [Skyrise Sukhumvit 64](https://banditkmc23-ai.github.io/movecondo/condo/skyrise-sukhumvit-64/?lang=en): Bang Na · 1 room · 24,000 THB/month
+- [Beatniq Sukhumvit 32](https://banditkmc23-ai.github.io/movecondo/condo/beatniq-sukhumvit-32/?lang=en): Thonglor · 2 rooms · 57,000–60,000 THB/month
+- [Life Sukhumvit 62](https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-62/?lang=en): On Nut · 5 rooms · 13,000–25,000 THB/month
+- [Whizdom Inspire Sukhumvit](https://banditkmc23-ai.github.io/movecondo/condo/whizdom-inspire-sukhumvit/?lang=en): Bang Na · 4 rooms · 20,000–42,500 THB/month
+- [Address Sukhumvit 61](https://banditkmc23-ai.github.io/movecondo/condo/address-sukhumvit-61/?lang=en): Ekkamai · 1 room · 40,000 THB/month
+- [Culture Chula](https://banditkmc23-ai.github.io/movecondo/condo/culture-chula/?lang=en): Sam Yan–Silom · 1 room · 33,000 THB/month
+- [Q Langsuan](https://banditkmc23-ai.github.io/movecondo/condo/q-langsuan/?lang=en): Chit Lom · 1 room · 70,000 THB/month
+- [Noble Reveal Ekkamai](https://banditkmc23-ai.github.io/movecondo/condo/noble-reveal-ekkamai/?lang=en): Ekkamai · 2 rooms · 33,000–36,000 THB/month
+- [Coco Parc Rama 4](https://banditkmc23-ai.github.io/movecondo/condo/coco-parc-rama-4/?lang=en): Rama 4 · 1 room · 44,000 THB/month
+- [Rhythm Sukhumvit 50](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-50/?lang=en): On Nut · 2 rooms · 30,000–40,000 THB/month
+- [Ideo Mix Sukhumvit 103](https://banditkmc23-ai.github.io/movecondo/condo/ideo-mix-sukhumvit-103/?lang=en): Bang Na · 1 room · 14,400 THB/month
+- [Khun by Yoo](https://banditkmc23-ai.github.io/movecondo/condo/khun-by-yoo/?lang=en): Thonglor · 1 room · 120,000 THB/month
+- [Noble Around Ari](https://banditkmc23-ai.github.io/movecondo/condo/noble-around-ari/?lang=en): Ari · 1 room · 32,000 THB/month
+- [Aestiq Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/aestiq-thonglor/?lang=en): Thonglor · 1 room · 48,000 THB/month
+- [Grand Park View Asoke](https://banditkmc23-ai.github.io/movecondo/condo/grand-park-view-asoke/?lang=en): Asok · 2 rooms · 23,000–28,000 THB/month
+- [The Room Sukhumvit 79](https://banditkmc23-ai.github.io/movecondo/condo/the-room-sukhumvit-79/?lang=en): On Nut · 1 room · 25,000 THB/month
+- [The Base Petchburi-Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/the-base-petchburi-thonglor/?lang=en): Thonglor · 1 room · 18,000 THB/month
+- [Ideo Morph 38](https://banditkmc23-ai.github.io/movecondo/condo/ideo-morph-38/?lang=en): Thonglor · 1 room · 32,000 THB/month
+- [One9Five Asoke-Rama 9](https://banditkmc23-ai.github.io/movecondo/condo/one9five-asoke-rama-9/?lang=en): Rama 9 · 1 room · 56,000 THB/month
+- [Aspire Sukhumvit 48](https://banditkmc23-ai.github.io/movecondo/condo/aspire-sukhumvit-48/?lang=en): Phra Khanong · 3 rooms · 12,000–14,000 THB/month
+- [Sense Sukhumvit](https://banditkmc23-ai.github.io/movecondo/condo/sense-sukhumvit/?lang=en): Bang Na · 1 room · 16,000 THB/month
+- [Life Sukhumvit 65](https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-65/?lang=en): Phra Khanong · 1 room · 35,000 THB/month
+- [The Clover Thonglor 18](https://banditkmc23-ai.github.io/movecondo/condo/the-clover-thonglor-18/?lang=en): Thonglor · 1 room · 19,000 THB/month
+- [Noble BE19](https://banditkmc23-ai.github.io/movecondo/condo/noble-be19/?lang=en): Asok · 1 room · 70,000 THB/month
+- [Ideo Q36 Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/ideo-q36-thonglor/?lang=en): Thonglor · 1 room · 65,000 THB/month
+- [Noble BE33](https://banditkmc23-ai.github.io/movecondo/condo/noble-be33/?lang=en): Phrom Phong · 2 rooms · 39,500–70,000 THB/month
+- [Whizdom Essence Sukhumvit 101](https://banditkmc23-ai.github.io/movecondo/condo/whizdom-essence-sukhumvit-101/?lang=en): Bang Na · 1 room · 38,000 THB/month
+- [The Nest Sukhumvit 71](https://banditkmc23-ai.github.io/movecondo/condo/the-nest-sukhumvit-71/?lang=en): Phra Khanong · 1 room · 13,500 THB/month
+- [Ashton Asoke-Rama 9](https://banditkmc23-ai.github.io/movecondo/condo/ashton-asoke-rama-9/?lang=en): Rama 9 · 2 rooms · 38,000–46,000 THB/month
+- [The XXXIX Sukhumvit 39](https://banditkmc23-ai.github.io/movecondo/condo/the-xxxix-sukhumvit-39/?lang=en): Phrom Phong · 1 room · 59,000 THB/month
+- [Mayfair Place Sukhumvit 50](https://banditkmc23-ai.github.io/movecondo/condo/mayfair-place-sukhumvit-50/?lang=en): On Nut · 1 room · 23,000 THB/month
+- [The Room Sukhumvit 62](https://banditkmc23-ai.github.io/movecondo/condo/the-room-sukhumvit-62/?lang=en): Bang Na · 1 room · 25,000 THB/month
+- [IDEO Sukhumvit 93](https://banditkmc23-ai.github.io/movecondo/condo/ideo-sukhumvit-93/?lang=en): On Nut · 2 rooms · 25,000–35,000 THB/month
+- [Laviq Thonglor Sukhumvit 57](https://banditkmc23-ai.github.io/movecondo/condo/laviq-thonglor-sukhumvit-57/?lang=en): Thonglor · 1 room · 45,000 THB/month
+- [The Nest Ploenchit](https://banditkmc23-ai.github.io/movecondo/condo/the-nest-ploenchit/?lang=en): Chit Lom · 1 room · 28,000 THB/month
+- [H Sukhumvit 43](https://banditkmc23-ai.github.io/movecondo/condo/h-sukhumvit-43/?lang=en): Phrom Phong · 1 room · 54,000 THB/month
+- [Park Origin Phrom Phong](https://banditkmc23-ai.github.io/movecondo/condo/park-origin-phrom-phong/?lang=en): Phrom Phong · 1 room · 24,000 THB/month
+- [The Line Sukhumvit 101](https://banditkmc23-ai.github.io/movecondo/condo/the-line-sukhumvit-101/?lang=en): Bang Na · 1 room · 14,000 THB/month
+- [Sky Walk Residences](https://banditkmc23-ai.github.io/movecondo/condo/sky-walk-residences/?lang=en): Phra Khanong · 1 room · 35,000 THB/month
+- [Quattro by Sansiri](https://banditkmc23-ai.github.io/movecondo/condo/quattro-by-sansiri/?lang=en): Thonglor · 1 room · 67,000 THB/month
+
 ## รายละเอียดทุกห้อง / Every room in detail
 
 ### Aspire Onnut Station — MC-001
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-001/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-001/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/aspire-onnut-station/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 34 ตร.ม. · ชั้น 4
 - ค่าเช่า: 21,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -74,7 +314,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-002/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-002/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/bangkok-feliz-sukhumvit-69-2/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 34 ตร.ม. · ชั้น 8
 - ค่าเช่า: 13,500 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -99,7 +339,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-003/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-003/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/blocs-77/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 40 ตร.ม. · ชั้น 11
 - ค่าเช่า: 18,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -124,7 +364,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-004/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-004/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/ceil-by-sansiri/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 46 ตร.ม. · ชั้น 9
 - ค่าเช่า: 25,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -153,7 +393,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-005/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-005/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/chapter-thonglor-25/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 4
 - ค่าเช่า: 22,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -180,7 +420,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-006/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-006/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/ideo-mobi-sukhumvit-81/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 46 ตร.ม. · ชั้น 16
 - ค่าเช่า: 24,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -205,7 +445,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-007/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-007/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 33 ตร.ม. · ชั้น 3
 - ค่าเช่า: 19,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -232,7 +472,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-008/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-008/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 5
 - ค่าเช่า: 20,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -259,7 +499,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-009/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-009/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 38 ตร.ม. · ชั้น 6
 - ค่าเช่า: 23,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -286,7 +526,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-010/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-010/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-48/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30.5 ตร.ม. · ชั้น 8
 - ค่าเช่า: 16,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -311,7 +551,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-011/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-011/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/mori-haus/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 47 ตร.ม. · ชั้น 5
 - ค่าเช่า: 28,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -340,7 +580,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-012/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-012/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/nia-by-sansiri/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 48 ตร.ม. · ชั้น 15
 - ค่าเช่า: 25,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -369,7 +609,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-013/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-013/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-ora/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 115 ตร.ม. · ชั้น 11
 - ค่าเช่า: 55,000 บาท/เดือน · มัดจำ 2 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -396,7 +636,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-014/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-014/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/oka-haus/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 41 ตร.ม. · ชั้น 33
 - ค่าเช่า: 29,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -423,7 +663,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-015/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-015/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/rhythm-ekkamai/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม. · ชั้น 9
 - ค่าเช่า: 24,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -452,7 +692,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-016/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-016/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-alcove-thonglor-10/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 76 ตร.ม. · ชั้น 16
 - ค่าเช่า: 35,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -481,7 +721,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-017/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-017/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-base-park-west/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 31 ตร.ม. · ชั้น 20
 - ค่าเช่า: 16,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -508,7 +748,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-018/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-018/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-line-sukhumvit-71/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 61.1 ตร.ม. · ชั้น 7
 - ค่าเช่า: 35,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -537,7 +777,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-019/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-019/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-niche-pride-thonglor-petchaburi/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 36 ตร.ม. · ชั้น 22
 - ค่าเช่า: 16,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: กำลังจะว่าง · ว่าง 29 พ.ย. · วันเข้าอยู่: ว่าง 29 พ.ย. 2569
@@ -564,7 +804,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-020/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-020/?lang=en
 
 ภาษาไทย:
-- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/)
+- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-room-sukhumvit-21/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 53.09 ตร.ม. · ชั้น 24
 - ค่าเช่า: 30,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -591,7 +831,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-021/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-021/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-teak-sukhumvit-39/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 41 ตร.ม. · ชั้น 8
 - ค่าเช่า: 28,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -616,7 +856,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-022/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-022/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/wyne-by-sansiri/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35.1 ตร.ม. · ชั้น 29
 - ค่าเช่า: 20,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -641,7 +881,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-023/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-023/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/nia-by-sansiri/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 54 ตร.ม. · ชั้น 8
 - ค่าเช่า: 30,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -668,7 +908,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-024/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-024/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม. · ชั้น 28
 - ค่าเช่า: 14,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -695,7 +935,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-025/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-025/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/xt-ekkamai/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม. · ชั้น 4
 - ค่าเช่า: 24,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -722,7 +962,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-026/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-026/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/mori-haus/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 65 ตร.ม. · ชั้น 6
 - ค่าเช่า: 50,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -749,7 +989,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-027/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-027/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/modiz-sukhumvit-50/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 31 ตร.ม. · ชั้น 19
 - ค่าเช่า: 16,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -774,7 +1014,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-028/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-028/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 36 ตร.ม. · ชั้น 4
 - ค่าเช่า: 21,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -799,7 +1039,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-029/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-029/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/chapter-thonglor-25/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 48 ตร.ม. · ชั้น 8
 - ค่าเช่า: 35,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -826,7 +1066,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-030/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-030/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/nue-district-r9/
 - แบบห้อง: 3 ห้องนอน · ขนาด: 60.4 ตร.ม. · ชั้น 19
 - ค่าเช่า: 52,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -849,7 +1089,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-031/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-031/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/chapter-thonglor-25/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 29 ตร.ม. · ชั้น 6
 - ค่าเช่า: 20,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -874,7 +1114,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-032/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-032/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-48/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม. · ชั้น 10
 - ค่าเช่า: 16,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -899,7 +1139,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-033/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-033/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-44-1/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 12
 - ค่าเช่า: 22,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -924,7 +1164,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-034/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-034/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/chapter-thonglor-25/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 7
 - ค่าเช่า: 25,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -953,7 +1193,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-035/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-035/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-48/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม. · ชั้น 14
 - ค่าเช่า: 17,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -978,7 +1218,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-036/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-036/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 38 ตร.ม. · ชั้น 3
 - ค่าเช่า: 22,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1003,7 +1243,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-037/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-037/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 38 ตร.ม. · ชั้น 3
 - ค่าเช่า: 22,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1028,7 +1268,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-038/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-038/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/hasu-haus/
 - แบบห้อง: 2 ห้องนอน · ชั้น 4
 - ค่าเช่า: 48,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1053,7 +1293,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-039/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-039/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-niche-mono-sukhumvit-50/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 31 ตร.ม. · ชั้น 3
 - ค่าเช่า: 13,500 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1080,7 +1320,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-040/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-040/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 32.5 ตร.ม. · ชั้น 11
 - ค่าเช่า: 14,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1105,7 +1345,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-041/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-041/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 37 ตร.ม. · ชั้น 6
 - ค่าเช่า: 24,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1134,7 +1374,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-042/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-042/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-tree-onnut-station/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 27 ตร.ม. · ชั้น 7
 - ค่าเช่า: 14,500 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1159,7 +1399,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-043/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-043/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-base-park-west/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 31 ตร.ม. · ชั้น 9
 - ค่าเช่า: 13,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1184,7 +1424,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-044/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-044/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/le-cote/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 33 ตร.ม. · ชั้น 3
 - ค่าเช่า: 17,500 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1211,7 +1451,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-045/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-045/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/hasu-haus/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 36 ตร.ม. · ชั้น 4
 - ค่าเช่า: 20,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1240,7 +1480,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-046/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-046/?lang=en
 
 ภาษาไทย:
-- ย่าน: ห้วยขวาง (https://banditkmc23-ai.github.io/movecondo/areas/huai-khwang/)
+- ย่าน: ห้วยขวาง (https://banditkmc23-ai.github.io/movecondo/areas/huai-khwang/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-tempo-ratchada/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 27 ตร.ม. · ชั้น 3
 - ค่าเช่า: 15,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1265,7 +1505,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-047/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-047/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/townhome-thonglor-19/
 - แบบห้อง: 2 ห้องนอน 2 ห้องนั่งเล่น · ขนาด: 180 ตร.ม.
 - ค่าเช่า: 90,000 บาท/เดือน · ล่วงหน้า 1 เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1292,7 +1532,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-048/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-048/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-48/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 49 ตร.ม. · ชั้น 12A
 - ค่าเช่า: 28,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1317,7 +1557,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-049/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-049/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-president-sukhumvit-81/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 9
 - ค่าเช่า: 17,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -1338,7 +1578,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-050/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-050/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/q-house-sukhumvit-79/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 31 ตร.ม. · ชั้น 22
 - ค่าเช่า: 19,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -1361,7 +1601,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-051/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-051/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-48/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 33 ตร.ม. · ชั้น 16
 - ค่าเช่า: 17,500 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1384,7 +1624,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-052/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-052/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/nia-by-sansiri/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 29.2 ตร.ม. · ชั้น 19
 - ค่าเช่า: 16,000 บาท/เดือน · ล่วงหน้า 1 เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1413,7 +1653,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-053/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-053/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-crest-sukhumvit-34/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 98 ตร.ม. · ชั้น 12–13
 - ค่าเช่า: 85,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1440,7 +1680,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-054/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-054/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/house-soi-soonvijai/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 140 ตร.ม.
 - ค่าเช่า: 62,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -1463,7 +1703,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-055/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-055/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-niche-pride-thonglor-petchaburi/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 36 ตร.ม. · ชั้น 32
 - ค่าเช่า: 18,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -1486,7 +1726,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-056/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-056/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-asoke-hype/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35.5 ตร.ม. · ชั้น 16
 - ค่าเช่า: 26,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1511,7 +1751,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-057/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-057/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-lumpini-24/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 29 ตร.ม. · ชั้น 30
 - ค่าเช่า: 23,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1536,7 +1776,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-058/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-058/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/nia-by-sansiri/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 54 ตร.ม. · ชั้น 8
 - ค่าเช่า: 29,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1563,7 +1803,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-059/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-059/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-tree-pattanakarn-ekkamai/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 40 ตร.ม. · ชั้น 27
 - ค่าเช่า: 25,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1588,7 +1828,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-060/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-060/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/chewathai-residence-asoke/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 45 ตร.ม. · ชั้น 21
 - ค่าเช่า: 27,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1613,7 +1853,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-061/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-061/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/ideo-rama-9-asoke/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 32 ตร.ม. · ชั้น 10
 - ค่าเช่า: 20,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1638,7 +1878,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-062/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-062/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-base-park-east/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 32 ตร.ม. · ชั้น 16
 - ค่าเช่า: 16,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -1663,7 +1903,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-063/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-063/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-teak-sukhumvit-39/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 41 ตร.ม. · ชั้น 8
 - ค่าเช่า: 28,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1688,7 +1928,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-064/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-064/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/c-ekkamai/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม.
 - ค่าเช่า: 17,500 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1713,7 +1953,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-065/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-065/?lang=en
 
 ภาษาไทย:
-- ย่าน: ชิดลม (https://banditkmc23-ai.github.io/movecondo/areas/chidlom/)
+- ย่าน: ชิดลม (https://banditkmc23-ai.github.io/movecondo/areas/chidlom/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-one-wireless/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 38.26 ตร.ม. · ชั้น 12A
 - ค่าเช่า: 26,500 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1738,7 +1978,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-066/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-066/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/rhythm-ekkamai-estate/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35.25 ตร.ม. · ชั้น 12
 - ค่าเช่า: 38,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1765,7 +2005,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-067/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-067/?lang=en
 
 ภาษาไทย:
-- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/)
+- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/fynn-asoke/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 41 ตร.ม. · ชั้น 3
 - ค่าเช่า: 38,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1790,7 +2030,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-068/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-068/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/knightsbridge-space-sukhumvit-rama-4/
 - แบบห้อง: ดูเพล็กซ์ · ขนาด: 40 ตร.ม. · ชั้น 25
 - ค่าเช่า: 40,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1815,7 +2055,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-069/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-069/?lang=en
 
 ภาษาไทย:
-- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/)
+- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/whizdom-connect-sukhumvit/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม. · ชั้น 32
 - ค่าเช่า: 18,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1842,7 +2082,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-070/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-070/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/
 - แบบห้อง: 2 ห้องนอน
 - ค่าเช่า: 26,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1867,7 +2107,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-071/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-071/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/ideo-s93/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 32 ตร.ม. · ชั้น 7
 - ค่าเช่า: 19,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1892,7 +2132,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-072/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-072/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-form-thonglor/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 33 ตร.ม. · ชั้น 14
 - ค่าเช่า: 33,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1917,7 +2157,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-073/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-073/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-50/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 46 ตร.ม. · ชั้น 5
 - ค่าเช่า: 25,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1944,7 +2184,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-074/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-074/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/xt-ekkamai/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม.
 - ค่าเช่า: 21,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -1969,7 +2209,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-075/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-075/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/aspire-onnut-station/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 27.5 ตร.ม.
 - ค่าเช่า: 17,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -1992,7 +2232,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-076/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-076/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-around-33/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 55.19 ตร.ม. · ชั้น 6
 - ค่าเช่า: 55,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2017,7 +2257,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-077/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-077/?lang=en
 
 ภาษาไทย:
-- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/)
+- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-hyde-sukhumvit-13/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 75 ตร.ม. · ชั้น 9
 - ค่าเช่า: 58,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2042,7 +2282,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-078/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-078/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/ceil-by-sansiri/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35.31 ตร.ม. · ชั้น 6
 - ค่าเช่า: 23,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2067,7 +2307,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-079/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-079/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 4 (https://banditkmc23-ai.github.io/movecondo/areas/rama-4/)
+- ย่าน: พระราม 4 (https://banditkmc23-ai.github.io/movecondo/areas/rama-4/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-rama-4-asoke/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 25
 - ค่าเช่า: 27,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2092,7 +2332,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-080/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-080/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/mycondo-sukhumvit-52/
 - แบบห้อง: สตูดิโอ · ขนาด: 25 ตร.ม.
 - ค่าเช่า: 12,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2117,7 +2357,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-081/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-081/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-tree-sukhumvit-71/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 57 ตร.ม. · ชั้น 15
 - ค่าเช่า: 35,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2142,7 +2382,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-082/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-082/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/ideo-mobi-asoke/
 - แบบห้อง: 1 ห้องนอน (ดูเพล็กซ์) · ขนาด: 47 ตร.ม. · ชั้น 24
 - ค่าเช่า: 35,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2167,7 +2407,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-083/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-083/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-form-thonglor/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 33 ตร.ม. · ชั้น 26
 - ค่าเช่า: 35,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2192,7 +2432,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-084/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-084/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/park-origin-thonglor/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 33 ตร.ม. · ชั้น 20
 - ค่าเช่า: 39,500 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2217,7 +2457,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-085/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-085/?lang=en
 
 ภาษาไทย:
-- ย่าน: ชิดลม (https://banditkmc23-ai.github.io/movecondo/areas/chidlom/)
+- ย่าน: ชิดลม (https://banditkmc23-ai.github.io/movecondo/areas/chidlom/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/28-chidlom/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 38.65 ตร.ม.
 - ค่าเช่า: 42,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2242,7 +2482,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-086/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-086/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/park-origin-thonglor/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 45 ตร.ม.
 - ค่าเช่า: 47,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2267,7 +2507,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-087/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-087/?lang=en
 
 ภาษาไทย:
-- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/)
+- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-lofts-asoke/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 86 ตร.ม.
 - ค่าเช่า: 75,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2292,7 +2532,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-088/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-088/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/waterford-diamond-sukhumvit-30-1/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 70 ตร.ม. · ชั้น 28
 - ค่าเช่า: 36,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2317,7 +2557,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-089/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-089/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/aspire-onnut-station/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม. · ชั้น 11
 - ค่าเช่า: 20,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2342,7 +2582,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-090/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-090/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/park-origin-24-phrom-phong/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 55 ตร.ม. · ชั้น 17
 - ค่าเช่า: 42,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2367,7 +2607,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-091/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-091/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/rhythm-asoke/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 31.15 ตร.ม. · ชั้น 18
 - ค่าเช่า: 21,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2392,7 +2632,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-092/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-092/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-niche-pride-thonglor-petchaburi/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 31 ตร.ม. · ชั้น 28
 - ค่าเช่า: 17,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2417,7 +2657,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-093/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-093/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/wyne-by-sansiri/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 33 ตร.ม. · ชั้น 15
 - ค่าเช่า: 18,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2442,7 +2682,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-094/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-094/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/culture-thonglor/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 52 ตร.ม.
 - ค่าเช่า: 55,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2465,7 +2705,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-095/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-095/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/park-origin-thonglor/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 45 ตร.ม.
 - ค่าเช่า: 45,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2486,7 +2726,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-096/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-096/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-emporio-place-sukhumvit-24/
 - แบบห้อง: 1 ห้องนอน (ดูเพล็กซ์) · ขนาด: 83 ตร.ม.
 - ค่าเช่า: 55,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2511,7 +2751,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-097/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-097/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-esse-sukhumvit-36/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 38.5 ตร.ม. · ชั้น 17
 - ค่าเช่า: 48,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2536,7 +2776,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-098/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-098/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-remix-thonglor/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 42 ตร.ม. · ชั้น 14
 - ค่าเช่า: 25,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2557,7 +2797,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-099/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-099/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/aspire-rama-9/
 - ขนาด: 39 ตร.ม. · ชั้น 16
 - ค่าเช่า: 18,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2580,7 +2820,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-100/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-100/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-asoke/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 29 ตร.ม. · ชั้น 24
 - ค่าเช่า: 17,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2603,7 +2843,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-101/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-101/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-50/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 46 ตร.ม. · ชั้น 8
 - ค่าเช่า: 24,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2630,7 +2870,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-102/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-102/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/quintara-mhy-zen-phromphong/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 25 ตร.ม. · ชั้น 4
 - ค่าเช่า: 16,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2651,7 +2891,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-103/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-103/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/park-origin-thonglor/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 33 ตร.ม. · ชั้น 30
 - ค่าเช่า: 30,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2678,7 +2918,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-104/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-104/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/q-house-sukhumvit-79/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 60 ตร.ม. · ชั้น 22
 - ค่าเช่า: 40,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2703,7 +2943,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-105/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-105/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/rhythm-asoke-2/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม. · ชั้น 27
 - ค่าเช่า: 18,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2724,7 +2964,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-106/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-106/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/siamese-sukhumvit-48/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 44 ตร.ม. · ชั้น 19
 - ค่าเช่า: 28,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2749,7 +2989,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-107/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-107/?lang=en
 
 ภาษาไทย:
-- ย่าน: สามย่าน-สีลม (https://banditkmc23-ai.github.io/movecondo/areas/samyan-silom/)
+- ย่าน: สามย่าน-สีลม (https://banditkmc23-ai.github.io/movecondo/areas/samyan-silom/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-revo-silom/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 33.72 ตร.ม. · ชั้น 18
 - ค่าเช่า: 22,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2772,7 +3012,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-108/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-108/?lang=en
 
 ภาษาไทย:
-- ย่าน: ชิดลม (https://banditkmc23-ai.github.io/movecondo/areas/chidlom/)
+- ย่าน: ชิดลม (https://banditkmc23-ai.github.io/movecondo/areas/chidlom/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-ploenchit/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 48 ตร.ม. · ชั้น 12
 - ค่าเช่า: 33,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2797,7 +3037,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-109/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-109/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/qube-suites-sukhumvit-46/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 60 ตร.ม.
 - ค่าเช่า: 28,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2824,7 +3064,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-110/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-110/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/ramada-by-wyndham-siamese-sukhumvit-87/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 45 ตร.ม. · ชั้น 8
 - ค่าเช่า: 25,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2851,7 +3091,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-111/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-111/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/rhythm-ekkamai-estate/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 12
 - ค่าเช่า: 30,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2872,7 +3112,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-112/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-112/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-line-sukhumvit-71/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม.
 - ค่าเช่า: 19,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2895,7 +3135,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-113/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-113/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/oka-haus/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 34 ตร.ม. · ชั้น 33
 - ค่าเช่า: 22,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2918,7 +3158,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-114/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-114/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/oka-haus/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 34 ตร.ม. · ชั้น 17
 - ค่าเช่า: 22,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -2947,7 +3187,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-115/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-115/?lang=en
 
 ภาษาไทย:
-- ย่าน: ชิดลม (https://banditkmc23-ai.github.io/movecondo/areas/chidlom/)
+- ย่าน: ชิดลม (https://banditkmc23-ai.github.io/movecondo/areas/chidlom/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/28-chidlom/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 38.65 ตร.ม. · ชั้น 12A
 - ค่าเช่า: 42,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2970,7 +3210,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-116/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-116/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-reserve-sukhumvit-61/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 50 ตร.ม. · ชั้น 3
 - ค่าเช่า: 55,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -2997,7 +3237,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-117/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-117/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/ceil-by-sansiri/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 46 ตร.ม. · ชั้น 7
 - ค่าเช่า: 26,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3026,7 +3266,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-118/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-118/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/ceil-by-sansiri/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 49 ตร.ม. · ชั้น 10
 - ค่าเช่า: 32,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3053,7 +3293,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-119/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-119/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/chapter-thonglor-25/
 - แบบห้อง: 1+1 ห้องนอน · ขนาด: 47 ตร.ม. · ชั้น 3
 - ค่าเช่า: 34,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3080,7 +3320,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-120/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-120/?lang=en
 
 ภาษาไทย:
-- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/)
+- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/edge-sukhumvit-23/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 43.2 ตร.ม. · ชั้น 10
 - ค่าเช่า: 38,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3107,7 +3347,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-121/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-121/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 3
 - ค่าเช่า: 23,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3132,7 +3372,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-122/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-122/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-state-39/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 42 ตร.ม. · ชั้น 22
 - ค่าเช่า: 45,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3157,7 +3397,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-123/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-123/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-state-39/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 60 ตร.ม.
 - ค่าเช่า: 60,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3180,7 +3420,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-124/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-124/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/siri-at-sukhumvit/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 52 ตร.ม. · ชั้น 18
 - ค่าเช่า: 35,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3201,7 +3441,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-125/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-125/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-lumpini-24/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30.5 ตร.ม. · ชั้น 24
 - ค่าเช่า: 25,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3222,7 +3462,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-126/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-126/?lang=en
 
 ภาษาไทย:
-- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/)
+- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/skyrise-sukhumvit-64/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 45 ตร.ม. · ชั้น 35
 - ค่าเช่า: 24,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3243,7 +3483,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-127/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-127/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-esse-sukhumvit-36/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 43 ตร.ม. · ชั้น 21
 - ค่าเช่า: 48,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3264,7 +3504,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-128/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-128/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/beatniq-sukhumvit-32/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 57 ตร.ม. · ชั้น 7
 - ค่าเช่า: 60,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3287,7 +3527,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-129/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-129/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-62/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 23
 - ค่าเช่า: 25,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3312,7 +3552,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-130/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-130/?lang=en
 
 ภาษาไทย:
-- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/)
+- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/whizdom-inspire-sukhumvit/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 48 ตร.ม. · ชั้น 7
 - ค่าเช่า: 30,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3335,7 +3575,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-131/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-131/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/address-sukhumvit-61/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 56.5 ตร.ม. · ชั้น 1
 - ค่าเช่า: 40,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -3360,7 +3600,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-132/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-132/?lang=en
 
 ภาษาไทย:
-- ย่าน: สามย่าน-สีลม (https://banditkmc23-ai.github.io/movecondo/areas/samyan-silom/)
+- ย่าน: สามย่าน-สีลม (https://banditkmc23-ai.github.io/movecondo/areas/samyan-silom/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/culture-chula/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 36 ตร.ม. · ชั้น 14
 - ค่าเช่า: 33,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3383,7 +3623,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-133/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-133/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-lumpini-24/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 55 ตร.ม.
 - ค่าเช่า: 40,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3404,7 +3644,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-134/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-134/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-around-33/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 9
 - ค่าเช่า: 25,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3425,7 +3665,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-135/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-135/?lang=en
 
 ภาษาไทย:
-- ย่าน: ชิดลม (https://banditkmc23-ai.github.io/movecondo/areas/chidlom/)
+- ย่าน: ชิดลม (https://banditkmc23-ai.github.io/movecondo/areas/chidlom/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/q-langsuan/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 85 ตร.ม. · ชั้น 8
 - ค่าเช่า: 70,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3446,7 +3686,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-136/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-136/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/siri-at-sukhumvit/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 51 ตร.ม. · ชั้น 21
 - ค่าเช่า: 37,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3467,7 +3707,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-137/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-137/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/c-ekkamai/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 34 ตร.ม. · ชั้น 12
 - ค่าเช่า: 19,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3490,7 +3730,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-138/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-138/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/siri-at-sukhumvit/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 50 ตร.ม. · ชั้น 20
 - ค่าเช่า: 35,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3515,7 +3755,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-139/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-139/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-reveal-ekkamai/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 54 ตร.ม. · ชั้น 24
 - ค่าเช่า: 36,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3538,7 +3778,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-140/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-140/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 4 (https://banditkmc23-ai.github.io/movecondo/areas/rama-4/)
+- ย่าน: พระราม 4 (https://banditkmc23-ai.github.io/movecondo/areas/rama-4/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/coco-parc-rama-4/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 36.46 ตร.ม.
 - ค่าเช่า: 44,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -3561,7 +3801,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-141/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-141/?lang=en
 
 ภาษาไทย:
-- ย่าน: ชิดลม (https://banditkmc23-ai.github.io/movecondo/areas/chidlom/)
+- ย่าน: ชิดลม (https://banditkmc23-ai.github.io/movecondo/areas/chidlom/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-ploenchit/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 51 ตร.ม. · ชั้น 11
 - ค่าเช่า: 35,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3582,7 +3822,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-142/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-142/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-50/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 46 ตร.ม.
 - ค่าเช่า: 30,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -3605,7 +3845,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-143/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-143/?lang=en
 
 ภาษาไทย:
-- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/)
+- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/ideo-mix-sukhumvit-103/
 - ขนาด: 32.25 ตร.ม. · ชั้น 14
 - ค่าเช่า: 14,400 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3630,7 +3870,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-144/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-144/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/khun-by-yoo/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 84 ตร.ม. · ชั้น 11
 - ค่าเช่า: 120,000 บาท/เดือน · มัดจำ 2 เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3651,7 +3891,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-145/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-145/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-reveal-ekkamai/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 55 ตร.ม. · ชั้น 12A
 - ค่าเช่า: 33,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3676,7 +3916,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-146/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-146/?lang=en
 
 ภาษาไทย:
-- ย่าน: อารีย์ (https://banditkmc23-ai.github.io/movecondo/areas/ari/)
+- ย่าน: อารีย์ (https://banditkmc23-ai.github.io/movecondo/areas/ari/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-around-ari/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 35
 - ค่าเช่า: 32,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -3699,7 +3939,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-147/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-147/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/aestiq-thonglor/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 15
 - ค่าเช่า: 48,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3720,7 +3960,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-148/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-148/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-state-39/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 30
 - ค่าเช่า: 37,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3743,7 +3983,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-149/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-149/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 4 (https://banditkmc23-ai.github.io/movecondo/areas/rama-4/)
+- ย่าน: พระราม 4 (https://banditkmc23-ai.github.io/movecondo/areas/rama-4/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-rama-4-asoke/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 32.4 ตร.ม. · ชั้น 14
 - ค่าเช่า: 27,500 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -3768,7 +4008,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-150/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-150/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-esse-sukhumvit-36/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 38.14 ตร.ม. · ชั้น 25
 - ค่าเช่า: 45,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3791,7 +4031,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-151/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-151/?lang=en
 
 ภาษาไทย:
-- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/)
+- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/edge-sukhumvit-23/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม. · ชั้น 6
 - ค่าเช่า: 25,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3814,7 +4054,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-152/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-152/?lang=en
 
 ภาษาไทย:
-- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/)
+- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/grand-park-view-asoke/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 48 ตร.ม. · ชั้น 24
 - ค่าเช่า: 23,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3839,7 +4079,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-153/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-153/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/mori-haus/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 36.43 ตร.ม. · ชั้น 5
 - ค่าเช่า: 24,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -3862,7 +4102,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-154/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-154/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-asoke-hype/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 32 ตร.ม. · ชั้น 31
 - ค่าเช่า: 22,500 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -3885,7 +4125,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-155/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-155/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/rhythm-ekkamai/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 70 ตร.ม.
 - ค่าเช่า: 65,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -3908,7 +4148,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-156/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-156/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/rhythm-ekkamai/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 38 ตร.ม. · ชั้น 29
 - ค่าเช่า: 38,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -3933,7 +4173,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-158/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-158/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/blocs-77/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 40.5 ตร.ม. · ชั้น 27
 - ค่าเช่า: 20,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -3958,7 +4198,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-159/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-159/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-room-sukhumvit-79/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 58 ตร.ม. · ชั้น 5
 - ค่าเช่า: 25,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -3981,7 +4221,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-160/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-160/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-base-park-west/
 - แบบห้อง: สตูดิโอ · ขนาด: 26 ตร.ม. · ชั้น 3
 - ค่าเช่า: 12,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -4006,7 +4246,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-161/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-161/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-asoke-hype/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 32 ตร.ม. · ชั้น 33
 - ค่าเช่า: 23,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -4033,7 +4273,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-162/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-162/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/chapter-thonglor-25/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 8
 - ค่าเช่า: 22,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4058,7 +4298,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-163/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-163/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-base-petchburi-thonglor/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 33 ตร.ม. · ชั้น 10
 - ค่าเช่า: 18,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4083,7 +4323,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-164/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-164/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/ideo-morph-38/
 - แบบห้อง: ดูเพล็กซ์ · ขนาด: 35 ตร.ม. · ชั้น 10
 - ค่าเช่า: 32,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4104,7 +4344,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-165/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-165/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-remix-thonglor/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 96.96 ตร.ม. · ชั้น 24
 - ค่าเช่า: 56,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4127,7 +4367,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-166/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-166/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/one9five-asoke-rama-9/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 68 ตร.ม. · ชั้น 16
 - ค่าเช่า: 56,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -4152,7 +4392,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-167/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-167/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/nue-district-r9/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 62 ตร.ม. · ชั้น 27
 - ค่าเช่า: 42,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4177,7 +4417,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-168/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-168/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/aspire-sukhumvit-48/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 27.14 ตร.ม. · ชั้น 26
 - ค่าเช่า: 12,500 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4202,7 +4442,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-169/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-169/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 31 ตร.ม. · ชั้น 26
 - ค่าเช่า: 15,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4225,7 +4465,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-170/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-170/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/aspire-sukhumvit-48/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 27 ตร.ม. · ชั้น 27
 - ค่าเช่า: 14,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -4250,7 +4490,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-171/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-171/?lang=en
 
 ภาษาไทย:
-- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/)
+- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/sense-sukhumvit/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 42.5 ตร.ม. · ชั้น 7
 - ค่าเช่า: 16,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -4277,7 +4517,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-172/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-172/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-65/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 60 ตร.ม.
 - ค่าเช่า: 35,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4300,7 +4540,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-173/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-173/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-clover-thonglor-18/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 46 ตร.ม. · ชั้น 6
 - ค่าเช่า: 19,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4323,7 +4563,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-174/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-174/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-48/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 33–34 ตร.ม. · ชั้น 23
 - ค่าเช่า: 18,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -4348,7 +4588,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-175/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-175/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/park-origin-24-phrom-phong/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 58 ตร.ม. · ชั้น 27
 - ค่าเช่า: 40,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4371,7 +4611,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-176/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-176/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/rhythm-asoke/
 - ขนาด: 34 ตร.ม. · ชั้น 9
 - ค่าเช่า: 20,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4396,7 +4636,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-177/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-177/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/aspire-sukhumvit-48/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 28 ตร.ม. · ชั้น 24
 - ค่าเช่า: 12,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4419,7 +4659,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-178/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-178/?lang=en
 
 ภาษาไทย:
-- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/)
+- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-be19/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 74 ตร.ม. · ชั้น 30
 - ค่าเช่า: 70,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4444,7 +4684,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-179/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-179/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/ideo-q36-thonglor/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 65 ตร.ม.
 - ค่าเช่า: 65,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -4469,7 +4709,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-180/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-180/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-state-39/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 37 ตร.ม. · ชั้น 30
 - ค่าเช่า: 35,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -4494,7 +4734,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-181/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-181/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 58 ตร.ม.
 - ค่าเช่า: 26,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4519,7 +4759,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-182/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-182/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-be33/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 52 ตร.ม. · ชั้น 23
 - ค่าเช่า: 39,500 บาท/เดือน · มัดจำ 2 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4546,7 +4786,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-183/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-183/?lang=en
 
 ภาษาไทย:
-- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/)
+- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/whizdom-essence-sukhumvit-101/
 - แบบห้อง: 2 ห้องนอน · ชั้น 34
 - ค่าเช่า: 38,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4573,7 +4813,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-184/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-184/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-line-sukhumvit-71/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 41 ตร.ม. · ชั้น 19
 - ค่าเช่า: 30,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -4596,7 +4836,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-185/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-185/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-nest-sukhumvit-71/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม. · ชั้น 4
 - ค่าเช่า: 13,500 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4623,7 +4863,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-186/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-186/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/oka-haus/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 20
 - ค่าเช่า: 19,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -4648,7 +4888,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-187/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-187/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-state-39/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม. · ชั้น 33
 - ค่าเช่า: 32,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4671,7 +4911,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-188/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-188/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/ideo-s93/
 - แบบห้อง: สตูดิโอ
 - ค่าเช่า: 15,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -4694,7 +4934,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-189/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-189/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/ashton-asoke-rama-9/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 38.5 ตร.ม. · ชั้น 24
 - ค่าเช่า: 38,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -4717,7 +4957,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-190/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-190/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-teak-sukhumvit-39/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 36 ตร.ม. · ชั้น 4
 - ค่าเช่า: 23,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4742,7 +4982,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-191/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-191/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-teak-sukhumvit-39/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 5
 - ค่าเช่า: 26,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4769,7 +5009,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-192/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-192/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-teak-sukhumvit-39/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 56.6 ตร.ม. · ชั้น 5
 - ค่าเช่า: 42,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4798,7 +5038,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-193/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-193/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-teak-sukhumvit-39/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 58 ตร.ม. · ชั้น 6
 - ค่าเช่า: 38,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4825,7 +5065,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-194/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-194/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-teak-sukhumvit-39/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 31 ตร.ม. · ชั้น 2
 - ค่าเช่า: 18,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4848,7 +5088,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-195/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-195/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-xxxix-sukhumvit-39/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 55 ตร.ม. · ชั้น 19
 - ค่าเช่า: 59,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4871,7 +5111,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-196/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-196/?lang=en
 
 ภาษาไทย:
-- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/)
+- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/grand-park-view-asoke/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 50 ตร.ม. · ชั้น 26
 - ค่าเช่า: 28,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4896,7 +5136,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-197/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-197/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-48/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 62 ตร.ม.
 - ค่าเช่า: 35,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4923,7 +5163,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-198/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-198/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-62/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม. · ชั้น 23
 - ค่าเช่า: 20,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4948,7 +5188,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-199/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-199/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-62/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 50 ตร.ม. · ชั้น 9
 - ค่าเช่า: 20,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4971,7 +5211,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-200/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-200/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-62/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 55 ตร.ม. · ชั้น 12
 - ค่าเช่า: 25,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -4996,7 +5236,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-202/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-202/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-62/
 - แบบห้อง: สตูดิโอ · ขนาด: 25 ตร.ม. · ชั้น 16
 - ค่าเช่า: 13,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -5019,7 +5259,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-203/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-203/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/mayfair-place-sukhumvit-50/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 45 ตร.ม. · ชั้น 17
 - ค่าเช่า: 23,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5042,7 +5282,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-204/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-204/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-50/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 65 ตร.ม. · ชั้น 19
 - ค่าเช่า: 40,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5065,7 +5305,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-205/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-205/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม. · ชั้น 31
 - ค่าเช่า: 12,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5090,7 +5330,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-206/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-206/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 12A
 - ค่าเช่า: 15,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5115,7 +5355,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-207/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-207/?lang=en
 
 ภาษาไทย:
-- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/)
+- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-room-sukhumvit-62/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 45 ตร.ม. · ชั้น 9
 - ค่าเช่า: 25,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5136,7 +5376,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-208/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-208/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/ideo-sukhumvit-93/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 52 ตร.ม. · ชั้น 9
 - ค่าเช่า: 25,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5163,7 +5403,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-209/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-209/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/ideo-sukhumvit-93/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 52 ตร.ม. · ชั้น 9
 - ค่าเช่า: 35,000 บาท/เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5186,7 +5426,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-210/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-210/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 37 ตร.ม. · ชั้น 23
 - ค่าเช่า: 13,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5209,7 +5449,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-211/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-211/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/laviq-thonglor-sukhumvit-57/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 46 ตร.ม. · ชั้น 25
 - ค่าเช่า: 45,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5230,7 +5470,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-212/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-212/?lang=en
 
 ภาษาไทย:
-- ย่าน: ชิดลม (https://banditkmc23-ai.github.io/movecondo/areas/chidlom/)
+- ย่าน: ชิดลม (https://banditkmc23-ai.github.io/movecondo/areas/chidlom/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-nest-ploenchit/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 40 ตร.ม. · ชั้น 3
 - ค่าเช่า: 28,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5255,7 +5495,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-213/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-213/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 32 ตร.ม. · ชั้น 15
 - ค่าเช่า: 15,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5278,7 +5518,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-214/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-214/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-48/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 49 ตร.ม. · ชั้น 4
 - ค่าเช่า: 25,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5299,7 +5539,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-215/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-215/?lang=en
 
 ภาษาไทย:
-- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/)
+- ย่าน: อโศก (https://banditkmc23-ai.github.io/movecondo/areas/asoke/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-room-sukhumvit-21/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 51 ตร.ม. · ชั้น 5
 - ค่าเช่า: 39,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5324,7 +5564,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-216/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-216/?lang=en
 
 ภาษาไทย:
-- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/)
+- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/whizdom-inspire-sukhumvit/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 33 ตร.ม. · ชั้น 18
 - ค่าเช่า: 20,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5347,7 +5587,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-217/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-217/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/h-sukhumvit-43/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 70 ตร.ม. · ชั้น 10
 - ค่าเช่า: 54,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5374,7 +5614,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-218/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-218/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/park-origin-phrom-phong/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม. · ชั้น 12
 - ค่าเช่า: 24,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5401,7 +5641,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-219/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-219/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/modiz-sukhumvit-50/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 27 ตร.ม. · ชั้น 11
 - ค่าเช่า: 15,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5428,7 +5668,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-220/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-220/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/oka-haus/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 50 ตร.ม. · ชั้น 38
 - ค่าเช่า: 40,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5455,7 +5695,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-221/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-221/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/life-asoke-hype/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 33 ตร.ม. · ชั้น 30
 - ค่าเช่า: 25,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5478,7 +5718,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-222/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-222/?lang=en
 
 ภาษาไทย:
-- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/)
+- ย่าน: อ่อนนุช (https://banditkmc23-ai.github.io/movecondo/areas/on-nut/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/aspire-onnut-station/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30.88 ตร.ม. · ชั้น 3
 - ค่าเช่า: 20,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5501,7 +5741,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-223/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-223/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-state-39/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 35 ตร.ม. · ชั้น 23
 - ค่าเช่า: 30,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -5528,7 +5768,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-224/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-224/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/park-origin-24-phrom-phong/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 55 ตร.ม.
 - ค่าเช่า: 42,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5551,7 +5791,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-225/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-225/?lang=en
 
 ภาษาไทย:
-- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/)
+- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-line-sukhumvit-101/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 28 ตร.ม. · ชั้น 24
 - ค่าเช่า: 14,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5576,7 +5816,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-226/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-226/?lang=en
 
 ภาษาไทย:
-- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/)
+- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/whizdom-connect-sukhumvit/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 30 ตร.ม. · ชั้น 10
 - ค่าเช่า: 16,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -5603,7 +5843,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-227/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-227/?lang=en
 
 ภาษาไทย:
-- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/)
+- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/whizdom-inspire-sukhumvit/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 60 ตร.ม. · ชั้น 27
 - ค่าเช่า: 42,500 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5628,7 +5868,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-228/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-228/?lang=en
 
 ภาษาไทย:
-- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/)
+- ย่าน: บางนา (https://banditkmc23-ai.github.io/movecondo/areas/bangna/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/whizdom-inspire-sukhumvit/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 51 ตร.ม. · ชั้น 12A
 - ค่าเช่า: 37,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -5655,7 +5895,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-229/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-229/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/ashton-asoke-rama-9/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 42 ตร.ม. · ชั้น 17
 - ค่าเช่า: 46,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -5680,7 +5920,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-230/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-230/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/)
+- ย่าน: พระราม 9 (https://banditkmc23-ai.github.io/movecondo/areas/rama-9/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/rhythm-asoke/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 45 ตร.ม.
 - ค่าเช่า: 28,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -5703,7 +5943,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-231/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-231/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/c-ekkamai/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 42 ตร.ม. · ชั้น 40
 - ค่าเช่า: 30,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5728,7 +5968,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-232/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-232/?lang=en
 
 ภาษาไทย:
-- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/)
+- ย่าน: พระโขนง (https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/sky-walk-residences/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 60 ตร.ม. · ชั้น 18
 - ค่าเช่า: 35,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -5751,7 +5991,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-233/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-233/?lang=en
 
 ภาษาไทย:
-- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/)
+- ย่าน: พร้อมพงษ์ (https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/noble-be33/
 - แบบห้อง: 3 ห้องนอน · ขนาด: 76 ตร.ม. · ชั้น 18
 - ค่าเช่า: 70,000 บาท/เดือน · มัดจำ 2 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5780,7 +6020,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-234/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-234/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/park-origin-thonglor/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 68 ตร.ม. · ชั้น 51
 - ค่าเช่า: 75,000 บาท/เดือน
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5801,7 +6041,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-235/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-235/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/quattro-by-sansiri/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 80 ตร.ม. · ชั้น 20
 - ค่าเช่า: 67,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -5826,7 +6066,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-236/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-236/?lang=en
 
 ภาษาไทย:
-- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/)
+- ย่าน: ทองหล่อ (https://banditkmc23-ai.github.io/movecondo/areas/thonglor/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/beatniq-sukhumvit-32/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 57.57 ตร.ม. · ชั้น 23
 - ค่าเช่า: 57,000 บาท/เดือน · มัดจำ 2 เดือน · ล่วงหน้า 1 เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: พร้อมเข้าอยู่
@@ -5851,7 +6091,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-237/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-237/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/the-alcove-thonglor-10/
 - แบบห้อง: 2 ห้องนอน · ขนาด: 72 ตร.ม. · ชั้น 14
 - ค่าเช่า: 45,000 บาท/เดือน · สัญญาขั้นต่ำ 1 ปี
 - สถานะ: ว่าง · วันเข้าอยู่: สอบถามวันเข้าอยู่
@@ -5876,7 +6116,7 @@ English:
 URL: https://banditkmc23-ai.github.io/movecondo/rooms/mc-250/  ·  English: https://banditkmc23-ai.github.io/movecondo/rooms/mc-250/?lang=en
 
 ภาษาไทย:
-- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/)
+- ย่าน: เอกมัย (https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/) · โครงการ: https://banditkmc23-ai.github.io/movecondo/condo/xt-ekkamai/
 - แบบห้อง: 1 ห้องนอน · ขนาด: 31 ตร.ม. · ชั้น 12
 - ค่าเช่า: 18,000 บาท/เดือน
 - สถานะ: กำลังจะว่าง · ว่าง 30 พ.ย. · วันเข้าอยู่: ว่าง 30 พ.ย. 2569

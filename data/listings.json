@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T00:04:07+07:00",
+  "generated": "2026-11-13T08:57:50+07:00",
   "rooms": [
     {
       "id": "MC-001",
@@ -45,7 +45,8 @@
         "images/rooms/mc-001/8.webp"
       ],
       "unverified": [],
-      "floor": "4"
+      "floor": "4",
+      "posted": "2026-10-02"
     },
     {
       "id": "MC-002",
@@ -91,7 +92,8 @@
         "images/rooms/mc-002/7.webp"
       ],
       "unverified": [],
-      "floor": "8"
+      "floor": "8",
+      "posted": "2026-11-02"
     },
     {
       "id": "MC-003",
@@ -138,7 +140,8 @@
         "images/rooms/mc-003/5.webp"
       ],
       "unverified": [],
-      "floor": "11"
+      "floor": "11",
+      "posted": "2026-11-01"
     },
     {
       "id": "MC-004",
@@ -192,7 +195,8 @@
         "images/rooms/mc-004/10.webp"
       ],
       "unverified": [],
-      "floor": "9"
+      "floor": "9",
+      "posted": "2026-10-22"
     },
     {
       "id": "MC-005",
@@ -239,7 +243,8 @@
         "images/rooms/mc-005/8.webp"
       ],
       "unverified": [],
-      "floor": "4"
+      "floor": "4",
+      "posted": "2026-09-16"
     },
     {
       "id": "MC-006",
@@ -288,7 +293,8 @@
         "images/rooms/mc-006/10.webp"
       ],
       "unverified": [],
-      "floor": "16"
+      "floor": "16",
+      "posted": "2026-09-09"
     },
     {
       "id": "MC-007",
@@ -332,7 +338,8 @@
         "images/rooms/mc-007/1.webp"
       ],
       "unverified": [],
-      "floor": "3"
+      "floor": "3",
+      "posted": "2026-09-09"
     },
     {
       "id": "MC-008",
@@ -381,7 +388,8 @@
         "images/rooms/mc-008/6.webp"
       ],
       "unverified": [],
-      "floor": "5"
+      "floor": "5",
+      "posted": "2026-09-22"
     },
     {
       "id": "MC-009",
@@ -429,7 +437,8 @@
         "images/rooms/mc-009/8.webp"
       ],
       "unverified": [],
-      "floor": "6"
+      "floor": "6",
+      "posted": "2026-11-02"
     },
     {
       "id": "MC-010",
@@ -473,7 +482,8 @@
         "images/rooms/mc-010/6.webp"
       ],
       "unverified": [],
-      "floor": "8"
+      "floor": "8",
+      "posted": "2026-10-02"
     },
     {
       "id": "MC-011",
@@ -531,7 +541,8 @@
         "images/rooms/mc-011/9.webp"
       ],
       "unverified": [],
-      "floor": "5"
+      "floor": "5",
+      "posted": "2026-11-07"
     },
     {
       "id": "MC-012",
@@ -584,7 +595,8 @@
         "images/rooms/mc-012/10.webp"
       ],
       "unverified": [],
-      "floor": "15"
+      "floor": "15",
+      "posted": "2026-09-09"
     },
     {
       "id": "MC-013",
@@ -632,7 +644,8 @@
         "images/rooms/mc-013/8.webp"
       ],
       "unverified": [],
-      "floor": "11"
+      "floor": "11",
+      "posted": "2026-10-30"
     },
     {
       "id": "MC-014",
@@ -684,7 +697,8 @@
         "images/rooms/mc-014/13.webp"
       ],
       "unverified": [],
-      "floor": "33"
+      "floor": "33",
+      "posted": "2026-11-04"
     },
     {
       "id": "MC-015",
@@ -735,7 +749,8 @@
         "images/rooms/mc-015/8.webp"
       ],
       "unverified": [],
-      "floor": "9"
+      "floor": "9",
+      "posted": "2026-11-10"
     },
     {
       "id": "MC-016",
@@ -783,7 +798,8 @@
         "images/rooms/mc-016/9.webp"
       ],
       "unverified": [],
-      "floor": "16"
+      "floor": "16",
+      "posted": "2026-10-05"
     },
     {
       "id": "MC-017",
@@ -834,7 +850,8 @@
         "images/rooms/mc-017/7.webp"
       ],
       "unverified": [],
-      "floor": "20"
+      "floor": "20",
+      "posted": "2026-09-27"
     },
     {
       "id": "MC-018",
@@ -885,7 +902,8 @@
         "images/rooms/mc-018/9.webp"
       ],
       "unverified": [],
-      "floor": "7"
+      "floor": "7",
+      "posted": "2026-11-05"
     },
     {
       "id": "MC-019",
@@ -934,7 +952,8 @@
         "images/rooms/mc-019/9.webp"
       ],
       "unverified": [],
-      "floor": "22"
+      "floor": "22",
+      "posted": "2026-11-01"
     },
     {
       "id": "MC-020",
@@ -989,7 +1008,8 @@
         "images/rooms/mc-020/13.webp"
       ],
       "unverified": [],
-      "floor": "24"
+      "floor": "24",
+      "posted": "2026-11-02"
     },
     {
       "id": "MC-021",
@@ -1040,7 +1060,8 @@
         "images/rooms/mc-021/10.webp"
       ],
       "unverified": [],
-      "floor": "8"
+      "floor": "8",
+      "posted": "2026-11-05"
     },
     {
       "id": "MC-022",
@@ -1069,6 +1090,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-09",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1113,6 +1135,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-09",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เครื่องใช้ไฟฟ้าครบ"
@@ -1156,6 +1179,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-09",
       "amenities": [
         "วิวเมือง",
         "พร้อมเข้าอยู่",
@@ -1202,6 +1226,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-09",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เฟอร์นิเจอร์ครบ",
@@ -1244,6 +1269,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-09",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1287,6 +1313,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-09",
       "amenities": [
         "ห้องมุม",
         "หันทิศเหนือ",
@@ -1332,6 +1359,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-09",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1375,6 +1403,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-09",
       "amenities": [
         "ห้องมุม",
         "พร้อมเข้าอยู่",
@@ -1419,6 +1448,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-09",
       "amenities": [
         "วิวไม่มีตึกบัง",
         "หันทิศตะวันออก"
@@ -1460,6 +1490,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-09",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1503,6 +1534,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-09",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1547,6 +1579,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-11",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1591,6 +1624,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-14",
       "amenities": [
         "ห้องมุม",
         "วิวสระว่ายน้ำ",
@@ -1637,6 +1671,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-16",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1679,6 +1714,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-16",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1723,6 +1759,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-16",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1767,6 +1804,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-17",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1811,6 +1849,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-19",
       "amenities": [
         "หันทิศตะวันออก",
         "พร้อมเข้าอยู่",
@@ -1854,6 +1893,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-19",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1895,6 +1935,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-19",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เครื่องใช้ไฟฟ้าครบ",
@@ -1941,6 +1982,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-20",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -1985,6 +2027,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-27",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -2027,6 +2070,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-09-28",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เฟอร์นิเจอร์ครบ",
@@ -2073,6 +2117,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-10-03",
       "amenities": [
         "วิวสระว่ายน้ำ",
         "พร้อมเข้าอยู่",
@@ -2120,6 +2165,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-10-09",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -2167,6 +2213,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-10-09",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เฟอร์นิเจอร์ครบ",
@@ -2213,6 +2260,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-10-22",
       "amenities": [
         "ห้องมุม",
         "พร้อมเข้าอยู่",
@@ -2258,6 +2306,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-10-23",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 35 ตร.ม. ที่ The President Sukhumvit 81 ย่านอ่อนนุช",
       "descriptionEn": "1-bedroom, 35 sq.m. at The President Sukhumvit 81, On Nut.",
@@ -2296,6 +2345,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-10-23",
       "amenities": [
         "หันทิศใต้"
       ],
@@ -2338,6 +2388,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-10-24",
       "amenities": [
         "พร้อมเข้าอยู่"
       ],
@@ -2379,6 +2430,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-10-25",
       "amenities": [
         "วิวสระว่ายน้ำ",
         "หันทิศเหนือ",
@@ -2424,6 +2476,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-10-30",
       "amenities": [
         "ห้องดูเพล็กซ์",
         "พร้อมเข้าอยู่",
@@ -2470,6 +2523,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-10-31",
       "amenities": [
         "ที่จอดรถ"
       ],
@@ -2514,6 +2568,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-01",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 36 ตร.ม. ที่ The Niche Pride Thonglor-Petchaburi ย่านทองหล่อ",
       "descriptionEn": "1-bedroom, 36 sq.m. at The Niche Pride Thonglor-Petchaburi, Thonglor.",
@@ -2554,6 +2609,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวเมือง",
         "พร้อมเข้าอยู่",
@@ -2601,6 +2657,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -2641,6 +2698,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -2685,6 +2743,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "หันทิศใต้",
         "พร้อมเข้าอยู่",
@@ -2731,6 +2790,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องมุม",
         "วิวสวน",
@@ -2778,6 +2838,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวเมือง",
         "พร้อมเข้าอยู่",
@@ -2823,6 +2884,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องมุม",
         "หันทิศตะวันตก",
@@ -2867,6 +2929,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -2912,6 +2975,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -2958,6 +3022,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3002,6 +3067,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวเมือง",
         "พร้อมเข้าอยู่",
@@ -3048,6 +3114,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3092,6 +3159,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องดูเพล็กซ์",
         "วิวเมือง",
@@ -3139,6 +3207,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เฟอร์นิเจอร์ครบ",
@@ -3186,6 +3255,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องมุม",
         "พร้อมเข้าอยู่",
@@ -3230,6 +3300,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3276,6 +3347,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3320,6 +3392,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวสระว่ายน้ำ",
         "พร้อมเข้าอยู่",
@@ -3366,6 +3439,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวเมือง",
         "หันทิศใต้",
@@ -3415,6 +3489,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "สระว่ายน้ำ",
         "ฟิตเนส",
@@ -3461,6 +3536,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3506,6 +3582,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวไม่มีตึกบัง",
         "วิวสระว่ายน้ำ",
@@ -3552,6 +3629,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3595,6 +3673,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวสวน",
         "หันทิศเหนือ",
@@ -3641,6 +3720,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3687,6 +3767,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3731,6 +3812,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องดูเพล็กซ์",
         "พร้อมเข้าอยู่",
@@ -3776,6 +3858,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวเมือง",
         "พร้อมเข้าอยู่",
@@ -3821,6 +3904,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3865,6 +3949,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3911,6 +3996,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -3958,6 +4044,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวเมือง",
         "พร้อมเข้าอยู่",
@@ -4006,6 +4093,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวเมือง",
         "พร้อมเข้าอยู่",
@@ -4051,6 +4139,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -4095,6 +4184,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -4138,6 +4228,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -4183,6 +4274,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -4227,6 +4319,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -4271,6 +4364,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวเมือง"
       ],
@@ -4315,6 +4409,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [],
       "description": "ห้อง 2 ห้องนอน ขนาด 45 ตร.ม. ที่ Park Origin Thonglor ย่านทองหล่อ",
       "descriptionEn": "2-bedroom, 45 sq.m. at Park Origin Thonglor, Thonglor.",
@@ -4357,6 +4452,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องดูเพล็กซ์",
         "พร้อมเข้าอยู่",
@@ -4404,6 +4500,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "หันทิศตะวันตก",
         "พร้อมเข้าอยู่",
@@ -4449,6 +4546,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 42 ตร.ม. ที่ Noble Remix Thonglor ย่านทองหล่อ",
       "descriptionEn": "1-bedroom, 42 sq.m. at Noble Remix Thonglor, Thonglor.",
@@ -4489,6 +4587,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวไม่มีตึกบัง"
       ],
@@ -4531,6 +4630,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวสวน",
         "หันทิศเหนือ"
@@ -4574,6 +4674,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวสระว่ายน้ำ",
         "หันทิศเหนือ",
@@ -4619,6 +4720,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 25 ตร.ม. ที่ Quintara Mhy'zen Phromphong ย่านพร้อมพงษ์",
       "descriptionEn": "1-bedroom, 25 sq.m. at Quintara Mhy'zen Phromphong, Phrom Phong.",
@@ -4658,6 +4760,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "หันทิศเหนือ",
         "อ่างอาบน้ำ",
@@ -4703,6 +4806,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวไม่มีตึกบัง",
         "อ่างอาบน้ำ"
@@ -4746,6 +4850,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 30 ตร.ม. ที่ Rhythm Asoke 2 ย่านพระราม 9",
       "descriptionEn": "1-bedroom, 30 sq.m. at Rhythm Asoke 2, Rama 9.",
@@ -4786,6 +4891,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "หันทิศตะวันออก",
         "สระว่ายน้ำ",
@@ -4831,6 +4937,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "หันทิศเหนือ",
         "พร้อมเข้าอยู่"
@@ -4874,6 +4981,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวสระว่ายน้ำ",
         "สระว่ายน้ำ"
@@ -4916,6 +5024,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "อ่างอาบน้ำ",
         "เครื่องซักผ้า",
@@ -4963,6 +5072,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องแบบลอฟต์ 2 ชั้น",
         "วิวเมือง",
@@ -5010,6 +5120,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 35 ตร.ม. ที่ Rhythm Ekkamai Estate ย่านเอกมัย",
       "descriptionEn": "1-bedroom, 35 sq.m. at Rhythm Ekkamai Estate, Ekkamai.",
@@ -5049,6 +5160,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "หันทิศใต้"
       ],
@@ -5093,6 +5205,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "เฟอร์นิเจอร์ครบ"
       ],
@@ -5132,6 +5245,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "หันทิศใต้",
         "พร้อมเข้าอยู่",
@@ -5179,6 +5293,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "สระว่ายน้ำ",
         "ฟิตเนส",
@@ -5223,6 +5338,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "อ่างอาบน้ำ",
         "เครื่องซักผ้า",
@@ -5269,6 +5385,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องมุม",
         "เครื่องใช้ไฟฟ้าครบ",
@@ -5314,6 +5431,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องมุม",
         "เฟอร์นิเจอร์บิลต์อิน",
@@ -5361,6 +5479,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวสวน",
         "สระว่ายน้ำ",
@@ -5406,6 +5525,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องมุม",
         "วิวเมือง",
@@ -5454,6 +5574,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "หันทิศตะวันออก",
         "สระว่ายน้ำ",
@@ -5498,6 +5619,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "เครื่องซักผ้า",
         "สระว่ายน้ำ",
@@ -5542,6 +5664,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องมุม"
       ],
@@ -5585,6 +5708,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 52 ตร.ม. ที่ Siri At Sukhumvit ย่านทองหล่อ",
       "descriptionEn": "1-bedroom, 52 sq.m. at Siri At Sukhumvit, Thonglor.",
@@ -5625,6 +5749,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 30.5 ตร.ม. ที่ The Lumpini 24 ย่านพร้อมพงษ์",
       "descriptionEn": "1-bedroom, 30.5 sq.m. at The Lumpini 24, Phrom Phong.",
@@ -5665,6 +5790,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [],
       "description": "ห้อง 2 ห้องนอน ขนาด 45 ตร.ม. ที่ Skyrise Sukhumvit 64 ย่านบางนา",
       "descriptionEn": "2-bedroom, 45 sq.m. at Skyrise Sukhumvit 64, Bang Na.",
@@ -5705,6 +5831,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 43 ตร.ม. ที่ The Esse Sukhumvit 36 ย่านทองหล่อ",
       "descriptionEn": "1-bedroom, 43 sq.m. at The Esse Sukhumvit 36, Thonglor.",
@@ -5744,6 +5871,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "สระว่ายน้ำ",
         "ฟิตเนส",
@@ -5788,6 +5916,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "หันทิศตะวันออก",
         "สระว่ายน้ำ",
@@ -5834,6 +5963,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวสวน"
       ],
@@ -5876,6 +6006,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เฟอร์นิเจอร์ครบ"
@@ -5919,6 +6050,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "เครื่องซักผ้า"
       ],
@@ -5960,6 +6092,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 55 ตร.ม. ที่ The Lumpini 24 ย่านพร้อมพงษ์",
       "descriptionEn": "1-bedroom, 55 sq.m. at The Lumpini 24, Phrom Phong.",
@@ -6002,6 +6135,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 35 ตร.ม. ที่ Noble Around 33 ย่านพร้อมพงษ์",
       "descriptionEn": "1-bedroom, 35 sq.m. at Noble Around 33, Phrom Phong.",
@@ -6042,6 +6176,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [],
       "description": "ห้อง 2 ห้องนอน ขนาด 85 ตร.ม. ที่ Q Langsuan ย่านชิดลม",
       "descriptionEn": "2-bedroom, 85 sq.m. at Q Langsuan, Chit Lom.",
@@ -6082,6 +6217,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 51 ตร.ม. ที่ Siri At Sukhumvit ย่านทองหล่อ",
       "descriptionEn": "1-bedroom, 51 sq.m. at Siri At Sukhumvit, Thonglor.",
@@ -6122,6 +6258,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องมุม"
       ],
@@ -6164,6 +6301,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "เครื่องซักผ้า",
         "สระว่ายน้ำ",
@@ -6208,6 +6346,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องมุม"
       ],
@@ -6249,6 +6388,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องมุม",
         "พร้อมเข้าอยู่"
@@ -6294,6 +6434,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 51 ตร.ม. ที่ Noble Ploenchit ย่านชิดลม",
       "descriptionEn": "1-bedroom, 51 sq.m. at Noble Ploenchit, Chit Lom.",
@@ -6332,6 +6473,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวไม่มีตึกบัง",
         "พร้อมเข้าอยู่"
@@ -6377,6 +6519,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "หันทิศตะวันออก",
         "สระว่ายน้ำ",
@@ -6422,6 +6565,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [],
       "description": "ห้อง 2 ห้องนอน ขนาด 84 ตร.ม. ที่ Khun by Yoo ย่านทองหล่อ",
       "descriptionEn": "2-bedroom, 84 sq.m. at Khun by Yoo, Thonglor.",
@@ -6462,6 +6606,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องมุม",
         "อ่างอาบน้ำ"
@@ -6505,6 +6650,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "หันทิศตะวันออก",
         "พร้อมเข้าอยู่"
@@ -6548,6 +6694,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 35 ตร.ม. ที่ Aestiq Thonglor ย่านทองหล่อ",
       "descriptionEn": "1-bedroom, 35 sq.m. at Aestiq Thonglor, Thonglor.",
@@ -6588,6 +6735,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "หันทิศเหนือ"
       ],
@@ -6630,6 +6778,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวสวน",
         "พร้อมเข้าอยู่",
@@ -6674,6 +6823,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "วิวไม่มีตึกบัง",
         "หันทิศตะวันตก"
@@ -6717,6 +6867,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "หันทิศตะวันตก"
       ],
@@ -6759,6 +6910,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องมุม",
         "วิวสระว่ายน้ำ",
@@ -6804,6 +6956,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องมุม",
         "พร้อมเข้าอยู่"
@@ -6847,6 +7000,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่"
       ],
@@ -6889,6 +7043,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่"
       ],
@@ -6933,6 +7088,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องมุม",
         "พร้อมเข้าอยู่",
@@ -6977,6 +7133,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "เครื่องซักผ้า",
         "สระว่ายน้ำ",
@@ -7022,6 +7179,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "ห้องมุม",
         "พร้อมเข้าอยู่"
@@ -7065,6 +7223,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -7109,6 +7268,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-02",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เครื่องซักผ้า",
@@ -7155,6 +7315,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-03",
       "amenities": [
         "เฟอร์นิเจอร์ครบ",
         "สระว่ายน้ำ"
@@ -7197,6 +7358,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-03",
       "amenities": [
         "วิวสระว่ายน้ำ",
         "สระว่ายน้ำ"
@@ -7240,6 +7402,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-03",
       "amenities": [],
       "description": "ห้อง ดูเพล็กซ์ ขนาด 35 ตร.ม. ที่ Ideo Morph 38 ย่านทองหล่อ",
       "descriptionEn": "Duplex, 35 sq.m. at Ideo Morph 38, Thonglor.",
@@ -7280,6 +7443,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-04",
       "amenities": [
         "อ่างอาบน้ำ",
         "เครื่องซักผ้า"
@@ -7323,6 +7487,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-04",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -7367,6 +7532,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-04",
       "amenities": [
         "เฟอร์นิเจอร์ครบ",
         "ที่จอดรถ"
@@ -7409,6 +7575,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-04",
       "amenities": [
         "สระว่ายน้ำ",
         "ฟิตเนส",
@@ -7454,6 +7621,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-04",
       "amenities": [
         "วิวสระว่ายน้ำ"
       ],
@@ -7496,6 +7664,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-04",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -7540,6 +7709,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เครื่องซักผ้า",
@@ -7584,6 +7754,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "ห้องมุม"
       ],
@@ -7626,6 +7797,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "เครื่องซักผ้า"
       ],
@@ -7668,6 +7840,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "พร้อมเข้าอยู่",
         "สระว่ายน้ำ",
@@ -7712,6 +7885,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "เครื่องซักผ้า"
       ],
@@ -7754,6 +7928,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "เฟอร์นิเจอร์บิลต์อิน",
         "เครื่องซักผ้า",
@@ -7799,6 +7974,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "เฟอร์นิเจอร์บิลต์อิน",
         "เครื่องใช้ไฟฟ้าครบ"
@@ -7842,6 +8018,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "วิวเมือง",
         "วิวสวน",
@@ -7886,6 +8063,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "วิวไม่มีตึกบัง",
         "วิวเมือง",
@@ -7934,6 +8112,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "วิวสวน",
         "พร้อมเข้าอยู่",
@@ -7978,6 +8157,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "ห้องมุม",
         "สระว่ายน้ำ",
@@ -8024,6 +8204,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "หันทิศตะวันออก",
         "สระว่ายน้ำ",
@@ -8069,6 +8250,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "วิวเมือง",
         "เฟอร์นิเจอร์ครบ",
@@ -8115,6 +8297,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "วิวเมือง",
         "พร้อมเข้าอยู่"
@@ -8158,6 +8341,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "เฟอร์นิเจอร์บิลต์อิน",
         "เครื่องซักผ้า",
@@ -8205,6 +8389,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "พร้อมเข้าอยู่"
       ],
@@ -8247,6 +8432,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "เฟอร์นิเจอร์ครบ"
       ],
@@ -8289,6 +8475,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "พร้อมเข้าอยู่"
       ],
@@ -8331,6 +8518,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "ห้องมุม",
         "พร้อมเข้าอยู่"
@@ -8374,6 +8562,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "เฟอร์นิเจอร์ครบ",
         "อ่างอาบน้ำ",
@@ -8420,6 +8609,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "วิวสวน",
         "เครื่องซักผ้า",
@@ -8466,6 +8656,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "วิวสวน",
         "อ่างอาบน้ำ",
@@ -8512,6 +8703,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "ห้องมุม",
         "อ่างอาบน้ำ"
@@ -8555,6 +8747,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "เฟอร์นิเจอร์บิลต์อิน",
         "เครื่องซักผ้า"
@@ -8598,6 +8791,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "ห้องมุม",
         "หันทิศเหนือ"
@@ -8641,6 +8835,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-06",
       "amenities": [
         "เครื่องซักผ้า",
         "ที่จอดรถ"
@@ -8683,6 +8878,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-06",
       "amenities": [
         "ห้องมุม",
         "เครื่องซักผ้า",
@@ -8732,6 +8928,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-06",
       "amenities": [
         "เฟอร์นิเจอร์ครบ",
         "สระว่ายน้ำ",
@@ -8776,6 +8973,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-06",
       "amenities": [
         "ห้องมุม"
       ],
@@ -8818,6 +9016,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-06",
       "amenities": [
         "ห้องมุม",
         "วิวเมือง",
@@ -8863,6 +9062,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-06",
       "amenities": [
         "พร้อมเข้าอยู่"
       ],
@@ -8905,6 +9105,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-06",
       "amenities": [
         "ห้องมุม"
       ],
@@ -8947,6 +9148,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-06",
       "amenities": [
         "เฟอร์นิเจอร์ครบ",
         "อ่างอาบน้ำ",
@@ -8991,6 +9193,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-06",
       "amenities": [
         "วิวสระว่ายน้ำ",
         "สระว่ายน้ำ"
@@ -9034,6 +9237,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-06",
       "amenities": [
         "วิวสระว่ายน้ำ",
         "สระว่ายน้ำ"
@@ -9077,6 +9281,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-06",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 45 ตร.ม. ที่ The Room Sukhumvit 62 ย่านบางนา",
       "descriptionEn": "1-bedroom, 45 sq.m. at The Room Sukhumvit 62, Bang Na.",
@@ -9117,6 +9322,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-06",
       "amenities": [
         "วิวสระว่ายน้ำ",
         "เฟอร์นิเจอร์บิลต์อิน",
@@ -9165,6 +9371,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-06",
       "amenities": [
         "เฟอร์นิเจอร์บิลต์อิน",
         "เครื่องซักผ้า"
@@ -9208,6 +9415,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-07",
       "amenities": [
         "ห้องมุม"
       ],
@@ -9250,6 +9458,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-07",
       "amenities": [],
       "description": "ห้อง 1 ห้องนอน ขนาด 46 ตร.ม. ที่ Laviq Thonglor Sukhumvit 57 ย่านทองหล่อ",
       "descriptionEn": "1-bedroom, 46 sq.m. at Laviq Thonglor Sukhumvit 57, Thonglor.",
@@ -9288,6 +9497,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-07",
       "amenities": [
         "เครื่องซักผ้า",
         "สระว่ายน้ำ",
@@ -9333,6 +9543,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-07",
       "amenities": [
         "เครื่องซักผ้า"
       ],
@@ -9375,6 +9586,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-07",
       "amenities": [],
       "description": "ห้อง 2 ห้องนอน ขนาด 49 ตร.ม. ที่ Life Sukhumvit 48 ย่านพระโขนง",
       "descriptionEn": "2-bedroom, 49 sq.m. at Life Sukhumvit 48, Phra Khanong.",
@@ -9415,6 +9627,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-07",
       "amenities": [
         "วิวสวน",
         "หันทิศเหนือ",
@@ -9459,6 +9672,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-07",
       "amenities": [
         "สระว่ายน้ำ",
         "ซาวน่า"
@@ -9502,6 +9716,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-07",
       "amenities": [
         "เฟอร์นิเจอร์ครบ",
         "เครื่องซักผ้า",
@@ -9548,6 +9763,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-07",
       "amenities": [
         "เฟอร์นิเจอร์ครบ",
         "สระว่ายน้ำ",
@@ -9592,6 +9808,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-07",
       "amenities": [
         "หันทิศเหนือ",
         "เฟอร์นิเจอร์ครบ",
@@ -9635,6 +9852,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-07",
       "amenities": [
         "หันทิศใต้",
         "เฟอร์นิเจอร์ครบ"
@@ -9678,6 +9896,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-09",
       "amenities": [
         "เครื่องใช้ไฟฟ้าครบ"
       ],
@@ -9719,6 +9938,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-09",
       "amenities": [
         "สระว่ายน้ำ",
         "ฟิตเนส",
@@ -9764,6 +9984,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-09",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เครื่องซักผ้า",
@@ -9808,6 +10029,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-09",
       "amenities": [
         "วิวเมือง"
       ],
@@ -9852,6 +10074,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-09",
       "amenities": [
         "เครื่องซักผ้า",
         "สระว่ายน้ำ",
@@ -9896,6 +10119,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-10",
       "amenities": [
         "วิวสวน",
         "พร้อมเข้าอยู่",
@@ -9942,6 +10166,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-10",
       "amenities": [
         "เฟอร์นิเจอร์ครบ",
         "เครื่องซักผ้า",
@@ -9987,6 +10212,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-10",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เครื่องใช้ไฟฟ้าครบ",
@@ -10034,6 +10260,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-10",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เฟอร์นิเจอร์ครบ"
@@ -10077,6 +10304,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-10",
       "amenities": [
         "หันทิศตะวันตก",
         "พร้อมเข้าอยู่"
@@ -10122,6 +10350,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-10",
       "amenities": [
         "ห้องแบบลอฟต์ 2 ชั้น",
         "วิวไม่มีตึกบัง",
@@ -10166,6 +10395,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-11",
       "amenities": [
         "พร้อมเข้าอยู่"
       ],
@@ -10208,6 +10438,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-11",
       "amenities": [
         "ห้องมุม",
         "วิวเมือง",
@@ -10255,6 +10486,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-11",
       "amenities": [],
       "description": "ห้อง 2 ห้องนอน ขนาด 68 ตร.ม. ที่ Park Origin Thonglor ย่านทองหล่อ",
       "descriptionEn": "2-bedroom, 68 sq.m. at Park Origin Thonglor, Thonglor.",
@@ -10295,6 +10527,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-11",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เฟอร์นิเจอร์ครบ",
@@ -10339,6 +10572,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-12",
       "amenities": [
         "พร้อมเข้าอยู่",
         "เฟอร์นิเจอร์ครบ",
@@ -10381,6 +10615,7 @@
       "available": null,
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-12",
       "amenities": [
         "อ่างอาบน้ำ",
         "เครื่องซักผ้า",
@@ -10428,6 +10663,7 @@
       "available": "2026-11-30",
       "pets": false,
       "lastVerified": "2026-11-13",
+      "posted": "2026-11-05",
       "amenities": [
         "สระว่ายน้ำ",
         "ฟิตเนส"
