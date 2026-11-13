@@ -172,6 +172,11 @@
       var l = String((e.detail || {}).label || "").replace(/\s+/g, " ").trim().toLowerCase();
       if (l) sendSearch("หมวด " + l, 0, "all");
     });
+    // ---- self-managed ads: clicks only, ride on a "search" event as "ad:<id>" (no personal data) ----
+    d.addEventListener("mc:ad", function (e) {
+      var id = String((e.detail || {}).id || "").toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 40);
+      if (id) sendSearch("ad:" + id, 0, "all");
+    });
     // ---- start -----------------------------------------------------------------
     function go() { (w.requestIdleCallback || function (f) { setTimeout(f, 1500); })(pageview, { timeout: 4000 }); }
     if (d.readyState === "complete") go(); else w.addEventListener("load", go);

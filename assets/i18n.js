@@ -237,6 +237,7 @@
     "ชั้นต่ำ (1–10)": "Low floor (1–10)", "ชั้นกลาง (11–20)": "Mid floor (11–20)", "ชั้นสูง (21 ขึ้นไป)": "High floor (21+)",
     "ดูเพิ่มเติม": "Show more", "กำลังจะว่าง": "Available soon",
     "2 ห้องนอน 2 ห้องนั่งเล่น": "2 bedrooms, 2 living rooms",
+    "ร่วมเป็น Partner": "Become a partner", "ลิงก์เพิ่มเติม": "More links",
     /* home category rows */
     "เลือกดูตามหมวด": "Browse by category", "ดูห้องทั้งหมด": "See all rooms", "หมวดหมู่": "Categories",
     "ทำเล": "Areas", "งบ": "Budget", "ประเภทห้อง": "Room type", "ใกล้ BTS/MRT": "Near BTS/MRT", "ลงใหม่": "New",

@@ -400,7 +400,8 @@ def url_entry(path, prio, lastmod):
   </url>"""
 entries = [url_entry("", "1.0", TODAY)] + [url_entry(f"areas/{a['slug']}/", "0.8", TODAY) for a in areas] \
         + [url_entry(p["url"][len(BASE):], "0.8", TODAY) for p in PROJECTS] \
-        + [url_entry(f"rooms/{r['slug']}/", "0.9", TODAY) for r in rooms]
+        + [url_entry(f"rooms/{r['slug']}/", "0.9", TODAY) for r in rooms] \
+        + [url_entry("partner/", "0.4", TODAY)]
 write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(entries) + "\n</urlset>\n")
 
 bots = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "Google-Extended", "Googlebot", "Bingbot", "PerplexityBot", "Perplexity-User",

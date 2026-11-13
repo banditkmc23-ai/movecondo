@@ -3330,4 +3330,13 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://banditkmc23-ai.github.io/movecondo/partner/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/partner/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/partner/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/partner/" />
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
 </urlset>

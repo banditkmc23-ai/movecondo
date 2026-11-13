@@ -83,12 +83,29 @@
       .mini { grid-template-columns:repeat(4,1fr); }
       .chart { height:240px; }
     }
+    .tabs { display:flex; gap:6px; margin:0 0 18px; border-bottom:1px solid var(--line); }
+    .tabs button { font:inherit; border:0; background:none; padding:10px 14px; cursor:pointer; color:var(--mute); border-bottom:2px solid transparent; margin-bottom:-1px; }
+    .tabs button[aria-selected="true"] { color:var(--ac); border-bottom-color:var(--ac); font-weight:600; }
+    .tabs .cnt { display:inline-block; min-width:20px; padding:0 6px; margin-left:6px; border-radius:999px; background:var(--ac); color:#fff; font-size:12px; line-height:20px; text-align:center; }
+    .pa-tools { display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between; margin-bottom:14px; }
+    .pa-list { display:grid; gap:12px; }
+    .pa { border:1px solid var(--line); border-radius:14px; padding:14px 16px; background:#fff; }
+    .pa-top { display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:flex-start; }
+    .pa h3 { margin:0; font-size:16px; }
+    .pa .meta { color:var(--mute); font-size:13px; margin-top:2px; }
+    .pa dl { display:grid; grid-template-columns:110px 1fr; gap:4px 10px; margin:10px 0 0; font-size:14px; }
+    .pa dt { color:var(--mute); }
+    .pa dd { margin:0; overflow-wrap:anywhere; white-space:pre-wrap; }
+    .st { font:inherit; font-size:13px; border:1px solid var(--line); border-radius:999px; padding:4px 10px; background:#fff; }
+    .st-new { border-color:var(--ac); color:var(--ac); }
+    .st-contacted { border-color:#9A5B12; color:#9A5B12; }
+    .st-done { border-color:#047A34; color:#047A34; }
   </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <div class="brand"><div class="logo">M</div><div><div class="eyebrow">Stats</div><h1>สถิติผู้เข้าชม MoveCondo</h1></div></div>
+    <div class="brand"><div class="logo">M</div><div><div class="eyebrow">Stats</div><h1>หลังบ้าน MoveCondo</h1></div></div>
     <button class="btn" id="logout" hidden>ออกจากระบบ</button>
   </header>
 
@@ -149,6 +166,11 @@
   </section>
 
   <main id="dash" hidden>
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" id="tab-btn-stats" aria-selected="true" data-tab="stats">สถิติ</button>
+      <button type="button" role="tab" id="tab-btn-partner" aria-selected="false" data-tab="partner">Partner<span class="cnt" id="pa-cnt" hidden></span></button>
+    </div>
+    <div id="tab-stats">
     <div class="toolbar">
       <div class="muted" id="updated">กำลังโหลด…</div>
       <div class="seg" role="group" aria-label="ช่วงเวลา">
@@ -237,6 +259,18 @@
       <span>นับเฉพาะคน ไม่เก็บชื่อ เบอร์ IP หรือคุกกี้ · วันตามเวลาไทย</span>
       <label><input type="checkbox" id="nostats" /> ไม่นับการเข้าเว็บจากเครื่องนี้</label>
     </footer>
+    </div>
+    <div id="tab-partner" hidden>
+      <div class="pa-tools">
+        <div class="seg-st" role="group" aria-label="สถานะ">
+          <select class="st" id="pa-filter" aria-label="กรองสถานะ"><option value="">ทุกสถานะ</option><option value="new">ใหม่</option><option value="contacted">ติดต่อแล้ว</option><option value="done">เสร็จแล้ว</option></select>
+        </div>
+        <div style="display:flex;gap:8px"><button class="btn" type="button" id="pa-reload">รีเฟรช</button><button class="btn btn-primary" type="button" id="pa-csv">ดาวน์โหลด CSV</button></div>
+      </div>
+      <p class="muted" id="pa-status">กำลังโหลด…</p>
+      <div class="pa-list" id="pa-list"></div>
+      <p class="muted" style="font-size:13px;margin-top:14px">ข้อมูลผู้สมัครเห็นได้เฉพาะบัญชีเจ้าของเว็บ ไม่แสดงบนเว็บสาธารณะ ผู้สมัครยินยอมให้ใช้เพื่อติดต่อกลับเท่านั้น</p>
+    </div>
   </main>
 </div>
 
@@ -496,12 +530,70 @@
   var initialHash = location.hash ? new URLSearchParams(location.hash.slice(1)) : null;
   if (initialHash && (initialHash.get("access_token") || initialHash.get("error"))) history.replaceState(null, "", location.pathname);
 
+  // ---- Partner applications ------------------------------------------------
+  var PA = [], paLoaded = false;
+  var PA_TYPES = { shop: "ร้านค้า", restaurant: "ร้านอาหาร / คาเฟ่", moving: "บริการขนย้าย", cleaning: "ทำความสะอาด", furniture: "เฟอร์นิเจอร์ / ของแต่งบ้าน", owner: "เจ้าของห้อง", other: "อื่น ๆ" };
+  var PA_INT = { ads: "ลงโฆษณา", listing: "ฝากห้องปล่อยเช่า", other: "ร่วมมืออื่น ๆ" };
+  var PA_ST = { "new": "ใหม่", contacted: "ติดต่อแล้ว", done: "เสร็จแล้ว" };
+  function rest(path, opt) {
+    return token().then(function (t) {
+      opt = opt || {}; opt.headers = Object.assign({ apikey: KEY, Authorization: "Bearer " + t, "Content-Type": "application/json" }, opt.headers || {});
+      return fetch(SB + "/rest/v1/" + path, opt);
+    }).then(function (r) { return r.text().then(function (x) { var j = x ? JSON.parse(x) : null; if (!r.ok) throw j || {}; return j; }); });
+  }
+  function paDate(s) { try { return new Date(s).toLocaleString("th-TH", { timeZone: "Asia/Bangkok", dateStyle: "medium", timeStyle: "short" }); } catch (e) { return s; } }
+  function paLink(u) { u = String(u || ""); var h = /^https?:\/\//i.test(u) ? u : (/^[\w.-]+\.[a-z]{2,}(\/|$)/i.test(u) ? "https://" + u : ""); return h ? '<a href="' + esc(h) + '" target="_blank" rel="noopener noreferrer nofollow">' + esc(u) + "</a>" : esc(u); }
+  function paRender() {
+    var f = $("pa-filter").value, list = PA.filter(function (a) { return !f || a.status === f; });
+    var nNew = PA.filter(function (a) { return a.status === "new"; }).length;
+    $("pa-cnt").hidden = !nNew; $("pa-cnt").textContent = nNew;
+    $("pa-status").textContent = PA.length ? ("ทั้งหมด " + PA.length + " ใบสมัคร · ใหม่ " + nNew) : "ยังไม่มีใบสมัคร";
+    $("pa-list").innerHTML = list.map(function (a) {
+      var opts = Object.keys(PA_ST).map(function (k) { return '<option value="' + k + '"' + (a.status === k ? " selected" : "") + ">" + PA_ST[k] + "</option>"; }).join("");
+      var row = function (k, v) { return v ? "<dt>" + k + "</dt><dd>" + v + "</dd>" : ""; };
+      return '<article class="pa"><div class="pa-top"><div><h3>' + esc(a.business_name) + '</h3><div class="meta">' + esc(PA_TYPES[a.business_type] || a.business_type) + " · " + esc(paDate(a.created_at)) + (a.lang === "en" ? " · EN" : "") + '</div></div>' +
+        '<select class="st st-' + esc(a.status) + '" data-pa="' + a.id + '" aria-label="สถานะ">' + opts + "</select></div><dl>" +
+        row("ผู้ติดต่อ", esc(a.contact_name)) + row("โทร", '<a href="tel:' + esc(a.phone.replace(/[^0-9+]/g, "")) + '">' + esc(a.phone) + "</a>") +
+        row("อีเมล", '<a href="mailto:' + esc(a.email) + '">' + esc(a.email) + "</a>") + row("LINE ID", a.line_id ? esc(a.line_id) : "") +
+        row("สนใจ", esc((a.interests || []).map(function (x) { return PA_INT[x] || x; }).join(", "))) + row("ทำเล", esc((a.areas || []).join(", "))) +
+        row("เว็บไซต์", a.website ? paLink(a.website) : "") + row("ข้อความ", a.message ? esc(a.message) : "") + "</dl></article>";
+    }).join("");
+  }
+  function paLoad() {
+    $("pa-status").textContent = "กำลังโหลด…";
+    return rest("partner_applications?select=*&order=created_at.desc&limit=1000").then(function (j) { PA = j || []; paLoaded = true; paRender(); })
+      .catch(function (e) { $("pa-status").textContent = e && e.code === "42501" ? "บัญชีนี้ยังไม่ได้รับสิทธิ์ดูใบสมัคร" : "โหลดใบสมัครไม่สำเร็จ ลองรีเฟรช"; });
+  }
+  function tab(name) {
+    $("tab-stats").hidden = name !== "stats"; $("tab-partner").hidden = name !== "partner";
+    Array.prototype.forEach.call(document.querySelectorAll(".tabs button"), function (b) { b.setAttribute("aria-selected", String(b.dataset.tab === name)); });
+    if (name === "partner" && !paLoaded) paLoad();
+    try { history.replaceState(null, "", name === "partner" ? "#partner" : location.pathname); } catch (e) {}
+  }
+  Array.prototype.forEach.call(document.querySelectorAll(".tabs button"), function (b) { b.addEventListener("click", function () { tab(b.dataset.tab); }); });
+  $("pa-filter").addEventListener("change", paRender);
+  $("pa-reload").addEventListener("click", paLoad);
+  $("pa-list").addEventListener("change", function (e) {
+    var sel = e.target.closest("select[data-pa]"); if (!sel) return;
+    var id = +sel.dataset.pa, st = sel.value; sel.disabled = true;
+    rest("partner_applications?id=eq." + id, { method: "PATCH", headers: { Prefer: "return=minimal" }, body: JSON.stringify({ status: st }) })
+      .then(function () { PA.forEach(function (a) { if (a.id === id) a.status = st; }); paRender(); })
+      .catch(function () { alert("บันทึกสถานะไม่สำเร็จ"); sel.disabled = false; });
+  });
+  $("pa-csv").addEventListener("click", function () {
+    var cols = ["created_at", "status", "business_name", "business_type", "contact_name", "phone", "email", "line_id", "interests", "areas", "website", "message", "lang"];
+    var q = function (v) { v = Array.isArray(v) ? v.join("; ") : (v == null ? "" : String(v)); if (/^[=+\-@]/.test(v)) v = "'" + v; return '"' + v.replace(/"/g, '""') + '"'; };
+    var csv = "\ufeff" + cols.join(",") + "\n" + PA.map(function (a) { return cols.map(function (c) { return q(c === "created_at" ? paDate(a[c]) : c === "business_type" ? (PA_TYPES[a[c]] || a[c]) : c === "status" ? PA_ST[a[c]] : a[c]); }).join(","); }).join("\n");
+    var url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" })), link = document.createElement("a");
+    link.href = url; link.download = "movecondo-partners-" + new Date().toISOString().slice(0, 10) + ".csv"; document.body.appendChild(link); link.click(); link.remove(); setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  });
+
   try { session = JSON.parse(localStorage.getItem(S_KEY) || "null"); } catch (e) {}
   try { $("nostats").checked = localStorage.getItem("mc-nostats") === "1"; } catch (e) {}
   loadNames().then(function () {
     if (initialHash && initialHash.get("access_token") && /recovery|invite|magiclink|signup/.test(initialHash.get("type") || "")) return startSetPw(sessFromParams(initialHash));
     if (initialHash && initialHash.get("error_description")) { show("forgot"); $("forgot-err").textContent = "ลิงก์หมดอายุหรือถูกใช้ไปแล้ว ขอลิงก์ใหม่ได้ที่นี่"; return; }
-    if (session) { show("dash"); load(); } else show("login");
+    if (session) { show("dash"); load(); if (location.hash === "#partner") tab("partner"); else rest("partner_applications?select=id,status&status=eq.new&limit=200").then(function (j) { var n = (j || []).length; $("pa-cnt").hidden = !n; $("pa-cnt").textContent = n; }).catch(function () {}); } else show("login");
   });
 })();
 </script>

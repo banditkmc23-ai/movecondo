@@ -1,0 +1,11 @@
+-- MoveCondo partner applications (migration "partner_applications", project movecondo-stats).
+-- Visitors: INSERT only (strict checks, DB rate limit). Admins on private.stats_admins: read + update status/admin_note.
+-- Does not touch visits/events or their rules. Form data is never written to public files.
+-- (See the migration in Supabase for the exact SQL; summary below.)
+-- table public.partner_applications(id, created_at, status new|contacted|done, business_name 2-120, business_type
+--   shop|restaurant|moving|cleaning|furniture|owner|other, contact_name 2-80, phone ^[0-9+() -]{9,20}$, email <=120 + format,
+--   line_id <=40, areas text[] <=20, interests text[] 1-3 of ads|listing|other, website <=200, message <=2000,
+--   consent must be true, lang th|en, admin_note <=1000)
+-- RLS on; anon/authenticated: column-limited INSERT with check (status='new' and admin_note is null and consent);
+-- authenticated: SELECT + UPDATE(status, admin_note) only when private.is_stats_admin().
+-- Trigger private.partner_rate_limit(): max 3 per email/phone per hour, 30 total per 10 minutes.

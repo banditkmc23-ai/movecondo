@@ -2360,6 +2360,7 @@ function render(){
   }
   if (window.MoveCondoCarousel) window.MoveCondoCarousel.scan();
   refreshSoonBadges();
+  if (window.MoveCondoAds) window.MoveCondoAds.mount();
 }
 
 

@@ -1,0 +1,47 @@
+{
+  "_note": "MoveCondo ads. How to add or change an ad: see tools/ads/README.md. Ads show only when active is true AND today (Bangkok time) is between start and end. example ads never show on the public site; they appear only with ?adpreview=1.",
+  "ads": [
+    {
+      "id": "example-promo",
+      "example": true,
+      "active": false,
+      "slots": ["home", "room", "area", "project"],
+      "image": "img/example-promo.webp",
+      "title": { "th": "ตัวอย่างโฆษณา: โปรโมชันของเรา", "en": "Example ad: our promotion" },
+      "text": { "th": "พื้นที่นี้ใช้แสดงโปรโมชันของ MoveCondo เช่น ส่วนลดค่าบริการหรือแพ็กเกจย้ายเข้า", "en": "This space can show a MoveCondo promotion, such as a service discount or a move-in package." },
+      "link": "#",
+      "cta": { "th": "ดูรายละเอียด", "en": "Learn more" },
+      "start": "2026-11-01",
+      "end": "2026-12-31",
+      "weight": 2
+    },
+    {
+      "id": "example-partner",
+      "example": true,
+      "active": false,
+      "slots": ["home", "area", "project"],
+      "image": "img/example-partner.webp",
+      "title": { "th": "ตัวอย่างโฆษณา: ร้านค้าพาร์ทเนอร์", "en": "Example ad: partner shop" },
+      "text": { "th": "ร้านค้าหรือบริการที่เป็นพาร์ทเนอร์ ลงรูป ข้อความสั้น และลิงก์ได้ที่นี่", "en": "A partner shop or service can place a photo, a short message and a link here." },
+      "link": "#",
+      "cta": { "th": "ไปที่ร้าน", "en": "Visit" },
+      "start": "2026-11-01",
+      "end": "2026-12-31",
+      "weight": 1
+    },
+    {
+      "id": "example-service",
+      "example": true,
+      "active": false,
+      "slots": ["room", "home"],
+      "image": "img/example-service.webp",
+      "title": { "th": "ตัวอย่างโฆษณา: บริการสำหรับคนย้ายบ้าน", "en": "Example ad: moving service" },
+      "text": { "th": "เช่น บริการขนย้าย ทำความสะอาด หรือติดตั้งอินเทอร์เน็ต", "en": "For example moving, cleaning or internet installation." },
+      "link": "#",
+      "cta": { "th": "ดูเพิ่มเติม", "en": "See more" },
+      "start": "2026-11-01",
+      "end": "2026-12-31",
+      "weight": 1
+    }
+  ]
+}
