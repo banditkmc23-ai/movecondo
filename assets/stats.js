@@ -167,6 +167,11 @@
         sendSearch(x.q, x.n, "all", { f: { pmin: n(x.pmin), pmax: n(x.pmax), smin: n(x.smin), smax: n(x.smax), type: list(x.type, 4), st: list(x.st, 4), sort: String(x.sort || "rec").slice(0, 12) } });
       }, 900);
     });
+    // ---- home category rows: clicks ride on a "search" event (allowed names only), word prefixed with "หมวด" ----
+    d.addEventListener("mc:category", function (e) {
+      var l = String((e.detail || {}).label || "").replace(/\s+/g, " ").trim().toLowerCase();
+      if (l) sendSearch("หมวด " + l, 0, "all");
+    });
     // ---- start -----------------------------------------------------------------
     function go() { (w.requestIdleCallback || function (f) { setTimeout(f, 1500); })(pageview, { timeout: 4000 }); }
     if (d.readyState === "complete") go(); else w.addEventListener("load", go);

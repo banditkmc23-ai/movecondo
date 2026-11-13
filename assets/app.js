@@ -1187,17 +1187,18 @@ function stationsMatchingQuery(q){
   return stationsInData().filter(s => normSearch(stationName(s.name)).includes(n) || normSearch(s.name).includes(normSearch(q)));
 }
 /* ---- filter state <-> URL ---- */
-const SEARCH_SORTS = [["rec","แนะนำ"],["price-asc","ราคาต่ำไปสูง"],["price-desc","ราคาสูงไปต่ำ"],["size-desc","ขนาดใหญ่ไปเล็ก"],["new","ลงประกาศล่าสุด"]];
+const SEARCH_SORTS = [["rec","แนะนำ"],["price-asc","ราคาต่ำไปสูง"],["price-desc","ราคาสูงไปต่ำ"],["size-desc","ขนาดใหญ่ไปเล็ก"],["new","ลงประกาศล่าสุด"],["walk","ใกล้สถานีที่สุด"]];
 const TYPE_OPTS = [["studio","สตูดิโอ"],["1","1 ห้องนอน"],["2","2 ห้องนอน"],["3","3 ห้องนอนขึ้นไป / ทาวน์โฮม"]];
 const PRICE_STEPS = [10000,15000,20000,25000,30000,40000,50000,70000,100000];
 const SIZE_STEPS = [25,30,35,40,50,60,80,100,150];
 const PRICE_PRESETS = [["","15000","ไม่เกิน 15,000"],["15000","25000","15,000–25,000"],["25000","40000","25,000–40,000"],["40000","","40,000 ขึ้นไป"]];
-function emptySearchState(){ return { q:"", pmin:null, pmax:null, smin:null, smax:null, type:[], st:[], sort:"rec" }; }
+function emptySearchState(){ return { q:"", pmin:null, pmax:null, smin:null, smax:null, walk:null, type:[], st:[], sort:"rec" }; }
 function readSearchState(params){
   const s = emptySearchState();
   const num = k => { const v = parseInt(params.get(k)||"", 10); return isFinite(v) && v > 0 ? v : null; };
   s.q = (params.get("q")||"").trim().slice(0,80);
   s.pmin = num("pmin"); s.pmax = num("pmax"); s.smin = num("smin"); s.smax = num("smax");
+  s.walk = num("walk"); if(s.walk && s.walk > 30) s.walk = null;
   s.type = (params.get("type")||"").split(",").filter(t => TYPE_OPTS.some(o => o[0]===t));
   const known = new Set(stationsInData().map(x => x.name));
   s.st = (params.get("st")||"").split(",").map(x => x.trim()).filter(x => known.has(x));
@@ -1207,13 +1208,13 @@ function readSearchState(params){
 function searchQS(s){
   const p = new URLSearchParams();
   if(s.q) p.set("q", s.q);
-  ["pmin","pmax","smin","smax"].forEach(k => { if(s[k]) p.set(k, String(s[k])); });
+  ["pmin","pmax","smin","smax","walk"].forEach(k => { if(s[k]) p.set(k, String(s[k])); });
   if(s.type.length) p.set("type", s.type.join(","));
   if(s.st.length) p.set("st", s.st.join(","));
   if(s.sort && s.sort !== "rec") p.set("sort", s.sort);
   return p.toString();
 }
-function filterCount(s){ return (s.pmin||s.pmax?1:0) + (s.smin||s.smax?1:0) + (s.type.length?1:0) + (s.st.length?1:0); }
+function filterCount(s){ return (s.pmin||s.pmax?1:0) + (s.smin||s.smax?1:0) + (s.walk?1:0) + (s.type.length?1:0) + (s.st.length?1:0); }
 function typeKeys(l){
   const t = listingType(l), out = [];
   if(/สตูดิโอ|studio/i.test(t)) out.push("studio");
@@ -1230,6 +1231,7 @@ function searchFilter(s){
     if((s.smin || s.smax) && !l.size) return false;
     if(s.smin && l.size < s.smin) return false;
     if(s.smax && l.size > s.smax) return false;
+    if(s.walk && !(l.walk!=null && l.walk <= s.walk)) return false;
     if(s.type.length){ const k = typeKeys(l); if(!s.type.some(t => k.includes(t))) return false; }
     if(s.st.length && !s.st.includes(l.transit)) return false;
     return true;
@@ -1241,6 +1243,7 @@ function searchSort(rows, sort){
   if(sort === "price-asc") r.sort((a,b)=> a.price-b.price || idn(a)-idn(b));
   else if(sort === "price-desc") r.sort((a,b)=> b.price-a.price || idn(a)-idn(b));
   else if(sort === "size-desc") r.sort((a,b)=> (b.size||0)-(a.size||0) || a.price-b.price);
+  else if(sort === "walk") r.sort((a,b)=> (a.walk==null?999:a.walk)-(b.walk==null?999:b.walk) || a.price-b.price);
   else if(sort === "new") r.sort((a,b)=> String(b.posted||"").localeCompare(String(a.posted||"")) || idn(b)-idn(a));
   return r;
 }
@@ -1299,6 +1302,7 @@ function readFilterForm(form){
   s.type = [...form.querySelectorAll('[data-ff="type"].on')].map(b => b.dataset.val);
   s.st = [...form.querySelectorAll('[data-ff="st"].on')].map(b => b.dataset.val);
   s.sort = v("sort") || "rec";
+  s.walk = (typeof SEARCH_STATE !== "undefined" && SEARCH_STATE && SEARCH_STATE.walk) || null;
   return s;
 }
 function syncPresets(form){
@@ -1375,6 +1379,7 @@ function activeChipsHTML(s){
   if(s.q) x("q", "", escapeHtml(`“${s.q}”`));
   if(s.pmin || s.pmax) x("price", "", s.pmin && s.pmax ? `${money(s.pmin)}–${money(s.pmax)} บาท` : s.pmin ? `ตั้งแต่ ${money(s.pmin)} บาท` : `ไม่เกิน ${money(s.pmax)} บาท`);
   if(s.smin || s.smax) x("size", "", s.smin && s.smax ? `${s.smin}–${s.smax} ตร.ม.` : s.smin ? `ตั้งแต่ ${s.smin} ตร.ม.` : `ไม่เกิน ${s.smax} ตร.ม.`);
+  if(s.walk) x("walk", "", `เดินถึงสถานีไม่เกิน ${s.walk} นาที`);
   s.type.forEach(t => x("type", t, (TYPE_OPTS.find(o => o[0]===t)||[])[1]));
   s.st.forEach(t => x("st", t, escapeHtml(t)));
   if(!chips.length) return "";
@@ -1461,7 +1466,7 @@ function bindSearchV2(){
       e.preventDefault();
       const s = Object.assign({}, SEARCH_STATE, { type: SEARCH_STATE.type.slice(), st: SEARCH_STATE.st.slice() });
       const k = un.dataset.unset, v = un.dataset.val;
-      if(k==="q") s.q = ""; else if(k==="price"){ s.pmin = s.pmax = null; } else if(k==="size"){ s.smin = s.smax = null; }
+      if(k==="q") s.q = ""; else if(k==="price"){ s.pmin = s.pmax = null; } else if(k==="size"){ s.smin = s.smax = null; } else if(k==="walk"){ s.walk = null; }
       else if(k==="type") s.type = s.type.filter(x => x!==v); else if(k==="st") s.st = s.st.filter(x => x!==v);
       goSearch(s, "chip"); return;
     }
@@ -1662,13 +1667,141 @@ function bindHeroSearch(){
   }
 }
 
+/* ---- Home: categorized browse rows (replaces the flat all-rooms grid) ---- */
+const CAT_ROW_MAX = 10, CAT_ROW_MIN = 4;
+function catRowDefs(){
+  const S = o => Object.assign(emptySearchState(), o);
+  return [
+    { id:"near", group:"near", title:"ใกล้รถไฟฟ้า เดินไม่เกิน 5 นาที", sub:"ออกจากห้องแล้วถึงสถานีได้เร็ว", state: S({ walk:5, sort:"walk" }) },
+    { id:"new", group:"new", title:"ลงใหม่ล่าสุด", sub:"ห้องที่เพิ่งลงประกาศ", state: S({ sort:"new" }) },
+    { id:"soon", group:"soon", title:"กำลังจะว่างเร็ว ๆ นี้", sub:"ห้องที่จะว่างภายใน 30 วัน", rows: () => LISTINGS.filter(l => soonFrom(l)).sort((a,b)=> soonFrom(a).localeCompare(soonFrom(b))), min: 1 },
+    { id:"b15", group:"budget", title:"งบไม่เกิน 15,000", sub:"ค่าเช่าไม่เกิน 15,000 บาท/เดือน", state: S({ pmax:15000, sort:"price-asc" }) },
+    { id:"b25", group:"budget", title:"ราคา 15,000–25,000", sub:"ช่วงราคายอดนิยม", state: S({ pmin:15000, pmax:25000 }) },
+    { id:"b40", group:"budget", title:"ราคา 25,000–40,000", sub:"ห้องกว้างขึ้นในทำเลกลางเมือง", state: S({ pmin:25000, pmax:40000 }) },
+    { id:"prem", group:"budget", title:"ห้องพรีเมียม 40,000 ขึ้นไป", sub:"ห้องใหญ่ วิวดี ในโครงการระดับบน", state: S({ pmin:40000, sort:"price-desc" }) },
+    { id:"t1", group:"type", title:"สตูดิโอและ 1 ห้องนอน", sub:"เหมาะกับอยู่คนเดียวหรืออยู่สองคน", state: S({ type:["studio","1"] }) },
+    { id:"t2", group:"type", title:"2 ห้องนอนขึ้นไป เหมาะกับครอบครัว", sub:"มีพื้นที่สำหรับครอบครัวหรือแชร์กับเพื่อน", state: S({ type:["2","3"], sort:"size-desc" }) }
+  ];
+}
+function catPick(rows, used){
+  const out = [], seenProj = new Set(), take = l => { out.push(l); used.add(l.id); seenProj.add(l.project); };
+  for(const l of rows){ if(out.length >= CAT_ROW_MAX) break; if(!used.has(l.id) && !seenProj.has(l.project)) take(l); }
+  for(const l of rows){ if(out.length >= CAT_ROW_MAX) break; if(!used.has(l.id) && !out.includes(l)) take(l); }
+  for(const l of rows){ if(out.length >= CAT_ROW_MAX) break; if(!out.includes(l)) take(l); }
+  return out;
+}
+function catCardHTML(l, eager){
+  let h = cardHTML(l);
+  if(!eager) h = h.replace(/fetchpriority="high"/g, 'loading="lazy" decoding="async"');
+  return h.replace('<article class="card">', '<article class="card cat-card">');
+}
+const ICON_CHEV_L = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>`;
+const ICON_CHEV_R = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>`;
+function catRowHTML(def, picks, total, href, eagerFirst){
+  const all = href ? `<a class="cat-all" href="${href}" data-cat-all="${def.id}">ดูทั้งหมด (${total})</a>` : "";
+  return `<section class="cat-row" id="row-${def.id}" data-cat-row="${def.id}" data-cat-group="${def.group}" aria-labelledby="row-${def.id}-h">
+    <div class="cat-head">
+      <div class="cat-titles"><h3 id="row-${def.id}-h">${def.title}</h3><p>${def.sub}</p></div>
+      <div class="cat-tools">${all}<span class="cat-nav"><button type="button" class="cat-arrow" data-cat-scroll="-1" aria-label="เลื่อนไปทางซ้าย" disabled>${ICON_CHEV_L}</button><button type="button" class="cat-arrow" data-cat-scroll="1" aria-label="เลื่อนไปทางขวา">${ICON_CHEV_R}</button></span></div>
+    </div>
+    <div class="cat-track" data-cat-track>${picks.map((l,i) => catCardHTML(l, eagerFirst && i < 4)).join("")}</div>
+  </section>`;
+}
+function areaTilesHTML(){
+  const counts = {};
+  LISTINGS.forEach(l => { counts[l.area] = (counts[l.area]||0) + 1; });
+  const areas = Object.keys(counts).filter(a => AREA_SLUGS[a]).sort((a,b)=> counts[b]-counts[a] || a.localeCompare(b, "th"));
+  const tiles = areas.map(a => {
+    const l = LISTINGS.find(x => x.area===a && (PHOTOS[x.id]||[]).length);
+    const img = l ? `<img src="${photoUrl(l.id, PHOTOS[l.id][0].file)}" alt="" width="400" height="300" loading="lazy" decoding="async">` : "";
+    return `<a class="area-tile" href="${areaHref(a)}" data-cat-all="area">${img}<span class="area-tile-txt"><b>${a}</b><small>${counts[a]} ห้อง</small></span></a>`;
+  }).join("");
+  return `<section class="cat-row cat-areas" id="row-areas" data-cat-row="areas" aria-labelledby="row-areas-h">
+    <div class="cat-head">
+      <div class="cat-titles"><h3 id="row-areas-h">เลือกตามทำเล</h3><p>ดูห้องว่างทั้งหมดในแต่ละย่าน</p></div>
+      <div class="cat-tools"><span class="cat-nav"><button type="button" class="cat-arrow" data-cat-scroll="-1" aria-label="เลื่อนไปทางซ้าย" disabled>${ICON_CHEV_L}</button><button type="button" class="cat-arrow" data-cat-scroll="1" aria-label="เลื่อนไปทางขวา">${ICON_CHEV_R}</button></span></div>
+    </div>
+    <div class="cat-track area-track" data-cat-track>${tiles}</div>
+  </section>`;
+}
+function homeBrowseHTML(){
+  const used = new Set(), out = [], made = [];
+  let first = true;
+  catRowDefs().forEach(def => {
+    const all = def.state ? searchSort(searchFilter(def.state), def.state.sort) : def.rows();
+    if(all.length < (def.min || CAT_ROW_MIN)) return;
+    const picks = catPick(all, used);
+    const href = def.state ? "#/search?" + searchQS(def.state) : null;
+    out.push({ group: def.group, html: catRowHTML(def, picks, all.length, href, first) });
+    made.push(def.group); first = false;
+  });
+  const areaRow = areaTilesHTML();
+  // areas strip goes right after the first two rows
+  const html = out.map(r => r.html);
+  html.splice(Math.min(2, html.length), 0, areaRow);
+  const has = g => made.includes(g);
+  const chips = [
+    ["areas", "ทำเล", true], ["budget", "งบ", has("budget")], ["type", "ประเภทห้อง", has("type")],
+    ["near", "ใกล้ BTS/MRT", has("near")], ["new", "ลงใหม่", has("new")], ["soon", "กำลังจะว่าง", has("soon")]
+  ].filter(c => c[2]).map(([g, label]) => `<button type="button" class="cat-chip" data-cat-jump="${g}">${label}</button>`).join("");
+  return `<div class="section home-browse" id="listings">
+    <div class="section-head"><div><div class="eyebrow">ประกาศเช่า</div><h2>เลือกดูตามหมวด</h2><p>${LISTINGS.length} ห้องจากโครงการใกล้รถไฟฟ้า</p></div>
+      <a class="btn btn-md btn-ghost see-all-rooms" href="#/search" data-cat-all="all">ดูห้องทั้งหมด</a></div>
+    <nav class="cat-chips" aria-label="หมวดหมู่">${chips}<a class="cat-chip cat-chip-all" href="#/search" data-cat-all="all">ดูห้องทั้งหมด (${LISTINGS.length})</a></nav>
+    ${html.join("")}
+    <div class="browse-foot"><a class="btn btn-lg btn-primary" href="#/search" data-cat-all="all">ดูห้องทั้งหมด ${LISTINGS.length} ห้อง</a></div>
+  </div>`;
+}
+function catArrowSync(track){
+  const row = track.closest(".cat-row"); if(!row) return;
+  const [prev, next] = row.querySelectorAll(".cat-arrow");
+  const max = track.scrollWidth - track.clientWidth - 2;
+  if(prev) prev.disabled = track.scrollLeft <= 2;
+  if(next) next.disabled = track.scrollLeft >= max;
+  row.classList.toggle("cat-fits", max <= 0);
+}
+function bindHomeBrowse(){
+  document.querySelectorAll("#view-home [data-cat-track]").forEach(t => {
+    if(t.__catBound) return; t.__catBound = true;
+    t.addEventListener("scroll", () => catArrowSync(t), { passive: true });
+    catArrowSync(t);
+  });
+}
+document.addEventListener("click", (e) => {
+  const t = e.target.closest ? e.target : null; if(!t) return;
+  const arrow = t.closest("[data-cat-scroll]");
+  if(arrow){
+    e.preventDefault();
+    const track = arrow.closest(".cat-row").querySelector("[data-cat-track]");
+    const card = track.firstElementChild, gap = 16;
+    const step = card ? Math.max(card.getBoundingClientRect().width + gap, Math.floor((track.clientWidth + gap) / (card.getBoundingClientRect().width + gap)) * (card.getBoundingClientRect().width + gap)) : track.clientWidth;
+    track.scrollBy({ left: Number(arrow.dataset.catScroll) * step, behavior: "smooth" });
+    return;
+  }
+  const jump = t.closest("[data-cat-jump]");
+  if(jump){
+    e.preventDefault();
+    const g = jump.dataset.catJump;
+    const target = g === "areas" ? document.getElementById("row-areas") : document.querySelector(`#view-home .cat-row[data-cat-group="${g}"]`);
+    if(target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+    catTrack(jump.textContent.trim());
+    return;
+  }
+  const all = t.closest("[data-cat-all]");
+  if(all){
+    const row = all.closest(".cat-row");
+    const label = all.dataset.catAll === "area" ? (all.querySelector("b")||all).textContent.trim()
+      : row ? (row.querySelector("h3")||{}).textContent : all.textContent.trim();
+    catTrack(label);
+  }
+});
+window.addEventListener("resize", () => document.querySelectorAll("#view-home [data-cat-track]").forEach(catArrowSync));
+function catTrack(label){
+  // Stats only accept existing event names, so category clicks ride on a "search" event with a "หมวด" prefix.
+  try { document.dispatchEvent(new CustomEvent("mc:category", { detail: { label: String(label||"").slice(0, 50) } })); } catch(e) {}
+}
+
 function homeView(){
-  const q = (homeSearchQuery || "").trim();
-  const matched = q ? LISTINGS.filter(l => listingMatchesQuery(l, q)) : LISTINGS;
-  const countLine = q
-    ? (matched.length ? `พบ ${matched.length} ห้องที่ตรง` : "")
-    : `${LISTINGS.length} ห้องจากโครงการใกล้รถไฟฟ้า`;
-  const body = matched.length ? pagedGrid(matched, l => cardHTML(l)) : searchEmptyHTML();
   return `
   <div class="hero">
     <div class="hero-copy">
@@ -1689,10 +1822,7 @@ function homeView(){
       />
     </div>
   </div>
-  <div class="section" id="listings">
-    <div class="section-head"><div><div class="eyebrow">ประกาศเช่า</div><h2>คอนโดเช่าที่คัดมาให้</h2>${countLine ? `<p>${countLine}</p>` : ""}</div></div>
-    ${body}
-  </div>
+  ${homeBrowseHTML()}
   <div class="band">${hoodHTML()}</div>
   ${faqHTML()}
   <div class="contact-cta" id="contact"><h2>สนใจห้องไหน ทักมาได้เลย</h2><p>บอกรหัสห้องในแชท เราจะช่วยตอบเรื่องห้องนั้น</p><a class="btn btn-lg btn-line" href="${LINE_HREF}" target="_blank" rel="noopener noreferrer">ทัก LINE</a></div>`;
@@ -2216,7 +2346,7 @@ function render(){
     if(qq){ location.replace(location.pathname + location.search + "#/search?" + searchQS(Object.assign(emptySearchState(), { q: qq }))); return; }
     homeSearchQuery = "";
     home.classList.add("on"); home.innerHTML = homeView(); setNav("home");
-    bindHeroSearch();
+    bindHeroSearch(); bindHomeBrowse();
   }
   const scrollListings = homeSearchScroll;
   homeSearchScroll = false;

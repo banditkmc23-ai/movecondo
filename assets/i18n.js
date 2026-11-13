@@ -237,6 +237,20 @@
     "ชั้นต่ำ (1–10)": "Low floor (1–10)", "ชั้นกลาง (11–20)": "Mid floor (11–20)", "ชั้นสูง (21 ขึ้นไป)": "High floor (21+)",
     "ดูเพิ่มเติม": "Show more", "กำลังจะว่าง": "Available soon",
     "2 ห้องนอน 2 ห้องนั่งเล่น": "2 bedrooms, 2 living rooms",
+    /* home category rows */
+    "เลือกดูตามหมวด": "Browse by category", "ดูห้องทั้งหมด": "See all rooms", "หมวดหมู่": "Categories",
+    "ทำเล": "Areas", "งบ": "Budget", "ประเภทห้อง": "Room type", "ใกล้ BTS/MRT": "Near BTS/MRT", "ลงใหม่": "New",
+    "กำลังจะว่างเร็ว ๆ นี้": "Available soon", "ห้องที่จะว่างภายใน 30 วัน": "Rooms opening up within 30 days",
+    "ใกล้รถไฟฟ้า เดินไม่เกิน 5 นาที": "Near the train, 5 min walk or less", "ออกจากห้องแล้วถึงสถานีได้เร็ว": "Out the door and at the station fast",
+    "ลงใหม่ล่าสุด": "Newly listed", "ห้องที่เพิ่งลงประกาศ": "Rooms listed most recently",
+    "งบไม่เกิน 15,000": "Budget up to 15,000", "ค่าเช่าไม่เกิน 15,000 บาท/เดือน": "Rent up to 15,000 THB/month",
+    "ราคา 15,000–25,000": "15,000–25,000 THB", "ช่วงราคายอดนิยม": "The most popular price range",
+    "ราคา 25,000–40,000": "25,000–40,000 THB", "ห้องกว้างขึ้นในทำเลกลางเมือง": "More space in central locations",
+    "ห้องพรีเมียม 40,000 ขึ้นไป": "Premium, 40,000 THB+", "ห้องใหญ่ วิวดี ในโครงการระดับบน": "Larger rooms in upscale projects",
+    "สตูดิโอและ 1 ห้องนอน": "Studio & 1 bedroom", "เหมาะกับอยู่คนเดียวหรืออยู่สองคน": "Good for one or two people",
+    "2 ห้องนอนขึ้นไป เหมาะกับครอบครัว": "2+ bedrooms for families", "มีพื้นที่สำหรับครอบครัวหรือแชร์กับเพื่อน": "Room for a family or for sharing with friends",
+    "เลือกตามทำเล": "Browse by area", "ดูห้องว่างทั้งหมดในแต่ละย่าน": "See every available room in each area",
+    "เลื่อนไปทางซ้าย": "Scroll left", "เลื่อนไปทางขวา": "Scroll right", "ใกล้สถานีที่สุด": "Closest to station",
     /* search v2 + project pages */
     "ค้นหาแบบละเอียด": "Advanced search", "ผลการค้นหา": "Search results", "ตัวกรอง": "Filters", "เรียงตาม": "Sort by",
     "แนะนำ": "Recommended", "ราคาต่ำไปสูง": "Price: low to high", "ราคาสูงไปต่ำ": "Price: high to low", "ขนาดใหญ่ไปเล็ก": "Size: largest first",
@@ -289,6 +303,10 @@
   }
 
   var RULES = [
+    [/^ดูทั้งหมด \((\d+)\)$/, function (m) { return "See all (" + m[1] + ")"; }],
+    [/^ดูห้องทั้งหมด \((\d+)\)$/, function (m) { return "All rooms (" + m[1] + ")"; }],
+    [/^ดูห้องทั้งหมด (\d+) ห้อง$/, function (m) { return "See all " + m[1] + " rooms"; }],
+    [/^เดินถึงสถานีไม่เกิน (\d+) นาที$/, function (m) { return "Up to " + m[1] + " min walk to station"; }],
     [/^พบ (\d+) ห้อง$/, function (m) { return m[1] + plural(m[1], " room found", " rooms found"); }],
     [/^ดู (\d+) ห้อง$/, function (m) { return "Show " + m[1] + plural(m[1], " room", " rooms"); }],
     [/^(\d+) ห้อง$/, function (m) { return m[1] + plural(m[1], " room", " rooms"); }],
