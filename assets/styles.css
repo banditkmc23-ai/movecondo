@@ -1934,3 +1934,7 @@ html.fs-open, html.fs-open body { overflow: hidden; }
 .project-page #rooms { padding-top: 32px; }
 .room-project-link { margin: 10px 0 0; font-size: 14.5px; }
 .room-project-link a { color: var(--primary-dark); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.hero-search-form { position: relative; }
+.hero-suggest-project { flex-direction: column; align-items: flex-start; gap: 2px; }
+.hero-suggest-project span { white-space: normal; }
+@media (min-width: 1024px) { .search-side .ff-presets .sel-chip { padding: 6px 11px; } }
