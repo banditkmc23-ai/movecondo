@@ -3,7 +3,8 @@
  * today (Bangkok) is within start..end. Ads marked "example" never show publicly; they appear
  * only in preview mode (?adpreview=1, remembered for the browser tab; ?adpreview=0 turns it off).
  * Slots: home (between category rows), room (under the Detail block), area / project (between room cards).
- * No slot is rendered when there is no ad for it. Links use rel="sponsored noopener".
+ * When a slot has no live ad, a house placeholder ("พื้นที่โฆษณา · Ad space") linking to the Partner page is shown instead.
+ * Links to real ads use rel="sponsored noopener".
  */
 (function () {
   "use strict";
@@ -53,10 +54,21 @@
       (cta ? '<span class="ad-cta">' + esc(cta) + '</span>' : "") + '</span></a>' +
       '<a class="ad-more" href="' + esc(new URL("../partner/", DATA_URL).href) + '">' + (en ? "Want to advertise here?" : "สนใจลงโฆษณา?") + '</a></aside>';
   }
+  // house placeholder: shown when no real (or preview) ad is available for the slot
+  function placeholder(slot) {
+    var partner = esc(new URL("../partner/#ads", DATA_URL).href);
+    return '<aside class="ad-slot ad-ph ad-' + slot + '" data-i18n-skip data-ad="placeholder" aria-label="' + (isEN() ? "Ad space" : "พื้นที่โฆษณา") + '">' +
+      '<a class="ad-card" href="' + partner + '">' +
+      '<span class="ad-media ad-ph-media" aria-hidden="true"><span class="ad-ph-art"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg><span>Ad</span></span></span>' +
+      '<span class="ad-body"><span class="ad-label"><span class="t-th">โฆษณา · Ad</span><span class="t-en">Ad</span></span>' +
+      '<b class="ad-title"><span class="t-th">พื้นที่โฆษณา</span><span class="t-en">Ad space</span></b>' +
+      '<span class="ad-text"><span class="t-th">สนใจลงโฆษณา ติดต่อเรา</span><span class="t-en">Advertise with us</span></span>' +
+      '<span class="ad-cta"><span class="t-th">ดูรายละเอียด</span><span class="t-en">Learn more</span></span></span></a></aside>';
+  }
   function place(target, where, slot) {
     if (!target) return;
-    var a = pick(slot); if (!a) return;
-    target.insertAdjacentHTML(where, html(a, slot));
+    var a = pick(slot);
+    target.insertAdjacentHTML(where, a ? html(a, slot) : placeholder(slot));
   }
   function mount() {
     if (!ADS) return;
@@ -93,6 +105,7 @@
   window.MoveCondoAds = { mount: mount, get preview() { return PREVIEW; } };
   fetch(DATA_URL.href, { cache: "no-cache", credentials: "omit" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
     ADS = j && Array.isArray(j.ads) ? j.ads : [];
-    if (ADS.some(live)) { if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", mount); else mount(); }
-  }).catch(function () { ADS = []; });
+  }).catch(function () { ADS = []; }).then(function () {
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", mount); else mount();
+  });
 })();

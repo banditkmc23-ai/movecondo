@@ -2106,3 +2106,21 @@ footer.site .foot-links a:hover { color: var(--primary); }
 .pt-tenant-cta { display: flex; flex-wrap: wrap; gap: 10px; }
 .pf-perm[hidden] { display: none; }
 @media (min-width: 720px) { .pt-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); } .pt-steps li { padding: 46px 12px 12px; } .pt-steps li::before { top: 12px; } }
+
+/* House ad placeholder (empty ad slot) */
+.ad-ph .ad-card { border-style: dashed; border-color: rgba(185,83,47,.45); }
+.ad-ph-media { background: #FBF3EF; display: grid; place-items: center; }
+.ad-ph-art { display: grid; justify-items: center; gap: 4px; color: var(--primary); font-weight: 600; font-size: 13px; letter-spacing: .08em; }
+.ad-ph .ad-title { color: var(--primary); }
+.ad-ph .ad-cta { color: var(--primary); }
+@media (max-width: 719.98px) {
+  .ad-ph .ad-card { grid-template-columns: 112px minmax(0, 1fr); align-items: center; }
+  .ad-ph .ad-media { margin: 10px 0 10px 10px; border-radius: 10px; }
+  .ad-ph .ad-body { padding: 10px 14px; gap: 2px; }
+  .ad-ph .ad-title { font-size: 15px; }
+  .ad-ph .ad-text, .ad-ph .ad-cta { font-size: 13px; }
+  .ad-ph .ad-cta { margin-top: 0; }
+  .ad-ph .ad-label { display: none; }
+  .ad-ph-art svg { width: 22px; height: 22px; }
+  .ad-ph.ad-slot { margin-top: 22px; }
+}
