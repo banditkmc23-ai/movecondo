@@ -17,3 +17,10 @@
 -- Check partner_applications_agent_fields_check: agent_* / owner_permission must be null unless 'coagent' = any(interests).
 -- grant insert (agent_rooms, agent_kind, agent_years, owner_permission) to anon, authenticated.
 -- Commission split is never stored or published: agreed case by case.
+
+-- Migration partner_applications_coagent_modes (2026-11-13)
+-- agent_modes text[] ⊆ {tenants, listings, cobroke} (1–3 items, optional): tenants = find tenants for MoveCondo's rooms.
+-- agent_rooms also allows '0' (no rooms in hand). owner_permission is null or true.
+-- partner_applications_bring_rooms_check: if agent_modes includes listings or cobroke, owner_permission must be true.
+-- agent_fields_check now also requires agent_modes null unless 'coagent' = any(interests).
+-- grant insert (agent_modes) to anon, authenticated.

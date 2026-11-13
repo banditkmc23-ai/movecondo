@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/styles.css?v=20261113q1" />
+  <link rel="stylesheet" href="../assets/styles.css?v=20261113r1" />
   <link rel="stylesheet" href="../assets/i18n.css?v=20261112i1" />
   <script>(function(){try{var q=new URLSearchParams(location.search).get("lang"),l=(q==="en"||q==="th")?q:localStorage.getItem("mc-lang");if(l==="en"){var d=document.documentElement;d.lang="en";d.className+=" mc-en mc-i18n-wait";setTimeout(function(){d.classList.remove("mc-i18n-wait")},2500)}}catch(e){}})();</script>
 </head>
@@ -76,21 +76,35 @@
     <section class="section pt-coagent" id="co-agent">
       <div class="pt-co-head"><div class="eyebrow">Co-Agent</div>
         <h2><span class="t-th">ร่วมงานกับ MoveCondo แบบ Co-Agent</span><span class="t-en">Co-agency with MoveCondo</span></h2>
-        <p class="lead"><span class="t-th">สำหรับนายหน้าและเอเจนท์อสังหาฯ ทั้งแบบอิสระและแบบบริษัท ที่อยากช่วยกันปิดดีลห้องเช่าให้เร็วขึ้น</span><span class="t-en">For independent and company real-estate agents who want to close rental deals faster together.</span></p></div>
+        <p class="lead"><span class="t-th">สำหรับนายหน้าและเอเจนท์อสังหาฯ ทั้งแบบอิสระและแบบบริษัท ที่อยากช่วยกันปิดดีลห้องเช่าให้เร็วขึ้น ไม่มีห้องในมือก็ร่วมงานได้ แค่ช่วยหาผู้เช่าให้ห้องของเรา</span><span class="t-en">For independent and company real-estate agents who want to close rental deals faster together. No rooms of your own? You can still join by finding tenants for our rooms.</span></p></div>
+      <div class="pt-card pt-tenant" id="find-tenants">
+        <div class="pt-tenant-head"><span class="pt-tag"><span class="t-th">ไม่ต้องมีห้องในมือ</span><span class="t-en">No rooms needed</span></span>
+          <h3><span class="t-th">หาผู้เช่าให้ห้องของ MoveCondo ได้</span><span class="t-en">Find tenants for MoveCondo's rooms</span></h3>
+          <p><span class="t-th">มีลูกค้ากำลังหาห้องเช่าอยู่? เลือกห้องว่างบนเว็บของเราแล้วพาลูกค้ามาเช่าได้เลย</span><span class="t-en">Have clients looking for a rental? Pick an available room on our site and bring them to rent it.</span></p></div>
+        <ol class="pt-steps">
+          <li><b><span class="t-th">เลือกห้องบนเว็บ</span><span class="t-en">Pick a room on the site</span></b><span class="t-th">เลือกห้องว่างที่ตรงกับลูกค้าของคุณ</span><span class="t-en">Choose an available room that fits your client</span></li>
+          <li><b><span class="t-th">แจ้งทีมทาง LINE</span><span class="t-en">Tell our team on LINE</span></b><span class="t-th">ส่งลิงก์ห้องมาให้ทีมงานเช็กว่าห้องยังว่าง</span><span class="t-en">Send us the room link so we can confirm it is still free</span></li>
+          <li><b><span class="t-th">พาดูห้อง / ปิดดีล</span><span class="t-en">Viewing / close the deal</span></b><span class="t-th">นัดพาลูกค้าดูห้องและปิดดีลร่วมกับทีมงาน</span><span class="t-en">Arrange a viewing and close the deal with our team</span></li>
+          <li><b><span class="t-th">รับค่าคอมตามที่ตกลง</span><span class="t-en">Get the agreed commission</span></b><span class="t-th">ส่วนแบ่งตกลงร่วมกันเป็นกรณีไป</span><span class="t-en">The split is agreed case by case</span></li>
+        </ol>
+        <div class="pt-tenant-cta"><a class="btn btn-primary" href="#apply" data-coagent-apply="tenants"><span class="t-th">สมัครหาผู้เช่าให้เรา</span><span class="t-en">Apply to find tenants</span></a><a class="btn btn-ghost" href="../#/search"><span class="t-th">ดูห้องว่างทั้งหมด</span><span class="t-en">Browse available rooms</span></a></div>
+      </div>
       <div class="pt-co-grid">
         <div class="pt-card"><h3><span class="t-th">ร่วมงานกันอย่างไร</span><span class="t-en">How it works</span></h3><ul>
+          <li><span class="t-th">หาผู้เช่าให้เรา: พาลูกค้าของคุณมาเช่าห้องที่ลงอยู่บน MoveCondo</span><span class="t-en">Find tenants for us: bring your clients to rent rooms listed on MoveCondo</span></li>
           <li><span class="t-th">แชร์ห้อง: คุณส่งห้องที่ดูแลอยู่มาลงใน MoveCondo</span><span class="t-en">Share listings: send us the rooms you manage to list on MoveCondo</span></li>
           <li><span class="t-th">แชร์ผู้เช่า: ถ้าเรามีผู้เช่าที่ตรงกับห้องของคุณ หรือคุณมีผู้เช่าที่ตรงกับห้องของเรา ก็ส่งต่อกันได้</span><span class="t-en">Share tenants: pass on tenants who fit each other's rooms</span></li>
           <li><span class="t-th">ปิดดีลร่วมกัน (co-broke) แล้วแบ่งค่าคอมมิชชันตามที่ตกลงกัน</span><span class="t-en">Close deals together (co-broke) and split the commission as agreed</span></li>
         </ul></div>
         <div class="pt-card"><h3><span class="t-th">สิ่งที่คุณได้</span><span class="t-en">What you get</span></h3><ul>
+          <li><span class="t-th">ห้องว่างที่เราตรวจสอบแล้วให้คุณเลือกเสนอลูกค้า พร้อมทีมงานช่วยประสานการดูห้อง</span><span class="t-en">Verified available rooms to offer your clients, with our team helping arrange viewings</span></li>
           <li><span class="t-th">ห้องของคุณขึ้นบน MoveCondo พร้อมป้าย “ว่าง” หลังเราตรวจสอบว่าห้องว่างจริง</span><span class="t-en">Your rooms listed on MoveCondo with an “Available” badge once we confirm they are free</span></li>
           <li><span class="t-th">ผู้เช่าที่สนใจติดต่อเข้ามาทาง LINE OA ของ MoveCondo</span><span class="t-en">Interested tenants reach us through MoveCondo's LINE OA</span></li>
           <li><span class="t-th">ไม่แสดงข้อมูลเจ้าของห้องหรือเลขห้องบนเว็บ</span><span class="t-en">Owner details and unit numbers are never shown on the site</span></li>
         </ul></div>
         <div class="pt-card"><h3><span class="t-th">ส่วนแบ่งค่าคอมมิชชัน</span><span class="t-en">Commission split</span></h3>
           <p><span class="t-th">ตกลงร่วมกันเป็นกรณีไป ขึ้นอยู่กับห้องและบทบาทของแต่ละฝ่าย ทีมงานจะคุยรายละเอียดกับคุณหลังได้รับใบสมัคร</span><span class="t-en">Agreed case by case, depending on the room and each side's role. Our team will discuss details with you after we receive your application.</span></p>
-          <p class="muted"><span class="t-th">ห้องที่ส่งมาต้องได้รับอนุญาตจากเจ้าของให้ประกาศแล้ว</span><span class="t-en">Rooms you share must already have the owner's permission to be advertised.</span></p></div>
+          <p class="muted"><span class="t-th">ถ้านำห้องมาลง ห้องนั้นต้องได้รับอนุญาตจากเจ้าของให้ประกาศแล้ว</span><span class="t-en">If you bring rooms, they must already have the owner's permission to be advertised.</span></p></div>
       </div>
       <a class="btn btn-lg btn-primary" href="#apply" data-coagent-apply><span class="t-th">สมัคร Co-Agent</span><span class="t-en">Apply as Co-Agent</span></a>
     </section>
@@ -113,17 +127,23 @@
           <label class="pf-chip"><input type="checkbox" name="interests" value="other"><span><span class="t-th">ร่วมมืออื่น ๆ</span><span class="t-en">Other collaboration</span></span></label>
         </div></fieldset>
         <fieldset class="pf-set"><legend><span class="pf-ar-default"><span class="t-th">ทำเลที่สนใจ (เลือกได้หลายย่าน)</span><span class="t-en">Areas of interest (choose any)</span></span><span class="pf-ar-co"><span class="t-th">ทำเลที่สนใจ / ทำเลที่ดูแล (เลือกได้หลายย่าน)</span><span class="t-en">Areas of interest / areas you cover (choose any)</span></span></legend><div class="pf-chips"><label class="pf-chip"><input type="checkbox" name="areas" value="อ่อนนุช"><span><span class="t-th">อ่อนนุช</span><span class="t-en">On Nut</span></span></label><label class="pf-chip"><input type="checkbox" name="areas" value="ทองหล่อ"><span><span class="t-th">ทองหล่อ</span><span class="t-en">Thonglor</span></span></label><label class="pf-chip"><input type="checkbox" name="areas" value="พร้อมพงษ์"><span><span class="t-th">พร้อมพงษ์</span><span class="t-en">Phrom Phong</span></span></label><label class="pf-chip"><input type="checkbox" name="areas" value="พระโขนง"><span><span class="t-th">พระโขนง</span><span class="t-en">Phra Khanong</span></span></label><label class="pf-chip"><input type="checkbox" name="areas" value="เอกมัย"><span><span class="t-th">เอกมัย</span><span class="t-en">Ekkamai</span></span></label><label class="pf-chip"><input type="checkbox" name="areas" value="พระราม 9"><span><span class="t-th">พระราม 9</span><span class="t-en">Rama 9</span></span></label><label class="pf-chip"><input type="checkbox" name="areas" value="บางนา"><span><span class="t-th">บางนา</span><span class="t-en">Bang Na</span></span></label><label class="pf-chip"><input type="checkbox" name="areas" value="อโศก"><span><span class="t-th">อโศก</span><span class="t-en">Asok</span></span></label><label class="pf-chip"><input type="checkbox" name="areas" value="ชิดลม"><span><span class="t-th">ชิดลม</span><span class="t-en">Chit Lom</span></span></label><label class="pf-chip"><input type="checkbox" name="areas" value="พระราม 4"><span><span class="t-th">พระราม 4</span><span class="t-en">Rama 4</span></span></label><label class="pf-chip"><input type="checkbox" name="areas" value="สามย่าน-สีลม"><span><span class="t-th">สามย่าน-สีลม</span><span class="t-en">Sam Yan–Silom</span></span></label><label class="pf-chip"><input type="checkbox" name="areas" value="อารีย์"><span><span class="t-th">อารีย์</span><span class="t-en">Ari</span></span></label><label class="pf-chip"><input type="checkbox" name="areas" value="ห้วยขวาง"><span><span class="t-th">ห้วยขวาง</span><span class="t-en">Huai Khwang</span></span></label><label class="pf-chip"><input type="checkbox" name="areas" value="เจริญนคร"><span><span class="t-th">เจริญนคร</span><span class="t-en">Charoen Nakhon</span></span></label></div></fieldset>
-        <fieldset class="pf-set pf-co" id="pfCo" hidden><legend><span class="t-th">ข้อมูลสำหรับ Co-Agent (ไม่บังคับ)</span><span class="t-en">Co-Agent details (optional)</span></legend>
-          <div class="pf-row2">
-            <label class="pf-f"><span><span class="t-th">จำนวนห้องที่มีในมือ</span><span class="t-en">Rooms in hand</span></span><select name="agent_rooms"><option value="" data-th="ไม่ระบุ" data-en="Not specified">ไม่ระบุ</option><option value="1-5" data-th="1–5 ห้อง" data-en="1–5 rooms">1–5 ห้อง</option><option value="6-20" data-th="6–20 ห้อง" data-en="6–20 rooms">6–20 ห้อง</option><option value="21-50" data-th="21–50 ห้อง" data-en="21–50 rooms">21–50 ห้อง</option><option value="50+" data-th="มากกว่า 50 ห้อง" data-en="More than 50 rooms">มากกว่า 50 ห้อง</option></select></label>
-            <label class="pf-f"><span><span class="t-th">ประสบการณ์ (ปี)</span><span class="t-en">Experience (years)</span></span><input name="agent_years" type="number" inputmode="numeric" min="0" max="60" step="1"></label>
+        <fieldset class="pf-set pf-co" id="pfCo" hidden><legend><span class="t-th">ข้อมูลสำหรับ Co-Agent</span><span class="t-en">Co-Agent details</span></legend>
+          <div class="pf-sub"><span class="t-th">อยากร่วมงานแบบไหน (เลือกได้หลายข้อ)</span><span class="t-en">How do you want to work? (choose any)</span></div>
+          <div class="pf-chips" id="pfModes">
+            <label class="pf-chip"><input type="checkbox" name="agent_modes" value="tenants"><span><span class="t-th">หาผู้เช่าให้ห้องของ MoveCondo</span><span class="t-en">Find tenants for MoveCondo's rooms</span></span></label>
+            <label class="pf-chip"><input type="checkbox" name="agent_modes" value="listings"><span><span class="t-th">นำห้องมาลง</span><span class="t-en">Bring rooms to list</span></span></label>
+            <label class="pf-chip"><input type="checkbox" name="agent_modes" value="cobroke"><span><span class="t-th">Co-broke ทั้งสองทาง</span><span class="t-en">Co-broke both ways</span></span></label>
           </div>
-          <div class="pf-sub"><span class="t-th">รูปแบบการทำงาน</span><span class="t-en">You work as</span></div>
+          <div class="pf-row2">
+            <label class="pf-f"><span><span class="t-th">จำนวนห้องที่มีในมือ (ไม่บังคับ)</span><span class="t-en">Rooms in hand (optional)</span></span><select name="agent_rooms"><option value="" data-th="ไม่ระบุ" data-en="Not specified">ไม่ระบุ</option><option value="0" data-th="0 · ไม่มีห้องในมือ" data-en="0 · No rooms in hand">0 · ไม่มีห้องในมือ</option><option value="1-5" data-th="1–5 ห้อง" data-en="1–5 rooms">1–5 ห้อง</option><option value="6-20" data-th="6–20 ห้อง" data-en="6–20 rooms">6–20 ห้อง</option><option value="21-50" data-th="21–50 ห้อง" data-en="21–50 rooms">21–50 ห้อง</option><option value="50+" data-th="มากกว่า 50 ห้อง" data-en="More than 50 rooms">มากกว่า 50 ห้อง</option></select></label>
+            <label class="pf-f"><span><span class="t-th">ประสบการณ์ (ปี, ไม่บังคับ)</span><span class="t-en">Experience (years, optional)</span></span><input name="agent_years" type="number" inputmode="numeric" min="0" max="60" step="1"></label>
+          </div>
+          <div class="pf-sub"><span class="t-th">รูปแบบการทำงาน (ไม่บังคับ)</span><span class="t-en">You work as (optional)</span></div>
           <div class="pf-chips">
             <label class="pf-chip"><input type="radio" name="agent_kind" value="independent"><span><span class="t-th">นายหน้าอิสระ</span><span class="t-en">Independent agent</span></span></label>
             <label class="pf-chip"><input type="radio" name="agent_kind" value="company"><span><span class="t-th">บริษัทนายหน้า</span><span class="t-en">Agency company</span></span></label>
           </div>
-          <label class="pf-consent pf-perm"><input type="checkbox" name="owner_permission"><span><span class="t-th">ห้องที่จะส่งให้ MoveCondo ได้รับอนุญาตจากเจ้าของห้องให้ประกาศแล้ว</span><span class="t-en">The rooms I will share have the owner's permission to be advertised</span></span></label>
+          <label class="pf-consent pf-perm" id="pfPerm" hidden><input type="checkbox" name="owner_permission"><span><span class="t-th">ห้องที่จะส่งให้ MoveCondo ได้รับอนุญาตจากเจ้าของห้องให้ประกาศแล้ว *</span><span class="t-en">The rooms I will share have the owner's permission to be advertised *</span></span></label>
         </fieldset>
         <label class="pf-f"><span><span class="t-th">เว็บไซต์ / Facebook (ไม่บังคับ)</span><span class="t-en">Website / Facebook (optional)</span></span><input name="website" maxlength="200" inputmode="url" autocomplete="url"></label>
         <label class="pf-f"><span><span class="t-th">ข้อความถึงทีมงาน</span><span class="t-en">Message to our team</span></span><textarea name="message" rows="4" maxlength="2000"></textarea></label>
@@ -155,7 +175,7 @@
   <div class="overlay" id="lineModal" role="dialog" aria-modal="true" aria-labelledby="lineTitle"></div>
   <script src="../assets/i18n.js?v=20261113p1" defer></script>
   <script src="../assets/stats.js?v=20261113p1" defer></script>
-  <script src="../assets/partner.js?v=20261113q1" defer></script>
+  <script src="../assets/partner.js?v=20261113r1" defer></script>
   <script src="../assets/app.js?v=20261113p1" defer></script>
 
 </body>
