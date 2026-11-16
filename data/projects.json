@@ -116,10 +116,10 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 14,
-   "count": 8,
+   "count": 9,
    "soon": 0,
    "priceMin": 19000,
-   "priceMax": 24000,
+   "priceMax": 26000,
    "rooms": [
     "MC-007",
     "MC-008",
@@ -128,32 +128,10 @@
     "MC-037",
     "MC-009",
     "MC-121",
-    "MC-041"
+    "MC-041",
+    "MC-261"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/"
-  },
-  {
-   "name": "Life Sukhumvit 48",
-   "slug": "life-sukhumvit-48",
-   "area": "พระโขนง",
-   "areaSlug": "phrakhanong",
-   "station": "BTS พระโขนง",
-   "walk": 5,
-   "count": 8,
-   "soon": 0,
-   "priceMin": 16000,
-   "priceMax": 35000,
-   "rooms": [
-    "MC-010",
-    "MC-032",
-    "MC-035",
-    "MC-051",
-    "MC-174",
-    "MC-214",
-    "MC-048",
-    "MC-197"
-   ],
-   "url": "https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-48/"
   },
   {
    "name": "Mori Haus",
@@ -215,14 +193,17 @@
    "areaSlug": "thonglor",
    "station": "BTS ทองหล่อ",
    "walk": 15,
-   "count": 5,
+   "count": 8,
    "soon": 0,
    "priceMin": 19000,
    "priceMax": 40000,
    "rooms": [
     "MC-186",
+    "MC-262",
     "MC-113",
     "MC-114",
+    "MC-252",
+    "MC-253",
     "MC-014",
     "MC-220"
    ],
@@ -356,30 +337,6 @@
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/wyne-by-sansiri/"
   },
   {
-   "name": "The Base Sukhumvit 77",
-   "slug": "the-base-sukhumvit-77",
-   "area": "อ่อนนุช",
-   "areaSlug": "on-nut",
-   "station": "BTS อ่อนนุช",
-   "walk": 6,
-   "count": 9,
-   "soon": 0,
-   "priceMin": 12000,
-   "priceMax": 26000,
-   "rooms": [
-    "MC-205",
-    "MC-210",
-    "MC-024",
-    "MC-040",
-    "MC-169",
-    "MC-206",
-    "MC-213",
-    "MC-070",
-    "MC-181"
-   ],
-   "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/"
-  },
-  {
    "name": "XT Ekkamai",
    "slug": "xt-ekkamai",
    "area": "เอกมัย",
@@ -432,6 +389,28 @@
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/nue-district-r9/"
   },
   {
+   "name": "Life Sukhumvit 48",
+   "slug": "life-sukhumvit-48",
+   "area": "พระโขนง",
+   "areaSlug": "phrakhanong",
+   "station": "BTS พระโขนง",
+   "walk": 5,
+   "count": 7,
+   "soon": 0,
+   "priceMin": 16000,
+   "priceMax": 35000,
+   "rooms": [
+    "MC-032",
+    "MC-035",
+    "MC-051",
+    "MC-174",
+    "MC-214",
+    "MC-048",
+    "MC-197"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-48/"
+  },
+  {
    "name": "Rhythm Sukhumvit 44/1",
    "slug": "rhythm-sukhumvit-44-1",
    "area": "พระโขนง",
@@ -479,6 +458,27 @@
     "MC-039"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-niche-mono-sukhumvit-50/"
+  },
+  {
+   "name": "The Base Sukhumvit 77",
+   "slug": "the-base-sukhumvit-77",
+   "area": "อ่อนนุช",
+   "areaSlug": "on-nut",
+   "station": "BTS อ่อนนุช",
+   "walk": 6,
+   "count": 6,
+   "soon": 0,
+   "priceMin": 12000,
+   "priceMax": 26000,
+   "rooms": [
+    "MC-205",
+    "MC-210",
+    "MC-040",
+    "MC-169",
+    "MC-070",
+    "MC-181"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/"
   },
   {
    "name": "The Tree Onnut Station",
@@ -634,7 +634,7 @@
    "areaSlug": "rama-9",
    "station": "MRT พระราม 9",
    "walk": 7,
-   "count": 4,
+   "count": 5,
    "soon": 0,
    "priceMin": 22500,
    "priceMax": 26000,
@@ -642,6 +642,7 @@
     "MC-154",
     "MC-161",
     "MC-221",
+    "MC-255",
     "MC-056"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/life-asoke-hype/"
@@ -719,11 +720,12 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 15,
-   "count": 1,
+   "count": 2,
    "soon": 0,
-   "priceMin": 16000,
+   "priceMin": 15000,
    "priceMax": 16000,
    "rooms": [
+    "MC-259",
     "MC-062"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-base-park-east/"
@@ -919,11 +921,12 @@
    "areaSlug": "rama-4",
    "station": "MRT ศูนย์การประชุมแห่งชาติสิริกิติ์",
    "walk": 6,
-   "count": 2,
+   "count": 3,
    "soon": 0,
-   "priceMin": 27000,
+   "priceMin": 26000,
    "priceMax": 27500,
    "rooms": [
+    "MC-263",
     "MC-079",
     "MC-149"
    ],
@@ -1334,17 +1337,19 @@
    "areaSlug": "phrom-phong",
    "station": "BTS พร้อมพงษ์",
    "walk": 6,
-   "count": 6,
+   "count": 8,
    "soon": 0,
    "priceMin": 30000,
-   "priceMax": 60000,
+   "priceMax": 65000,
    "rooms": [
     "MC-223",
     "MC-187",
     "MC-180",
     "MC-148",
+    "MC-254",
     "MC-122",
-    "MC-123"
+    "MC-123",
+    "MC-258"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/noble-state-39/"
   },
@@ -1607,13 +1612,14 @@
    "areaSlug": "asoke",
    "station": "MRT สุขุมวิท",
    "walk": 10,
-   "count": 2,
-   "soon": 0,
-   "priceMin": 23000,
+   "count": 3,
+   "soon": 1,
+   "priceMin": 15000,
    "priceMax": 28000,
    "rooms": [
     "MC-152",
-    "MC-196"
+    "MC-196",
+    "MC-264"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/grand-park-view-asoke/"
   },
@@ -1720,13 +1726,14 @@
    "slug": "life-sukhumvit-65",
    "area": "พระโขนง",
    "areaSlug": "phrakhanong",
-   "station": null,
-   "walk": null,
-   "count": 1,
+   "station": "BTS พระโขนง",
+   "walk": 3,
+   "count": 2,
    "soon": 0,
-   "priceMin": 35000,
+   "priceMin": 20000,
    "priceMax": 35000,
    "rooms": [
+    "MC-256",
     "MC-172"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-65/"
@@ -1770,11 +1777,12 @@
    "areaSlug": "thonglor",
    "station": "BTS ทองหล่อ",
    "walk": 2,
-   "count": 1,
+   "count": 2,
    "soon": 0,
-   "priceMin": 65000,
+   "priceMin": 28000,
    "priceMax": 65000,
    "rooms": [
+    "MC-260",
     "MC-179"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/ideo-q36-thonglor/"
@@ -2021,6 +2029,22 @@
     "MC-235"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/quattro-by-sansiri/"
+  },
+  {
+   "name": "BaanSiri 24",
+   "slug": "baansiri-24",
+   "area": "พร้อมพงษ์",
+   "areaSlug": "phrom-phong",
+   "station": null,
+   "walk": null,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 55000,
+   "priceMax": 55000,
+   "rooms": [
+    "MC-257"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/baansiri-24/"
   }
  ]
 }
