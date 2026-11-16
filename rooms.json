@@ -6,7 +6,7 @@
   },
   "home": "https://banditkmc23-ai.github.io/movecondo/",
   "home_en": "https://banditkmc23-ai.github.io/movecondo/?lang=en",
-  "updated": "2026-11-13",
+  "updated": "2026-11-16",
   "currency": "THB",
   "contact": {
     "line": "https://line.me/R/ti/p/%40576yhgtz"
@@ -2277,7 +2277,13 @@
       ],
       "petsAllowed": false,
       "images": [
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-007/1.webp"
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-007/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-007/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-007/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-007/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-007/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-007/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-007/7.webp"
       ],
       "last_verified": "2026-11-10",
       "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/",
