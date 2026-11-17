@@ -141,11 +141,31 @@ def main():
         slug = page.split("/")[1]
         url = out_for(f"condo-{slug}", room_pick[rid], name, sub)
         changed_pages += set_meta(page, url, f"ห้องเช่า {name} ย่าน{L[rid].get('area','')}")
-    live = {f"images/share/{i.lower()}.jpg" for i in room_pick} | {f"images/share/condo-{p.split('/')[1]}.jpg" for p in glob.glob('condo/*/index.html')}
+    # sale listing pages
+    sale_raw = json.load(open("data/sale-listings.json", encoding="utf-8")) if os.path.exists("data/sale-listings.json") else {}
+    sales = [l for l in (sale_raw.get("listings") or []) if l.get("published") is not False and l.get("status") not in ("draft", "sold", "hidden")]
+    sale_files = set()
+    for l in sales:
+        slug = str(l.get("slug") or "").strip()
+        page = f"buy/{slug}/index.html"
+        photos = [ph for ph in (l.get("photos") or []) if os.path.exists(ph)]
+        if not slug or not os.path.isfile(page) or not photos:
+            continue
+        key = "sale:" + slug
+        src_key = "|".join(photos) + "|" + str(int(os.path.getmtime(photos[0])))
+        c = cache.get(key)
+        src = c["photo"] if c and (c.get("manual") or c.get("key") == src_key) and c.get("photo") in photos else photos[0]
+        cache[key] = {"photo": src, "key": src_key}
+        price = f"ขาย ฿{money(l['salePrice'])}" if l.get("salePrice") else "ขาย"
+        sub = " · ".join(x for x in (price, l.get("area"), (f"{l['size']:g} ตร.ม." if l.get("size") else None)) if x)
+        url = out_for(f"sale-{slug}", src, l.get("project") or slug, sub)
+        sale_files.add(f"images/share/sale-{slug}.jpg")
+        changed_pages += set_meta(page, url, f"ประกาศขาย {l.get('project','')} ย่าน{l.get('area','')}")
+    live = {f"images/share/{i.lower()}.jpg" for i in room_pick} | {f"images/share/condo-{p.split('/')[1]}.jpg" for p in glob.glob('condo/*/index.html')} | sale_files
     for f in glob.glob("images/share/*.jpg"):
         if f not in live: os.remove(f); os.path.exists(f + ".sig") and os.remove(f + ".sig")
     json.dump(dict(sorted(cache.items())), open(CACHE, "w"), ensure_ascii=False, indent=0)
-    print(f"share images: rooms={len(room_pick)} rendered={rendered} pages_changed={changed_pages}")
+    print(f"share images: rooms={len(room_pick)} sale={len(sale_files)} rendered={rendered} pages_changed={changed_pages}")
 
 if __name__ == "__main__":
     main()

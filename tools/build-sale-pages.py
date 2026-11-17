@@ -18,7 +18,7 @@ os.chdir(ROOT)
 
 BASE = "https://banditkmc23-ai.github.io/movecondo/"
 LINE_URL = "https://line.me/R/ti/p/%40576yhgtz"
-ASSET_V = "20261117rb1"
+ASSET_V = "20261117sr1"
 I18N_CSS_V = "20261112i1"
 CAROUSEL_V = "20261112ab"
 ADS_V = "20261113s1"
@@ -151,7 +151,206 @@ def scan_forbidden(text, where):
             bad.append((where, rx.pattern, ctx))
     return bad
 
+def load_rentals():
+    """Published rental rooms with a real rent price, keyed by slug (mc-001)."""
+    out = {}
+    path = "data/listings.json"
+    if not os.path.exists(path):
+        return out
+    for r in json.load(open(path, encoding="utf-8")).get("rooms") or []:
+        slug = str(r.get("slug") or r.get("id") or "").strip().lower()
+        try:
+            price = int(r.get("price"))
+        except (TypeError, ValueError):
+            price = 0
+        if slug and price > 0 and os.path.exists(f"rooms/{slug}/index.html"):
+            out[slug] = r
+    return out
+
+def is_dual(l):
+    return bool(l.get("rentRoomSlug") and l.get("rentPrice"))
+
+def sale_badge_html(l):
+    if l.get("saleWithTenant"):
+        return '<span class="badge-vacant badge-sale-tenant"><span class="t-th">ขายพร้อมผู้เช่า</span><span class="t-en">Sold with tenant</span></span>'
+    if is_dual(l):
+        return dual_badge_html()
+    return '<span class="badge-vacant badge-sale">ขาย</span>'
+
+def dual_badge_html():
+    return '<span class="badge-vacant badge-sale-rent"><span class="t-th">ขาย / เช่า</span><span class="t-en">Sale / Rent</span></span>'
+
+def dual_price_html(sale_price, rent_price):
+    return (
+        f'<div class="price price-dual">'
+        f'<div class="price-sale">{money(sale_price)} <small><span class="t-th">ขาย</span><span class="t-en">Sale</span></small></div>'
+        f'<div class="price-rent">{int(rent_price):,} <span class="t-th">บาท/เดือน</span><span class="t-en">THB/month</span></div>'
+        f'</div>'
+    )
+
+TRANSFER_ITEMS = (
+    ("transferFee", "ค่าธรรมเนียมการโอน", "Transfer fee"),
+    ("specificBusinessTax", "ภาษีธุรกิจเฉพาะ", "Specific business tax"),
+    ("stampDuty", "ค่าอากรแสตมป์", "Stamp duty"),
+    ("withholdingTax", "ภาษีหัก ณ ที่จ่าย", "Withholding tax"),
+)
+
+
+def parse_cost_split(obj, loc, errors):
+    if not isinstance(obj, dict):
+        errors.append(f"{loc} must be an object with a buyer/seller percent or a THB amount")
+        return None
+    out = {}
+    for src, dest in (("buyerPercent", "buyerPercent"), ("sellerPercent", "sellerPercent")):
+        if obj.get(src) in (None, ""):
+            continue
+        try:
+            v = float(obj[src])
+        except (TypeError, ValueError):
+            errors.append(f"{loc}.{src} must be a number")
+            continue
+        if v < 0 or v > 100:
+            errors.append(f"{loc}.{src} must be between 0 and 100")
+            continue
+        out[dest] = int(v) if v == int(v) else v
+    for src, dest in (("buyerBaht", "buyerBaht"), ("sellerBaht", "sellerBaht"),
+                      ("buyerAmount", "buyerBaht"), ("sellerAmount", "sellerBaht")):
+        if obj.get(src) in (None, ""):
+            continue
+        try:
+            v = int(obj[src])
+        except (TypeError, ValueError):
+            errors.append(f"{loc}.{src} must be a whole number in THB")
+            continue
+        if v < 0:
+            errors.append(f"{loc}.{src} must be 0 or more")
+            continue
+        out[dest] = v
+    unknown = set(obj) - {"buyerPercent", "sellerPercent", "buyerBaht", "sellerBaht", "buyerAmount", "sellerAmount"}
+    if unknown:
+        errors.append(f"{loc} has unknown keys {sorted(unknown)}; allowed: buyerPercent, sellerPercent, buyerBaht, sellerBaht")
+    if not any(k in out for k in ("buyerPercent", "sellerPercent", "buyerBaht", "sellerBaht")):
+        errors.append(f"{loc} needs a buyer/seller percent or THB amount. Do not invent figures.")
+        return None
+    return out
+
+
+def parse_transfer_costs(raw, loc, errors):
+    if raw in (None, "", {}):
+        return None
+    if not isinstance(raw, dict):
+        errors.append(f"{loc} must be an object")
+        return None
+    out = {}
+    allowed = {k for k, _, _ in TRANSFER_ITEMS} | {"note", "noteEn"}
+    unknown = set(raw) - allowed
+    if unknown:
+        errors.append(f"{loc} has unknown keys {sorted(unknown)}")
+    for key, _th, _en in TRANSFER_ITEMS:
+        if raw.get(key) in (None, ""):
+            continue
+        item = parse_cost_split(raw[key], f"{loc}.{key}", errors)
+        if item:
+            out[key] = item
+    for k in ("note", "noteEn"):
+        if raw.get(k) not in (None, ""):
+            out[k] = str(raw[k]).strip()
+            errors.extend(f"{loc}.{k}: forbidden {pat} in {ctx!r}" for pat, ctx in ((e[1], e[2]) for e in scan_forbidden(out[k], k)))
+    if not out:
+        errors.append(f"{loc} is empty. Omit the field if there is no owner-provided split.")
+        return None
+    return out
+
+
+def split_label_html(item):
+    parts_th, parts_en = [], []
+    if "buyerPercent" in item:
+        parts_th.append(f"ผู้ซื้อ {item['buyerPercent']}%")
+        parts_en.append(f"Buyer {item['buyerPercent']}%")
+    if "buyerBaht" in item:
+        baht = money(item["buyerBaht"])
+        if "buyerPercent" in item:
+            parts_th[-1] += f" ({baht})"
+            parts_en[-1] += f" ({baht})"
+        else:
+            parts_th.append(f"ผู้ซื้อ {baht}")
+            parts_en.append(f"Buyer {baht}")
+    if "sellerPercent" in item:
+        parts_th.append(f"ผู้ขาย {item['sellerPercent']}%")
+        parts_en.append(f"Seller {item['sellerPercent']}%")
+    if "sellerBaht" in item:
+        baht = money(item["sellerBaht"])
+        if "sellerPercent" in item:
+            parts_th[-1] += f" ({baht})"
+            parts_en[-1] += f" ({baht})"
+        else:
+            parts_th.append(f"ผู้ขาย {baht}")
+            parts_en.append(f"Seller {baht}")
+    return " · ".join(parts_th), " · ".join(parts_en)
+
+
+def transfer_costs_html(l):
+    costs = l.get("transferCosts")
+    if not costs:
+        return ""
+    rows = []
+    for key, th, en in TRANSFER_ITEMS:
+        item = costs.get(key)
+        if not item:
+            continue
+        th_l, en_l = split_label_html(item)
+        rows.append(
+            f'<div class="transfer-row"><dt><span class="t-th">{th}</span><span class="t-en">{en}</span></dt>'
+            f'<dd><span class="t-th">{th_l}</span><span class="t-en">{en_l}</span></dd></div>'
+        )
+    note = ""
+    if costs.get("note") or costs.get("noteEn"):
+        nth = esc(costs.get("note") or costs.get("noteEn"))
+        nen = esc(costs.get("noteEn") or costs.get("note"))
+        note = f'<p class="transfer-note"><span class="t-th">{nth}</span><span class="t-en">{nen}</span></p>'
+    if not rows and not note:
+        return ""
+    body = f"<dl>{''.join(rows)}</dl>" if rows else ""
+    return (
+        '<section class="transfer-costs" id="transfer-costs">'
+        '<h2><span class="t-th">ค่าใช้จ่ายในการโอน</span><span class="t-en">Transfer costs</span></h2>'
+        f"{body}{note}</section>"
+    )
+
+
+def parse_sale_with_tenant(l, loc, errors):
+    flag = l.get("saleWithTenant")
+    if flag in (None, "", False, 0, "false", "False"):
+        return False, None, None
+    if flag not in (True, 1, "true", "True", "yes"):
+        errors.append(f"{loc}.saleWithTenant must be true or false")
+        return False, None, None
+    end = l.get("leaseEndDate")
+    if end not in (None, ""):
+        end = str(end).strip()
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", end):
+            errors.append(f"{loc}.leaseEndDate must be YYYY-MM-DD")
+            end = None
+    else:
+        end = None
+    rent = l.get("currentRentPerMonth")
+    if rent not in (None, ""):
+        try:
+            rent = int(rent)
+        except (TypeError, ValueError):
+            errors.append(f"{loc}.currentRentPerMonth must be a monthly rent in THB")
+            rent = None
+        else:
+            if rent <= 0:
+                errors.append(f"{loc}.currentRentPerMonth must be a real monthly rent, not zero")
+                rent = None
+    else:
+        rent = None
+    return True, end, rent
+
+
 def load_listings():
+    rentals = load_rentals()
     raw = json.load(open("data/sale-listings.json", encoding="utf-8"))
     if not isinstance(raw, dict) or "listings" not in raw:
         sys.exit("data/sale-listings.json must be an object with a 'listings' array")
@@ -253,15 +452,47 @@ def load_listings():
         for field in ("project", "area", "descriptionTh", "descriptionEn", "floor", "station"):
             if row.get(field):
                 errors.extend(f"{loc}.{field}: forbidden {pat} in {ctx!r}" for pat, ctx in ((e[1], e[2]) for e in scan_forbidden(row[field], field)))
+        row["rentRoomSlug"] = None
+        row["rentPrice"] = None
+        rs = l.get("rentRoomSlug")
+        if rs not in (None, ""):
+            slug = str(rs).strip().lower()
+            if not re.fullmatch(r"mc-\d{3,}", slug):
+                errors.append(f"{loc}.rentRoomSlug must be a rental slug like mc-001 (got {rs!r})")
+            elif slug not in rentals:
+                errors.append(f"{loc}.rentRoomSlug {slug!r} does not match a published rental room that has a rent price. Do not invent a price; only link a room that is already listed for rent.")
+            else:
+                row["rentRoomSlug"] = slug
+                row["rentPrice"] = int(rentals[slug]["price"])
+        tenant, lease_end, cur_rent = parse_sale_with_tenant(l, loc, errors)
+        row["saleWithTenant"] = tenant
+        row["leaseEndDate"] = lease_end
+        row["currentRentPerMonth"] = cur_rent
+        if "transferCosts" in l and l.get("transferCosts") not in (None, ""):
+            row["transferCosts"] = parse_transfer_costs(l.get("transferCosts"), f"{loc}.transferCosts", errors)
+        else:
+            row["transferCosts"] = None
         out.append(row)
+    seen_rent = {}
+    for i, row in enumerate(out):
+        rs = row.get("rentRoomSlug")
+        if not rs:
+            continue
+        if rs in seen_rent:
+            errors.append(
+                f"listings[{i}].rentRoomSlug {rs!r} is already used by another sale listing. "
+                "One rental room can be linked from only one sale listing."
+            )
+        seen_rent[rs] = i
     if errors:
         print("\n".join(errors), file=sys.stderr)
         sys.exit(1)
     return out
 
 def public_fields(l):
-    keys = ("slug", "propertyType", "project", "area", "areaSlug", "station", "stationDistanceM", "bedrooms", "size", "salePrice", "floor")
-    return {k: l[k] for k in keys}
+    keys = ("slug", "propertyType", "project", "area", "areaSlug", "station", "stationDistanceM", "bedrooms", "size", "salePrice", "floor", "rentRoomSlug", "rentPrice", "photos", "saleWithTenant", "leaseEndDate", "currentRentPerMonth")
+    out = {k: l[k] for k in keys if l.get(k) not in (None, "", False, [])}
+    return out
 
 def type_cats_nav(rel, intent="rent", current=None):
     items = []
@@ -436,14 +667,15 @@ def card_html(l, rel):
     return f'''  <article class="card" data-sale-card data-search="{esc(hay)}" data-type="{esc(l["propertyType"])}">
 <div class="card-slider" data-card-slider>
   <a class="card-track" draggable="false" href="{href}" aria-label="ดูประกาศขาย {esc(l["project"])}">{slides}</a>
-  <span class="badge-vacant badge-sale">ขาย</span>
+  {sale_badge_html(l)}
   {dots}
 </div>
 <a class="card-body" href="{href}">
   <h3>{esc(l["project"])}</h3>
-  <div class="price">{money(l["salePrice"])}</div>
+  {dual_price_html(l["salePrice"], l["rentPrice"]) if is_dual(l) else f'<div class="price">{money(l["salePrice"])}</div>'}
   <div class="meta"><span class="t-th">{esc(meta_th)}</span><span class="t-en">{esc(meta_en)}</span></div>
 </a>
+  {f'<a class="dual-cross" href="{rel}rooms/{esc(l["rentRoomSlug"])}/"><span class="t-th">ดูประกาศเช่า</span><span class="t-en">See the rental listing</span></a>' if is_dual(l) else ""}
   </article>'''
 
 def filter_script():
@@ -612,6 +844,23 @@ def offer_ld(l):
         obj["floorLevel"] = str(l["floor"])
     if l.get("lat") and l.get("lng"):
         obj["geo"] = {"@type": "GeoCoordinates", "latitude": l["lat"], "longitude": l["lng"]}
+    if is_dual(l):
+        rent_url = BASE + f"rooms/{l['rentRoomSlug']}/"
+        obj["offers"] = [obj["offers"], {
+            "@type": "Offer",
+            "url": rent_url,
+            "price": l["rentPrice"],
+            "priceCurrency": "THB",
+            "availability": "https://schema.org/InStock",
+            "businessFunction": "http://purl.org/goodrelations/v1#LeaseOut",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": l["rentPrice"],
+                "priceCurrency": "THB",
+                "unitCode": "MON",
+                "unitText": "เดือน",
+            },
+        }]
     crumbs = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -628,8 +877,12 @@ def detail_page(l):
     path = f"buy/{l['slug']}/"
     meta_th = " · ".join(x for x in [f"ย่าน{l['area']}" if l["area"] else None, beds_label(l["bedrooms"], "th"), size_label(l["size"], "th"), dist_label(l["stationDistanceM"], l["station"], "th")] if x)
     meta_en = " · ".join(x for x in [l.get("areaEn") or l["area"], beds_label(l["bedrooms"], "en"), size_label(l["size"], "en"), dist_label(l["stationDistanceM"], l.get("stationEn") or l["station"], "en")] if x)
-    title = f"{l['project']} ขาย {money(l['salePrice'])} | MoveCondo"
-    desc = " · ".join(x for x in [l["project"], "ขาย", money(l["salePrice"]), meta_th] if x)
+    if is_dual(l):
+        title = f"{l['project']} ขาย / เช่า {money(l['salePrice'])} · {int(l['rentPrice']):,} บาท/เดือน | MoveCondo"
+        desc = " · ".join(x for x in [l["project"], "ขาย / เช่า", money(l["salePrice"]), f"{int(l['rentPrice']):,} บาท/เดือน", meta_th] if x)
+    else:
+        title = f"{l['project']} ขาย {money(l['salePrice'])} | MoveCondo"
+        desc = " · ".join(x for x in [l["project"], "ขาย", money(l["salePrice"]), meta_th] if x)
     og = BASE + l["photos"][0]
     photos = l["photos"]
     slides = "".join(
@@ -659,6 +912,10 @@ def detail_page(l):
     if l["area"]:
         area_h = f'<a href="{rel}areas/{esc(l["areaSlug"])}/">ย่าน{esc(l["area"])}</a>' if l["areaSlug"] and os.path.isdir(f"areas/{l['areaSlug']}") else esc(l["area"])
         facts.append(('<span class="t-th">ย่าน</span><span class="t-en">Area</span>', area_h))
+    if l.get("saleWithTenant") and l.get("currentRentPerMonth"):
+        facts.append(('<span class="t-th">ค่าเช่าปัจจุบัน</span><span class="t-en">Current rent</span>', f'<span class="t-th">{int(l["currentRentPerMonth"]):,} บาท/เดือน</span><span class="t-en">{int(l["currentRentPerMonth"]):,} THB/month</span>'))
+    if l.get("saleWithTenant") and l.get("leaseEndDate"):
+        facts.append(('<span class="t-th">สัญญาเช่าถึง</span><span class="t-en">Lease ends</span>', esc(l["leaseEndDate"])))
     facts_html = "".join(f"<div><span>{a}</span><b>{b}</b></div>" for a, b in facts)
     updated_th = thai_date(l["lastVerified"])
     updated_en = en_date(l["lastVerified"])
@@ -668,7 +925,8 @@ def detail_page(l):
     <header class="room-intro">
       <h1>{esc(l["project"])}</h1>
       <p class="room-kicker"><span class="t-th">{esc(meta_th)}</span><span class="t-en">{esc(meta_en)}</span></p>
-      <p class="room-price">{money(l["salePrice"])}</p>
+      {dual_price_html(l["salePrice"], l["rentPrice"]) if is_dual(l) else f'<p class="room-price">{money(l["salePrice"])}</p>'}
+      {f'<a class="dual-cross" href="{rel}rooms/{esc(l["rentRoomSlug"])}/"><span class="t-th">ดูประกาศเช่า</span><span class="t-en">See the rental listing</span></a>' if is_dual(l) else ""}
     </header>
     <div class="gallery-hero" id="gallery">
       <div class="gallery-stage" id="galleryStage" aria-roledescription="carousel" aria-label="ภาพ{esc(l["project"])}">
@@ -678,7 +936,7 @@ def detail_page(l):
           <button type="button" class="gal-btn" data-gal="next" aria-label="ภาพถัดไป"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l8 7-8 7"/></svg></button>
           <span class="gal-count">01 / {len(photos):02d}</span>
         </div>
-        <span class="badge-vacant badge-sale">ขาย</span>
+        {sale_badge_html(l)}
       </div>
       <div class="gallery-nav"><div class="thumbs">{thumbs}</div></div>
     </div>
@@ -689,11 +947,13 @@ def detail_page(l):
           <p class="detail-summary"><span class="t-th">{esc(l["descriptionTh"])}</span><span class="t-en">{esc(l["descriptionEn"])}</span></p>
           <div class="room-facts">{facts_html}</div>
           {updated}
+          {transfer_costs_html(l)}
         </section>
       </div>
       <aside class="detail-side">
         <div class="book-card">
-          <div class="price">{money(l["salePrice"])}</div>
+          {dual_price_html(l["salePrice"], l["rentPrice"]) if is_dual(l) else f'<div class="price">{money(l["salePrice"])}</div>'}
+          {f'<a class="dual-cross" href="{rel}rooms/{esc(l["rentRoomSlug"])}/"><span class="t-th">ดูประกาศเช่า</span><span class="t-en">See the rental listing</span></a>' if is_dual(l) else ""}
           <a class="btn btn-lg btn-line" href="{LINE_URL}" target="_blank" rel="noopener noreferrer">{LINE_SVG} ทัก LINE</a>
         </div>
       </aside>
@@ -702,7 +962,7 @@ def detail_page(l):
     # include after main via extra? I'll append before footer by putting it in main end.
     main += f'''
   <div class="room-bar" aria-label="ติดต่อเรื่องประกาศนี้">
-    <div class="room-bar-price">{money(l["salePrice"])}</div>
+    {f'<div class="room-bar-price">{dual_price_html(l["salePrice"], l["rentPrice"])}</div>' if is_dual(l) else f'<div class="room-bar-price">{money(l["salePrice"])}</div>'}
     <a class="btn btn-line" href="{LINE_URL}" target="_blank" rel="noopener noreferrer">{LINE_SVG} ทัก LINE</a>
   </div>'''
     scripts = [
@@ -740,6 +1000,117 @@ def cleanup_slugs(keep):
         if name not in keep:
             shutil.rmtree(path)
 
+DUAL_MARK = re.compile(r"<!--mc-sale-rent-->.*?<!--/mc-sale-rent-->", re.S)
+
+
+def strip_room_dual(html):
+    return DUAL_MARK.sub("", html)
+
+
+def _wrap(inner):
+    return f"<!--mc-sale-rent-->{inner}<!--/mc-sale-rent-->"
+
+
+def inject_room_dual(html, sale):
+    html = strip_room_dual(html)
+    sale_href = f"../../buy/{sale['slug']}/"
+    badge = _wrap(dual_badge_html())
+    prices = _wrap(
+        '<div class="dual-block">'
+        + dual_price_html(sale["salePrice"], sale["rentPrice"])
+        + f'<a class="dual-cross" href="{sale_href}"><span class="t-th">ดูประกาศขาย</span><span class="t-en">See the sale listing</span></a>'
+        + "</div>"
+    )
+    bar_prices = _wrap(
+        '<div class="room-bar-price dual-block">'
+        + dual_price_html(sale["salePrice"], sale["rentPrice"])
+        + "</div>"
+    )
+    ld = {
+        "@context": "https://schema.org",
+        "@type": "Offer",
+        "url": BASE + "buy/" + sale["slug"] + "/",
+        "price": sale["salePrice"],
+        "priceCurrency": "THB",
+        "availability": "https://schema.org/InStock",
+        "businessFunction": "http://purl.org/goodrelations/v1#Sell",
+        "itemOffered": {"@id": BASE + f"rooms/{sale['rentRoomSlug']}/#apartment"},
+        "seller": {"@id": BASE + "#organization"},
+    }
+    ld_html = _wrap(
+        '<script type="application/ld+json">\n'
+        + json.dumps(ld, ensure_ascii=False, indent=2)
+        + "\n</script>"
+    )
+
+    m = re.search(
+        r'<div class="gallery-stage"[^>]*>.*?</div>\s*<div class="gallery-nav">',
+        html,
+        re.S,
+    )
+    if m:
+        block = m.group(0)
+        if re.search(r'<span class="badge-vacant\b', block):
+            block2 = re.sub(
+                r'(<span class="badge-vacant\b[^"]*">)',
+                badge + r"\1",
+                block,
+                count=1,
+            )
+        else:
+            idx = block.rfind("</div>")
+            block2 = block[:idx] + badge + block[idx:]
+        html = html[: m.start()] + block2 + html[m.end() :]
+
+    html, n_price = re.subn(
+        r'(<p class="room-price">.*?</p>)',
+        r"\1" + prices,
+        html,
+        count=1,
+        flags=re.S,
+    )
+    html, n_book = re.subn(
+        r'(<div class="book-card">\s*<div class="price">.*?</div>)',
+        r"\1" + prices,
+        html,
+        count=1,
+        flags=re.S,
+    )
+    html, n_bar = re.subn(
+        r'(<div class="room-bar-price">.*?</div>)',
+        r"\1" + bar_prices,
+        html,
+        count=1,
+        flags=re.S,
+    )
+    if "</head>" in html and "mc-sale-rent" not in html[: html.find("</head>")]:
+        html = html.replace("</head>", ld_html + "\n</head>", 1)
+    missing = [name for name, n in (("room-price", n_price), ("book-card", n_book), ("room-bar", n_bar)) if n == 0]
+    if missing:
+        print(
+            f"warning: rooms/{sale['rentRoomSlug']}/ missing inject points: {', '.join(missing)}",
+            file=sys.stderr,
+        )
+    return html
+
+
+def sync_room_duals(listings):
+    wanted = {l["rentRoomSlug"]: l for l in listings if is_dual(l)}
+    changed = 0
+    for dirpath in sorted(os.listdir("rooms")):
+        path = os.path.join("rooms", dirpath, "index.html")
+        if not os.path.isfile(path):
+            continue
+        raw = read(path)
+        nxt = strip_room_dual(raw)
+        if dirpath in wanted:
+            nxt = inject_room_dual(nxt, wanted[dirpath])
+        if nxt != raw:
+            write(path, nxt)
+            changed += 1
+    return changed, len(wanted)
+
+
 def main():
     listings = load_listings()
     buy_index(listings)
@@ -751,7 +1122,8 @@ def main():
         keep.add(l["slug"])
     cleanup_slugs(keep)
     update_app_js(listings)
-    print(f"sale_listings={len(listings)} buy_pages={len(listings)} type_pages=5")
+    rooms_changed, dual_n = sync_room_duals(listings)
+    print(f"sale_listings={len(listings)} buy_pages={len(listings)} type_pages=5 dual={dual_n} rooms_patched={rooms_changed}")
 
 if __name__ == "__main__":
     main()

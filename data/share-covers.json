@@ -978,5 +978,9 @@
 "MC-264": {
 "photo": "images/rooms/mc-264/4.webp",
 "key": "images/rooms/mc-264/1.webp|images/rooms/mc-264/2.webp|images/rooms/mc-264/3.webp|images/rooms/mc-264/4.webp|images/rooms/mc-264/5.webp|images/rooms/mc-264/6.webp|1794869130"
+},
+"sale:noble-state-39-1-bed": {
+"photo": "images/sale/noble-state-39-1-bed/1.webp",
+"key": "images/sale/noble-state-39-1-bed/1.webp|images/sale/noble-state-39-1-bed/2.webp|images/sale/noble-state-39-1-bed/3.webp|images/sale/noble-state-39-1-bed/4.webp|images/sale/noble-state-39-1-bed/5.webp|images/sale/noble-state-39-1-bed/6.webp|images/sale/noble-state-39-1-bed/7.webp|1794923028"
 }
 }

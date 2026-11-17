@@ -26,7 +26,13 @@
       ],
       "descriptionTh": "คอนโด 1 ห้องนอน 1 ห้องน้ำ ขนาด 34.74 ตร.ม. ชั้น 12A ที่ Noble State 39 ย่านพร้อมพงษ์ ใกล้ BTS พร้อมพงษ์ 450 เมตร เฟอร์นิเจอร์ครบ พร้อมทีวี เครื่องซักผ้า เตาไฟฟ้า และแอร์ สิ่งอำนวยความสะดวกของโครงการมีเลานจ์ ฟิตเนส สระว่ายน้ำ ห้องอบไอน้ำ ห้องเกม ห้องสมุด รักษาความปลอดภัย 24 ชม. กล้องวงจรปิด และคีย์การ์ด",
       "descriptionEn": "A 1-bedroom, 1-bathroom condo of 34.74 sq.m. on floor 12A at Noble State 39 in Phrom Phong, 450 m from BTS Phrom Phong. Fully furnished with a TV, washing machine, electric hob and air-conditioning. Project facilities include a lounge, gym, pool, steam room, game room, library, 24-hour security, CCTV and key card.",
-      "lastVerified": "2026-11-17"
+      "lastVerified": "2026-11-17",
+      "transferCosts": {
+        "transferFee": {
+          "buyerPercent": 50,
+          "sellerPercent": 50
+        }
+      }
     }
   ]
 }
