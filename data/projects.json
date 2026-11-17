@@ -116,12 +116,11 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 14,
-   "count": 9,
+   "count": 8,
    "soon": 0,
-   "priceMin": 19000,
+   "priceMin": 20000,
    "priceMax": 26000,
    "rooms": [
-    "MC-007",
     "MC-008",
     "MC-028",
     "MC-036",
@@ -228,23 +227,6 @@
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/rhythm-ekkamai/"
   },
   {
-   "name": "The Alcove Thonglor 10",
-   "slug": "the-alcove-thonglor-10",
-   "area": "เอกมัย",
-   "areaSlug": "ekkamai",
-   "station": "BTS เอกมัย",
-   "walk": 16,
-   "count": 2,
-   "soon": 0,
-   "priceMin": 35000,
-   "priceMax": 45000,
-   "rooms": [
-    "MC-016",
-    "MC-237"
-   ],
-   "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-alcove-thonglor-10/"
-  },
-  {
    "name": "The Base Park West",
    "slug": "the-base-park-west",
    "area": "อ่อนนุช",
@@ -326,13 +308,14 @@
    "areaSlug": "phrakhanong",
    "station": "BTS พระโขนง",
    "walk": 4,
-   "count": 2,
-   "soon": 0,
+   "count": 3,
+   "soon": 1,
    "priceMin": 18000,
    "priceMax": 20000,
    "rooms": [
     "MC-093",
-    "MC-022"
+    "MC-022",
+    "MC-266"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/wyne-by-sansiri/"
   },
@@ -466,8 +449,8 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 6,
-   "count": 6,
-   "soon": 0,
+   "count": 7,
+   "soon": 1,
    "priceMin": 12000,
    "priceMax": 26000,
    "rooms": [
@@ -476,7 +459,8 @@
     "MC-040",
     "MC-169",
     "MC-070",
-    "MC-181"
+    "MC-181",
+    "MC-267"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/"
   },
@@ -1694,14 +1678,15 @@
    "areaSlug": "phrakhanong",
    "station": "BTS พระโขนง",
    "walk": 7,
-   "count": 3,
-   "soon": 0,
+   "count": 4,
+   "soon": 1,
    "priceMin": 12000,
-   "priceMax": 14000,
+   "priceMax": 15000,
    "rooms": [
     "MC-177",
     "MC-168",
-    "MC-170"
+    "MC-170",
+    "MC-268"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/aspire-sukhumvit-48/"
   },
@@ -2031,6 +2016,22 @@
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/quattro-by-sansiri/"
   },
   {
+   "name": "The Alcove Thonglor 10",
+   "slug": "the-alcove-thonglor-10",
+   "area": "เอกมัย",
+   "areaSlug": "ekkamai",
+   "station": "BTS ทองหล่อ",
+   "walk": 19,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 45000,
+   "priceMax": 45000,
+   "rooms": [
+    "MC-237"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-alcove-thonglor-10/"
+  },
+  {
    "name": "BaanSiri 24",
    "slug": "baansiri-24",
    "area": "พร้อมพงษ์",
@@ -2045,6 +2046,22 @@
     "MC-257"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/baansiri-24/"
+  },
+  {
+   "name": "The Strand Thonglor",
+   "slug": "the-strand-thonglor",
+   "area": "ทองหล่อ",
+   "areaSlug": "thonglor",
+   "station": "BTS ทองหล่อ",
+   "walk": 1,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 75000,
+   "priceMax": 75000,
+   "rooms": [
+    "MC-265"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-strand-thonglor/"
   }
  ]
 }
