@@ -2547,6 +2547,42 @@ html.mc-en .type-cat-label { font-size: 10.5px; }
   .room-page .room-facts > .room-fact-in-card {
     display: none;
   }
+  .room-page .detail-more > .room-facts,
+  .room-page .detail-more .room-facts,
+  .room-page .detail-more .room-facts-updated,
+  .room-page .detail-more .transfer-costs {
+    display: none;
+  }
+  .room-page .book-card > .btn-line {
+    display: none;
+  }
+  .room-page .book-updated {
+    display: block;
+    margin: 10px 0 0;
+    font-size: 12.5px;
+    font-weight: 400;
+    color: var(--muted);
+  }
+  .room-line-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--color-border);
+    background: #fff;
+    color: var(--ink);
+    font-size: 13.5px;
+    font-weight: 600;
+    text-decoration: none;
+    width: fit-content;
+  }
+  .room-line-cta .ic-line { width: 18px; height: 18px; }
+  .room-line-cta:hover { border-color: var(--primary); color: var(--primary); }
+  .room-line-cta .t-en { display: none; }
+  html.mc-en .room-line-cta .t-th { display: none; }
+  html.mc-en .room-line-cta .t-en { display: inline; }
   .room-page main > .map3d-section,
   .room-page .nearby-box,
   .room-page .section-related,
@@ -2665,4 +2701,8 @@ html.mc-en .room-extra .t-en { display: inline; }
   .room-page .detail-side { display: block; margin-top: 16px; }
   .room-page .detail-side .book-card { display: none; }
   .side-map-frame { height: 200px; }
+}
+
+@media (max-width: 1023px) {
+  .room-line-cta { display: none; }
 }

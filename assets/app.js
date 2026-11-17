@@ -2728,7 +2728,9 @@ function enhanceRoomBookCard(){
   const card = document.querySelector(".room-page .book-card");
   if(!card || card.querySelector(".book-facts")) return;
   const factsRoot = document.querySelector(".room-facts");
-  const allow = {
+  const depositLabels = {"เงินมัดจำ":1, "Deposit":1};
+  const advanceLabels = {"ล่วงหน้า":1, "ค่าเช่าล่วงหน้า":1, "Advance rent":1};
+  const coreAllow = {
     "แบบห้อง": 1, "ประเภท": 1, "Layout": 1, "Type": 1, "Room type": 1,
     "ขนาด": 1, "Size": 1,
     "ชั้น": 1, "Floor": 1,
@@ -2737,6 +2739,26 @@ function enhanceRoomBookCard(){
     "ระยะเดิน": 1, "Walking time": 1,
     "ระยะทาง": 1, "Distance": 1
   };
+  const extraAllow = {
+    "สัญญาขั้นต่ำ": 1, "Minimum lease": 1,
+    "ห้องน้ำ": 1, "Bathrooms": 1,
+    "ย่าน": 1, "Area": 1
+  };
+  const canShowMoveIn = (() => {
+    if(document.body.classList.contains("sale-page")) return false;
+    const depositTxt = factValueByLabels(["เงินมัดจำ", "Deposit"]);
+    const advanceTxt = factValueByLabels(["ล่วงหน้า", "ค่าเช่าล่วงหน้า", "Advance rent"]);
+    const listing = (typeof LISTINGS !== "undefined" ? LISTINGS : []).find((l) => {
+      const raw = (document.querySelector("[data-listing]") || {}).dataset?.listing || (location.pathname.match(/\/rooms\/(mc-\d+)/i) || [])[1] || "";
+      return l.id === raw || l.id.toLowerCase() === String(raw).toLowerCase();
+    });
+    const rent = listing && listing.price;
+    return parseMonths(depositTxt || (listing && listing.deposit) || "") != null
+      && parseMonths(advanceTxt) != null && !!rent;
+  })();
+  if(!canShowMoveIn){
+    Object.assign(extraAllow, depositLabels, advanceLabels);
+  }
   const isFloorLabel = (s) => s === "ชั้น" || s === "Floor";
   const isRealFloor = (val) => {
     const v = (val || "").trim();
@@ -2752,7 +2774,8 @@ function enhanceRoomBookCard(){
     return (el.textContent || "").replace(/\s+/g, " ").trim();
   };
   const rows = [];
-  if(factsRoot){
+  const copyFacts = (allow) => {
+    if(!factsRoot) return;
     factsRoot.querySelectorAll(":scope > div").forEach((div) => {
       const labEl = div.querySelector(":scope > span");
       const valEl = div.querySelector(":scope > b");
@@ -2784,7 +2807,9 @@ function enhanceRoomBookCard(){
       }
       rows.push(node);
     });
-  }
+  };
+  copyFacts(coreAllow);
+  copyFacts(extraAllow);
   const furnItem = [...document.querySelectorAll(".feature-list li")].map((li) => (li.textContent || "").trim()).find((s) =>
     /^เฟอร์นิเจอร์/.test(s) || /^ตกแต่งและเฟอร์นิเจอร์/.test(s) || /^(Fully )?furnished/i.test(s) || /^Built-in furniture/i.test(s)
   );
@@ -2823,7 +2848,31 @@ function enhanceRoomBookCard(){
     if(btn) card.insertBefore(box, btn);
     else card.appendChild(box);
   }
+  const updated = document.querySelector(".detail-more .room-facts-updated, .room-facts-updated");
+  if(updated && !card.querySelector(".book-updated")){
+    const note = updated.cloneNode(true);
+    note.classList.add("book-updated");
+    const btn = card.querySelector(".btn-line, .btn-primary, a.btn");
+    if(btn) card.insertBefore(note, btn);
+    else card.appendChild(note);
+  }
+  addDesktopLineCta();
   enhanceRoomExtras(card);
+}
+function addDesktopLineCta(){
+  if(document.querySelector(".room-line-cta")) return;
+  const host = document.querySelector(".detail-main .detail-more") || document.querySelector(".detail-main");
+  if(!host) return;
+  const existing = document.querySelector(".book-card .btn-line, .room-bar .btn-line");
+  const href = (existing && existing.getAttribute("href")) || "https://line.me/R/ti/p/%40576yhgtz";
+  const a = document.createElement("a");
+  a.className = "room-line-cta";
+  a.setAttribute("data-i18n-skip", "");
+  a.href = href;
+  a.target = "_blank";
+  a.rel = "noopener noreferrer";
+  a.innerHTML = `<svg class="ic-line" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20 5H4a2 2 0 00-2 2v9a2 2 0 002 2h3.2L11 21v-3h9a2 2 0 002-2V7a2 2 0 00-2-2z"/></svg><span class="t-th">ทัก LINE</span><span class="t-en">Chat on LINE</span>`;
+  host.appendChild(a);
 }
 
 function escHtml(s){
@@ -3027,10 +3076,13 @@ async function enhanceRoomExtras(card){
   extras.className = "room-extras";
   const movein = buildMoveInBlock(ctx);
   if(movein) extras.appendChild(movein);
-  let map = null;
-  try { map = await loadNearbyMap(ctx); } catch (err) { map = null; }
-  const mapBlock = buildMapBlock(ctx, map);
-  if(mapBlock) extras.appendChild(mapBlock);
+  const hasLowerMap = !!document.querySelector(".nearby-box, .map3d-section, #nearby, #map");
+  if(!hasLowerMap){
+    let map = null;
+    try { map = await loadNearbyMap(ctx); } catch (err) { map = null; }
+    const mapBlock = buildMapBlock(ctx, map);
+    if(mapBlock) extras.appendChild(mapBlock);
+  }
   const others = buildOtherRoomsBlock(ctx);
   if(others) extras.appendChild(others);
   if(!extras.children.length) return;
