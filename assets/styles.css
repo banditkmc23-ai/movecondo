@@ -2366,8 +2366,8 @@ html.mc-en .type-cat-label { font-size: 10.5px; }
     display: grid;
     width: min(var(--max), calc(100% - 48px));
     margin-inline: auto;
-    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr);
-    column-gap: 24px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 28px;
     row-gap: 16px;
     align-items: start;
   }
