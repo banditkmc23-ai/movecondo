@@ -1602,7 +1602,7 @@
         max-width: 100%;
         margin-top: 0;
         padding: 0;
-        min-height: 460px;
+        min-height: 0;
         background: #fff;
       }
       .hero-copy {
@@ -1613,24 +1613,22 @@
         z-index: 2;
         width: min(var(--max), calc(100% - 48px));
         margin: 0 auto;
-        padding: 64px 0 56px;
-        min-height: 460px;
+        padding: 22px 0 12px;
+        min-height: 0;
         box-sizing: border-box;
       }
       .hero-visual {
         position: absolute;
-        top: 50%;
-        right: 24px;
-        bottom: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
         left: auto;
-        transform: translateY(-50%);
-        /* 15% smaller than the original flush-right photo; leftover space is plain white */
-        width: calc(min(58vw, calc(100% - 28rem)) * 0.85);
-        height: 85%;
+        width: min(58vw, calc(100% - 28rem));
+        height: auto;
         min-height: 0;
         margin: 0;
         border-radius: 0;
-        background: transparent;
+        background: #fff;
         overflow: hidden;
         z-index: 1;
         pointer-events: none;
@@ -1667,12 +1665,12 @@
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
       }
-      .hero h1 { font-size: clamp(36px, 3.6vw, 48px); max-width: 14ch; }
+      .hero h1 { font-size: clamp(28px, 2.2vw, 34px); max-width: 22rem; }
       .hero .lead { max-width: 36ch; }
     }
     @media (min-width: 1440px) {
       .hero,
-      .hero-copy { min-height: 500px; }
+      .hero-copy { min-height: 0; }
     }
 
     /* Keep the search dropdown above listing badges/dots */
@@ -2346,6 +2344,12 @@ html.mc-en .type-cat-label { font-size: 10.5px; }
 
 /* Desktop-only compact images + homepage header. Mobile (<1024px) is unchanged. */
 @media (min-width: 1024px) {
+  .hero-kicker { margin-bottom: 8px; }
+  .hero .lead { margin-top: 8px; font-size: 15px; }
+  .hero-search { margin-top: 14px; }
+  .type-cats { margin-top: 12px; }
+  .intent-tab { min-height: 44px; padding: 4px 10px 8px; }
+  .intent-tab-title { font-size: 20px; }
   .home-browse.section,
   #view-home .home-browse { padding-top: 16px; }
   .home-browse .section-head { margin-bottom: 8px; }
@@ -2392,6 +2396,9 @@ html.mc-en .type-cat-label { font-size: 10.5px; }
     min-height: 100%;
     overflow: hidden;
     grid-template-rows: minmax(0, 1fr);
+    /* Shrink only the photo+thumbs visual to 85%. Layout box stays full-size so the right column does not move. White page background shows around it. */
+    transform: scale(0.85);
+    transform-origin: 50% 0;
   }
   .room-page .gallery-stage {
     padding-top: 0;
