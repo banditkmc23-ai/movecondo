@@ -2386,19 +2386,17 @@ html.mc-en .type-cat-label { font-size: 10.5px; }
     display: grid;
     grid-template-columns: minmax(0, 1fr) 124px;
     gap: 8px;
-    overflow: visible;
     background: transparent;
     border: 0;
     border-radius: 0;
     align-self: stretch;
-    /* height:0 / min-height:100% fills the intro+price rows without the thumbs setting the row size */
+    /* Layout box still fills the intro+price rows (so the right column does not move).
+       The photo+thumbs visual grows to 1.275× that box = 150% of the previous 85% size,
+       filling the left-column width and extending downward. */
     height: 0;
     min-height: 100%;
-    overflow: hidden;
-    grid-template-rows: minmax(0, 1fr);
-    /* Shrink only the photo+thumbs visual to 85%. Layout box stays full-size so the right column does not move. White page background shows around it. */
-    transform: scale(0.85);
-    transform-origin: 50% 0;
+    overflow: visible;
+    grid-template-rows: calc(100% * var(--room-gallery-grow, 1.275));
   }
   .room-page .gallery-stage {
     padding-top: 0;
@@ -2463,6 +2461,8 @@ html.mc-en .type-cat-label { font-size: 10.5px; }
     grid-row: 4;
     width: 100%;
     min-width: 0;
+    /* Clear the gallery's downward overflow; --room-gallery-cell is set in app.js */
+    margin-top: calc(var(--room-gallery-grow, 1.275) * var(--room-gallery-cell, 0px) - var(--room-gallery-cell, 0px));
   }
   .room-page .detail-side {
     display: contents;

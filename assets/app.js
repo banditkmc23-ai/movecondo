@@ -2724,6 +2724,26 @@ const AREA_ALIASES = [
 window.addEventListener("hashchange", () => { closeFilterSheet(); render(); });
 bindSearchV2();
 
+
+function layoutDesktopGallery(){
+  const apply = () => {
+    const main = document.querySelector(".room-page main");
+    if(!main) return;
+    if(!window.matchMedia("(min-width: 1024px)").matches){
+      main.style.removeProperty("--room-gallery-cell");
+      return;
+    }
+    const gal = main.querySelector(".gallery-hero");
+    if(!gal) return;
+    // Measure the layout box (rows 2–3), not the overflowing visual.
+    main.style.removeProperty("--room-gallery-cell");
+    const cell = Math.round(gal.getBoundingClientRect().height);
+    if(cell > 0) main.style.setProperty("--room-gallery-cell", cell + "px");
+  };
+  apply();
+  requestAnimationFrame(apply);
+}
+
 function enhanceRoomBookCard(){
   const card = document.querySelector(".room-page .book-card");
   if(!card || card.querySelector(".book-facts")) return;
@@ -2858,6 +2878,11 @@ function enhanceRoomBookCard(){
   }
   addDesktopLineCta();
   enhanceRoomExtras(card);
+  layoutDesktopGallery();
+  if(!window.__mcGalLayout){
+    window.__mcGalLayout = true;
+    window.addEventListener("resize", layoutDesktopGallery);
+  }
 }
 function addDesktopLineCta(){
   if(document.querySelector(".room-line-cta")) return;

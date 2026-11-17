@@ -18,7 +18,7 @@ os.chdir(ROOT)
 
 BASE = "https://banditkmc23-ai.github.io/movecondo/"
 LINE_URL = "https://line.me/R/ti/p/%40576yhgtz"
-ASSET_V = "20261118g1"
+ASSET_V = "20261118g2"
 I18N_CSS_V = "20261112i1"
 CAROUSEL_V = "20261117dc1"
 ADS_V = "20261113s1"
