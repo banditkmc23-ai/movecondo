@@ -31,6 +31,8 @@ def un(s): return html.unescape(re.sub(r"\s+", " ", s)).strip()
 listings = {r["id"]: r for r in json.load(open("data/listings.json", encoding="utf-8"))["rooms"]}
 # condo project pages (condo/<slug>/) + data/projects.json are rebuilt first so everything stays in sync
 subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "build-project-pages.py")], check=True)
+# social share images (og:image 1200x630) for room + project pages; cached picks, idempotent
+subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "build-share-images.py")], check=True)
 PROJECTS = json.load(open("data/projects.json", encoding="utf-8"))["projects"]
 PROJECT_URL = {p["name"]: p["url"] for p in PROJECTS}
 
