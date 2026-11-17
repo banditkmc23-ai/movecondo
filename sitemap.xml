@@ -3429,4 +3429,58 @@
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
+  <url>
+    <loc>https://banditkmc23-ai.github.io/movecondo/buy/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/buy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/buy/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/buy/" />
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://banditkmc23-ai.github.io/movecondo/type/house/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/type/house/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/type/house/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/type/house/" />
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://banditkmc23-ai.github.io/movecondo/type/land/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/type/land/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/type/land/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/type/land/" />
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://banditkmc23-ai.github.io/movecondo/type/office/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/type/office/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/type/office/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/type/office/" />
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://banditkmc23-ai.github.io/movecondo/type/warehouse/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/type/warehouse/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/type/warehouse/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/type/warehouse/" />
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://banditkmc23-ai.github.io/movecondo/type/other/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/type/other/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/type/other/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/type/other/" />
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>

@@ -781,3 +781,5 @@
 - [Full details of every room / รายละเอียดทุกห้อง](https://banditkmc23-ai.github.io/movecondo/llms-full.txt)
 - [Rooms JSON feed](https://banditkmc23-ai.github.io/movecondo/rooms.json)
 - [Sitemap](https://banditkmc23-ai.github.io/movecondo/sitemap.xml)
+- [For sale / ประกาศขาย](https://banditkmc23-ai.github.io/movecondo/buy/): currently no sale listings; condos for rent only.
+- [Houses / บ้าน](https://banditkmc23-ai.github.io/movecondo/type/house/), [Land / ที่ดิน](https://banditkmc23-ai.github.io/movecondo/type/land/), [Office / ออฟฟิศ](https://banditkmc23-ai.github.io/movecondo/type/office/), [Warehouse / โกดัง](https://banditkmc23-ai.github.io/movecondo/type/warehouse/), [Other / อื่น ๆ](https://banditkmc23-ai.github.io/movecondo/type/other/)

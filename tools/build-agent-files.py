@@ -31,10 +31,16 @@ def un(s): return html.unescape(re.sub(r"\s+", " ", s)).strip()
 listings = {r["id"]: r for r in json.load(open("data/listings.json", encoding="utf-8"))["rooms"]}
 # condo project pages (condo/<slug>/) + data/projects.json are rebuilt first so everything stays in sync
 subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "build-project-pages.py")], check=True)
+# sale listings: /buy/, /buy/<slug>/, /type/<kind>/ and SALE_LISTINGS in app.js
+subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "build-sale-pages.py")], check=True)
 # social share images (og:image 1200x630) for room + project pages; cached picks, idempotent
 subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "build-share-images.py")], check=True)
 PROJECTS = json.load(open("data/projects.json", encoding="utf-8"))["projects"]
 PROJECT_URL = {p["name"]: p["url"] for p in PROJECTS}
+SALE = [l for l in json.load(open("data/sale-listings.json", encoding="utf-8")).get("listings", [])
+        if l.get("published") is not False and l.get("status") not in ("draft", "sold", "hidden")
+        and l.get("slug")]
+SALE_TYPES = ["house", "land", "office", "warehouse", "other"]
 
 def parse_room(slug):
     s = read(f"rooms/{slug}/index.html")
@@ -264,6 +270,8 @@ short = head + f"""
 - [Full details of every room / รายละเอียดทุกห้อง]({BASE}llms-full.txt)
 - [Rooms JSON feed]({BASE}rooms.json)
 - [Sitemap]({BASE}sitemap.xml)
+- [For sale / ประกาศขาย]({BASE}buy/): {("currently no sale listings; condos for rent only." if not SALE else str(len(SALE)) + " sale listing(s).")}
+- [Houses / บ้าน]({BASE}type/house/), [Land / ที่ดิน]({BASE}type/land/), [Office / ออฟฟิศ]({BASE}type/office/), [Warehouse / โกดัง]({BASE}type/warehouse/), [Other / อื่น ๆ]({BASE}type/other/)
 """
 def full_block(r):
     lines = [f"### {r['project']} — {r['id']}",
@@ -403,7 +411,10 @@ def url_entry(path, prio, lastmod):
 entries = [url_entry("", "1.0", TODAY)] + [url_entry(f"areas/{a['slug']}/", "0.8", TODAY) for a in areas] \
         + [url_entry(p["url"][len(BASE):], "0.8", TODAY) for p in PROJECTS] \
         + [url_entry(f"rooms/{r['slug']}/", "0.9", TODAY) for r in rooms] \
-        + [url_entry("partner/", "0.4", TODAY)]
+        + [url_entry("partner/", "0.4", TODAY)] \
+        + [url_entry("buy/", "0.7", TODAY)] \
+        + [url_entry(f"buy/{l['slug']}/", "0.8", TODAY) for l in SALE] \
+        + [url_entry(f"type/{t}/", "0.5", TODAY) for t in SALE_TYPES]
 write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(entries) + "\n</urlset>\n")
 
 bots = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "Google-Extended", "Googlebot", "Bingbot", "PerplexityBot", "Perplexity-User",
@@ -413,12 +424,12 @@ write("robots.txt", "# MoveCondo welcomes search engines and AI assistants.\n# R
 
 # ---------- safety scan ----------
 bad = 0
-for f in ["rooms.json", "feed.xml", "llms.txt", "llms-full.txt", "robots.txt", "sitemap.xml"] + sorted(glob.glob("condo/*/index.html")):
+for f in ["rooms.json", "feed.xml", "llms.txt", "llms-full.txt", "robots.txt", "sitemap.xml"] + sorted(glob.glob("condo/*/index.html")) + sorted(glob.glob("buy/**/index.html", recursive=True)) + sorted(glob.glob("type/*/index.html")):
     t = read(f)
     for rx in FORBIDDEN:
         for m in rx.finditer(t):
             ctx = t[max(0, m.start() - 40): m.end() + 10]
             if (f == "rooms.json" or f.startswith("condo/")) and "petsAllowed" in ctx: continue
             print("FORBIDDEN", f, rx.pattern, repr(ctx), file=sys.stderr); bad += 1
-print(f"rooms={len(rooms)} areas={len(areas)} projects={len(PROJECTS)} forbidden_hits={bad}")
+print(f"rooms={len(rooms)} areas={len(areas)} projects={len(PROJECTS)} sale={len(SALE)} forbidden_hits={bad}")
 sys.exit(1 if bad else 0)

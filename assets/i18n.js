@@ -266,7 +266,36 @@
     "ย่านใจกลางเมืองรอบถนนเพลินจิต หลังสวน และชิดลม ใกล้ห้างใหญ่และออฟฟิศ": "Central Bangkok around Phloen Chit, Lang Suan and Chit Lom, close to major malls and offices.",
     "ย่านริมถนนพระราม 4 ใกล้ศูนย์การประชุมแห่งชาติสิริกิติ์และสวนเบญจกิติ": "Along Rama 4 Road, near the Queen Sirikit National Convention Centre and Benjakitti Park.",
     "ย่านเมืองเก่าและย่านธุรกิจ ใกล้จุฬาฯ สามย่าน และถนนสีลม": "Around Chulalongkorn University, Sam Yan and the Silom business district.",
-    "ย่านรัชดาภิเษก–ห้วยขวาง ตามแนว MRT สายสีน้ำเงิน": "The Ratchadaphisek–Huai Khwang area along the MRT Blue Line."
+    "ย่านรัชดาภิเษก–ห้วยขวาง ตามแนว MRT สายสีน้ำเงิน": "The Ratchadaphisek–Huai Khwang area along the MRT Blue Line.",
+    /* rent / buy + property types */
+    "เช่าหรือซื้อ": "Rent or buy",
+    "เช่า": "Rent",
+    "ซื้อ": "Buy",
+    "คอนโด บ้าน ที่ดิน และอื่น ๆ": "Condos, houses, land and more",
+    "ประเภทอสังหาริมทรัพย์": "Property type",
+    "บ้าน": "House",
+    "ที่ดิน": "Land",
+    "ออฟฟิศ": "Office",
+    "โกดัง": "Warehouse",
+    "อื่น ๆ": "Other",
+    "ค้นหาคอนโด บ้าน ที่ดินที่ขาย": "Search condos, houses or land for sale",
+    "ค้นหาประกาศขาย": "Search sale listings",
+    "ขาย": "Sale",
+    "ประกาศขาย": "Sale listings",
+    "ยังไม่มีประกาศขาย": "No sale listings yet",
+    "ทัก LINE เพื่อลงประกาศ": "Message us on LINE to list a property",
+    "ยังไม่มีประกาศบ้าน": "No house listings yet",
+    "ยังไม่มีประกาศที่ดิน": "No land listings yet",
+    "ยังไม่มีประกาศออฟฟิศ": "No office listings yet",
+    "ยังไม่มีประกาศโกดัง": "No warehouse listings yet",
+    "ยังไม่มีประกาศในหมวดอื่น ๆ": "No listings in this category yet",
+    "ยังไม่มีประกาศขายบ้าน": "No houses for sale yet",
+    "ยังไม่มีประกาศขายที่ดิน": "No land for sale yet",
+    "ยังไม่มีประกาศขายออฟฟิศ": "No offices for sale yet",
+    "ยังไม่มีประกาศขายโกดัง": "No warehouses for sale yet",
+    "ยังไม่มีประกาศขายในหมวดอื่น ๆ": "No sale listings in this category yet",
+    "หรือสมัครเป็น Partner": "Or become a Partner",
+    "ดูคอนโดเช่าทั้งหมด": "See all rental condos"
   };
 
   /* Context-specific overrides: [css selector, thai, english] */
