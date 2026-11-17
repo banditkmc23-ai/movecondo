@@ -2382,7 +2382,13 @@ function setGallery(idx){
   if(!stage) return;
   if(stage.querySelector(".gallery-track") && window.MoveCondoCarousel){
     const api = (stage.closest(".gallery-hero")||stage).__mcCarousel;
-    if(api && api.go) { api.go(idx, true); return; }
+    if(api && api.go) {
+      const photos = listingPhotos(stage.dataset.listing);
+      const len = (api.count != null ? api.count : (photos && photos.length)) || 1;
+      galleryIdx = ((idx % len) + len) % len;
+      api.go(galleryIdx, true);
+      return;
+    }
   }
   const photos = listingPhotos(stage.dataset.listing);
   if(!photos.length) return;
@@ -2800,6 +2806,12 @@ document.addEventListener("click", (e)=>{
   }
   const gal = e.target.closest("[data-gal]");
   if(gal){
+    // Static room/sale galleries are owned by carousel.js. A second handler
+    // here used a stale galleryIdx and sent the track back to slide 1.
+    const hero = gal.closest(".gallery-hero");
+    if (hero && hero.querySelector(".gallery-track") && (hero.__mcCarousel || (window.MoveCondoCarousel && hero.querySelector(".gallery-track")))) {
+      return;
+    }
     const v = gal.dataset.gal;
     if(v==="prev") setGallery(galleryIdx-1);
     else if(v==="next") setGallery(galleryIdx+1);

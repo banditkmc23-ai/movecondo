@@ -56,12 +56,13 @@
     return isiOS || isWebKit;
   }
 
-  function animateScrollLeft(el, to, ms, done) {
+  function animateScrollLeft(el, to, ms, done, isCurrent) {
     const from = el.scrollLeft;
     const dist = to - from;
     if (Math.abs(dist) < 1) { el.scrollLeft = to; if (done) done(); return; }
     const t0 = performance.now();
     function frame(now) {
+      if (isCurrent && !isCurrent()) return;
       const t = Math.min(1, (now - t0) / (ms || 380));
       const ease = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
       el.scrollLeft = from + dist * ease;
@@ -92,6 +93,7 @@
     const count = root.querySelector(".gal-count");
     const n = slides.length;
     let idx = 0, timer = null, idle = null, paused = false, inView = true, holding = false, snapping = false;
+    let scrollGen = 0, scrollTimer = 0;
     const canAuto = n > 1 && !reduce();
     const webkitBug = isWebKitEngine();
 
@@ -104,21 +106,36 @@
     }
 
     function scrollToIndex(i, smooth, wrapping) {
-      const left = i * width();
+      const left = Math.round(i * width());
       snapping = true;
+      scrollGen += 1;
+      const gen = scrollGen;
+      if (scrollTimer) { clearTimeout(scrollTimer); scrollTimer = 0; }
       track.style.scrollSnapType = "none";
       track.style.scrollBehavior = "auto";
-      const finish = () => { restoreSnap(); };
+      const stillCurrent = () => gen === scrollGen;
+      const finish = () => {
+        if (!stillCurrent()) return;
+        track.scrollLeft = left;
+        restoreSnap();
+        requestAnimationFrame(() => {
+          if (!stillCurrent()) return;
+          if (Math.abs(track.scrollLeft - left) > 0.5) track.scrollLeft = left;
+        });
+      };
       // iOS/WebKit: scrollTo({ behavior: "smooth" }) is a no-op (or fights) when
       // the scroller has CSS scroll-snap. Animate scrollLeft ourselves instead.
       const useSmooth = smooth && !reduce() && !wrapping;
       if (useSmooth && webkitBug) {
-        animateScrollLeft(track, left, 400, finish);
+        animateScrollLeft(track, left, 320, finish, stillCurrent);
       } else if (useSmooth) {
         track.scrollTo({ left, behavior: "smooth" });
-        const done = () => { track.removeEventListener("scrollend", done); finish(); };
+        const done = () => {
+          track.removeEventListener("scrollend", done);
+          finish();
+        };
         track.addEventListener("scrollend", done);
-        setTimeout(done, 500);
+        scrollTimer = setTimeout(done, 450);
       } else {
         track.scrollLeft = left;
         requestAnimationFrame(finish);
@@ -126,10 +143,7 @@
     }
 
     function go(i, smooth) {
-      const next = (i + n) % n;
-      const wrapping = n > 2 && Math.abs(next - idx) !== 1 && !(idx === n - 1 && next === 0) && !(idx === 0 && next === n - 1)
-        ? false
-        : (idx === n - 1 && next === 0) || (idx === 0 && next === n - 1);
+      const next = ((i % n) + n) % n;
       // Loop last→first (and first→last) instantly so we don't rewind through every slide.
       const instantWrap = (idx === n - 1 && next === 0) || (idx === 0 && next === n - 1);
       idx = next;

@@ -1602,7 +1602,7 @@
         max-width: 100%;
         margin-top: 0;
         padding: 0;
-        min-height: 460px;
+        min-height: 0;
         background: #fff;
       }
       .hero-copy {
@@ -1613,8 +1613,8 @@
         z-index: 2;
         width: min(var(--max), calc(100% - 48px));
         margin: 0 auto;
-        padding: 64px 0 56px;
-        min-height: 460px;
+        padding: 22px 0 12px;
+        min-height: 0;
         box-sizing: border-box;
       }
       .hero-visual {
@@ -1665,12 +1665,12 @@
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
       }
-      .hero h1 { font-size: clamp(36px, 3.6vw, 48px); max-width: 14ch; }
+      .hero h1 { font-size: clamp(28px, 2.2vw, 34px); max-width: 22rem; }
       .hero .lead { max-width: 36ch; }
     }
     @media (min-width: 1440px) {
       .hero,
-      .hero-copy { min-height: 500px; }
+      .hero-copy { min-height: 0; }
     }
 
     /* Keep the search dropdown above listing badges/dots */
@@ -2340,3 +2340,132 @@ html.mc-en .type-cat-label { font-size: 10.5px; }
 .transfer-costs .transfer-note { margin: 12px 0 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
 .home-browse-sales .grid { margin-top: 8px; }
 .home-browse[data-intent="buy"] .browse-foot { margin-top: 22px; }
+
+
+/* Desktop-only compact images + homepage header. Mobile (<1024px) is unchanged. */
+@media (min-width: 1024px) {
+  .hero-kicker { margin-bottom: 8px; }
+  .hero .lead { margin-top: 8px; font-size: 15px; }
+  .hero-search { margin-top: 14px; }
+  .type-cats { margin-top: 12px; }
+  .intent-tab { min-height: 44px; padding: 4px 10px 8px; }
+  .intent-tab-title { font-size: 20px; }
+  .home-browse.section,
+  #view-home .home-browse { padding-top: 16px; }
+  .home-browse .section-head { margin-bottom: 8px; }
+  .home-browse .section-head h2 { font-size: 22px; }
+  .home-browse .cat-row { margin-top: 18px; }
+  .home-browse .cat-chips + .cat-row,
+  .home-browse .section-head + .cat-row { margin-top: 8px; }
+  .home-browse .cat-head { margin-bottom: 8px; }
+
+  .cover,
+  .card-slider { height: 168px; }
+
+  .room-page main {
+    display: grid;
+    width: min(var(--max), calc(100% - 48px));
+    margin-inline: auto;
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr);
+    column-gap: 24px;
+    row-gap: 16px;
+    align-items: start;
+  }
+  .room-page .crumbs {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+  }
+  .room-page .gallery-hero {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 124px;
+    gap: 8px;
+    overflow: visible;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+  .room-page .gallery-stage {
+    padding-top: 0;
+    height: min(460px, 55vh);
+    max-height: min(460px, 55vh);
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+  }
+  .room-page .gallery-nav {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border-top: 0;
+    background: transparent;
+    height: min(460px, 55vh);
+    max-height: min(460px, 55vh);
+    overflow: hidden;
+  }
+  .room-page .gallery-nav .thumbs {
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    gap: 8px;
+    height: 100%;
+  }
+  .room-page .thumb {
+    width: 100%;
+    flex: 0 0 calc((100% - 24px) / 4);
+    height: calc((100% - 24px) / 4);
+    max-height: none;
+    aspect-ratio: auto;
+    border-radius: 10px;
+  }
+  .room-page .room-intro {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    align-self: start;
+  }
+  .room-page .room-intro h1 {
+    font-size: clamp(24px, 2vw, 30px);
+  }
+  .room-page .detail {
+    display: contents;
+  }
+  .room-page .detail-main {
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+    min-width: 0;
+  }
+  .room-page .detail-side {
+    grid-column: 2;
+    grid-row: 3;
+    width: 100%;
+    min-width: 0;
+  }
+  .room-page .book-card {
+    position: sticky;
+    top: calc(var(--header-h) + 16px);
+  }
+  .room-page main > .map3d-section,
+  .room-page .nearby-box,
+  .room-page .section-related,
+  .room-page .contact-cta,
+  .room-page .faq-wrap {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+  }
+}
