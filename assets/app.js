@@ -2762,7 +2762,9 @@ function enhanceRoomBookCard(){
       const val = visibleText(valEl);
       if(!val) return;
       if(isFloorLabel(label) && !isRealFloor(val)) return;
+      div.classList.add("room-fact-in-card");
       let node = div.cloneNode(true);
+      node.classList.remove("room-fact-in-card");
       if(label === "วันเข้าอยู่" || label === "Move-in"){
         const badge = document.querySelector(".gallery-stage .badge-vacant, .badge-vacant");
         const badgeText = badge ? (badge.textContent || "").trim() : "";
@@ -2788,13 +2790,14 @@ function enhanceRoomBookCard(){
   );
   if(furnItem && !/สัตว์|pets?/i.test(furnItem)){
     const div = document.createElement("div");
+    div.className = "book-facts-span";
     div.innerHTML = `<span><span class="t-th">เฟอร์นิเจอร์</span><span class="t-en">Furniture</span></span><b>${furnItem.replace(/[&<>]/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]))}</b>`;
     rows.push(div);
   }
   const transferRows = [...document.querySelectorAll(".transfer-costs .transfer-row")];
   if(transferRows.length){
     const head = document.createElement("div");
-    head.className = "book-facts-heading";
+    head.className = "book-facts-heading book-facts-span";
     head.innerHTML = `<span class="t-th">ค่าใช้จ่ายในการโอน</span><span class="t-en">Transfer costs</span>`;
     rows.push(head);
     transferRows.forEach((row) => {
@@ -2802,6 +2805,7 @@ function enhanceRoomBookCard(){
       const dd = row.querySelector("dd");
       if(!dt || !dd || !visibleText(dd)) return;
       const div = document.createElement("div");
+      div.className = "book-facts-span";
       const val = document.createElement("b");
       [...dd.childNodes].forEach((n) => val.appendChild(n.cloneNode(true)));
       const span = document.createElement("span");

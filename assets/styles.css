@@ -2390,11 +2390,19 @@ html.mc-en .type-cat-label { font-size: 10.5px; }
     background: transparent;
     border: 0;
     border-radius: 0;
+    align-self: stretch;
+    /* height:0 / min-height:100% fills the intro+price rows without the thumbs setting the row size */
+    height: 0;
+    min-height: 100%;
+    overflow: hidden;
+    grid-template-rows: minmax(0, 1fr);
   }
   .room-page .gallery-stage {
     padding-top: 0;
-    height: min(460px, 55vh);
-    max-height: min(460px, 55vh);
+    height: 0;
+    min-height: 100%;
+    max-height: none;
+    align-self: stretch;
     border-radius: 18px;
     overflow: hidden;
     border: 1px solid var(--color-border);
@@ -2407,8 +2415,10 @@ html.mc-en .type-cat-label { font-size: 10.5px; }
     padding: 0;
     border-top: 0;
     background: transparent;
-    height: min(460px, 55vh);
-    max-height: min(460px, 55vh);
+    height: 0;
+    min-height: 100%;
+    max-height: none;
+    align-self: stretch;
     overflow: hidden;
   }
   .room-page .gallery-nav .thumbs {
@@ -2452,58 +2462,90 @@ html.mc-en .type-cat-label { font-size: 10.5px; }
     min-width: 0;
   }
   .room-page .detail-side {
-    grid-column: 2;
-    grid-row: 3 / 5;
-    width: 100%;
-    min-width: 0;
-    align-self: stretch;
+    display: contents;
   }
   .room-page .book-card {
-    position: sticky;
-    top: calc(var(--header-h) + 16px);
-    z-index: 4;
+    grid-column: 2;
+    grid-row: 3;
+    position: static;
+    top: auto;
+    z-index: auto;
     background: #fff;
+    width: 100%;
+    min-width: 0;
+  }
+  .room-page .room-extras {
+    grid-column: 2;
+    grid-row: 4;
+    margin-top: 0;
+    width: 100%;
+    min-width: 0;
   }
   .book-facts {
     display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 0;
-    margin: 12px 0 16px;
+    margin: 8px 0 14px;
+    border-top: 1px solid var(--color-border);
   }
   .book-facts > div {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 12px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2px;
     padding: 8px 0;
-    border-top: 1px solid var(--color-border);
-    font-size: 13.5px;
-    line-height: 1.4;
+    border-top: 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 13px;
+    line-height: 1.35;
     min-width: 0;
   }
-  .book-facts > div:first-child { border-top: 0; padding-top: 0; }
+  .book-facts > div:not(.book-facts-span):nth-child(odd) {
+    padding-right: 14px;
+    border-right: 1px solid var(--color-border);
+  }
+  .book-facts > div:not(.book-facts-span):nth-child(even) {
+    padding-left: 14px;
+  }
   .book-facts > div span {
     color: var(--muted);
     font-weight: 500;
-    flex: 0 1 auto;
+    font-size: 11.5px;
+    flex: none;
     min-width: 0;
   }
   .book-facts > div b {
     font-weight: 600;
     color: var(--ink);
-    text-align: right;
+    text-align: left;
+    font-size: 13.5px;
     min-width: 0;
     overflow-wrap: anywhere;
   }
   .book-facts .t-en { display: none; }
   html.mc-en .book-facts .t-th { display: none; }
   html.mc-en .book-facts .t-en { display: inline; }
+  .book-facts-heading,
+  .book-facts-span {
+    grid-column: 1 / -1;
+    border-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
   .book-facts-heading {
-    margin: 4px 0 0;
+    margin: 8px 0 0;
+    padding-bottom: 0;
+    border-bottom: 0;
     font-size: 11.5px;
     font-weight: 600;
     letter-spacing: .04em;
     color: var(--muted);
     text-transform: none;
+    flex-direction: row;
+  }
+  .room-page .room-facts > .room-fact-in-card {
+    display: none;
   }
   .room-page main > .map3d-section,
   .room-page .nearby-box,
