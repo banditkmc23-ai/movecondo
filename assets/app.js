@@ -1957,16 +1957,32 @@ function homeBrowseBuyHTML(){
     <div class="browse-foot"><a class="btn btn-lg btn-primary" href="${SITE_BASE}buy/">ดูประกาศขายทั้งหมด</a></div>
   </div>`;
 }
+
+function heroCopyHTML(){
+  if(isBuyIntent()){
+    return `<h1><span class="t-th">ขายคอนโด ใกล้ <span class="hero-transit">BTS / MRT</span></span><span class="t-en">Condos for sale near <span class="hero-transit">BTS / MRT</span></span><br><em class="hero-phrase"><span class="t-th">คอนโดมือสอง บ้าน ที่ดิน</span><span class="t-en">Resale condos, houses, land</span></em></h1>
+      <p class="lead"><span class="t-th">ประกาศขายคอนโดมือสองในกรุงเทพฯ บอกค่าโอนชัดเจน ทักไลน์ได้เลย</span><span class="t-en">Resale condo listings in Bangkok with clear transfer costs…</span></p>`;
+  }
+  return `<h1><span class="t-th">คอนโดให้เช่า ใกล้ <span class="hero-transit">BTS / MRT</span></span><span class="t-en">Condos for rent near <span class="hero-transit">BTS / MRT</span></span><br><em class="hero-phrase"><span class="t-th">ห้องว่างจริง พร้อมเข้าอยู่</span><span class="t-en">Verified available, ready to move in</span></em></h1>
+      <p class="lead"><span class="t-th">เช่าคอนโด อ่อนนุช พระโขนง เอกมัย ทองหล่อ ทักไลน์ได้เลย</span><span class="t-en">Rent condos in On Nut, Phra Khanong, Ekkamai, Thong Lo…</span></p>`;
+}
 function paintHomeIntent(){
   const root = document.getElementById("view-home");
   if(!root || (root.classList && !root.classList.contains("on") && document.getElementById("view-results"))){
     /* still update if home is visible */
   }
   if(!root) return;
-  const h1 = root.querySelector(".hero-copy h1");
-  const lead = root.querySelector(".hero-copy .lead");
-  if(h1) h1.innerHTML = (isBuyIntent() ? "หาอสังหาฯ ขายที่" : "หาคอนโดเช่าที่") + ' <em class="hero-phrase">ตรงกับคุณ</em>';
-  if(lead) lead.textContent = isBuyIntent() ? "ดูประกาศขายใกล้รถไฟฟ้าในกรุงเทพฯ แล้วเลือกที่ใช่" : "ดูห้องจริงใกล้รถไฟฟ้าในกรุงเทพฯ แล้วเลือกห้องที่ใช่";
+  const copy = root.querySelector(".hero-copy");
+  if(copy){
+    const tmp = document.createElement("div");
+    tmp.innerHTML = heroCopyHTML();
+    const h1 = copy.querySelector("h1");
+    const lead = copy.querySelector(".lead");
+    const nextH = tmp.querySelector("h1");
+    const nextL = tmp.querySelector(".lead");
+    if(h1 && nextH) h1.replaceWith(nextH);
+    if(lead && nextL) lead.replaceWith(nextL);
+  }
   const browse = root.querySelector(".home-browse") || root.querySelector("#listings");
   if(browse){
     browse.outerHTML = isBuyIntent() ? homeBrowseBuyHTML() : homeBrowseHTML();
@@ -2055,8 +2071,7 @@ function homeView(){
   <div class="hero">
     <div class="hero-copy">
       <div class="hero-kicker">MoveCondo · ย้ายคอนโด</div>
-      <h1>${isBuyIntent() ? "หาอสังหาฯ ขายที่" : "หาคอนโดเช่าที่"} <em class="hero-phrase">ตรงกับคุณ</em></h1>
-      <p class="lead">${isBuyIntent() ? "ดูประกาศขายใกล้รถไฟฟ้าในกรุงเทพฯ แล้วเลือกที่ใช่" : "ดูห้องจริงใกล้รถไฟฟ้าในกรุงเทพฯ แล้วเลือกห้องที่ใช่"}</p>
+      ${heroCopyHTML()}
       ${heroSearchHTML()}
       ${typeCatsHTML()}
     </div>

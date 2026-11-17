@@ -18,7 +18,7 @@ os.chdir(ROOT)
 
 BASE = "https://banditkmc23-ai.github.io/movecondo/"
 LINE_URL = "https://line.me/R/ti/p/%40576yhgtz"
-ASSET_V = "20261117sr1"
+ASSET_V = "20261117hk1"
 I18N_CSS_V = "20261112i1"
 CAROUSEL_V = "20261112ab"
 ADS_V = "20261113s1"
@@ -734,9 +734,17 @@ def listings_section(listings, rel, eyebrow_th, eyebrow_en, h2_th, h2_en, empty_
 def buy_index(listings):
     rel = "../"
     path = "buy/"
-    title = "ประกาศขาย | MoveCondo"
-    desc = "ประกาศขายคอนโด บ้าน ที่ดิน ออฟฟิศ และอสังหาฯ บน MoveCondo" if listings else "ตอนนี้ MoveCondo ยังไม่มีประกาศขาย มีเฉพาะคอนโดให้เช่า หากมีอสังหาฯ ที่อยากลงขาย ทัก LINE ได้เลย"
-    crumbs = f'''    <nav class="crumbs" aria-label="เส้นทาง"><a href="{rel}"><span class="t-th">หน้าแรก</span><span class="t-en">Home</span></a> <span aria-hidden="true">/</span> <span><span class="t-th">ประกาศขาย</span><span class="t-en">For sale</span></span></nav>'''
+    title = "ขายคอนโดมือสอง ใกล้ BTS / MRT กรุงเทพฯ | MoveCondo"
+    desc = "ขายคอนโดมือสองใกล้ BTS / MRT ในกรุงเทพฯ บ้าน ที่ดิน บอกค่าโอนชัดเจน ทักไลน์ได้เลย" if listings else "ตอนนี้ MoveCondo ยังไม่มีประกาศขายคอนโดมือสอง หากมีคอนโด บ้าน หรือที่ดินที่อยากลงขาย ทัก LINE ได้เลย"
+    crumbs = f"""    <nav class="crumbs" aria-label="เส้นทาง"><a href="{rel}"><span class="t-th">หน้าแรก</span><span class="t-en">Home</span></a> <span aria-hidden="true">/</span> <span><span class="t-th">ขายคอนโด</span><span class="t-en">Condos for sale</span></span></nav>"""
+    intro = (
+        '    <header class="page-intro">'
+        '<h1><span class="t-th">ขายคอนโด ใกล้ <span class="hero-transit">BTS / MRT</span></span><span class="t-en">Condos for sale near <span class="hero-transit">BTS / MRT</span></span><br>'
+        '<em class="hero-phrase"><span class="t-th">คอนโดมือสอง บ้าน ที่ดิน</span><span class="t-en">Resale condos, houses, land</span></em></h1>'
+        '<p class="lead"><span class="t-th">ประกาศขายคอนโดมือสองในกรุงเทพฯ บอกค่าโอนชัดเจน ทักไลน์ได้เลย</span>'
+        '<span class="t-en">Resale condo listings in Bangkok with clear transfer costs…</span></p>'
+        '</header>\n'
+    )
     cats = type_cats_nav(rel, intent="buy", current="condo")
     empty = empty_block(
         "ยังไม่มีประกาศขาย", "No sale listings yet",
@@ -744,13 +752,13 @@ def buy_index(listings):
         "MoveCondo currently lists condos for rent only. If you have a condo, house, land or other property to sell, message us on LINE and we will help you list it.",
         rel, icon="condo",
     )
-    body = crumbs + "\n    " + cats + "\n" + listings_section(
-        listings, rel, "ประกาศขาย", "For sale", "อสังหาริมทรัพย์ขาย", "Properties for sale", empty
+    body = crumbs + "\n" + intro + "    " + cats + "\n" + listings_section(
+        listings, rel, "ประกาศขาย", "For sale", "ประกาศขาย", "For sale", empty
     )
     jsonld = {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        "name": "ประกาศขาย | MoveCondo",
+        "name": "ขายคอนโดมือสอง ใกล้ BTS / MRT กรุงเทพฯ | MoveCondo",
         "url": BASE + path,
         "description": desc,
         "numberOfItems": len(listings),
