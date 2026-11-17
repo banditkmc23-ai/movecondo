@@ -2723,7 +2723,319 @@ const AREA_ALIASES = [
 
 window.addEventListener("hashchange", () => { closeFilterSheet(); render(); });
 bindSearchV2();
-document.addEventListener("DOMContentLoaded", ()=>{ refreshSoonBadges(); });
+
+function enhanceRoomBookCard(){
+  const card = document.querySelector(".room-page .book-card");
+  if(!card || card.querySelector(".book-facts")) return;
+  const factsRoot = document.querySelector(".room-facts");
+  const allow = {
+    "แบบห้อง": 1, "ประเภท": 1, "Layout": 1, "Type": 1, "Room type": 1,
+    "ขนาด": 1, "Size": 1,
+    "ชั้น": 1, "Floor": 1,
+    "วันเข้าอยู่": 1, "Move-in": 1,
+    "สถานีใกล้ที่สุด": 1, "Nearest station": 1,
+    "ระยะเดิน": 1, "Walking time": 1,
+    "ระยะทาง": 1, "Distance": 1
+  };
+  const isFloorLabel = (s) => s === "ชั้น" || s === "Floor";
+  const isRealFloor = (val) => {
+    const v = (val || "").trim();
+    if(!v || /ช่วงชั้น/i.test(v) || /^Floors\s/i.test(v)) return false;
+    if(/ชั้น\s*\d+[A-Za-z]?\s*[–-]\s*\d/.test(v)) return false;
+    if(/\d+\s*[–-]\s*\d/.test(v) && /ชั้น|Floor|Floors/.test(v)) return false;
+    return /\d/.test(v);
+  };
+  const visibleText = (el) => {
+    if(!el) return "";
+    const th = el.querySelector(":scope > .t-th") || el.querySelector(".t-th");
+    if(th) return (th.textContent || "").trim();
+    return (el.textContent || "").replace(/\s+/g, " ").trim();
+  };
+  const rows = [];
+  if(factsRoot){
+    factsRoot.querySelectorAll(":scope > div").forEach((div) => {
+      const labEl = div.querySelector(":scope > span");
+      const valEl = div.querySelector(":scope > b");
+      if(!labEl || !valEl) return;
+      const label = visibleText(labEl);
+      if(!allow[label]) return;
+      const val = visibleText(valEl);
+      if(!val) return;
+      if(isFloorLabel(label) && !isRealFloor(val)) return;
+      let node = div.cloneNode(true);
+      if(label === "วันเข้าอยู่" || label === "Move-in"){
+        const badge = document.querySelector(".gallery-stage .badge-vacant, .badge-vacant");
+        const badgeText = badge ? (badge.textContent || "").trim() : "";
+        if(/กำลังจะว่าง/.test(badgeText) && !/กำลังจะว่าง/.test(val)){
+          const b = node.querySelector("b");
+          if(b){
+            const prefix = document.createElement("span");
+            prefix.className = "t-th";
+            prefix.textContent = "กำลังจะว่าง · ";
+            const prefixEn = document.createElement("span");
+            prefixEn.className = "t-en";
+            prefixEn.textContent = "Available soon · ";
+            b.insertBefore(prefixEn, b.firstChild);
+            b.insertBefore(prefix, b.firstChild);
+          }
+        }
+      }
+      rows.push(node);
+    });
+  }
+  const furnItem = [...document.querySelectorAll(".feature-list li")].map((li) => (li.textContent || "").trim()).find((s) =>
+    /^เฟอร์นิเจอร์/.test(s) || /^ตกแต่งและเฟอร์นิเจอร์/.test(s) || /^(Fully )?furnished/i.test(s) || /^Built-in furniture/i.test(s)
+  );
+  if(furnItem && !/สัตว์|pets?/i.test(furnItem)){
+    const div = document.createElement("div");
+    div.innerHTML = `<span><span class="t-th">เฟอร์นิเจอร์</span><span class="t-en">Furniture</span></span><b>${furnItem.replace(/[&<>]/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]))}</b>`;
+    rows.push(div);
+  }
+  const transferRows = [...document.querySelectorAll(".transfer-costs .transfer-row")];
+  if(transferRows.length){
+    const head = document.createElement("div");
+    head.className = "book-facts-heading";
+    head.innerHTML = `<span class="t-th">ค่าใช้จ่ายในการโอน</span><span class="t-en">Transfer costs</span>`;
+    rows.push(head);
+    transferRows.forEach((row) => {
+      const dt = row.querySelector("dt");
+      const dd = row.querySelector("dd");
+      if(!dt || !dd || !visibleText(dd)) return;
+      const div = document.createElement("div");
+      const val = document.createElement("b");
+      [...dd.childNodes].forEach((n) => val.appendChild(n.cloneNode(true)));
+      const span = document.createElement("span");
+      [...dt.childNodes].forEach((n) => span.appendChild(n.cloneNode(true)));
+      div.appendChild(span);
+      div.appendChild(val);
+      rows.push(div);
+    });
+  }
+  if(rows.length){
+    const box = document.createElement("div");
+    box.className = "book-facts";
+    rows.forEach((r) => box.appendChild(r));
+    const btn = card.querySelector(".btn-line, .btn-primary, a.btn");
+    if(btn) card.insertBefore(box, btn);
+    else card.appendChild(box);
+  }
+  enhanceRoomExtras(card);
+}
+
+function escHtml(s){
+  return String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;" }[c]));
+}
+function enFor(th){
+  if(th == null || th === "") return "";
+  const s = String(th);
+  if(typeof MC_I18N === "undefined") return s;
+  if(MC_I18N.dict && MC_I18N.dict[s]) return MC_I18N.dict[s];
+  if(MC_I18N.names && MC_I18N.names[s]) return MC_I18N.names[s];
+  return s;
+}
+function bilingualHtml(th){
+  const s = String(th == null ? "" : th);
+  const en = enFor(s);
+  if(!en || en === s) return escHtml(s);
+  return `<span class="t-th">${escHtml(s)}</span><span class="t-en">${escHtml(en)}</span>`;
+}
+function baht(n){ return "฿" + money(Math.round(Number(n))); }
+function parseMonths(text){
+  const s = String(text || "").trim();
+  if(!s || /สอบถาม/i.test(s)) return null;
+  const m = s.match(/(\d+)\s*(เดือน|months?)/i);
+  return m ? parseInt(m[1], 10) : null;
+}
+function currentRoomContext(){
+  const salePage = document.body.classList.contains("sale-page");
+  if(salePage){
+    const slug = (location.pathname.match(/\/buy\/([^/]+)/) || [])[1] || "";
+    const sale = (typeof SALE_LISTINGS !== "undefined" ? SALE_LISTINGS : []).find((x) => x.slug === slug) || null;
+    return { kind: "sale", sale, listing: null, id: null, slug, project: sale && sale.project };
+  }
+  const fromPath = (location.pathname.match(/\/rooms\/(mc-\d+)/i) || [])[1];
+  const fromDom = (document.querySelector("[data-listing]") || {}).dataset?.listing;
+  const raw = fromDom || fromPath || "";
+  const listing = (typeof LISTINGS !== "undefined" ? LISTINGS : []).find((l) => l.id === raw || l.id.toLowerCase() === String(raw).toLowerCase()) || null;
+  return { kind: "rent", sale: null, listing, id: listing ? listing.id : (raw ? raw.toUpperCase() : null), slug: raw ? String(raw).toLowerCase() : null, project: listing && listing.project };
+}
+function factValueByLabels(labels){
+  const want = new Set(labels);
+  const root = document.querySelector(".room-facts");
+  if(!root) return "";
+  for(const div of root.querySelectorAll(":scope > div")){
+    const lab = div.querySelector(":scope > span");
+    const val = div.querySelector(":scope > b");
+    const label = (lab && (lab.querySelector(".t-th") || lab).textContent || "").replace(/\s+/g, " ").trim();
+    if(want.has(label)) return (val && (val.querySelector(".t-th") || val).textContent || "").replace(/\s+/g, " ").trim();
+  }
+  return "";
+}
+function buildMoveInBlock(ctx){
+  if(ctx.kind !== "rent") return null;
+  const depositTxt = factValueByLabels(["เงินมัดจำ", "Deposit"]) || (ctx.listing && ctx.listing.deposit) || "";
+  const advanceTxt = factValueByLabels(["ล่วงหน้า", "Advance rent"]) || "";
+  const depositM = parseMonths(depositTxt);
+  const advanceM = parseMonths(advanceTxt);
+  const rent = ctx.listing && ctx.listing.price;
+  if(depositM == null || advanceM == null || !rent) return null;
+  const depositBaht = rent * depositM;
+  const advanceBaht = rent * advanceM;
+  const total = depositBaht + advanceBaht;
+  const el = document.createElement("section");
+  el.className = "room-extra room-movein";
+  el.innerHTML = `
+    <h3><span class="t-th">ค่าใช้จ่ายวันเข้าอยู่</span><span class="t-en">Move-in cost</span></h3>
+    <div class="movein-row"><span><span class="t-th">เงินมัดจำ</span><span class="t-en">Deposit</span> · ${depositM} <span class="t-th">เดือน</span><span class="t-en">${depositM===1?"month":"months"}</span></span><b>${baht(depositBaht)}</b></div>
+    <div class="movein-row"><span><span class="t-th">ค่าเช่าล่วงหน้า</span><span class="t-en">Advance rent</span> · ${advanceM} <span class="t-th">เดือน</span><span class="t-en">${advanceM===1?"month":"months"}</span></span><b>${baht(advanceBaht)}</b></div>
+    <div class="movein-row movein-total"><span><span class="t-th">รวม</span><span class="t-en">Total</span></span><b>${baht(total)}</b></div>`;
+  return el;
+}
+function osmEmbedUrl(lat, lng){
+  const dLat = 0.0055, dLng = 0.007;
+  const bbox = [lng - dLng, lat - dLat, lng + dLng, lat + dLat].join("%2C");
+  return `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${lat}%2C${lng}`;
+}
+async function loadNearbyMap(ctx){
+  const urls = [];
+  const src = document.querySelector("[data-map3d][data-src]")?.getAttribute("data-src");
+  if(src) urls.push(src);
+  if(ctx.slug) urls.push(SITE_BASE + "data/maps/rooms/" + ctx.slug + ".json");
+  if(ctx.kind === "sale" && ctx.project){
+    (LISTINGS || []).filter((l) => l.project === ctx.project).forEach((l) => {
+      urls.push(SITE_BASE + "data/maps/rooms/" + l.id.toLowerCase() + ".json");
+    });
+  } else if(ctx.project){
+    (LISTINGS || []).filter((l) => l.project === ctx.project && l.id !== ctx.id).some((l) => {
+      urls.push(SITE_BASE + "data/maps/rooms/" + l.id.toLowerCase() + ".json");
+      return urls.length > 8;
+    });
+  }
+  const seen = new Set();
+  for(const u of urls){
+    const abs = u;
+    if(!abs || seen.has(abs)) continue;
+    seen.add(abs);
+    try {
+      const res = await fetch(abs);
+      if(res.ok) return await res.json();
+    } catch (err) {}
+  }
+  return null;
+}
+function placesFromPage(){
+  return [...document.querySelectorAll(".place-card")].map((card) => {
+    const name = (card.querySelector("h3")?.textContent || "").trim();
+    const cat = (card.querySelector(".place-chip")?.textContent || "").trim();
+    const walk = [...card.querySelectorAll(".place-meta span")].map((s) => s.textContent.trim()).find((s) => /นาที|min/i.test(s)) || "";
+    const maps = card.querySelector("a.place-maps, a[href*='google.com/maps']")?.getAttribute("href") || "";
+    return name ? { name, category: cat, walk, maps } : null;
+  }).filter(Boolean);
+}
+function buildMapBlock(ctx, map){
+  const condo = map && (map.condo || map.center);
+  const lat = condo && condo.lat, lng = condo && condo.lng;
+  const stationName = (ctx.listing && ctx.listing.transit) || (ctx.sale && ctx.sale.station) || factValueByLabels(["สถานีใกล้ที่สุด", "Nearest station"]) || (map && map.stations && map.stations[0] && map.stations[0].name) || "";
+  const stationEn = (map && map.stations && map.stations[0] && map.stations[0].name_en) || "";
+  const walkMin = ctx.listing && ctx.listing.walk;
+  const walkFact = factValueByLabels(["ระยะเดิน", "Walking time"]);
+  const distM = ctx.sale && ctx.sale.stationDistanceM;
+  const el = document.createElement("section");
+  el.className = "room-extra room-side-map";
+  let html = `<h3><span class="t-th">แผนที่และที่เที่ยวใกล้ ๆ</span><span class="t-en">Map and nearby</span></h3>`;
+  if(lat != null && lng != null){
+    html += `<div class="side-map-frame"><iframe title="แผนที่ตั้งคอนโด" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="${osmEmbedUrl(lat, lng)}"></iframe></div>
+      <a class="side-map-link" href="https://www.openstreetmap.org/?mlat=${lat}&amp;mlon=${lng}#map=17/${lat}/${lng}" target="_blank" rel="noopener noreferrer"><span class="t-th">เปิดแผนที่</span><span class="t-en">Open map</span></a>`;
+  }
+  if(stationName){
+    let walk = "";
+    if(walkMin != null) walk = `<span class="t-th">ประมาณ ${walkMin} นาที</span><span class="t-en">About ${walkMin} min</span>`;
+    else if(distM != null) walk = `<span class="t-th">${money(distM)} ม.</span><span class="t-en">${money(distM)} m</span>`;
+    else if(walkFact) walk = bilingualHtml(walkFact);
+    const nameHtml = stationEn && stationEn !== stationName
+      ? `<span class="t-th">${escHtml(stationName)}</span><span class="t-en">${escHtml(stationEn)}</span>`
+      : bilingualHtml(stationName);
+    html += `<p class="side-station"><b>${nameHtml}</b>${walk ? ` · ${walk}` : ""}</p>`;
+  }
+  let places = [];
+  if(map && Array.isArray(map.places) && map.places.length){
+    places = map.places.slice(0, 4).map((p) => ({
+      name: p.name,
+      category: p.category || "",
+      walk: p.walkMinEst != null ? Math.max(1, Math.round(p.walkMinEst)) : null,
+      href: p.mapsQuery ? `https://www.google.com/maps?q=${encodeURIComponent(p.mapsQuery)}` : (p.lat != null ? `https://www.google.com/maps?q=${p.lat},${p.lng}` : "")
+    }));
+  } else {
+    places = placesFromPage().slice(0, 4).map((p) => ({ name: p.name, category: p.category, walk: null, walkText: p.walk, href: p.maps }));
+  }
+  if(places.length){
+    html += `<ul class="side-nearby">` + places.map((p) => {
+      const walk = p.walk != null ? `<span class="t-th">ประมาณ ${p.walk} นาที</span><span class="t-en">About ${p.walk} min</span>` : escHtml(p.walkText || "");
+      const inner = `<span class="side-nearby-name">${escHtml(p.name)}${p.category ? ` <small>${bilingualHtml(p.category)}</small>` : ""}</span><span class="side-nearby-walk">${walk}</span>`;
+      return p.href ? `<li><a href="${escHtml(p.href)}" target="_blank" rel="noopener noreferrer">${inner}</a></li>` : `<li>${inner}</li>`;
+    }).join("") + `</ul>`;
+  }
+  if(!lat && !stationName && !places.length) return null;
+  el.innerHTML = html;
+  el.dataset.mapSource = map ? (map.nearbySource || "map-json") : (places.length ? "page-nearby" : "station-only");
+  return el;
+}
+function buildOtherRoomsBlock(ctx){
+  const wrap = document.createElement("section");
+  wrap.className = "room-extra room-others";
+  if(ctx.kind === "sale"){
+    const slug = ctx.slug;
+    const others = (typeof SALE_LISTINGS !== "undefined" ? SALE_LISTINGS : []).filter((s) => s.slug !== slug && ctx.project && s.project === ctx.project).slice(0, 3);
+    if(!others.length) return null;
+    const projectHref = (PROJECT_SLUGS[ctx.project] ? SITE_BASE + "condo/" + PROJECT_SLUGS[ctx.project] + "/" : (document.querySelector(".room-project-link a") || {}).href) || "";
+    wrap.innerHTML = `<h3><span class="t-th">ห้องอื่นในโครงการเดียวกัน</span><span class="t-en">Other rooms in this project</span></h3>` +
+      `<div class="side-rooms">` + others.map((s) => {
+        const photo = (s.photos && s.photos[0]) ? (SITE_BASE + s.photos[0]) : "";
+        const meta = [s.bedrooms ? s.bedrooms + " " + `<span class="t-th">ห้องนอน</span><span class="t-en">bed</span>` : "", s.size ? `<span class="t-th">${s.size} ตร.ม.</span><span class="t-en">${s.size} sq.m.</span>` : ""].filter(Boolean).join(" · ");
+        return `<a class="side-room" href="${SITE_BASE}buy/${escHtml(s.slug)}/">${photo ? `<img src="${escHtml(photo)}" alt="" width="80" height="64" loading="lazy">` : `<span class="side-room-ph"></span>`}<span class="side-room-body"><b>${baht(s.salePrice)}</b><small>${meta}</small></span></a>`;
+      }).join("") + `</div>` +
+      (projectHref ? `<a class="side-others-all" href="${escHtml(projectHref)}"><span class="t-th">ดูทั้งหมดในโครงการนี้</span><span class="t-en">See all rooms in this project</span></a>` : "");
+    return wrap;
+  }
+  if(!ctx.listing || !ctx.project) return null;
+  const others = LISTINGS.filter((l) => l.project === ctx.project && l.id !== ctx.listing.id).slice(0, 3);
+  if(!others.length) return null;
+  const projSlug = PROJECT_SLUGS[ctx.project];
+  const projectHref = (document.querySelector(".room-project-link a") || {}).getAttribute("href") || (projSlug ? SITE_BASE + "condo/" + projSlug + "/" : "");
+  wrap.innerHTML = `<h3><span class="t-th">ห้องอื่นในโครงการเดียวกัน</span><span class="t-en">Other rooms in this project</span></h3>` +
+    `<div class="side-rooms">` + others.map((l) => {
+      const photo = coverSrc(l.id) || photoUrl(l.id, "1.webp", "cover");
+      const type = l.type || l.beds || "";
+      const size = l.size != null ? `<span class="t-th">${l.size} ตร.ม.</span><span class="t-en">${l.size} sq.m.</span>` : "";
+      const typeHtml = type ? `<span>${escHtml(type)}</span>` : "";
+      const meta = [typeHtml, size].filter(Boolean).join(" · ");
+      return `<a class="side-room" href="${roomHref(l.id)}"><img src="${escHtml(photo)}" alt="" width="80" height="64" loading="lazy"><span class="side-room-body"><b>${baht(l.price)}<span class="t-th">/เดือน</span><span class="t-en">/mo</span></b><small>${meta}</small></span></a>`;
+    }).join("") + `</div>` +
+    (projectHref ? `<a class="side-others-all" href="${escHtml(projectHref)}"><span class="t-th">ดูทั้งหมดในโครงการนี้</span><span class="t-en">See all rooms in this project</span></a>` : "");
+  return wrap;
+}
+async function enhanceRoomExtras(card){
+  const side = card && card.closest(".detail-side");
+  if(!side || side.querySelector(".room-extras") || side.dataset.extrasInit) return;
+  side.dataset.extrasInit = "1";
+  const ctx = currentRoomContext();
+  const extras = document.createElement("div");
+  extras.className = "room-extras";
+  const movein = buildMoveInBlock(ctx);
+  if(movein) extras.appendChild(movein);
+  let map = null;
+  try { map = await loadNearbyMap(ctx); } catch (err) { map = null; }
+  const mapBlock = buildMapBlock(ctx, map);
+  if(mapBlock) extras.appendChild(mapBlock);
+  const others = buildOtherRoomsBlock(ctx);
+  if(others) extras.appendChild(others);
+  if(!extras.children.length) return;
+  side.appendChild(extras);
+}
+
+document.addEventListener("DOMContentLoaded", ()=>{ refreshSoonBadges(); enhanceRoomBookCard(); });
+if(document.readyState !== "loading") enhanceRoomBookCard();
+
 document.addEventListener("click", (e) => {
   const jsMore = e.target.closest("[data-load-more-js]");
   if(jsMore){

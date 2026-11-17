@@ -2379,7 +2379,7 @@ html.mc-en .type-cat-label { font-size: 10.5px; }
   }
   .room-page .gallery-hero {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 2 / 4;
     width: 100%;
     max-width: none;
     margin: 0;
@@ -2439,24 +2439,71 @@ html.mc-en .type-cat-label { font-size: 10.5px; }
   .room-page .room-intro h1 {
     font-size: clamp(24px, 2vw, 30px);
   }
+  .room-page .room-intro .room-price {
+    display: none;
+  }
   .room-page .detail {
     display: contents;
   }
   .room-page .detail-main {
     grid-column: 1;
-    grid-row: 3;
+    grid-row: 4;
     width: 100%;
     min-width: 0;
   }
   .room-page .detail-side {
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 3 / 5;
     width: 100%;
     min-width: 0;
+    align-self: stretch;
   }
   .room-page .book-card {
     position: sticky;
     top: calc(var(--header-h) + 16px);
+    z-index: 4;
+    background: #fff;
+  }
+  .book-facts {
+    display: grid;
+    gap: 0;
+    margin: 12px 0 16px;
+  }
+  .book-facts > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    padding: 8px 0;
+    border-top: 1px solid var(--color-border);
+    font-size: 13.5px;
+    line-height: 1.4;
+    min-width: 0;
+  }
+  .book-facts > div:first-child { border-top: 0; padding-top: 0; }
+  .book-facts > div span {
+    color: var(--muted);
+    font-weight: 500;
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+  .book-facts > div b {
+    font-weight: 600;
+    color: var(--ink);
+    text-align: right;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .book-facts .t-en { display: none; }
+  html.mc-en .book-facts .t-th { display: none; }
+  html.mc-en .book-facts .t-en { display: inline; }
+  .book-facts-heading {
+    margin: 4px 0 0;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    color: var(--muted);
+    text-transform: none;
   }
   .room-page main > .map3d-section,
   .room-page .nearby-box,
@@ -2468,4 +2515,112 @@ html.mc-en .type-cat-label { font-size: 10.5px; }
     max-width: none;
     margin-inline: 0;
   }
+}
+
+
+/* Right-column extras: move-in cost, map, other rooms. */
+.room-extras { display: grid; gap: 14px; margin-top: 16px; }
+.room-extra {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 16px 16px 14px;
+}
+.room-extra h3 {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+.room-extra .t-en { display: none; }
+html.mc-en .room-extra .t-th { display: none; }
+html.mc-en .room-extra .t-en { display: inline; }
+.movein-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 13.5px;
+  padding: 6px 0;
+  color: var(--ink);
+}
+.movein-row + .movein-row { border-top: 1px solid var(--color-border); }
+.movein-total { font-weight: 600; margin-top: 2px; }
+.movein-total b { font-size: 16px; }
+.side-map-frame {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+.side-map-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+.side-map-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+}
+.side-map-link:hover { text-decoration: underline; }
+.side-station { margin: 8px 0 0; font-size: 13.5px; line-height: 1.45; color: var(--ink); }
+.side-nearby { list-style: none; margin: 10px 0 0; padding: 0; }
+.side-nearby li { border-top: 1px solid var(--color-border); }
+.side-nearby a, .side-nearby li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 13px;
+  color: inherit;
+  text-decoration: none;
+}
+.side-nearby a:hover .side-nearby-name { color: var(--primary); }
+.side-nearby-name { min-width: 0; }
+.side-nearby-name small { display: block; color: var(--muted); font-size: 12px; font-weight: 500; margin-top: 1px; }
+.side-nearby-walk { color: var(--muted); flex: none; font-size: 12.5px; }
+.side-rooms { display: grid; gap: 8px; }
+.side-room {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+.side-room:hover { border-color: var(--primary); }
+.side-room img, .side-room-ph {
+  width: 80px;
+  height: 64px;
+  object-fit: cover;
+  display: block;
+  background: var(--color-surface);
+}
+.side-room-body { padding-right: 10px; min-width: 0; }
+.side-room-body b { display: block; font-size: 14.5px; font-weight: 600; letter-spacing: -.02em; }
+.side-room-body small { display: block; margin-top: 2px; font-size: 12.5px; color: var(--muted); }
+.side-others-all {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+}
+.side-others-all:hover { text-decoration: underline; }
+
+/* Mobile: keep the bottom price bar, but show extras below the details. */
+@media (max-width: 900px) {
+  .room-page .detail { grid-template-areas: "main" "panel"; }
+  .room-page .detail-side { display: block; margin-top: 16px; }
+  .room-page .detail-side .book-card { display: none; }
+  .side-map-frame { height: 200px; }
 }

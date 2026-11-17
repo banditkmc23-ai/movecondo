@@ -184,13 +184,13 @@
     /* room page */
     "รายละเอียด": "Details", "ไฮไลต์ห้อง": "Room highlights", "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า": "Furniture & appliances",
     "การเดินทางและสถานที่ใกล้": "Getting around & nearby", "ส่วนกลางโครงการ": "Building facilities",
-    "ขนาด": "Size", "ชั้น": "Floor", "เงินมัดจำ": "Deposit", "ล่วงหน้า": "Advance rent", "วันเข้าอยู่": "Move-in",
+    "ขนาด": "Size", "ชั้น": "Floor", "เงินมัดจำ": "Deposit", "ล่วงหน้า": "Advance rent", "ค่าใช้จ่ายวันเข้าอยู่": "Move-in cost", "ค่าเช่าล่วงหน้า": "Advance rent", "แผนที่และที่เที่ยวใกล้ ๆ": "Map and nearby", "เปิดแผนที่": "Open map", "ห้องอื่นในโครงการเดียวกัน": "Other rooms in this project", "ดูทั้งหมดในโครงการนี้": "See all rooms in this project", "วันเข้าอยู่": "Move-in",
     "สถานีใกล้ที่สุด": "Nearest station", "ระยะเดิน": "Walking time", "1 เดือน": "1 month", "2 เดือน": "2 months", "3 เดือน": "3 months",
     "แผนที่ 3 มิติ": "3D map", "สถานีรถไฟฟ้าและร้านดังใกล้เคียงในรัศมีประมาณ 1.5 กม.": "Train stations and popular spots within about 1.5 km.",
     "ภาพก่อนหน้า": "Previous photo", "ภาพถัดไป": "Next photo",
     /* room features & amenities */
     "โทนน้ำตาลอุ่นและครีม": "Warm brown and cream tones", "ลมผ่านสบายตลอดวัน": "Pleasant breeze all day",
-    "เฟอร์นิเจอร์บิลต์อิน": "Built-in furniture", "หันทิศเหนือ": "North-facing", "วิวเปิดโล่ง ไม่มีตึกบัง": "Open view, no buildings in the way",
+    "เฟอร์นิเจอร์": "Furniture", "เฟอร์นิเจอร์บิลต์อิน": "Built-in furniture", "หันทิศเหนือ": "North-facing", "วิวเปิดโล่ง ไม่มีตึกบัง": "Open view, no buildings in the way",
     "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ": "Fully furnished with appliances", "หันทิศใต้": "South-facing", "วิวคลองพระโขนง": "Phra Khanong Canal view",
     "วิว 270 องศา": "270-degree view", "มีห้องนั่งเล่น": "Living room", "สวนหย่อม": "Garden", "ที่จอดรถ 1 คัน": "1 parking space",
     "รถรับ-ส่งฟรีไป BTS เอกมัย": "Free shuttle to BTS Ekkamai", "รถรับส่งฟรีไป BTS เอกมัย": "Free shuttle to BTS Ekkamai",
