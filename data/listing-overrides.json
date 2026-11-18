@@ -1,0 +1,15 @@
+{
+  "comment": "Owner-approved corrections that must survive the nightly MAX sync. MAX listing text can be wrong; these values win.",
+  "projects": {
+    "Aspire Sukhumvit 48": {
+      "shuttle": false,
+      "source": "Owner (t113u, 2026-11-18): Aspire Sukhumvit 48 has no shuttle. The MAX description for MC-168 incorrectly lists 'รถรับส่ง ที่จอดรถ'."
+    }
+  },
+  "rooms": {
+    "MC-168": {
+      "shuttle": false,
+      "source": "Owner (t113u, 2026-11-18): same project override; this room's MAX text is the one that mentioned รถรับส่ง."
+    }
+  }
+}

@@ -81,9 +81,16 @@
       if (rows.length >= 3) place(rows[1], "afterend", "home");
       if (rows.length >= 8) place(rows[5], "afterend", "home");
     }
-    // room page: under the Detail block
-    var det = document.querySelector(".room-page .detail-more, .detail-main > .detail-more");
-    if (det && /\/rooms\//.test(location.pathname)) place(det, "afterend", "room");
+    // room / sale-detail pages: ad slot where the details card used to sit
+    // (after the title/price/move-in block, before the map). Details are moved lower in app.js.
+    var isRoom = /\/rooms\//.test(location.pathname);
+    var isSaleDetail = /\/buy\/[^/]+/.test(location.pathname) && document.querySelector(".room-page");
+    if (isRoom || isSaleDetail) {
+      var box = document.querySelector(".room-page .detail");
+      var gal = document.querySelector(".room-page .gallery-hero");
+      if (box) place(box, "afterend", "room");
+      else if (gal) place(gal, "afterend", "room");
+    }
     // area + project pages: after the 4th room card (full row), or under the grid when fewer rooms
     var isArea = /\/areas\/[^/]+\/?$/.test(location.pathname), isProj = /\/condo\/[^/]+\/?$/.test(location.pathname);
     if (isArea || isProj) {

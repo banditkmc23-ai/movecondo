@@ -174,7 +174,7 @@
 - [Noble Remix Thonglor · 2 ห้องนอน 96.96 ตร.ม. · 56,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-165/): ย่านทองหล่อ · ว่าง · เดินประมาณ 3 นาทีถึง BTS ทองหล่อ · รหัส MC-165
 - [One9Five Asoke-Rama 9 · 2 ห้องนอน 68 ตร.ม. · 56,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-166/): ย่านพระราม 9 · ว่าง · เดินประมาณ 5 นาทีถึง MRT พระราม 9 · รหัส MC-166
 - [Nue District R9 · 2 ห้องนอน 62 ตร.ม. · 42,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-167/): ย่านพระราม 9 · ว่าง · เดินประมาณ 5 นาทีถึง MRT พระราม 9 · รหัส MC-167
-- [Aspire Sukhumvit 48 · 1 ห้องนอน 27.14 ตร.ม. · 12,500 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-168/): ย่านพระโขนง · ว่าง · เดินประมาณ 7 นาทีถึง BTS พระโขนง (มีรถ shuttle) · รหัส MC-168
+- [Aspire Sukhumvit 48 · 1 ห้องนอน 27.14 ตร.ม. · 12,500 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-168/): ย่านพระโขนง · ว่าง · เดินประมาณ 7 นาทีถึง BTS พระโขนง · รหัส MC-168
 - [The Base Sukhumvit 77 · 1 ห้องนอน 31 ตร.ม. · 15,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-169/): ย่านอ่อนนุช · ว่าง · เดินประมาณ 10 นาทีถึง BTS อ่อนนุช · รหัส MC-169
 - [Aspire Sukhumvit 48 · 1 ห้องนอน 27 ตร.ม. · 14,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-170/): ย่านพระโขนง · ว่าง · เดินประมาณ 7 นาทีถึง BTS พระโขนง · รหัส MC-170
 - [Sense Sukhumvit · 1 ห้องนอน 42.5 ตร.ม. · 16,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-171/): ย่านบางนา · ว่าง · เดินประมาณ 5 นาทีถึง BTS อุดมสุข · รหัส MC-171
@@ -423,7 +423,7 @@
 - [Noble Remix Thonglor · 2 bedrooms 96.96 sq.m. · 56,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-165/?lang=en): Thonglor · Available · about 3 min walk to BTS Thong Lo · code MC-165
 - [One9Five Asoke-Rama 9 · 2 bedrooms 68 sq.m. · 56,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-166/?lang=en): Rama 9 · Available · about 5 min walk to MRT Phra Ram 9 · code MC-166
 - [Nue District R9 · 2 bedrooms 62 sq.m. · 42,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-167/?lang=en): Rama 9 · Available · about 5 min walk to MRT Phra Ram 9 · code MC-167
-- [Aspire Sukhumvit 48 · 1 bedroom 27.14 sq.m. · 12,500 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-168/?lang=en): Phra Khanong · Available · about 7 min walk to BTS Phra Khanong (shuttle available) · code MC-168
+- [Aspire Sukhumvit 48 · 1 bedroom 27.14 sq.m. · 12,500 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-168/?lang=en): Phra Khanong · Available · about 7 min walk to BTS Phra Khanong · code MC-168
 - [The Base Sukhumvit 77 · 1 bedroom 31 sq.m. · 15,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-169/?lang=en): On Nut · Available · about 10 min walk to BTS On Nut · code MC-169
 - [Aspire Sukhumvit 48 · 1 bedroom 27 sq.m. · 14,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-170/?lang=en): Phra Khanong · Available · about 7 min walk to BTS Phra Khanong · code MC-170
 - [Sense Sukhumvit · 1 bedroom 42.5 sq.m. · 16,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-171/?lang=en): Bang Na · Available · about 5 min walk to BTS Udom Suk · code MC-171

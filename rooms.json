@@ -18413,7 +18413,7 @@
         "en": "BTS Phra Khanong"
       },
       "walk_minutes_to_station": 7,
-      "shuttle_to_station": true,
+      "shuttle_to_station": false,
       "building_location": {
         "lat": 13.710354,
         "lng": 100.594084,
@@ -18446,18 +18446,6 @@
             {
               "th": "ที่จอดรถ",
               "en": "Parking"
-            }
-          ]
-        },
-        {
-          "group": {
-            "th": "การเดินทางและสถานที่ใกล้",
-            "en": "Getting around & nearby"
-          },
-          "items": [
-            {
-              "th": "มีรถรับ–ส่ง",
-              "en": "Shuttle service"
             }
           ]
         }

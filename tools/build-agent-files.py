@@ -28,6 +28,26 @@ def write(p, s):
     with open(p, "w", encoding="utf-8") as f: f.write(s)
 def un(s): return html.unescape(re.sub(r"\s+", " ", s)).strip()
 
+
+def load_listing_overrides():
+    path = os.path.join(os.path.dirname(__file__), "..", "data", "listing-overrides.json")
+    try:
+        return json.load(open(path, encoding="utf-8"))
+    except FileNotFoundError:
+        return {}
+
+OVERRIDES = load_listing_overrides()
+
+def shuttle_from_override(room_id, project, inferred):
+    """Owner-approved corrections in data/listing-overrides.json win over HTML/MAX text."""
+    room = (OVERRIDES.get("rooms") or {}).get(room_id) or {}
+    if "shuttle" in room:
+        return bool(room["shuttle"])
+    proj = (OVERRIDES.get("projects") or {}).get(project) or {}
+    if "shuttle" in proj:
+        return bool(proj["shuttle"])
+    return inferred
+
 listings = {r["id"]: r for r in json.load(open("data/listings.json", encoding="utf-8"))["rooms"]}
 # condo project pages (condo/<slug>/) + data/projects.json are rebuilt first so everything stays in sync
 subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "build-project-pages.py")], check=True)
@@ -102,7 +122,7 @@ for d in sorted(glob.glob("rooms/mc-*/")):
         type_th=type_th, bedrooms=beds, size=L["size"], size_label=L.get("sizeLabel") or (f"{L['size']:g} ตร.ม." if L.get("size") else None), floor_th=F.get("ชั้น"),
         price=L["price"], deposit_th=F.get("เงินมัดจำ"), advance_th=F.get("ล่วงหน้า"), lease_th=lease,
         movein_th=F.get("วันเข้าอยู่"), status_th=status_th, avail_from=avail_from,
-        station_th=L["station"], walk=L["walk"], shuttle=("shuttle" in walk_txt), walk_th=walk_txt,
+        station_th=L["station"], walk=L["walk"], shuttle=shuttle_from_override(rid, P["project"], "shuttle" in walk_txt), walk_th=walk_txt,
         lat=L["lat"], lng=L["lng"], coord_approx=bool(L.get("coordApprox")),
         summary_th=P["summary"], feats=P["feats"], en_over=P["en_over"], updated_th=P["updated"], last_verified=L.get("lastVerified"),
         photos=[BASE + p for p in P["photos"]] or [BASE + p for p in L["photos"]],

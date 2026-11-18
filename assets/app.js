@@ -2764,6 +2764,14 @@ function enhanceRoomBookCard(){
   })();
   if(!canShowMoveIn){
     Object.assign(extraAllow, depositLabels, advanceLabels);
+  } else if(factsRoot){
+    // Deposit + advance rent belong only in the move-in block, including on mobile.
+    factsRoot.querySelectorAll(":scope > div").forEach((div) => {
+      const labEl = div.querySelector(":scope > span");
+      if(!labEl) return;
+      const label = (labEl.querySelector(":scope > .t-th, .t-th")?.textContent || labEl.textContent || "").replace(/\s+/g, " ").trim();
+      if(depositLabels[label] || advanceLabels[label]) div.classList.add("room-fact-in-movein");
+    });
   }
   const isFloorLabel = (s) => s === "ชั้น" || s === "Floor";
   const isRealFloor = (val) => {
@@ -2864,6 +2872,7 @@ function enhanceRoomBookCard(){
   }
   addDesktopLineCta();
   enhanceRoomExtras(card);
+  layoutRoomPageSections();
   layoutDesktopGallery();
   if(!window.__mcGalLayout){
     window.__mcGalLayout = true;
@@ -3044,40 +3053,32 @@ function buildMapBlock(ctx, map){
   el.dataset.mapSource = map ? (map.nearbySource || "map-json") : (places.length ? "page-nearby" : "station-only");
   return el;
 }
-function buildOtherRoomsBlock(ctx){
-  const wrap = document.createElement("section");
-  wrap.className = "room-extra room-others";
-  if(ctx.kind === "sale"){
-    const slug = ctx.slug;
-    const others = (typeof SALE_LISTINGS !== "undefined" ? SALE_LISTINGS : []).filter((s) => s.slug !== slug && ctx.project && s.project === ctx.project).slice(0, 3);
-    if(!others.length) return null;
-    const projectHref = (PROJECT_SLUGS[ctx.project] ? SITE_BASE + "condo/" + PROJECT_SLUGS[ctx.project] + "/" : (document.querySelector(".room-project-link a") || {}).href) || "";
-    wrap.innerHTML = `<h3><span class="t-th">ห้องอื่นในโครงการเดียวกัน</span><span class="t-en">Other rooms in this project</span></h3>` +
-      `<div class="side-rooms">` + others.map((s) => {
-        const photo = (s.photos && s.photos[0]) ? (SITE_BASE + s.photos[0]) : "";
-        const meta = [s.bedrooms ? s.bedrooms + " " + `<span class="t-th">ห้องนอน</span><span class="t-en">bed</span>` : "", s.size ? `<span class="t-th">${s.size} ตร.ม.</span><span class="t-en">${s.size} sq.m.</span>` : ""].filter(Boolean).join(" · ");
-        return `<a class="side-room" href="${SITE_BASE}buy/${escHtml(s.slug)}/">${photo ? `<img src="${escHtml(photo)}" alt="" width="80" height="64" loading="lazy">` : `<span class="side-room-ph"></span>`}<span class="side-room-body"><b>${baht(s.salePrice)}</b><small>${meta}</small></span></a>`;
-      }).join("") + `</div>` +
-      (projectHref ? `<a class="side-others-all" href="${escHtml(projectHref)}"><span class="t-th">ดูทั้งหมดในโครงการนี้</span><span class="t-en">See all rooms in this project</span></a>` : "");
-    return wrap;
+
+function layoutRoomPageSections(){
+  const page = document.querySelector(".room-page");
+  if(!page) return;
+  const main = page.querySelector("main") || page;
+  const details = main.querySelector(".detail-main");
+  if(!details) return;
+  const bar = main.querySelector(".room-bar");
+  let anchor = null;
+  for(const sel of [".section-related", ".nearby-box", ".map3d-section"]){
+    const els = [...main.querySelectorAll(sel)].filter((el) => el !== details && !details.contains(el) && !el.closest(".detail-main, .detail-side, .room-extras"));
+    if(els.length){ anchor = els[els.length - 1]; break; }
   }
-  if(!ctx.listing || !ctx.project) return null;
-  const others = LISTINGS.filter((l) => l.project === ctx.project && l.id !== ctx.listing.id).slice(0, 3);
-  if(!others.length) return null;
-  const projSlug = PROJECT_SLUGS[ctx.project];
-  const projectHref = (document.querySelector(".room-project-link a") || {}).getAttribute("href") || (projSlug ? SITE_BASE + "condo/" + projSlug + "/" : "");
-  wrap.innerHTML = `<h3><span class="t-th">ห้องอื่นในโครงการเดียวกัน</span><span class="t-en">Other rooms in this project</span></h3>` +
-    `<div class="side-rooms">` + others.map((l) => {
-      const photo = coverSrc(l.id) || photoUrl(l.id, "1.webp", "cover");
-      const type = l.type || l.beds || "";
-      const size = l.size != null ? `<span class="t-th">${l.size} ตร.ม.</span><span class="t-en">${l.size} sq.m.</span>` : "";
-      const typeHtml = type ? `<span>${escHtml(type)}</span>` : "";
-      const meta = [typeHtml, size].filter(Boolean).join(" · ");
-      return `<a class="side-room" href="${roomHref(l.id)}"><img src="${escHtml(photo)}" alt="" width="80" height="64" loading="lazy"><span class="side-room-body"><b>${baht(l.price)}<span class="t-th">/เดือน</span><span class="t-en">/mo</span></b><small>${meta}</small></span></a>`;
-    }).join("") + `</div>` +
-    (projectHref ? `<a class="side-others-all" href="${escHtml(projectHref)}"><span class="t-th">ดูทั้งหมดในโครงการนี้</span><span class="t-en">See all rooms in this project</span></a>` : "");
-  return wrap;
+  if(!anchor) anchor = main.querySelector(".detail");
+  if(!anchor || anchor === details || details.contains(anchor)) return;
+  if(bar && (anchor === bar || bar.contains(anchor))){
+    bar.parentNode.insertBefore(details, bar);
+    return;
+  }
+  anchor.after(details);
+  if(bar && bar.compareDocumentPosition(details) & Node.DOCUMENT_POSITION_FOLLOWING && bar.parentNode === details.parentNode){
+    // details ended up after the in-main contact bar — keep the bar last
+    bar.parentNode.insertBefore(details, bar);
+  }
 }
+
 async function enhanceRoomExtras(card){
   const side = card && card.closest(".detail-side");
   if(!side || side.querySelector(".room-extras") || side.dataset.extrasInit) return;
@@ -3094,8 +3095,6 @@ async function enhanceRoomExtras(card){
     const mapBlock = buildMapBlock(ctx, map);
     if(mapBlock) extras.appendChild(mapBlock);
   }
-  const others = buildOtherRoomsBlock(ctx);
-  if(others) extras.appendChild(others);
   if(!extras.children.length) return;
   side.appendChild(extras);
 }
