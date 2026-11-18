@@ -2988,8 +2988,63 @@ async function enhanceRoomExtras(card){
   side.appendChild(extras);
 }
 
-document.addEventListener("DOMContentLoaded", ()=>{ refreshSoonBadges(); enhanceRoomBookCard(); });
-if(document.readyState !== "loading") enhanceRoomBookCard();
+
+function initRelatedRoomStrip(){
+  const tracks = document.querySelectorAll(".room-page .section-related .grid");
+  if(!tracks.length) return;
+  const mq = window.matchMedia("(max-width: 1023px)");
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  tracks.forEach((track) => {
+    if(track.dataset.relatedStripInit) return;
+    track.dataset.relatedStripInit = "1";
+    const cards = () => [...track.children].filter((el) => el.classList && el.classList.contains("card"));
+    let timer = null;
+    let stopped = false;
+    let auto = false;
+    let autoClear = 0;
+    const stop = () => {
+      stopped = true;
+      if(timer){ clearInterval(timer); timer = null; }
+    };
+    const paddingLeft = () => parseFloat(getComputedStyle(track).paddingLeft) || 0;
+    const scrollToCard = (card, smooth) => {
+      const left = card.getBoundingClientRect().left - track.getBoundingClientRect().left + track.scrollLeft - paddingLeft();
+      auto = true;
+      if(autoClear) clearTimeout(autoClear);
+      autoClear = setTimeout(() => { auto = false; }, 700);
+      track.scrollTo({ left: Math.max(0, left), behavior: smooth ? "smooth" : "auto" });
+    };
+    const advance = () => {
+      if(stopped || !mq.matches || reduce.matches) return;
+      const list = cards();
+      if(list.length < 2) return;
+      const pad = paddingLeft();
+      let idx = 0, best = Infinity;
+      list.forEach((c, i) => {
+        const d = Math.abs((c.getBoundingClientRect().left - track.getBoundingClientRect().left) - pad);
+        if(d < best){ best = d; idx = i; }
+      });
+      scrollToCard(list[(idx + 1) % list.length], true);
+    };
+    const start = () => {
+      if(timer){ clearInterval(timer); timer = null; }
+      if(stopped || !mq.matches || reduce.matches || cards().length < 2) return;
+      timer = setInterval(advance, 4000);
+    };
+    const onUser = () => { stop(); };
+    track.addEventListener("pointerdown", onUser, { passive: true });
+    track.addEventListener("touchstart", onUser, { passive: true });
+    track.addEventListener("wheel", onUser, { passive: true });
+    track.addEventListener("keydown", onUser);
+    track.addEventListener("scroll", () => { if(!auto) stop(); }, { passive: true });
+    if(typeof mq.addEventListener === "function") mq.addEventListener("change", start);
+    else if(mq.addListener) mq.addListener(start);
+    start();
+  });
+}
+
+document.addEventListener("DOMContentLoaded", ()=>{ refreshSoonBadges(); enhanceRoomBookCard(); initRelatedRoomStrip(); });
+if(document.readyState !== "loading"){ enhanceRoomBookCard(); initRelatedRoomStrip(); }
 
 document.addEventListener("click", (e) => {
   const jsMore = e.target.closest("[data-load-more-js]");
