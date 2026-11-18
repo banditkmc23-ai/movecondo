@@ -6,7 +6,7 @@
   },
   "home": "https://banditkmc23-ai.github.io/movecondo/",
   "home_en": "https://banditkmc23-ai.github.io/movecondo/?lang=en",
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "currency": "THB",
   "contact": {
     "line": "https://line.me/R/ti/p/%40576yhgtz"
@@ -54,7 +54,7 @@
       "th": "เอกมัย",
       "en": "Ekkamai",
       "url": "https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/",
-      "rooms": 21
+      "rooms": 22
     },
     {
       "slug": "huai-khwang",
@@ -68,7 +68,7 @@
       "th": "อ่อนนุช",
       "en": "On Nut",
       "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/",
-      "rooms": 61
+      "rooms": 63
     },
     {
       "slug": "phrakhanong",
@@ -82,7 +82,7 @@
       "th": "พร้อมพงษ์",
       "en": "Phrom Phong",
       "url": "https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/",
-      "rooms": 32
+      "rooms": 38
     },
     {
       "slug": "rama-4",
@@ -110,7 +110,7 @@
       "th": "ทองหล่อ",
       "en": "Thonglor",
       "url": "https://banditkmc23-ai.github.io/movecondo/areas/thonglor/",
-      "rooms": 49
+      "rooms": 51
     }
   ],
   "projects": [
@@ -185,7 +185,7 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/?lang=en",
       "area_th": "อ่อนนุช",
-      "rooms": 8,
+      "rooms": 9,
       "price_min": 20000,
       "price_max": 26000,
       "station_th": "BTS อ่อนนุช",
@@ -460,9 +460,9 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-crest-sukhumvit-34/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/the-crest-sukhumvit-34/?lang=en",
       "area_th": "ทองหล่อ",
-      "rooms": 1,
+      "rooms": 2,
       "price_min": 85000,
-      "price_max": 85000,
+      "price_max": 90000,
       "station_th": "BTS ทองหล่อ",
       "walk_min": 2
     },
@@ -625,7 +625,7 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/ideo-s93/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/ideo-s93/?lang=en",
       "area_th": "อ่อนนุช",
-      "rooms": 2,
+      "rooms": 3,
       "price_min": 15000,
       "price_max": 19000,
       "station_th": "BTS บางจาก",
@@ -1120,8 +1120,8 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/aestiq-thonglor/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/aestiq-thonglor/?lang=en",
       "area_th": "ทองหล่อ",
-      "rooms": 1,
-      "price_min": 48000,
+      "rooms": 2,
+      "price_min": 45000,
       "price_max": 48000,
       "station_th": null,
       "walk_min": null
@@ -1362,8 +1362,8 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/h-sukhumvit-43/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/h-sukhumvit-43/?lang=en",
       "area_th": "พร้อมพงษ์",
-      "rooms": 1,
-      "price_min": 54000,
+      "rooms": 2,
+      "price_min": 35000,
       "price_max": 54000,
       "station_th": "BTS พร้อมพงษ์",
       "walk_min": 9
@@ -1417,11 +1417,11 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-alcove-thonglor-10/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/the-alcove-thonglor-10/?lang=en",
       "area_th": "เอกมัย",
-      "rooms": 1,
-      "price_min": 45000,
+      "rooms": 2,
+      "price_min": 37000,
       "price_max": 45000,
-      "station_th": "BTS ทองหล่อ",
-      "walk_min": 19
+      "station_th": "BTS เอกมัย",
+      "walk_min": 16
     },
     {
       "name": "BaanSiri 24",
@@ -1444,6 +1444,28 @@
       "price_max": 75000,
       "station_th": "BTS ทองหล่อ",
       "walk_min": 1
+    },
+    {
+      "name": "Supalai Oriental Sukhumvit 39",
+      "url": "https://banditkmc23-ai.github.io/movecondo/condo/supalai-oriental-sukhumvit-39/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/supalai-oriental-sukhumvit-39/?lang=en",
+      "area_th": "พร้อมพงษ์",
+      "rooms": 4,
+      "price_min": 26000,
+      "price_max": 40000,
+      "station_th": null,
+      "walk_min": null
+    },
+    {
+      "name": "The Diplomat 39",
+      "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-diplomat-39/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/the-diplomat-39/?lang=en",
+      "area_th": "พร้อมพงษ์",
+      "rooms": 1,
+      "price_min": 57000,
+      "price_max": 57000,
+      "station_th": "BTS พร้อมพงษ์",
+      "walk_min": 2
     }
   ],
   "rooms": [
@@ -26843,6 +26865,733 @@
       ],
       "last_verified": "2026-11-18",
       "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/aspire-sukhumvit-48/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-269",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-269/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-269/?lang=en",
+      "project": "The Alcove Thonglor 10",
+      "area": {
+        "th": "เอกมัย",
+        "en": "Ekkamai",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/"
+      },
+      "type": {
+        "th": "2 ห้องนอน",
+        "en": "2 bedrooms"
+      },
+      "bedrooms": 2,
+      "size_sqm": 72.0,
+      "floor": {
+        "th": "ชั้น 12",
+        "en": "Floor 12"
+      },
+      "rent_thb_per_month": 37000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS เอกมัย",
+        "en": "BTS Ekkamai"
+      },
+      "walk_minutes_to_station": 16,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7312446,
+        "lng": 100.5863832,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 2 ห้องนอน ขนาด 72 ตร.ม. ที่ The Alcove Thonglor 10 ย่านเอกมัย",
+        "en": "2-bedroom, 72 sq.m. at The Alcove Thonglor 10, Ekkamai."
+      },
+      "features": [],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-269/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-269/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-269/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-269/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-269/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-269/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-269/7.webp"
+      ],
+      "last_verified": "2026-11-19",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/the-alcove-thonglor-10/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-270",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-270/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-270/?lang=en",
+      "project": "Ideo S93",
+      "area": {
+        "th": "อ่อนนุช",
+        "en": "On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
+      },
+      "type": {
+        "th": "สตูดิโอ",
+        "en": "Studio"
+      },
+      "bedrooms": 0,
+      "size_sqm": 27.0,
+      "floor": {
+        "th": "ชั้น 14",
+        "en": "Floor 14"
+      },
+      "rent_thb_per_month": 15000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": null,
+      "walk_minutes_to_station": null,
+      "shuttle_to_station": false,
+      "building_location": null,
+      "summary": {
+        "th": "ห้อง สตูดิโอ ขนาด 27 ตร.ม. ที่ Ideo S93 ย่านอ่อนนุช",
+        "en": "Studio, 27 sq.m. at Ideo S93, On Nut."
+      },
+      "features": [],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-270/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-270/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-270/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-270/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-270/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-270/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-270/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-270/8.webp"
+      ],
+      "last_verified": "2026-11-19",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/ideo-s93/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-271",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-271/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-271/?lang=en",
+      "project": "Supalai Oriental Sukhumvit 39",
+      "area": {
+        "th": "พร้อมพงษ์",
+        "en": "Phrom Phong",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/"
+      },
+      "type": {
+        "th": "2 ห้องนอน",
+        "en": "2 bedrooms"
+      },
+      "bedrooms": 2,
+      "size_sqm": 66.0,
+      "floor": {
+        "th": "ชั้น 17",
+        "en": "Floor 17"
+      },
+      "rent_thb_per_month": 40000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": null,
+      "walk_minutes_to_station": null,
+      "shuttle_to_station": false,
+      "building_location": null,
+      "summary": {
+        "th": "ห้อง 2 ห้องนอน ขนาด 66 ตร.ม. ที่ Supalai Oriental Sukhumvit 39 ย่านพร้อมพงษ์",
+        "en": "2-bedroom, 66 sq.m. at Supalai Oriental Sukhumvit 39, Phrom Phong."
+      },
+      "features": [],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-271/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-271/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-271/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-271/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-271/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-271/6.webp"
+      ],
+      "last_verified": "2026-11-19",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/supalai-oriental-sukhumvit-39/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-272",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-272/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-272/?lang=en",
+      "project": "Supalai Oriental Sukhumvit 39",
+      "area": {
+        "th": "พร้อมพงษ์",
+        "en": "Phrom Phong",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 57.0,
+      "floor": {
+        "th": "ชั้น 6",
+        "en": "Floor 6"
+      },
+      "rent_thb_per_month": 29000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": null,
+      "walk_minutes_to_station": null,
+      "shuttle_to_station": false,
+      "building_location": null,
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 57 ตร.ม. ที่ Supalai Oriental Sukhumvit 39 ย่านพร้อมพงษ์",
+        "en": "1-bedroom, 57 sq.m. at Supalai Oriental Sukhumvit 39, Phrom Phong."
+      },
+      "features": [],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-272/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-272/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-272/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-272/4.webp"
+      ],
+      "last_verified": "2026-11-19",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/supalai-oriental-sukhumvit-39/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-273",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-273/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-273/?lang=en",
+      "project": "Supalai Oriental Sukhumvit 39",
+      "area": {
+        "th": "พร้อมพงษ์",
+        "en": "Phrom Phong",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 39.0,
+      "floor": {
+        "th": "ชั้น 12",
+        "en": "Floor 12"
+      },
+      "rent_thb_per_month": 27000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": null,
+      "walk_minutes_to_station": null,
+      "shuttle_to_station": false,
+      "building_location": null,
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 39 ตร.ม. ที่ Supalai Oriental Sukhumvit 39 ย่านพร้อมพงษ์",
+        "en": "1-bedroom, 39 sq.m. at Supalai Oriental Sukhumvit 39, Phrom Phong."
+      },
+      "features": [],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-273/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-273/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-273/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-273/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-273/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-273/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-273/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-273/8.webp"
+      ],
+      "last_verified": "2026-11-19",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/supalai-oriental-sukhumvit-39/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-274",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-274/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-274/?lang=en",
+      "project": "Supalai Oriental Sukhumvit 39",
+      "area": {
+        "th": "พร้อมพงษ์",
+        "en": "Phrom Phong",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 57.0,
+      "floor": null,
+      "rent_thb_per_month": 26000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": null,
+      "walk_minutes_to_station": null,
+      "shuttle_to_station": false,
+      "building_location": null,
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 57 ตร.ม. ที่ Supalai Oriental Sukhumvit 39 ย่านพร้อมพงษ์ วิวเมือง",
+        "en": "1-bedroom, 57 sq.m. at Supalai Oriental Sukhumvit 39, Phrom Phong. City view."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "วิวเมือง",
+              "en": "City view"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-274/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-274/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-274/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-274/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-274/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-274/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-274/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-274/8.webp"
+      ],
+      "last_verified": "2026-11-19",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/supalai-oriental-sukhumvit-39/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-275",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-275/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-275/?lang=en",
+      "project": "H Sukhumvit 43",
+      "area": {
+        "th": "พร้อมพงษ์",
+        "en": "Phrom Phong",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 45.0,
+      "floor": {
+        "th": "ชั้น 16",
+        "en": "Floor 16"
+      },
+      "rent_thb_per_month": 35000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS พร้อมพงษ์",
+        "en": "BTS Phrom Phong"
+      },
+      "walk_minutes_to_station": 9,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.733031,
+        "lng": 100.573988,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 45 ตร.ม. ที่ H Sukhumvit 43 ย่านพร้อมพงษ์ ห้องมุม",
+        "en": "1-bedroom, 45 sq.m. at H Sukhumvit 43, Phrom Phong. Corner unit."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "ห้องมุม",
+              "en": "Corner unit"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-275/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-275/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-275/3.webp"
+      ],
+      "last_verified": "2026-11-19",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/h-sukhumvit-43/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-276",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-276/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-276/?lang=en",
+      "project": "Aestiq Thonglor",
+      "area": {
+        "th": "ทองหล่อ",
+        "en": "Thonglor",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/thonglor/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 35.5,
+      "floor": {
+        "th": "ชั้น 11",
+        "en": "Floor 11"
+      },
+      "rent_thb_per_month": 45000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": null,
+      "walk_minutes_to_station": null,
+      "shuttle_to_station": false,
+      "building_location": null,
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 35.5 ตร.ม. ที่ Aestiq Thonglor ย่านทองหล่อ",
+        "en": "1-bedroom, 35.5 sq.m. at Aestiq Thonglor, Thonglor."
+      },
+      "features": [],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-276/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-276/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-276/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-276/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-276/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-276/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-276/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-276/8.webp"
+      ],
+      "last_verified": "2026-11-19",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/aestiq-thonglor/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-277",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-277/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-277/?lang=en",
+      "project": "The Crest Sukhumvit 34",
+      "area": {
+        "th": "ทองหล่อ",
+        "en": "Thonglor",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/thonglor/"
+      },
+      "type": {
+        "th": "2 ห้องนอน",
+        "en": "2 bedrooms"
+      },
+      "bedrooms": 2,
+      "size_sqm": 101.71,
+      "floor": {
+        "th": "ชั้น 25",
+        "en": "Floor 25"
+      },
+      "rent_thb_per_month": 90000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS ทองหล่อ",
+        "en": "BTS Thong Lo"
+      },
+      "walk_minutes_to_station": 2,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.725201,
+        "lng": 100.576521,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 2 ห้องนอน ขนาด 101.71 ตร.ม. ที่ The Crest Sukhumvit 34 ย่านทองหล่อ",
+        "en": "2-bedroom, 101.71 sq.m. at The Crest Sukhumvit 34, Thonglor."
+      },
+      "features": [],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-277/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-277/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-277/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-277/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-277/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-277/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-277/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-277/8.webp"
+      ],
+      "last_verified": "2026-11-19",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/the-crest-sukhumvit-34/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-278",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-278/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-278/?lang=en",
+      "project": "The Diplomat 39",
+      "area": {
+        "th": "พร้อมพงษ์",
+        "en": "Phrom Phong",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 54.0,
+      "floor": {
+        "th": "ชั้น 10",
+        "en": "Floor 10"
+      },
+      "rent_thb_per_month": 57000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS พร้อมพงษ์",
+        "en": "BTS Phrom Phong"
+      },
+      "walk_minutes_to_station": 2,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7314369,
+        "lng": 100.5703209,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 54 ตร.ม. ที่ The Diplomat 39 ย่านพร้อมพงษ์",
+        "en": "1-bedroom, 54 sq.m. at The Diplomat 39, Phrom Phong."
+      },
+      "features": [],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-278/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-278/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-278/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-278/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-278/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-278/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-278/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-278/8.webp"
+      ],
+      "last_verified": "2026-11-19",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/the-diplomat-39/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-279",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-279/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-279/?lang=en",
+      "project": "Kawa Haus",
+      "area": {
+        "th": "อ่อนนุช",
+        "en": "On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 37.0,
+      "floor": null,
+      "rent_thb_per_month": 23000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS อ่อนนุช",
+        "en": "BTS On Nut"
+      },
+      "walk_minutes_to_station": 18,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7150067,
+        "lng": 100.6052636,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 37 ตร.ม. ที่ Kawa Haus ย่านอ่อนนุช",
+        "en": "1-bedroom, 37 sq.m. at Kawa Haus, On Nut."
+      },
+      "features": [],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-279/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-279/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-279/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-279/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-279/5.webp"
+      ],
+      "last_verified": "2026-11-19",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/",
       "contact": {
         "line": "https://line.me/R/ti/p/%40576yhgtz",
         "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"

@@ -1,0 +1,177 @@
+{
+  "area": "พร้อมพงษ์",
+  "slug": "phrom-phong",
+  "room": "MC-278",
+  "project": "The Diplomat 39",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.7314369,
+    "lng": 100.5703209
+  },
+  "stations": [
+    {
+      "id": "bts-phrom-phong",
+      "name": "BTS พร้อมพงษ์",
+      "name_en": "Phrom Phong BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.73043889,
+      "lng": 100.56973056,
+      "source": "https://en.wikipedia.org/wiki/Phrom_Phong_BTS_station",
+      "primary": true
+    },
+    {
+      "id": "bts-thong-lo",
+      "name": "BTS ทองหล่อ",
+      "name_en": "Thong Lo BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.72424444,
+      "lng": 100.57855833,
+      "source": "https://en.wikipedia.org/wiki/Thong_Lo_BTS_station",
+      "primary": false
+    },
+    {
+      "id": "bts-asok",
+      "name": "BTS อโศก",
+      "name_en": "Asok BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "lat": 13.73703333,
+      "lng": 100.56041944,
+      "source": "https://en.wikipedia.org/wiki/Asok_BTS_station",
+      "primary": false
+    }
+  ],
+  "places": [
+    {
+      "name": "EmQuartier",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "lat": 13.731225,
+      "lng": 100.569476,
+      "distanceM": 94,
+      "walkMinEst": 1.5,
+      "rating": 4.5,
+      "reviewCount": 24902,
+      "mapsQuery": "13.731225,100.569476",
+      "sourceUrl": "https://wanderlog.com/place/details/93809/emquartier"
+    },
+    {
+      "name": "Benchasiri Park",
+      "category": "สวน",
+      "categoryKey": "park",
+      "lat": 13.730677,
+      "lng": 100.567501,
+      "distanceM": 316,
+      "walkMinEst": 5.1,
+      "rating": 4.5,
+      "reviewCount": 6818,
+      "mapsQuery": "13.730677,100.567501",
+      "sourceUrl": "https://wanderlog.com/place/details/124537/benchasiri-park"
+    },
+    {
+      "name": "Sushi Masato",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.734487,
+      "lng": 100.566112,
+      "distanceM": 567,
+      "walkMinEst": 9.2,
+      "rating": 4.8,
+      "reviewCount": 830,
+      "mapsQuery": "13.734487,100.566112",
+      "sourceUrl": "https://wanderlog.com/place/details/1074537/sushi-masato"
+    },
+    {
+      "name": "Sri Trat Restaurant and Bar",
+      "category": "ร้านอาหาร",
+      "categoryKey": "restaurant",
+      "lat": 13.736807,
+      "lng": 100.568074,
+      "distanceM": 645,
+      "walkMinEst": 10.5,
+      "rating": 4.5,
+      "reviewCount": 2699,
+      "mapsQuery": "13.736807,100.568074",
+      "sourceUrl": "https://wanderlog.com/place/details/26847/sri-trat-restaurant-and-bar"
+    },
+    {
+      "name": "THE COFFEE CLUB - Maitria Hotel Sukhumvit",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "lat": 13.732742,
+      "lng": 100.562593,
+      "distanceM": 847,
+      "walkMinEst": 13.8,
+      "rating": 4.7,
+      "reviewCount": 2247,
+      "mapsQuery": "13.732742,100.562593",
+      "sourceUrl": "https://wanderlog.com/place/details/2611995/the-coffee-club-maitria-hotel-sukhumvit"
+    },
+    {
+      "name": "Oasis Spa (Bangkok, Sukhumvit 31)",
+      "category": "สปา",
+      "categoryKey": "spa",
+      "lat": 13.740833,
+      "lng": 100.56823,
+      "distanceM": 1069,
+      "walkMinEst": 17.4,
+      "rating": 4.7,
+      "reviewCount": 2368,
+      "mapsQuery": "13.740833,100.56823",
+      "sourceUrl": "https://wanderlog.com/place/details/400028/oasis-spa-bangkok-sukhumvit-31"
+    },
+    {
+      "name": "Let's Relax Onsen and Spa (Thonglor)",
+      "category": "สปา",
+      "categoryKey": "spa",
+      "lat": 13.73183,
+      "lng": 100.582161,
+      "distanceM": 1280,
+      "walkMinEst": 20.8,
+      "rating": 4.5,
+      "reviewCount": 2134,
+      "mapsQuery": "13.73183,100.582161",
+      "sourceUrl": "https://wanderlog.com/place/details/409215/lets-relax-onsen-and-spa-thonglor"
+    },
+    {
+      "name": "Terminal 21 Asok",
+      "category": "ช็อปปิ้ง",
+      "categoryKey": "shopping",
+      "lat": 13.737964,
+      "lng": 100.560406,
+      "distanceM": 1294,
+      "walkMinEst": 21.0,
+      "rating": 4.6,
+      "reviewCount": 21550,
+      "mapsQuery": "13.737964,100.560406",
+      "sourceUrl": "https://wanderlog.com/place/details/1055596/terminal-21-asok"
+    },
+    {
+      "name": "ROAST coffee & eatery (The Commons)",
+      "category": "คาเฟ่",
+      "categoryKey": "cafe",
+      "lat": 13.735054,
+      "lng": 100.582268,
+      "distanceM": 1352,
+      "walkMinEst": 22.0,
+      "rating": 4.5,
+      "reviewCount": 2839,
+      "mapsQuery": "13.735054,100.582268",
+      "sourceUrl": "https://wanderlog.com/place/details/396806/roast-coffee--eatery"
+    }
+  ],
+  "condo": {
+    "name": "The Diplomat 39",
+    "lat": 13.7314369,
+    "lng": 100.5703209,
+    "approx": false
+  },
+  "mapMode": "condo",
+  "nearbySource": "nearby-real.json (area pool)",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "สถานีรถไฟฟ้าและร้านดังใกล้เคียงในรัศมีประมาณ 1.5 กม."
+}

@@ -116,7 +116,7 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 14,
-   "count": 8,
+   "count": 9,
    "soon": 0,
    "priceMin": 20000,
    "priceMax": 26000,
@@ -127,6 +127,7 @@
     "MC-037",
     "MC-009",
     "MC-121",
+    "MC-279",
     "MC-041",
     "MC-261"
    ],
@@ -568,12 +569,13 @@
    "areaSlug": "thonglor",
    "station": "BTS ทองหล่อ",
    "walk": 2,
-   "count": 1,
+   "count": 2,
    "soon": 0,
    "priceMin": 85000,
-   "priceMax": 85000,
+   "priceMax": 90000,
    "rooms": [
-    "MC-053"
+    "MC-053",
+    "MC-277"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-crest-sukhumvit-34/"
   },
@@ -821,12 +823,13 @@
    "areaSlug": "on-nut",
    "station": "BTS บางจาก",
    "walk": null,
-   "count": 2,
+   "count": 3,
    "soon": 0,
    "priceMin": 15000,
    "priceMax": 19000,
    "rooms": [
     "MC-188",
+    "MC-270",
     "MC-071"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/ideo-s93/"
@@ -1580,11 +1583,12 @@
    "areaSlug": "thonglor",
    "station": null,
    "walk": null,
-   "count": 1,
+   "count": 2,
    "soon": 0,
-   "priceMin": 48000,
+   "priceMin": 45000,
    "priceMax": 48000,
    "rooms": [
+    "MC-276",
     "MC-147"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/aestiq-thonglor/"
@@ -1942,11 +1946,12 @@
    "areaSlug": "phrom-phong",
    "station": "BTS พร้อมพงษ์",
    "walk": 9,
-   "count": 1,
+   "count": 2,
    "soon": 0,
-   "priceMin": 54000,
+   "priceMin": 35000,
    "priceMax": 54000,
    "rooms": [
+    "MC-275",
     "MC-217"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/h-sukhumvit-43/"
@@ -2020,13 +2025,14 @@
    "slug": "the-alcove-thonglor-10",
    "area": "เอกมัย",
    "areaSlug": "ekkamai",
-   "station": "BTS ทองหล่อ",
-   "walk": 19,
-   "count": 1,
+   "station": "BTS เอกมัย",
+   "walk": 16,
+   "count": 2,
    "soon": 0,
-   "priceMin": 45000,
+   "priceMin": 37000,
    "priceMax": 45000,
    "rooms": [
+    "MC-269",
     "MC-237"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-alcove-thonglor-10/"
@@ -2062,6 +2068,41 @@
     "MC-265"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-strand-thonglor/"
+  },
+  {
+   "name": "Supalai Oriental Sukhumvit 39",
+   "slug": "supalai-oriental-sukhumvit-39",
+   "area": "พร้อมพงษ์",
+   "areaSlug": "phrom-phong",
+   "station": null,
+   "walk": null,
+   "count": 4,
+   "soon": 0,
+   "priceMin": 26000,
+   "priceMax": 40000,
+   "rooms": [
+    "MC-274",
+    "MC-273",
+    "MC-272",
+    "MC-271"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/supalai-oriental-sukhumvit-39/"
+  },
+  {
+   "name": "The Diplomat 39",
+   "slug": "the-diplomat-39",
+   "area": "พร้อมพงษ์",
+   "areaSlug": "phrom-phong",
+   "station": "BTS พร้อมพงษ์",
+   "walk": 2,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 57000,
+   "priceMax": 57000,
+   "rooms": [
+    "MC-278"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-diplomat-39/"
   }
  ]
 }
