@@ -81,8 +81,7 @@
       if (rows.length >= 3) place(rows[1], "afterend", "home");
       if (rows.length >= 8) place(rows[5], "afterend", "home");
     }
-    // room / sale-detail pages: ad slot where the details card used to sit
-    // (after the title/price/move-in block, before the map). Details are moved lower in app.js.
+    // room / sale-detail pages: ad slot after the details + move-in block, before the map.
     var isRoom = /\/rooms\//.test(location.pathname);
     var isSaleDetail = /\/buy\/[^/]+/.test(location.pathname) && document.querySelector(".room-page");
     if (isRoom || isSaleDetail) {

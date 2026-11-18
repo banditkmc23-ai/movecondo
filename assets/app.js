@@ -3055,28 +3055,18 @@ function buildMapBlock(ctx, map){
 }
 
 function layoutRoomPageSections(){
-  const page = document.querySelector(".room-page");
-  if(!page) return;
-  const main = page.querySelector("main") || page;
-  const details = main.querySelector(".detail-main");
-  if(!details) return;
-  const bar = main.querySelector(".room-bar");
-  let anchor = null;
-  for(const sel of [".section-related", ".nearby-box", ".map3d-section"]){
-    const els = [...main.querySelectorAll(sel)].filter((el) => el !== details && !details.contains(el) && !el.closest(".detail-main, .detail-side, .room-extras"));
-    if(els.length){ anchor = els[els.length - 1]; break; }
-  }
-  if(!anchor) anchor = main.querySelector(".detail");
-  if(!anchor || anchor === details || details.contains(anchor)) return;
-  if(bar && (anchor === bar || bar.contains(anchor))){
-    bar.parentNode.insertBefore(details, bar);
-    return;
-  }
-  anchor.after(details);
-  if(bar && bar.compareDocumentPosition(details) & Node.DOCUMENT_POSITION_FOLLOWING && bar.parentNode === details.parentNode){
-    // details ended up after the in-main contact bar — keep the bar last
-    bar.parentNode.insertBefore(details, bar);
-  }
+  // Keep the details card under the gallery. Inside it: heading, description,
+  // facts, then amenities / transport, then the small LINE button.
+  const card = document.querySelector(".room-page .detail-more");
+  if(!card) return;
+  const facts = card.querySelector(":scope > .room-facts");
+  const updated = card.querySelector(":scope > .room-facts-updated");
+  const transfer = card.querySelector(":scope > .transfer-costs");
+  const feats = card.querySelector(":scope > .feature-groups");
+  const line = card.querySelector(":scope > .room-line-cta");
+  const afterFacts = transfer || updated || facts;
+  if(feats && afterFacts) afterFacts.after(feats);
+  if(line) card.appendChild(line);
 }
 
 async function enhanceRoomExtras(card){
