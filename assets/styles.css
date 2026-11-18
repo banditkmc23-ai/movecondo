@@ -2377,71 +2377,80 @@ html.mc-en .type-cat-label { font-size: 10.5px; }
     max-width: none;
     margin-inline: 0;
   }
+  /* Centered ~70vw main photo (16:9, capped at 70vh and the page container),
+     thumbs in a row underneath, then the existing 50/50 columns below. */
   .room-page .gallery-hero {
-    grid-column: 1;
-    grid-row: 2 / 4;
+    grid-column: 1 / -1;
+    grid-row: 2;
     width: 100%;
     max-width: none;
     margin: 0;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 124px;
-    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
     background: transparent;
     border: 0;
     border-radius: 0;
-    align-self: stretch;
-    /* Layout box still fills the intro+price rows (so the right column does not move).
-       The photo+thumbs visual grows to 1.275× that box = 150% of the previous 85% size,
-       filling the left-column width and extending downward. */
-    height: 0;
-    min-height: 100%;
+    height: auto;
+    min-height: 0;
     overflow: visible;
-    grid-template-rows: calc(100% * var(--room-gallery-grow, 1.275));
+    justify-self: stretch;
+    align-self: start;
+    /* 70% of the viewport, but never wider than the container and never taller than 70vh at 16:9 */
+    --gal-w: min(70vw, 100%, calc(70vh * 16 / 9));
   }
   .room-page .gallery-stage {
+    width: var(--gal-w);
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
     padding-top: 0;
-    height: 0;
-    min-height: 100%;
-    max-height: none;
-    align-self: stretch;
+    min-height: 0;
+    max-height: 70vh;
+    align-self: center;
     border-radius: 18px;
     overflow: hidden;
     border: 1px solid var(--color-border);
   }
   .room-page .gallery-nav {
-    grid-column: 2;
-    grid-row: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    width: var(--gal-w);
+    max-width: 100%;
     padding: 0;
     border-top: 0;
     background: transparent;
-    height: 0;
-    min-height: 100%;
+    height: auto;
+    min-height: 0;
     max-height: none;
-    align-self: stretch;
+    align-self: center;
     overflow: hidden;
   }
   .room-page .gallery-nav .thumbs {
-    flex-direction: column;
-    flex: 1;
+    flex-direction: row;
+    flex: 1 1 auto;
+    min-width: 0;
     min-height: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     gap: 8px;
-    height: 100%;
+    height: auto;
+    justify-content: safe center;
+    scrollbar-width: thin;
   }
   .room-page .thumb {
-    width: 100%;
-    flex: 0 0 calc((100% - 24px) / 4);
-    height: calc((100% - 24px) / 4);
+    width: 112px;
+    flex: 0 0 112px;
+    height: 63px;
     max-height: none;
-    aspect-ratio: auto;
+    aspect-ratio: 16 / 9;
     border-radius: 10px;
   }
   .room-page .room-intro {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 3;
     width: 100%;
     max-width: none;
     margin: 0;
@@ -2458,18 +2467,19 @@ html.mc-en .type-cat-label { font-size: 10.5px; }
   }
   .room-page .detail-main {
     grid-column: 1;
-    grid-row: 4;
+    grid-row: 3 / 7;
     width: 100%;
     min-width: 0;
-    /* Clear the gallery's downward overflow; --room-gallery-cell is set in app.js */
-    margin-top: calc(var(--room-gallery-grow, 1.275) * var(--room-gallery-cell, 0px) - var(--room-gallery-cell, 0px));
+    min-height: 0;
+    align-self: start;
+    margin-top: 0;
   }
   .room-page .detail-side {
     display: contents;
   }
   .room-page .book-card {
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 4;
     position: static;
     top: auto;
     z-index: auto;
@@ -2479,7 +2489,7 @@ html.mc-en .type-cat-label { font-size: 10.5px; }
   }
   .room-page .room-extras {
     grid-column: 2;
-    grid-row: 4;
+    grid-row: 5;
     margin-top: 0;
     width: 100%;
     min-width: 0;
