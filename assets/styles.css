@@ -2798,3 +2798,32 @@ html.mc-en .room-extra .t-en { display: inline; }
   }
   .room-page .section-related .card-dots { display: none; }
 }
+
+/* Rented / sold room pages: grey badge, no move-in or inquiry emphasis. */
+.badge-vacant.badge-rented,
+.badge-vacant.badge-sold {
+  background: #6B7280;
+  color: #fff;
+}
+.rented-note {
+  margin: 10px 0 0;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.room-page.room-rented .room-extras,
+.room-page.room-sold .room-extras,
+.room-page.room-rented .room-bar,
+.room-page.room-sold .room-bar,
+.room-page.room-rented .book-card .btn-line,
+.room-page.room-sold .book-card .btn-line,
+.room-page.room-rented .book-card .btn-primary,
+.room-page.room-sold .book-card .btn-primary,
+.room-page.room-rented .sticky-cta,
+.room-page.room-sold .sticky-cta {
+  display: none !important;
+}
+body.room-rented main,
+body.room-sold main {
+  padding-bottom: 24px;
+}

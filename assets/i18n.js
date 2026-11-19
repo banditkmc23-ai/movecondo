@@ -86,7 +86,7 @@
     "ไม่พบห้องที่ตรงกับคำค้นหา": "No rooms match your search", "ล้างคำค้นหา": "Clear search", "บ้านไม้กรอบกระจกใต้ต้นไม้ใหญ่": "A glass-framed wooden house under a big tree",
     /* listings */
     "ประกาศเช่า": "For rent", "คอนโดเช่าที่คัดมาให้": "Hand-picked rental condos",
-    "ว่าง": "Available", "พร้อมเข้าอยู่": "Ready to move in", "สอบถามวันเข้าอยู่": "Ask for move-in date",
+    "มีผู้เช่าแล้ว": "Already rented", "ขายแล้ว": "Sold", "ห้องนี้มีผู้เช่าแล้ว ดูห้องอื่นในย่านเดียวกันด้านล่างได้เลย": "This room is already rented. See other rooms in the same area below.", "ห้องนี้ขายแล้ว ดูห้องอื่นในย่านเดียวกันด้านล่างได้เลย": "This property has been sold. See other listings in the area below.", "ว่าง": "Available", "พร้อมเข้าอยู่": "Ready to move in", "สอบถามวันเข้าอยู่": "Ask for move-in date",
     "มีรถ shuttle": "Shuttle available", "บาท/เดือน": "THB/month",
     /* areas */
     "สำรวจทำเล": "Explore locations", "ย่านที่อยากอยู่ ใกล้รถไฟฟ้า": "Areas to live in, near the train",

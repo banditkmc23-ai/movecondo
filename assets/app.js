@@ -37,6 +37,7 @@ function soonLimitISO(){ return new Date(Date.now() + 7*3600e3 + SOON_WINDOW_DAY
 function refreshSoonBadges(root){
   const t = todayISO(), lim = soonLimitISO();
   (root||document).querySelectorAll("[data-avail-from]").forEach(el => {
+    if(el.classList.contains("badge-rented") || el.classList.contains("badge-sold")) return;
     if((el.getAttribute("data-avail-from")||"") > lim){ const c = el.closest(".card"); if(c) c.classList.add("soon-out"); return; }
     if((el.getAttribute("data-avail-from")||"") <= t){
       el.classList.remove("badge-soon"); el.removeAttribute("data-avail-from"); el.textContent = "ว่าง";
@@ -2576,6 +2577,7 @@ function setNav(name){
 
 
 function enhanceDualListings(){
+  if(document.body && (document.body.classList.contains("room-rented") || document.body.classList.contains("room-sold"))) return;
   document.querySelectorAll("[data-listing]").forEach(el => {
     const sale = saleForRoom(el.getAttribute("data-listing"));
     if(!sale) return;
@@ -2731,6 +2733,7 @@ function layoutDesktopGallery(){
 }
 
 function enhanceRoomBookCard(){
+  if(document.body && (document.body.classList.contains("room-rented") || document.body.classList.contains("room-sold"))) return;
   const card = document.querySelector(".room-page .book-card");
   if(!card || card.querySelector(".book-facts")) return;
   const factsRoot = document.querySelector(".room-facts");
