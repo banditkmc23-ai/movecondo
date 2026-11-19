@@ -43,14 +43,15 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 5,
-   "count": 3,
+   "count": 4,
    "soon": 0,
    "priceMin": 18000,
-   "priceMax": 20000,
+   "priceMax": 30000,
    "rooms": [
     "MC-003",
     "MC-158",
-    "MC-286"
+    "MC-286",
+    "MC-291"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/blocs-77/"
   },
@@ -217,14 +218,15 @@
    "areaSlug": "ekkamai",
    "station": "BTS เอกมัย",
    "walk": 4,
-   "count": 3,
+   "count": 4,
    "soon": 0,
    "priceMin": 24000,
-   "priceMax": 65000,
+   "priceMax": 80000,
    "rooms": [
     "MC-015",
     "MC-156",
-    "MC-155"
+    "MC-155",
+    "MC-289"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/rhythm-ekkamai/"
   },
@@ -380,13 +382,14 @@
    "areaSlug": "phrakhanong",
    "station": "BTS พระโขนง",
    "walk": 5,
-   "count": 7,
+   "count": 8,
    "soon": 0,
    "priceMin": 16000,
    "priceMax": 35000,
    "rooms": [
     "MC-032",
     "MC-035",
+    "MC-293",
     "MC-051",
     "MC-174",
     "MC-214",
@@ -1164,12 +1167,13 @@
    "areaSlug": "rama-9",
    "station": "MRT พระราม 9",
    "walk": 6,
-   "count": 1,
+   "count": 2,
    "soon": 0,
    "priceMin": 17000,
-   "priceMax": 17000,
+   "priceMax": 33000,
    "rooms": [
-    "MC-100"
+    "MC-100",
+    "MC-290"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/life-asoke/"
   },
@@ -1753,11 +1757,14 @@
    "areaSlug": "asoke",
    "station": "BTS นานา",
    "walk": 7,
-   "count": 1,
+   "count": 4,
    "soon": 0,
-   "priceMin": 70000,
+   "priceMin": 25000,
    "priceMax": 70000,
    "rooms": [
+    "MC-295",
+    "MC-296",
+    "MC-297",
     "MC-178"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/noble-be19/"
@@ -2031,14 +2038,15 @@
    "slug": "the-alcove-thonglor-10",
    "area": "เอกมัย",
    "areaSlug": "ekkamai",
-   "station": "BTS เอกมัย",
-   "walk": 16,
-   "count": 2,
+   "station": "BTS ทองหล่อ",
+   "walk": 14,
+   "count": 3,
    "soon": 0,
    "priceMin": 37000,
    "priceMax": 45000,
    "rooms": [
     "MC-269",
+    "MC-294",
     "MC-237"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-alcove-thonglor-10/"
@@ -2127,6 +2135,22 @@
     "MC-281"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/le-luk-condominium/"
+  },
+  {
+   "name": "Chalermnit Art De Maison",
+   "slug": "chalermnit-art-de-maison",
+   "area": "ทองหล่อ",
+   "areaSlug": "thonglor",
+   "station": "BTS ทองหล่อ",
+   "walk": 6,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 46000,
+   "priceMax": 46000,
+   "rooms": [
+    "MC-292"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/chalermnit-art-de-maison/"
   }
  ]
 }

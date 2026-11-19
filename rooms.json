@@ -6,7 +6,7 @@
   },
   "home": "https://banditkmc23-ai.github.io/movecondo/",
   "home_en": "https://banditkmc23-ai.github.io/movecondo/?lang=en",
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "currency": "THB",
   "contact": {
     "line": "https://line.me/R/ti/p/%40576yhgtz"
@@ -26,7 +26,7 @@
       "th": "อโศก",
       "en": "Asok",
       "url": "https://banditkmc23-ai.github.io/movecondo/areas/asoke/",
-      "rooms": 11
+      "rooms": 14
     },
     {
       "slug": "bangna",
@@ -54,7 +54,7 @@
       "th": "เอกมัย",
       "en": "Ekkamai",
       "url": "https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/",
-      "rooms": 22
+      "rooms": 24
     },
     {
       "slug": "huai-khwang",
@@ -68,14 +68,14 @@
       "th": "อ่อนนุช",
       "en": "On Nut",
       "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/",
-      "rooms": 65
+      "rooms": 66
     },
     {
       "slug": "phrakhanong",
       "th": "พระโขนง",
       "en": "Phra Khanong",
       "url": "https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/",
-      "rooms": 27
+      "rooms": 28
     },
     {
       "slug": "phrom-phong",
@@ -96,7 +96,7 @@
       "th": "พระราม 9",
       "en": "Rama 9",
       "url": "https://banditkmc23-ai.github.io/movecondo/areas/rama-9/",
-      "rooms": 20
+      "rooms": 21
     },
     {
       "slug": "samyan-silom",
@@ -110,7 +110,7 @@
       "th": "ทองหล่อ",
       "en": "Thonglor",
       "url": "https://banditkmc23-ai.github.io/movecondo/areas/thonglor/",
-      "rooms": 52
+      "rooms": 53
     }
   ],
   "projects": [
@@ -141,9 +141,9 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/blocs-77/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/blocs-77/?lang=en",
       "area_th": "อ่อนนุช",
-      "rooms": 3,
+      "rooms": 4,
       "price_min": 18000,
-      "price_max": 20000,
+      "price_max": 30000,
       "station_th": "BTS อ่อนนุช",
       "walk_min": 5
     },
@@ -240,9 +240,9 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/rhythm-ekkamai/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/rhythm-ekkamai/?lang=en",
       "area_th": "เอกมัย",
-      "rooms": 3,
+      "rooms": 4,
       "price_min": 24000,
-      "price_max": 65000,
+      "price_max": 80000,
       "station_th": "BTS เอกมัย",
       "walk_min": 4
     },
@@ -339,7 +339,7 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-48/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-48/?lang=en",
       "area_th": "พระโขนง",
-      "rooms": 7,
+      "rooms": 8,
       "price_min": 16000,
       "price_max": 35000,
       "station_th": "BTS พระโขนง",
@@ -845,9 +845,9 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/life-asoke/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/life-asoke/?lang=en",
       "area_th": "พระราม 9",
-      "rooms": 1,
+      "rooms": 2,
       "price_min": 17000,
-      "price_max": 17000,
+      "price_max": 33000,
       "station_th": "MRT พระราม 9",
       "walk_min": 6
     },
@@ -1230,8 +1230,8 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/noble-be19/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/noble-be19/?lang=en",
       "area_th": "อโศก",
-      "rooms": 1,
-      "price_min": 70000,
+      "rooms": 4,
+      "price_min": 25000,
       "price_max": 70000,
       "station_th": "BTS นานา",
       "walk_min": 7
@@ -1417,11 +1417,11 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-alcove-thonglor-10/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/the-alcove-thonglor-10/?lang=en",
       "area_th": "เอกมัย",
-      "rooms": 2,
+      "rooms": 3,
       "price_min": 37000,
       "price_max": 45000,
-      "station_th": "BTS เอกมัย",
-      "walk_min": 16
+      "station_th": "BTS ทองหล่อ",
+      "walk_min": 14
     },
     {
       "name": "BaanSiri 24",
@@ -1477,6 +1477,17 @@
       "price_max": 50000,
       "station_th": "BTS พระโขนง",
       "walk_min": 4
+    },
+    {
+      "name": "Chalermnit Art De Maison",
+      "url": "https://banditkmc23-ai.github.io/movecondo/condo/chalermnit-art-de-maison/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/chalermnit-art-de-maison/?lang=en",
+      "area_th": "ทองหล่อ",
+      "rooms": 1,
+      "price_min": 46000,
+      "price_max": 46000,
+      "station_th": "BTS ทองหล่อ",
+      "walk_min": 6
     }
   ],
   "rooms": [
@@ -2002,7 +2013,7 @@
         "th": "ชั้น 4",
         "en": "Floor 4"
       },
-      "rent_thb_per_month": 22000,
+      "rent_thb_per_month": 21000,
       "currency": "THB",
       "deposit": {
         "th": "2 เดือน",
@@ -2095,7 +2106,7 @@
         "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-005/7.webp",
         "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-005/8.webp"
       ],
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-20",
       "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/chapter-thonglor-25/",
       "contact": {
         "line": "https://line.me/R/ti/p/%40576yhgtz",
@@ -28307,6 +28318,975 @@
       ],
       "last_verified": "2026-11-19",
       "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-62/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-289",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-289/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-289/?lang=en",
+      "project": "Rhythm Ekkamai",
+      "area": {
+        "th": "เอกมัย",
+        "en": "Ekkamai",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/"
+      },
+      "type": {
+        "th": "2 ห้องนอน",
+        "en": "2 bedrooms"
+      },
+      "bedrooms": 2,
+      "size_sqm": 80.0,
+      "floor": {
+        "th": "ชั้น 13",
+        "en": "Floor 13"
+      },
+      "rent_thb_per_month": 80000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS เอกมัย",
+        "en": "BTS Ekkamai"
+      },
+      "walk_minutes_to_station": 6,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7228134,
+        "lng": 100.5842322,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 2 ห้องนอน ขนาด 80 ตร.ม. ที่ Rhythm Ekkamai ย่านเอกมัย ห้องมุม",
+        "en": "2-bedroom, 80 sq.m. at Rhythm Ekkamai, Ekkamai. Corner unit."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "ห้องมุม",
+              "en": "Corner unit"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-289/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-289/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-289/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-289/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-289/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-289/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-289/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-289/8.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-289/9.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-289/10.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-289/11.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-289/12.webp"
+      ],
+      "last_verified": "2026-11-20",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/rhythm-ekkamai/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-290",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-290/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-290/?lang=en",
+      "project": "Life Asoke",
+      "area": {
+        "th": "พระราม 9",
+        "en": "Rama 9",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/rama-9/"
+      },
+      "type": {
+        "th": "2 ห้องนอน",
+        "en": "2 bedrooms"
+      },
+      "bedrooms": 2,
+      "size_sqm": 55.0,
+      "floor": {
+        "th": "ชั้น 20",
+        "en": "Floor 20"
+      },
+      "rent_thb_per_month": 33000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "MRT เพชรบุรี",
+        "en": "MRT Phetchaburi"
+      },
+      "walk_minutes_to_station": 6,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.750498,
+        "lng": 100.564733,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 2 ห้องนอน ขนาด 55 ตร.ม. ที่ Life Asoke ย่านพระราม 9",
+        "en": "2-bedroom, 55 sq.m. at Life Asoke, Rama 9."
+      },
+      "features": [],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-290/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-290/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-290/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-290/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-290/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-290/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-290/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-290/8.webp"
+      ],
+      "last_verified": "2026-11-20",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/life-asoke/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-291",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-291/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-291/?lang=en",
+      "project": "Blocs 77",
+      "area": {
+        "th": "อ่อนนุช",
+        "en": "On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
+      },
+      "type": {
+        "th": "2 ห้องนอน",
+        "en": "2 bedrooms"
+      },
+      "bedrooms": 2,
+      "size_sqm": 60.0,
+      "floor": {
+        "th": "ชั้น 16",
+        "en": "Floor 16"
+      },
+      "rent_thb_per_month": 30000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "BTS อ่อนนุช",
+        "en": "BTS On Nut"
+      },
+      "walk_minutes_to_station": 9,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7106321,
+        "lng": 100.6015501,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 2 ห้องนอน ขนาด 60 ตร.ม. ที่ Blocs 77 ย่านอ่อนนุช ห้องมุม วิวสระว่ายน้ำ เครื่องใช้ไฟฟ้าครบ เครื่องซักผ้า พร้อมเข้าอยู่",
+        "en": "2-bedroom, 60 sq.m. at Blocs 77, On Nut. Corner unit, Pool view, Appliances included, Washing machine. Ready to move in."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "ห้องมุม",
+              "en": "Corner unit"
+            },
+            {
+              "th": "วิวสระว่ายน้ำ",
+              "en": "Pool view"
+            },
+            {
+              "th": "พร้อมเข้าอยู่",
+              "en": "Ready to move in"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เครื่องใช้ไฟฟ้าครบ",
+              "en": "Appliances included"
+            },
+            {
+              "th": "เครื่องซักผ้า",
+              "en": "Washing machine"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "สระว่ายน้ำ",
+              "en": "Swimming pool"
+            },
+            {
+              "th": "ที่จอดรถ",
+              "en": "Parking"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-291/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-291/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-291/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-291/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-291/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-291/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-291/7.webp"
+      ],
+      "last_verified": "2026-11-20",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/blocs-77/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-292",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-292/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-292/?lang=en",
+      "project": "Chalermnit Art De Maison",
+      "area": {
+        "th": "ทองหล่อ",
+        "en": "Thonglor",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/thonglor/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 41.0,
+      "floor": {
+        "th": "ชั้น 5",
+        "en": "Floor 5"
+      },
+      "rent_thb_per_month": 46000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "BTS ทองหล่อ",
+        "en": "BTS Thong Lo"
+      },
+      "walk_minutes_to_station": 6,
+      "shuttle_to_station": false,
+      "building_location": null,
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 41 ตร.ม. ที่ Chalermnit Art De Maison ย่านทองหล่อ เฟอร์นิเจอร์ครบ อ่างอาบน้ำ พร้อมเข้าอยู่",
+        "en": "1-bedroom, 41 sq.m. at Chalermnit Art De Maison, Thonglor. Fully furnished, Bathtub. Ready to move in."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "พร้อมเข้าอยู่",
+              "en": "Ready to move in"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์ครบ",
+              "en": "Fully furnished"
+            },
+            {
+              "th": "อ่างอาบน้ำ",
+              "en": "Bathtub"
+            },
+            {
+              "th": "เครื่องซักผ้า",
+              "en": "Washing machine"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "สระว่ายน้ำ",
+              "en": "Swimming pool"
+            },
+            {
+              "th": "ฟิตเนส",
+              "en": "Fitness"
+            },
+            {
+              "th": "ที่จอดรถ",
+              "en": "Parking"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-292/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-292/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-292/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-292/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-292/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-292/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-292/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-292/8.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-292/9.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-292/10.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-292/11.webp"
+      ],
+      "last_verified": "2026-11-20",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/chalermnit-art-de-maison/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-293",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-293/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-293/?lang=en",
+      "project": "Life Sukhumvit 48",
+      "area": {
+        "th": "พระโขนง",
+        "en": "Phra Khanong",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 40.0,
+      "floor": null,
+      "rent_thb_per_month": 17000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS พระโขนง",
+        "en": "BTS Phra Khanong"
+      },
+      "walk_minutes_to_station": 9,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7111348,
+        "lng": 100.5945596,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 40 ตร.ม. ที่ Life Sukhumvit 48 ย่านพระโขนง เครื่องใช้ไฟฟ้าครบ เครื่องซักผ้า",
+        "en": "1-bedroom, 40 sq.m. at Life Sukhumvit 48, Phra Khanong. Appliances included, Washing machine."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เครื่องใช้ไฟฟ้าครบ",
+              "en": "Appliances included"
+            },
+            {
+              "th": "เครื่องซักผ้า",
+              "en": "Washing machine"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "สระว่ายน้ำ",
+              "en": "Swimming pool"
+            },
+            {
+              "th": "ฟิตเนส",
+              "en": "Fitness"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-293/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-293/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-293/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-293/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-293/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-293/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-293/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-293/8.webp"
+      ],
+      "last_verified": "2026-11-20",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-48/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-294",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-294/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-294/?lang=en",
+      "project": "The Alcove Thonglor 10",
+      "area": {
+        "th": "เอกมัย",
+        "en": "Ekkamai",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 54.0,
+      "floor": {
+        "th": "ชั้น 14",
+        "en": "Floor 14"
+      },
+      "rent_thb_per_month": 38000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "พร้อมเข้าอยู่",
+        "en": "Ready to move in"
+      },
+      "nearest_station": {
+        "th": "BTS ทองหล่อ",
+        "en": "BTS Thong Lo"
+      },
+      "walk_minutes_to_station": 14,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7312446,
+        "lng": 100.5863832,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 54 ตร.ม. ที่ The Alcove Thonglor 10 ย่านเอกมัย ห้องมุม เฟอร์นิเจอร์ครบ เครื่องซักผ้า พร้อมเข้าอยู่",
+        "en": "1-bedroom, 54 sq.m. at The Alcove Thonglor 10, Ekkamai. Corner unit, Fully furnished, Washing machine. Ready to move in."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "ห้องมุม",
+              "en": "Corner unit"
+            },
+            {
+              "th": "พร้อมเข้าอยู่",
+              "en": "Ready to move in"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์ครบ",
+              "en": "Fully furnished"
+            },
+            {
+              "th": "เครื่องซักผ้า",
+              "en": "Washing machine"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "สระว่ายน้ำ",
+              "en": "Swimming pool"
+            },
+            {
+              "th": "ฟิตเนส",
+              "en": "Fitness"
+            },
+            {
+              "th": "ซาวน่า",
+              "en": "Sauna"
+            },
+            {
+              "th": "ที่จอดรถ",
+              "en": "Parking"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-294/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-294/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-294/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-294/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-294/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-294/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-294/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-294/8.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-294/9.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-294/10.webp"
+      ],
+      "last_verified": "2026-11-20",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/the-alcove-thonglor-10/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-295",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-295/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-295/?lang=en",
+      "project": "Noble BE19",
+      "area": {
+        "th": "อโศก",
+        "en": "Asok",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/asoke/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 34.12,
+      "floor": {
+        "th": "ชั้น 6",
+        "en": "Floor 6"
+      },
+      "rent_thb_per_month": 25000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS นานา",
+        "en": "BTS Nana"
+      },
+      "walk_minutes_to_station": 7,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.742301,
+        "lng": 100.559172,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 34.12 ตร.ม. ที่ Noble BE19 ย่านอโศก วิวสวน หันทิศเหนือ เครื่องซักผ้า",
+        "en": "1-bedroom, 34.12 sq.m. at Noble BE19, Asok. Garden view, North-facing, Washing machine."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "วิวสวน",
+              "en": "Garden view"
+            },
+            {
+              "th": "หันทิศเหนือ",
+              "en": "North-facing"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เครื่องซักผ้า",
+              "en": "Washing machine"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-295/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-295/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-295/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-295/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-295/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-295/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-295/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-295/8.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-295/9.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-295/10.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-295/11.webp"
+      ],
+      "last_verified": "2026-11-20",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/noble-be19/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-296",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-296/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-296/?lang=en",
+      "project": "Noble BE19",
+      "area": {
+        "th": "อโศก",
+        "en": "Asok",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/asoke/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 35.0,
+      "floor": {
+        "th": "ชั้น 10",
+        "en": "Floor 10"
+      },
+      "rent_thb_per_month": 27000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": null,
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS อโศก",
+        "en": "BTS Asok"
+      },
+      "walk_minutes_to_station": null,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.742301,
+        "lng": 100.559172,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 35 ตร.ม. ที่ Noble BE19 ย่านอโศก หันทิศเหนือ เครื่องซักผ้า",
+        "en": "1-bedroom, 35 sq.m. at Noble BE19, Asok. North-facing, Washing machine."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "หันทิศเหนือ",
+              "en": "North-facing"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เครื่องซักผ้า",
+              "en": "Washing machine"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "สระว่ายน้ำ",
+              "en": "Swimming pool"
+            },
+            {
+              "th": "ที่จอดรถ",
+              "en": "Parking"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-296/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-296/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-296/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-296/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-296/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-296/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-296/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-296/8.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-296/9.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-296/10.webp"
+      ],
+      "last_verified": "2026-11-20",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/noble-be19/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
+      }
+    },
+    {
+      "id": "MC-297",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-297/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-297/?lang=en",
+      "project": "Noble BE19",
+      "area": {
+        "th": "อโศก",
+        "en": "Asok",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/asoke/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 50.0,
+      "floor": {
+        "th": "ชั้น 3",
+        "en": "Floor 3"
+      },
+      "rent_thb_per_month": 45000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS นานา",
+        "en": "BTS Nana"
+      },
+      "walk_minutes_to_station": 7,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.742301,
+        "lng": 100.559172,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 50 ตร.ม. ที่ Noble BE19 ย่านอโศก เฟอร์นิเจอร์ครบ",
+        "en": "1-bedroom, 50 sq.m. at Noble BE19, Asok. Fully furnished."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "เฟอร์นิเจอร์ครบ",
+              "en": "Fully furnished"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "ส่วนกลางโครงการ",
+            "en": "Building facilities"
+          },
+          "items": [
+            {
+              "th": "สระว่ายน้ำ",
+              "en": "Swimming pool"
+            },
+            {
+              "th": "ฟิตเนส",
+              "en": "Fitness"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-297/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-297/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-297/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-297/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-297/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-297/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-297/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-297/8.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-297/9.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-297/10.webp"
+      ],
+      "last_verified": "2026-11-20",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/noble-be19/",
       "contact": {
         "line": "https://line.me/R/ti/p/%40576yhgtz",
         "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"
