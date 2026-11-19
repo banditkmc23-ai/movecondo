@@ -43,13 +43,14 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 5,
-   "count": 2,
+   "count": 3,
    "soon": 0,
    "priceMin": 18000,
    "priceMax": 20000,
    "rooms": [
     "MC-003",
-    "MC-158"
+    "MC-158",
+    "MC-286"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/blocs-77/"
   },
@@ -841,13 +842,14 @@
    "areaSlug": "thonglor",
    "station": "BTS ทองหล่อ",
    "walk": null,
-   "count": 2,
+   "count": 3,
    "soon": 0,
    "priceMin": 33000,
-   "priceMax": 35000,
+   "priceMax": 70000,
    "rooms": [
     "MC-072",
-    "MC-083"
+    "MC-083",
+    "MC-287"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/noble-form-thonglor/"
   },
@@ -1398,16 +1400,17 @@
    "areaSlug": "on-nut",
    "station": "BTS บางจาก",
    "walk": 2,
-   "count": 5,
+   "count": 6,
    "soon": 0,
    "priceMin": 13000,
-   "priceMax": 25000,
+   "priceMax": 27000,
    "rooms": [
     "MC-202",
     "MC-198",
     "MC-199",
     "MC-129",
-    "MC-200"
+    "MC-200",
+    "MC-288"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-62/"
   },
@@ -1783,11 +1786,12 @@
    "areaSlug": "phrom-phong",
    "station": "BTS พร้อมพงษ์",
    "walk": 10,
-   "count": 2,
+   "count": 3,
    "soon": 0,
-   "priceMin": 39500,
+   "priceMin": 28000,
    "priceMax": 70000,
    "rooms": [
+    "MC-280",
     "MC-182",
     "MC-233"
    ],
@@ -1946,12 +1950,13 @@
    "areaSlug": "phrom-phong",
    "station": "BTS พร้อมพงษ์",
    "walk": 9,
-   "count": 2,
+   "count": 3,
    "soon": 0,
    "priceMin": 35000,
    "priceMax": 54000,
    "rooms": [
     "MC-275",
+    "MC-285",
     "MC-217"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/h-sukhumvit-43/"
@@ -1963,11 +1968,12 @@
    "areaSlug": "phrom-phong",
    "station": "MRT ศูนย์การประชุมแห่งชาติสิริกิติ์",
    "walk": 11,
-   "count": 1,
+   "count": 2,
    "soon": 0,
-   "priceMin": 24000,
+   "priceMin": 22000,
    "priceMax": 24000,
    "rooms": [
+    "MC-282",
     "MC-218"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/park-origin-phrom-phong/"
@@ -2076,15 +2082,17 @@
    "areaSlug": "phrom-phong",
    "station": null,
    "walk": null,
-   "count": 4,
+   "count": 6,
    "soon": 0,
    "priceMin": 26000,
-   "priceMax": 40000,
+   "priceMax": 58000,
    "rooms": [
     "MC-274",
     "MC-273",
     "MC-272",
-    "MC-271"
+    "MC-284",
+    "MC-271",
+    "MC-283"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/supalai-oriental-sukhumvit-39/"
   },
@@ -2103,6 +2111,22 @@
     "MC-278"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-diplomat-39/"
+  },
+  {
+   "name": "Le Luk Condominium",
+   "slug": "le-luk-condominium",
+   "area": "พระโขนง",
+   "areaSlug": "phrakhanong",
+   "station": "BTS พระโขนง",
+   "walk": 4,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 50000,
+   "priceMax": 50000,
+   "rooms": [
+    "MC-281"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/le-luk-condominium/"
   }
  ]
 }
