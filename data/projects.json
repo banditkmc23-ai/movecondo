@@ -237,12 +237,11 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 10,
-   "count": 3,
+   "count": 2,
    "soon": 0,
-   "priceMin": 12000,
+   "priceMin": 13000,
    "priceMax": 16000,
    "rooms": [
-    "MC-160",
     "MC-043",
     "MC-017"
    ],
@@ -330,13 +329,14 @@
    "areaSlug": "ekkamai",
    "station": "BTS เอกมัย",
    "walk": null,
-   "count": 3,
+   "count": 4,
    "soon": 1,
    "priceMin": 18000,
-   "priceMax": 24000,
+   "priceMax": 43000,
    "rooms": [
     "MC-074",
     "MC-025",
+    "MC-301",
     "MC-250"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/xt-ekkamai/"
@@ -365,11 +365,12 @@
    "areaSlug": "rama-9",
    "station": "MRT พระราม 9",
    "walk": 4,
-   "count": 2,
+   "count": 3,
    "soon": 0,
-   "priceMin": 42000,
+   "priceMin": 19000,
    "priceMax": 52000,
    "rooms": [
+    "MC-304",
     "MC-167",
     "MC-030"
    ],
@@ -468,22 +469,6 @@
     "MC-267"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/"
-  },
-  {
-   "name": "The Tree Onnut Station",
-   "slug": "the-tree-onnut-station",
-   "area": "อ่อนนุช",
-   "areaSlug": "on-nut",
-   "station": null,
-   "walk": null,
-   "count": 1,
-   "soon": 0,
-   "priceMin": 14500,
-   "priceMax": 14500,
-   "rooms": [
-    "MC-042"
-   ],
-   "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-tree-onnut-station/"
   },
   {
    "name": "Le Cote",
@@ -1387,11 +1372,12 @@
    "areaSlug": "thonglor",
    "station": "BTS ทองหล่อ",
    "walk": 4,
-   "count": 2,
+   "count": 3,
    "soon": 0,
-   "priceMin": 57000,
+   "priceMin": 52000,
    "priceMax": 60000,
    "rooms": [
+    "MC-302",
     "MC-236",
     "MC-128"
    ],
@@ -1607,13 +1593,14 @@
    "areaSlug": "asoke",
    "station": "MRT สุขุมวิท",
    "walk": 10,
-   "count": 3,
+   "count": 4,
    "soon": 1,
    "priceMin": 15000,
-   "priceMax": 28000,
+   "priceMax": 35000,
    "rooms": [
     "MC-152",
     "MC-196",
+    "MC-305",
     "MC-264"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/grand-park-view-asoke/"
@@ -1689,13 +1676,14 @@
    "areaSlug": "phrakhanong",
    "station": "BTS พระโขนง",
    "walk": 7,
-   "count": 4,
+   "count": 5,
    "soon": 1,
    "priceMin": 12000,
    "priceMax": 15000,
    "rooms": [
     "MC-177",
     "MC-168",
+    "MC-299",
     "MC-170",
     "MC-268"
    ],
@@ -2090,7 +2078,7 @@
    "areaSlug": "phrom-phong",
    "station": null,
    "walk": null,
-   "count": 6,
+   "count": 7,
    "soon": 0,
    "priceMin": 26000,
    "priceMax": 58000,
@@ -2100,6 +2088,7 @@
     "MC-272",
     "MC-284",
     "MC-271",
+    "MC-303",
     "MC-283"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/supalai-oriental-sukhumvit-39/"
@@ -2151,6 +2140,54 @@
     "MC-292"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/chalermnit-art-de-maison/"
+  },
+  {
+   "name": "Noble Solo",
+   "slug": "noble-solo",
+   "area": "ทองหล่อ",
+   "areaSlug": "thonglor",
+   "station": null,
+   "walk": null,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 25000,
+   "priceMax": 25000,
+   "rooms": [
+    "MC-298"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/noble-solo/"
+  },
+  {
+   "name": "Noble Refine Sukhumvit 26",
+   "slug": "noble-refine-sukhumvit-26",
+   "area": "พร้อมพงษ์",
+   "areaSlug": "phrom-phong",
+   "station": "BTS พร้อมพงษ์",
+   "walk": 5,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 50000,
+   "priceMax": 50000,
+   "rooms": [
+    "MC-300"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/noble-refine-sukhumvit-26/"
+  },
+  {
+   "name": "Taka Haus",
+   "slug": "taka-haus",
+   "area": "เอกมัย",
+   "areaSlug": "ekkamai",
+   "station": null,
+   "walk": null,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 20000,
+   "priceMax": 20000,
+   "rooms": [
+    "MC-306"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/taka-haus/"
   }
  ]
 }

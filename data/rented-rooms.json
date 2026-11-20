@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19T10:36:40+07:00",
+  "updated": "2026-11-21T01:31:05+07:00",
   "rooms": [
     {
       "id": "MC-007",
@@ -28,6 +28,20 @@
       "kind": "rented",
       "restored": false,
       "markedAt": "2026-11-19T10:36:40+07:00"
+    },
+    {
+      "id": "MC-042",
+      "slug": "mc-042",
+      "kind": "rented",
+      "restored": false,
+      "markedAt": "2026-11-21T01:31:05+07:00"
+    },
+    {
+      "id": "MC-160",
+      "slug": "mc-160",
+      "kind": "rented",
+      "restored": false,
+      "markedAt": "2026-11-21T01:31:05+07:00"
     },
     {
       "id": "MC-213",
