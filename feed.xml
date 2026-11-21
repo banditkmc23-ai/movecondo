@@ -6,7 +6,7 @@
     <atom:link href="https://banditkmc23-ai.github.io/movecondo/feed.xml" rel="self" type="application/rss+xml" />
     <description>คอนโดให้เช่าใกล้รถไฟฟ้าในกรุงเทพฯ · Condos for rent near BTS/MRT in Bangkok</description>
     <language>th</language>
-    <lastBuildDate>Sat, 21 Nov 2026 09:00:00 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 09:00:00 +0700</lastBuildDate>
     <item>
       <title>Aspire Onnut Station · 1 ห้องนอน 34 ตร.ม. · 21,000 บาท/เดือน · ย่านอ่อนนุช</title>
       <link>https://banditkmc23-ai.github.io/movecondo/rooms/mc-001/</link>
@@ -88,16 +88,6 @@ Kawa Haus (On Nut): 1 bedroom, 38 sq.m., 23,000 THB/month, Available, about 14 m
       <enclosure url="https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/1.webp" type="image/webp" length="0" />
     </item>
     <item>
-      <title>Mori Haus · 1 ห้องนอน 47 ตร.ม. · 28,000 บาท/เดือน · ย่านอ่อนนุช</title>
-      <link>https://banditkmc23-ai.github.io/movecondo/rooms/mc-011/</link>
-      <guid isPermaLink="true">https://banditkmc23-ai.github.io/movecondo/rooms/mc-011/</guid>
-      <pubDate>Tue, 10 Nov 2026 09:00:00 +0700</pubDate>
-      <category>อ่อนนุช</category>
-      <description>ห้องมีอ่างอาบน้ำ วิวสระว่ายน้ำ ที่ Mori Haus ใน T77 Community ย่านอ่อนนุช มีรถรับ-ส่งและรถกอล์ฟฟรี ใกล้ Habito Mall และ Bangkok Prep · ว่าง · เดินประมาณ 14 นาทีถึง BTS อ่อนนุช (มีรถ shuttle)
-Mori Haus (On Nut): 1 bedroom, 47 sq.m., 28,000 THB/month, Available, about 14 min walk to BTS On Nut (shuttle available). Unit with a bathtub and a pool view, at Mori Haus in T77 Community, On Nut, with a free shuttle and golf cart, near Habito Mall and Bangkok Prep.</description>
-      <enclosure url="https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-011/1.webp" type="image/webp" length="0" />
-    </item>
-    <item>
       <title>Nia By Sansiri · 2 ห้องนอน 48 ตร.ม. · 25,000 บาท/เดือน · ย่านอ่อนนุช</title>
       <link>https://banditkmc23-ai.github.io/movecondo/rooms/mc-012/</link>
       <guid isPermaLink="true">https://banditkmc23-ai.github.io/movecondo/rooms/mc-012/</guid>
@@ -138,13 +128,13 @@ Rhythm Ekkamai (Ekkamai): 1 bedroom, 30 sq.m., 24,000 THB/month, Available, abou
       <enclosure url="https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-015/1.webp" type="image/webp" length="0" />
     </item>
     <item>
-      <title>The Base Park West · 1 ห้องนอน 31 ตร.ม. · 16,000 บาท/เดือน · ย่านอ่อนนุช</title>
+      <title>The Base Park West · 1 ห้องนอน 31 ตร.ม. · 14,500 บาท/เดือน · ย่านอ่อนนุช</title>
       <link>https://banditkmc23-ai.github.io/movecondo/rooms/mc-017/</link>
       <guid isPermaLink="true">https://banditkmc23-ai.github.io/movecondo/rooms/mc-017/</guid>
-      <pubDate>Sat, 07 Nov 2026 09:00:00 +0700</pubDate>
+      <pubDate>Sun, 22 Nov 2026 09:00:00 +0700</pubDate>
       <category>อ่อนนุช</category>
       <description>ห้องมุมวิวเมืองและทางด่วน เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ที่ The Base Park West สุขุมวิท 77 ย่านอ่อนนุช · ว่าง · เดินประมาณ 10 นาทีถึง BTS อ่อนนุช
-The Base Park West (On Nut): 1 bedroom, 31 sq.m., 16,000 THB/month, Available, about 10 min walk to BTS On Nut. Corner unit with city and expressway views, fully furnished and ready to move in, at The Base Park West Sukhumvit 77 in On Nut.</description>
+The Base Park West (On Nut): 1 bedroom, 31 sq.m., 14,500 THB/month, Available, about 10 min walk to BTS On Nut. Corner unit with city and expressway views, fully furnished and ready to move in, at The Base Park West Sukhumvit 77 in On Nut.</description>
       <enclosure url="https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-017/1.webp" type="image/webp" length="0" />
     </item>
     <item>
@@ -2836,6 +2826,46 @@ Grand Park View Asoke (Asok): 2 bedrooms, 68.35 sq.m., 35,000 THB/month, Availab
       <description>ห้อง 1 ห้องนอน ขนาด 34.75 ตร.ม. ที่ Taka Haus ย่านเอกมัย วิวสระว่ายน้ำ เครื่องใช้ไฟฟ้าครบ · ว่าง · สอบถามสถานีใกล้ที่สุดทาง LINE
 Taka Haus (Ekkamai): 1 bedroom, 34.75 sq.m., 20,000 THB/month, Available, nearest station: ask on LINE. 1-bedroom, 34.75 sq.m. at Taka Haus, Ekkamai. Pool view, Appliances included.</description>
       <enclosure url="https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-306/1.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+      <title>Noble BE33 · 43.72 ตร.ม. · 38,000 บาท/เดือน · ย่านพร้อมพงษ์</title>
+      <link>https://banditkmc23-ai.github.io/movecondo/rooms/mc-307/</link>
+      <guid isPermaLink="true">https://banditkmc23-ai.github.io/movecondo/rooms/mc-307/</guid>
+      <pubDate>Sun, 22 Nov 2026 09:00:00 +0700</pubDate>
+      <category>พร้อมพงษ์</category>
+      <description>ห้อง ขนาด 43.72 ตร.ม. ที่ Noble BE33 ย่านพร้อมพงษ์ ห้องมุม วิวต้นไม้ อ่างอาบน้ำ เครื่องซักผ้า พร้อมเข้าอยู่ · ว่าง · เดินประมาณ 10 นาทีถึง BTS พร้อมพงษ์
+Noble BE33 (Phrom Phong): 43.72 sq.m., 38,000 THB/month, Available, about 10 min walk to BTS Phrom Phong. 43.72 sq.m. at Noble BE33, Phrom Phong. Corner unit, Tree view, Bathtub, Washing machine. Ready to move in.</description>
+      <enclosure url="https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-307/1.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+      <title>Beatniq Sukhumvit 32 · 1 ห้องนอน 57.57 ตร.ม. · 65,000 บาท/เดือน · ย่านทองหล่อ</title>
+      <link>https://banditkmc23-ai.github.io/movecondo/rooms/mc-308/</link>
+      <guid isPermaLink="true">https://banditkmc23-ai.github.io/movecondo/rooms/mc-308/</guid>
+      <pubDate>Sun, 22 Nov 2026 09:00:00 +0700</pubDate>
+      <category>ทองหล่อ</category>
+      <description>ห้อง 1 ห้องนอน ขนาด 57.57 ตร.ม. ที่ Beatniq Sukhumvit 32 ย่านทองหล่อ หันทิศใต้ เครื่องใช้ไฟฟ้าครบ อ่างอาบน้ำ พร้อมเข้าอยู่ · ว่าง · เดินประมาณ 3 นาทีถึง BTS ทองหล่อ
+Beatniq Sukhumvit 32 (Thonglor): 1 bedroom, 57.57 sq.m., 65,000 THB/month, Available, about 3 min walk to BTS Thong Lo. 1-bedroom, 57.57 sq.m. at Beatniq Sukhumvit 32, Thonglor. South-facing, Appliances included, Bathtub. Ready to move in.</description>
+      <enclosure url="https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-308/1.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+      <title>The Tree Onnut Station · 2 ห้องนอน 39.58 ตร.ม. · 23,000 บาท/เดือน · ย่านอ่อนนุช</title>
+      <link>https://banditkmc23-ai.github.io/movecondo/rooms/mc-309/</link>
+      <guid isPermaLink="true">https://banditkmc23-ai.github.io/movecondo/rooms/mc-309/</guid>
+      <pubDate>Sun, 22 Nov 2026 09:00:00 +0700</pubDate>
+      <category>อ่อนนุช</category>
+      <description>ห้อง 2 ห้องนอน ขนาด 39.58 ตร.ม. ที่ The Tree Onnut Station ย่านอ่อนนุช วิวสระว่ายน้ำ พร้อมเข้าอยู่ · ว่าง · เดินประมาณ 5 นาทีถึง BTS อ่อนนุช
+The Tree Onnut Station (On Nut): 2 bedrooms, 39.58 sq.m., 23,000 THB/month, Available, about 5 min walk to BTS On Nut. 2-bedroom, 39.58 sq.m. at The Tree Onnut Station, On Nut. Pool view. Ready to move in.</description>
+      <enclosure url="https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-309/1.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+      <title>Sky Walk Residences · 1 ห้องนอน 54 ตร.ม. · 26,000 บาท/เดือน · ย่านพระโขนง</title>
+      <link>https://banditkmc23-ai.github.io/movecondo/rooms/mc-310/</link>
+      <guid isPermaLink="true">https://banditkmc23-ai.github.io/movecondo/rooms/mc-310/</guid>
+      <pubDate>Sun, 22 Nov 2026 09:00:00 +0700</pubDate>
+      <category>พระโขนง</category>
+      <description>ห้อง 1 ห้องนอน ขนาด 54 ตร.ม. ที่ Sky Walk Residences ย่านพระโขนง เฟอร์นิเจอร์ครบ · ว่าง · เดินประมาณ 3 นาทีถึง BTS พระโขนง
+Sky Walk Residences (Phra Khanong): 1 bedroom, 54 sq.m., 26,000 THB/month, Available, about 3 min walk to BTS Phra Khanong. 1-bedroom, 54 sq.m. at Sky Walk Residences, Phra Khanong. Fully furnished.</description>
+      <enclosure url="https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-310/1.webp" type="image/webp" length="0" />
     </item>
   </channel>
 </rss>

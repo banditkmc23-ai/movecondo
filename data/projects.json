@@ -136,24 +136,6 @@
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/"
   },
   {
-   "name": "Mori Haus",
-   "slug": "mori-haus",
-   "area": "อ่อนนุช",
-   "areaSlug": "on-nut",
-   "station": "BTS อ่อนนุช",
-   "walk": 14,
-   "count": 3,
-   "soon": 0,
-   "priceMin": 24000,
-   "priceMax": 50000,
-   "rooms": [
-    "MC-153",
-    "MC-011",
-    "MC-026"
-   ],
-   "url": "https://banditkmc23-ai.github.io/movecondo/condo/mori-haus/"
-  },
-  {
    "name": "Nia By Sansiri",
    "slug": "nia-by-sansiri",
    "area": "อ่อนนุช",
@@ -240,7 +222,7 @@
    "count": 2,
    "soon": 0,
    "priceMin": 13000,
-   "priceMax": 16000,
+   "priceMax": 14500,
    "rooms": [
     "MC-043",
     "MC-017"
@@ -340,6 +322,23 @@
     "MC-250"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/xt-ekkamai/"
+  },
+  {
+   "name": "Mori Haus",
+   "slug": "mori-haus",
+   "area": "อ่อนนุช",
+   "areaSlug": "on-nut",
+   "station": "BTS อ่อนนุช",
+   "walk": 18,
+   "count": 2,
+   "soon": 0,
+   "priceMin": 24000,
+   "priceMax": 50000,
+   "rooms": [
+    "MC-153",
+    "MC-026"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/mori-haus/"
   },
   {
    "name": "Modiz Sukhumvit 50",
@@ -1371,15 +1370,16 @@
    "area": "ทองหล่อ",
    "areaSlug": "thonglor",
    "station": "BTS ทองหล่อ",
-   "walk": 4,
-   "count": 3,
+   "walk": 3,
+   "count": 4,
    "soon": 0,
    "priceMin": 52000,
-   "priceMax": 60000,
+   "priceMax": 65000,
    "rooms": [
     "MC-302",
     "MC-236",
-    "MC-128"
+    "MC-128",
+    "MC-308"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/beatniq-sukhumvit-32/"
   },
@@ -1781,12 +1781,13 @@
    "areaSlug": "phrom-phong",
    "station": "BTS พร้อมพงษ์",
    "walk": 10,
-   "count": 3,
+   "count": 4,
    "soon": 0,
    "priceMin": 28000,
    "priceMax": 70000,
    "rooms": [
     "MC-280",
+    "MC-307",
     "MC-182",
     "MC-233"
    ],
@@ -1996,11 +1997,12 @@
    "areaSlug": "phrakhanong",
    "station": "BTS พระโขนง",
    "walk": 1,
-   "count": 1,
+   "count": 2,
    "soon": 0,
-   "priceMin": 35000,
+   "priceMin": 26000,
    "priceMax": 35000,
    "rooms": [
+    "MC-310",
     "MC-232"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/sky-walk-residences/"
@@ -2188,6 +2190,22 @@
     "MC-306"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/taka-haus/"
+  },
+  {
+   "name": "The Tree Onnut Station",
+   "slug": "the-tree-onnut-station",
+   "area": "อ่อนนุช",
+   "areaSlug": "on-nut",
+   "station": "BTS อ่อนนุช",
+   "walk": 5,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 23000,
+   "priceMax": 23000,
+   "rooms": [
+    "MC-309"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-tree-onnut-station/"
   }
  ]
 }
