@@ -8,15 +8,16 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 2,
-   "count": 4,
+   "count": 5,
    "soon": 0,
    "priceMin": 17000,
-   "priceMax": 21000,
+   "priceMax": 29000,
    "rooms": [
     "MC-075",
     "MC-089",
     "MC-222",
-    "MC-001"
+    "MC-001",
+    "MC-312"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/aspire-onnut-station/"
   },
@@ -43,13 +44,12 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 5,
-   "count": 4,
+   "count": 3,
    "soon": 0,
    "priceMin": 18000,
    "priceMax": 30000,
    "rooms": [
     "MC-003",
-    "MC-158",
     "MC-286",
     "MC-291"
    ],
@@ -405,12 +405,13 @@
    "areaSlug": "phrakhanong",
    "station": "BTS พระโขนง",
    "walk": 1,
-   "count": 1,
+   "count": 2,
    "soon": 0,
    "priceMin": 22000,
-   "priceMax": 22000,
+   "priceMax": 30000,
    "rooms": [
-    "MC-033"
+    "MC-033",
+    "MC-314"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-44-1/"
   },
@@ -2206,6 +2207,38 @@
     "MC-309"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-tree-onnut-station/"
+  },
+  {
+   "name": "Rhythm Sukhumvit 42",
+   "slug": "rhythm-sukhumvit-42",
+   "area": "เอกมัย",
+   "areaSlug": "ekkamai",
+   "station": "BTS เอกมัย",
+   "walk": 3,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 36000,
+   "priceMax": 36000,
+   "rooms": [
+    "MC-311"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-42/"
+  },
+  {
+   "name": "XT Huaikhwang",
+   "slug": "xt-huaikhwang",
+   "area": "ห้วยขวาง",
+   "areaSlug": "huai-khwang",
+   "station": "MRT ห้วยขวาง",
+   "walk": 1,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 18000,
+   "priceMax": 18000,
+   "rooms": [
+    "MC-313"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/xt-huaikhwang/"
   }
  ]
 }
