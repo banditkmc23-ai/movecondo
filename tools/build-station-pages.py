@@ -23,9 +23,9 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 os.chdir(ROOT)
 
 BASE = "https://banditkmc23-ai.github.io/movecondo/"
-ASSET_V = "20261124a1"
-STYLES_V = "20261124a1"
-I18N_JS_V = "20261124a1"
+ASSET_V = "20261124a2"
+STYLES_V = "20261124a2"
+I18N_JS_V = "20261124a2"
 TODAY = date.today()
 TH_MON = ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.",
           "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."]
@@ -73,20 +73,15 @@ def last_verified(l):
     return iso_date(l.get("lastVerified") or l.get("last_verified"))
 
 def badge_html(l):
-    """Fold the verified date into the existing top-left badge."""
+    """Visible badge text: "ว่าง" or "เข้าอยู่ได้ [date]". Dates stay in data attrs / JSON-LD only."""
     lv = last_verified(l)
+    lv_attr = f' data-last-verified="{lv}"' if lv else ""
     if is_soon(l):
         a = iso_date(l.get("available") or l.get("availableFrom"))
         text = f"เข้าอยู่ได้ {thd(a)}"
-        if lv:
-            text += f" · ตรวจ {thd(lv)}"
-        lv_attr = f' data-last-verified="{lv}"' if lv else ""
         return (f'<span class="badge-vacant badge-soon" data-avail-from="{a}"'
                 f'{lv_attr}>{esc(text)}</span>')
-    if lv:
-        return (f'<span class="badge-vacant" data-last-verified="{lv}">'
-                f'ว่างจริง · ตรวจ {esc(thd(lv))}</span>')
-    return '<span class="badge-vacant">ว่าง</span>'
+    return f'<span class="badge-vacant"{lv_attr}>ว่าง</span>'
 
 def clean_public_text(t):
     t = CODE_RE.sub("", t or "")
@@ -229,9 +224,9 @@ def link_station_name(name, href, text):
         return text
     return text.replace(name, f'<a href="{esc(href)}">{esc(name)}</a>', 1)
 
-def patch_room_page(s, listing, by_name, pre="../../"):
+def patch_room_page(s, listing, by_name, listings, pre="../../"):
     s = strip_codes_in_html(s)
-    s = patch_badges_in_html(s, {listing["id"]: listing})
+    s = patch_badges_in_html(s, listings)
     st = station_of(listing, by_name)
     if not st:
         return s
@@ -696,7 +691,7 @@ def patch_all_pages(listings, by_name, hubs):
             # rented pages still in folders - strip codes, leave rented badge
             write(p, stamp_assets(strip_codes_in_html(read(p))))
             continue
-        write(p, stamp_assets(patch_room_page(read(p), l, by_name)))
+        write(p, stamp_assets(patch_room_page(read(p), l, by_name, listings)))
     # type/buy/partner just in case a code leaked
     for p in (glob.glob("buy/**/index.html", recursive=True)
               + glob.glob("type/*/index.html")

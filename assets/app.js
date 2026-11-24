@@ -51,14 +51,12 @@ function verifiedBadgeHTML(l){
   if(!l) return `<span class="badge-vacant">ว่าง</span>`;
   const soon = soonFrom(l);
   const lv = l.lastVerified || "";
+  const lvAttr = lv ? ` data-last-verified="${lv}"` : "";
   if(soon){
-    let text = "เข้าอยู่ได้ " + thDateShort(soon);
-    const attr = [`data-avail-from="${soon}"`];
-    if(lv){ text += " · ตรวจ " + thDateShort(lv); attr.push(`data-last-verified="${lv}"`); }
-    return `<span class="badge-vacant badge-soon" ${attr.join(" ")}>${text}</span>`;
+    const text = "เข้าอยู่ได้ " + thDateShort(soon);
+    return `<span class="badge-vacant badge-soon" data-avail-from="${soon}"${lvAttr}>${text}</span>`;
   }
-  if(lv) return `<span class="badge-vacant" data-last-verified="${lv}">ว่างจริง · ตรวจ ${thDateShort(lv)}</span>`;
-  return `<span class="badge-vacant">ว่าง</span>`;
+  return `<span class="badge-vacant"${lvAttr}>ว่าง</span>`;
 }
 function stationHubHref(name){
   const map = (typeof STATION_SLUGS!=="undefined") ? STATION_SLUGS : {};
