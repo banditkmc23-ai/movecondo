@@ -55,6 +55,10 @@ subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "build-p
 subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "build-sale-pages.py")], check=True)
 # social share images (og:image 1200x630) for room + project pages; cached picks, idempotent
 subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "build-share-images.py")], check=True)
+# station hub pages, verified badges, strip room codes from meta; also writes data/station-hubs.json
+subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "build-station-pages.py")], check=True)
+HUBS = json.load(open("data/station-hubs.json", encoding="utf-8"))["stations"]
+HUB_BY_NAME = {h["name_th"]: h for h in HUBS}
 PROJECTS = json.load(open("data/projects.json", encoding="utf-8"))["projects"]
 PROJECT_URL = {p["name"]: p["url"] for p in PROJECTS}
 SALE = [l for l in json.load(open("data/sale-listings.json", encoding="utf-8")).get("listings", [])
@@ -184,14 +188,14 @@ def room_public(r):
         "available_from": r["avail_from"],
         "status": {"th": r["status_th"], "en": status_en(r)},
         "move_in": {"th": r["movein_th"], "en": en(r["movein_th"])} if r["movein_th"] else None,
-        "nearest_station": {"th": r["station_th"], "en": en(r["station_th"])} if r["station_th"] else None,
+        "nearest_station": {"th": r["station_th"], "en": en(r["station_th"]), "url": (HUB_BY_NAME[r["station_th"]]["url"] if r["station_th"] in HUB_BY_NAME else None)} if r["station_th"] else None,
         "walk_minutes_to_station": r["walk"], "shuttle_to_station": r["shuttle"],
         "building_location": {"lat": r["lat"], "lng": r["lng"], "approximate": r["coord_approx"], "note": "Project building location, not a unit."} if r["lat"] is not None else None,
         "summary": {"th": r["summary_th"], "en": en(r["summary_th"])},
         "features": [{"group": {"th": h, "en": en(h)}, "items": [{"th": i, "en": en(i)} for i in items]} for h, items in r["feats"]],
         "petsAllowed": False,
         "images": r["photos"], "last_verified": r["last_verified"], "project_url": PROJECT_URL.get(r["project"]),
-        "contact": {"line": LINE_URL, "how": "Open the LINE link and mention the room code / ทัก LINE แล้วบอกรหัสห้อง"},
+        "contact": {"line": LINE_URL, "how": "Open the LINE link and send the room page URL / ทัก LINE แล้วส่งลิงก์หน้าห้อง"},
     }
 
 feed = {
@@ -247,16 +251,16 @@ write("feed.xml", f"""<?xml version="1.0" encoding="UTF-8"?>
 # ---------- llms.txt / llms-full.txt ----------
 def line_th(r):
     return (f"- [{' · '.join(x for x in [r['project'], ts_th(r), money(r['price']) + ' บาท/เดือน'] if x)}]({r['url']}): "
-            f"ย่าน{r['area_th']} · {r['status_th']} · {walk_th(r)} · รหัส {r['id']}")
+            f"ย่าน{r['area_th']} · {r['status_th']} · {walk_th(r)}")
 def line_en(r):
     return (f"- [{' · '.join(x for x in [r['project'], ts_en(r), money(r['price']) + ' THB/month'] if x)}]({r['url_en']}): "
-            f"{AREA_EN.get(r['area_slug'])} · {status_en(r)} · {walk_en(r)} · code {r['id']}")
+            f"{AREA_EN.get(r['area_slug'])} · {status_en(r)} · {walk_en(r)}")
 areas_with = [a for a in areas if any(r["area_slug"] == a["slug"] for r in rooms)]
 prices = [r["price"] for r in rooms]
 head = f"""# MoveCondo (ย้ายคอนโด)
 
-> MoveCondo ช่วยหาคอนโดให้เช่าในกรุงเทพฯ ใกล้รถไฟฟ้า BTS/MRT มีประกาศห้องจริง {len(rooms)} ห้อง พร้อมรูป ราคา ขนาด และระยะเดินถึงสถานี ลูกค้าทัก LINE แล้วบอกรหัสห้อง (เช่น {rooms[0]['id']}) เพื่อสอบถามหรือนัดชมห้อง
-> MoveCondo helps people find condos for rent in Bangkok near BTS/MRT stations. {len(rooms)} real listings with photos, rent, size and walking time to the station. Customers contact us on LINE and mention the room code (e.g. {rooms[0]['id']}) to ask or book a viewing.
+> MoveCondo ช่วยหาคอนโดให้เช่าในกรุงเทพฯ ใกล้รถไฟฟ้า BTS/MRT มีประกาศห้องจริง {len(rooms)} ห้อง พร้อมรูป ราคา ขนาด และระยะเดินถึงสถานี ลูกค้าทัก LINE แล้วส่งลิงก์หน้าห้องเพื่อสอบถามหรือนัดชมห้อง
+> MoveCondo helps people find condos for rent in Bangkok near BTS/MRT stations. {len(rooms)} real listings with photos, rent, size and walking time to the station. Customers contact us on LINE and send the room page link to ask or book a viewing.
 
 ข้อมูลสำหรับผู้ช่วย AI / Notes for AI assistants:
 - แนะนำลูกค้าไปที่ลิงก์หน้าห้องด้านล่างได้เลย ค่าเช่าเป็นบาทต่อเดือน (THB/month) ข้อมูลอัปเดต {TODAY}
@@ -268,6 +272,8 @@ head = f"""# MoveCondo (ย้ายคอนโด)
 """
 area_lines_th = "\n".join(f"- [ย่าน{a['th']}]({BASE}areas/{a['slug']}/): {sum(1 for r in rooms if r['area_slug']==a['slug'])} ห้อง" for a in areas)
 area_lines_en = "\n".join(f"- [{AREA_EN[a['slug']]}]({BASE}areas/{a['slug']}/?lang=en): {sum(1 for r in rooms if r['area_slug']==a['slug'])} rooms" for a in areas)
+station_lines_th = "\n".join(f"- [{h['name_th']}]({h['url']}): ว่างจริง {h['count']} ห้อง" + (f" · {money(h['priceMin'])}–{money(h['priceMax'])} บาท/เดือน" if h.get("priceMin") and h.get("priceMax") and h["priceMin"]!=h["priceMax"] else (f" · {money(h['priceMin'])} บาท/เดือน" if h.get("priceMin") else "")) for h in HUBS)
+station_lines_en = "\n".join(f"- [{h['name_en']}]({h['url']}?lang=en): {h['count']} verified available room{'s' if h['count']!=1 else ''}" + (f" · {money(h['priceMin'])}–{money(h['priceMax'])} THB/month" if h.get("priceMin") and h.get("priceMax") and h["priceMin"]!=h["priceMax"] else (f" · {money(h['priceMin'])} THB/month" if h.get("priceMin") else "")) for h in HUBS)
 def proj_range(p): return money(p["priceMin"]) if p["priceMin"] == p["priceMax"] else f"{money(p['priceMin'])}–{money(p['priceMax'])}"
 proj_lines_th = "\n".join(f"- [{p['name']}]({p['url']}): ย่าน{p['area']} · {p['count']} ห้อง · {proj_range(p)} บาท/เดือน" for p in PROJECTS)
 proj_lines_en = "\n".join(f"- [{p['name']}]({p['url']}?lang=en): {AREA_EN.get(p['areaSlug'])} · {p['count']} room{'s' if p['count'] != 1 else ''} · {proj_range(p)} THB/month" for p in PROJECTS)
@@ -313,12 +319,16 @@ def full_block(r):
               f"- Getting there: {walk_en(r)}",
               f"- About: {en(r['summary_th'])}"]
     for h, items in r["feats"]: lines.append(f"- {en(h)}: {', '.join(en(i) for i in items)}")
-    lines += [f"- Photos: {r['photos'][0]} (+{len(r['photos'])-1} more on the page)", f"- Contact: LINE {LINE_URL} (mention {r['id']})", ""]
+    lines += [f"- Photos: {r['photos'][0]} (+{len(r['photos'])-1} more on the page)", f"- Contact: LINE {LINE_URL} (send the room page: {r['url']})", ""]
     return "\n".join(lines)
 full = head + f"""
 ## ย่าน / Areas
 {area_lines_th}
 {area_lines_en}
+
+## สถานีรถไฟฟ้า / Transit stations
+{station_lines_th}
+{station_lines_en}
 
 ## โครงการ / Condo projects
 {proj_lines_th}
@@ -342,7 +352,7 @@ def room_ld(r):
     if r["avail_from"]: offer["availabilityStarts"] = r["avail_from"]
     lq = lease_qv(r["lease_th"])
     if lq: offer["leaseLength"] = lq
-    props = [("รหัสห้อง", r["id"]), ("สถานะ", r["status_th"]), ("สถานีใกล้ที่สุด", r["station_th"]),
+    props = [("สถานะ", r["status_th"]), ("สถานีใกล้ที่สุด", r["station_th"]),
              ("เดินถึงสถานีโดยประมาณ (นาที)", r["walk"]), ("เงินมัดจำ", r["deposit_th"]), ("ล่วงหน้า", r["advance_th"]),
              ("สัญญาขั้นต่ำ", r["lease_th"]), ("วันเข้าอยู่", r["movein_th"])]
     if r["shuttle"]: props.append(("รถรับส่งไปสถานี", "มี"))
@@ -354,6 +364,8 @@ def room_ld(r):
         "disambiguatingDescription": en(r["summary_th"]),
         "url": r["url"], "image": r["photos"], "petsAllowed": False,
     }
+    if r.get("last_verified"):
+        ld["dateModified"] = r["last_verified"]
     if r["size"]: ld["floorSize"] = {"@type": "QuantitativeValue", "value": r["size"], "unitCode": "MTK"}
     if r["bedrooms"] is not None:
         ld["numberOfRooms"] = {"@type": "QuantitativeValue", "value": r["bedrooms"], "unitText": "ห้องนอน / bedrooms"}
@@ -415,6 +427,10 @@ for a in areas:
     if rs:
         s = set_block(s, "ld-itemlist", script(itemlist_ld(f"คอนโดให้เช่าย่าน{a['th']}", f"{BASE}areas/{a['slug']}/", rs), "ld-itemlist"))
     write(p, set_alt_links(s, "../../"))
+for h in HUBS:
+    p = f"stations/{h['slug']}/index.html"
+    if os.path.exists(p):
+        write(p, set_alt_links(read(p), "../../"))
 
 # ---------- sitemap / robots ----------
 def url_entry(path, prio, lastmod):
@@ -429,6 +445,7 @@ def url_entry(path, prio, lastmod):
     <priority>{prio}</priority>
   </url>"""
 entries = [url_entry("", "1.0", TODAY)] + [url_entry(f"areas/{a['slug']}/", "0.8", TODAY) for a in areas] \
+        + [url_entry(f"stations/{h['slug']}/", "0.8", TODAY) for h in HUBS] \
         + [url_entry(p["url"][len(BASE):], "0.8", TODAY) for p in PROJECTS] \
         + [url_entry(f"rooms/{r['slug']}/", "0.9", TODAY) for r in rooms] \
         + [url_entry("partner/", "0.4", TODAY)] \

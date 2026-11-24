@@ -243,6 +243,151 @@
       "source": "https://en.wikipedia.org/wiki/Udom_Suk_BTS_station",
       "source_kind": "wikipedia",
       "retrieved": "2026-11-12"
+    },
+    {
+      "id": "bts-nana",
+      "name_th": "BTS นานา",
+      "system": "BTS",
+      "line": "Sukhumvit",
+      "line_th": "สายสุขุมวิท",
+      "areas": [
+        "asoke"
+      ],
+      "name_en": "Nana BTS",
+      "lat": 13.74060278,
+      "lng": 100.55539722,
+      "source": "https://en.wikipedia.org/wiki/Nana_BTS_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "bts-chit-lom",
+      "name_th": "BTS ชิดลม",
+      "system": "BTS",
+      "line": "Sukhumvit",
+      "line_th": "สายสุขุมวิท",
+      "areas": [
+        "chidlom"
+      ],
+      "name_en": "Chit Lom BTS",
+      "lat": 13.74410833,
+      "lng": 100.54309722,
+      "source": "https://en.wikipedia.org/wiki/Chit_Lom_BTS_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "bts-phloen-chit",
+      "name_th": "BTS เพลินจิต",
+      "system": "BTS",
+      "line": "Sukhumvit",
+      "line_th": "สายสุขุมวิท",
+      "areas": [
+        "chidlom"
+      ],
+      "name_en": "Phloen Chit BTS",
+      "lat": 13.74308056,
+      "lng": 100.54901944,
+      "source": "https://en.wikipedia.org/wiki/Phloen_Chit_BTS_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "bts-ratchadamri",
+      "name_th": "BTS ราชดำริ",
+      "system": "BTS",
+      "line": "Silom",
+      "line_th": "สายสีลม",
+      "areas": [
+        "chidlom"
+      ],
+      "name_en": "Ratchadamri BTS",
+      "lat": 13.73919167,
+      "lng": 100.53940833,
+      "source": "https://en.wikipedia.org/wiki/Ratchadamri_BTS_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "bts-surasak",
+      "name_th": "BTS สุรศักดิ์",
+      "system": "BTS",
+      "line": "Silom",
+      "line_th": "สายสีลม",
+      "areas": [
+        "samyan-silom"
+      ],
+      "name_en": "Surasak BTS",
+      "lat": 13.7193,
+      "lng": 100.5214,
+      "source": "https://en.wikipedia.org/wiki/Surasak_BTS_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "bts-sala-daeng",
+      "name_th": "BTS ศาลาแดง",
+      "system": "BTS",
+      "line": "Silom",
+      "line_th": "สายสีลม",
+      "areas": [
+        "samyan-silom"
+      ],
+      "name_en": "Sala Daeng BTS",
+      "lat": 13.72850833,
+      "lng": 100.53413333,
+      "source": "https://en.wikipedia.org/wiki/Sala_Daeng_BTS_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "mrt-queen-sirikit",
+      "name_th": "MRT ศูนย์การประชุมแห่งชาติสิริกิติ์",
+      "system": "MRT",
+      "line": "Blue",
+      "line_th": "สายสีน้ำเงิน",
+      "areas": [
+        "phrom-phong",
+        "rama-4"
+      ],
+      "name_en": "Queen Sirikit National Convention Centre MRT",
+      "lat": 13.7231,
+      "lng": 100.56,
+      "source": "https://en.wikipedia.org/wiki/Queen_Sirikit_National_Convention_Centre_MRT_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "mrt-khlong-toei",
+      "name_th": "MRT คลองเตย",
+      "system": "MRT",
+      "line": "Blue",
+      "line_th": "สายสีน้ำเงิน",
+      "areas": [
+        "rama-4"
+      ],
+      "name_en": "Khlong Toei MRT",
+      "lat": 13.7224,
+      "lng": 100.554,
+      "source": "https://en.wikipedia.org/wiki/Khlong_Toei_MRT_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "id": "mrt-huai-khwang",
+      "name_th": "MRT ห้วยขวาง",
+      "system": "MRT",
+      "line": "Blue",
+      "line_th": "สายสีน้ำเงิน",
+      "areas": [
+        "huai-khwang"
+      ],
+      "name_en": "Huai Khwang MRT",
+      "lat": 13.7786,
+      "lng": 100.574,
+      "source": "https://en.wikipedia.org/wiki/Huai_Khwang_MRT_station",
+      "source_kind": "wikipedia",
+      "retrieved": "2026-11-12"
     }
   ]
 }

@@ -27,6 +27,7 @@ const AREA_SLUGS = {
   "สามย่าน-สีลม": "samyan-silom",
   "ห้วยขวาง": "huai-khwang"
 };
+const STATION_SLUGS = {"BTS อ่อนนุช": "bts-on-nut", "BTS ทองหล่อ": "bts-thong-lo", "BTS พร้อมพงษ์": "bts-phrom-phong", "BTS พระโขนง": "bts-phra-khanong", "MRT พระราม 9": "mrt-phra-ram-9", "BTS เอกมัย": "bts-ekkamai", "BTS บางจาก": "bts-bang-chak", "BTS ปุณณวิถี": "bts-punnawithi", "MRT ศูนย์การประชุมแห่งชาติสิริกิติ์": "mrt-queen-sirikit", "MRT สุขุมวิท": "mrt-sukhumvit", "BTS นานา": "bts-nana", "BTS อโศก": "bts-asok", "BTS เพลินจิต": "bts-phloen-chit", "MRT เพชรบุรี": "mrt-phetchaburi", "BTS อุดมสุข": "bts-udom-suk", "BTS ชิดลม": "bts-chit-lom", "MRT ห้วยขวาง": "mrt-huai-khwang", "BTS ราชดำริ": "bts-ratchadamri", "BTS ศาลาแดง": "bts-sala-daeng", "BTS สุรศักดิ์": "bts-surasak", "BTS อารีย์": "bts-ari", "MRT คลองเตย": "mrt-khlong-toei"};
 function todayISO(){ return new Date(Date.now() + 7*3600e3).toISOString().slice(0,10); }
 function soonFrom(l){
   const a = l && l.available;
@@ -34,14 +35,61 @@ function soonFrom(l){
 }
 const SOON_WINDOW_DAYS = 30;
 function soonLimitISO(){ return new Date(Date.now() + 7*3600e3 + SOON_WINDOW_DAYS*864e5).toISOString().slice(0,10); }
+const TH_MON_SHORT = ["ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค."];
+function thDateShort(iso){
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso||"");
+  if(!m) return "";
+  const y = +m[1], mo = +m[2], d = +m[3];
+  const txt = d + " " + TH_MON_SHORT[mo-1];
+  const yearNow = new Date(Date.now() + 7*3600e3).getUTCFullYear();
+  return y === yearNow ? txt : txt + " " + y;
+}
+function listingById(id){
+  return (typeof LISTINGS!=="undefined" ? LISTINGS : []).find(x => x.id===id) || null;
+}
+function verifiedBadgeHTML(l){
+  if(!l) return `<span class="badge-vacant">ว่าง</span>`;
+  const soon = soonFrom(l);
+  const lv = l.lastVerified || "";
+  if(soon){
+    let text = "เข้าอยู่ได้ " + thDateShort(soon);
+    const attr = [`data-avail-from="${soon}"`];
+    if(lv){ text += " · ตรวจ " + thDateShort(lv); attr.push(`data-last-verified="${lv}"`); }
+    return `<span class="badge-vacant badge-soon" ${attr.join(" ")}>${text}</span>`;
+  }
+  if(lv) return `<span class="badge-vacant" data-last-verified="${lv}">ว่างจริง · ตรวจ ${thDateShort(lv)}</span>`;
+  return `<span class="badge-vacant">ว่าง</span>`;
+}
+function stationHubHref(name){
+  const map = (typeof STATION_SLUGS!=="undefined") ? STATION_SLUGS : {};
+  const slug = name ? map[name] : "";
+  return slug ? SITE_BASE + "stations/" + slug + "/" : "";
+}
 function refreshSoonBadges(root){
   const t = todayISO(), lim = soonLimitISO();
   (root||document).querySelectorAll("[data-avail-from]").forEach(el => {
     if(el.classList.contains("badge-rented") || el.classList.contains("badge-sold")) return;
     if((el.getAttribute("data-avail-from")||"") > lim){ const c = el.closest(".card"); if(c) c.classList.add("soon-out"); return; }
     if((el.getAttribute("data-avail-from")||"") <= t){
-      el.classList.remove("badge-soon"); el.removeAttribute("data-avail-from"); el.textContent = "ว่าง";
+      const host = el.closest("[data-listing]");
+      const l = host ? listingById(host.getAttribute("data-listing")) : null;
+      const next = verifiedBadgeHTML(l ? Object.assign({}, l, {status:"AVAILABLE", available:null}) : {lastVerified: el.getAttribute("data-last-verified")||""});
+      el.outerHTML = next;
     }
+  });
+}
+function enhanceVerifiedBadges(root){
+  const scope = root||document;
+  const seen = new Set();
+  scope.querySelectorAll("[data-listing]").forEach(el => {
+    const id = el.getAttribute("data-listing");
+    if(!id || seen.has(el)) return;
+    const badge = el.querySelector(".badge-vacant");
+    if(!badge || badge.classList.contains("badge-rented") || badge.classList.contains("badge-sold")) return;
+    const l = listingById(id);
+    if(!l) return;
+    seen.add(el);
+    badge.outerHTML = verifiedBadgeHTML(l);
   });
 }
 let MORE_LIST = [], MORE_SHOWN = 0, MORE_RENDER = null;
@@ -763,7 +811,7 @@ function cardHTML(l, score, breakdown){
   const files = (PHOTOS[l.id]||[]).slice(0,5);
   const soon = soonFrom(l);
   const dual = saleForRoom(l.id);
-  const statusBadge = soon ? `<span class="badge-vacant badge-soon" data-avail-from="${soon}">${l.statusLabel}</span>` : `<span class="badge-vacant">ว่าง</span>`;
+  const statusBadge = verifiedBadgeHTML(l);
   const badgeTag = dual ? dualBadgeHTML() + statusBadge : statusBadge;
   let media;
   if(files.length>1){
@@ -1529,7 +1577,7 @@ function searchResultsInner(s){
   const k = filterCount(s);
   const body = rows.length ? pagedGrid(rows, l => cardHTML(l)) : searchEmptyHTML();
   return `<div class="search-bar">
-      <div><h1 class="search-h">ผลการค้นหา</h1><p class="search-count" role="status">พบ ${rows.length} ห้อง</p></div>
+      <div><h1 class="search-h">ผลการค้นหา</h1><p class="search-count" role="status">พบ ${rows.length} ห้อง</p>${searchStationHubHTML(s)}</div>
       <div class="search-tools">
         <button type="button" class="btn-filter" data-open-filters aria-haspopup="dialog">${ICON_SLIDERS}<span>ตัวกรอง</span>${k ? `<b class="btn-filter-n">${k}</b>` : ""}</button>
         <label class="sort-wrap"><span>เรียงตาม</span><select class="ff-select sort-select" data-sort aria-label="เรียงตาม">${SEARCH_SORTS.map(([v,l]) => `<option value="${v}"${s.sort===v?" selected":""}>${l}</option>`).join("")}</select></label>
@@ -1537,6 +1585,17 @@ function searchResultsInner(s){
     </div>
     ${activeChipsHTML(s)}
     ${body}`;
+}
+function searchStationHubHTML(s){
+  let name = "";
+  if(s.st && s.st.length===1) name = s.st[0];
+  else {
+    const hits = s.q ? stationsMatchingQuery(s.q) : [];
+    if(hits.length===1) name = hits[0].name;
+  }
+  const href = stationHubHref(name);
+  if(!href) return "";
+  return `<p class="search-station-hub"><a href="${href}">ดูห้องว่างจริงใกล้ ${escapeHtml(name)}</a></p>`;
 }
 function searchView(s){
   return `<div class="search-page">
@@ -3046,7 +3105,7 @@ function initRelatedRoomStrip(){
   });
 }
 
-document.addEventListener("DOMContentLoaded", ()=>{ refreshSoonBadges(); enhanceRoomBookCard(); initRelatedRoomStrip(); });
+document.addEventListener("DOMContentLoaded", ()=>{ enhanceVerifiedBadges(); refreshSoonBadges(); enhanceRoomBookCard(); initRelatedRoomStrip(); });
 if(document.readyState !== "loading"){ enhanceRoomBookCard(); initRelatedRoomStrip(); }
 
 document.addEventListener("click", (e) => {

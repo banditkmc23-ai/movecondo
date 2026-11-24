@@ -86,7 +86,7 @@
     "ไม่พบห้องที่ตรงกับคำค้นหา": "No rooms match your search", "ล้างคำค้นหา": "Clear search", "บ้านไม้กรอบกระจกใต้ต้นไม้ใหญ่": "A glass-framed wooden house under a big tree",
     /* listings */
     "ประกาศเช่า": "For rent", "คอนโดเช่าที่คัดมาให้": "Hand-picked rental condos",
-    "มีผู้เช่าแล้ว": "Already rented", "ขายแล้ว": "Sold", "ห้องนี้มีผู้เช่าแล้ว ดูห้องอื่นในย่านเดียวกันด้านล่างได้เลย": "This room is already rented. See other rooms in the same area below.", "ห้องนี้ขายแล้ว ดูห้องอื่นในย่านเดียวกันด้านล่างได้เลย": "This property has been sold. See other listings in the area below.", "ว่าง": "Available", "พร้อมเข้าอยู่": "Ready to move in", "สอบถามวันเข้าอยู่": "Ask for move-in date",
+    "มีผู้เช่าแล้ว": "Already rented", "ขายแล้ว": "Sold", "ห้องนี้มีผู้เช่าแล้ว ดูห้องอื่นในย่านเดียวกันด้านล่างได้เลย": "This room is already rented. See other rooms in the same area below.", "ห้องนี้ขายแล้ว ดูห้องอื่นในย่านเดียวกันด้านล่างได้เลย": "This property has been sold. See other listings in the area below.", "ว่าง": "Available", "ว่างจริง": "Verified available", "ตรวจ": "checked", "เข้าอยู่ได้": "Available from", "ห้องว่างใกล้สถานีในย่านนี้": "Available rooms near stations in this area", "หน้ารวมห้องว่างจริงของแต่ละสถานี": "A page of verified available rooms for each station", "คอนโดเช่าใกล้สถานี": "Condos for rent near this station", "ห้องให้เช่าใกล้สถานีนี้": "Rooms for rent near this station", "เรียงตามเวลาเดินถึงสถานี": "Sorted by walk time to the station", "ดูห้องว่างจริงใกล้": "See verified available rooms near", "สถานีรถไฟฟ้า": "Transit station", "พร้อมเข้าอยู่": "Ready to move in", "สอบถามวันเข้าอยู่": "Ask for move-in date",
     "มีรถ shuttle": "Shuttle available", "บาท/เดือน": "THB/month",
     /* areas */
     "สำรวจทำเล": "Explore locations", "ย่านที่อยากอยู่ ใกล้รถไฟฟ้า": "Areas to live in, near the train",
@@ -390,6 +390,15 @@
     [/^(\d+(?:\.\d+)?) ตร\.ม\.$/, function (m) { return m[1] + " sq.m."; }],
     [/^(\d+(?:\.\d+)?)\s*[–-]\s*(\d+(?:\.\d+)?) ตร\.ม\.$/, function (m) { return m[1] + "–" + m[2] + " sq.m."; }],
     [/^กำลังจะว่าง · ว่าง (\d+) (\S+?)(?: (\d{4}))?$/, function (m) { return "Available from " + thDate(m[1], m[2], m[3]); }],
+    [/^ว่างจริง · ตรวจ (\d+) (\S+?)(?: (\d{4}))?$/, function (m) { return "Verified available · checked " + thDate(m[1], m[2], m[3]); }],
+    [/^เข้าอยู่ได้ (\d+) (\S+?)(?: (\d{4}))?(?: · ตรวจ (\d+) (\S+?)(?: (\d{4}))?)?$/, function (m) {
+      var out = "Available from " + thDate(m[1], m[2], m[3]);
+      if (m[4]) out += " · checked " + thDate(m[4], m[5], m[6]);
+      return out;
+    }],
+    [/^คอนโดให้เช่าใกล้ (.+) – ว่างจริง (\d+) ห้อง$/, function (m) { return "Condos for rent near " + m[1] + " – " + m[2] + (m[2]==="1" ? " verified available room" : " verified available rooms"); }],
+    [/^ว่างจริง (\d+) ห้อง · เรียงตามเวลาเดินถึงสถานี$/, function (m) { return m[1] + " verified available · sorted by walk time to the station"; }],
+    [/^ว่างจริง (\d+) ห้อง$/, function (m) { return m[1] + " verified available"; }],
     [/^สถานีใกล้ย่านนี้ ได้แก่ (.+)$/, function (m) { return "Stations near this area: " + m[1].split(" และ ").map(name).join(" and "); }],
     [/^(\d+) ห้องนอน (\d+(?:\.\d+)?) ตร\.ม\.$/, function (m) { return m[1] + " bed · " + m[2] + " sq.m."; }],
     [/^(\d+) ห้องนอน$/, function (m) { return m[1] + plural(m[1], " bedroom", " bedrooms"); }],
