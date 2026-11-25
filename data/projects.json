@@ -8,8 +8,8 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 2,
-   "count": 5,
-   "soon": 0,
+   "count": 6,
+   "soon": 1,
    "priceMin": 17000,
    "priceMax": 29000,
    "rooms": [
@@ -17,7 +17,8 @@
     "MC-089",
     "MC-222",
     "MC-001",
-    "MC-312"
+    "MC-312",
+    "MC-344"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/aspire-onnut-station/"
   },
@@ -119,8 +120,8 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 14,
-   "count": 10,
-   "soon": 0,
+   "count": 11,
+   "soon": 1,
    "priceMin": 20000,
    "priceMax": 26000,
    "rooms": [
@@ -133,7 +134,8 @@
     "MC-121",
     "MC-279",
     "MC-041",
-    "MC-261"
+    "MC-261",
+    "MC-349"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/"
   },
@@ -2001,12 +2003,13 @@
    "areaSlug": "bangna",
    "station": "BTS ปุณณวิถี",
    "walk": null,
-   "count": 1,
-   "soon": 0,
+   "count": 2,
+   "soon": 1,
    "priceMin": 14000,
-   "priceMax": 14000,
+   "priceMax": 50000,
    "rooms": [
-    "MC-225"
+    "MC-225",
+    "MC-348"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-line-sukhumvit-101/"
   },
@@ -2100,10 +2103,10 @@
    "areaSlug": "phrom-phong",
    "station": null,
    "walk": null,
-   "count": 7,
-   "soon": 0,
+   "count": 9,
+   "soon": 2,
    "priceMin": 26000,
-   "priceMax": 58000,
+   "priceMax": 60000,
    "rooms": [
     "MC-274",
     "MC-273",
@@ -2111,7 +2114,9 @@
     "MC-284",
     "MC-271",
     "MC-303",
-    "MC-283"
+    "MC-283",
+    "MC-346",
+    "MC-345"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/supalai-oriental-sukhumvit-39/"
   },
@@ -2267,12 +2272,13 @@
    "areaSlug": "phrakhanong",
    "station": "BTS พระโขนง",
    "walk": 8,
-   "count": 1,
-   "soon": 0,
-   "priceMin": 20000,
+   "count": 2,
+   "soon": 1,
+   "priceMin": 14000,
    "priceMax": 20000,
    "rooms": [
-    "MC-315"
+    "MC-315",
+    "MC-343"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/aspire-sukhumvit-rama-4/"
   },
@@ -2387,6 +2393,22 @@
     "MC-339"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-excel-hideaway-sukhumvit-50/"
+  },
+  {
+   "name": "VTARA 36",
+   "slug": "vtara-36",
+   "area": "ทองหล่อ",
+   "areaSlug": "thonglor",
+   "station": "BTS ทองหล่อ",
+   "walk": 11,
+   "count": 1,
+   "soon": 1,
+   "priceMin": 28000,
+   "priceMax": 28000,
+   "rooms": [
+    "MC-347"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/vtara-36/"
   }
  ]
 }

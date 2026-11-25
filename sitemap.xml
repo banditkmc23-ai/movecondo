@@ -154,19 +154,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://banditkmc23-ai.github.io/movecondo/stations/bts-phrom-phong/</loc>
-    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/stations/bts-phrom-phong/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/stations/bts-phrom-phong/?lang=en" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/stations/bts-phrom-phong/" />
+    <loc>https://banditkmc23-ai.github.io/movecondo/stations/bts-phra-khanong/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/stations/bts-phra-khanong/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/stations/bts-phra-khanong/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/stations/bts-phra-khanong/" />
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://banditkmc23-ai.github.io/movecondo/stations/bts-phra-khanong/</loc>
-    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/stations/bts-phra-khanong/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/stations/bts-phra-khanong/?lang=en" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/stations/bts-phra-khanong/" />
+    <loc>https://banditkmc23-ai.github.io/movecondo/stations/bts-phrom-phong/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/stations/bts-phrom-phong/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/stations/bts-phrom-phong/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/stations/bts-phrom-phong/" />
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1571,6 +1571,15 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/condo/the-excel-hideaway-sukhumvit-50/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/condo/the-excel-hideaway-sukhumvit-50/?lang=en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/condo/the-excel-hideaway-sukhumvit-50/" />
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://banditkmc23-ai.github.io/movecondo/condo/vtara-36/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/condo/vtara-36/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/condo/vtara-36/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/condo/vtara-36/" />
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -4424,6 +4433,69 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-342/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-342/?lang=en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-342/" />
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://banditkmc23-ai.github.io/movecondo/rooms/mc-343/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-343/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-343/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-343/" />
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://banditkmc23-ai.github.io/movecondo/rooms/mc-344/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-344/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-344/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-344/" />
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://banditkmc23-ai.github.io/movecondo/rooms/mc-345/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-345/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-345/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-345/" />
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://banditkmc23-ai.github.io/movecondo/rooms/mc-346/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-346/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-346/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-346/" />
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://banditkmc23-ai.github.io/movecondo/rooms/mc-347/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-347/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-347/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-347/" />
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://banditkmc23-ai.github.io/movecondo/rooms/mc-348/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-348/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-348/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-348/" />
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://banditkmc23-ai.github.io/movecondo/rooms/mc-349/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-349/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-349/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://banditkmc23-ai.github.io/movecondo/rooms/mc-349/" />
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
