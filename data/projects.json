@@ -706,13 +706,14 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 15,
-   "count": 2,
+   "count": 3,
    "soon": 0,
    "priceMin": 15000,
    "priceMax": 16000,
    "rooms": [
     "MC-259",
-    "MC-062"
+    "MC-062",
+    "MC-341"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-base-park-east/"
   },
@@ -1329,7 +1330,7 @@
    "areaSlug": "phrom-phong",
    "station": "BTS พร้อมพงษ์",
    "walk": 6,
-   "count": 8,
+   "count": 9,
    "soon": 0,
    "priceMin": 30000,
    "priceMax": 65000,
@@ -1339,6 +1340,7 @@
     "MC-180",
     "MC-148",
     "MC-254",
+    "MC-338",
     "MC-122",
     "MC-123",
     "MC-258"
@@ -1644,12 +1646,13 @@
    "areaSlug": "thonglor",
    "station": null,
    "walk": null,
-   "count": 1,
+   "count": 2,
    "soon": 0,
    "priceMin": 18000,
    "priceMax": 18000,
    "rooms": [
-    "MC-163"
+    "MC-163",
+    "MC-337"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-base-petchburi-thonglor/"
   },
@@ -1692,15 +1695,16 @@
    "areaSlug": "phrakhanong",
    "station": "BTS พระโขนง",
    "walk": 7,
-   "count": 5,
+   "count": 6,
    "soon": 1,
    "priceMin": 12000,
-   "priceMax": 15000,
+   "priceMax": 16000,
    "rooms": [
     "MC-177",
     "MC-168",
     "MC-299",
     "MC-170",
+    "MC-342",
     "MC-268"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/aspire-sukhumvit-48/"
@@ -2182,11 +2186,12 @@
    "areaSlug": "phrom-phong",
    "station": "BTS พร้อมพงษ์",
    "walk": 5,
-   "count": 1,
+   "count": 2,
    "soon": 0,
-   "priceMin": 50000,
+   "priceMin": 38000,
    "priceMax": 50000,
    "rooms": [
+    "MC-340",
     "MC-300"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/noble-refine-sukhumvit-26/"
@@ -2366,6 +2371,22 @@
     "MC-333"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/nusasiri-ekkamai/"
+  },
+  {
+   "name": "The Excel Hideaway Sukhumvit 50",
+   "slug": "the-excel-hideaway-sukhumvit-50",
+   "area": "อ่อนนุช",
+   "areaSlug": "on-nut",
+   "station": "BTS อ่อนนุช",
+   "walk": 14,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 22000,
+   "priceMax": 22000,
+   "rooms": [
+    "MC-339"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-excel-hideaway-sukhumvit-50/"
   }
  ]
 }
