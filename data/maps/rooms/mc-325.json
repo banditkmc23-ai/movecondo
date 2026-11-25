@@ -1,0 +1,25 @@
+{
+  "area": "พระราม 9",
+  "slug": "rama-9",
+  "room": "MC-325",
+  "project": "The Privacy Rama 9",
+  "pitch": 60,
+  "bearing": -18,
+  "zoom": 16.2,
+  "center": {
+    "lat": 13.743919,
+    "lng": 100.603477
+  },
+  "stations": [],
+  "places": [],
+  "condo": {
+    "name": "The Privacy Rama 9",
+    "lat": 13.743919,
+    "lng": 100.603477,
+    "approx": false
+  },
+  "mapMode": "condo",
+  "nearbySource": "nearby-real.json (area pool)",
+  "attribution": "OpenFreeMap © OpenMapTiles · ข้อมูลจาก OpenStreetMap · พิกัดสถานีจาก Wikipedia",
+  "note": "สถานีรถไฟฟ้าและร้านดังใกล้เคียงในรัศมีประมาณ 1.5 กม."
+}

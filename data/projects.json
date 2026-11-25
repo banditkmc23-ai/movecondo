@@ -102,11 +102,12 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 2,
-   "count": 1,
+   "count": 2,
    "soon": 0,
-   "priceMin": 24000,
+   "priceMin": 17000,
    "priceMax": 24000,
    "rooms": [
+    "MC-322",
     "MC-006"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/ideo-mobi-sukhumvit-81/"
@@ -118,12 +119,13 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 14,
-   "count": 9,
+   "count": 10,
    "soon": 0,
    "priceMin": 20000,
    "priceMax": 26000,
    "rooms": [
     "MC-008",
+    "MC-327",
     "MC-028",
     "MC-036",
     "MC-037",
@@ -177,13 +179,14 @@
    "areaSlug": "thonglor",
    "station": "BTS ทองหล่อ",
    "walk": 15,
-   "count": 8,
+   "count": 9,
    "soon": 0,
    "priceMin": 19000,
    "priceMax": 40000,
    "rooms": [
     "MC-186",
     "MC-262",
+    "MC-336",
     "MC-113",
     "MC-114",
     "MC-252",
@@ -218,14 +221,16 @@
    "area": "อ่อนนุช",
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
-   "walk": 10,
-   "count": 2,
+   "walk": 9,
+   "count": 4,
    "soon": 0,
    "priceMin": 13000,
-   "priceMax": 14500,
+   "priceMax": 15500,
    "rooms": [
     "MC-043",
-    "MC-017"
+    "MC-331",
+    "MC-017",
+    "MC-323"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-base-park-west/"
   },
@@ -293,11 +298,12 @@
    "areaSlug": "phrakhanong",
    "station": "BTS พระโขนง",
    "walk": 4,
-   "count": 3,
+   "count": 4,
    "soon": 1,
-   "priceMin": 18000,
+   "priceMin": 15000,
    "priceMax": 20000,
    "rooms": [
+    "MC-330",
     "MC-093",
     "MC-022",
     "MC-266"
@@ -309,14 +315,15 @@
    "slug": "xt-ekkamai",
    "area": "เอกมัย",
    "areaSlug": "ekkamai",
-   "station": "BTS เอกมัย",
-   "walk": null,
-   "count": 4,
+   "station": "BTS ทองหล่อ",
+   "walk": 23,
+   "count": 5,
    "soon": 1,
    "priceMin": 18000,
    "priceMax": 43000,
    "rooms": [
     "MC-074",
+    "MC-334",
     "MC-025",
     "MC-301",
     "MC-250"
@@ -330,12 +337,13 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 18,
-   "count": 2,
+   "count": 3,
    "soon": 0,
    "priceMin": 24000,
    "priceMax": 50000,
    "rooms": [
     "MC-153",
+    "MC-318",
     "MC-026"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/mori-haus/"
@@ -382,12 +390,13 @@
    "areaSlug": "phrakhanong",
    "station": "BTS พระโขนง",
    "walk": 5,
-   "count": 8,
+   "count": 9,
    "soon": 0,
    "priceMin": 16000,
    "priceMax": 35000,
    "rooms": [
     "MC-032",
+    "MC-326",
     "MC-035",
     "MC-293",
     "MC-051",
@@ -591,11 +600,12 @@
    "areaSlug": "thonglor",
    "station": "MRT เพชรบุรี",
    "walk": 28,
-   "count": 3,
+   "count": 4,
    "soon": 1,
-   "priceMin": 16000,
+   "priceMin": 15000,
    "priceMax": 18000,
    "rooms": [
+    "MC-316",
     "MC-092",
     "MC-055",
     "MC-019"
@@ -609,11 +619,12 @@
    "areaSlug": "rama-9",
    "station": "MRT พระราม 9",
    "walk": 7,
-   "count": 5,
+   "count": 6,
    "soon": 0,
-   "priceMin": 22500,
+   "priceMin": 17500,
    "priceMax": 26000,
    "rooms": [
+    "MC-319",
     "MC-154",
     "MC-161",
     "MC-221",
@@ -712,14 +723,15 @@
    "areaSlug": "ekkamai",
    "station": "BTS เอกมัย",
    "walk": null,
-   "count": 3,
+   "count": 4,
    "soon": 0,
    "priceMin": 17500,
-   "priceMax": 30000,
+   "priceMax": 38000,
    "rooms": [
     "MC-064",
     "MC-137",
-    "MC-231"
+    "MC-231",
+    "MC-321"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/c-ekkamai/"
   },
@@ -830,12 +842,13 @@
    "areaSlug": "thonglor",
    "station": "BTS ทองหล่อ",
    "walk": null,
-   "count": 3,
+   "count": 4,
    "soon": 0,
    "priceMin": 33000,
    "priceMax": 70000,
    "rooms": [
     "MC-072",
+    "MC-317",
     "MC-083",
     "MC-287"
    ],
@@ -1150,14 +1163,15 @@
    "slug": "life-asoke",
    "area": "พระราม 9",
    "areaSlug": "rama-9",
-   "station": "MRT พระราม 9",
-   "walk": 6,
-   "count": 2,
+   "station": "MRT เพชรบุรี",
+   "walk": 4,
+   "count": 3,
    "soon": 0,
    "priceMin": 17000,
    "priceMax": 33000,
    "rooms": [
     "MC-100",
+    "MC-320",
     "MC-290"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/life-asoke/"
@@ -1391,17 +1405,18 @@
    "areaSlug": "on-nut",
    "station": "BTS บางจาก",
    "walk": 2,
-   "count": 6,
+   "count": 7,
    "soon": 0,
    "priceMin": 13000,
-   "priceMax": 27000,
+   "priceMax": 35000,
    "rooms": [
     "MC-202",
     "MC-198",
     "MC-199",
     "MC-129",
     "MC-200",
-    "MC-288"
+    "MC-288",
+    "MC-335"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-62/"
   },
@@ -2239,6 +2254,118 @@
     "MC-313"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/xt-huaikhwang/"
+  },
+  {
+   "name": "Aspire Sukhumvit-Rama 4",
+   "slug": "aspire-sukhumvit-rama-4",
+   "area": "พระโขนง",
+   "areaSlug": "phrakhanong",
+   "station": "BTS พระโขนง",
+   "walk": 8,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 20000,
+   "priceMax": 20000,
+   "rooms": [
+    "MC-315"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/aspire-sukhumvit-rama-4/"
+  },
+  {
+   "name": "Eight Thonglor Residence",
+   "slug": "eight-thonglor-residence",
+   "area": "ทองหล่อ",
+   "areaSlug": "thonglor",
+   "station": "BTS ทองหล่อ",
+   "walk": 13,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 30000,
+   "priceMax": 30000,
+   "rooms": [
+    "MC-324"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/eight-thonglor-residence/"
+  },
+  {
+   "name": "The Privacy Rama 9",
+   "slug": "the-privacy-rama-9",
+   "area": "พระราม 9",
+   "areaSlug": "rama-9",
+   "station": null,
+   "walk": null,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 12500,
+   "priceMax": 12500,
+   "rooms": [
+    "MC-325"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-privacy-rama-9/"
+  },
+  {
+   "name": "The Seed Mingle Suanplu Soi 8",
+   "slug": "the-seed-mingle-suanplu-soi-8",
+   "area": "สามย่าน-สีลม",
+   "areaSlug": "samyan-silom",
+   "station": "MRT ลุมพินี",
+   "walk": 11,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 20000,
+   "priceMax": 20000,
+   "rooms": [
+    "MC-328"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-seed-mingle-suanplu-soi-8/"
+  },
+  {
+   "name": "Liv@49",
+   "slug": "liv-49",
+   "area": "ทองหล่อ",
+   "areaSlug": "thonglor",
+   "station": "BTS ทองหล่อ",
+   "walk": 6,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 50000,
+   "priceMax": 50000,
+   "rooms": [
+    "MC-329"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/liv-49/"
+  },
+  {
+   "name": "DLV Thonglor 20",
+   "slug": "dlv-thonglor-20",
+   "area": "ทองหล่อ",
+   "areaSlug": "thonglor",
+   "station": null,
+   "walk": null,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 44000,
+   "priceMax": 44000,
+   "rooms": [
+    "MC-332"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/dlv-thonglor-20/"
+  },
+  {
+   "name": "Nusasiri Ekkamai",
+   "slug": "nusasiri-ekkamai",
+   "area": "เอกมัย",
+   "areaSlug": "ekkamai",
+   "station": "BTS เอกมัย",
+   "walk": 1,
+   "count": 1,
+   "soon": 0,
+   "priceMin": 25000,
+   "priceMax": 25000,
+   "rooms": [
+    "MC-333"
+   ],
+   "url": "https://banditkmc23-ai.github.io/movecondo/condo/nusasiri-ekkamai/"
   }
  ]
 }
