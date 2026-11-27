@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-26",
+  "generated": "2026-11-28",
   "count": 22,
   "stations": [
     {
@@ -10,7 +10,7 @@
       "name_en": "On Nut BTS",
       "system": "BTS",
       "line_th": "สายสุขุมวิท",
-      "count": 61,
+      "count": 63,
       "soon": 3,
       "priceMin": 12000,
       "priceMax": 50000,
@@ -34,6 +34,7 @@
         "MC-309",
         "MC-159",
         "MC-210",
+        "MC-357",
         "MC-267",
         "MC-070",
         "MC-331",
@@ -68,6 +69,7 @@
         "MC-349",
         "MC-041",
         "MC-153",
+        "MC-351",
         "MC-261",
         "MC-318",
         "MC-026",
@@ -87,7 +89,7 @@
       "name_en": "Thong Lo BTS",
       "system": "BTS",
       "line_th": "สายสุขุมวิท",
-      "count": 53,
+      "count": 55,
       "soon": 2,
       "priceMin": 17500,
       "priceMax": 120000,
@@ -121,6 +123,7 @@
         "MC-294",
         "MC-116",
         "MC-186",
+        "MC-356",
         "MC-262",
         "MC-336",
         "MC-113",
@@ -142,6 +145,7 @@
         "MC-072",
         "MC-317",
         "MC-029",
+        "MC-350",
         "MC-084",
         "MC-076",
         "MC-287",
@@ -157,7 +161,7 @@
       "system": "BTS",
       "line_th": "สายสุขุมวิท",
       "count": 34,
-      "soon": 3,
+      "soon": 2,
       "priceMin": 12000,
       "priceMax": 50000,
       "walkMin": 1,
@@ -256,7 +260,7 @@
       "name_en": "Phra Ram 9 MRT",
       "system": "MRT",
       "line_th": "สายสีน้ำเงิน",
-      "count": 20,
+      "count": 21,
       "soon": 0,
       "priceMin": 17000,
       "priceMax": 56000,
@@ -274,6 +278,7 @@
         "MC-167",
         "MC-166",
         "MC-100",
+        "MC-352",
         "MC-060",
         "MC-319",
         "MC-061",
@@ -352,7 +357,7 @@
       "name_en": "Punnawithi BTS",
       "system": "BTS",
       "line_th": "สายสุขุมวิท",
-      "count": 10,
+      "count": 11,
       "soon": 1,
       "priceMin": 14000,
       "priceMax": 50000,
@@ -361,6 +366,7 @@
         "MC-216",
         "MC-226",
         "MC-069",
+        "MC-353",
         "MC-130",
         "MC-228",
         "MC-183",
@@ -402,10 +408,10 @@
       "name_en": "Phetchaburi MRT",
       "system": "MRT",
       "line_th": "สายสีน้ำเงิน",
-      "count": 6,
+      "count": 7,
       "soon": 1,
       "priceMin": 15000,
-      "priceMax": 33000,
+      "priceMax": 34000,
       "walkMin": 4,
       "rooms": [
         "MC-320",
@@ -413,7 +419,29 @@
         "MC-020",
         "MC-316",
         "MC-019",
-        "MC-055"
+        "MC-055",
+        "MC-355"
+      ]
+    },
+    {
+      "id": "bts-asok",
+      "slug": "bts-asok",
+      "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-asok/",
+      "name_th": "BTS อโศก",
+      "name_en": "Asok BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "count": 5,
+      "soon": 0,
+      "priceMin": 25000,
+      "priceMax": 38000,
+      "walkMin": 7,
+      "rooms": [
+        "MC-067",
+        "MC-358",
+        "MC-296",
+        "MC-196",
+        "MC-120"
       ]
     },
     {
@@ -458,26 +486,6 @@
       ]
     },
     {
-      "id": "bts-asok",
-      "slug": "bts-asok",
-      "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-asok/",
-      "name_th": "BTS อโศก",
-      "name_en": "Asok BTS",
-      "system": "BTS",
-      "line_th": "สายสุขุมวิท",
-      "count": 4,
-      "soon": 0,
-      "priceMin": 27000,
-      "priceMax": 38000,
-      "walkMin": 7,
-      "rooms": [
-        "MC-067",
-        "MC-296",
-        "MC-196",
-        "MC-120"
-      ]
-    },
-    {
       "id": "bts-phloen-chit",
       "slug": "bts-phloen-chit",
       "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-phloen-chit/",
@@ -498,6 +506,25 @@
       ]
     },
     {
+      "id": "bts-chit-lom",
+      "slug": "bts-chit-lom",
+      "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-chit-lom/",
+      "name_th": "BTS ชิดลม",
+      "name_en": "Chit Lom BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "count": 3,
+      "soon": 0,
+      "priceMin": 42000,
+      "priceMax": 80000,
+      "walkMin": 3,
+      "rooms": [
+        "MC-115",
+        "MC-085",
+        "MC-354"
+      ]
+    },
+    {
       "id": "bts-udom-suk",
       "slug": "bts-udom-suk",
       "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-udom-suk/",
@@ -514,24 +541,6 @@
         "MC-171",
         "MC-126",
         "MC-143"
-      ]
-    },
-    {
-      "id": "bts-chit-lom",
-      "slug": "bts-chit-lom",
-      "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-chit-lom/",
-      "name_th": "BTS ชิดลม",
-      "name_en": "Chit Lom BTS",
-      "system": "BTS",
-      "line_th": "สายสุขุมวิท",
-      "count": 2,
-      "soon": 0,
-      "priceMin": 42000,
-      "priceMax": 42000,
-      "walkMin": 3,
-      "rooms": [
-        "MC-115",
-        "MC-085"
       ]
     },
     {
