@@ -1560,6 +1560,7 @@ function goSearch(s, via){
     location.hash = hash;
   }
   emitFilters(s, searchFilter(s).length, via || "apply");
+  if (window.MoveCondoMapFab) window.MoveCondoMapFab.refresh();
 }
 function currentRoute(){ return (parseHash().parts[0] || "home"); }
 /* ---- search results page (#/search) ---- */
@@ -2774,7 +2775,18 @@ window.MCMapBridge = {
   all: function(){ return LISTINGS; },
   href: function(name){ return projectHref(name); },
   photo: function(l){ const f = (PHOTOS[l.id]||[])[0]; return f ? photoUrl(l.id, f.file, "thumb") : (coverSrc(l.id) || ""); },
-  base: SITE_BASE
+  base: SITE_BASE,
+  fcount: function(){ return currentRoute()==="search" ? filterCount(SEARCH_STATE) : 0; },
+  openFilters: function(){
+    const st = currentRoute()==="search" ? Object.assign({}, SEARCH_STATE) : emptySearchState();
+    openFilterSheet(st);
+  },
+  card: function(l){
+    const bits = [l.sizeLabel || (l.size ? l.size + " ตร.ม." : null), l.type || l.beds].filter(Boolean);
+    const dual = saleForRoom(l.id);
+    return { href: roomHref(l.id), photo: window.MCMapBridge.photo(l), project: l.project, meta: bits.join(" · "),
+      badge: verifiedBadgeHTML(l), price: money(l.price), salePrice: dual ? money(dual.salePrice) : "" };
+  }
 };
 
 /* ---- Area name aliases (used by home search) ---- */
@@ -2796,7 +2808,7 @@ const AREA_ALIASES = [
 ];
 
 
-window.addEventListener("hashchange", () => { closeFilterSheet(); if (window.MoveCondoMapFab) window.MoveCondoMapFab.close(true); render(); });
+window.addEventListener("hashchange", () => { closeFilterSheet(); render(); });
 bindSearchV2();
 
 

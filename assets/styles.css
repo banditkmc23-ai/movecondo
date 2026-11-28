@@ -2884,34 +2884,81 @@ body.room-sold main {
     .mc-fab:focus-visible { outline: 3px solid #B9532F; outline-offset: 3px; }
     html.mc-has-fab body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
     html.mcmap-open, html.mcmap-open body { overflow: hidden; }
+    html.mcmap-open .mc-fab { display: none; }
     .mcmap { position: fixed; inset: 0; z-index: 48; background: #f3efe9; }
     .mcmap[hidden] { display: none; }
     .mcmap-canvas { position: absolute; inset: 0; }
-    .mcmap-chip {
-      position: absolute; top: calc(14px + env(safe-area-inset-top)); left: 50%; transform: translateX(-50%); z-index: 500;
-      background: #fff; color: #222; padding: 8px 16px; border-radius: 999px; font-size: 13.5px; font-weight: 600;
-      box-shadow: 0 2px 10px rgba(0,0,0,.18); white-space: nowrap; max-width: calc(100% - 32px); overflow: hidden; text-overflow: ellipsis;
+    .mcmap .leaflet-top.leaflet-left { margin-top: calc(56px + env(safe-area-inset-top)); }
+    .mcmap-head {
+      position: absolute; top: 0; left: 0; right: 0; z-index: 700; display: flex; align-items: center; gap: 10px;
+      padding: calc(8px + env(safe-area-inset-top)) 14px 8px; min-height: calc(56px + env(safe-area-inset-top));
+      background: #fff; border-bottom: 1px solid #E7E2DB; box-sizing: border-box;
     }
-    .mcmap-chip[hidden], .mcmap-card[hidden] { display: none; }
-    .mcmap-ico { background: transparent; border: 0; display: flex; align-items: center; justify-content: center; }
+    .mcmap-back { flex: none; width: 40px; height: 40px; border-radius: 50%; border: 1px solid #ddd5cc; background: #fff; color: #222; display: grid; place-items: center; cursor: pointer; padding: 0; }
+    .mcmap-title { flex: 1; min-width: 0; margin: 0; font-size: 17px; font-weight: 700; letter-spacing: -.02em; color: #222; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .mcmap-title small { font-size: 14px; font-weight: 500; color: #8a8178; }
+    .mcmap-osm { flex: none; font-size: 11px; color: #8a8178; text-decoration: none; }
+    .mcmap-locate {
+      position: absolute; z-index: 700; right: 12px; top: calc(56px + env(safe-area-inset-top) + 12px);
+      width: 44px; height: 44px; border-radius: 50%; border: 0; background: #fff; color: #222; display: grid; place-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,.25); cursor: pointer; padding: 0;
+    }
+    .mcmap-toast {
+      position: absolute; z-index: 800; left: 50%; transform: translateX(-50%); top: calc(56px + env(safe-area-inset-top) + 66px);
+      background: #222; color: #fff; padding: 9px 16px; border-radius: 999px; font-size: 13.5px; max-width: calc(100% - 32px); text-align: center;
+    }
+    .mcmap-toast[hidden] { display: none; }
+    .mcmap-bar {
+      position: absolute; z-index: 700; left: 0; right: 0; bottom: 0; display: flex; justify-content: center; gap: 12px;
+      padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: #fff; border-top: 1px solid #E7E2DB; box-sizing: border-box;
+    }
+    .mcmap-bb {
+      flex: 1; max-width: 260px; min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      border: 1px solid #ddd5cc; border-radius: 14px; background: #fff; color: #222; font: inherit; font-weight: 600; font-size: 15px; cursor: pointer;
+    }
+    .mcmap-bb:active { background: #f7f3ee; }
+    .mcmap-bb b { min-width: 20px; height: 20px; padding: 0 6px; border-radius: 10px; background: #B9532F; color: #fff; font-size: 12px; display: inline-grid; place-items: center; }
+    .mcmap-rail {
+      position: absolute; z-index: 650; left: 0; right: 0; bottom: calc(68px + env(safe-area-inset-bottom) + 10px);
+      display: flex; gap: 10px; overflow-x: auto; overflow-y: hidden; padding: 4px 16px 6px; box-sizing: border-box;
+      scroll-snap-type: x mandatory; scroll-padding-left: 16px; -webkit-overflow-scrolling: touch; scrollbar-width: none; overscroll-behavior-x: contain;
+    }
+    .mcmap-rail::-webkit-scrollbar { display: none; }
+    .mcmap-rc {
+      flex: none; width: min(85vw, 340px); scroll-snap-align: start; display: flex; gap: 10px; padding: 8px; box-sizing: border-box;
+      background: #fff; border: 2px solid transparent; border-radius: 16px; box-shadow: 0 4px 18px rgba(0,0,0,.2); color: #222; text-decoration: none;
+    }
+    .mcmap-rc.on { border-color: #B9532F; }
+    .mcmap-rc-empty { align-items: center; justify-content: center; text-align: center; font-size: 14px; color: #6b6259; padding: 18px 14px; }
+    .mcmap-rc-img { flex: none; width: 104px; height: 104px; border-radius: 11px; overflow: hidden; background: #f3efe9; }
+    .mcmap-rc-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .mcmap-rc-b { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; min-width: 0; flex: 1; justify-content: center; }
+    .mcmap-rc-n { font-weight: 700; font-size: 15px; letter-spacing: -.01em; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .mcmap-rc .badge-vacant { position: static; font-size: 11.5px; padding: 2px 9px; pointer-events: none; }
+    .mcmap-rc-m { font-size: 13px; color: #6b6259; }
+    .mcmap-rc-p { font-size: 18px; font-weight: 700; color: #B9532F; letter-spacing: -.02em; }
+    .mcmap-rc-p small { font-size: 12.5px; font-weight: 500; color: #8a8178; }
+    .mcmap-rc-s { font-size: 12.5px; color: #6b6259; }
+    .mcmap-ico { background: transparent; border: 0; }
+    .mcmap-ico-pill { overflow: visible; }
     .mcmap-pill {
-      display: inline-flex; align-items: center; justify-content: center; height: 30px; padding: 0 11px; border-radius: 999px;
-      background: #fff; color: #222; font: 600 13px/1 inherit; font-family: inherit; border: 1px solid rgba(0,0,0,.14);
-      box-shadow: 0 2px 6px rgba(0,0,0,.22); white-space: nowrap; transition: transform .12s ease;
+      position: absolute; left: 0; top: 0; transform: translate(-50%, -50%); display: inline-flex; align-items: center; gap: 6px;
+      height: 30px; padding: 0 12px 0 9px; border-radius: 999px; background: #fff; color: #222; border: 1px solid rgba(0,0,0,.14);
+      box-shadow: 0 2px 6px rgba(0,0,0,.22); font-size: 12.5px; font-weight: 600; white-space: nowrap; transition: transform .12s ease;
     }
-    .mcmap-ico.sel .mcmap-pill { background: #B9532F; color: #fff; border-color: #B9532F; transform: scale(1.12); }
-    .mcmap-card {
-      position: absolute; z-index: 600; left: 50%; transform: translateX(-50%);
-      bottom: calc(86px + env(safe-area-inset-bottom)); width: min(520px, calc(100% - 32px));
-      display: flex; align-items: center; gap: 12px; padding: 10px; background: #fff; border-radius: 18px;
-      box-shadow: 0 8px 28px rgba(0,0,0,.24); color: #222; text-decoration: none;
+    .mcmap-pill i { width: 9px; height: 9px; border-radius: 50%; background: #B9532F; flex: none; }
+    .mcmap-ico.sel .mcmap-pill { background: #B9532F; color: #fff; border-color: #B9532F; transform: translate(-50%, -50%) scale(1.1); }
+    .mcmap-ico.sel .mcmap-pill i { background: #fff; }
+    .mcmap-cl {
+      display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: #fff; color: #222;
+      border: 3px solid #B9532F; box-sizing: border-box; font-weight: 700; font-size: 14px; box-shadow: 0 2px 8px rgba(0,0,0,.25);
     }
-    .mcmap-card img { width: 72px; height: 72px; border-radius: 12px; object-fit: cover; background: #f3efe9; flex: none; }
-    .mcmap-card-b { display: flex; flex-direction: column; min-width: 0; flex: 1; gap: 2px; }
-    .mcmap-card-b b { font-size: 15px; letter-spacing: -.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .mcmap-card-s { font-size: 13.5px; color: #B9532F; font-weight: 600; }
-    .mcmap-card-a { font-size: 12.5px; color: #6b6259; }
-    .mcmap-card-go { font-size: 26px; color: #8a8178; padding-right: 4px; line-height: 1; }
+    .mcmap .leaflet-control-attribution { display: none; }
+    @media (min-width: 900px) {
+      .mcmap-rail { padding-left: 24px; padding-right: 24px; scroll-padding-left: 24px; }
+      .mcmap-rc { width: 360px; }
+      .mcmap-head { padding-left: 24px; padding-right: 24px; }
+    }
     .card-map {
       display: none; position: absolute; right: 12px; bottom: 12px; z-index: 6;
       width: 36px; height: 36px; place-items: center; padding: 0; border: 0; border-radius: 10px;
@@ -2921,6 +2968,3 @@ body.room-sold main {
     .card-map:hover { color: #B9532F; }
     .card-map:focus-visible { outline: 2px solid #B9532F; outline-offset: 2px; }
     .card-slider .card-dots { z-index: 5; }
-    .mcmap.compact .mcmap-ico { width: 22px !important; height: 22px !important; margin-left: -11px !important; margin-top: -11px !important; }
-    .mcmap.compact .mcmap-pill { width: 16px; height: 16px; padding: 0; font-size: 0; border: 2px solid #fff; background: #B9532F; box-shadow: 0 1px 4px rgba(0,0,0,.35); }
-    .mcmap.compact .mcmap-ico.sel .mcmap-pill { width: 22px; height: 22px; background: #222; transform: none; }
