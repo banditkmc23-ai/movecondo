@@ -12,8 +12,9 @@
       "id": "MC-009",
       "slug": "mc-009",
       "kind": "rented",
-      "restored": false,
-      "markedAt": "2026-11-28T11:54:33+07:00"
+      "restored": true,
+      "markedAt": "2026-11-28T11:54:33+07:00",
+      "restoredAt": "2026-11-28T21:49:10+07:00"
     },
     {
       "id": "MC-010",

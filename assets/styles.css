@@ -1877,6 +1877,7 @@
 
     /* Soon-available badge (amber) + load-more paging */
     .badge-vacant.badge-soon { background: #B45309; color: #fff; }
+    .badge-vacant.badge-reserved { background: #1E3A8A; color: #fff; }
     .badge-vacant.badge-sale { background: var(--primary); color: #fff; }
     .badge-vacant.badge-sale-rent { background: var(--primary); color: #fff; }
     .badge-vacant.badge-sale-tenant { background: var(--primary); color: #fff; }

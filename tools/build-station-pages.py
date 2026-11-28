@@ -73,9 +73,11 @@ def last_verified(l):
     return iso_date(l.get("lastVerified") or l.get("last_verified"))
 
 def badge_html(l):
-    """Visible badge text: "ว่าง" or "เข้าอยู่ได้ [date]". Dates stay in data attrs / JSON-LD only."""
+    """Visible badge text: ว่าง, จองแล้ว, or เข้าอยู่ได้ [date]."""
     lv = last_verified(l)
     lv_attr = f' data-last-verified="{lv}"' if lv else ""
+    if l.get("status")=="RESERVED":
+        return f'<span class="badge-vacant badge-reserved"{lv_attr}>จองแล้ว</span>'
     if is_soon(l):
         a = iso_date(l.get("available") or l.get("availableFrom"))
         text = f"เข้าอยู่ได้ {thd(a)}"

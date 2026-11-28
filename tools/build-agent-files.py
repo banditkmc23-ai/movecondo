@@ -117,7 +117,7 @@ for d in sorted(glob.glob("rooms/mc-*/")):
     walk_txt = F.get("ระยะเดิน", "")
     status_th = P["badge"]
     avail_from = None
-    if status_th != "ว่าง":
+    if status_th not in ("ว่าง", "จองแล้ว"):
         avail_from = P["avail_attr"] or thai_date_to_iso(status_th) or (L.get("available") if re.match(r"\d{4}-", str(L.get("available"))) else None)
     lease = F.get("สัญญาขั้นต่ำ")
     rooms.append(dict(
@@ -156,6 +156,8 @@ def lease_qv(t):
     return {"@type": "QuantitativeValue", "value": int(m.group(1)), "unitCode": "ANN" if m.group(2) == "ปี" else "MON"}
 
 def availability(r):
+    if r.get("status_th")=="จองแล้ว":
+        return "https://schema.org/LimitedAvailability"
     return "https://schema.org/InStock" if not r["avail_from"] else "https://schema.org/PreOrder"
 
 def status_en(r): return en(r["status_th"])
@@ -184,7 +186,7 @@ def room_public(r):
         "deposit": {"th": r["deposit_th"], "en": en(r["deposit_th"])} if r["deposit_th"] else None,
         "advance_rent": {"th": r["advance_th"], "en": en(r["advance_th"])} if r["advance_th"] else None,
         "minimum_lease": {"th": r["lease_th"], "en": en(r["lease_th"])} if r["lease_th"] else None,
-        "availability": "available_now" if not r["avail_from"] else "available_from",
+        "availability": "reserved" if r.get("status_th")=="จองแล้ว" else ("available_now" if not r["avail_from"] else "available_from"),
         "available_from": r["avail_from"],
         "status": {"th": r["status_th"], "en": status_en(r)},
         "move_in": {"th": r["movein_th"], "en": en(r["movein_th"])} if r["movein_th"] else None,

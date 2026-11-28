@@ -54,7 +54,7 @@
       "th": "เอกมัย",
       "en": "Ekkamai",
       "url": "https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/",
-      "rooms": 31
+      "rooms": 32
     },
     {
       "slug": "huai-khwang",
@@ -68,7 +68,7 @@
       "th": "อ่อนนุช",
       "en": "On Nut",
       "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/",
-      "rooms": 74
+      "rooms": 77
     },
     {
       "slug": "phrakhanong",
@@ -96,7 +96,7 @@
       "th": "พระราม 9",
       "en": "Rama 9",
       "url": "https://banditkmc23-ai.github.io/movecondo/areas/rama-9/",
-      "rooms": 26
+      "rooms": 27
     },
     {
       "slug": "samyan-silom",
@@ -185,7 +185,7 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/?lang=en",
       "area_th": "อ่อนนุช",
-      "rooms": 11,
+      "rooms": 13,
       "price_min": 20000,
       "price_max": 26000,
       "station_th": "BTS อ่อนนุช",
@@ -295,18 +295,18 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/xt-ekkamai/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/xt-ekkamai/?lang=en",
       "area_th": "เอกมัย",
-      "rooms": 5,
+      "rooms": 6,
       "price_min": 18000,
       "price_max": 43000,
-      "station_th": "BTS ทองหล่อ",
-      "walk_min": 23
+      "station_th": "BTS เอกมัย",
+      "walk_min": null
     },
     {
       "name": "Mori Haus",
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/mori-haus/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/mori-haus/?lang=en",
       "area_th": "อ่อนนุช",
-      "rooms": 3,
+      "rooms": 4,
       "price_min": 24000,
       "price_max": 50000,
       "station_th": "BTS อ่อนนุช",
@@ -768,8 +768,8 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/rhythm-asoke/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/rhythm-asoke/?lang=en",
       "area_th": "พระราม 9",
-      "rooms": 3,
-      "price_min": 20000,
+      "rooms": 4,
+      "price_min": 14000,
       "price_max": 28000,
       "station_th": "MRT พระราม 9",
       "walk_min": 4
@@ -2512,6 +2512,127 @@
         "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-008/6.webp"
       ],
       "last_verified": "2026-11-10",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and send the room page URL / ทัก LINE แล้วส่งลิงก์หน้าห้อง"
+      }
+    },
+    {
+      "id": "MC-009",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-009/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-009/?lang=en",
+      "project": "Kawa Haus",
+      "area": {
+        "th": "อ่อนนุช",
+        "en": "On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 38,
+      "floor": {
+        "th": "ชั้น 6",
+        "en": "Floor 6"
+      },
+      "rent_thb_per_month": 23000,
+      "currency": "THB",
+      "deposit": {
+        "th": "2 เดือน",
+        "en": "2 months"
+      },
+      "advance_rent": {
+        "th": "1 เดือน",
+        "en": "1 month"
+      },
+      "minimum_lease": {
+        "th": "1 ปี",
+        "en": "1 year"
+      },
+      "availability": "reserved",
+      "available_from": null,
+      "status": {
+        "th": "จองแล้ว",
+        "en": "Reserved"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS อ่อนนุช",
+        "en": "BTS On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-on-nut/"
+      },
+      "walk_minutes_to_station": 14,
+      "shuttle_to_station": true,
+      "building_location": {
+        "lat": 13.7150067,
+        "lng": 100.6052636,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้องมุมวิวสระและคลอง เฟอร์นิเจอร์ครบ ที่ Kawa Haus ย่านอ่อนนุช มีรถรับ-ส่ง",
+        "en": "Fully furnished corner unit with pool and canal views, at Kawa Haus in On Nut, with a shuttle service."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "ห้องมุม",
+              "en": "Corner unit"
+            },
+            {
+              "th": "วิวสระและคลอง",
+              "en": "Pool and canal view"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
+            "en": "Furniture & appliances"
+          },
+          "items": [
+            {
+              "th": "ตกแต่งและเฟอร์นิเจอร์ครบ",
+              "en": "Fully decorated and furnished"
+            }
+          ]
+        },
+        {
+          "group": {
+            "th": "การเดินทางและสถานที่ใกล้",
+            "en": "Getting around & nearby"
+          },
+          "items": [
+            {
+              "th": "มีรถรับ-ส่ง",
+              "en": "Shuttle service"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/8.webp"
+      ],
+      "last_verified": "2026-11-28",
       "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/",
       "contact": {
         "line": "https://line.me/R/ti/p/%40576yhgtz",
@@ -35791,6 +35912,314 @@
       ],
       "last_verified": "2026-11-28",
       "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/wyne-by-sansiri/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and send the room page URL / ทัก LINE แล้วส่งลิงก์หน้าห้อง"
+      }
+    },
+    {
+      "id": "MC-363",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-363/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-363/?lang=en",
+      "project": "Rhythm Asoke",
+      "area": {
+        "th": "พระราม 9",
+        "en": "Rama 9",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/rama-9/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 35,
+      "floor": {
+        "th": "ชั้น 11",
+        "en": "Floor 11"
+      },
+      "rent_thb_per_month": 14000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "reserved",
+      "available_from": null,
+      "status": {
+        "th": "จองแล้ว",
+        "en": "Reserved"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "MRT พระราม 9",
+        "en": "MRT Phra Ram 9",
+        "url": "https://banditkmc23-ai.github.io/movecondo/stations/mrt-phra-ram-9/"
+      },
+      "walk_minutes_to_station": 4,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.754478,
+        "lng": 100.564209,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 35 ตร.ม. ที่ Rhythm Asoke ย่านพระราม 9 วิวเมือง จองแล้ว",
+        "en": "1-bedroom, 35 sq.m. at Rhythm Asoke, Rama 9. City view. Reserved."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "วิวเมือง",
+              "en": "City view"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-363/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-363/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-363/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-363/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-363/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-363/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-363/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-363/8.webp"
+      ],
+      "last_verified": "2026-11-28",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/rhythm-asoke/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and send the room page URL / ทัก LINE แล้วส่งลิงก์หน้าห้อง"
+      }
+    },
+    {
+      "id": "MC-364",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-364/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-364/?lang=en",
+      "project": "Kawa Haus",
+      "area": {
+        "th": "อ่อนนุช",
+        "en": "On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 35,
+      "floor": {
+        "th": "ชั้น 6",
+        "en": "Floor 6"
+      },
+      "rent_thb_per_month": 23000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "reserved",
+      "available_from": null,
+      "status": {
+        "th": "จองแล้ว",
+        "en": "Reserved"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS อ่อนนุช",
+        "en": "BTS On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-on-nut/"
+      },
+      "walk_minutes_to_station": 14,
+      "shuttle_to_station": true,
+      "building_location": {
+        "lat": 13.7150067,
+        "lng": 100.6052636,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 35 ตร.ม. ที่ Kawa Haus ย่านอ่อนนุช จองแล้ว",
+        "en": "1-bedroom, 35 sq.m. at Kawa Haus, On Nut. Reserved."
+      },
+      "features": [],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-364/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-364/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-364/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-364/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-364/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-364/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-364/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-364/8.webp"
+      ],
+      "last_verified": "2026-11-28",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and send the room page URL / ทัก LINE แล้วส่งลิงก์หน้าห้อง"
+      }
+    },
+    {
+      "id": "MC-365",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-365/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-365/?lang=en",
+      "project": "XT Ekkamai",
+      "area": {
+        "th": "เอกมัย",
+        "en": "Ekkamai",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 30.3,
+      "floor": {
+        "th": "ชั้น 11",
+        "en": "Floor 11"
+      },
+      "rent_thb_per_month": 19500,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "reserved",
+      "available_from": null,
+      "status": {
+        "th": "จองแล้ว",
+        "en": "Reserved"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS เอกมัย",
+        "en": "BTS Ekkamai",
+        "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-ekkamai/"
+      },
+      "walk_minutes_to_station": null,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.734015,
+        "lng": 100.586611,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 30.3 ตร.ม. ที่ XT Ekkamai ย่านเอกมัย วิวสระ จองแล้ว",
+        "en": "1-bedroom, 30.3 sq.m. at XT Ekkamai, Ekkamai. Pool view. Reserved."
+      },
+      "features": [
+        {
+          "group": {
+            "th": "ไฮไลต์ห้อง",
+            "en": "Room highlights"
+          },
+          "items": [
+            {
+              "th": "วิวสระ",
+              "en": "Pool view"
+            }
+          ]
+        }
+      ],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-365/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-365/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-365/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-365/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-365/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-365/6.webp"
+      ],
+      "last_verified": "2026-11-28",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/xt-ekkamai/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and send the room page URL / ทัก LINE แล้วส่งลิงก์หน้าห้อง"
+      }
+    },
+    {
+      "id": "MC-366",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-366/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-366/?lang=en",
+      "project": "Mori Haus",
+      "area": {
+        "th": "อ่อนนุช",
+        "en": "On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 46,
+      "floor": {
+        "th": "ชั้น 6",
+        "en": "Floor 6"
+      },
+      "rent_thb_per_month": 25000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "reserved",
+      "available_from": null,
+      "status": {
+        "th": "จองแล้ว",
+        "en": "Reserved"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS อ่อนนุช",
+        "en": "BTS On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-on-nut/"
+      },
+      "walk_minutes_to_station": 18,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7152917,
+        "lng": 100.6029639,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 46 ตร.ม. ที่ Mori Haus ย่านอ่อนนุช จองแล้ว",
+        "en": "1-bedroom, 46 sq.m. at Mori Haus, On Nut. Reserved."
+      },
+      "features": [],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-366/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-366/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-366/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-366/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-366/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-366/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-366/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-366/8.webp"
+      ],
+      "last_verified": "2026-11-28",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/mori-haus/",
       "contact": {
         "line": "https://line.me/R/ti/p/%40576yhgtz",
         "how": "Open the LINE link and send the room page URL / ทัก LINE แล้วส่งลิงก์หน้าห้อง"
