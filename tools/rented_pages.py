@@ -16,7 +16,7 @@ from pathlib import Path
 
 ROOT = Path("/workspace/movecondo")
 BASE = "https://banditkmc23-ai.github.io/movecondo/"
-ASSET_V = "20261124a2"
+ASSET_V = "20261128m1"
 RENTED_LABEL = {"rented": "มีผู้เช่าแล้ว", "sold": "ขายแล้ว"}
 RENTED_NOTE = {
     "rented": (

@@ -1,0 +1,698 @@
+{
+ "generated": "2026-11-28",
+ "projects": {
+  "28 Chidlom": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.746839,
+   "lng": 100.543841,
+   "source": "OpenStreetMap: 28 Chidlom, 28, Lumphini Subdistrict, Pathum Wan District, Bangkok, 10330, Thail"
+  },
+  "Ashton Asoke-Rama 9": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.755627,
+   "lng": 100.564214,
+   "source": "OpenStreetMap: Ashton Asoke–Rama 9, 469, Din Daeng Subdistrict, Din Daeng District, Bangkok, 10"
+  },
+  "Aspire Onnut Station": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.707512,
+   "lng": 100.599184,
+   "source": "MoveCondo listing data (OpenStreetMap geocoding)"
+  },
+  "Aspire Rama 9": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.754495,
+   "lng": 100.566666,
+   "source": "OpenStreetMap: Aspire Rama 9, Bang Kapi Subdistrict, Huai Khwang District, Bangkok, 10310, Thai"
+  },
+  "Aspire Sukhumvit 48": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.710354,
+   "lng": 100.594084,
+   "source": "OpenStreetMap: Aspire Sukhumvit 48, Phra Khanong Subdistrict, Khlong Toei District, Bangkok, Th"
+  },
+  "Aspire Sukhumvit-Rama 4": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.710892,
+   "lng": 100.589226,
+   "source": "thinkofliving.com project review (Google Maps pin), Rama 4 Rd, Phra Khanong"
+  },
+  "Bangkok Feliz Sukhumvit 69-2": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.715907,
+   "lng": 100.59183,
+   "source": "MoveCondo listing data (OpenStreetMap geocoding)"
+  },
+  "Beatniq Sukhumvit 32": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.72587,
+   "lng": 100.57545,
+   "source": "OpenStreetMap: BEATNIQ, Soi Sukhumvit 32, Khlong Tan Subdistrict, Khlong Toei District, Bangkok"
+  },
+  "Blocs 77": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.710632,
+   "lng": 100.60155,
+   "source": "MoveCondo listing data (OpenStreetMap geocoding)"
+  },
+  "Ceil By Sansiri": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.730557,
+   "lng": 100.587795,
+   "source": "MoveCondo listing data (OpenStreetMap geocoding)"
+  },
+  "Chapter Thonglor 25": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.742822,
+   "lng": 100.583775,
+   "source": "MoveCondo listing data (OpenStreetMap geocoding)"
+  },
+  "Chewathai Residence Asoke": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.753937,
+   "lng": 100.564074,
+   "source": "OpenStreetMap: Chewathai Residence Asoke, Soi Maitad, Makkasan Subdistrict, Ratchathewi Distric"
+  },
+  "Coco Parc Rama 4": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.721861,
+   "lng": 100.553421,
+   "source": "OpenStreetMap: Coco Parc, 1150, Rama IV Road, Rim Thang Rotfai Sai Tha Ruea Community, Khlong T"
+  },
+  "Culture Chula": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.730681,
+   "lng": 100.53234,
+   "source": "OpenStreetMap: Culture Chula, 888, Soi Pratuchai, Si Phraya Subdistrict, Bang Rak District, Ban"
+  },
+  "DLV Thonglor 20": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.738527,
+   "lng": 100.587206,
+   "source": "OpenStreetMap: DLV Thonglor 20, ซอยเอกมัย 21 (Nominatim way 325614869)"
+  },
+  "Edge Sukhumvit 23": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.73645,
+   "lng": 100.563464,
+   "source": "OpenStreetMap: Edge Sukhumvit 23, Soi Sukhumvit 25, Area of ERRC- embassy of india residence an"
+  },
+  "Eight Thonglor Residence": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.730743,
+   "lng": 100.58207,
+   "source": "OpenStreetMap: Ei8ht Thonglor Residences, ซอยสุขุมวิท 55 (Nominatim way 318181489)"
+  },
+  "Fynn Asoke": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.735689,
+   "lng": 100.55673,
+   "source": "OpenStreetMap: Fynn Asoke, Khlong Toei Subdistrict, Khlong Toei District, Bangkok, Thailand"
+  },
+  "Grand Park View Asoke": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.743819,
+   "lng": 100.561737,
+   "source": "OpenStreetMap: Grand Park View Asoke, Asok Montri Road, Khlong Toei Nuea Subdistrict, Vadhana D"
+  },
+  "H Sukhumvit 43": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.733031,
+   "lng": 100.573988,
+   "source": "OpenStreetMap: H Sukhumvit 43, Soi Sukhumvit 43, Khlong Tan Nuea Subdistrict, Vadhana District,"
+  },
+  "Hasu Haus": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.714014,
+   "lng": 100.602101,
+   "source": "OpenStreetMap: Hasu Haus, Phra Khanong Nuea Subdistrict, Vadhana District, Bangkok, Thailand"
+  },
+  "IDEO Mobi Sukhumvit 81": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.704739,
+   "lng": 100.602248,
+   "source": "MoveCondo listing data (OpenStreetMap geocoding)"
+  },
+  "IDEO Rama 9-Asoke": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.754066,
+   "lng": 100.567179,
+   "source": "OpenStreetMap: Ideo Rama 9–Asoke, 57, Rama IX Road, Huai Khwang Subdistrict, Huai Khwang Distri"
+  },
+  "IDEO Sukhumvit 93": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.698893,
+   "lng": 100.605517,
+   "source": "OpenStreetMap: Ideo Sukhumvit 93, 2331, Sukhumvit Road, Phra Khanong Subdistrict, Phra Khanong "
+  },
+  "Ideo Morph 38": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.720922,
+   "lng": 100.578835,
+   "source": "OpenStreetMap: Ideo Morph, Soi Sukhumvit 38, Phra Khanong Subdistrict, Khlong Toei District, Ba"
+  },
+  "Kawa Haus": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.715007,
+   "lng": 100.605264,
+   "source": "MoveCondo listing data (OpenStreetMap geocoding)"
+  },
+  "Khun by Yoo": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.732757,
+   "lng": 100.582696,
+   "source": "OpenStreetMap: Khun by Yoo, Soi Thong Lo 12, Khlong Tan Nuea Subdistrict, Vadhana District, Ban"
+  },
+  "Le Luk Condominium": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.714959,
+   "lng": 100.593482,
+   "source": "OpenStreetMap: Le Luk Condominium, ซอยปรีดี พนมยงค์ 3, แขวงพระโขนงเหนือ (Nominatim way 506792945)"
+  },
+  "Life Asoke": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.750498,
+   "lng": 100.564733,
+   "source": "OpenStreetMap: Life Asoke, Kamphaeng Phet 7 Road, Bang Kapi Subdistrict, Huai Khwang District, "
+  },
+  "Life Asoke Hype": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.754237,
+   "lng": 100.562801,
+   "source": "OpenStreetMap: Life Asoke Hype, Chaturathit Road, Makkasan Subdistrict, Ratchathewi District, B"
+  },
+  "Life Rama 4 - Asoke": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.72008,
+   "lng": 100.561831,
+   "source": "OpenStreetMap: Life Rama 4–Asoke, Soi Charoen Suk, ชุมชนเทพประทาน, Khlong Toei Subdistrict, Khl"
+  },
+  "Life Sukhumvit 48": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.711135,
+   "lng": 100.59456,
+   "source": "existing MoveCondo listing (OpenStreetMap)"
+  },
+  "Life Sukhumvit 62": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.694936,
+   "lng": 100.603556,
+   "source": "propholic.com project page GPS (https://propholic.com/prop-verdict/life-sukhumvit-62/); checked ~290 m from BTS บางจาก (walk 2 min)"
+  },
+  "Mayfair Place Sukhumvit 50": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.70515,
+   "lng": 100.594877,
+   "source": "OpenStreetMap: Mayfair Place Sukhumvit 50, Phra Khanong Subdistrict, Khlong Toei District, Bang"
+  },
+  "Modiz Sukhumvit 50": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.70227,
+   "lng": 100.589601,
+   "source": "OpenStreetMap: Modiz Sukhumvit 50, Phra Khanong Subdistrict, Khlong Toei District, Bangkok, Tha"
+  },
+  "Mori Haus": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.715292,
+   "lng": 100.602964,
+   "source": "existing MoveCondo listing (OpenStreetMap)"
+  },
+  "Mycondo Sukhumvit 52": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.703752,
+   "lng": 100.600191,
+   "source": "OpenStreetMap: My Condo Sukhumvit 52, Sukhumvit Soi 52, Roem Charoen Community, Phra Khanong Ta"
+  },
+  "Nia By Sansiri": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.714689,
+   "lng": 100.599856,
+   "source": "MoveCondo listing data (OpenStreetMap geocoding)"
+  },
+  "Noble Around 33": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.735938,
+   "lng": 100.567449,
+   "source": "OpenStreetMap: Noble Around Sukhumvit 33, Soi Sukhumvit 33, Khlong Tan Nuea Subdistrict, Vadhan"
+  },
+  "Noble Around Ari": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.777722,
+   "lng": 100.544737,
+   "source": "OpenStreetMap: Noble Around Ari, Sam Sen Nai Subdistrict, Phaya Thai District, Bangkok, 10400, "
+  },
+  "Noble BE19": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.742301,
+   "lng": 100.559172,
+   "source": "OpenStreetMap: Noble BE19, Khlong Toei Nuea Subdistrict, Vadhana District, Bangkok, Thailand"
+  },
+  "Noble BE33": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.735509,
+   "lng": 100.567272,
+   "source": "OpenStreetMap: Noble BE33, Soi Sukhumvit 33, Khlong Tan Nuea Subdistrict, Vadhana District, Ban"
+  },
+  "Noble Ora": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.73626,
+   "lng": 100.584509,
+   "source": "MoveCondo listing data (OpenStreetMap geocoding)"
+  },
+  "Noble Ploenchit": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.743948,
+   "lng": 100.548566,
+   "source": "OpenStreetMap: Noble Ploenchit, Soi Nai Lert, Lumphini Subdistrict, Pathum Wan District, Bangko"
+  },
+  "Noble Refine Sukhumvit 26": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.728073,
+   "lng": 100.571069,
+   "source": "OpenStreetMap: Noble Refine, ซอยสุขุมวิท 26 (Nominatim)"
+  },
+  "Noble Remix Thonglor": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.724113,
+   "lng": 100.577105,
+   "source": "OpenStreetMap: Noble Remix, 772, Sukhumvit Road, Khlong Tan Subdistrict, Khlong Toei District, "
+  },
+  "Noble Reveal Ekkamai": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.721889,
+   "lng": 100.584901,
+   "source": "OpenStreetMap: Noble Reveal Condominium, Soi Sukhumvit 63, Khlong Tan Nuea Subdistrict, Vadhana"
+  },
+  "Noble Revo Silom": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.719385,
+   "lng": 100.519244,
+   "source": "OpenStreetMap: Noble Revo Silom, 88, Surasak Road, Si Lom Subdistrict, Bang Rak District, Bangk"
+  },
+  "Noble Solo": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.740068,
+   "lng": 100.585108,
+   "source": "OpenStreetMap: Noble Solo, ซอยสุขุมวิท 55 (Nominatim)"
+  },
+  "Noble State 39": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.734296,
+   "lng": 100.570718,
+   "source": "OpenStreetMap: Noble State 39, Soi Sukhumvit 39, Khlong Tan Nuea Subdistrict, Vadhana District,"
+  },
+  "Nue District R9": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.75714,
+   "lng": 100.567828,
+   "source": "OpenStreetMap: Nue District R9, Huai Khwang Subdistrict, Huai Khwang District, Bangkok, 10310, "
+  },
+  "Oka Haus": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.716902,
+   "lng": 100.574675,
+   "source": "MoveCondo listing data (OpenStreetMap geocoding)"
+  },
+  "One9Five Asoke-Rama 9": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.757425,
+   "lng": 100.568316,
+   "source": "OpenStreetMap: One9Five Asoke–Rama 9, Soi Rama IX Soi 5, Huai Khwang Subdistrict, Huai Khwang D"
+  },
+  "Park Origin 24 Phrom Phong": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.72512,
+   "lng": 100.565654,
+   "source": "OpenStreetMap: Park Origin Phrom Phong, Khlong Tan Subdistrict, Khlong Toei District, Bangkok, "
+  },
+  "Park Origin Phrom Phong": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.72512,
+   "lng": 100.565654,
+   "source": "OpenStreetMap: Park Origin Phrom Phong, Khlong Tan Subdistrict, Khlong Toei District, Bangkok, "
+  },
+  "Q House Sukhumvit 79": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.707598,
+   "lng": 100.600754,
+   "source": "OpenStreetMap: Q House Sukhumvit 79, Phra Khanong Nuea Subdistrict, Vadhana District, Bangkok, "
+  },
+  "Q Langsuan": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.739161,
+   "lng": 100.542503,
+   "source": "OpenStreetMap: Q Langsuan, 54, Soi Langsuan, Lumphini Subdistrict, Pathum Wan District, Bangkok"
+  },
+  "Quattro by Sansiri": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.727582,
+   "lng": 100.581598,
+   "source": "OpenStreetMap: Quattro By Sansiri, Khlong Tan Nuea Subdistrict, Vadhana District, Bangkok, 1011"
+  },
+  "Qube Suites Sukhumvit 46": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.713632,
+   "lng": 100.59059,
+   "source": "OpenStreetMap: Qube Sukhumvit Soi 46, Soi Phum Chit, Phum Chit Community, Phra Khanong Subdistr"
+  },
+  "Ramada by Wyndham (Siamese) Sukhumvit 87": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.701743,
+   "lng": 100.603709,
+   "source": "OpenStreetMap: Ramada by Wyndham Bangkok Sukhumvit 87, 9, Sukhumvit Soi 87, Bang Chak Subdistri"
+  },
+  "Rhythm Asoke": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.754478,
+   "lng": 100.564209,
+   "source": "OpenStreetMap: Rhythm Asoke, Soi Maitad, Makkasan Subdistrict, Ratchathewi District, Bangkok, 1"
+  },
+  "Rhythm Asoke 2": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.753869,
+   "lng": 100.565008,
+   "source": "OpenStreetMap: Rhythm Asoke 2, Asok-Din Daeng Road, Makkasan Subdistrict, Ratchathewi District,"
+  },
+  "Rhythm Ekkamai": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.722813,
+   "lng": 100.584232,
+   "source": "MoveCondo listing data (OpenStreetMap geocoding)"
+  },
+  "Rhythm Sukhumvit 42": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.717803,
+   "lng": 100.585476,
+   "source": "OpenStreetMap: Rhythm Sukhumvit 42, ซอยสุขุมวิท 42 (Nominatim way 520436158)"
+  },
+  "Rhythm Sukhumvit 44/1": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.715202,
+   "lng": 100.59047,
+   "source": "OpenStreetMap: Rhythm Sukhumvit 44/1, Soi Sukhumvit 44/1, Phum Chit Community, Phra Khanong Sub"
+  },
+  "Siri At Sukhumvit": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.72244,
+   "lng": 100.579982,
+   "source": "OpenStreetMap: Siri at Sukhumvit, 902, Sukhumvit Road, Phra Khanong Subdistrict, Khlong Toei Di"
+  },
+  "Skyrise Sukhumvit 64": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.684181,
+   "lng": 100.607438,
+   "source": "OpenStreetMap: Skyrise Avenue Sukhumvit 64, Phra Khanong Tai Subdistrict, Phra Khanong District"
+  },
+  "The Alcove Thonglor 10": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.731245,
+   "lng": 100.586383,
+   "source": "existing MoveCondo listing (OpenStreetMap)"
+  },
+  "The Base Park East": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.713791,
+   "lng": 100.600449,
+   "source": "OpenStreetMap: The Base Park East Sukhumvit 77, Phra Khanong Nuea Subdistrict, Vadhana District"
+  },
+  "The Base Park West": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.713018,
+   "lng": 100.600112,
+   "source": "MoveCondo listing data (OpenStreetMap geocoding)"
+  },
+  "The Base Sukhumvit 50": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.70498,
+   "lng": 100.591997,
+   "source": "OpenStreetMap: The Base Sukhumvit 50, Phra Khanong Subdistrict, Khlong Toei District, Bangkok, "
+  },
+  "The Base Sukhumvit 77": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.710999,
+   "lng": 100.602507,
+   "source": "OpenStreetMap: The Base Sukhumvit 77, 289, On Nut Road, Phra Khanong Nuea Subdistrict, Vadhana "
+  },
+  "The Crest Sukhumvit 34": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.725201,
+   "lng": 100.576521,
+   "source": "OpenStreetMap: The Crest Sukhumvit 34, Khlong Tan Subdistrict, Khlong Toei District, Bangkok, T"
+  },
+  "The Diplomat 39": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.731437,
+   "lng": 100.570321,
+   "source": "OpenStreetMap: The Diplomat 39, ซอยสุขุมวิท 39 (Nominatim way 1195022786)"
+  },
+  "The Emporio Place Sukhumvit 24": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.722996,
+   "lng": 100.567146,
+   "source": "OpenStreetMap: The Emporio Place, 93, Khlong Tan Subdistrict, Khlong Toei District, Bangkok, 10"
+  },
+  "The Esse Sukhumvit 36": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.724472,
+   "lng": 100.577734,
+   "source": "OpenStreetMap: The Esse Sukhumvit 36, Phra Khanong Subdistrict, Khlong Toei District, Bangkok, "
+  },
+  "The Excel Hideaway Sukhumvit 50": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.706287,
+   "lng": 100.590931,
+   "source": "OpenStreetMap: The Excel Hideaway Sukhumvit 50, Phra Khanong (Nominatim way 718889434)"
+  },
+  "The Line Sukhumvit 71": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.715418,
+   "lng": 100.594208,
+   "source": "MoveCondo listing data (OpenStreetMap geocoding)"
+  },
+  "The Lumpini 24": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.722793,
+   "lng": 100.566123,
+   "source": "OpenStreetMap: The Lumpini 24, Phlaphongphanich Road, Khlong Toei Subdistrict, Khlong Toei Dist"
+  },
+  "The Nest Ploenchit": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.746326,
+   "lng": 100.549657,
+   "source": "OpenStreetMap: The Nest Ploenchit, Soi Nai Lert, Lumphini Subdistrict, Pathum Wan District, Ban"
+  },
+  "The Nest Sukhumvit 71": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.713195,
+   "lng": 100.598315,
+   "source": "OpenStreetMap: The Nest Sukhumvit 71, Phra Khanong Nuea Subdistrict, Vadhana District, Bangkok,"
+  },
+  "The Niche Mono Sukhumvit 50": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.704544,
+   "lng": 100.592511,
+   "source": "OpenStreetMap: The Niche Mono Sukhumvit 50, Phra Khanong Subdistrict, Khlong Toei District, Ban"
+  },
+  "The Niche Pride Thonglor-Petchaburi": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.744697,
+   "lng": 100.58332,
+   "source": "MoveCondo listing data (OpenStreetMap geocoding)"
+  },
+  "The President Sukhumvit 81": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.704994,
+   "lng": 100.60182,
+   "source": "OpenStreetMap: The President Sukhumvit, Soi Sukhumvit 81, Phra Khanong Nuea Subdistrict, Vadhan"
+  },
+  "The Privacy Rama 9": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.743919,
+   "lng": 100.603477,
+   "source": "OpenStreetMap: The Privacy Rama 9, ถนนรามคำแหง (Nominatim way 795573471)"
+  },
+  "The Reserve Sukhumvit 61": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.729672,
+   "lng": 100.584025,
+   "source": "OpenStreetMap: The Reserve Sukhumvit 61, Khlong Tan Nuea Subdistrict, Vadhana District, Bangkok"
+  },
+  "The Room Sukhumvit 21": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.743806,
+   "lng": 100.561318,
+   "source": "MoveCondo listing data (OpenStreetMap geocoding)"
+  },
+  "The Room Sukhumvit 79": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.708462,
+   "lng": 100.601656,
+   "source": "OpenStreetMap: The Room Sukhumvit 79, Sukhumvit Soi 79, Sukhumvit Garden City, Phra Khanong Nue"
+  },
+  "The Seed Mingle Suanplu Soi 8": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.719829,
+   "lng": 100.539203,
+   "source": "OpenStreetMap: The Seed Mingle, ซอยสวนพลู 8 (Nominatim way 332660381)"
+  },
+  "The Strand Thonglor": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.724163,
+   "lng": 100.579841,
+   "source": "OpenStreetMap: เดอะ สแตรนด์ ทองหล่อ, ซอยสุขุมวิท 57, เขตวัฒนา (Nominatim)"
+  },
+  "The Teak Sukhumvit 39": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.740714,
+   "lng": 100.573483,
+   "source": "MoveCondo listing data (OpenStreetMap geocoding)"
+  },
+  "The Tempo Ratchada": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.779177,
+   "lng": 100.575633,
+   "source": "OpenStreetMap: The Tempo Ratchada, Pracharat Bamphen 3/1, Huai Khwang Subdistrict, Huai Khwang "
+  },
+  "The XXXIX Sukhumvit 39": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.732305,
+   "lng": 100.570539,
+   "source": "OpenStreetMap: The XXXIX, Soi Sukhumvit 39, Khlong Tan Nuea Subdistrict, Vadhana District, Bang"
+  },
+  "Waterford Diamond Sukhumvit 30/1": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.726501,
+   "lng": 100.573087,
+   "source": "OpenStreetMap: Waterford Diamond Tower, Soi Sukhumvit 30/1, Khlong Tan Subdistrict, Khlong Toei"
+  },
+  "Whizdom Connect Sukhumvit": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.686482,
+   "lng": 100.612897,
+   "source": "OpenStreetMap: Whizdom Connect Sukhumvit, Soi Piyabutr 1, True Digital Park, Bang Chak Subdistr"
+  },
+  "Whizdom Essence Sukhumvit 101": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.685891,
+   "lng": 100.612465,
+   "source": "OpenStreetMap: Whizdom Essence Sukhumvit, Soi Piyabutr 1, True Digital Park, Bang Chak Subdistr"
+  },
+  "Whizdom Inspire Sukhumvit": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.685181,
+   "lng": 100.612091,
+   "source": "OpenStreetMap: Whizdom Inspire Sukhumvit, Soi Sukhumvit 101/1, Bang Chak Subdistrict, Phra Khan"
+  },
+  "Wyne By Sansiri": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.712683,
+   "lng": 100.593842,
+   "source": "OpenStreetMap: Wyne, Sukhumvit Road, Piyavach Community, Phra Khanong Subdistrict, Khlong Toei "
+  },
+  "XT Ekkamai": {
+   "added": "2026-11-28",
+   "kind": "project",
+   "lat": 13.734015,
+   "lng": 100.586611,
+   "source": "OpenStreetMap: XT Ekkamai, Khlong Tan Nuea Subdistrict, Vadhana District, Bangkok, Thailand"
+  }
+ }
+}

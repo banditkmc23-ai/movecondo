@@ -18,10 +18,10 @@ os.chdir(ROOT)
 
 BASE = "https://banditkmc23-ai.github.io/movecondo/"
 LINE_URL = "https://line.me/R/ti/p/%40576yhgtz"
-ASSET_V = "20261124a2"
+ASSET_V = "20261128m1"
 I18N_CSS_V = "20261112i1"
 CAROUSEL_V = "20261117dc1"
-ADS_V = "20261124a2"
+ADS_V = "20261128m1"
 STATS_V = "20261113p1"
 PROPERTY_TYPES = ("condo", "house", "land", "office", "warehouse", "other")
 TYPE_TH = {"condo": "คอนโด", "house": "บ้าน", "land": "ที่ดิน", "office": "ออฟฟิศ", "warehouse": "โกดัง", "other": "อื่น ๆ"}

@@ -459,6 +459,9 @@ bots = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "Google-Extended", "Googlebot
 write("robots.txt", "# MoveCondo welcomes search engines and AI assistants.\n# Room list for AI agents: " + BASE + "llms.txt · JSON: " + BASE + "rooms.json\n\nUser-agent: *\nAllow: /\n\n"
       + "\n".join(f"User-agent: {b}\nAllow: /\n" for b in bots) + f"\nSitemap: {BASE}sitemap.xml\n")
 
+# ---------- project location maps (must run after every builder that rewrites pages) ----------
+subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "build-project-maps.py")], check=True)
+
 # ---------- safety scan ----------
 bad = 0
 for f in ["rooms.json", "feed.xml", "llms.txt", "llms-full.txt", "robots.txt", "sitemap.xml"] + sorted(glob.glob("condo/*/index.html")) + sorted(glob.glob("buy/**/index.html", recursive=True)) + sorted(glob.glob("type/*/index.html")):

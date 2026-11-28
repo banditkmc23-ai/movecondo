@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../../assets/styles.css?v=20261124a2" />
+  <link rel="stylesheet" href="../../assets/styles.css?v=20261128m1" />
   <link rel="stylesheet" href="../../assets/i18n.css?v=20261112i1" />
   <script>(function(){try{var q=new URLSearchParams(location.search).get("lang"),l=(q==="en"||q==="th")?q:localStorage.getItem("mc-lang");if(l==="en"){var d=document.documentElement;d.lang="en";d.className+=" mc-en mc-i18n-wait";setTimeout(function(){d.classList.remove("mc-i18n-wait")},2500)}}catch(e){}})();</script>
   <link rel="stylesheet" href="../../assets/map3d.css?v=20261112y" />
@@ -334,6 +334,17 @@
       </div>
     </aside>
   </div>
+<!-- pmap:start -->
+    <section class="section project-map" id="project-map">
+      <div class="section-head"><div>
+        <div class="eyebrow">ตำแหน่งโครงการ</div>
+        <h2>ดูแผนที่โครงการ</h2>
+        <p>หมุดแสดงตำแหน่งโครงการโดยประมาณ ไม่ใช่ตำแหน่งห้อง</p>
+      </div></div>
+      <div class="pmap-shell"><div class="pmap-canvas" data-pmap data-lat="13.704739" data-lng="100.602248" role="region" aria-label="แผนที่ตำแหน่งโครงการ"><button type="button" class="pmap-load">แตะเพื่อดูแผนที่</button></div></div>
+      <div class="pmap-actions"><a class="btn btn-md btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=13.704739,100.602248" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-10.2A7 7 0 1 0 5 10.8C5 14.8 12 21 12 21z"/><circle cx="12" cy="11" r="2.4"/></svg><span>เปิดใน Google Maps</span></a><span class="pmap-credit">แผนที่ © OpenStreetMap</span></div>
+    </section>
+    <!-- pmap:end -->
     <section class="section map3d-section" id="map">
     <div class="section-head">
       <h2>แผนที่ 3 มิติ</h2>
@@ -417,9 +428,10 @@
   <div class="overlay" id="viewModal" role="dialog" aria-modal="true" aria-labelledby="viewTitle"></div>
   <div class="overlay" id="lineModal" role="dialog" aria-modal="true" aria-labelledby="lineTitle"></div>
   <script src="../../assets/carousel.js?v=20261112y" defer></script>
-  <script src="../../assets/i18n.js?v=20261124a2" defer></script>
+  <script src="../../assets/i18n.js?v=20261128m1" defer></script>
   <script src="../../assets/stats.js?v=20261113p1" defer></script>
-  <script src="../../assets/app.js?v=20261128n1" defer></script>
+  <script src="../../assets/project-map.js?v=20261128m1" defer></script>
+  <script src="../../assets/app.js?v=20261128m1" defer></script>
   <script src="../../assets/ads.js?v=20261113s1" defer></script>
   <script src="../../assets/map3d.js?v=20261112y" defer></script>
 </body>

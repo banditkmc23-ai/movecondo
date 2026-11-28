@@ -23,9 +23,9 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 os.chdir(ROOT)
 
 BASE = "https://banditkmc23-ai.github.io/movecondo/"
-ASSET_V = "20261124a2"
-STYLES_V = "20261124a2"
-I18N_JS_V = "20261124a2"
+ASSET_V = "20261128m1"
+STYLES_V = "20261128m1"
+I18N_JS_V = "20261128m1"
 TODAY = date.today()
 TH_MON = ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.",
           "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."]
