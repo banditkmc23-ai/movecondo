@@ -803,6 +803,10 @@ function mktHTML(l, wide){
     ${wide ? `<div class="mkt-scale"><span>ต่ำสุด ${money(l.min)}</span><span>เฉลี่ย ${money(l.avg)}</span><span>สูงสุด ${money(l.max)}</span></div>` : ``}
   </div>`;
 }
+/* Airbnb-style map-pin tile on the card photo. Hidden by CSS until map-fab.js knows the project has verified coordinates. */
+function mapTileHTML(l){
+  return `<button type="button" class="card-map" data-map-project="${escapeHtml(l.project)}" aria-label="ดูตำแหน่งบนแผนที่" title="ดูตำแหน่งบนแผนที่"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-10.2A7 7 0 1 0 5 10.8C5 14.8 12 21 12 21z"/><circle cx="12" cy="11" r="2.4"/></svg></button>`;
+}
 function cardHTML(l, score, breakdown){
   const href = roomHref(l.id);
   const alt = `ห้อง ${l.project} ย่าน${l.area}`;
@@ -823,6 +827,7 @@ function cardHTML(l, score, breakdown){
       <a class="card-track" draggable="false" href="${href}" aria-label="ดูห้อง ${l.project}">${figs}</a>
       ${score!=null?`<span class="score-pill"><span>เข้ากัน</span>${score}%</span>`:""}
       ${badgeTag}
+      ${mapTileHTML(l)}
       <div class="card-dots">${dots}</div>
     </div>`;
   } else {
@@ -831,6 +836,7 @@ function cardHTML(l, score, breakdown){
       ${src?`<a href="${href}"><img class="cover-photo" src="${src}" alt="${alt}" width="800" height="450" loading="lazy" decoding="async"></a>`:""}
       ${score!=null?`<span class="score-pill"><span>เข้ากัน</span>${score}%</span>`:""}
       ${badgeTag}
+      ${mapTileHTML(l)}
     </div>`;
   }
   const bits = [l.area, l.type||l.beds, l.sizeLabel || (l.size?`${l.size} ตร.ม.`:null)];
@@ -2758,8 +2764,18 @@ function render(){
   if (window.MoveCondoCarousel) window.MoveCondoCarousel.scan();
   refreshSoonBadges();
   if (window.MoveCondoAds) window.MoveCondoAds.mount();
+  if (window.MoveCondoMapFab) window.MoveCondoMapFab.sync();
 }
 
+/* Data bridge for the home/search map (assets/map-fab.js). Rented rooms are never in LISTINGS. */
+window.MCMapBridge = {
+  route: function(){ return currentRoute(); },
+  rows: function(){ return currentRoute()==="search" ? searchFilter(SEARCH_STATE) : LISTINGS; },
+  all: function(){ return LISTINGS; },
+  href: function(name){ return projectHref(name); },
+  photo: function(l){ const f = (PHOTOS[l.id]||[])[0]; return f ? photoUrl(l.id, f.file, "thumb") : (coverSrc(l.id) || ""); },
+  base: SITE_BASE
+};
 
 /* ---- Area name aliases (used by home search) ---- */
 const AREA_ALIASES = [
@@ -2780,7 +2796,7 @@ const AREA_ALIASES = [
 ];
 
 
-window.addEventListener("hashchange", () => { closeFilterSheet(); render(); });
+window.addEventListener("hashchange", () => { closeFilterSheet(); if (window.MoveCondoMapFab) window.MoveCondoMapFab.close(true); render(); });
 bindSearchV2();
 
 

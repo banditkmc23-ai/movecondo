@@ -163,7 +163,7 @@ def patch_project_pages(projects, store, areas_by_name):
         coord = store["projects"].get(p["name"])
         sec = map_section(p["name"], p.get("area"), coord)
         if "</main>" in s:
-            s = s.replace("</main>", sec + "  </main>", 1)
+            s = re.sub(r"\n?[ \t]*</main>", lambda _m: "\n    " + sec + "  </main>", s, count=1)
         s = ensure_assets(s, "../../")
         s = patch_geo(s, coord, {"ApartmentComplex"})
         write(path, s)
@@ -192,7 +192,7 @@ def patch_room_pages(by_id, store, projects):
         if anchor:
             s = s[:anchor.start()] + sec + s[anchor.start():]
         elif "</main>" in s:
-            s = s.replace("</main>", sec + "  </main>", 1)
+            s = re.sub(r"\n?[ \t]*</main>", lambda _m: "\n    " + sec + "  </main>", s, count=1)
         else:
             continue
         s = ensure_assets(s, "../../")
@@ -238,6 +238,22 @@ def patch_station_pages(by_id, store, projects, stations):
         write(path, s)
     return out
 
+def patch_index():
+    """Home/search SPA: floating map pill + card map tiles (assets/map-fab.js, reuses project-map.js)."""
+    path = "index.html"
+    s = read(path)
+    tok = re.search(r"assets/app\.js\?v=([^\"']+)", s)
+    tok = tok.group(1) if tok else "1"
+    s2 = re.sub(r'\n?[ \t]*<script src="assets/(?:project-map|map-fab)\.js[^"]*" defer></script>', "", s)
+    tags = (f'  <script src="assets/project-map.js?v={tok}" defer></script>\n'
+            f'  <script src="assets/map-fab.js?v={tok}" defer></script>\n')
+    m = re.search(r'[ \t]*<script src="assets/ads\.js[^"]*" defer></script>\n', s2) or \
+        re.search(r'[ \t]*<script src="assets/app\.js[^"]*" defer></script>\n', s2)
+    if m:
+        s2 = s2[:m.end()] + tags + s2[m.end():]
+    if s2 != s:
+        write(path, s2)
+
 def main():
     L, by_id, projects, stations, store = load_all()
     added = merge_store(L, store)
@@ -248,6 +264,7 @@ def main():
     pm, ps = patch_project_pages(projects, store, {})
     rm, rs, rk = patch_room_pages(by_id, store, projects)
     sm = patch_station_pages(by_id, store, projects, stations)
+    patch_index()
     print(f"project maps: store={len(store['projects'])} (+{added} new) live projects={len(live)} "
           f"with map={len(live) - len(missing)} search-only={len(missing)}; "
           f"project pages map/search={pm}/{ps}; room pages map/search/skipped={rm}/{rs}/{rk}; station hub maps={sm}")

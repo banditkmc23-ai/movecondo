@@ -38,16 +38,16 @@
     return leafletP;
   }
 
-  function baseMap(L, el) {
+  function baseMap(L, el, full) {
     var touch = L.Browser.mobile || L.Browser.touch;
     var map = L.map(el, {
-      scrollWheelZoom: false, dragging: !touch, tap: false, touchZoom: true,
+      scrollWheelZoom: !!full, dragging: full ? true : !touch, tap: false, touchZoom: true,
       zoomControl: true, attributionControl: true, worldCopyJump: false
     });
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>'
     }).addTo(map);
-    if (touch) {
+    if (touch && !full) {
       // single-finger drag keeps the page scrolling; two-finger pinch zooms/pans the map
       var cont = map.getContainer();
       cont.style.touchAction = "pan-y";
@@ -142,6 +142,8 @@
       btn.setAttribute("aria-expanded", open ? "true" : "false");
     });
   }
+
+  window.MoveCondoLeaflet = { load: loadLeaflet, baseMap: baseMap, icon: icon, PIN: PIN, STN: STN, isEn: isEn };
 
   function boot() { lazySingles(); stationToggle(); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
