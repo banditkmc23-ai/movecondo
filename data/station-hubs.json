@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-28",
+  "generated": "2026-11-29",
   "count": 22,
   "stations": [
     {
@@ -10,7 +10,7 @@
       "name_en": "On Nut BTS",
       "system": "BTS",
       "line_th": "สายสุขุมวิท",
-      "count": 65,
+      "count": 64,
       "soon": 5,
       "priceMin": 12000,
       "priceMax": 50000,
@@ -38,7 +38,6 @@
         "MC-359",
         "MC-267",
         "MC-070",
-        "MC-331",
         "MC-286",
         "MC-291",
         "MC-205",
@@ -91,7 +90,7 @@
       "name_en": "Thong Lo BTS",
       "system": "BTS",
       "line_th": "สายสุขุมวิท",
-      "count": 56,
+      "count": 57,
       "soon": 2,
       "priceMin": 17500,
       "priceMax": 120000,
@@ -147,6 +146,7 @@
         "MC-034",
         "MC-072",
         "MC-317",
+        "MC-367",
         "MC-029",
         "MC-350",
         "MC-084",
@@ -164,7 +164,7 @@
       "system": "BTS",
       "line_th": "สายสุขุมวิท",
       "count": 35,
-      "soon": 2,
+      "soon": 1,
       "priceMin": 12000,
       "priceMax": 50000,
       "walkMin": 1,
@@ -302,7 +302,7 @@
       "name_en": "Ekkamai BTS",
       "system": "BTS",
       "line_th": "สายสุขุมวิท",
-      "count": 19,
+      "count": 20,
       "soon": 0,
       "priceMin": 17500,
       "priceMax": 80000,
@@ -311,6 +311,7 @@
         "MC-333",
         "MC-145",
         "MC-139",
+        "MC-368",
         "MC-360",
         "MC-311",
         "MC-015",
@@ -415,7 +416,7 @@
       "system": "MRT",
       "line_th": "สายสีน้ำเงิน",
       "count": 7,
-      "soon": 1,
+      "soon": 0,
       "priceMin": 15000,
       "priceMax": 34000,
       "walkMin": 4,
@@ -459,7 +460,7 @@
       "system": "MRT",
       "line_th": "สายสีน้ำเงิน",
       "count": 5,
-      "soon": 1,
+      "soon": 0,
       "priceMin": 15000,
       "priceMax": 39000,
       "walkMin": 5,
@@ -550,6 +551,24 @@
       ]
     },
     {
+      "id": "bts-ari",
+      "slug": "bts-ari",
+      "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-ari/",
+      "name_th": "BTS อารีย์",
+      "name_en": "Ari BTS",
+      "system": "BTS",
+      "line_th": "สายสุขุมวิท",
+      "count": 2,
+      "soon": 0,
+      "priceMin": 32000,
+      "priceMax": 33000,
+      "walkMin": 4,
+      "rooms": [
+        "MC-146",
+        "MC-369"
+      ]
+    },
+    {
       "id": "mrt-huai-khwang",
       "slug": "mrt-huai-khwang",
       "url": "https://banditkmc23-ai.github.io/movecondo/stations/mrt-huai-khwang/",
@@ -616,23 +635,6 @@
       "walkMin": 4,
       "rooms": [
         "MC-107"
-      ]
-    },
-    {
-      "id": "bts-ari",
-      "slug": "bts-ari",
-      "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-ari/",
-      "name_th": "BTS อารีย์",
-      "name_en": "Ari BTS",
-      "system": "BTS",
-      "line_th": "สายสุขุมวิท",
-      "count": 1,
-      "soon": 0,
-      "priceMin": 32000,
-      "priceMax": 32000,
-      "walkMin": 4,
-      "rooms": [
-        "MC-146"
       ]
     },
     {

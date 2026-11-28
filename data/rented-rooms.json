@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-28T11:54:33+07:00",
+  "updated": "2026-11-29T01:29:28+07:00",
   "rooms": [
     {
       "id": "MC-007",
@@ -85,6 +85,13 @@
       "kind": "rented",
       "restored": false,
       "markedAt": "2026-11-28T11:54:33+07:00"
+    },
+    {
+      "id": "MC-331",
+      "slug": "mc-331",
+      "kind": "rented",
+      "restored": false,
+      "markedAt": "2026-11-29T01:29:28+07:00"
     }
   ]
 }

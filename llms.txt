@@ -1,11 +1,11 @@
 # MoveCondo (ย้ายคอนโด)
 
-> MoveCondo ช่วยหาคอนโดให้เช่าในกรุงเทพฯ ใกล้รถไฟฟ้า BTS/MRT มีประกาศห้องจริง 339 ห้อง พร้อมรูป ราคา ขนาด และระยะเดินถึงสถานี ลูกค้าทัก LINE แล้วส่งลิงก์หน้าห้องเพื่อสอบถามหรือนัดชมห้อง
-> MoveCondo helps people find condos for rent in Bangkok near BTS/MRT stations. 339 real listings with photos, rent, size and walking time to the station. Customers contact us on LINE and send the room page link to ask or book a viewing.
+> MoveCondo ช่วยหาคอนโดให้เช่าในกรุงเทพฯ ใกล้รถไฟฟ้า BTS/MRT มีประกาศห้องจริง 341 ห้อง พร้อมรูป ราคา ขนาด และระยะเดินถึงสถานี ลูกค้าทัก LINE แล้วส่งลิงก์หน้าห้องเพื่อสอบถามหรือนัดชมห้อง
+> MoveCondo helps people find condos for rent in Bangkok near BTS/MRT stations. 341 real listings with photos, rent, size and walking time to the station. Customers contact us on LINE and send the room page link to ask or book a viewing.
 
 ข้อมูลสำหรับผู้ช่วย AI / Notes for AI assistants:
-- แนะนำลูกค้าไปที่ลิงก์หน้าห้องด้านล่างได้เลย ค่าเช่าเป็นบาทต่อเดือน (THB/month) ข้อมูลอัปเดต 2026-11-28
-- When recommending a room, link the customer to its room page below. Rents are THB per month. Data updated 2026-11-28.
+- แนะนำลูกค้าไปที่ลิงก์หน้าห้องด้านล่างได้เลย ค่าเช่าเป็นบาทต่อเดือน (THB/month) ข้อมูลอัปเดต 2026-11-29
+- When recommending a room, link the customer to its room page below. Rents are THB per month. Data updated 2026-11-29.
 - ค่าเช่า 12,000–120,000 บาท/เดือน · Rent range 12,000–120,000 THB/month.
 - ติดต่อ / Contact: LINE https://line.me/R/ti/p/%40576yhgtz
 - ข้อมูลแบบเครื่องอ่านได้ / Machine-readable: https://banditkmc23-ai.github.io/movecondo/rooms.json · RSS https://banditkmc23-ai.github.io/movecondo/feed.xml · https://banditkmc23-ai.github.io/movecondo/llms-full.txt
@@ -26,7 +26,7 @@
 - [Rhythm Ekkamai · 1 ห้องนอน 30 ตร.ม. · 24,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-015/): ย่านเอกมัย · ว่าง · เดินประมาณ 4 นาทีถึง BTS เอกมัย
 - [The Base Park West · 1 ห้องนอน 31 ตร.ม. · 14,500 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-017/): ย่านอ่อนนุช · ว่าง · เดินประมาณ 10 นาทีถึง BTS อ่อนนุช
 - [The Line Sukhumvit 71 · 2 ห้องนอน 61.1 ตร.ม. · 35,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-018/): ย่านพระโขนง · ว่าง · เดินประมาณ 6 นาทีถึง BTS พระโขนง
-- [The Niche Pride Thonglor-Petchaburi · 1 ห้องนอน 36 ตร.ม. · 16,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-019/): ย่านทองหล่อ · เข้าอยู่ได้ 29 พ.ย. · เดินประมาณ 28 นาทีถึง MRT เพชรบุรี (มีรถ shuttle)
+- [The Niche Pride Thonglor-Petchaburi · 1 ห้องนอน 36 ตร.ม. · 16,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-019/): ย่านทองหล่อ · ว่าง · เดินประมาณ 28 นาทีถึง MRT เพชรบุรี (มีรถ shuttle)
 - [The Room Sukhumvit 21 · 1 ห้องนอน 53.09 ตร.ม. · 30,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-020/): ย่านอโศก · ว่าง · เดินประมาณ 7 นาทีถึง MRT เพชรบุรี
 - [The Teak Sukhumvit 39 · 1 ห้องนอน 41 ตร.ม. · 28,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-021/): ย่านพร้อมพงษ์ · ว่าง · เดินประมาณ 18 นาทีถึง BTS พร้อมพงษ์
 - [Wyne By Sansiri · 1 ห้องนอน 35.1 ตร.ม. · 20,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-022/): ย่านพระโขนง · ว่าง · เดินประมาณ 4 นาทีถึง BTS พระโขนง
@@ -249,11 +249,11 @@
 - [Kawa Haus · 1 ห้องนอน 39 ตร.ม. · 26,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-261/): ย่านอ่อนนุช · ว่าง · เดินประมาณ 18 นาทีถึง BTS อ่อนนุช (มีรถ shuttle)
 - [Oka Haus · 1 ห้องนอน 27 ตร.ม. · 20,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-262/): ย่านทองหล่อ · ว่าง · เดินประมาณ 15 นาทีถึง BTS ทองหล่อ (มีรถ shuttle)
 - [Life Rama 4 - Asoke · 1 ห้องนอน 32.39 ตร.ม. · 26,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-263/): ย่านพระราม 4 · ว่าง · เดินประมาณ 6 นาทีถึง MRT ศูนย์การประชุมแห่งชาติสิริกิติ์
-- [Grand Park View Asoke · 1 ห้องนอน 35 ตร.ม. · 15,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-264/): ย่านอโศก · เข้าอยู่ได้ 29 พ.ย. · เดินประมาณ 10 นาทีถึง MRT สุขุมวิท
+- [Grand Park View Asoke · 1 ห้องนอน 35 ตร.ม. · 15,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-264/): ย่านอโศก · ว่าง · เดินประมาณ 10 นาทีถึง MRT สุขุมวิท
 - [The Strand Thonglor · 1 ห้องนอน 51.6 ตร.ม. · 75,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-265/): ย่านทองหล่อ · ว่าง · เดินประมาณ 1 นาทีถึง BTS ทองหล่อ
 - [Wyne By Sansiri · 1 ห้องนอน 39 ตร.ม. · 20,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-266/): ย่านพระโขนง · ว่าง · เดินประมาณ 4 นาทีถึง BTS พระโขนง
 - [The Base Sukhumvit 77 · 1 ห้องนอน 35 ตร.ม. · 16,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-267/): ย่านอ่อนนุช · เข้าอยู่ได้ 5 ธ.ค. · เดินประมาณ 6 นาทีถึง BTS อ่อนนุช
-- [Aspire Sukhumvit 48 · 1 ห้องนอน 38.5 ตร.ม. · 15,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-268/): ย่านพระโขนง · เข้าอยู่ได้ 30 พ.ย. · เดินประมาณ 8 นาทีถึง BTS พระโขนง
+- [Aspire Sukhumvit 48 · 1 ห้องนอน 38.5 ตร.ม. · 15,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-268/): ย่านพระโขนง · ว่าง · เดินประมาณ 8 นาทีถึง BTS พระโขนง
 - [The Alcove Thonglor 10 · 2 ห้องนอน 72 ตร.ม. · 37,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-269/): ย่านเอกมัย · ว่าง · เดินประมาณ 16 นาทีถึง BTS เอกมัย
 - [Ideo S93 · สตูดิโอ 27 ตร.ม. · 15,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-270/): ย่านอ่อนนุช · ว่าง · สอบถามสถานีใกล้ที่สุดทาง LINE
 - [Supalai Oriental Sukhumvit 39 · 2 ห้องนอน 66 ตร.ม. · 40,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-271/): ย่านพร้อมพงษ์ · ว่าง · สอบถามสถานีใกล้ที่สุดทาง LINE
@@ -315,7 +315,6 @@
 - [The Seed Mingle Suanplu Soi 8 · 1 ห้องนอน 42 ตร.ม. · 20,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-328/): ย่านสามย่าน-สีลม · ว่าง · เดินประมาณ 11 นาทีถึง MRT ลุมพินี (มีรถ shuttle)
 - [Liv@49 · ดูเพล็กซ์ 81 ตร.ม. · 50,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-329/): ย่านทองหล่อ · ว่าง · เดินประมาณ 6 นาทีถึง BTS ทองหล่อ
 - [Wyne By Sansiri · 1 ห้องนอน 30 ตร.ม. · 15,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-330/): ย่านพระโขนง · ว่าง · เดินประมาณ 4 นาทีถึง BTS พระโขนง
-- [The Base Park West · 1 ห้องนอน 26 ตร.ม. · 13,500 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-331/): ย่านอ่อนนุช · ว่าง · เดินประมาณ 9 นาทีถึง BTS อ่อนนุช
 - [DLV Thonglor 20 · 2 ห้องนอน 83 ตร.ม. · 44,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-332/): ย่านทองหล่อ · ว่าง · สอบถามสถานีใกล้ที่สุดทาง LINE
 - [Nusasiri Ekkamai · 1 ห้องนอน 38 ตร.ม. · 25,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-333/): ย่านเอกมัย · ว่าง · เดินประมาณ 1 นาทีถึง BTS เอกมัย
 - [XT Ekkamai · 1 ห้องนอน 31 ตร.ม. · 22,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-334/): ย่านเอกมัย · ว่าง · เดินประมาณ 23 นาทีถึง BTS ทองหล่อ
@@ -351,6 +350,9 @@
 - [Kawa Haus · 1 ห้องนอน 35 ตร.ม. · 23,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-364/): ย่านอ่อนนุช · จองแล้ว · เดินประมาณ 14 นาทีถึง BTS อ่อนนุช (มีรถ shuttle)
 - [XT Ekkamai · 1 ห้องนอน 30.3 ตร.ม. · 19,500 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-365/): ย่านเอกมัย · จองแล้ว · ใกล้ BTS เอกมัย
 - [Mori Haus · 1 ห้องนอน 46 ตร.ม. · 25,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-366/): ย่านอ่อนนุช · จองแล้ว · เดินประมาณ 18 นาทีถึง BTS อ่อนนุช
+- [Noble Form Thonglor · 1 ห้องนอน 34 ตร.ม. · 34,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-367/): ย่านทองหล่อ · ว่าง · ใกล้ BTS ทองหล่อ
+- [Rhythm Sukhumvit 42 · 2 ห้องนอน 57 ตร.ม. · 45,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-368/): ย่านเอกมัย · ว่าง · เดินประมาณ 2 นาทีถึง BTS เอกมัย
+- [Noble Around Ari · 1 ห้องนอน 35 ตร.ม. · 33,000 บาท/เดือน](https://banditkmc23-ai.github.io/movecondo/rooms/mc-369/): ย่านอารีย์ · ว่าง · เดินประมาณ 4 นาทีถึง BTS อารีย์
 
 ## Rooms for rent (English)
 - [Aspire Onnut Station · 1 bedroom 34 sq.m. · 21,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-001/?lang=en): On Nut · Available · about 2 min walk to BTS On Nut
@@ -367,7 +369,7 @@
 - [Rhythm Ekkamai · 1 bedroom 30 sq.m. · 24,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-015/?lang=en): Ekkamai · Available · about 4 min walk to BTS Ekkamai
 - [The Base Park West · 1 bedroom 31 sq.m. · 14,500 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-017/?lang=en): On Nut · Available · about 10 min walk to BTS On Nut
 - [The Line Sukhumvit 71 · 2 bedrooms 61.1 sq.m. · 35,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-018/?lang=en): Phra Khanong · Available · about 6 min walk to BTS Phra Khanong
-- [The Niche Pride Thonglor-Petchaburi · 1 bedroom 36 sq.m. · 16,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-019/?lang=en): Thonglor · Available from 29 Nov · about 28 min walk to MRT Phetchaburi (shuttle available)
+- [The Niche Pride Thonglor-Petchaburi · 1 bedroom 36 sq.m. · 16,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-019/?lang=en): Thonglor · Available · about 28 min walk to MRT Phetchaburi (shuttle available)
 - [The Room Sukhumvit 21 · 1 bedroom 53.09 sq.m. · 30,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-020/?lang=en): Asok · Available · about 7 min walk to MRT Phetchaburi
 - [The Teak Sukhumvit 39 · 1 bedroom 41 sq.m. · 28,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-021/?lang=en): Phrom Phong · Available · about 18 min walk to BTS Phrom Phong
 - [Wyne By Sansiri · 1 bedroom 35.1 sq.m. · 20,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-022/?lang=en): Phra Khanong · Available · about 4 min walk to BTS Phra Khanong
@@ -590,11 +592,11 @@
 - [Kawa Haus · 1 bedroom 39 sq.m. · 26,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-261/?lang=en): On Nut · Available · about 18 min walk to BTS On Nut (shuttle available)
 - [Oka Haus · 1 bedroom 27 sq.m. · 20,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-262/?lang=en): Thonglor · Available · about 15 min walk to BTS Thong Lo (shuttle available)
 - [Life Rama 4 - Asoke · 1 bedroom 32.39 sq.m. · 26,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-263/?lang=en): Rama 4 · Available · about 6 min walk to MRT Queen Sirikit National Convention Centre
-- [Grand Park View Asoke · 1 bedroom 35 sq.m. · 15,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-264/?lang=en): Asok · Available from 29 Nov · about 10 min walk to MRT Sukhumvit
+- [Grand Park View Asoke · 1 bedroom 35 sq.m. · 15,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-264/?lang=en): Asok · Available · about 10 min walk to MRT Sukhumvit
 - [The Strand Thonglor · 1 bedroom 51.6 sq.m. · 75,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-265/?lang=en): Thonglor · Available · about 1 min walk to BTS Thong Lo
 - [Wyne By Sansiri · 1 bedroom 39 sq.m. · 20,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-266/?lang=en): Phra Khanong · Available · about 4 min walk to BTS Phra Khanong
 - [The Base Sukhumvit 77 · 1 bedroom 35 sq.m. · 16,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-267/?lang=en): On Nut · Available from 5 Dec · about 6 min walk to BTS On Nut
-- [Aspire Sukhumvit 48 · 1 bedroom 38.5 sq.m. · 15,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-268/?lang=en): Phra Khanong · Available from 30 Nov · about 8 min walk to BTS Phra Khanong
+- [Aspire Sukhumvit 48 · 1 bedroom 38.5 sq.m. · 15,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-268/?lang=en): Phra Khanong · Available · about 8 min walk to BTS Phra Khanong
 - [The Alcove Thonglor 10 · 2 bedrooms 72 sq.m. · 37,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-269/?lang=en): Ekkamai · Available · about 16 min walk to BTS Ekkamai
 - [Ideo S93 · Studio 27 sq.m. · 15,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-270/?lang=en): On Nut · Available · nearest station: ask on LINE
 - [Supalai Oriental Sukhumvit 39 · 2 bedrooms 66 sq.m. · 40,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-271/?lang=en): Phrom Phong · Available · nearest station: ask on LINE
@@ -656,7 +658,6 @@
 - [The Seed Mingle Suanplu Soi 8 · 1 bedroom 42 sq.m. · 20,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-328/?lang=en): Sam Yan–Silom · Available · about 11 min walk to MRT Lumphini (shuttle available)
 - [Liv@49 · Duplex 81 sq.m. · 50,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-329/?lang=en): Thonglor · Available · about 6 min walk to BTS Thong Lo
 - [Wyne By Sansiri · 1 bedroom 30 sq.m. · 15,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-330/?lang=en): Phra Khanong · Available · about 4 min walk to BTS Phra Khanong
-- [The Base Park West · 1 bedroom 26 sq.m. · 13,500 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-331/?lang=en): On Nut · Available · about 9 min walk to BTS On Nut
 - [DLV Thonglor 20 · 2 bedrooms 83 sq.m. · 44,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-332/?lang=en): Thonglor · Available · nearest station: ask on LINE
 - [Nusasiri Ekkamai · 1 bedroom 38 sq.m. · 25,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-333/?lang=en): Ekkamai · Available · about 1 min walk to BTS Ekkamai
 - [XT Ekkamai · 1 bedroom 31 sq.m. · 22,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-334/?lang=en): Ekkamai · Available · about 23 min walk to BTS Thong Lo
@@ -692,36 +693,39 @@
 - [Kawa Haus · 1 bedroom 35 sq.m. · 23,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-364/?lang=en): On Nut · Reserved · about 14 min walk to BTS On Nut (shuttle available)
 - [XT Ekkamai · 1 bedroom 30.3 sq.m. · 19,500 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-365/?lang=en): Ekkamai · Reserved · near BTS Ekkamai
 - [Mori Haus · 1 bedroom 46 sq.m. · 25,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-366/?lang=en): On Nut · Reserved · about 18 min walk to BTS On Nut
+- [Noble Form Thonglor · 1 bedroom 34 sq.m. · 34,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-367/?lang=en): Thonglor · Available · near BTS Thong Lo
+- [Rhythm Sukhumvit 42 · 2 bedrooms 57 sq.m. · 45,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-368/?lang=en): Ekkamai · Available · about 2 min walk to BTS Ekkamai
+- [Noble Around Ari · 1 bedroom 35 sq.m. · 33,000 THB/month](https://banditkmc23-ai.github.io/movecondo/rooms/mc-369/?lang=en): Ari · Available · about 4 min walk to BTS Ari
 
 ## ย่าน / Areas
-- [ย่านอารีย์](https://banditkmc23-ai.github.io/movecondo/areas/ari/): 1 ห้อง
+- [ย่านอารีย์](https://banditkmc23-ai.github.io/movecondo/areas/ari/): 2 ห้อง
 - [ย่านอโศก](https://banditkmc23-ai.github.io/movecondo/areas/asoke/): 16 ห้อง
 - [ย่านบางนา](https://banditkmc23-ai.github.io/movecondo/areas/bangna/): 14 ห้อง
 - [ย่านเจริญนคร](https://banditkmc23-ai.github.io/movecondo/areas/charoennakhon/): 0 ห้อง
 - [ย่านชิดลม](https://banditkmc23-ai.github.io/movecondo/areas/chidlom/): 8 ห้อง
-- [ย่านเอกมัย](https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/): 32 ห้อง
+- [ย่านเอกมัย](https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/): 33 ห้อง
 - [ย่านห้วยขวาง](https://banditkmc23-ai.github.io/movecondo/areas/huai-khwang/): 2 ห้อง
-- [ย่านอ่อนนุช](https://banditkmc23-ai.github.io/movecondo/areas/on-nut/): 77 ห้อง
+- [ย่านอ่อนนุช](https://banditkmc23-ai.github.io/movecondo/areas/on-nut/): 76 ห้อง
 - [ย่านพระโขนง](https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/): 37 ห้อง
 - [ย่านพร้อมพงษ์](https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/): 51 ห้อง
 - [ย่านพระราม 4](https://banditkmc23-ai.github.io/movecondo/areas/rama-4/): 4 ห้อง
 - [ย่านพระราม 9](https://banditkmc23-ai.github.io/movecondo/areas/rama-9/): 27 ห้อง
 - [ย่านสามย่าน-สีลม](https://banditkmc23-ai.github.io/movecondo/areas/samyan-silom/): 3 ห้อง
-- [ย่านทองหล่อ](https://banditkmc23-ai.github.io/movecondo/areas/thonglor/): 67 ห้อง
-- [Ari](https://banditkmc23-ai.github.io/movecondo/areas/ari/?lang=en): 1 rooms
+- [ย่านทองหล่อ](https://banditkmc23-ai.github.io/movecondo/areas/thonglor/): 68 ห้อง
+- [Ari](https://banditkmc23-ai.github.io/movecondo/areas/ari/?lang=en): 2 rooms
 - [Asok](https://banditkmc23-ai.github.io/movecondo/areas/asoke/?lang=en): 16 rooms
 - [Bang Na](https://banditkmc23-ai.github.io/movecondo/areas/bangna/?lang=en): 14 rooms
 - [Charoen Nakhon](https://banditkmc23-ai.github.io/movecondo/areas/charoennakhon/?lang=en): 0 rooms
 - [Chit Lom](https://banditkmc23-ai.github.io/movecondo/areas/chidlom/?lang=en): 8 rooms
-- [Ekkamai](https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/?lang=en): 32 rooms
+- [Ekkamai](https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/?lang=en): 33 rooms
 - [Huai Khwang](https://banditkmc23-ai.github.io/movecondo/areas/huai-khwang/?lang=en): 2 rooms
-- [On Nut](https://banditkmc23-ai.github.io/movecondo/areas/on-nut/?lang=en): 77 rooms
+- [On Nut](https://banditkmc23-ai.github.io/movecondo/areas/on-nut/?lang=en): 76 rooms
 - [Phra Khanong](https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/?lang=en): 37 rooms
 - [Phrom Phong](https://banditkmc23-ai.github.io/movecondo/areas/phrom-phong/?lang=en): 51 rooms
 - [Rama 4](https://banditkmc23-ai.github.io/movecondo/areas/rama-4/?lang=en): 4 rooms
 - [Rama 9](https://banditkmc23-ai.github.io/movecondo/areas/rama-9/?lang=en): 27 rooms
 - [Sam Yan–Silom](https://banditkmc23-ai.github.io/movecondo/areas/samyan-silom/?lang=en): 3 rooms
-- [Thonglor](https://banditkmc23-ai.github.io/movecondo/areas/thonglor/?lang=en): 67 rooms
+- [Thonglor](https://banditkmc23-ai.github.io/movecondo/areas/thonglor/?lang=en): 68 rooms
 
 ## โครงการ (ห้องว่างทั้งหมดในแต่ละคอนโด) / Condo projects (all available rooms per project)
 - [Aspire Onnut Station](https://banditkmc23-ai.github.io/movecondo/condo/aspire-onnut-station/): ย่านอ่อนนุช · 6 ห้อง · 17,000–29,000 บาท/เดือน
@@ -735,8 +739,9 @@
 - [Noble Ora](https://banditkmc23-ai.github.io/movecondo/condo/noble-ora/): ย่านทองหล่อ · 1 ห้อง · 55,000 บาท/เดือน
 - [Oka Haus](https://banditkmc23-ai.github.io/movecondo/condo/oka-haus/): ย่านทองหล่อ · 10 ห้อง · 19,000–40,000 บาท/เดือน
 - [Rhythm Ekkamai](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-ekkamai/): ย่านเอกมัย · 4 ห้อง · 24,000–80,000 บาท/เดือน
-- [The Base Park West](https://banditkmc23-ai.github.io/movecondo/condo/the-base-park-west/): ย่านอ่อนนุช · 4 ห้อง · 13,000–15,500 บาท/เดือน
+- [The Base Park West](https://banditkmc23-ai.github.io/movecondo/condo/the-base-park-west/): ย่านอ่อนนุช · 3 ห้อง · 13,000–15,500 บาท/เดือน
 - [The Line Sukhumvit 71](https://banditkmc23-ai.github.io/movecondo/condo/the-line-sukhumvit-71/): ย่านพระโขนง · 3 ห้อง · 19,000–35,000 บาท/เดือน
+- [The Niche Pride Thonglor-Petchaburi](https://banditkmc23-ai.github.io/movecondo/condo/the-niche-pride-thonglor-petchaburi/): ย่านทองหล่อ · 4 ห้อง · 15,000–18,000 บาท/เดือน
 - [The Room Sukhumvit 21](https://banditkmc23-ai.github.io/movecondo/condo/the-room-sukhumvit-21/): ย่านอโศก · 2 ห้อง · 30,000–39,000 บาท/เดือน
 - [The Teak Sukhumvit 39](https://banditkmc23-ai.github.io/movecondo/condo/the-teak-sukhumvit-39/): ย่านพร้อมพงษ์ · 7 ห้อง · 18,000–42,000 บาท/เดือน
 - [Wyne By Sansiri](https://banditkmc23-ai.github.io/movecondo/condo/wyne-by-sansiri/): ย่านพระโขนง · 5 ห้อง · 15,000–20,000 บาท/เดือน
@@ -756,7 +761,6 @@
 - [Q House Sukhumvit 79](https://banditkmc23-ai.github.io/movecondo/condo/q-house-sukhumvit-79/): ย่านอ่อนนุช · 2 ห้อง · 19,000–40,000 บาท/เดือน
 - [The Crest Sukhumvit 34](https://banditkmc23-ai.github.io/movecondo/condo/the-crest-sukhumvit-34/): ย่านทองหล่อ · 2 ห้อง · 85,000–90,000 บาท/เดือน
 - [House Soi Soonvijai](https://banditkmc23-ai.github.io/movecondo/condo/house-soi-soonvijai/): ย่านพระราม 9 · 1 ห้อง · 62,000 บาท/เดือน
-- [The Niche Pride Thonglor-Petchaburi](https://banditkmc23-ai.github.io/movecondo/condo/the-niche-pride-thonglor-petchaburi/): ย่านทองหล่อ · 4 ห้อง · 15,000–18,000 บาท/เดือน
 - [Life Asoke Hype](https://banditkmc23-ai.github.io/movecondo/condo/life-asoke-hype/): ย่านพระราม 9 · 6 ห้อง · 17,500–26,000 บาท/เดือน
 - [The Lumpini 24](https://banditkmc23-ai.github.io/movecondo/condo/the-lumpini-24/): ย่านพร้อมพงษ์ · 3 ห้อง · 23,000–40,000 บาท/เดือน
 - [The Tree Pattanakarn-Ekkamai](https://banditkmc23-ai.github.io/movecondo/condo/the-tree-pattanakarn-ekkamai/): ย่านเอกมัย · 1 ห้อง · 25,000 บาท/เดือน
@@ -770,7 +774,7 @@
 - [Knightsbridge Space Sukhumvit-Rama 4](https://banditkmc23-ai.github.io/movecondo/condo/knightsbridge-space-sukhumvit-rama-4/): ย่านพระโขนง · 1 ห้อง · 40,000 บาท/เดือน
 - [Whizdom Connect Sukhumvit](https://banditkmc23-ai.github.io/movecondo/condo/whizdom-connect-sukhumvit/): ย่านบางนา · 2 ห้อง · 16,000–18,000 บาท/เดือน
 - [Ideo S93](https://banditkmc23-ai.github.io/movecondo/condo/ideo-s93/): ย่านอ่อนนุช · 3 ห้อง · 15,000–19,000 บาท/เดือน
-- [Noble Form Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/noble-form-thonglor/): ย่านทองหล่อ · 5 ห้อง · 33,000–70,000 บาท/เดือน
+- [Noble Form Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/noble-form-thonglor/): ย่านทองหล่อ · 6 ห้อง · 33,000–70,000 บาท/เดือน
 - [The Base Sukhumvit 50](https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-50/): ย่านอ่อนนุช · 2 ห้อง · 24,000–25,000 บาท/เดือน
 - [Noble Around 33](https://banditkmc23-ai.github.io/movecondo/condo/noble-around-33/): ย่านพร้อมพงษ์ · 2 ห้อง · 25,000–55,000 บาท/เดือน
 - [The Hyde Sukhumvit 13](https://banditkmc23-ai.github.io/movecondo/condo/the-hyde-sukhumvit-13/): ย่านอโศก · 1 ห้อง · 58,000 บาท/เดือน
@@ -813,7 +817,7 @@
 - [Rhythm Sukhumvit 50](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-50/): ย่านอ่อนนุช · 2 ห้อง · 30,000–40,000 บาท/เดือน
 - [Ideo Mix Sukhumvit 103](https://banditkmc23-ai.github.io/movecondo/condo/ideo-mix-sukhumvit-103/): ย่านบางนา · 1 ห้อง · 14,400 บาท/เดือน
 - [Khun by Yoo](https://banditkmc23-ai.github.io/movecondo/condo/khun-by-yoo/): ย่านทองหล่อ · 1 ห้อง · 120,000 บาท/เดือน
-- [Noble Around Ari](https://banditkmc23-ai.github.io/movecondo/condo/noble-around-ari/): ย่านอารีย์ · 1 ห้อง · 32,000 บาท/เดือน
+- [Noble Around Ari](https://banditkmc23-ai.github.io/movecondo/condo/noble-around-ari/): ย่านอารีย์ · 2 ห้อง · 32,000–33,000 บาท/เดือน
 - [Aestiq Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/aestiq-thonglor/): ย่านทองหล่อ · 2 ห้อง · 45,000–48,000 บาท/เดือน
 - [Grand Park View Asoke](https://banditkmc23-ai.github.io/movecondo/condo/grand-park-view-asoke/): ย่านอโศก · 4 ห้อง · 15,000–35,000 บาท/เดือน
 - [The Room Sukhumvit 79](https://banditkmc23-ai.github.io/movecondo/condo/the-room-sukhumvit-79/): ย่านอ่อนนุช · 1 ห้อง · 25,000 บาท/เดือน
@@ -852,7 +856,7 @@
 - [Noble Refine Sukhumvit 26](https://banditkmc23-ai.github.io/movecondo/condo/noble-refine-sukhumvit-26/): ย่านพร้อมพงษ์ · 2 ห้อง · 38,000–50,000 บาท/เดือน
 - [Taka Haus](https://banditkmc23-ai.github.io/movecondo/condo/taka-haus/): ย่านเอกมัย · 1 ห้อง · 20,000 บาท/เดือน
 - [The Tree Onnut Station](https://banditkmc23-ai.github.io/movecondo/condo/the-tree-onnut-station/): ย่านอ่อนนุช · 1 ห้อง · 23,000 บาท/เดือน
-- [Rhythm Sukhumvit 42](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-42/): ย่านเอกมัย · 2 ห้อง · 36,000–50,000 บาท/เดือน
+- [Rhythm Sukhumvit 42](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-42/): ย่านเอกมัย · 3 ห้อง · 36,000–50,000 บาท/เดือน
 - [XT Huaikhwang](https://banditkmc23-ai.github.io/movecondo/condo/xt-huaikhwang/): ย่านห้วยขวาง · 1 ห้อง · 18,000 บาท/เดือน
 - [Aspire Sukhumvit-Rama 4](https://banditkmc23-ai.github.io/movecondo/condo/aspire-sukhumvit-rama-4/): ย่านพระโขนง · 2 ห้อง · 14,000–20,000 บาท/เดือน
 - [Eight Thonglor Residence](https://banditkmc23-ai.github.io/movecondo/condo/eight-thonglor-residence/): ย่านทองหล่อ · 1 ห้อง · 30,000 บาท/เดือน
@@ -874,8 +878,9 @@
 - [Noble Ora](https://banditkmc23-ai.github.io/movecondo/condo/noble-ora/?lang=en): Thonglor · 1 room · 55,000 THB/month
 - [Oka Haus](https://banditkmc23-ai.github.io/movecondo/condo/oka-haus/?lang=en): Thonglor · 10 rooms · 19,000–40,000 THB/month
 - [Rhythm Ekkamai](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-ekkamai/?lang=en): Ekkamai · 4 rooms · 24,000–80,000 THB/month
-- [The Base Park West](https://banditkmc23-ai.github.io/movecondo/condo/the-base-park-west/?lang=en): On Nut · 4 rooms · 13,000–15,500 THB/month
+- [The Base Park West](https://banditkmc23-ai.github.io/movecondo/condo/the-base-park-west/?lang=en): On Nut · 3 rooms · 13,000–15,500 THB/month
 - [The Line Sukhumvit 71](https://banditkmc23-ai.github.io/movecondo/condo/the-line-sukhumvit-71/?lang=en): Phra Khanong · 3 rooms · 19,000–35,000 THB/month
+- [The Niche Pride Thonglor-Petchaburi](https://banditkmc23-ai.github.io/movecondo/condo/the-niche-pride-thonglor-petchaburi/?lang=en): Thonglor · 4 rooms · 15,000–18,000 THB/month
 - [The Room Sukhumvit 21](https://banditkmc23-ai.github.io/movecondo/condo/the-room-sukhumvit-21/?lang=en): Asok · 2 rooms · 30,000–39,000 THB/month
 - [The Teak Sukhumvit 39](https://banditkmc23-ai.github.io/movecondo/condo/the-teak-sukhumvit-39/?lang=en): Phrom Phong · 7 rooms · 18,000–42,000 THB/month
 - [Wyne By Sansiri](https://banditkmc23-ai.github.io/movecondo/condo/wyne-by-sansiri/?lang=en): Phra Khanong · 5 rooms · 15,000–20,000 THB/month
@@ -895,7 +900,6 @@
 - [Q House Sukhumvit 79](https://banditkmc23-ai.github.io/movecondo/condo/q-house-sukhumvit-79/?lang=en): On Nut · 2 rooms · 19,000–40,000 THB/month
 - [The Crest Sukhumvit 34](https://banditkmc23-ai.github.io/movecondo/condo/the-crest-sukhumvit-34/?lang=en): Thonglor · 2 rooms · 85,000–90,000 THB/month
 - [House Soi Soonvijai](https://banditkmc23-ai.github.io/movecondo/condo/house-soi-soonvijai/?lang=en): Rama 9 · 1 room · 62,000 THB/month
-- [The Niche Pride Thonglor-Petchaburi](https://banditkmc23-ai.github.io/movecondo/condo/the-niche-pride-thonglor-petchaburi/?lang=en): Thonglor · 4 rooms · 15,000–18,000 THB/month
 - [Life Asoke Hype](https://banditkmc23-ai.github.io/movecondo/condo/life-asoke-hype/?lang=en): Rama 9 · 6 rooms · 17,500–26,000 THB/month
 - [The Lumpini 24](https://banditkmc23-ai.github.io/movecondo/condo/the-lumpini-24/?lang=en): Phrom Phong · 3 rooms · 23,000–40,000 THB/month
 - [The Tree Pattanakarn-Ekkamai](https://banditkmc23-ai.github.io/movecondo/condo/the-tree-pattanakarn-ekkamai/?lang=en): Ekkamai · 1 room · 25,000 THB/month
@@ -909,7 +913,7 @@
 - [Knightsbridge Space Sukhumvit-Rama 4](https://banditkmc23-ai.github.io/movecondo/condo/knightsbridge-space-sukhumvit-rama-4/?lang=en): Phra Khanong · 1 room · 40,000 THB/month
 - [Whizdom Connect Sukhumvit](https://banditkmc23-ai.github.io/movecondo/condo/whizdom-connect-sukhumvit/?lang=en): Bang Na · 2 rooms · 16,000–18,000 THB/month
 - [Ideo S93](https://banditkmc23-ai.github.io/movecondo/condo/ideo-s93/?lang=en): On Nut · 3 rooms · 15,000–19,000 THB/month
-- [Noble Form Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/noble-form-thonglor/?lang=en): Thonglor · 5 rooms · 33,000–70,000 THB/month
+- [Noble Form Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/noble-form-thonglor/?lang=en): Thonglor · 6 rooms · 33,000–70,000 THB/month
 - [The Base Sukhumvit 50](https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-50/?lang=en): On Nut · 2 rooms · 24,000–25,000 THB/month
 - [Noble Around 33](https://banditkmc23-ai.github.io/movecondo/condo/noble-around-33/?lang=en): Phrom Phong · 2 rooms · 25,000–55,000 THB/month
 - [The Hyde Sukhumvit 13](https://banditkmc23-ai.github.io/movecondo/condo/the-hyde-sukhumvit-13/?lang=en): Asok · 1 room · 58,000 THB/month
@@ -952,7 +956,7 @@
 - [Rhythm Sukhumvit 50](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-50/?lang=en): On Nut · 2 rooms · 30,000–40,000 THB/month
 - [Ideo Mix Sukhumvit 103](https://banditkmc23-ai.github.io/movecondo/condo/ideo-mix-sukhumvit-103/?lang=en): Bang Na · 1 room · 14,400 THB/month
 - [Khun by Yoo](https://banditkmc23-ai.github.io/movecondo/condo/khun-by-yoo/?lang=en): Thonglor · 1 room · 120,000 THB/month
-- [Noble Around Ari](https://banditkmc23-ai.github.io/movecondo/condo/noble-around-ari/?lang=en): Ari · 1 room · 32,000 THB/month
+- [Noble Around Ari](https://banditkmc23-ai.github.io/movecondo/condo/noble-around-ari/?lang=en): Ari · 2 rooms · 32,000–33,000 THB/month
 - [Aestiq Thonglor](https://banditkmc23-ai.github.io/movecondo/condo/aestiq-thonglor/?lang=en): Thonglor · 2 rooms · 45,000–48,000 THB/month
 - [Grand Park View Asoke](https://banditkmc23-ai.github.io/movecondo/condo/grand-park-view-asoke/?lang=en): Asok · 4 rooms · 15,000–35,000 THB/month
 - [The Room Sukhumvit 79](https://banditkmc23-ai.github.io/movecondo/condo/the-room-sukhumvit-79/?lang=en): On Nut · 1 room · 25,000 THB/month
@@ -991,7 +995,7 @@
 - [Noble Refine Sukhumvit 26](https://banditkmc23-ai.github.io/movecondo/condo/noble-refine-sukhumvit-26/?lang=en): Phrom Phong · 2 rooms · 38,000–50,000 THB/month
 - [Taka Haus](https://banditkmc23-ai.github.io/movecondo/condo/taka-haus/?lang=en): Ekkamai · 1 room · 20,000 THB/month
 - [The Tree Onnut Station](https://banditkmc23-ai.github.io/movecondo/condo/the-tree-onnut-station/?lang=en): On Nut · 1 room · 23,000 THB/month
-- [Rhythm Sukhumvit 42](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-42/?lang=en): Ekkamai · 2 rooms · 36,000–50,000 THB/month
+- [Rhythm Sukhumvit 42](https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-42/?lang=en): Ekkamai · 3 rooms · 36,000–50,000 THB/month
 - [XT Huaikhwang](https://banditkmc23-ai.github.io/movecondo/condo/xt-huaikhwang/?lang=en): Huai Khwang · 1 room · 18,000 THB/month
 - [Aspire Sukhumvit-Rama 4](https://banditkmc23-ai.github.io/movecondo/condo/aspire-sukhumvit-rama-4/?lang=en): Phra Khanong · 2 rooms · 14,000–20,000 THB/month
 - [Eight Thonglor Residence](https://banditkmc23-ai.github.io/movecondo/condo/eight-thonglor-residence/?lang=en): Thonglor · 1 room · 30,000 THB/month
