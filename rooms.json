@@ -54,7 +54,7 @@
       "th": "เอกมัย",
       "en": "Ekkamai",
       "url": "https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/",
-      "rooms": 30
+      "rooms": 31
     },
     {
       "slug": "huai-khwang",
@@ -68,14 +68,14 @@
       "th": "อ่อนนุช",
       "en": "On Nut",
       "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/",
-      "rooms": 76
+      "rooms": 74
     },
     {
       "slug": "phrakhanong",
       "th": "พระโขนง",
       "en": "Phra Khanong",
       "url": "https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/",
-      "rooms": 36
+      "rooms": 37
     },
     {
       "slug": "phrom-phong",
@@ -110,7 +110,7 @@
       "th": "ทองหล่อ",
       "en": "Thonglor",
       "url": "https://banditkmc23-ai.github.io/movecondo/areas/thonglor/",
-      "rooms": 66
+      "rooms": 67
     }
   ],
   "projects": [
@@ -185,7 +185,7 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/?lang=en",
       "area_th": "อ่อนนุช",
-      "rooms": 12,
+      "rooms": 11,
       "price_min": 20000,
       "price_max": 26000,
       "station_th": "BTS อ่อนนุช",
@@ -284,7 +284,7 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/wyne-by-sansiri/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/wyne-by-sansiri/?lang=en",
       "area_th": "พระโขนง",
-      "rooms": 4,
+      "rooms": 5,
       "price_min": 15000,
       "price_max": 20000,
       "station_th": "BTS พระโขนง",
@@ -383,7 +383,7 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/?lang=en",
       "area_th": "อ่อนนุช",
-      "rooms": 8,
+      "rooms": 9,
       "price_min": 12000,
       "price_max": 26000,
       "station_th": "BTS อ่อนนุช",
@@ -537,8 +537,8 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-base-park-east/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/the-base-park-east/?lang=en",
       "area_th": "อ่อนนุช",
-      "rooms": 3,
-      "price_min": 15000,
+      "rooms": 2,
+      "price_min": 16000,
       "price_max": 16000,
       "station_th": "BTS อ่อนนุช",
       "walk_min": 15
@@ -988,7 +988,7 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-62/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-62/?lang=en",
       "area_th": "อ่อนนุช",
-      "rooms": 7,
+      "rooms": 6,
       "price_min": 13000,
       "price_max": 35000,
       "station_th": "BTS บางจาก",
@@ -1230,7 +1230,7 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/ideo-q36-thonglor/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/ideo-q36-thonglor/?lang=en",
       "area_th": "ทองหล่อ",
-      "rooms": 2,
+      "rooms": 3,
       "price_min": 28000,
       "price_max": 65000,
       "station_th": "BTS ทองหล่อ",
@@ -1527,11 +1527,11 @@
       "url": "https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-42/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-42/?lang=en",
       "area_th": "เอกมัย",
-      "rooms": 1,
+      "rooms": 2,
       "price_min": 36000,
-      "price_max": 36000,
+      "price_max": 50000,
       "station_th": "BTS เอกมัย",
-      "walk_min": 3
+      "walk_min": 2
     },
     {
       "name": "XT Huaikhwang",
@@ -2512,127 +2512,6 @@
         "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-008/6.webp"
       ],
       "last_verified": "2026-11-10",
-      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/",
-      "contact": {
-        "line": "https://line.me/R/ti/p/%40576yhgtz",
-        "how": "Open the LINE link and send the room page URL / ทัก LINE แล้วส่งลิงก์หน้าห้อง"
-      }
-    },
-    {
-      "id": "MC-009",
-      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-009/",
-      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-009/?lang=en",
-      "project": "Kawa Haus",
-      "area": {
-        "th": "อ่อนนุช",
-        "en": "On Nut",
-        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
-      },
-      "type": {
-        "th": "1 ห้องนอน",
-        "en": "1 bedroom"
-      },
-      "bedrooms": 1,
-      "size_sqm": 38,
-      "floor": {
-        "th": "ชั้น 6",
-        "en": "Floor 6"
-      },
-      "rent_thb_per_month": 23000,
-      "currency": "THB",
-      "deposit": {
-        "th": "2 เดือน",
-        "en": "2 months"
-      },
-      "advance_rent": {
-        "th": "1 เดือน",
-        "en": "1 month"
-      },
-      "minimum_lease": {
-        "th": "1 ปี",
-        "en": "1 year"
-      },
-      "availability": "available_now",
-      "available_from": null,
-      "status": {
-        "th": "ว่าง",
-        "en": "Available"
-      },
-      "move_in": {
-        "th": "สอบถามวันเข้าอยู่",
-        "en": "Ask for move-in date"
-      },
-      "nearest_station": {
-        "th": "BTS อ่อนนุช",
-        "en": "BTS On Nut",
-        "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-on-nut/"
-      },
-      "walk_minutes_to_station": 14,
-      "shuttle_to_station": true,
-      "building_location": {
-        "lat": 13.7150067,
-        "lng": 100.6052636,
-        "approximate": false,
-        "note": "Project building location, not a unit."
-      },
-      "summary": {
-        "th": "ห้องมุมวิวสระและคลอง เฟอร์นิเจอร์ครบ ที่ Kawa Haus ย่านอ่อนนุช มีรถรับ-ส่ง",
-        "en": "Fully furnished corner unit with pool and canal views, at Kawa Haus in On Nut, with a shuttle service."
-      },
-      "features": [
-        {
-          "group": {
-            "th": "ไฮไลต์ห้อง",
-            "en": "Room highlights"
-          },
-          "items": [
-            {
-              "th": "ห้องมุม",
-              "en": "Corner unit"
-            },
-            {
-              "th": "วิวสระและคลอง",
-              "en": "Pool and canal view"
-            }
-          ]
-        },
-        {
-          "group": {
-            "th": "เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
-            "en": "Furniture & appliances"
-          },
-          "items": [
-            {
-              "th": "ตกแต่งและเฟอร์นิเจอร์ครบ",
-              "en": "Fully decorated and furnished"
-            }
-          ]
-        },
-        {
-          "group": {
-            "th": "การเดินทางและสถานที่ใกล้",
-            "en": "Getting around & nearby"
-          },
-          "items": [
-            {
-              "th": "มีรถรับ-ส่ง",
-              "en": "Shuttle service"
-            }
-          ]
-        }
-      ],
-      "petsAllowed": false,
-      "images": [
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/1.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/2.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/3.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/4.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/5.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/6.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/7.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-009/8.webp"
-      ],
-      "last_verified": "2026-11-12",
       "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/kawa-haus/",
       "contact": {
         "line": "https://line.me/R/ti/p/%40576yhgtz",
@@ -19483,15 +19362,15 @@
       "deposit": null,
       "advance_rent": null,
       "minimum_lease": null,
-      "availability": "available_now",
-      "available_from": null,
+      "availability": "available_from",
+      "available_from": "2026-12-11",
       "status": {
-        "th": "ว่าง",
-        "en": "Available"
+        "th": "เข้าอยู่ได้ 11 ธ.ค.",
+        "en": "Available from 11 Dec"
       },
       "move_in": {
-        "th": "สอบถามวันเข้าอยู่",
-        "en": "Ask for move-in date"
+        "th": "ว่าง 11 ธ.ค. 2569",
+        "en": "Available 11 Dec 2026"
       },
       "nearest_station": {
         "th": "BTS อ่อนนุช",
@@ -19555,7 +19434,7 @@
         "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-181/11.webp",
         "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-181/12.webp"
       ],
-      "last_verified": "2026-11-25",
+      "last_verified": "2026-11-28",
       "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/",
       "contact": {
         "line": "https://line.me/R/ti/p/%40576yhgtz",
@@ -25697,125 +25576,6 @@
       }
     },
     {
-      "id": "MC-259",
-      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-259/",
-      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-259/?lang=en",
-      "project": "The Base Park East",
-      "area": {
-        "th": "อ่อนนุช",
-        "en": "On Nut",
-        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
-      },
-      "type": {
-        "th": "1 ห้องนอน",
-        "en": "1 bedroom"
-      },
-      "bedrooms": 1,
-      "size_sqm": 32.0,
-      "floor": {
-        "th": "ชั้น 23",
-        "en": "Floor 23"
-      },
-      "rent_thb_per_month": 15000,
-      "currency": "THB",
-      "deposit": {
-        "th": "2 เดือน",
-        "en": "2 months"
-      },
-      "advance_rent": {
-        "th": "1 เดือน",
-        "en": "1 month"
-      },
-      "minimum_lease": {
-        "th": "1 ปี",
-        "en": "1 year"
-      },
-      "availability": "available_now",
-      "available_from": null,
-      "status": {
-        "th": "ว่าง",
-        "en": "Available"
-      },
-      "move_in": {
-        "th": "สอบถามวันเข้าอยู่",
-        "en": "Ask for move-in date"
-      },
-      "nearest_station": {
-        "th": "BTS อ่อนนุช",
-        "en": "BTS On Nut",
-        "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-on-nut/"
-      },
-      "walk_minutes_to_station": 15,
-      "shuttle_to_station": true,
-      "building_location": {
-        "lat": 13.713791,
-        "lng": 100.600449,
-        "approximate": false,
-        "note": "Project building location, not a unit."
-      },
-      "summary": {
-        "th": "ห้อง 1 ห้องนอน ขนาด 32 ตร.ม. ที่ The Base Park East ย่านอ่อนนุช ห้องมุม",
-        "en": "1-bedroom, 32 sq.m. at The Base Park East, On Nut. Corner unit."
-      },
-      "features": [
-        {
-          "group": {
-            "th": "ไฮไลต์ห้อง",
-            "en": "Room highlights"
-          },
-          "items": [
-            {
-              "th": "ห้องมุม",
-              "en": "Corner unit"
-            }
-          ]
-        },
-        {
-          "group": {
-            "th": "ส่วนกลางโครงการ",
-            "en": "Building facilities"
-          },
-          "items": [
-            {
-              "th": "สระว่ายน้ำ",
-              "en": "Swimming pool"
-            },
-            {
-              "th": "ฟิตเนส",
-              "en": "Fitness"
-            }
-          ]
-        },
-        {
-          "group": {
-            "th": "การเดินทางและสถานที่ใกล้",
-            "en": "Getting around & nearby"
-          },
-          "items": [
-            {
-              "th": "มีรถรับ–ส่ง",
-              "en": "Shuttle service"
-            }
-          ]
-        }
-      ],
-      "petsAllowed": false,
-      "images": [
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-259/1.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-259/2.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-259/3.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-259/4.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-259/5.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-259/6.webp"
-      ],
-      "last_verified": "2026-11-17",
-      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/the-base-park-east/",
-      "contact": {
-        "line": "https://line.me/R/ti/p/%40576yhgtz",
-        "how": "Open the LINE link and send the room page URL / ทัก LINE แล้วส่งลิงก์หน้าห้อง"
-      }
-    },
-    {
       "id": "MC-260",
       "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-260/",
       "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-260/?lang=en",
@@ -28130,89 +27890,6 @@
       ],
       "last_verified": "2026-11-19",
       "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/noble-form-thonglor/",
-      "contact": {
-        "line": "https://line.me/R/ti/p/%40576yhgtz",
-        "how": "Open the LINE link and send the room page URL / ทัก LINE แล้วส่งลิงก์หน้าห้อง"
-      }
-    },
-    {
-      "id": "MC-288",
-      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-288/",
-      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-288/?lang=en",
-      "project": "Life Sukhumvit 62",
-      "area": {
-        "th": "อ่อนนุช",
-        "en": "On Nut",
-        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
-      },
-      "type": {
-        "th": "2 ห้องนอน",
-        "en": "2 bedrooms"
-      },
-      "bedrooms": 2,
-      "size_sqm": 49.33,
-      "floor": {
-        "th": "ชั้น 12",
-        "en": "Floor 12"
-      },
-      "rent_thb_per_month": 27000,
-      "currency": "THB",
-      "deposit": null,
-      "advance_rent": null,
-      "minimum_lease": null,
-      "availability": "available_now",
-      "available_from": null,
-      "status": {
-        "th": "ว่าง",
-        "en": "Available"
-      },
-      "move_in": {
-        "th": "สอบถามวันเข้าอยู่",
-        "en": "Ask for move-in date"
-      },
-      "nearest_station": {
-        "th": "BTS บางจาก",
-        "en": "BTS Bang Chak",
-        "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-bang-chak/"
-      },
-      "walk_minutes_to_station": 2,
-      "shuttle_to_station": false,
-      "building_location": null,
-      "summary": {
-        "th": "ห้อง 2 ห้องนอน ขนาด 49.33 ตร.ม. ที่ Life Sukhumvit 62 ย่านอ่อนนุช ห้องมุม วิวเมือง",
-        "en": "2-bedroom, 49.33 sq.m. at Life Sukhumvit 62, On Nut. Corner unit, City view."
-      },
-      "features": [
-        {
-          "group": {
-            "th": "ไฮไลต์ห้อง",
-            "en": "Room highlights"
-          },
-          "items": [
-            {
-              "th": "ห้องมุม",
-              "en": "Corner unit"
-            },
-            {
-              "th": "วิวเมือง",
-              "en": "City view"
-            }
-          ]
-        }
-      ],
-      "petsAllowed": false,
-      "images": [
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-288/1.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-288/2.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-288/3.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-288/4.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-288/5.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-288/6.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-288/7.webp",
-        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-288/8.webp"
-      ],
-      "last_verified": "2026-11-19",
-      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-62/",
       "contact": {
         "line": "https://line.me/R/ti/p/%40576yhgtz",
         "how": "Open the LINE link and send the room page URL / ทัก LINE แล้วส่งลิงก์หน้าห้อง"
@@ -35834,6 +35511,286 @@
       ],
       "last_verified": "2026-11-28",
       "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/edge-sukhumvit-23/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and send the room page URL / ทัก LINE แล้วส่งลิงก์หน้าห้อง"
+      }
+    },
+    {
+      "id": "MC-359",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-359/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-359/?lang=en",
+      "project": "The Base Sukhumvit 77",
+      "area": {
+        "th": "อ่อนนุช",
+        "en": "On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/on-nut/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 31,
+      "floor": {
+        "th": "ชั้น 24",
+        "en": "Floor 24"
+      },
+      "rent_thb_per_month": 14000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_from",
+      "available_from": "2026-12-06",
+      "status": {
+        "th": "เข้าอยู่ได้ 6 ธ.ค.",
+        "en": "Available from 6 Dec"
+      },
+      "move_in": {
+        "th": "ว่าง 6 ธ.ค. 2569",
+        "en": "Available 6 Dec 2026"
+      },
+      "nearest_station": {
+        "th": "BTS อ่อนนุช",
+        "en": "BTS On Nut",
+        "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-on-nut/"
+      },
+      "walk_minutes_to_station": 6,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.710999,
+        "lng": 100.602507,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 31 ตร.ม. ที่ The Base Sukhumvit 77 ย่านอ่อนนุช ว่างตั้งแต่ 6 ธ.ค. 2569",
+        "en": "1-bedroom, 31 sq.m. at The Base Sukhumvit 77, On Nut. Available from 6 Dec 2026."
+      },
+      "features": [],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-359/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-359/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-359/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-359/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-359/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-359/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-359/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-359/8.webp"
+      ],
+      "last_verified": "2026-11-28",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and send the room page URL / ทัก LINE แล้วส่งลิงก์หน้าห้อง"
+      }
+    },
+    {
+      "id": "MC-360",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-360/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-360/?lang=en",
+      "project": "Rhythm Sukhumvit 42",
+      "area": {
+        "th": "เอกมัย",
+        "en": "Ekkamai",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/ekkamai/"
+      },
+      "type": {
+        "th": "2 ห้องนอน",
+        "en": "2 bedrooms"
+      },
+      "bedrooms": 2,
+      "size_sqm": 56,
+      "floor": {
+        "th": "ชั้น 25",
+        "en": "Floor 25"
+      },
+      "rent_thb_per_month": 50000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS เอกมัย",
+        "en": "BTS Ekkamai",
+        "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-ekkamai/"
+      },
+      "walk_minutes_to_station": 2,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.7178029,
+        "lng": 100.5854758,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 2 ห้องนอน ขนาด 56 ตร.ม. ที่ Rhythm Sukhumvit 42 ย่านเอกมัย",
+        "en": "2-bedroom, 56 sq.m. at Rhythm Sukhumvit 42, Ekkamai."
+      },
+      "features": [],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-360/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-360/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-360/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-360/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-360/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-360/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-360/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-360/8.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-360/9.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-360/10.webp"
+      ],
+      "last_verified": "2026-11-28",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-42/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and send the room page URL / ทัก LINE แล้วส่งลิงก์หน้าห้อง"
+      }
+    },
+    {
+      "id": "MC-361",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-361/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-361/?lang=en",
+      "project": "Ideo Q36 Thonglor",
+      "area": {
+        "th": "ทองหล่อ",
+        "en": "Thonglor",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/thonglor/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 45,
+      "floor": {
+        "th": "ชั้น 20",
+        "en": "Floor 20"
+      },
+      "rent_thb_per_month": 40000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS ทองหล่อ",
+        "en": "BTS Thong Lo",
+        "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-thong-lo/"
+      },
+      "walk_minutes_to_station": 2,
+      "shuttle_to_station": false,
+      "building_location": null,
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 45 ตร.ม. ที่ Ideo Q36 Thonglor ย่านทองหล่อ",
+        "en": "1-bedroom, 45 sq.m. at Ideo Q36 Thonglor, Thonglor."
+      },
+      "features": [],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-361/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-361/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-361/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-361/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-361/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-361/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-361/7.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-361/8.webp"
+      ],
+      "last_verified": "2026-11-28",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/ideo-q36-thonglor/",
+      "contact": {
+        "line": "https://line.me/R/ti/p/%40576yhgtz",
+        "how": "Open the LINE link and send the room page URL / ทัก LINE แล้วส่งลิงก์หน้าห้อง"
+      }
+    },
+    {
+      "id": "MC-362",
+      "url": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-362/",
+      "url_en": "https://banditkmc23-ai.github.io/movecondo/rooms/mc-362/?lang=en",
+      "project": "Wyne By Sansiri",
+      "area": {
+        "th": "พระโขนง",
+        "en": "Phra Khanong",
+        "url": "https://banditkmc23-ai.github.io/movecondo/areas/phrakhanong/"
+      },
+      "type": {
+        "th": "1 ห้องนอน",
+        "en": "1 bedroom"
+      },
+      "bedrooms": 1,
+      "size_sqm": 30,
+      "floor": {
+        "th": "ชั้น 17",
+        "en": "Floor 17"
+      },
+      "rent_thb_per_month": 16000,
+      "currency": "THB",
+      "deposit": null,
+      "advance_rent": null,
+      "minimum_lease": null,
+      "availability": "available_now",
+      "available_from": null,
+      "status": {
+        "th": "ว่าง",
+        "en": "Available"
+      },
+      "move_in": {
+        "th": "สอบถามวันเข้าอยู่",
+        "en": "Ask for move-in date"
+      },
+      "nearest_station": {
+        "th": "BTS พระโขนง",
+        "en": "BTS Phra Khanong",
+        "url": "https://banditkmc23-ai.github.io/movecondo/stations/bts-phra-khanong/"
+      },
+      "walk_minutes_to_station": 4,
+      "shuttle_to_station": false,
+      "building_location": {
+        "lat": 13.712683,
+        "lng": 100.593842,
+        "approximate": false,
+        "note": "Project building location, not a unit."
+      },
+      "summary": {
+        "th": "ห้อง 1 ห้องนอน ขนาด 30 ตร.ม. ที่ Wyne By Sansiri ย่านพระโขนง",
+        "en": "1-bedroom, 30 sq.m. at Wyne By Sansiri, Phra Khanong."
+      },
+      "features": [],
+      "petsAllowed": false,
+      "images": [
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-362/1.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-362/2.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-362/3.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-362/4.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-362/5.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-362/6.webp",
+        "https://banditkmc23-ai.github.io/movecondo/images/rooms/mc-362/7.webp"
+      ],
+      "last_verified": "2026-11-28",
+      "project_url": "https://banditkmc23-ai.github.io/movecondo/condo/wyne-by-sansiri/",
       "contact": {
         "line": "https://line.me/R/ti/p/%40576yhgtz",
         "how": "Open the LINE link and send the room page URL / ทัก LINE แล้วส่งลิงก์หน้าห้อง"

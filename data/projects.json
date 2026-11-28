@@ -120,7 +120,7 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 14,
-   "count": 12,
+   "count": 11,
    "soon": 1,
    "priceMin": 20000,
    "priceMax": 26000,
@@ -130,7 +130,6 @@
     "MC-028",
     "MC-036",
     "MC-037",
-    "MC-009",
     "MC-121",
     "MC-279",
     "MC-041",
@@ -302,12 +301,13 @@
    "areaSlug": "phrakhanong",
    "station": "BTS พระโขนง",
    "walk": 4,
-   "count": 4,
+   "count": 5,
    "soon": 0,
    "priceMin": 15000,
    "priceMax": 20000,
    "rooms": [
     "MC-330",
+    "MC-362",
     "MC-093",
     "MC-022",
     "MC-266"
@@ -468,8 +468,8 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 6,
-   "count": 8,
-   "soon": 1,
+   "count": 9,
+   "soon": 3,
    "priceMin": 12000,
    "priceMax": 26000,
    "rooms": [
@@ -479,8 +479,9 @@
     "MC-357",
     "MC-169",
     "MC-070",
-    "MC-181",
-    "MC-267"
+    "MC-359",
+    "MC-267",
+    "MC-181"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/the-base-sukhumvit-77/"
   },
@@ -711,12 +712,11 @@
    "areaSlug": "on-nut",
    "station": "BTS อ่อนนุช",
    "walk": 15,
-   "count": 3,
+   "count": 2,
    "soon": 0,
-   "priceMin": 15000,
+   "priceMin": 16000,
    "priceMax": 16000,
    "rooms": [
-    "MC-259",
     "MC-062",
     "MC-341"
    ],
@@ -1416,7 +1416,7 @@
    "areaSlug": "on-nut",
    "station": "BTS บางจาก",
    "walk": 2,
-   "count": 7,
+   "count": 6,
    "soon": 0,
    "priceMin": 13000,
    "priceMax": 35000,
@@ -1426,7 +1426,6 @@
     "MC-199",
     "MC-129",
     "MC-200",
-    "MC-288",
     "MC-335"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/life-sukhumvit-62/"
@@ -1794,12 +1793,13 @@
    "areaSlug": "thonglor",
    "station": "BTS ทองหล่อ",
    "walk": 2,
-   "count": 2,
+   "count": 3,
    "soon": 0,
    "priceMin": 28000,
    "priceMax": 65000,
    "rooms": [
     "MC-260",
+    "MC-361",
     "MC-179"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/ideo-q36-thonglor/"
@@ -2248,13 +2248,14 @@
    "area": "เอกมัย",
    "areaSlug": "ekkamai",
    "station": "BTS เอกมัย",
-   "walk": 3,
-   "count": 1,
+   "walk": 2,
+   "count": 2,
    "soon": 0,
    "priceMin": 36000,
-   "priceMax": 36000,
+   "priceMax": 50000,
    "rooms": [
-    "MC-311"
+    "MC-311",
+    "MC-360"
    ],
    "url": "https://banditkmc23-ai.github.io/movecondo/condo/rhythm-sukhumvit-42/"
   },

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T01:28:43+07:00",
+  "updated": "2026-11-28T11:54:33+07:00",
   "rooms": [
     {
       "id": "MC-007",
@@ -7,6 +7,13 @@
       "kind": "rented",
       "restored": false,
       "markedAt": "2026-11-19T10:36:40+07:00"
+    },
+    {
+      "id": "MC-009",
+      "slug": "mc-009",
+      "kind": "rented",
+      "restored": false,
+      "markedAt": "2026-11-28T11:54:33+07:00"
     },
     {
       "id": "MC-010",
@@ -63,6 +70,20 @@
       "kind": "rented",
       "restored": false,
       "markedAt": "2026-11-19T10:36:40+07:00"
+    },
+    {
+      "id": "MC-259",
+      "slug": "mc-259",
+      "kind": "rented",
+      "restored": false,
+      "markedAt": "2026-11-28T11:54:33+07:00"
+    },
+    {
+      "id": "MC-288",
+      "slug": "mc-288",
+      "kind": "rented",
+      "restored": false,
+      "markedAt": "2026-11-28T11:54:33+07:00"
     }
   ]
 }
